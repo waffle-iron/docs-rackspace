@@ -1,5 +1,5 @@
 # docs-rackspace
-Documentation for creating and maintaining Rackspace product documentation
+Documentation for creating, maintaining, building, and publishing Rackspace documentation to developer.rackspace.com.
 
 This repository contains for creating and maintaining Rackspace product documentation. 
 
