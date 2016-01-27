@@ -1,4 +1,5 @@
-### Building from Source
+Building from Source
+---------------------
 
 These instructions are for local builds using the default Sphinx templates. If you want to build locally using the Rackspace 
 documentation templates, use the [Deconst client](https://github.com/deconst/client).
