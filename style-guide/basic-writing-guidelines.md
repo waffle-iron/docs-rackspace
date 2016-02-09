@@ -31,7 +31,7 @@ Customers can understand wordy and complex writing, but they shouldn't be forced
 - [Put serial items into bullet lists](#put-serial-items-lists)
 
 ### <a name="use-consistent-structure"></a>Use a consistent sentence structure
-As often as possible, use the sentence structure *subject*—*verb*—*object*. Use simple declarative sentences for descriptions, and use simple imperative sentences for instructions. However, you can use a sentence structure that contains an if clause or places the condition before the action.
+As often as possible, use the sentence structure *subject*—*verb*—*object*. Use simple declarative sentences for descriptions, and use simple imperative sentences for instructions. However, you can use a sentence structure that starts with an *if* clause or places the condition before the action.
 
 Use | Avoid
 --- | ---
@@ -435,7 +435,7 @@ All of these situations can inhibit comprehension. By using correct punctuation 
 - Avoid using semicolons to separate clauses. They can make long sentences seem even longer. You can almost always use a period in the place of a semicolon.
 - Do not use a slash mark (/) to present a choice among, or a series of, actions or objects. Rewrite the phrase to eliminate the slash mark. Exceptions are established terms like *client/server* and *read/write*.
 
-For additional specific punctuation guidelines and examples, see [Punctuation]. For basic rules about punctuation, see a grammar book, such as the *Harbrace College Handbook*.
+For additional specific punctuation guidelines and examples, see [Punctuation](m-z-style-guidelines.md#punctuation). For basic rules about punctuation, see a grammar book, such as the *Harbrace College Handbook*.
 
 **Note:** Avoid using exclamation points, question marks, ellipses (three dots), or single quotation marks in text. Although these punctuation marks might appear in code elements, messages, literal commands, or UIs, they are rarely useful when writing descriptions or instructions for customers. One exception is the use of question marks in FAQ topics.
 
@@ -566,3 +566,5 @@ Date formats vary among cultures. Write out dates, unless you are showing a lite
 Use | Avoid
 --- | ---
 August 12, 2012 | 8/12/2012 <br /> 8-12-12
+
+For more guidance about writing dates, see [Dates](a-l-style-guidelines.md#dates).

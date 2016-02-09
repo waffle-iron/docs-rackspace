@@ -16,7 +16,7 @@ This section of the writing style guide provides detailed guidelines about and i
 - [IP addresses](#ip-addresses)
 - [Keyboard keys](#keyboard-keys)
 - [Links and cross-references](#links)
-- [Lists](#lists)
+- [Lists](#lists-1)
 
 ## <a name="acronyms"></a>Acronyms and other abbreviations
 Unless an abbreviation is common, spell out the root words of the abbreviation on the first use in an article or topic. Show the abbreviation in parentheses after the spelled-out term. On subsequent uses in the article or topic, use the abbreviation. If you introduce an abbreviation, use it; do not alternate between the abbreviation and the spelled-out term.
@@ -46,7 +46,7 @@ Do not use an abbreviation as a verb.	| Use FTP to copy the file to the server.	
 Avoid using abbreviations in the possessive. Instead, treat the abbreviation as an adjective or put it in a prepositional phrase.	| Type the DBA password. <br /><br /> Type the password of the DBA. | Type the DBA's password.
 To form the plural of an abbreviation, except for a unit of measure, append a lowercase *s* without an apostrophe. <br /><br /> For most abbreviations of units of measure, the singular and plural forms are the same (for example, 1 pt and 10 pt). <br /><br /> If an acronym already represents a plural noun, do not add an *s*. <br /><br /> **Note:** To refer to more than one FAQ document or section, add the appropriate noun after *FAQ* and make the noun plural—for example, *FAQ articles*. Follow this guideline for other plural acronyms when you need to refer to more than one instance of them. | user IDs <br /><br /> 10 mm <br /><br /> FAQ | user ID's <br /><br /> 10 mms <br /><br /> FAQs
 For abbreviated units of measure, insert a space between the number and the abbreviation. |	256 MB	| 256MB
-Do not use Latin abbreviations or non-English words and phrases. For more information, see  [Avoid obscure non-English words and abbreviations].	| for example	| e.g.
+Do not use Latin abbreviations or non-English words and phrases. For more information, see  [Avoid obscure non-English words and abbreviations](basic-writing-guidelines.md#avoid-obscure-words).	| for example	| e.g.
 
 ### <a name="bit-byte"></a>Abbreviations of byte and bit
 *Byte* is abbreviated with an uppercase *B*. *Bit* is abbreviated with a lowercase *b*. For example, *gigabyte* is abbreviated as *GB*, and *gigabit* is abbreviated as *Gb*. In general, use such abbreviations only with a number value; otherwise, spell out the term. If you want to emphasize *bit* or *byte*, use the spelled-out term rather than or in addition to the abbreviation.
@@ -76,7 +76,7 @@ Be judicious and consistent in your use of capitalization. Use capitalization fo
 
 ### <a name="cap-terms"></a>Terms
 Use the following guidelines to help you decide whether a word should be capitalized.
-For the correct capitalization of some common terms, see [Terminology].
+For the correct capitalization of some common terms, see [Terminology](terminology-guidelines.md).
 
 - [Capitalize proper nouns and adjectives](#cap-proper-nouns)
 - [Capitalize most acronyms, initialisms, and short forms of names](#cap-acronyms)
@@ -101,9 +101,9 @@ Microsoft Windows | Ethernet
 SQL Server | Wi-Fi
 PuTTY | lighttpd
 
-For the correct capitalization of some Rackspace product names, see [Product and project names (current and historical)].
+For the correct capitalization of Rackspace product names, see the [Rackspace Cloud corporate website](https://www.rackspace.com/cloud).
 
-For the correct capitalization of some commonly used third-party names, see [Third-party names and trademarks].
+For the correct capitalization of some commonly used third-party names, see [Third-party names and trademarks](terminology-guidelines.md#third-party-terms).
 
 #### <a name="cap-acronyms"></a>Capitalize most acronyms, initialisms, and short forms of names
 Most abbreviated forms of terms use all capitals, although exceptions exist. Also, be aware that the corresponding spelled-out terms of abbreviations are often not capitalized. When in doubt about the capitalization of an abbreviation or its spelled-out term, consult a dictionary, industry style guide, reputable website, or editor. Following are some examples.
@@ -169,12 +169,12 @@ If you are showing sample code, follow the conventions of the programming langua
 
 ### <a name="cap-variables"></a>Variables and placeholders
 Use camelCase (for example, *userName*) unless you have to follow the conventions of the programming language. For example, you might need to use underscores (*user_name*) or all capitals (*USER_NAME*).
-For more information about formatting placeholders, see [Text formatting].  
+For more information about formatting placeholders, see [Text formatting](m-z-style-guidelines.md#text-formatting).  
 
 ### <a name="cap-titles"></a>Titles and headings
 Use [sentence-style capitalization](#cap-sentence-style) for most titles and headings, including article, chapter, table, figure, and example titles, as well as section and procedure headings. One exception is book titles, which use [title-style capitalization](#cap-title-style).
 
-For additional guidelines for titles and headings, see [Titles and headings].
+For additional guidelines for titles and headings, see [Titles and headings](m-z-style-guidelines.md#titles-headings).
 
 #### <a name="cap-sentence-style"></a>Guidelines for sentence-style capitalization
 In sentence-style capitalization, you capitalize only the first word of the title or heading, plus any proper nouns, proper adjectives, and terms that are always capitalized, such as some acronyms and abbreviations. If the title includes a colon, capitalize the first word that follows the colon, regardless of its part of speech.
@@ -212,7 +212,7 @@ Capitalize all words in the title except for the following types of words:
 ### <a name="cap-lists"></a>Lists
 Capitalize the first letter of each list item unless the first letter must be lowercase.
 
-For additional guidelines about formatting lists, see [Lists].
+For additional guidelines about formatting lists, see [Lists](#lists-1).
 
 ### <a name="cap-tables"></a>Tables
 Use [sentence-style capitalization](#cap-sentence-style) for table titles, column headers, row headers, and text in table cells.
@@ -226,7 +226,7 @@ Use the following guidelines for capitalizing terms and definitions in glossarie
 | --- |
 | **token** <br /> An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration. |
 
-For more information about formatting glossary entries and definitions, see [Glossaries].
+For more information about formatting glossary entries and definitions, see [Glossaries](a-l-style-guidelines.md#glossaries).
 
 ### <a name="cap-figures"></a>Figures
 Use [sentence-style capitalization](#cap-sentence-style) for figure titles, text callouts within figures, and for legends associated with a figure.
@@ -272,7 +272,7 @@ In example API operation requests and responses, in which we want users to see a
 ## <a name="code-examples"></a>Code examples
 Observe the following guidelines when creating blocks of code as input or output examples:
 
-- Do not use screenshots to show code examples. Format them as blocks of code by using the appropriate markup in your authoring tool. For more information about formatting, see [Text formatting].
+- Do not use screenshots to show code examples. Format them as blocks of code by using the appropriate markup in your authoring tool. For more information about formatting, see [Text formatting](m-z-style-guidelines.md#text-formatting).
 
 - When showing input, always include a command prompt (such as $).
 
@@ -280,7 +280,7 @@ Observe the following guidelines when creating blocks of code as input or output
 
 - When the command is simple, and there is nothing specific to say about the output, you can show the input and output in the same code block, as the user would actually see the code in their own terminal. The inclusion of the command prompt will differentiate the input from the output.
 
-- Ensure that any placeholder text in code is obvious. If the authoring tool allows it, apply italics to placeholders; if not, enclose them in angle brackets. For more information about placeholders and formatting them, see [Placeholder (variable) text] and [Cloud account information](#cloud-account-info).
+- Ensure that any placeholder text in code is obvious. If the authoring tool allows it, apply italics to placeholders; if not, enclose them in angle brackets. For more information about placeholders and formatting them, see [Placeholder (variable) text](m-z-style-guidelines.md#placeholders) and [Cloud account information](#cloud-account-info).
 
 - Follow the conventions of the programming language used and preserve the capitalization that the author of the code used.
 
@@ -376,7 +376,7 @@ Avoid the following types of contractions, which are not common or can be confus
 Use contractions consistently. Avoid mixing common contractions and spelled-out forms within the same article or set of related articles.
 
 ## <a name="copyrights"></a>Copyrights
-For both API and KC content, copyright statements are automatically inserted by the system. Use the generated statement unless RackLaw gives you other instructions.
+For both API and How-To content, copyright statements are automatically inserted by the system. Use the generated statement unless RackLaw gives you other instructions.
 
 ## <a name="dates"></a>Dates
 Dates are displayed differently in different countries, so you must use a date format that is explicit and consistent and that global customers cannot misinterpret.
@@ -410,7 +410,7 @@ Because all-numeric dates are interpreted differently in different countries, ex
 ## <a name="email-addresses"></a>Email addresses
 For example email addresses, use **example.com** or **example.org**. The Internet Assigned Numbers Authority (IANA) reserves these domain names for use in examples.
 
-**Note:** For KC articles, do not use **kcexample.com**. Rackspace no longer owns this domain name. Use **example.com** or **example.org** instead.
+**Note:** For How-To articles, do not use **kcexample.com**. Rackspace no longer owns this domain name. Use **example.com** or **example.org** instead.
 
 Format example email addresses as bold. For example, **yourName@example.com**.
 
@@ -467,10 +467,10 @@ Begin the definition with a descriptive phrase. Capitalize the first letter of t
 
 How you begin the definition also depends on what part of speech the term is:
 
-- Noun &ndash; Begin with the appropriate article (a, an, or the) and a noun phrase.
-- Verb &ndash; Begin with the infinitive form of another verb that defines the term.
-- Adjective &ndash; Begin with a verb such as describes or pertains to.
-- Abbreviation &ndash; Begin with the spelled-out term.
+- Noun&mdash;Begin with the appropriate article (a, an, or the) and a noun phrase.
+- Verb&mdash;Begin with the infinitive form of another verb that defines the term.
+- Adjective&mdash;Begin with a verb such as describes or pertains to.
+- Abbreviation&mdash;Begin with the spelled-out term.
 
 The following table shows examples.
 
@@ -579,7 +579,7 @@ Use cross-references to help customers navigate content and find content that is
 
 - When you refer to content within the same article or section—such as paragraphs, tables, figures, examples, and lists—you usually create a simple textual cross-reference that is not linked.
 
-  **Note:** Customers usually expect links to take them to a location outside of the article (KC) or section (API) that they are currently reading, so links that just jump to another place in the same article or section can be confusing. Exceptions are a TOC, or *jump list*, at the top of an article or section that provides links to the high-level headings in the article or section, and "back to top" links that take the user back to the top of the page.
+  **Note:** Customers usually expect links to take them to a location outside of the article (How-To) or section (API) that they are currently reading, so links that just jump to another place in the same article or section can be confusing. Exceptions are a TOC, or *jump list*, at the top of an article or section that provides links to the high-level headings in the article or section, and "back to top" links that take the user back to the top of the page.
 
 - When you refer to other content that is created by Rackspace—for example, another article, a different section in the same or a different API guide, a post on the Communities site, or a pricing page on rackspace.com—you provide a link to that content.
 
@@ -631,7 +631,7 @@ When you provide links, observe the following guidelines for placement, construc
   - Do not provide links from ambiguous phrases such as *Click here* or *More information*.
 
 
-- If a link points to a location other than the current site (for example, out of the Knowledge Center or away from developer.rackspace.com), provide context that describes the location.
+- If a link points to a location other than the current site (for example, out of the Support website or away from developer.rackspace.com), provide context that describes the location.
 
 - When you refer to a Rackspace product or service, provide a link to the page for that product or service on www.rackspace.com. Create the link by inserting the term product page in brackets after the product name, and using that text as the link. For example, "Cloud Load Balancers [<u>product page</u>] . . ."  
 
@@ -639,7 +639,12 @@ When you provide links, observe the following guidelines for placement, construc
 
 - If your article or section has multiple subheadings, provide a TOC (jump list) at the beginning of the article or section, after an introduction. Use the heading text as the link text, and typically link only to the top-level headings in the article or section.
 
-- In FAQ articles, insert a "back to top" link after each answer. Use the following HTML, which superscripts the link to make it less obtrusive: ``<p><sup><a href="#top">back to top</a></sup></p>`` <br /><br /> For an example, see the [Cloud Billing FAQ](https://www.rackspace.com/knowledge_center/article/rackspace-cloud-billing-faq).
+  **Note:** If the UI automatically builds a TOC or jump list for the article, do not duplicate it by creating one manually within the article.
+
+- In FAQ articles, insert a "back to top" link after each answer. Use the following HTML, which superscripts the link to make it less obtrusive: ``<p><sup><a href="#top">back to top</a></sup></p>``
+
+  **Note:** Do not create back-to-top links in How-To FAQ articles that have automatic formatting that collapses the Q&A pairs. For these articles, such links are meaningless.
+
 - Do not use quotation marks around link text.
 
 - Create and format links according to the authoring tool that you are using. Test links to ensure that they are live and that they point to the correct destination.
@@ -655,13 +660,13 @@ Download PuTTY from <u>the PuTTY website</u>. |	<u>Download PuTTY</u>.
 For more information about cross-domain XML files, read the <u>Cross-domain policy file specification</u> article on the Adobe website. |	For more information about cross-domain XML files, go to <u>Adobe's website</u>.
 Cloud Load Balancers [<u>product page</u>] has a content caching feature that stores recently accessed files on the load balancer for easy retrieval by web clients. *(when linking to the www.rackspace.com product page)* |	<u>Cloud Load Balancers</u> has a content caching feature that stores recently accessed files on the load balancer for easy retrieval by web clients. *(when linking to the www.rackspace.com product page)*
 
-## <a name="lists"></a>Lists
+## <a name="lists-1"></a>Lists
 A list is a series of parallel items that are presented together, usually in a vertical sequence. The following types of lists are commonly used in Rackspace documentation:
 
 - **Ordered lists**, which are numbered. The list items must be performed or considered in a particular order.
 - **Unordered lists** (also referred to as itemized or bullet lists), which are usually delineated by bullets. The list items can be presented in any order and are often alphabetized if no other order is more appropriate.
 When three or more serial items are embedded in a paragraph, consider recasting the text as an introduction followed by an unordered list.
-- **Variable lists**, which are used to define variables, parameters, attributes, terms, and so on in API documents.
+- **Definition lists**, which are used to define variables, parameters, attributes, terms, and so on in API documents.
 
 This topic provides the following guidelines for lists:
 
@@ -691,7 +696,7 @@ Use the following guidelines when writing list items:
 - Avoid using articles (*a*, *an*, *the*) to start list items.
 - When a list provides a series of terms or phrases and then more information about them, format the list as follows:
   - Show the term or phrase in bold. Using bold makes the list easier to scan.
-  - If you need to separate the initial term or phrase from the information that follows it, use an en dash with a space on either side of it. However, if you do not need a separator, don't use one. (For an example of a list in which en dash separators are not necessary, see the list at the top of this topic.)
+  - If you need to separate the initial term or phrase from the information that follows it, use an em dash with no spaces on either side of it. However, if you do not need a separator, don't use one. (For an example of a list in which em dash separators are not necessary, see the list at the top of this topic.)
 - Unless another order makes sense or is preferable, alphabetize list items.
 
 The following sections show examples of the indicated types of lists.
@@ -726,6 +731,6 @@ To run the examples in this guide, the following prerequisites are required:
 
 #### List that provides terms and more information&mdash;example
 You have the following choices for your virtual IP:
-- **Public** – This setting allows any two servers with public IP addresses to be load balanced. These can be nodes outside of the Rackspace network, but if they are, standard bandwidth rates apply.
-- **Shared Virtual IP** – Use this setting if you want to load-balance multiple services on different ports while using the same virtual IP address.
-- **Private Rackspace network** – This is the best option for load-balancing two Cloud Servers because it allows the load-balancing traffic to run on the Rackspace Cloud internal network, called ServiceNet. This option has two distinct advantages: the rate limit is double what the rate limit is on the public interface, and all traffic on the ServiceNet between Cloud Servers is not charged for bandwidth.
+- **Public**&mdash;This setting allows any two servers with public IP addresses to be load balanced. These can be nodes outside of the Rackspace network, but if they are, standard bandwidth rates apply.
+- **Shared Virtual IP**&mdash;Use this setting if you want to load-balance multiple services on different ports while using the same virtual IP address.
+- **Private Rackspace network**&mdash;This is the best option for load-balancing two Cloud Servers because it allows the load-balancing traffic to run on the Rackspace Cloud internal network, called ServiceNet. This option has two distinct advantages: the rate limit is double what the rate limit is on the public interface, and all traffic on the ServiceNet between Cloud Servers is not charged for bandwidth.

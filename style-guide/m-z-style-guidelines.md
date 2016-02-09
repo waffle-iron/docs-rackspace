@@ -41,9 +41,8 @@ When possible, use positive statements.	| *Use:* <br /> The given limit must be 
 Do not use real or copyrighted names in examples. For example, do not use kelly.holcomb@example.com.
 
 See the following topics for information about product names:
-- [Product names and version numbers]
-- [Product and project names (current and historical)]
-- [Third-party names and trademarks]
+- [Product names and version number](#product-names)
+- [Third-party names and trademarks](terminology-guidelines.md#third-party-terms)
 
 ## <a name="notations"></a>Notes and other notation types
 Notations (notes, tips, and warnings) call out important or helpful information. Use them sparingly, according to the guidelines in the following table.
@@ -134,7 +133,7 @@ To represent an unspecified or unknown version number, use *x* for each digit an
 | Move the insertion point *n* spaces to the right. <br /> Select the **Use *n* I/O Sessions** check box. <br /> Your BlackBerry software must be version 4.*x*. |
 
 ## <a name="parameters"></a>Parameters
-When documenting API parameters, observe the following guidelines:
+When documenting parameters, observe the following guidelines:
 - In request and response examples, show all of the parameters.
 
 - Describe all of the parameters in tables or lists preceding the examples. Observe the following guideline for writing descriptions:
@@ -157,24 +156,24 @@ When documenting API parameters, observe the following guidelines:
 
 - When listing and describing response body parameters, show them in alphabetical order.
 
-- Format parameter names in text according to the guidelines in [Text formatting].
+- Format parameter names in text according to the guidelines in [Text formatting](#text-formatting).
 
 ## <a name="placeholders"></a>Placeholder (variable) text
 Placeholder text (also referred to as variable text or replaceable text) stands for an object whose specific name is unknown to us. Placeholders are included when documenting syntax for how a command or path should be constructed. Customers supply the relevant value for the placeholder when using the command or syntax.
 
 Placeholder text usually indicates the type of element that is being represented. For example, *directoryName* would likely indicate the name of a directory.
 
-**Note:** Placeholder text is distinct from *environment variables*. Environment variables have established formats and names, such as `$account`, and their values are set in the system by customers and used consistently. By contrast, a placeholder is given a relevant value by the customer at the time that the customer runs the code or types the path. For information about formatting environment variables, see [Text formatting].
+**Note:** Placeholder text is distinct from *environment variables*. Environment variables have established formats and names, such as `$account`, and their values are set in the system by customers and used consistently. By contrast, a placeholder is given a relevant value by the customer at the time that the customer runs the code or types the path. For information about formatting environment variables, see [Text formatting](#text-formatting).
 
 When creating placeholder text, use the following guidelines.
 
-**Note:** For specific information about showing placeholders for account information such as account numbers, user names, passwords, and API keys, see [Cloud account information](#cloud-account-info).
+**Note:** For specific information about showing placeholders for account information such as account numbers, user names, passwords, and API keys, see [Cloud account information](a-l-style-guidelines.md#cloud-account-info).
 
 Guidelines	| Example
 --- | ---
-Show placeholder text in italics. <br /><br /> If you need to make placeholders more visible in code that customers are expected to copy and use, apply bold as well as italic. For information about applying formatting, see [Text formatting]. <br /><br /> If you cannot apply text formatting to the code, enclose placeholders in punctuation that does not have any other special use in the code. For example, use angle brackets or curly braces. Use a consistent convention throughout the documentation set. | `nova boot <serverName> --image <image> --flavor <flavor> --nic net-id=net1_id`
+Show placeholder text in italics. <br /><br /> If you need to make placeholders more visible in code that customers are expected to copy and use, apply bold as well as italic. For information about applying formatting, see [Text formatting](#text-formatting). <br /><br /> If you cannot apply text formatting to the code, enclose placeholders in punctuation that does not have any other special use in the code. For example, use angle brackets or curly braces. Use a consistent convention throughout the documentation set. | `nova boot <serverName> --image <image> --flavor <flavor> --nic net-id=net1_id`
 Use lowercase letters except when showing a multiple-word placeholder.<br /><br /> To show a multiple-word placeholder, do not separate the words with spaces or symbols. To distinguish the words in the placeholder, capitalize the first letter of each word after the first word (called camelCase). Do not capitalize the first word. <br /><br /> **Note:** Use lowercase and camelCase unless you have to follow the conventions of the programming language. For example, you might need to use underscores (account_ID) or all capitals (ACCOUNT_ID). | *password* <br /> *serverName* <br /> *apiKey* <br /> *tenantId*
-In general, use one or more whole words to represent a placeholder. Do not sacrifice clarity for brevity. Create placeholders that are descriptive and meaningful.| *device* (instead of *dev*) <br /> *installationDirectory* (instead of *installDir*) <br /> *mode* (instead of *########*)
+In general, use one or more whole words to represent a placeholder. Do not sacrifice clarity for brevity. Create placeholders that are descriptive and meaningful.| *device* (instead of *dev*) <br /><br /> *installationDirectory* (instead of *installDir*) <br /><br /> *mode* (instead of *########*)
 
 When explaining a placeholder, use the following guidelines.
 
@@ -185,7 +184,7 @@ If you need to explain two or more placeholders, use an unordered list. | From a
 Show the placeholder in regular text with the same formatting that it is shown in the path or code. For example, if you can show it in italics, use italics when explaining it. If you first show the placeholder in a code block and need to enclose it in angle brackets, show it in angle brackets and monospace when explaining it. | *Use:* <br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> *yourAccountId* is your actual account number, which is returned as part of the authentication service response.<br /><br /> *Use:* <br /> Run the following command, replacing `<dockerHostName>` with the name of your Docker host: <br /><br /> `docker-machine env <dockerHostName> --shell cmd`
 
 ## <a name="plurals"></a>Plurals
-Use the following general guidelines for forming and using plurals. To find out how to form the plural of a particular word, or for information about whether to use the singular or plural form of a particular word, see [Terminology] or consult a dictionary.
+Use the following general guidelines for forming and using plurals. To find out how to form the plural of a particular word, or for information about whether to use the singular or plural form of a particular word, see [Terminology](terminology-guidelines.md) or consult a dictionary.
 
 Guideline	| Example
 --- | ---
@@ -207,7 +206,7 @@ When using Rackspace product names and showing version numbers, observe the foll
 
 - For API documentation, the version number in the documentation should match the version number of the software. The combination of the API version number and the publication date identify the document version.
 
-When using third-party company and product names, use the name as it is used by the third-party. For a list of commonly used third-party names, see [Third-party names and trademarks].
+When using third-party company and product names, use the name as it is used by the third-party. For a list of commonly used third-party names, see [Third-party names and trademarks](terminology-guidelines.md#third-party-terms).
 
 When referring to an OpenStack service, use the actual service name, and provide the project name in parentheses. For example, use OpenStack Block Storage (Cinder). On subsequent references, use the service name instead of the project name, unless you need to use project names to differentiate between two versions of one service. See the [OpenStack documentation conventions wiki page](https://wiki.openstack.org/wiki/Documentation/Conventions#Service_and_project_names) for service and project names.
 
@@ -235,7 +234,7 @@ Use punctuation correctly and consistently. This section provides guidelines for
 - [Semicolons](#punc-semicolon)
 - [Slashes](#punc-slash)
 
-For general guidelines about using symbols, see [Symbols].
+For general guidelines about using symbols, see [Symbols](#symbols).
 
 ### <a name="punc-ampersand"></a>Ampersands
 Do not use an ampersand (&) in text or headings to mean *and* unless you are specifically referring to the symbol on the user interface or the ampersand is part of an official name.
@@ -273,7 +272,13 @@ When city and state names are embedded in a sentence, use a comma after the city
 When a month, day, and year are embedded in a sentence, use a comma before and after the year. When only the month and year compose the date, omit the commas unless the syntax would ordinarily require a comma following the year. | The company acquired a German subsidiary on July 15, 2009, and is negotiating the purchase of a small Japanese company.<br /><br />The publications plan was printed in November 2010 in Austin.<br /><br />In December 2012, the database restoration failed. | The company acquired a German subsidiary on July 15, 2009 and is negotiating the purchase of a small Japanese company.<br /><br />The publications plan was printed in November, 2010, in Austin.<br /><br />In December 2012 the database restoration failed.
 
 ### <a name="punc-dash"></a>Dashes
-An *em dash* is the longest dash. Do not use an em dash to separate a long sentence into two parts. Instead, create two sentences. Do not use an em dash to introduce a list of items. Instead, use a colon. In most cases, other forms of punctuation are more effective for clarity. You can use em dashes to set off a long qualifier in the middle of a sentence if the use of commas would hinder readability. If you do use em dashes for this purpose, do not use spaces around them.
+An *em dash* is the longest dash. Use em dashes sparingly, and mostly in the following situations:
+
+- In a list item, if you need to separate an initial term or phrase from the information that follows it, use an em dash with no spaces on either side of it.
+
+- You can use em dashes to set off a long qualifier in the middle of a sentence if the use of commas would hinder readability. If you do use em dashes for this purpose, do not use spaces around them.
+
+Do not use an em dash to separate a long sentence into two parts. Instead, create two sentences. In most cases, other forms of punctuation are more effective for clarity.
 
 An *en dash* is longer than a hyphen and shorter than an em dash. Use an en dash for the following purposes:
 
@@ -324,7 +329,7 @@ On the **File** menu, click **Open...**. <br />
 Do this ... *(column header)*
 
 ### <a name="punc-exclamation"></a>Exclamation points
-Avoid using exclamation points. For more information, see [Use interjections with care].
+Avoid using exclamation points. For more information, see [Use interjections with care](basic-writing-guidelines.md#beware-interjections).
 
 ### <a name="punc-hyphen"></a>Hyphens
 This section provides general guidelines for hyphenation. For guidelines about using dashes, see [Dashes](#punc-dash).
@@ -357,7 +362,7 @@ Exceptions are words such as *reenter* and *preemptive*, which are not likely to
 
 - The product team has hyphenated a term with a prefix, and you need to follow suit in the docs for consistency with the interface—for example, *multi-factor authentication* in the Identity product. Whenever possible, work with the teams to use preferred spelling.
 
-For the correct formatting of a specific word, see a dictionary or [Terminology]. For more information about hyphenating prefixes, see *The Chicago Manual of Style*.
+For the correct formatting of a specific word, see a dictionary or [Terminology](terminology-guidelines.md). For more information about hyphenating prefixes, see *The Chicago Manual of Style*.
 
 ### <a name="punc-parens"></a>Parentheses
 Avoid parentheses in running text. Parenthetical text can distract the reader from the main idea of the sentence and disrupt the flow of the sentence. When possible, put parenthetical information in a separate sentence.
@@ -384,7 +389,7 @@ Guideline | Example
 Use a period at the end of a declarative or imperative sentence, and insert only one space after the period. | I am here. Where are the donuts?
 Place periods inside quotation marks, unless the quotation marks are part of a literal string. In such cases, place the period outside the quotation mark. | For more information, see "Trademarks." <br /><br /> The symbol has one of the following values: ABST, %ABST, or "ABST".
 When introducing a list, if one or more sentences separate the introductory sentence from the list, end each sentence with a period. | You can use this product to perform the following tasks. You must extract objects from the database to complete these tasks.
-Use periods in list items as follows: <br /><br /> &bull; If all of the items in a list are sentences, including imperative statements, end each item with a period.  <br /> <br /> &bull; If all of the items in a list are fragments, do not end the items with a period. <br /><br /> &bull; In a list of fragments, some or all of which are followed by sentences, end every fragment and sentence in the list with a period. | See the example table in [Writing list items].
+Use periods in list items as follows: <br /><br /> &bull; If all of the items in a list are sentences, including imperative statements, end each item with a period.  <br /> <br /> &bull; If all of the items in a list are fragments, do not end the items with a period. <br /><br /> &bull; In a list of fragments, some or all of which are followed by sentences, end every fragment and sentence in the list with a period. | See the examples in [Writing list items](a-l-style-guidelines.md#lists-writing).
 Use a period after an introduction to a table, figure, or example. | The following figure shows an overview of Cloud Databases infrastructure.
 In glossary definitions, end the definition with a period, even if the definition is only a phrase.	| **token**  <br /> An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration.
 Use periods only with abbreviations that could otherwise be misread as a word, such as *in.* (for *inch*). Also, use periods in the abbreviations *a.m.* and *p.m.* | 25 mm <br /> 12 in. <br /> FAQ
@@ -414,7 +419,7 @@ Avoid using semicolons, which are often misused and even when used correctly can
 ### <a name="punc-slash"></a>Slashes
 Do not use a slash mark (/) to present a choice among, or a series of, actions or objects. Rewrite the phrase to eliminate the slash mark. Exceptions are established terms like *client/server* and *read/write*.
 
-Do not use a slash in dates. For information about how to format dates, see [Dates].
+Do not use a slash in dates. For information about how to format dates, see [Dates](a-l-style-guidelines.md#dates).
 
 Correct  | Incorrect
 --- | ---
@@ -459,8 +464,7 @@ When creating table titles, use the following guidelines:
 - Use sentence-style capitalization for table titles. However, for words that are always uppercase or always lowercase, match that case.
 - Do not start a table title with an article (*a*, *an*, *the*).
 - Do not end a table title with a period or colon.
-- Place the title above the table, not below it.
-- In API documents, apply the appropriate tag.  
+- Place the title above the table, not below it, and tag it as bold.
 - Do not manually number table titles. If titles should be numbered, the style sheet will number them.  
 - Make table titles concise; limit them to one line if possible.
 - Make table titles descriptive:
@@ -468,19 +472,17 @@ When creating table titles, use the following guidelines:
   - Ensure that no two table titles in an article are identical. To distinguish between the titles that are similar, add qualifiers.
 - Do not include trademark symbols in table titles.
 
-### <a name="tables-headers"></a>Column and row headers
-Use the following guidelines for text in column and row headers:
+### <a name="tables-headers"></a>Column headers
+Use the following guidelines for text in column headers:
 
-- Use [sentence-style capitalization] in column and row headers. However, for words that are always uppercase or always lowercase, match that case.
-- Use singular nouns for column and row headers, unless the context requires otherwise.
-- Do not end column or row headers with ellipses or colons.
-- Left-align header text. Center header text only if the text in the cells in the column or row is also centered.
-- Tag header columns or rows appropriately so that they are formatted as headers (for example, use the <thead> and <th> tags in HTML). Headers should be visually distinct from regular tables cells.
+- Use [sentence-style capitalization](a-l-style-guidelines.md#cap-sentence-style) in column headers. However, for words that are always uppercase or always lowercase, match that case.
+- Use singular nouns for column headers, unless the context requires otherwise.
+- Do not end column headers with ellipses or colons.
 
 ### <a name="tables-text"></a>Table text
 Use the following guidelines for text in table cells:
 
-- Use the same punctuation and capitalization guidelines that you use for text in lists.  
+- Use the same punctuation and capitalization guidelines that you use for [text in lists](a-l-style-guidelines.md#lists-1).  
 - Make the entries in a table parallel. For example, in a column that describes options, be consistent in beginning the entries with a verb or noun.
 - Avoid leaving a table cell blank. If no information is available for that cell, use *Not applicable* or *None*. Use the abbreviation *NA* only if space constraints exist. Do not use dashes. An exception is for matrix-type tables that use an X or other marker to indicate support. In such cases, blank cells are acceptable (see the third example in the sidebar).
 - When showing a notation in a table, use the guidelines in [Notes and other notation types](#notations).
@@ -503,8 +505,8 @@ When creating attribute or parameter tables in API documents, use the following 
 
 - For tables that describes JSON or XML attributes, write the first sentence of a description with an implied subject. For example, if the attribute is name, the description might be as follows: "Server name, which becomes the initial host name of the server"
 - For attributes, include the valid values and default value at the end of the description. Use the formats "Valid values are *n* and *n*." and "The default is *n*." For example, "Valid values are `true` and `false`." and "The default is `false`."
-- If table descriptions or construction is complex, consider using a variable list or itemized list instead of a table.
-- Avoid putting variable lists in tables.
+- If table descriptions or construction is complex, consider using a definition list or itemized list instead of a table.
+- Avoid putting definition lists in tables.
 
 ### Examples
 The different parts of the preceding URL are explained in the following table.
@@ -518,7 +520,8 @@ Part of URL | Explanation
 
 The following table provides the default values for the absolute limits.
 
-##### Absolute limits
+**Absolute limits**
+
 Name | Description | Limit (default value)
 --- | --- | ---
 Node count |	Maximum number of allowed data nodes |	3
@@ -568,7 +571,7 @@ The title of a task topic, article, or section begins with the imperative form o
 | --- | --- |
 | Create users in SQL Server <br /> Configure SQL Server Management Studio to connect to SQL Server on Windows <br /> Add new ServiceNet routes to a server | Creating users in SQL Server <br /> How to create users in SQL Server <br /> To create users in SQL Server |
 
-For guidelines about capitalizing titles, see [Capitalization].
+For guidelines about capitalizing titles, see [Capitalization](a-l-style-guidelines.md#capitalization).
 
 ### <a name="tasks-intros"></a>Task introductions
 Before providing steps, set the context for the task as necessary. For example, briefly state the reason for completing the task, the method to be used, and the expected result. You might also suggest the amount of time that the task should take, especially if it will take a long time.
@@ -583,7 +586,7 @@ A simple task might require only one or two sentences of introduction and a sing
 - Knowledge requirements for customers
 
 **Notes:**
-- If the topic title provides sufficient context, you can omit an introduction.
+- If the article or section title provides sufficient context, you can omit an introduction.
 - Avoid providing extensive overview or conceptual text in the introduction to a task. Provide that information in a separate concept topic or in a topic that introduces the task as part of a larger process or customer goal.
 
 ### <a name="tasks-prereqs"></a>Prerequisites
@@ -606,8 +609,22 @@ A task contains one or more procedures, or sets of sequential action steps. Cons
 
 When writing steps, use the following guidelines.
 
+- [Use imperative sentences](#use-imperative-sentences)
+- [Show one action per step](#show-one-action-per-step)
+- [Use consistent verbs](#use-consistent-verbs)
+- [Provide context before the action](#provide-context-before-the-action)
+- [Provide conditions before actions](#provide-conditions-before-actions)
+- [Follow the step with explanatory information](#follow-the-step-with-explanatory-information)
+- [Show only actions as steps](#show-only-actions-as-steps)
+- [Use screenshots sparingly](#use-screenshots-sparingly)
+- [Label optional steps](#label-optional-steps)
+- [Omit extraneous words](#omit-extraneous-words)
+- [Show multiple conditions in a list](#show-multiple-conditions-in-a-list)
+- [Show multiple possibilities in a list](#show-multiple-possibilities-in-a-list)
+- [Document only one method](#document-only-one-method)
+
 #### Use imperative sentences
-Write each step as a complete and correctly punctuated imperative sentence (that is, a sentence that starts with an imperative verb). In steps, the [focus] is on the customer, and the [voice] is active.
+Write each step as a complete and correctly punctuated imperative sentence (that is, a sentence that starts with an imperative verb). In steps, the [focus](basic-writing-guidelines.md#write-to-user) is on the customer, and the [voice](basic-writing-guidelines.md#use-active-voice) is active.
 
 **Examples**
 
@@ -656,7 +673,7 @@ If a step specifies where to perform an action, state where to perform the actio
 
 1. On the Binding and SSL Settings page, perform the following steps:
 
-#### Provide condition before action
+#### Provide conditions before actions
 If a step specifies a situation or a condition, state the situation or condition before describing the action.
 
 **Examples**
@@ -711,8 +728,6 @@ When the result of a step is the appearance of a dialog box, window, or page in 
 Screenshots can help to orient the customer, but a screenshot of every field or dialog box is usually not necessary.
 
 If you include screenshots, place each one directly under the step that it illustrates. Do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
-
-For more information, see [Screenshots for Knowledge Center].
 
 #### Label optional steps
 To indicate that a step is optional, include *(Optional)*, in italics, as a qualifier at the beginning of the step.
@@ -785,7 +800,7 @@ If your task is part of a larger set of tasks, you can help the customer by incl
 - Hyperlinks to other tasks that could be done next, if multiple options are available. Describe the multiple options so that customers know which task to choose.
 
 ### <a name="tasks-related"></a>Related topics
-To provide a quick way for the customer to access other content that is related to the task, provide links to the content at the end of the article or topic. Even if you have already included an embedded hyperlink to the material in the article or topic, you can provide the hyperlink again under "Related topics," but typically you should provide a link only once in an article or section. For more information about linking, see [Links and cross-references].
+To provide a quick way for the customer to access other content that is related to the task, provide links to the content at the end of the article or topic. Even if you have already included an embedded hyperlink to the material in the article or topic, you can provide the hyperlink again under "Related topics," but typically you should provide a link only once in an article or section. For more information about linking, see [Links and cross-references](a-l-style-guidelines.md#links).
 
 ## <a name="phone-numbers"></a>Telephone numbers
 Use the following guidelines for telephone numbers:
@@ -817,9 +832,9 @@ Observe the following general guidelines when formatting text:
 
 - To apply a font treatment, use the appropriate markup in your authoring tool.
 - Do not apply font treatments to text elements in titles and headings.
-- Do not use capitalization to emphasize a term (for example, showing a general term in all capitals). Follow the capitalization that is normally used for a term, or follow the capitalization guidelines in the following table. For more information, see [Capitalization].
+- Do not use capitalization to emphasize a term (for example, showing a general term in all capitals). Follow the capitalization that is normally used for a term, or follow the capitalization guidelines in the following table. For more information, see [Capitalization](a-l-style-guidelines.md#capitalization).
 - Do not use color alone to distinguish text. Color is powerful but unreliable. Not everyone can see every color, most people do not print using color, and monitors and browsers limit themselves to color subsets. Also, people can personalize their displays to override your color selections.
-- Use quotation marks only as directed in this topic and in [Quotation marks].
+- Use quotation marks only as directed in this topic and in [Quotation marks](#punc-quote).
 
 The conventions are divided into tables based on the content in which they would most likely be used. If you can't find what you are looking for in one table, be sure to look in the others.
 
@@ -834,28 +849,28 @@ Text item | Treatment | Output example
 --- | --- | ---
 Application names	| Regular text | You must configure the RabbitMQ application.
 Book titles | Italic <br /> <br /> **Note:** Use italic even if the title is a hyperlink. | For the most up-to-date information about rate and absolute limits, see the <u>Limits</u> section in the *Rackspace Cloud Databases Developer Guide*.
-Cross-references | See [Links and cross-references]. | Not applicable
+Cross-references | See [Links and cross-references](a-l-style-guidelines.md#links). | Not applicable
 Document titles | Italic <br /> <br /> **Note:** Use italic even if the title is a hyperlink. | For the most up-to-date information about rate and absolute limits, see the <u>Limits</u> section in the *Rackspace Cloud Databases Developer Guide*.
-Email addresses | See [Email addresses]. | Not applicable
+Email addresses | See [Email addresses](a-l-style-guidelines.md#email-addresses). | Not applicable
 Emphasis | Italic | Offset *must* be a multiple of the limit (or zero); otherwise, a Bad Request exception is generated.
 Equations | Monospace | ``(600,000 – 400,000) ÷ 400,000 = 50%``
 Error messages | Monospace | In SQL Server Management Studio, when you right-click a SQL Server 2012 database and selecting **Properties**, the following error message appears: <br /> <br /> ``The user does not have permission to perform this action.``
-Hyperlinks (live) | See [Links and cross-references]. | Not applicable
+Hyperlinks (live) | See [Links and cross-references](a-l-style-guidelines.md#links). | Not applicable
 Keyboard key combinations, names, and shortcuts | Bold | To skip to the end of the file, press **Shift-G**. <br /> <br /> Press **Enter**.
 Letters as letters | Italic | Place *i* before *e* except after *c*.
-Links (live) | See [Links and cross-references]. | Not applicable
+Links (live) | See [Links and cross-references](a-l-style-guidelines.md#links). | Not applicable
 Messages, error | Monospace | In SQL Server Management Studio, when you right-click a SQL Server 2012 database and selecting **Properties**, the following error message appears: <br /> <br /> ``The user does not have permission to perform this action.``
 New terms | Italic | Cloud Servers that are built using the base Linux images are created without a dedicated swap partition and with *swappiness* (a measure of how the Linux kernel tries to use swap memory) set to 0.
 Permissions	| Regular text	| Log in to a shell as the user who has write permissions to ``/usr/local/bin`` on your local computer.
 Placeholder text (variable text)	| See [Placeholder (variable) text](#placeholders) | Not applicable
 Privileges | Regular text | The following examples assume that you are making the firewall changes as a normal user with sudo privileges. <br /> <br /> The user is granted ALL privileges on the database.
-Qualifiers | Italic | 1. *(Optional)* Enter a new name for the image. <br /> &nbsp; &nbsp; If you don't enter a name, the server name is used as the image name. <br /> <br /> You can tell that the Managed Cloud post-build automation has successfully completed as follows: <br /> <br /> *(Windows servers)* The following file is created: **C:\windows\temp\rs_managed_cloud_automation_complete.txt** <br /> <br /> *(Linux servers)* The following file is created: **/tmp/rs_managed_cloud_automation_complete**
+Qualifiers | Italic | 1. *(Optional)* Enter a new name for the image. <br /> <br /> You can tell that the Managed Cloud post-build automation has successfully completed as follows: <br /> <br /> *(Windows servers)* The following file is created: **C:\windows\temp\rs_managed_cloud_automation_complete.txt** <br /> <br /> *(Linux servers)* The following file is created: **/tmp/rs_managed_cloud_automation_complete**
 Quotations <br /> (content quoted from another source) | Quotation marks, or the formatting provided by the specified tags | “Scalability is key for our business,” explained Nathan Goff, Inavero Operations Director and Partner. “There’s nothing worse than making our clients look bad to their customers.”
 Role names | Regular text | The full access role has the permissions to create, read, update, and delete resources within multiple designated products where access is granted.
 Terms, new | Italic | Cloud Servers that are built using the base Linux images are created without a dedicated swap partition and with *swappiness* (a measure of how the Linux kernel tries to use swap memory) set to 0.
 Terms, unique sense | Regular text, <br /> Quotation marks on first use | The spelling checker "learns" the word. After it learns the word, the spelling checker ignores subsequent occurrences of the word in the document.
 URLs (not live) | Bold | To access the web interface, open your web browser and navigate to **http:// *yourDomain.com*/zipit-install.php**.
-URLs (live) | See [Links and cross-references]. | Not applicable
+URLs (live) | See [Links and cross-references](a-l-style-guidelines.md#links). | Not applicable
 Variable text (placeholder text) | See [Placeholder (variable) text](#placeholders) | Not applicable
 Words as words | Italic | Do not use *button* and *icon* interchangeably. If you are referring to a command button or toolbar button (labeled or unlabeled), use *button*. If you are referring to a graphic on a screen, window, or other area, use *icon*.
 
@@ -864,7 +879,7 @@ The following table lists formatting conventions for items that usually appear i
 
 Text item | Treatment | Output example
 --- | --- | ---
-API operation names | Regular text <br /> All lowercase | The following table describes the request attributes for the operation for migrating vaults.
+API operation names | Regular text <br /> <br /> All lowercase | The following table describes the request attributes for the operation for migrating vaults.
 Argument names | Monospace | To list or retrieve files from a node that is running the OpenCenter agent, use the `file` argument with the `opencentercli` node command.
 Attribute names | Monospace | The `expires` attribute denotes the time after which the token automatically becomes invalid.
 Code | Monospace | `$ grep "ftp" /etc/xinetd.d/*` <br /> ` /etc/xinetd.d/vsftpd:service ftp` <br /> `/etc/xinetd.d/vsftpd:server = /usr/sbin/vsftpd` <br /><br /> To set the environment variable, run `export token="token"`.
@@ -975,7 +990,7 @@ This topic provides guidelines for creating titles and headings in documentation
 ### <a name="titles-headings-caps"></a>Capitalization of titles and headings
 Use *sentence-style capitalization* for most titles and headings, including article, chapter, table, figure, and example titles, as well as section and procedure headings. One exception is book titles, which use *title-style capitalization*.
 
-For capitalization guidelines, see [Capitalization].
+For capitalization guidelines, see [Capitalization](a-l-style-guidelines.md#capitalization).
 
 ### <a name="titles-headings-articles"></a>Article titles and headings
 This section provides guidelines for titles of articles and headings within articles. For capitalization guidelines, see [Capitalization of titles and headings](#titles-headings-caps).
@@ -984,7 +999,7 @@ This section provides guidelines for titles of articles and headings within arti
 - [Headings in articles](#headings-articles)
 
 #### <a name="titles-articles"></a>Titles of articles
-Observe the following guidelines when you are creating titles for articles in the Knowledge Center or in other collections of documentation:
+Observe the following guidelines when you are creating titles for stand-alone articles on the Support site or in other collections of documentation:
 
 - Create succinct, meaningful, descriptive titles that do not rely on body text or other titles for their meaning (that are, in other words, independent of context). Users should be able to tell from a title whether the information in the article is relevant to their needs. Avoid ambiguous one-word titles, such as "Overview."
 
@@ -1018,7 +1033,7 @@ Troubleshooting	| A grammatical structure that is appropriate for the type of co
 #### <a name="headings-articles"></a>Headings in articles
 Observe the following guidelines when you are creating headings within articles:
 
-- Start with the highest level of heading that is approved for headings (for example, H2), and do not skip heading levels. Exceptions are made for questions within FAQ topics or terms within glossaries, which use lower-level headings for formatting.  
+- Start with the highest level of heading that is approved for headings (for example, h3), and do not skip heading levels. Exceptions are made for questions within FAQ topics or terms within glossaries, which can use lower-level headings for formatting.  
 
 - Avoid using more than two levels of heading within an article. If you use more than two levels of heading, consider whether the article is complex enough to be divided into two or more articles.
 
