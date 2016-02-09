@@ -452,7 +452,7 @@ via | through | Manage your server through the Control Panel. <br /> <br /> Use 
 vs. | versus, or an appropriate term | The following diagram contrasts the provider's responsibility and the customer's responsibility. <br /> <br /> Full migration versus package migration *(heading)* | The following diagram essentially outlines the provider's responsibility vs. the customer's responsibility. <br /> <br /> Full migration vs. package migration *(heading)*
 
 ## <a name="write-global"></a>Write for a global audience
-Rackspace is a global company, with customers in many countries. A small amount of content has been translated, but most has not, which means that many customers who do not speak English as their first language consume our English content. All of the guidelines in this topic ("Basic Writing Style") are designed to make content easy to understand for all audiences, but the following guidelines will especially clarify content for global audiences.
+Rackspace is a global company, with customers in many countries. A small amount of content has been translated, but most has not, which means that many customers who do not speak English as their first language consume our English content. All of the guidelines in this topic ("Basic writing guidelines") are designed to make content easy to understand for all audiences, but the following guidelines will especially clarify content for global audiences.
 
 - [Do not use idioms or colloquialisms](#idioms)
 - [Avoid metaphorical terms](#metaphors)
