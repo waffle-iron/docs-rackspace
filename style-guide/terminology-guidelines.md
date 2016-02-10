@@ -147,7 +147,7 @@ high availability (HA) (n), high-availability (adj) |	| Use the spelled out term
 higher, lower	| Restricted | Do not use these terms when referring to product releases and version numbers. Use *earlier* or *later* instead. <br /> <br /> *Use:* <br /> Ubuntu 12.04 or earlier <br /> Windows 3.1 or later <br /><br /> *Do not use:* <br /> Ubuntu 12.04 or lower <br /> Windows 3.1 or higher
 home page	| | Use *home page* to refer to the first (main) page that you see when you enter a website. See also [web, web page, website, WWW, www, home page](#web).
 host list, host name | | Use each of these terms as two words.
-How-To | | When referring to the portion of the Support website that contains articles about Rackspace Cloud Services, show the name as How-To.
+How-To | | When referring to the portion of the Support website that contains articles about Rackspace Cloud services, show the name as How-To.
 hyperlink	| | See [link](#link).
 icon | | Do not use *icon* and *button* interchangeably. If you are referring to a graphic on a screen, window, or other area, use *icon*. If you are referring to a command button or toolbar button (labeled or unlabeled), use *button.* <br /><br /> *Use:* <br /> To add video to an in-progress IM conversation or conference call, click the **Camera** icon.
 ID, IDs | | Use uppercase letters. Do not use *id* or *Id* unless the context requires it. <br /> <br /> Do not use *ID* as a verb; use *identify* instead. <br /><br /> *Use:* <br /> The ``<affected-end-user-id>`` element specifies the user ID of the end user who is affected by the incident.
