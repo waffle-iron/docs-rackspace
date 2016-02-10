@@ -147,6 +147,7 @@ high availability (HA) (n), high-availability (adj) |	| Use the spelled out term
 higher, lower	| Restricted | Do not use these terms when referring to product releases and version numbers. Use *earlier* or *later* instead. <br /> <br /> *Use:* <br /> Ubuntu 12.04 or earlier <br /> Windows 3.1 or later <br /><br /> *Do not use:* <br /> Ubuntu 12.04 or lower <br /> Windows 3.1 or higher
 home page	| | Use *home page* to refer to the first (main) page that you see when you enter a website. See also [web, web page, website, WWW, www, home page](#web).
 host list, host name | | Use each of these terms as two words.
+How-To | | When referring to the portion of the Support website that contains articles about Rackspace Cloud services, show the name as How-To.
 hyperlink	| | See [link](#link).
 icon | | Do not use *icon* and *button* interchangeably. If you are referring to a graphic on a screen, window, or other area, use *icon*. If you are referring to a command button or toolbar button (labeled or unlabeled), use *button.* <br /><br /> *Use:* <br /> To add video to an in-progress IM conversation or conference call, click the **Camera** icon.
 ID, IDs | | Use uppercase letters. Do not use *id* or *Id* unless the context requires it. <br /> <br /> Do not use *ID* as a verb; use *identify* instead. <br /><br /> *Use:* <br /> The ``<affected-end-user-id>`` element specifies the user ID of the end user who is affected by the incident.
@@ -167,7 +168,6 @@ keep in mind | Do not use	| Use *remember* or *consider*, or rewrite to eliminat
 key pair | | Use as two words. Hyphenate when used as a unit modifier, as in *key-pair authentication*.
 key-value store	| | Hyphenate *key-value* when used as an adjective.
 kick off (v)	| Do not use	| Use *start* instead.
-Knowledge Center, knowledge base | | When referring to the Rackspace Knowledge Center, show *Knowledge Center* as two words and use initial capitals. Do not abbreviate to *KC*. <br /><br /> When referring to a knowledge base that is part of a product or belongs to another company, use the form used in the product or at the company. For generic references, use *knowledge base*.
 later	| | See [earlier, later](#earlier).
 left <a name="left"></a> |	Restricted	| Avoid using *left* by itself as a directional term. When possible, use such terms as *upper left*, *lower left*, *leftmost*, and *on the left side of* instead. Include a hyphen if the term modifies a noun, as in *upper-left* corner. Do not use *left hand*. <br /><br /> *Use:* <br /> Click the **Server Manager** icon at the lower left of the Windows task bar. <br /> Select **Entourage** in the upper-left corner of the pane.  
 less, fewer	| | Use *fewer* to modify countable nouns. Use *less* to modify collective or mass nouns. <br /><br /> *Use:* <br /> Fewer resources mean heavier workloads, less time, and lower levels of staff experience.  
