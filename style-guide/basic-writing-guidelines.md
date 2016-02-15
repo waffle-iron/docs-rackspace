@@ -184,6 +184,7 @@ Use words as they are defined in a general dictionary, in an accepted industry d
   - panel, screen
   - window, dialog box
 
+For guidelines about specific words, see [Terminology guidelines](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/terminology-guidelines.md).
 
 ## <a name="use-simple-verbs"></a>Use simple action verbs, and don't turn them into nouns
 
