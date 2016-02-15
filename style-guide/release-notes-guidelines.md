@@ -1,4 +1,4 @@
-## Release notes guidelines
+# Release notes guidelines
 
 This topic provides guidelines for writing release notes (RN) for Rackspace Cloud services APIs.
 
@@ -11,7 +11,7 @@ For an example that illustrates most of these guidelines, see the [Cloud Block S
 - [Wording](#wording)
 - [Editing existing release notes](#editing-existing-release-notes)
 
-### Structure
+## Structure
 For each release-specific RN file that you create, observe the following guidelines:
 
 - Use one of the following formats for the title of the RN file:
@@ -51,7 +51,7 @@ For each release-specific RN file that you create, observe the following guideli
 
 - Order your RN files from latest to earliest, so that the latest is always "on top.". For example, the release notes for version 1.1 should precede the release notes for version 1.0 in the hierarchy.  
 
-### Formatting
+## Formatting
 - Use sentence-style capitalization for all headings, including the title of the file (see the examples in the preceding section). The only exception to this rule is the high-level title of the release notes section, which is **Release Notes**.
 
 - If a section has several items&mdash;for example, there are several resolved issues to document&mdash;provide the descriptions in a bullet list. You do not need to precede the bullet list with an introductory sentence, unless one is necessary for clarity.
@@ -62,21 +62,21 @@ For each release-specific RN file that you create, observe the following guideli
 
 - As needed, use the [text formatting guidelines](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/m-z-style-guidelines.md#text-formatting).
 
-### Wording
+## Wording
 You do not need to include an introductory paragraph for each file. The one that exists for the "Release Notes" section as a whole is sufficient. You can begin each file with the "What's new" heading. However, you can include an introductory paragraph if necessary&mdash;for example, if you want to state that the release notes correspond to a particular type of release, such as a Limited Availability release, or you need to introduce the first release of a major version.
 
 If you refer to content in another part of the API document, provide a link to the specific section.
 
 Use the following guideline when creating items in each section:
 
-#### What's new
+### What's new
 Use sentences to describe the new feature or enhancement. Provide details as needed, and provide a link to any section in the documentation that describes that feature.
 
 **Example:**
 
 IPv6 support has been added. When you create a server, an IPv4 address and an IPv6 address block are assigned. The IPv4 address and IPv6 address block are used for the public interface (Internet). The IPv4 address is also used for the private interface.
 
-#### Resolved issues
+### Resolved issues
 Provide an initial phrase that describes the issue that was fixed. Start the phrase with a past-tense verb. If necessary, include sentences to further explain the fix. If you list only phrases, do not use ending punctuation.
 
 **Example:**
@@ -85,7 +85,7 @@ Provide an initial phrase that describes the issue that was fixed. Start the phr
 - Trimmed the Monitoring ID and Monitoring Token configuration variables to ensure correctness
 - Fixed the Xen Server 6 package repo
 
-#### Known issues
+### Known issues
 
 Use sentences to describe the issue. If a workaround is available, explain it. 	
 
@@ -93,14 +93,14 @@ Use sentences to describe the issue. If a workaround is available, explain it.
 
 The create a service operation does not support Classless Inter-Domain Routing (CIDR) for IP address restrictions.
 
-#### Documentation changes
+### Documentation changes
 Provide an initial phrase that describes the issue that was fixed. Start the phrase with a past-tense verb. If necessary, include sentences to further explain the fix. If you list only phrases, do not use ending punctuation. Provide a link to the relevant section in the documentation. 	
 
 **Example:**
 
 Clarified the descriptions of the alert policies to include how the polling window affects the alarm state. See [Alert policies](https://developer.rackspace.com/docs/cloud-monitoring/v1/developer-guide/#alert-policies).
 
-### Editing existing release notes
+## Editing existing release notes
 In cases where existing release notes were not accurate at the time of publication, change the content to make it accurate. You can make the following types of changes:
 
 - Fix typos
