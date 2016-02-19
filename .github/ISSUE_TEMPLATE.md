@@ -2,7 +2,7 @@
 
 
 ###  Documentation bug
-(Describe content errors like typos, mispellings, grammatical errors, broken links, or format issues.)
+*(Content errors like typos, mispellings, grammatical errors, broken links, or format issues)*
 
 
 
