@@ -1,0 +1,58 @@
+[
+  {
+    "name": "blocked",
+    "color": "e11d21"
+  },
+  {
+    "name": "bug",
+    "color": "fc2929"
+  },
+  {
+    "name": "duplicate",
+    "color": "cccccc"
+  },
+  {
+    "name": "edit: content/SME",
+    "color": "009800"
+  },
+  {
+    "name": "edit: style",
+    "color": "009800"
+  },
+  {
+    "name": "enhancement",
+    "color": "84b6eb"
+  },
+  {
+    "name": "in progress",
+    "color": "cccccc"
+  },
+  {
+    "name": "invalid",
+    "color": "e6e6e6"
+  },
+  {
+    "name": "Q1",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "Q2",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "Q3",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "Q4",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "question",
+    "color": "cc317c"
+  },
+  {
+    "name": "wontfix",
+    "color": "ffffff"
+  }
+]
