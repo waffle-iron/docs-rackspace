@@ -1,58 +1,102 @@
 [
-  {
-    "name": "blocked",
-    "color": "e11d21"
-  },
-  {
-    "name": "bug",
-    "color": "fc2929"
-  },
-  {
-    "name": "duplicate",
-    "color": "cccccc"
-  },
-  {
-    "name": "edit: content/SME",
-    "color": "009800"
-  },
-  {
-    "name": "edit: style",
-    "color": "009800"
-  },
-  {
-    "name": "enhancement",
-    "color": "84b6eb"
-  },
-  {
-    "name": "in progress",
-    "color": "cccccc"
-  },
-  {
-    "name": "invalid",
-    "color": "e6e6e6"
-  },
-  {
-    "name": "Q1",
-    "color": "d4c5f9"
-  },
-  {
-    "name": "Q2",
-    "color": "d4c5f9"
-  },
-  {
-    "name": "Q3",
-    "color": "d4c5f9"
-  },
-  {
-    "name": "Q4",
-    "color": "d4c5f9"
-  },
-  {
-    "name": "question",
-    "color": "cc317c"
-  },
-  {
-    "name": "wontfix",
-    "color": "ffffff"
-  }
+    {
+        "name": "wontfix",
+        "color": "ffffff"
+    },
+    {
+        "name": "duplicate",
+        "color": "cccccc"
+    },
+    {
+        "name": "invalid",
+        "color": "cccccc"
+    },
+    {
+        "name": "update",
+        "color": "cccccc"
+    },
+    {
+        "name": "enhancement",
+        "color": "cccccc"
+    },
+    {
+        "name": "Q4",
+        "color": "009800"
+    },
+    {
+        "name": "blocked",
+        "color": "e11d21"
+    },
+    {
+        "name": "Q3",
+        "color": "009800"
+    },
+    {
+        "name": "bug",
+        "color": "cccccc"
+    },
+    {
+        "name": "Q1",
+        "color": "009800"
+    },
+    {
+        "name": "Edit: content/SME",
+        "color": "fef2c0"
+    },
+    {
+        "name": "Process definition and outreach",
+        "color": "0052cc"
+    },
+    {
+        "name": "Pending publication",
+        "color": "eb6420"
+    },
+    {
+        "name": "Documentation quality",
+        "color": "0052cc"
+    },
+    {
+        "name": "Q2",
+        "color": "009800"
+    },
+    {
+        "name": "Backlog",
+        "color": "eb6420"
+    },
+    {
+        "name": "New",
+        "color": "5319e7"
+    },
+    {
+        "name": "ready",
+        "color": "eb6420"
+    },
+    {
+        "name": "Edit: style",
+        "color": "fbca04"
+    },
+    {
+        "name": "question",
+        "color": "cccccc"
+    },
+    {
+        "name": "Done",
+        "color": "eb6420"
+    },
+    {
+        "name": "Content-coverage-consistency",
+        "color": "0052cc"
+    },
+    {
+        "name": "Information architecture",
+        "color": "0052cc"
+    },
+    {
+        "name": "Toolset development",
+        "color": "0052cc"
+    },
+    {
+        "name": "in progress",
+        "color": "eb6420"
+    }
 ]
