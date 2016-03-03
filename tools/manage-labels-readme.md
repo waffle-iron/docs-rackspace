@@ -15,15 +15,16 @@ to manage your GitHub label configuration across repositories.
 
 
 ## Set up
+
 Complete the following steps to install the Github label manager software and configure environment variables required to authenticate and run commands against GitHub repositories that you have permission to update.
 
-#. Follow the instructions to install the 
+1. Follow the instructions to install the 
    [github-label-manager npm module](https://www.npmjs.com/package/github-label-manager).
 
-#. Generate a [GitHub personal access token](https://github.com/settings/tokens) or copy 
+2. Generate a [GitHub personal access token](https://github.com/settings/tokens) or copy 
    an existing one so that you can authenticate when submitting requests. 
 
-#. Export your GitHub username and personal access token value to environment variables, or 
+3. Export your GitHub username and personal access token value to environment variables, or 
    add them to your ``~/.bash_profile`` .  
 
 You can find existing label configuration files in the 
