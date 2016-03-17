@@ -81,8 +81,17 @@ Not all projects have a version in the path.
       for the site where content is deployed. This value is required to build and deploy the content.
        
 ``githubUrl``
-     The GitHub URL for the content repository. This is the base URL for 
-     constructing the GitHub links to display in the navigation menu.
+     The base URL for constructing the GitHub links to display in the navigation menu. For 
+     *Edit on GitHub* links, specify the URL for the documentation source repository. 
+     For *Submit an issue* links, decide whether you want issues to be created in the 
+     documentation project repository or in a different respository. Then, specify the 
+     URL for the target repository. 
+     
+     .. note:: 
+          If your repository is private, specify the URL for 
+          another repository. Otherwise, the link target 
+          returns a 404 for users that cannot access the private repository. 
+     
      
 ``githubBranch``
      The target branch that determines the branch for submitting changes. 
