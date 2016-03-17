@@ -106,4 +106,4 @@ Not all projects have a version in the path.
    .. note:: 
    
       For more information about the _deconst.json configuration parameters, see 
-      `Authoring Content for Deconst <`https://deconst.horse/writing-docs/author/>`_ in the Deconst documentation. 
+      `Authoring Content for Deconst <https://deconst.horse/writing-docs/author/>`_ in the Deconst documentation. 
