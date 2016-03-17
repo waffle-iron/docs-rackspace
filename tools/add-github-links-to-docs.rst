@@ -6,6 +6,12 @@ Add GitHub links to the documentation navigation menu to make it easy for
 readers to propose changes or submit feedback directly to the GitHub repository 
 where you manage the project. 
 
+.. note::
+     These instructions are to enable GitHub links in Sphinx documentation 
+     projects that are deployed by the Nexus publishing platform. They do 
+     not apply to Jekyll-based projects. 
+     
+
 You can add either of the following GitHub links: 
 
 - An **Edit on GitHub** link opens an editable copy of the source file for the 
@@ -69,9 +75,10 @@ Not all projects have a version in the path.
 **Configuration parameters**
 
 ``contentIDBase``
-      A unique ID that identifies the content repository in the Nexus publishing platform. 
-      This value must match the value specified in the open control repository 
-      configuration file. This value is required to build and deploy the content.
+      A unique ID that identifies the content repository to the Nexus publishing platform. 
+      The value specified must match the one specified in the [deconst control repository 
+      configuration file](https://github.com/rackerlabs/nexus-control/tree/master/config/content.d) 
+      for the site where content is deployed. This value is required to build and deploy the content.
        
 ``githubUrl``
      The GitHub URL for the content repository. This is the base URL for 
