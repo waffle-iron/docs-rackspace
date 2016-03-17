@@ -7,9 +7,8 @@ readers to propose changes or submit feedback directly to the GitHub repository
 where you manage the project. 
 
 .. note::
-     These instructions are to enable GitHub links in Sphinx documentation 
-     projects that are deployed by the Nexus publishing platform. They do 
-     not apply to Jekyll-based projects. 
+     These instructions apply to Sphinx documentation projects that are deployed 
+     by the Nexus publishing platform. 
      
 
 You can add either of the following GitHub links: 
@@ -76,8 +75,8 @@ Not all projects have a version in the path.
 
 ``contentIDBase``
       A unique ID that identifies the content repository to the Nexus publishing platform. 
-      The value specified must match the one specified in the [deconst control repository 
-      configuration file](https://github.com/rackerlabs/nexus-control/tree/master/config/content.d) 
+      The value specified must match the one specified in the `deconst control repository 
+      configuration file <https://github.com/rackerlabs/nexus-control/tree/master/config/content.d>`_ 
       for the site where content is deployed. This value is required to build and deploy the content.
        
 ``githubUrl``
@@ -107,8 +106,4 @@ Not all projects have a version in the path.
    .. note:: 
    
       For more information about the _deconst.json configuration parameters, see 
-      `Authoring Content for Deconst` in the Deconst documentation. 
-   
-   
-   
-   
+      `Authoring Content for Deconst <`https://deconst.horse/writing-docs/author/>`_ in the Deconst documentation. 
