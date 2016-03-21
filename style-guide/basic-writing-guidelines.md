@@ -413,6 +413,20 @@ The software works properly when installed correctly. | The software will not wo
 Remember to involve your business users in the scheduling process. | Do not forget to involve your business users in the scheduling process.
 Sometimes you want to prevent a search engine from indexing a website. | It is not uncommon in certain situations to not want to allow indexing of a site by a search engine.
 
+Also, try to avoid the following negative words, using instead the suggested alternatives. However, always be honest and transparent about any issues. 
+
+Avoid | Alternative
+--- | ---
+damage | affect
+catastrophic | serious
+bad	| Use *serious* or add an explanation
+fail | unable to
+kill | cancel
+fatal | serious
+destroy | remove
+wrong | incorrect, inconsistent
+
+
 ## <a name="reference-time-space"></a>Use consistent references to time, space, and versions
 Use the following terms consistently:
 

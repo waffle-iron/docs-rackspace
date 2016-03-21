@@ -51,6 +51,7 @@ back end (n), back-end (adj) | Avoid | Use a more specific term such as *server*
 backslash | | Use *backslash* to refer to the \ character. Use *slash* to refer to the / character. Do not use *slash mark*.
 back up (v), backup (adj, n)	| | *Use:* <br /> Back up your files. <br /> Make a backup copy. <br /> Perform an incremental backup of your database.
 backward	| |	Use instead of *backwards*.
+bad | Avoid | Use *serious* instead, or provide an explanation.
 because | | Use *because* (not *since* or *as*) to express causality. <br /><br /> *Use:* <br /> The system issues an error message because the syntax is wrong. <br /><br /> *Do not use:* <br /> The system issues an error message since the syntax is wrong.
 before | | Use *before* to mean to precede in time or order of actions. <br /> <br /> Do not use *before* to refer to the location of information. Instead, use *previous*, *preceding*, or provide a specific cross-reference. <br /><br /> *Use:* <br /> Before you change the DNS of your domain, you can use the URL to test your website. <br /> Because the entity recipe precedes this stanza, it implicitly selects the entityId for this or any check in scope. <br /><br /> *Do not use:* <br /> Because the entity recipe is placed before this stanza, it implicitly selects the entityId for this or any check in scope.   
 below	| Restricted | Do not use *below* to locate information within a topic or a deliverable or to refer to releases or product versions. <br /><br /> To locate information, use *following* or provide a specific link or cross-reference. <br /><br /> To refer to releases or product versions, use *earlier*. <br /><br /> *Use:* <br /> In the following example, `cbsvolume1` is the name of the volume. <br /> You can use netstat to confirm whether a super-server is listening on a specific port. For more information, see <u>Checking listening ports with netstat</u>. <br /> To configure a custom error page for 3.5 SP1 and earlier, follow this example. <br /><br /> *Do not use:* <br /> In the below example, `cbsvolume1` is the name of the volume. <br /> You can use netstat (see below) to confirm whether a super-server is listening on a specific port. <br /> To configure a custom error page for 3.5 SP1 and below, follow this example.
@@ -69,6 +70,7 @@ can	<a name="can"></a> | | Use *can* to indicate the power or ability to perform
 canceled, canceling | | Use each word as shown, with a single *l*.
 cannot | | 	Use as one word.
 catalog	| | Use *catalog* instead of *catalogue*.
+catastrophic | Avoid | Use *serious* instead.
 check box | | Use *check box* as two words. In a user action, tell the user whether to clear or select the check box. <br /><br /> *Use:* <br /> Select the **No Output** check box. <br /> Clear the selected check box. <br /><br /> *Do not use:* <br /> Check the **No Output** box. <br /> Click the check box.
 choose | Restricted	| In procedure steps, use *select* when referring to actions in the UI. *Choose* is acceptable in a general sense.
 clear (v)	| |	Use *clear* to mean the opposite of *select* or *enter*. Do not use *deselect* or *unselect*.
@@ -93,7 +95,8 @@ comprise	| Avoid | Even when this term is used correctly, people think it is use
 computer | | Use *computer* instead of *machine* or *box*. Use *server* instead of *computer* if that is more accurate.
 console	| | Use lowercase letters when *console* is not part of a product name or a proper name. <br /><br /> *Use:* <br /> If your server becomes unreachable through RDP or the web console, you might have to place the server in Windows Rescue Mode.
 customer	| | Use *customer* to refer to individuals who use Rackspace products and services. Avoid using *user*.
-data | | Use *data* with a singular verb. <br /><br /> *Use:* <br /> If you cannot access your Cloud Databases instance, your data is still protected on a redundant SAN.  
+damage (v) | Avoid | Use *affect* instead.
+data | | Use *data* with a singular verb. <br /><br /> *Use:* <br /> If you cannot access your Cloud Databases instance, your data is still protected on a redundant SAN.
 data center | | Use *data center* as two words. Capitalize the term only when referring to a specific Rackspace data center. <br /><br /> *Use:* <br /> To avoid bandwidth fees, create your block storage volumes in the same data center as your server. <br /> We successfully migrate nearly 200 servers from our IAD Data Center our DFW Data Center.
 database | | Use *database* as one word.
 datastore	| | Use *datastore* as one word.
@@ -101,6 +104,7 @@ default (n, adj) | | Use *default* as a noun or adjective. Do not use *default* 
 deinstall	| Do not use | Use *uninstall* instead.
 deselect | Do not use | Use *clear* instead. <br /><br /> *Use:* <br /> Clear the check box.
 desire, desired | Do not use | Use *want*, *appropriate*, *required*, or another word or phrase instead.
+destroy | Avoid | Use *remove* instead.
 dialog box <a name="dialog-box"></a> | | Do not use *dialog*, *dialogue*, *window*, *pop-up*, *screen*, or *display* to mean dialog box. Capitalize *dialog box* only if it is part of a name that is shown in the software. Use lowercase letters for generic references (the filter dialog box). <br /><br /> **Note:** A dialog box is usually modal, which means that you cannot minimize it and must respond to it before proceeding. In contrast, you can keep a window open but minimized while working on another task.
 different than | Do not use |	Use *different from* instead.
 dimmed <a name="dimmed"></a> | | Use *dimmed* to describe the appearance of an unavailable command, option, or button. Do not use *disabled*, *grayed*, or *grayed out*. See also [unavailable](#unavailable). <br /><br /> *Use:* If the button is dimmed, it is unavailable.
@@ -113,7 +117,7 @@ downtime | | Use *downtime* as one word.
 drag (v), drag-and-drop (adj) | | In UI environments, *drag* refers to using the mouse to "pull" an item from one area of the screen to another area. Because the action of dropping (releasing the mouse button) is intrinsic to the action of dragging items in a UI, do not use *drag and drop* as a verb. <br /><br /> *Use:* <br /> Drag the video and image file to the container window. (verb) <br /> You can add objects to Cloud File containers by using a drag-and-drop user interface. (adjective) <br /><br /> *Do not use:* <br /> Drag and drop the video and image file to the container window.
 drill down | Avoid | Because *drill down* is idiomatic, avoid using it. Use *navigate* instead to mean to follow a path to lower-level items in a hierarchy. <br /><br /> *Use:* <br /> Navigate to the folder that contains your file. <br /><br /> *Avoid:* <br /> Drill down to the folder that contains your file.
 drop-down list, drop-down menu | Do not use | Use *list* or *menu*, or use the name of the list or menu. <br /><br /> *Use:* <br /> In the **Extend registration for** menu, select the number of years. <br /><br /> *Do not use:* <br /> In the **Extend registration for** drop-down menu, select the number of years.
-due to | Avoid | Use *because of* instead. 
+due to | Avoid | Use *because of* instead.
 earlier, later <a name="earlier"></a> | | Use these terms (instead of *lower* and *higher* or *below* and *above*) when referring to product releases and version numbers. Do not use *earlier* or *later* to refer to information in text. See also [following, preceding](#following). <br /><br /> *Use:* <br /> Ubuntu 12.04 or earlier <br /> Windows 3.1 or later <br /><br /> *Do not use:* <br /> Ubuntu 12.04 or lower <br /> Windows 3.1 or above
 ecommerce	| | Do not hyphenate. Capitalize the word if it occurs at the beginning of a sentence or in a title. <br /><br /> *Use:* <br /> Your ecommerce strategy must identify and address infrastructure needs to support availability. <br /> Ecommerce sites can meet PCI DSS requirements in the following ways.  
 effect, affect | | Use *affect* as a verb to mean influence, change, or have an effect on. Use *effect* as a noun to mean the result of an action or the power to bring about a result. <br /><br /> *Use:* <br /> Any change in network latency between primary and DR locations can potentially affect RPO because of the impact on data replication. <br /> The open cloud has a long-term effect on innovation.
@@ -129,8 +133,10 @@ etc. | Do not use	| Remove *etc.* from the text and replace it with *and so on* 
 e-words | | Most words that start with the abbreviation for *electronic* should be hyphenated, such as *e-learning*, *e-book*, and *e-reader*. Exceptions are *email* and *ecommerce*. <br /><br /> Use lowercase for the *e* in body text, and capitalize the *e* at the beginning of a sentence or a title. If the term is hyphenated, capitalize the letter following the hyphen in titles. <br /><br /> Do not make up new e-words.
 exit (close, quit, stop) <a name="exit"></a> | | Use *exit* to refer to closing a program or application. Do not use *end*, *leave*, *stop*, or *terminate* to refer to closing a program or application. <br /><br /> Use *close* to refer to the **Close** button or closing a window, dialog box, or file. <br /><br /> Use *quit* to refer to the `QUIT` command. <br /><br /> Use *stop* to refer to hardware operations, jobs, services, or routines. <br /><br /> *Use:* <br /> Exit all applications, and restart your computer. <br /> Click *Finish* to exit the installation program.
 expand	| | For directories or other navigational trees, use *expand* to mean the action of opening the tree to view more objects (such as folders). Use *collapse* to mean the action of closing the tree to view fewer objects.
+fail to | Avoid | Use *unable to* instead.  
 fanatical, fanatically | Do not use | Because *Fanatical* and *Fanatical Support* are Rackspace trademarks, do not use *fanatical* as a general adjective, and do not use *fanatically*. <br /><br /> *Use:* <br /> Our dedication to *Fanatical Support* extends beyond expert live assistance to ensuring that customers have access to self-help tools. <br /><br /> *Do not use:* <br /> We fanatically support your infrastructure.
 FAQ | | Use the acronym *FAQ* to refer to an article or section that documents frequently asked questions, or a collections of question and answer (Q&A) pairs. If you need to refer to more than one FAQ, follow *FAQ* with a plural noun, such as *articles* or *documents*. Do not use *FAQs*. <br /><br /> To refer to the Q&A pairs themselves, spell out *frequently asked questions* or just use *questions*. <br /><br /> *Use:* <br /> This article provides answers to frequently asked questions about Rackspace Cloud Servers. <br /> We provide answers to your questions about Rackspace products in product-specific FAQ articles.
+fatal | Avoid | Use *serious* instead.
 fewer, less	| | Use *fewer* for countable items. Use *less* for collective or mass items. <br /><br /> *Use:* <br /> Fewer resources mean heavier workloads, less time, and lower levels of staff experience.  
 file name, file system | | Use these terms as two words unless the context requires otherwise.
 firewall	| |	Use *firewall* as one word.
@@ -169,6 +175,7 @@ keep in mind | Do not use	| Use *remember* or *consider*, or rewrite to eliminat
 key pair | | Use as two words. Hyphenate when used as a unit modifier, as in *key-pair authentication*.
 key-value store	| | Hyphenate *key-value* when used as an adjective.
 kick off (v)	| Do not use	| Use *start* instead.
+kill | Avoid | Use *cancel*, *stop*, or *end* instead.
 later	| | See [earlier, later](#earlier).
 left <a name="left"></a> |	Restricted	| Avoid using *left* by itself as a directional term. When possible, use such terms as *upper left*, *lower left*, *leftmost*, and *on the left side of* instead. Include a hyphen if the term modifies a noun, as in *upper-left* corner. Do not use *left hand*. <br /><br /> *Use:* <br /> Click the **Server Manager** icon at the lower left of the Windows task bar. <br /> Select **Entourage** in the upper-left corner of the pane.  
 less, fewer	| | Use *fewer* to modify countable nouns. Use *less* to modify collective or mass nouns. <br /><br /> *Use:* <br /> Fewer resources mean heavier workloads, less time, and lower levels of staff experience.  
@@ -259,6 +266,7 @@ scroll bar | | Use as two words.
 see	| | Use *see* for references within a document and cross-references to other documents. Do not use *refer to*, and do not precede *see* with *please*. <br /><br /> *Use:* <br /> For a detailed description of the prerequisites, see <u>Installation prerequisites and concepts</u>. <br /><br /> *Do not use:* <br /> For a detailed description of the prerequisites, refer to <u>Installation prerequisites and concepts</u>. <br /> For a detailed description of the prerequisites, please see <u>Installation prerequisites and concepts</u>.
 select | | Use *select* instead of *choose* to specify a choice from a list or menu or to specify an option button. <br /><br /> *Use:* <br /> In the List of Files dialog box, select the file that you want to save. <br /> From the **File** menu, select **Save**.
 self (prefix) | | Usually words with the prefix *self*, such as *self-service* and *self-explanatory*, are hyphenated.
+serious | | Use *serious* instead of the more negative terms *bad*, *catastrophic*, or *fatal*.
 set up (v), setup (adj, n) | | *Use:* <br /> Set up the directory structure. <br /> Complete the setup procedure.
 should <a name="should"></a> | | Use *should* only to describe a user action that is recommended. In such cases, however, prefer *we recommend* instead. <br /><br /> Do not use *should* to indicate probability; use *might* instead. Do not use *should* to indicate necessity; use *must* instead. <br /><br /> See also [can](#can), [may](#may), and [must](#must).
 shut down (v), shutdown (adj, n) | | *Use:* <br /> To shut down the server, log in as a sudo-enabled user through SSH and enter the following command. <br /> Enter the following command to test your shutdown script.
@@ -323,6 +331,7 @@ with| | See [using, by using, with](#using).
 wizard, wizard page <a name="wizard"></a> | | Use lowercase letters for generic references to a wizard; use initial capitals when *wizard* is part of the name in the interface. Use *page* to refer to the successive dialog boxes or windows that compose the wizard. <br /><br /> *Use:* <br /> On the Rule Type page of the New Inbound Rule Wizard, select **Port** and then click **Next**. <br /> Use the OSCommerce installation wizard to update any required permissions on the site's files.
 work around (v), workaround (n) | | *Use:* <br /> The best workaround for hosting multiple SSL sites is to host each site on a separate cloud server. <br /> Use the following methods to work around this issue.
 write-only | | Always hyphenate.
+wrong | Avoid | Use *incorrect* or *inconsistent* instead.
 zeros | | Use *zeros*, not *zeroes*, as the plural of *zero*.
 
 ## <a name="concise-terms"></a>Concise terms
