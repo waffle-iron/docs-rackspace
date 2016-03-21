@@ -3,9 +3,7 @@
 Audit unit
 ==============
 
-..  note:
-
-    This information is pulled for the Quality Workstream meeting notes of 3-9-2016.
+**Note:** This information is pulled for the Quality Workstream meeting notes of 3-9-2016.
  
 Unit for standard audit: A unit is the content is reviewed on a single quality checklist.
 
@@ -39,7 +37,7 @@ merge their own Pull Requests is a goal for the QC process.
 
 -  Percentage of documents checked
 
-_  Page count checked
+-  Page count checked
 
 -  Sections or chapters checked
 
