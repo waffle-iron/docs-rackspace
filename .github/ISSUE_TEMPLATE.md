@@ -19,7 +19,7 @@ performance issues to the Rackspace product team at https://feedback.rackspace.c
 
 
 
-**Doc feedback:**
+**Documentation feedback:**
 
 
 
