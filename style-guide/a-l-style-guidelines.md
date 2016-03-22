@@ -12,7 +12,7 @@ This section of the writing style guide provides detailed guidelines about and i
 - [Dates](#dates)
 - [Email addresses](#email-addresses)
 - [File types](#file-types)
-- [Glossaries](#glossaries)
+- [Glossaries](#glossaries-section)
 - [IP addresses](#ip-addresses)
 - [Keyboard keys](#keyboard-keys)
 - [Links and cross-references](#links)
@@ -435,7 +435,7 @@ JSON	| Use the term *JSON* unless you are naming a specific file. | You can dire
 XML |	Use the term *XML* unless you are naming a specific file.	| The file is an XML document that defines configuration information regarding the web application. <br /><br /> A service name maps to a collection of configuration entries in the Hadoop **core-site.xml** file.
 zip |	Use the term *zip* for both general and specific references. | In the example, **file.zip** is the name that you assign to the zip file.
 
-## <a name="glossaries"></a>Glossaries
+## <a name="glossaries-section"></a>Glossaries
 Create a glossary to document the following items:
 
 - New, unfamiliar, or unique terms
