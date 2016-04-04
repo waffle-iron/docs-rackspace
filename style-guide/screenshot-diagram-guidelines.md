@@ -161,7 +161,7 @@ We have selected a moderate green (00CC33) for a highlight color for callouts. T
 
     The application-based color selector is displayed.
 
-    <img src="{% asset_path jing-color-selector.png %}" />
+    ![Jing color selector](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/jing-color-selector.png)
 
 2. Click the box marked **other**.
 
@@ -175,7 +175,7 @@ We have selected a moderate green (00CC33) for a highlight color for callouts. T
 
     **Note:** To enhance clarity, green was not used for the callouts in the following image.
 
-    <img src="{% asset_path os-color-selector-jing.png%}" />
+    ![Jing OS color selector](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/os-color-selector-jing.png)
 
 6. Double-click the color to add it to your custom color bar at the bottom.
 
@@ -188,7 +188,7 @@ We have selected a moderate green (00CC33) for a highlight color for callouts. T
 
     The in-application color selector is displayed.
 
-    <img src="{% asset_path skitch-with-color-option.png%}" />
+    ![Skitch color option](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/skitch-with-color-option.png)
 
 2. Click the colored oval labeled **Custom**.
 
@@ -202,7 +202,7 @@ We have selected a moderate green (00CC33) for a highlight color for callouts. T
 
     **Note:** To enhance clarity, green was not used for the callouts in the following image.
 
-    <img src="{% asset_path os-color-selector-skitch.png%}" />
+    ![Skitch OS color selector](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/os-color-selector-skitch.png)
 
 7. Double-click the color to add it to your custom color bar at the bottom.
 
