@@ -214,3 +214,7 @@ We have selected a moderate green (00CC33) for a highlight color for callouts. T
 ### Adding screenshots to a document
 <!--- Add instructions.
 -->
+
+## Diagram guidelines
+
+**Note:** Guidelines for diagrams will be added soon.
