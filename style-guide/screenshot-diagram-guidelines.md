@@ -16,7 +16,6 @@ Read this topic to learn when to use and how to create and add screenshots.
 - [Guidelines for creating screenshots](#guidelines-for-creating-screenshots)
 - [Screenshot checklist](#shotlist-checklist)
 - [Choosing the color for screenshots and callouts](#choosing-the-color-for-screenshots-and-callouts)
-- [Adding screenshots to a document](#adding-screenshots-to-a-document)
 
 ### When to use screenshots
 
@@ -211,8 +210,8 @@ We have selected a moderate green (00CC33) for a highlight color for callouts. T
 
     The color is added for use to Skitch.
 
-### Adding screenshots to a document
-<!--- Add instructions.
+<!--- Adding screenshots to a document
+Add instructions.
 -->
 
 ## Diagram guidelines
