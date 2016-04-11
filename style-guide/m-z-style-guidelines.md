@@ -136,7 +136,7 @@ To represent an unspecified or unknown version number, use *x* for each digit an
 When documenting parameters, observe the following guidelines:
 - In request and response examples, show all of the parameters.
 
-- Describe all of the parameters in tables or lists preceding the examples. Observe the following guidelines for writing descriptions:
+- Describe all of the parameters in tables preceding the examples. Observe the following guidelines for writing descriptions:
 
   - Provide meaningful information about the parameter; don't just repeat the parameter's name. Link to other sections of the documentation if more explanation is needed or if the list of possible values is long.
 
@@ -144,7 +144,17 @@ When documenting parameters, observe the following guidelines:
 
   - Include any valid values and default value at the end of the description. Use the formats "Valid values are *n* and *n*." and "The default is *n*." For example, "Valid values are `true` and `false`." and "The default is `false`."
 
-  - Specify whether *request* body parameters are required or optional. You do not need to do this for response body parameters.
+- In parameter descriptions, label parameters as required or optional based on the type of parameter:
+
+  - URI parameters: These parameters are always required, so you do not need to label them.
+
+  - Query parameters: These parameters are always optional, so you do not need to label them.
+
+  - Request body parameters: Label only required parameters, by adding the *(Required)* qualifier to the beginning of the description. Do not label optional parameters. For example:
+
+    *(Required)* Path of the parameter to update. Valid values are `/enabled`, `/vault/region`, `/vault/use_internal`, and `/log-level`.
+
+  - Response body parameters: These parameters are neither required nor optional, so do not label them.  
 
 - When listing and describing request body parameters, show the parameters in the following order:
 
