@@ -1,5 +1,3 @@
-.. glossary-terms::
-
 Terms
 -------------
 
@@ -408,7 +406,7 @@ domain
 DNS
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*(Cloud DNS)* Domain Name System. Determines Internet `domain`_ 
+*(Cloud DNS)* Domain Name System. Determines Internet :ref:`domain <domain-def>` 
 name-to-address and address-to-name resolutions. All
 domains and their components, such as mail servers, use DNS to resolve to
 the appropriate locations. DNS servers are usually set up in a
@@ -420,13 +418,16 @@ active servers.
 DNS record
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*(Cloud DNS)* A record that belongs to a particular `domain`_ and is
+*(Cloud DNS)* A record that belongs to a particular :ref:`domain <domain-def>` and is
 used to specify information about the domain. There are several types
 of DNS records. Each record type contains particular information
 used to describe that record's purpose. For example, mail exchange
 (MX) records specify the mail server for a particular domain, and
 name server (NS) records specify the authoritative name servers
 for a domain.
+
+
+.. _domain-def:
 
 domain
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -449,7 +450,7 @@ the domain associated with their Rackspace Cloud account.
 domain owner
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*(Cloud DNS)* The account that creates the `domain`_.
+*(Cloud DNS)* The account that creates the :ref:`domain <domain-def>`.
 
 E
 ~~~~
@@ -529,6 +530,8 @@ file system check
 
 A `check`_ that monitors and displays disk usage in a directory
 that you specify.
+
+.. _fine-grained-access-control:
 
 fine-grained access control
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1167,7 +1170,7 @@ resource group
 ~~~~~~~~~~~~~~~~~~~
 
 *(Cloud Identity)* A group of resources that can be attached to a policy to limit access (the implementation 
-method for `fine grained access control`_).
+method for :ref:`fine-grained access control <fine-grained-access-control>`).
 
 REST
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1356,7 +1359,7 @@ framework or component specified (in the template).
 subdomain
 ^^^^^^^^^^^
 
-*(Cloud DNS)* A `domain`_ within a parent domain that cannot be
+*(Cloud DNS)* A :ref:`domain <domain-def>` within a parent  that cannot be
 registered. Subdomains enable you to delegate domains. Subdomains
 can themselves have subdomains, so third-level, fourth-level,
 fifth-level, and deeper levels of nesting are possible.
