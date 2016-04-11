@@ -136,15 +136,15 @@ To represent an unspecified or unknown version number, use *x* for each digit an
 When documenting parameters, observe the following guidelines:
 - In request and response examples, show all of the parameters.
 
-- Describe all of the parameters in tables or lists preceding the examples. Observe the following guideline for writing descriptions:
+- Describe all of the parameters in tables or lists preceding the examples. Observe the following guidelines for writing descriptions:
 
-  - Provide meaningful information about the parameter; don't just repeat the parameter's name. Link to other sections of the documentation if more explanation is needed, or if the list of possible values is long.
+  - Provide meaningful information about the parameter; don't just repeat the parameter's name. Link to other sections of the documentation if more explanation is needed or if the list of possible values is long.
 
   - Write the first sentence of a description with an implied subject. For example, if the parameter is `name`, the description might be "Server name, which becomes the initial host name of the server."
 
   - Include any valid values and default value at the end of the description. Use the formats "Valid values are *n* and *n*." and "The default is *n*." For example, "Valid values are `true` and `false`." and "The default is `false`."
 
-  - Specify whether request body parameters are required or optional. You do not need to do this for response body parameters.
+  - Specify whether *request* body parameters are required or optional. You do not need to do this for response body parameters.
 
 - When listing and describing request body parameters, show the parameters in the following order:
 
