@@ -651,6 +651,7 @@ Usually, include only a single action in each step. If two actions are closely r
 **Examples**
 
 *Use:*
+
 1. Under **Export**, select your database (for example, 388488_drupal).
 2. Scroll down to the bottom of the window and select the **Save as file** check box, which will save your database output to a file.
 3. Click **Go**.
@@ -711,6 +712,7 @@ When the result of a step is the appearance of a dialog box, window, or page in 
 **Examples**
 
 *Use:*
+
 1. On Linux, enter the following command:
 
     `sudo rackspace-monitoring-agent --setup`
@@ -718,6 +720,7 @@ When the result of a step is the appearance of a dialog box, window, or page in 
   The list of setup settings is displayed.
 
 *Do not use:*
+
 1. On Linux, enter the following command:
 
     `sudo rackspace-monitoring-agent --setup`
@@ -725,10 +728,12 @@ When the result of a step is the appearance of a dialog box, window, or page in 
 2. The list of setup settings is displayed.
 
 *Use:*
+
 1. Under **Other Options** in the Rackspace Email box, select **Mobile Sync**.
 2. On the Activate Mobile Sync page, select individual users to activate, or select the **Add Mobile Sync to all mailboxes on this domain** option.
 
 *Avoid:*
+
 1. Under **Other Options** in the Rackspace Email box, select **Mobile Sync**.
 
   The Activate Mobile Sync page is displayed.
@@ -753,15 +758,19 @@ Omit extraneous words (such as *pop-up menu* or *command button*) unless the omi
 **Examples**
 
 *Use:*
+
 1. In the Disks window, right-click the volume and select **Take Offline**.
 
 *Avoid:*
+
 1. In the Disks window, right-click the volume and select **Take Offline** from the pop-up menu.
 
 *Use:*
+
 1. Click **Add**, enter a name for the profile, and then click **OK**.
 
 *Avoid:*
+
 1. Click the **Add** button, enter a name for the profile in the text box, and then click the **OK** button.
 
 #### Show multiple conditions in a list
@@ -791,9 +800,11 @@ If more than one method exists for completing an action, document only one metho
 **Example**
 
 *Use:*
+
 1. Select **File > New**.
 
 *Do not use:*
+
 1. Select **File > New**, or press **Ctrl+N**.
 
 ### <a name="tasks-results"></a>Results, verification, examples, and troubleshooting
