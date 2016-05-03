@@ -97,7 +97,7 @@ console	| | Use lowercase letters when *console* is not part of a product name o
 customer	| | Use *customer* to refer to individuals who use Rackspace products and services. Avoid using *user*.
 damage (v) | Avoid | Use *affect* instead.
 data | | Use *data* with a singular verb. <br /><br /> *Use:* <br /> If you cannot access your Cloud Databases instance, your data is still protected on a redundant SAN.
-data center | | Use *data center* as two words. Capitalize the term only when referring to a specific Rackspace data center. <br /><br /> *Use:* <br /> To avoid bandwidth fees, create your block storage volumes in the same data center as your server. <br /> We successfully migrate nearly 200 servers from our IAD Data Center our DFW Data Center.
+data center | | Use *region* rather than *data center*. *Region* is the term used in the control panel and API. If you need to use *data center*, show it as two words and do not capitalize it.
 database | | Use *database* as one word.
 datastore	| | Use *datastore* as one word.
 default (n, adj) | | Use *default* as a noun or adjective. Do not use *default* as a verb. <br /><br /> *Use:* <br /> The field contains the default value that you specified during installation. <br /><br /> *Do not use:* <br /> The field value defaults to the value that you specified during installation.
