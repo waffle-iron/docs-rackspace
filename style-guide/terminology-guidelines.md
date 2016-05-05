@@ -177,6 +177,7 @@ key-value store	| | Hyphenate *key-value* when used as an adjective.
 kick off (v)	| Do not use	| Use *start* instead.
 kill | Avoid | Use *cancel*, *stop*, or *end* instead.
 later	| | See [earlier, later](#earlier).
+launch | Avoid | Use *start* instead of *launch* to refer to programs, services, jobs, routines, or hardware operations. <br /><br /> *Use:* <br /> Start the program. <br /><br /> *Do not use:* <br /> Launch the program.
 left <a name="left"></a> |	Restricted	| Avoid using *left* by itself as a directional term. When possible, use such terms as *upper left*, *lower left*, *leftmost*, and *on the left side of* instead. Include a hyphen if the term modifies a noun, as in *upper-left* corner. Do not use *left hand*. <br /><br /> *Use:* <br /> Click the **Server Manager** icon at the lower left of the Windows task bar. <br /> Select **Entourage** in the upper-left corner of the pane.  
 less, fewer	| | Use *fewer* to modify countable nouns. Use *less* to modify collective or mass nouns. <br /><br /> *Use:* <br /> Fewer resources mean heavier workloads, less time, and lower levels of staff experience.  
 lets | Restricted	| See [allows](#allow).
@@ -354,7 +355,7 @@ as well as | and
 at the current time | now
 at the present time | now
 at the point where | when
-at the time if this writing | now
+at the time of this writing | now
 at this point in time | now
 check to ensure | verify
 click the *buttonName* button | click *buttonName*
@@ -398,7 +399,8 @@ it is recommended | we recommend
 keep in mind | consider
 keep in mind | remember
 kick off | start
-make us of | use
+leave out | omit
+make use of | use
 most of the time | usually
 need to | must
 once in a while | sometimes
