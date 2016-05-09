@@ -252,6 +252,7 @@ read/write | | Use a slash. Do not hyphenate this term.
 real time (n), real-time (adj) | | Use two words as a noun. Hyphenate the term as an adjective.
 re-create, recreate | | Use *re-create* to mean to create again. *Recreate* means to take recreation (relax, renew). <br /><br /> *Use:* <br /> Having a single file to manage (the image) enables you to easily re-create a new server with that identical configuration and state. <br /><br /> *Do not use:* <br /> Having a single file to manage (the image) enables you to easily recreate a new server with that identical configuration and state.
 refer to | Avoid | Use *see* instead for references within a document and cross-references to other documents. <br /><br /> *Use:* <br /> For a detailed description of the prerequisites, see <u>Installation prerequisites and concepts</u>. <br /><br /> *Do not use:* <br /> For a detailed description of the prerequisites, refer to <u>Installation prerequisites and concepts</u>.
+regular | Avoid | In British English, *regular* implies evenly spaced or consistent; in American English, it implies normal or usual.
 release notes | | Use lowercase letters for a general reference; capitalize the term only when it is used in a title.
 respectively | Avoid | Avoid this term. Express relationships directly rather than making the elements of one list respective to elements of another list.
 REST | |	Use REST, not ReST, as the abbreviation for Representational State Transfer.
