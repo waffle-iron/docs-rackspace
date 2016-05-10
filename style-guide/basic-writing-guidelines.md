@@ -413,7 +413,7 @@ The software works properly when installed correctly. | The software will not wo
 Remember to involve your business users in the scheduling process. | Do not forget to involve your business users in the scheduling process.
 Sometimes you want to prevent a search engine from indexing a website. | It is not uncommon in certain situations to not want to allow indexing of a site by a search engine.
 
-Also, try to avoid the following negative words, using instead the suggested alternatives. However, always be honest and transparent about any issues. 
+Also, try to avoid the following negative words, using instead the suggested alternatives. However, always be honest and transparent about any issues.
 
 Avoid | Alternative
 --- | ---
@@ -529,7 +529,7 @@ The following table lists some jargon typically used in the high tech industry a
 
 Jargon | Alternative | Examples
 --- | --- | ---
-abort (verb) | stop, end	| If an error occurs during data entry, the update process stops.
+abort (verb) | stop, end, cancel	| If an error occurs during data entry, the update process stops.
 boot, reboot (v)	| start, restart |	To apply your changes, restart the server.
 bounce (v)	| restart	| Restart the service.
 box (noun)	| computer, server	| The configuration specifies four servers.
