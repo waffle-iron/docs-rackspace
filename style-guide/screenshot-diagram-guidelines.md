@@ -3,11 +3,11 @@
 At Rackspace, we strive to deliver ***Fanatical Support***® through exceptional
 documentation. Images are an essential part of helpful, clear, and concise content. Follow the standards in this section when creating images for your documents.
 
-**Note:** These guidelines conform to all of the rules outlined in the (writing style guide)[https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md].
-
 - [Screenshot guidelines](#screenshot-guidelines)
 - [Diagram guidelines](#diagram-guidelines)
 - [Next steps](#next-steps)
+
+**Note:** These guidelines conform to all of the rules outlined in the [writing style guide](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md).
 
 ## Screenshot guidelines and process
 
