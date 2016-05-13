@@ -18,8 +18,6 @@ When your content references a user interface (UI), consider whether you need to
 - [When not to use screenshots](#when-not-to-use-screenshots)
 - [Before you create a screenshot](#before-you-create-a-screenshot)
 - [Screenshot checklist](#screenshot-checklist)
-- [How to use Jing](#how-to-use-jing)
-
 
 ### Screenshot alternatives
 
@@ -55,7 +53,9 @@ As an alternative to screenshots, use the correct names of the UI labels with wh
 
 Install Jing to capture and edit screenshots. Jing is available as a free download at https://www.techsmith.com/jing.html.
 
-**Note:** Jing does not support Linux distributions, but you can use other programs such as gscreendemp, greenshot, and shitter on Linux.
+To learn how to take a screenshot and make a callout in Jing, use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capture-an-image.html)
+
+**Note:** Jing does not support Linux distributions, but you can use other programs such as gscreendemp, greenshot, and shutter on Linux.
 
 ### Screenshot checklist
 
@@ -66,12 +66,6 @@ Use the following checklist to keep your screenshots up to standard:
 - [ ] **Callout color**: Use **Red**(hexadecimal color **FF0000**) for all callouts.
 - [ ] **File name**: Must be unique and meaningful, enabling easy differentiation between screenshots.
 
-### How to use Jing
-
-The following sections describe how to use Jing.
-
-#### Take a screenshot and make a callout
-
 To learn how to take a screenshot and make a callout in Jing, use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capture-an-image.html)
 
 ## Diagram guidelines
@@ -81,9 +75,7 @@ Diagrams can be useful tools to help users visualize complex processes in a simp
 - [When to use diagrams](#when-to-use-diagrams)
 - [When not to use diagrams](#when-not-to-use-diagrams)
 - [Before you create a diagram](#before-you-create-diagram)
-- [How to use Draw.io](#how-to-use-drawio)
 - [Diagram checklist](#diagram-checklist)
-
 
 ### When to use diagrams
 
@@ -103,6 +95,8 @@ Diagrams can be useful tools to help users visualize complex processes in a simp
 #### Software
 
 Use (draw.io)[https://www.draw.io/] to create your diagrams. Draw.io enables you to create diagrams directly in your web browser of choice.
+
+Draw.io provides instructions on how to use the tool in the [Draw.io Online User Manual](https://support.draw.io/display/DO/Draw.io+Online+User+Manual). These instructions are a good start for getting familiar with using Draw.io.
 
 #### Icons, stencils, and shapes
 
