@@ -3,11 +3,23 @@
 At Rackspace, we strive to deliver ***Fanatical Support***® through exceptional
 documentation. Images are an essential part of helpful, clear, and concise content. Follow the standards in this section when creating images for your documents.
 
-**Note:** These guidelines conform to all of the rules outlined in the writing style guide.
+**Note:** These guidelines conform to all of the rules outlined in the (writing style guide)[https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md].
+
+- [Screenshot guidelines](#screenshot-guidelines)
+- [Diagram guidelines](#diagram-guidelines)
+- [Next steps](#next-steps)
 
 ## Screenshot guidelines and process
 
 When your content references a user interface (UI), consider whether you need to include screenshots. Screenshots can be helpful when text alone cannot adequately convey instructions, and users like screenshots and find them useful. However, screenshots are difficult and time-consuming to maintain and present translation problems. Therefore, the use of screenshots within your article should be kept to a minimum.
+
+- [Screenshot alternatives](#screenshot-alternatives)
+- [When to use screenshots](#when-to-use-screenshots)
+- [When not to use screenshots](#when-not-to-use-screenshots)
+- [Before you create a screenshot](#before-you-create-a-screenshot)
+- [Screenshot checklist](#screenshot-checklist)
+- [How to use Jing](#how-to-use-jing)
+
 
 ### Screenshot alternatives
 
@@ -49,7 +61,7 @@ Install Jing to capture and edit screenshots. Jing is available as a free downlo
 
 **Note:** Jing does not support Linux distributions, but you can use other programs such as gscreendemp, greenshot, and shitter on Linux.
 
-### Screenshot standards checklist
+### Screenshot checklist
 
 Use the following checklist to keep your screenshots up to standard:
 
@@ -96,6 +108,13 @@ Use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capt
 
 Diagrams can be useful tools to help users visualize complex processes in a simplified fashion. However, diagrams can sometimes be too simplistic, confusing the user instead of providing help. Although the decision about whether a diagram might be helpful depends on the context of each document and the discretion of each writer.
 
+- [When to use diagrams](#when-to-use-diagrams)
+- [When not to use diagrams](#when-not-to-use-diagrams)
+- [Before you create a diagram](#before-you-create-diagram)
+- [How to use Draw.io](#how-to-use-drawio)
+- [Diagram checklist](#diagram-checklist)
+
+
 ### When to use diagrams
 
 - When there is evidence of a process, whether the process is automated or manual. As a general rule, a process can be defined as the exchange of data between two points. Points can be anything from a API endpoint to a user entering commands through the Cloud Control Panel.
@@ -131,7 +150,7 @@ With your icons downloaded, you can being making diagrams in Draw.io.
 
 Draw.io provides instructions on how to use the tool in the [Draw.io Online User Manual](https://support.draw.io/display/DO/Draw.io+Online+User+Manual). These instructions are a good start for getting familiar with using Draw.io.
 
-### Diagram standards checklist
+### Diagram checklist
 
 Use the following checklists when creating diagrams:
 
@@ -198,7 +217,7 @@ Each diagram property can be found on the right of the Draw.io mainscreen under 
 
    ![Example of one-way and two-way arrows](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/arrowsscreenshot.png)
 
-### Next steps
+## Next steps
 
 - [Contribute to our Rackspace How-To support network](https://github.com/rackerlabs/rackspace-how-to)
 
