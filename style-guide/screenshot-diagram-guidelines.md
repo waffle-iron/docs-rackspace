@@ -15,13 +15,13 @@ As an alternative to screenshots, use the correct names of the UI labels with wh
 
 ### When to use screenshots
 
-- Orient users in a complicated or long procedure
+**Orient users in a complicated or long procedure**
 
-  If you include a screenshot in a procedure, place it directly under the step that it illustrates. However, do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
+If you include a screenshot in a procedure, place it directly under the step that it illustrates. However, do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
 
-- Show complex windows or dialog boxes, such as those that contain multiple subsets of information, with free-form text fields and many options available for selection.
+**Show complex windows or dialog boxes, such as those that contain multiple subsets of information, with free-form text fields and many options available for selection.**
 
-  If you include a screenshot in a procedure, place it directly under the step that it illustrates. However, do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
+If you include a screenshot in a procedure, place it directly under the step that it illustrates. However, do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
 
 ### When not to use screenshots
 
@@ -53,10 +53,10 @@ Install Jing to capture and edit screenshots. Jing is available as a free downlo
 
 Use the following checklist to keep your screenshots up to standard:
 
-- [] **Size**: Must not be larger than 600 pixels wide.
-- [] **Callouts**: Use only arrows and boxes for callouts. To learn how to add a callout using Jing.
-- [] **Callout color**: Use the hexadecimal color **FF0000** for all callouts.
-- [] **File name**: Must be unique and meaningful, enabling easy differentiation between screenshots.
+- [ ] **Size**: Must not be larger than 600 pixels wide.
+- [ ] **Callouts**: Use only arrows and boxes for callouts. To learn how to add a callout using Jing.
+- [ ] **Callout color**: Use the hexadecimal color **FF0000** for all callouts.
+- [ ] **File name**: Must be unique and meaningful, enabling easy differentiation between screenshots.
 
 ### How to use Jing
 
@@ -89,7 +89,8 @@ Use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capt
 6. Double-click the color to add it to your custom color bar at the bottom.
 
 7. Close the OS-based color selector by clicking the left-most button (the red X) in the title bar.
-    The color is added for use to Jing.
+
+   The color is added for use to Jing.
 
 ## Diagram guidelines
 
@@ -138,61 +139,67 @@ Use the following checklists when creating diagrams:
 
 Each diagram property can be found on the right of the Draw.io mainscreen under **Diagrams**.
 
-- [] **Paper size**: Must be set to **A4 (210 mm x 297 mm)** and **Landscape**.
+- [ ] **Paper size**: Must be set to **A4 (210 mm x 297 mm)** and **Landscape**.
 
-- [] **Background color**: Must be set to **none**.
+- [ ] **Background color**: Must be set to **none**.
 
-- [] **File format**: All diagrams must be saved as an editable SVG file.
+- [ ] **File format**: All diagrams must be saved as an editable SVG file.
 
-  1. Click **File > Save As**.
-  2. Type a descriptive name for the file, and replace `.xml` with `.svg` at the end of the file name. The file will save to your local directory.
+   1. Click **File > Save As**.
+   2. Type a descriptive name for the file, and replace `.xml` with `.svg` at the end of the file name. The file will save to your local directory.
 
-- [] **File name**: Must be unique and meaningful, enabling easy differentiation between diagrams.
+- [ ] **File name**: Must be unique and meaningful, enabling easy differentiation between diagrams.
 
 #### Text formatting
 
-- [] **Font**: Must be set to **Helvetica**.
+- [ ] **Font**: Must be set to **Helvetica**.
 
-- [] **Titles:** Must be **bolded**, aligned **left**, and be at least **24px** in size.
+- [ ] **Titles:** Must be **bolded**, aligned **left**, and be at least **24px** in size.
 
 #### Objects
 
-- [] **Product icons**: Represents it's corresponding product. Product icons are always blue.
+- [ ] **Product icons**: Represents it's corresponding product. Product icons are always blue.
 
-  ![Cloud Images stencil](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/images.png)
+   ![Cloud Images stencil](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/images.png)
 
-  **Note:** If you find a Rackspace product icon that is not blue, email how-to@rackspace.com and a member of our team will create a blue version of the icon.
+   **Note:** If you find a Rackspace product icon that is not blue, email how-to@rackspace.com and a member of our team will create a blue version of the icon.
 
-- [] **Stencils**: Each stencil used represents a concept or function equal or similar to it's definition in the [Rackspace library of icons](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/rackspace-icon-library[1].pdf). Stencils that are **not** Rackspace products should always appear in black.
+- [ ] **Stencils**: Each stencil used represents a concept or function equal or similar to it's definition in the [Rackspace library of icons](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/rackspace-icon-library[1].pdf). Stencils that are **not** Rackspace products should always appear in black.
 
-- [] **Other shapes**: All shapes added to a diagram that are not made by Rackspace must conform to the look of Rackspace designed stencils.
+- [ ] **Other shapes**: All shapes added to a diagram that are not made by Rackspace must conform to the look of Rackspace designed stencils.
 
-- [] **Labels**: All product icons, stencils, and shapes, must be labeled according to their function within the diagram.
+- [ ] **Labels**: All product icons, stencils, and shapes, must be labeled according to their function within the diagram.
 
 #### Lines and arrows
 
-- [] **Line usage**: Lines are used to connect and display a relationship between two or more objects.
+- [ ] **Line usage**: Lines are used to connect and display a relationship between two or more objects.
 
-- [] **Line width**: Must be at least **2pt**. You can change the width of a line in the **Format Panel** under **Style** when you select the line.
+- [ ] **Line width**: Must be at least **2pt**. You can change the width of a line in the **Format Panel** under **Style** when you select the line.
 
-- [] **Line shape**: Keep lines straight unless a line needs to change direction.
+- [ ] **Line shape**: Keep lines straight unless a line needs to change direction.
 
-- [] **Rounded line corners**: If a line changes direction, the corner in which the change of direction occurs must be rounded. You can change to rounded corners by selecting the line, going to the **Format PAnel** under **Style**, and selecting **Rounded** in the dropdown menu.
+- [ ] **Rounded line corners**: If a line changes direction, the corner in which the change of direction occurs must be rounded. You can change to rounded corners by selecting the line, going to the **Format PAnel** under **Style**, and selecting **Rounded** in the dropdown menu.
 
-- [] **Solid lines**: Show a direct relationship between objects.
+- [ ] **Solid lines**: Show a direct relationship between objects.
 
-  ![Example of solid lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/solid-lines.png)
+   ![Example of solid lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/solid-lines.png)
 
-- [] **Dashed lines**: Group objects that are connected through a network.
+- [ ] **Dashed lines**: Group objects that are connected through a network.
 
-  ![Example of dashed lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dashed-lines.png)
+   ![Example of dashed lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dashed-lines.png)
 
-- [] **Dotted lines**: Show the traveling of data inputted by a user.
+- [ ] **Dotted lines**: Show the traveling of data inputted by a user.
 
-  ![Example of dotted lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dotted-lines.png)
+   ![Example of dotted lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dotted-lines.png)
 
-- [] **One-way and two-way arrows:** Represent direct interactions between two or more stencils. If a stencil is attached to an arrow, it implies that the product represented by the stencil needs to interact with another piece of the diagram.
+- [ ] **One-way and two-way arrows:** Represent direct interactions between two or more stencils. If a stencil is attached to an arrow, it implies that the product represented by the stencil needs to interact with another piece of the diagram.
 
-  In the following example, the CDN management service needs to interact with the CDN to perform it's function. Similarly, the CDN needs to be managed by the CDN management service. The relationship is two-way, so the line has arrows on both ends pointed to both stencils.
+   In the following example, the CDN management service needs to interact with the CDN to perform it's function. Similarly, the CDN needs to be managed by the CDN management service. The relationship is two-way, so the line has arrows on both ends pointed to both stencils.
 
-  ![Example of one-way and two-way arrows](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/arrowsscreenshot.png)
+   ![Example of one-way and two-way arrows](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/arrowsscreenshot.png)
+
+### Next steps
+
+- [Contribute to our Rackspace How-To support network](https://github.com/rackerlabs/rackspace-how-to)
+
+- [Contribute to our Rackspace core infrastructure user guide](https://github.com/rackerlabs/docs-core-infra-user-guide)
