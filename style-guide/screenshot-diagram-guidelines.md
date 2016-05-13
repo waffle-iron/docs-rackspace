@@ -156,7 +156,7 @@ Use the following checklists when creating diagrams:
 
 #### Properties
 
-Each diagram property can be found on the right of the Draw.io mainscreen under **Diagrams**.
+Each diagram property can be found on the right of the Draw.io main screen under **Diagrams**.
 
 - [ ] **Paper size**: Must be set to **A4 (210 mm x 297 mm)** and **Landscape**.
 
