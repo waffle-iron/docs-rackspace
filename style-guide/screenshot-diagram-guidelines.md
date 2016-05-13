@@ -27,13 +27,9 @@ As an alternative to screenshots, use the correct names of the UI labels with wh
 
 ### When to use screenshots
 
-**Orient users in a complicated or long procedure**
+- Orient users in a complicated or long procedure
 
-If you include a screenshot in a procedure, place it directly under the step that it illustrates. However, do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
-
-**Show complex windows or dialog boxes, such as those that contain multiple subsets of information, with free-form text fields and many options available for selection.**
-
-If you include a screenshot in a procedure, place it directly under the step that it illustrates. However, do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
+- Show complex windows or dialog boxes, such as those that contain multiple subsets of information, with free-form text fields and many options available for selection.
 
 ### When not to use screenshots
 
@@ -67,42 +63,16 @@ Use the following checklist to keep your screenshots up to standard:
 
 - [ ] **Size**: Must not be larger than 600 pixels wide.
 - [ ] **Callouts**: Use only arrows and boxes for callouts. To learn how to add a callout using Jing.
-- [ ] **Callout color**: Use the hexadecimal color **FF0000** for all callouts.
+- [ ] **Callout color**: Use **Red**(hexadecimal color **FF0000**) for all callouts.
 - [ ] **File name**: Must be unique and meaningful, enabling easy differentiation between screenshots.
 
 ### How to use Jing
 
-The following sections describe how to take a screenshot and create a callout using Jing.
+The following sections describe how to use Jing.
 
 #### Take a screenshot and make a callout
 
-Use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capture-an-image.html) to learn how to take a screenshot and make a callout in Jing.
-
-#### To select a color
-
-1. In the menu box, click the color box.
-
-    The application-based color selector is displayed.
-
-    ![Jing color selector](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/jing-color-selector.png)
-
-2. Click the box marked **other**.
-
-    The OS-based color selector is displayed.
-
-3. Click the **View Color Palettes** button.
-
-4. Click the **Web Safe Colors** palette.
-
-5. Select **FF0000** from the colors. Alternatively, you can enter **FF0000** in the **Search** box.
-
-    **Note:** To enhance clarity, green was not used for the callouts in the following image.
-
-6. Double-click the color to add it to your custom color bar at the bottom.
-
-7. Close the OS-based color selector by clicking the left-most button (the red X) in the title bar.
-
-   The color is added for use to Jing.
+To learn how to take a screenshot and make a callout in Jing, use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capture-an-image.html)
 
 ## Diagram guidelines
 
