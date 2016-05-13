@@ -1,36 +1,29 @@
 # Screenshot and diagram guidelines
 
-At Rackspace, we strive to deliver ***Fanatical Support***® through exceptional documentation. Images are an essential part of helpful, clear, and concise content. Follow the standards in this section when creating images for your documents.
+At Rackspace, we strive to deliver ***Fanatical Support***® through exceptional
+documentation. Images are an essential part of helpful, clear, and concise content. Follow the standards in this section when creating images for your documents.
 
 **Note:** These guidelines conform to all of the rules outlined in the writing style guide.
 
-- [Screenshot guidelines](#screenshot-guidelines)
-- [Diagram guidelines](#diagram-guidelines)
+## Screenshot guidelines and process
 
-**Note:** For instructions about how to add images to your files, see the **CONTRIBUTING.md** file in the content repository in GitHub.
+When your content references a user interface (UI), consider whether you need to include screenshots. Screenshots can be helpful when text alone cannot adequately convey instructions, and users like screenshots and find them useful. However, screenshots are difficult and time-consuming to maintain and present translation problems. Therefore, the use of screenshots within your article should be kept to a minimum.
 
-## Screenshot guidelines
+### Screenshot alternatives
 
-Read this topic to learn when to use and how to create and add screenshots.
-
-- [When to use screenshots](#when-to-use-screenshots)
-- [Guidelines for creating screenshots](#guidelines-for-creating-screenshots)
-- [Screenshot checklist](#shotlist-checklist)
-- [Choosing the color for screenshots and callouts](#choosing-the-color-for-screenshots-and-callouts)
+As an alternative to screenshots, use the correct names of the UI labels with which the user must interact and the values that they must choose or enter. Show the names of buttons, options, check boxes, menus, windows, dialog boxes, and so on as they appear on the UI. For example, for straightforward instructions like, "To open a file, select **File > Open**," a screenshot is not required.
 
 ### When to use screenshots
 
-When your content references a user interface (UI), consider whether you need to include screenshots. Screenshots can be helpful when text alone cannot adequately convey instructions, and users like screenshots and find them useful. However, screenshots are difficult and time-consuming to maintain and present translation problems. So you should carefully consider whether a screenshot is necessary.
-
-Generally, you can use screenshots for the following purposes:
-
 - Orient users in a complicated or long procedure
 
-- Validate that what users see on the screen is correct, especially if the particular screen might be misinterpreted
+  If you include a screenshot in a procedure, place it directly under the step that it illustrates. However, do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
 
 - Show complex windows or dialog boxes, such as those that contain multiple subsets of information, with free-form text fields and many options available for selection.
 
-Generally, do not include screenshot of the following items:
+  If you include a screenshot in a procedure, place it directly under the step that it illustrates. However, do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
+
+### When not to use screenshots
 
 - Code samples (instead, show code samples in code blocks)
 
@@ -50,108 +43,30 @@ Generally, do not include screenshot of the following items:
 
 - Tables created in another authoring tool
 
-As an alternative to screenshots, use the correct names of the UI labels with which the user must interact and the values that they must choose or enter. Show the names of buttons, options, check boxes, menus, windows, dialog boxes, and so on as they appear on the UI. You might need to occasionally double-check these names to keep them up to date, but that takes less time than reproducing a whole set of outdated screenshots. For example, for straightforward instructions like, "To open a file, select **File > Open**," a screenshot is not required.
+### Before you create a screenshot
 
-#### Scope of a screenshot
+Install Jing to capture and edit screenshots. Jing is available as a free download at https://www.techsmith.com/jing.html.
 
-If you need to use a screenshot, limit its scope. For example, if you describing how to perform a certain action on a server through the Cloud Control Panel, include just the portion of the control panel that shows this action, plus enough surrounding detail to help the user locate the item. When you limit the scope of the screenshot, you are increasing the likelihood that it will remain valid over time.
+**Note:** Jing does not support Linux distributions, but you can use other programs such as gscreendemp, greenshot, and shitter on Linux.
 
-#### Screenshots in procedures
+### Screenshot standards checklist
 
-If you include a screenshot in a procedure, place it directly under the step that it illustrates. However, do not rely on the screenshot to show information or values that the user must enter; always provide that information in the text of the steps. However, ensure that the screenshot accurately reflects the directions and values in the step text.
+Use the following checklist to keep your screenshots up to standard:
 
-### Guidelines for creating screenshots
+- [] **Size**: Must not be larger than 600 pixels wide.
+- [] **Callouts**: Use only arrows and boxes for callouts. To learn how to add a callout using Jing.
+- [] **Callout color**: Use the hexadecimal color **FF0000** for all callouts.
+- [] **File name**: Must be unique and meaningful, enabling easy differentiation between screenshots.
 
-Use the following guidelines when you create screenshots:
+### How to use Jing
 
-- [Software](#software)
-- [Size](#size)
-- [Callouts](#callouts)
-- [Titles](#titles)
-- [Borders](#borders)
-- [Name and format](#name-and-format)
+The following sections describe how to take a screenshot and create a callout using Jing.
 
-#### Software
+#### Take a screenshot and make a callout
 
-Use Jing or Skitch to capture screenshots.
+Use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capture-an-image.html) to learn how to take a screenshot and make a callout in Jing.
 
-- Jing is available for Mac OS X and Windows at http://www.techsmith.com/download/jing/.
-
-- Skitch is available for Windows at https://evernote.com/skitch/?utm_source=interspire and for Mac OS X in the Mac App store.
-
-Jing and Skitch do not support Linux distributions, but you can use other programs such as gscreendump, greenshot, and shutter on Linux.
-
-When you generate screenshots from a program other than Jing or Skitch, follow the screenshot standards.
-
-#### Size
-Capture only the elements that you are describing, but give enough surrounding detail to help the customer figure out where the element is. You do not have to capture the entire screen or the entire web browser.
-
-Screenshots should not be larger than 600 pixels wide.
-
-#### Callouts
-If you need to add callouts to direct the reader's attention, use only arrows and boxes.
-
-For callouts and arrows, use the color 00CC33 in hexidecimal. To get this color in Jing and Skitch, see [Choosing the color for screenshots and callouts](#choosing-the-color-for-screenshots-and-callouts).
-
-#### Titles
-As a general rule, screenshots should have titles (also called *captions*). However, screenshots in procedures and tutorials do not normally require titles.
-
-When creating titles for screenshots, use the following guidelines:
-
-- Use sentence-style capitalization. For detailed guidelines, see [Capitalization of titles and headings](a-l-style-guidelines.md#cap-titles).
-
-- Do not start a title with an article (*a*, *an*, or *the*).
-
-- Do not end a title with a period.
-
-- Make titles meaningful, descriptive, and concise:
-  - Avoid using a title that duplicates an article or section title.
-
-  - Ensure that no two titles are identical. To distinguish between the titles that are similar, add a qualifier.
-
-
-- Do not include trademark symbols in titles.
-
-- Place the title above the screenshot, not below it.
-
-#### Borders
-
-<!--- Find out if we have the same border requirements.
--->
-
-Borders should be 2px black around images. You can create borders by using a screenshot editing tool such as Jing or Skitch or by using a CSS.
-
-If you are using a CSS, add the following style information within the `<img>` tag to create the border:
-
-    <img style="border: 2px solid black;" src="screenshotFileName.png"></img>
-
-#### Name and format
-
-Give your screenshot files unique and meaningful names. Providing meaningful file names enables easy differentiation among screenshots, which saves time and reduces errors on subsequent edits to a document.
-
-For example, you might name a screenshot **control-panel-add-server.png**.
-
-Ensure that screenshots are in PNG format.
-
-### Screenshot checklist
-Use the following checklist to ensure that screenshots meet standards:
-
-Item | Complete?
---- | ---
-Is the screenshot necessary? Does it add any value or clarity? See [When to use screenshots](#when-to-use-screenshots). |
-The screenshot matches the current user interface (UI). |
-The screenshot is large enough so that the customer can see it without scrolling or zooming in. |
-The screenshot has a 2px black border. See [Borders](#borders). |
-Any callouts follow the guidelines for callouts. See [Callouts](#callouts). |
-The title follows the guidelines for titles. See [Titles](#titles). |
-The screenshot file is named correctly. See [Name and format](#name-and-format). | 	 
-
-### Choosing the color for screenshots and callouts
-Both Jing and Skitch (see [Software](#software)) have built-in functionality for creating frame callouts and arrows. Use this built-in functionality to promote consistency.The benefit of Skitch is that you can change the size (thickness) of your frames and arrows.
-
-We have selected a moderate green (00CC33) for a highlight color for callouts. This is a web-safe color, which means that is appears the same way across browsers. The RGB values for this color are 0, 204, 51.  
-
-#### To select color in Jing
+#### To select a color
 
 1. In the menu box, click the color box.
 
@@ -167,232 +82,117 @@ We have selected a moderate green (00CC33) for a highlight color for callouts. T
 
 4. Click the **Web Safe Colors** palette.
 
-5. Select **00CC33** from the colors. Alternatively, you can enter **00CC33** in the **Search** box.
+5. Select **FF0000** from the colors. Alternatively, you can enter **FF0000** in the **Search** box.
 
     **Note:** To enhance clarity, green was not used for the callouts in the following image.
-
-    ![Jing OS color selector](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/os-color-selector-jing.png)
 
 6. Double-click the color to add it to your custom color bar at the bottom.
 
 7. Close the OS-based color selector by clicking the left-most button (the red X) in the title bar.
     The color is added for use to Jing.
 
-#### To select color in Skitch
-
-1. Click the dot labeled **Color**.
-
-    The in-application color selector is displayed.
-
-    ![Skitch color option](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/skitch-with-color-option.png)
-
-2. Click the colored oval labeled **Custom**.
-
-3. The OS-based color selector is displayed (same as with Jing).
-
-4. Click the **View Color Palettes** button.
-
-5. Click the **Web Safe Colors** palette.
-
-6. Select **00CC33** from the colors. Alternatively, you can enter **00CC33** in the **Search** box.
-
-    **Note:** To enhance clarity, green was not used for the callouts in the following image.
-
-    ![Skitch OS color selector](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/os-color-selector-skitch.png)
-
-7. Double-click the color to add it to your custom color bar at the bottom.
-
-8. Close the OS-based color selector by clicking the left-most button (the red X) in the title bar.
-
-    The color is added for use to Skitch.
-
 ## Diagram guidelines
 
-A *diagram* is a schematic representation of a structure. It visually conveys how individual pieces of a structure interact with each other, usually through the use of icons, arrows, or other visuals.
-
-If you want to create attractive diagrams that help simplify complex structures for the reader, use these guidelines:
-
-- [When to use diagrams](#when-to-use-diagrams)
-- [Using stencils and shapes](#using-stencils-and-shapes)
-- [Using lines and arrows](#using-lines-and-arrows)
-- [Diagram titles](#diagram-titles)
-- [Diagram formatting and properties](#diagram-formatting-and-properties)
-- [How to save and edit diagram files](#how-to-save-and-edit-diagram-files)
-- [Best practices for diagrams](#best-practices-for-diagrams)
-
-**Tip:** We recommend that you use [draw.io](https://www.draw.io/) to create the diagrams. Each example in this section was created with draw.io.
+Diagrams can be useful tools to help users visualize complex processes in a simplified fashion. However, diagrams can sometimes be too simplistic, confusing the user instead of providing help. Although the decision about whether a diagram might be helpful depends on the context of each document and the discretion of each writer.
 
 ### When to use diagrams
-Diagrams can be useful tools to help users visualize complex processes in a simplified fashion. However, diagrams can sometimes be too simplistic, confusing the user instead of providing help. Although the decision about whether a diagram might be helpful depends on the context of each document and the discretion of each writer, following are some general suggestions for appropriate places to insert diagrams:
-
-- When there is an interaction between Rackspace products and other entities such as the web or APIs.
 
 - When there is evidence of a process, whether the process is automated or manual. As a general rule, a process can be defined as the exchange of data between two points. Points can be anything from a API endpoint to a user entering commands through the Cloud Control Panel.
 
 - When clarifying configurations and settings, such as the architecture for virtual servers.
 
-Following are a few suggestions on where *not* to place diagrams:
+- When defining a complex workflow within a Rackspace product.
 
-- When a process is simplistic, such as GUI interactions
-- When there is no interaction with a Rackspace product
-- When a process is too complex and needs further explanation in text
+### When not to use diagrams
 
-### Using stencils and shapes
+- When a workflow is too simplistic, such as creating a cloud server using the control panel.
+- When there is no interaction with a Rackspace product.
 
-When you create a new diagram, use the How-To product stencils. Doing so ensures that each product (for example, Cloud Images) has a unique symbol that carries the same meaning when used across diagrams. Product stencils for diagram creation are located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/ProductIcons.zip). Only products in the Rackspace Cloud Infrastructure have unique stencils. For example, the following stencil is used for Cloud Images.
+### Before you create a diagram
 
-**Stencil for Cloud Images**
+#### Software
 
-![Cloud Images stencil](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/images.png)
+Use (draw.io)[https://www.draw.io/] to create your diagrams. Draw.io enables you to create diagrams directly in your web browser of choice.
 
-#### When to use blue stencils versus black stencils
-Not all stencils that you use in diagrams will be the same color as the product stencils.
+#### Icons, stencils, and shapes
 
-- Blue stencils represent items that a user can directly affect by using Rackspace products (for example, cloud images or scalable servers). In draw.io, the color code for blue is 297ACC.
+You also need to download Rackspace's library of product icons and stencils. These icons, stencils, and shapes are considered **objects**.
 
-- Black stencils represent items that the user cannot affect by using Rackspace products (for example, the web).
+The product icons are blue and located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/ProductIcons.zip).
 
-  The following diagram shows an example of black versus blue stencils. Cloud Files and server instances are shown in blue, whereas the web is shown in black.
-
-  **Example of black versus blue stencils**
-
-  ![Black versus blue stencils](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/StencilColorExamples.png)
-
-- If you use symbols for third-party product (for example, the Linux penguin), use the same color scheme as the third-party symbol. The following example shows symbols from various third parties.
-
-  **Example of third-party logo colors**
-
-  ![Third-party logo colors](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/colors-logos.png)
-
-#### New shapes and stencils
-Sometimes, an object in your diagram needs a symbol that represents a function (for example, an API endpoint) instead of a product. Following are two options:
-
-- Draw.io contains shapes that can be used in diagrams, but these shapes must conform to the look of Rackspace designed stencils. They also must be labeled.
-
-- Rackers have drawn other stencils that you can use for diagrams. Most of these stencils appear in black, but you can change them into the same blue color as the product stencils in open-source programs such as Inkscape. These are located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/RackspaceDiagramIcons.zip).
+Stencils are used to represent certain functions and hardware such as the world wide web or a server. These stencils are black and located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/RackspaceDiagramIcons.zip).
 
 **Note:** A library of Rackspace icons and their meanings can be found in [this PDF file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/rackspace-icon-library[1].pdf).
 
-#### Label all stencils and shapes on diagrams
-Although Rackspace products have unique stencils, all stencils must be labeled according to their function within the diagram. The same rule applies to shapes. Labels further clarify what each stencil or shape represents. Refer to the preceding black-versus-blue diagram for an example.
+With your icons downloaded, you can being making diagrams in Draw.io.
 
-### Using lines and arrows
+### How to use Draw.io
 
-Lines are used to connect and display the relationship between two or more object stencils. They are customizable in appearance, can have arrows at the end, and can be solid, dashed, or dotted. Although not required, we recommend that you use the following best practices for lines in diagrams:
+Draw.io provides instructions on how to use the tool in the [Draw.io Online User Manual](https://support.draw.io/display/DO/Draw.io+Online+User+Manual). These instructions are a good start for getting familiar with using Draw.io.
 
-- Use a line width above **2pt**. You can change the width in the **Format Panel** under **Style** when you select the line.
+### Diagram standards checklist
 
-- Keep lines straight unless a line needs to change direction.
+Use the following checklists when creating diagrams:
 
-- If the relationship between two or more stencils is specific, label the line.
+#### Properties
 
-- Use black lines unless colors are needed to differentiate the relationship between stencils. The following digram shows an example of using different color lines. In this example, the producer has a separate relationship with two different consumers, signified by the blue and red lines.
+Each diagram property can be found on the right of the Draw.io mainscreen under **Diagrams**.
 
-  **Example of lines of different colors**
+- [] **Paper size**: Must be set to **A4 (210 mm x 297 mm)** and **Landscape**.
 
-  ![Lines of different colors](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/cloudimagesharing.png)
+- [] **Background color**: Must be set to **none**.
 
-#### Solid lines
-Solid lines typically show a direct relationships between stencils. They can also show implied relationships.
+- [] **File format**: All diagrams must be saved as an editable SVG file.
 
-In the following example, an API endpoint has a direct relationship with two different Rackspace products, including Cloud Images.
+  1. Click **File > Save As**.
+  2. Type a descriptive name for the file, and replace `.xml` with `.svg` at the end of the file name. The file will save to your local directory.
 
-**Example of solid lines**
+- [] **File name**: Must be unique and meaningful, enabling easy differentiation between diagrams.
 
-![Example of solid lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/solid-lines.png)
+#### Text formatting
 
-#### Dashed lines
-Dashed lines typically group stencils that are in a network.
+- [] **Font**: Must be set to **Helvetica**.
 
-In the following example, the potential growth for new servers is in a public network with Cloud Databases and another server.
+- [] **Titles:** Must be **bolded**, aligned **left**, and be at least **24px** in size.
 
-**Example of dashed lines**
+#### Objects
 
-![Example of dashed lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dashed-lines.png)
+- [] **Product icons**: Represents it's corresponding product. Product icons are always blue.
 
-#### Dotted lines
-Dotted lines typically represent the traveling of information. These lines are most likely to include arrows on either end of the line.
+  ![Cloud Images stencil](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/images.png)
 
-In the following example, the producer places a firewall (information) in front of consumer B.
+  **Note:** If you find a Rackspace product icon that is not blue, email how-to@rackspace.com and a member of our team will create a blue version of the icon.
 
-**Example of dotted lines**
+- [] **Stencils**: Each stencil used represents a concept or function equal or similar to it's definition in the [Rackspace library of icons](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/rackspace-icon-library[1].pdf). Stencils that are **not** Rackspace products should always appear in black.
 
-![Example of dotted lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dotted-lines.png)
+- [] **Other shapes**: All shapes added to a diagram that are not made by Rackspace must conform to the look of Rackspace designed stencils.
 
-#### One-way and two-way arrows
-Use arrows to represent direct interactions between two or more stencils. If a stencil is attached to an arrow, it implies that the product represented by the stencil needs to interact with another piece of the diagram.
+- [] **Labels**: All product icons, stencils, and shapes, must be labeled according to their function within the diagram.
 
-In the following example, the CDN management service needs to interact with the CDN to perform it's function. Similarly, the CDN needs to be managed by the CDN management service. The relationship is two-way, so the line has arrows on both ends pointed to both stencils.
+#### Lines and arrows
 
-Alternatively, a CDN is needed to serve content to consumers, but those consumers only receive content from the CDN. The consumers need the CDN but the CDN does not need consumers. The relationship is one-way, so the arrow points only to the consumers.
+- [] **Line usage**: Lines are used to connect and display a relationship between two or more objects.
 
-**Example of one-way and two-way arrows**
+- [] **Line width**: Must be at least **2pt**. You can change the width of a line in the **Format Panel** under **Style** when you select the line.
 
-![Example of one-way and two-way arrows](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/arrowsscreenshot.png)
+- [] **Line shape**: Keep lines straight unless a line needs to change direction.
 
-### Diagram titles
-Each diagram must have a descriptive title that explicitly states the subject of the diagram. Titles are created using a text box within draw.io and are saved directly onto the diagram.
+- [] **Rounded line corners**: If a line changes direction, the corner in which the change of direction occurs must be rounded. You can change to rounded corners by selecting the line, going to the **Format PAnel** under **Style**, and selecting **Rounded** in the dropdown menu.
 
-Format the title as follows:
+- [] **Solid lines**: Show a direct relationship between objects.
 
-- Use the Tahoma font.
-- Bold the title.
-- Make the title at least 24px in size.
-- Left-align the title above the diagram.
+  ![Example of solid lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/solid-lines.png)
 
-### Diagram formatting and properties
-Use the following general guidelines to ensure uniformity across all diagrams:
+- [] **Dashed lines**: Group objects that are connected through a network.
 
-- Use the Tahoma font for all captions and labels.
+  ![Example of dashed lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dashed-lines.png)
 
-- Set each diagram to a Landscape format. To do this, click **File > Document properties**, and then under **Paper size**, set the drop-down menu to **A4 (210 mm x 297 mm)**. Under the drop-down menu, select **Landscape**.
+- [] **Dotted lines**: Show the traveling of data inputted by a user.
 
-- Change the background color to white. To do this, click **File > Document properties**, and then click the square next to **Background** and change the color to code **FFFFFF**.
+  ![Example of dotted lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dotted-lines.png)
 
-### How to save and edit diagram files
-Draw.io saves two files: an XML file, which is used to edit the diagram, and an IMG file, which is used to publish the diagram. Both files are needed to ensure that a diagram can be published as well as edited.
+- [] **One-way and two-way arrows:** Represent direct interactions between two or more stencils. If a stencil is attached to an arrow, it implies that the product represented by the stencil needs to interact with another piece of the diagram.
 
-Following are instructions for saving and editing files.
+  In the following example, the CDN management service needs to interact with the CDN to perform it's function. Similarly, the CDN needs to be managed by the CDN management service. The relationship is two-way, so the line has arrows on both ends pointed to both stencils.
 
-#### Save an XML (editable) file
-
-1. Click **File > Save As**.
-
-2. Type a name for the file, being sure the leave **.xml** in the file name. The name should be in the format **filename.xml**.
-
-  The file is saved in your local downloads directory. Move the file to the directory or the GitHub repository in which you want to keep the file.
-
-#### Save an IMG (publishable) file
-
-1. Click **File > Export As > PNG**. All IMG files should be saved as PNG).
-
-2. Type a name for the file, being sure to leave **.png** in the file name. The name should be in the format **filename.png**.
-
-  The file is saved in your local downloads directory. Move the file to the directory or the GitHub repository in which you want to keep the file.
-
-#### Edit an XML file
-
-1. Click **File > Open From > Device**.
-
-2. Find the **.xml** file that you want to edit and open the file.
-
-3. After you edit the file, delete the old **.xml** file and **.png** file from your directory or GitHub repository, and save both versions of the file by using the the same processes described earlier in this section.
-
-  **Note:** When you edit and save an existing draw.io file, the old file name is not overwritten. Instead, a number is appended to the end of the file name; for example, **filename1.xml**. If you do not want duplicate files, delete the old files before you save your edits.
-
-### Best practices for diagrams
-Following are some suggestions to help you make a professional diagram.
-
-#### Avoid using stencils or symbols with a cloud border
-Diagrams contained within our documentation should emphasize education. A cloud border adds no inherent educational value to a stencil or symbol.
-
-**Use**
-
-![Acceptable use of cloud shape](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/images.png)
-
-**Avoid**
-
-![Unacceptable use of cloud shape](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/cloud-images-do-not-use.png)
-
-#### Use round corners on lines
-Lines occasionally need to change direction to show a relationship between two stencils. In the **Format Panel** under **Style** in draw.io, set the drop-down menu to **Rounded**.
+  ![Example of one-way and two-way arrows](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/arrowsscreenshot.png)
