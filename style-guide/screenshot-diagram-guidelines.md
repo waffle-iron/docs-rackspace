@@ -94,7 +94,7 @@ Diagrams can be useful tools to help users visualize complex processes in a simp
 
 #### Software
 
-Use (draw.io)[https://www.draw.io/] to create your diagrams. Draw.io enables you to create diagrams directly in your web browser of choice.
+Use [draw.io](https://www.draw.io/) to create your diagrams. Draw.io enables you to create diagrams directly in your web browser of choice.
 
 Draw.io provides instructions on how to use the tool in the [Draw.io Online User Manual](https://support.draw.io/display/DO/Draw.io+Online+User+Manual). These instructions are a good start for getting familiar with using Draw.io.
 
@@ -148,8 +148,6 @@ Each diagram property can be found on the right of the Draw.io main screen under
    **Note:** If you find a Rackspace product icon that is not blue, email how-to@rackspace.com and a member of our team will create a blue version of the icon.
 
 - [ ] **Stencils**: Each stencil used represents a concept or function equal or similar to it's definition in the [Rackspace library of icons](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/rackspace-icon-library[1].pdf). Stencils that are **not** Rackspace products should always appear in black.
-
-- [ ] **Other shapes**: All shapes added to a diagram that are not made by Rackspace must conform to the look of Rackspace designed stencils.
 
 - [ ] **Labels**: All product icons, stencils, and shapes, must be labeled according to their function within the diagram.
 
