@@ -1006,6 +1006,7 @@ This topic provides guidelines for creating titles and headings in documentation
 - [Capitalization of titles and headings](#titles-headings-caps)
 - [Article titles and headings](#titles-headings-articles)
 - [API content titles and headings](#titles-headings-api)
+- [Tables of contents](#tocs)
 - [Table, figure, and example titles](#titles-tables-figures)
 - [Text following titles and headings](#text-after-titles)
 
@@ -1087,11 +1088,11 @@ Observe the following guidelines when you are creating section titles and headin
 
 - Create succinct, meaningful, descriptive titles and headings, and place the most important words first.
 
-  - If possible, limit titles to 60 characters for legibility in the TOC pane.
+  - If possible, limit titles and headings to 60 characters for legibility in the TOC pane.
 
   - Ensure that each title and heading are unique within a given content set.
 
-  - Consider that headings are written within the context of the content set in which they are presented. Therefore, you can usually omit "context-setting" terms. For example, if the content set is about servers, you can usually omit "for servers" from the heading.  
+  - Consider that titles and headings are written within the context of the content set in which they are presented. Therefore, you can usually omit "context-setting" terms. For example, if the content set is about servers, you can usually omit "for servers" from the title or heading. (For example, "Attach a network to a server" can be shortened to "Attach a network" with no loss of clarity.)  
 
 - Avoid "telegraphic" language (in which omitted items, such as articles, can make text cryptic). Include articles, prepositions, and punctuation as needed for clarity. However, avoid using an article (*a*, *an*, or *the*) as the first word.
 
