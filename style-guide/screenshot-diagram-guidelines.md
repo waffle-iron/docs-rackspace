@@ -55,15 +55,15 @@ Install Jing to capture and edit screenshots. Jing is available as a free downlo
 
 To learn how to take a screenshot and make a callout in Jing, use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capture-an-image.html)
 
-**Note:** Jing does not support Linux distributions, but you can use other programs such as gscreendemp, greenshot, and shutter on Linux.
+**Note:** Jing does not support Linux distributions, but you can use other programs such as gscreendemp, GreenShot, and Shutter on Linux.
 
 ### Screenshot checklist
 
 Use the following checklist to keep your screenshots up to standard:
 
 - [ ] **Size**: Must not be larger than 600 pixels wide.
-- [ ] **Callouts**: Use only arrows and boxes for callouts. To learn how to add a callout using Jing.
-- [ ] **Callout color**: Use **Red**(hexadecimal color **FF0000**) for all callouts.
+- [ ] **Callouts**: Use only arrows and boxes for callouts.
+- [ ] **Callout color**: Use **Red** (hexadecimal color **FF0000**) for all callouts.
 - [ ] **File name**: Must be unique and meaningful, enabling easy differentiation between screenshots.
 
 To learn how to take a screenshot and make a callout in Jing, use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capture-an-image.html)
@@ -79,7 +79,7 @@ Diagrams can be useful tools to help users visualize complex processes in a simp
 
 ### When to use diagrams
 
-- When there is evidence of a process, whether the process is automated or manual. As a general rule, a process can be defined as the exchange of data between two points. Points can be anything from a API endpoint to a user entering commands through the Cloud Control Panel.
+- When there is evidence of a process, whether the process is automated or manual. 
 
 - When clarifying configurations and settings, such as the architecture for virtual servers.
 
@@ -105,8 +105,6 @@ You also need to download Rackspace's library of product icons and stencils. The
 The product icons are blue and located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/ProductIcons.zip).
 
 Stencils are used to represent certain functions and hardware such as the world wide web or a server. These stencils are black and located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/RackspaceDiagramIcons.zip).
-
-**Note:** A library of Rackspace icons and their meanings can be found in [this PDF file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/rackspace-icon-library[1].pdf).
 
 With your icons downloaded, you can being making diagrams in Draw.io.
 
