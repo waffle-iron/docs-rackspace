@@ -1087,6 +1087,12 @@ Observe the following guidelines when you are creating section titles and headin
 
 - Create succinct, meaningful, descriptive titles and headings, and place the most important words first.
 
+  - If possible, limit titles to 60 characters for legibility in the TOC pane.
+
+  - Ensure that each title and heading are unique within a given content set.
+
+  - Consider that headings are written within the context of the content set in which they are presented. Therefore, you can usually omit "context-setting" terms. For example, if the content set is about servers, you can usually omit "for servers" from the heading.  
+
 - Avoid "telegraphic" language (in which omitted items, such as articles, can make text cryptic). Include articles, prepositions, and punctuation as needed for clarity. However, avoid using an article (*a*, *an*, or *the*) as the first word.
 
 - Avoid showing both an abbreviation and its spelled-out term in a title or heading. To help control the length of titles and headings, show the abbreviation in the title or heading and then define it in the first paragraph of the section.
@@ -1114,6 +1120,16 @@ Step-by-step instructions (a task) |	An imperative verb.	| Sign up for a Rackspa
 Reference	| A plural noun or a noun phrase.	| Environment variables for the nova and supernova clients  <br /><br /> Restore operations  <br /><br /> cURL command summary
 High-level process or tutorial	| A gerund.	| Working with your first message queue
 Troubleshooting	| A grammatical structure that is appropriate for the type of content. A troubleshooting topic can contain task, tutorial, concept, or reference information.	| Troubleshooting
+
+### <a name="tocs"></a>Tables of contents
+
+In addition to using the preceding guidelines when creating titles and headings, observe the following guidelines when creating a table of contents (TOC) for a collection of content:
+
+- Entries in the TOC should link only to sections in the content. Do not include a link to an outside resource in the TOC.
+
+- The text of a TOC entry must match the text of the title or heading to which it links. If the link needs to be shorter, revise the the title or heading to be shorter.
+
+- Do not manually format the TOC. TOC formatting must be consistent and controlled by the code.
 
 ### <a name="titles-tables-figures"></a>Table, figure, and example titles
 As a general rule, tables, figures, and examples should have titles (also called captions). However, tables, figures, and examples in procedures and tutorials do not normally require titles.
