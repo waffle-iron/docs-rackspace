@@ -17,11 +17,9 @@ publishing to production on `developer.rackspace.com
 
 Configure PR previews for development content
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-To preview development-only builds on a branch, configure the content and
-template mapping for the branch using the ``staging.horse`` configuration
-files.
+To preview development-only builds on a branch, update the ``staging.horse`` site configuration in the nexus-control content and template mapping files.
 
-#. Add the branch to the ``staging.horse`` `content.d/staging.horse.json
+#. Add the contentIDbase for the branch content to the `config/content.d/staging.horse.json
    <https://github.com/rackerlabs/nexus-control/blob/master/config/content.d/staging.horse.json>`_
    configuration file. For example:
 
@@ -29,13 +27,15 @@ files.
 
       "/docs/private-cloud/rpc/master/": "https://github.com/rackerlabs/docs-rpc/master/",
 
-#. Add the branch to the ``staging.horse`` `routes.d/staging.horse.json
+#. Add the template mapping to `config/routes.d/staging.horse.json
    <https://github.com/rackerlabs/nexus-control/blob/master/config/routes.d/staging.horse.json>`_
    configuration file. For example:
 
    .. code::
 
       "^/docs/private-cloud/": "user-guide.html",
+      
+      
 
 #. After you have updated the configuration files, submit a PR to the branch in
    your project repository and wait for PR to update with the preview link to
@@ -62,16 +62,14 @@ an outside collaborator with Admin access.
 
       { "kind": "github", "project": "rackerlabs/docs-rpc" },
 
-#. If you want to build from a non-master branch, specify the branch name.
-   For example:
+#. To add builds for a specific branch, add the branch name.
+
+   For example, the following specification shows the configuration to build from master, v10, v11, and v12 branches:
 
    .. code::
 
-      { "kind": "github", "project": "rackerlabs/docs-rpc", "branches": ["v10", "v11", "v12"] },
+      { "kind": "github", "project": "rackerlabs/docs-rpc", "branches": [master, "v10", "v11", "v12"] },
 
-#. Ask someone with admin access to Stider, e.g. @smashwilson, to delete the
-   Strider build. This triggers a rebuild with the new branch
-   configuration.
 
 
 Update nexus-control configuration
@@ -105,7 +103,7 @@ during the build process.
 
 
 Update docs-quickstart
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 Add the new documents to the landing page.
 
 #. Update `docs-quickstart
