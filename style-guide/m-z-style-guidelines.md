@@ -134,6 +134,7 @@ To represent an unspecified or unknown version number, use *x* for each digit an
 
 ## <a name="parameters"></a>Parameters
 When documenting parameters, observe the following guidelines:
+
 - In request and response examples, show all of the parameters.
 
 - Describe all of the parameters in tables preceding the examples. Observe the following guidelines for writing descriptions:
@@ -144,27 +145,13 @@ When documenting parameters, observe the following guidelines:
 
   - Include any valid values and default value at the end of the description. Use the formats "Valid values are *n* and *n*." and "The default is *n*." For example, "Valid values are `true` and `false`." and "The default is `false`."
 
-- In parameter descriptions, label parameters as required or optional based on the type of parameter:
+- For request body parameters only, label the required parameters by adding the *(Required)* qualifier to the beginning of the description. For example:
 
-  - URI parameters: These parameters are always required, so you do not need to label them.
+  *(Required)* Path of the parameter to update. Valid values are `/enabled`, `/vault/region`, `/vault/use_internal`, and `/log-level`.
 
-  - Query parameters: These parameters are always optional, so you do not need to label them.
+  Do not label optional request body parameters. Also, do not label URI, query, or response body parameters as either optional or required.
 
-  - Request body parameters: Label only required parameters, by adding the *(Required)* qualifier to the beginning of the description. Do not label optional parameters. For example:
-
-    *(Required)* Path of the parameter to update. Valid values are `/enabled`, `/vault/region`, `/vault/use_internal`, and `/log-level`.
-
-  - Response body parameters: These parameters are neither required nor optional, so do not label them.  
-
-- When listing and describing request body parameters, show the parameters in the following order:
-
-  - List required parameters first, sequenced in alphabetical order.
-
-  - List optional parameters after the required parameters, in alphabetical order.
-
-  - Any nested parameters should follow the same rule of required first and then optional, and alphabetical within the required/optional groups.
-
-- When listing and describing response body parameters, show them in alphabetical order.
+- When listing and describing request and response body parameters in tables, show the parameters in the same order as they are shown in the examples. If you have more than one example, match the order in the first example shown. 
 
 - Format parameter names in text according to the guidelines in [Text formatting](#text-formatting).
 
