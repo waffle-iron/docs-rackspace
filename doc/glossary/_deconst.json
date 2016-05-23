@@ -1,0 +1,8 @@
+{
+  "contentIDBase": "https://github.com/rackerlabs/docs-rackspace/glossary",
+  "githubUrl": "https://github.com/rackerlabs/docs-rackspace/",
+  "githubBranch": "master",
+  "meta": {
+    "preferGithubIssues": false
+  }
+}
