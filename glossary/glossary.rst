@@ -6,8 +6,8 @@ A
 account
 ~~~~~~~~~~~
 
-The portion of the Rackspace Cloud system designated for your use. The system is designed 
-to be used by many different customers, and your user account is your portion of it.  
+The portion of the Rackspace Cloud system designated for your use. The system is designed
+to be used by many different customers, and your user account is your portion of it.
 You must identify yourself with a valid user name and password or API access key. After you
 are authenticated, you have full read/write access to the objects
 stored in your account.
@@ -261,7 +261,7 @@ is connection-and-transfer logging.
 consumer
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*(Cloud Queues)* A server that claims :ref:`messages <message-term>` 
+*(Cloud Queues)* A server that claims :ref:`messages <message-term>`
 from a `queue`_. In the `producer-consumer`_ model of
 messaging, producers post messages
 to a queue, and then consumers claim those messages and delete them
@@ -339,9 +339,9 @@ D
 data granularity
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The increments at which metric data is measured. When you fetch 
-`data point`_ metrics, you specify several parameters to control the granularity of data 
-returned. The following granularities of data are supported: full resolution data and 
+The increments at which metric data is measured. When you fetch
+`data point`_ metrics, you specify several parameters to control the granularity of data
+returned. The following granularities of data are supported: full resolution data and
 rollups computed at 5, 20, 60, 240 and 1440 minute intervals.
 
 data point
@@ -384,10 +384,10 @@ or account number, corresponds to the tenant ID, which can be
 found on the Cloud Control Panel or by using the Rackspace Cloud
 Identity API to view user credentials.
 
-Note:: 
-   
+Note::
+
   Another name for DDI is Mosso ID.
-  
+
 
 distros
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -405,7 +405,7 @@ domain
 DNS
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*(Cloud DNS)* Domain Name System. Determines Internet :ref:`domain <domain-def>` 
+*(Cloud DNS)* Domain Name System. Determines Internet :ref:`domain <domain-def>`
 name-to-address and address-to-name resolutions. All
 domains and their components, such as mail servers, use DNS to resolve to
 the appropriate locations. DNS servers are usually set up in a
@@ -535,8 +535,8 @@ that you specify.
 fine-grained access control
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*(Cloud Identity)* Access restriction configured for an individual user or group of 
-resources. 
+*(Cloud Identity)* Access restriction configured for an individual user or group of
+resources.
 
 flavor
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -560,9 +560,9 @@ gateway
 networks, converting data to the protocol understood by each network.
 
 group
---------
+~~~~~
 
-*(Cloud Identity)* A collection of users. Currently used by Rackspace for grouping users 
+*(Cloud Identity)* A collection of users. Currently used by Rackspace for grouping users
 by API rate-limits (ex: ability to create 5 servers a day).
 
 H
@@ -628,8 +628,8 @@ IdP chaining
 
 *(Cloud Identity)* IDP Chaining
 
-IDP chaining involves authenticating against multiple 
-:ref:`identity providers <identity-provider-term>` in succession, 
+IDP chaining involves authenticating against multiple
+:ref:`identity providers <identity-provider-term>` in succession,
 stopping once a successful authentication is reached
 
 image
@@ -647,7 +647,7 @@ image consumer
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A user who has been given access to an `image`_. An
-`image producer`_ 
+`image producer`_
 shares an image with a consumer by making the consumer a
 member of that image. The consumer then accepts or rejects the
 image by changing the image member status. After it is accepted,
@@ -852,7 +852,7 @@ message
 *(Cloud Queues)* A task, a notification, or any meaningful data
 that a producer or publisher sends to a queue. A message exists
 until it is deleted by a recipient or automatically by the system
-based on a TTL (time-to-live) value. See also `producer-consumer`_ 
+based on a TTL (time-to-live) value. See also `producer-consumer`_
 and `publisher-subscriber`_.
 
 message TTL
@@ -939,7 +939,7 @@ Notification types include `webhook`_, email, and SMS.
 notification plan
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A plan that defines a set of notification rules to execute when an `alarm`_ is triggered. 
+A plan that defines a set of notification rules to execute when an `alarm`_ is triggered.
 A notification plan can contain more than one `notification`_ for each of the
 following states: Critical, Warning, OK.
 
@@ -986,13 +986,13 @@ A port is identified for each address and protocol by a
 policy
 ~~~~~~~~~~
 
-*(Cloud Identity)* A structured data format that contains a subject (user, group, role) 
-and the capabilities they can access. 
+*(Cloud Identity)* A structured data format that contains a subject (user, group, role)
+and the capabilities they can access.
 
 policy service
 ~~~~~~~~~~~~~~~~~~~~
 
-*(Cloud Identity)* A component of Identity that provides a rule-management interface 
+*(Cloud Identity)* A component of Identity that provides a rule-management interface
 and a rule-based authorization engine.
 
 
@@ -1006,7 +1006,7 @@ private container
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *(Cloud Files)* A `container`_ that is accessible only by the account
-holder. A private container is not the same as a 
+holder. A private container is not the same as a
 :ref:`CDN-enabled container <cdn-enabled-container-term>`, and the files
 in a private container are not publicly accessible.
 
@@ -1022,7 +1022,7 @@ post messages to a queue and :ref:`consumers <consumer-term>` claim those messag
 producer-consumer
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*(Cloud Queues)* A messaging model in which :ref:`producers <producer-term>` 
+*(Cloud Queues)* A messaging model in which :ref:`producers <producer-term>`
 post messages to a `queue`_ and
 :ref:`consumers <consumer-term>` (workers) claim the messages in
 order to prevent duplicate processing. Later, when work is done,
@@ -1041,7 +1041,7 @@ be nested in a container.
 public container
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*(Cloud Files)* A :ref:`CDN-enabled container <cdn-enabled-container-term>` that is 
+*(Cloud Files)* A :ref:`CDN-enabled container <cdn-enabled-container-term>` that is
 publicly accessible.
 
 public URL
@@ -1168,7 +1168,7 @@ configuration management system.
 resource group
 ~~~~~~~~~~~~~~~~~~~~
 
-*(Cloud Identity)* A group of resources that can be attached to a policy to limit access (the implementation 
+*(Cloud Identity)* A group of resources that can be attached to a policy to limit access (the implementation
 method for :ref:`fine-grained access control <fine-grained-access-control>`).
 
 REST
@@ -1429,8 +1429,8 @@ information to the Identity
 service or other cloud services to confirm identity and verify
 permission to access the requested system resources.
 
-Keystone is used to define users. Users are accounts for specific individuals, and 
-typically have a password and email associated with them. Keystone allows you to list, 
+Keystone is used to define users. Users are accounts for specific individuals, and
+typically have a password and email associated with them. Keystone allows you to list,
 create, delete, enable/disable, update email addresses, and change passwords of Users.
 
 UUID
