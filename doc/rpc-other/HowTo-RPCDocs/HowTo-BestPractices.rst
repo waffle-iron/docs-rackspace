@@ -30,17 +30,17 @@ Pull requests, merges, and making changes
 -  Try to be aware of when a change will affect more than one version.
    When this is the case, isolate the change to a single commit and note
    the effect in the commit message so that the change can be
-   ``cherry-picked <HowTo-Cherrypick.md>``\ \_\_ from one version to the
+   ``cherry-picked <HowTo-Cherrypick.md>`` from one version to the
    next.
 
-For example, if you fix a typo in ``common-front.xml`` in the ``v9``
-repo and need that change to be added to ``v10``, fix the typo, commit
-that change by itself, and include ``Affects v10`` in the commit
-message.
+   For example, if you fix a typo in ``common-front.xml`` in the ``v9``
+   repo and need that change to be added to ``v10``, fix the typo, commit
+   that change by itself, and include ``Affects v10`` in the commit
+   message::
 
-``Typo fixed in common-front.xml, affects v10``
+      Typo fixed in common-front.xml, affects v10
 
-Once the commit is merged, someone else can cherry-pick that commit into
+After the commit is merged, someone else can cherry-pick that commit into
 the ``v10`` repo.
 
 -  Rolling up multiple small commits in a single PR is fine; just be
@@ -51,8 +51,9 @@ the ``v10`` repo.
 -  When you make a commit that resolves an issue, include the issue
    number in the format ``rpcdocs/issues#ISSUE-NUMBER``.
 
-\| Sample commit message: \|
-``git commit -a -m "Spelling fix for rpcdocs/issues#12"``
+   Sample commit message::
+
+      git commit -a -m "Spelling fix for rpcdocs/issues#12"
 
 Publishing
 ----------
