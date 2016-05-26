@@ -13,9 +13,9 @@ Software prerequisites
 Before you dive in, you should ensure that you have the following
 software prerequisites established:
 
-Mac :sub:`~`
+**Mac**
 
--  ``Xcode <https://developer.apple.com/xcode/>``\ \_\_
+-  `Xcode <https://developer.apple.com/xcode/>`_
 
 Be sure to agree to the Xcode license:
 
@@ -30,7 +30,7 @@ Be sure to agree to the Xcode license:
 
       sudo pip install --upgrade setuptools
 
-Windows :sub:`:sub:`:sub:`~```
+**Windows**
 
 -  ?
 
@@ -40,7 +40,7 @@ Launchpad, CLAs, git, and more
 The OpenStack wiki has a page for first-time docs contributors to walk
 you through the initial setup steps:
 
-https://wiki.openstack.org/wiki/Documentation/HowTo/FirstTimers
+http://docs.openstack.org/contributor-guide/first-timers-quickstart.html
 
 .. note::
 
