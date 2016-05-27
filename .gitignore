@@ -1,2 +1,7 @@
 _build/
+.cache/
+.coverage
+__pycache__/
 .tox/
+*.pyc
+example.html

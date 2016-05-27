@@ -1,7 +1,13 @@
 bashate
 doc8
 flake8
+isort
+markdown
+pep8-naming
+pep257
 pyenchant
+pytest
+pytest-cov
 recommonmark
 sphinx>=1.4.1
 sphinxcontrib-spelling

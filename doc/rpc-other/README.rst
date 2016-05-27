@@ -4,7 +4,8 @@ RPC team documentation
 
 Non-product material for the RPC documentation team.
 
-- How to documentation, including how to install OpenStack on the Rackspace public cloud
+- How to documentation, including how to install OpenStack on the Rackspace
+  public cloud
 - other information to be listed
 
 Files
