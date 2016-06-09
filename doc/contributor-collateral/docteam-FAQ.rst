@@ -84,9 +84,8 @@ The docs repo is here: https://github.com/rackerlabs/docs-rpc
 
 The two most important folders here are `/doc` and `/internal`.
 
-``/doc`` contains the external guides that are published at https://developer.rackspace.com/docs/
-(You have to scroll to the RPCO-O section about 3/4
-down the page). These guides are:
+``/doc`` contains the following external guides that are published to the 
+[Rackspace developer documentation developer site](https://developer.rackspace.com/docs/#docs-private-cloud):
 
 * Administrator Guide (rpc-admin)
 * Technical FAQ (External)
@@ -95,20 +94,21 @@ down the page). These guides are:
 * Standalone Object Storage Guide
 * Upgrade Guide
 
-``/internal`` contains the internal guides that are published at
-https://github.rackspace.com/rpc-internal/docs-rpc. These guides contain
-information specific to Rackspace support, and are not intended to be widely
-shared with the public:
+``/internal`` contains the internal guides that contain information 
+specific to Rackspace support that is not intended for public use. 
+For example, the internal operations guide contains the following information,
+which is not published in the external operations guide:
+
+* Backups
+* Dashboard solutions tab
+
+The following internal guides are published to the
+[Rackspace enterprise github](https://pages.github.rackspace.com/rpc-internal/docs-rpc/)
+using the Github pages feature:
 
 * Installation Guide
 * Technical FAQ (Internal version)
 * Operations Guide (Internal version)
-
-For example, the internal operations guide contains the following information,
-whichis not published in the external operations guide:
-
-* Backups
-* Dashboard solutions tab
 
 Note that while you need to be on the Rackspace network to view the published
 internal guides, you can view the RST source in the github repo:
@@ -117,21 +117,21 @@ https://github.com/rackerlabs/docs-rpc/blob/master/internal/
 What do the RPC-O docs contain?
 -------------------------------
 
-The **Installation Guide** is intended for Rackspace Support, and provides
-the following installation information:
+The **Installation Guide** provides Rackspace support
+staff with the following installation information:
 
 * The technology used by RPCO
 * The environment and network architecture
 * Requirements to install RPCO
 * The installation process workflow, including the necessary commands to execute each step.
 
-Note that this guide is *completely different* from the OpenStack Ansible
+This *Installation Guide** is *completely different* from the OpenStack Ansible
 (OSA) installation guide, which is maintained separately.
 
-The **internal Technical FAQ** contains Rackspace internal support questions, and should not
-be distributed outside of Rackspace to any customer.
+The **internal Technical FAQ** contains Rackspace internal support questions.
+Do not distribute this guide outside of Rackspace to any customer.
 
-The **external Technical FAQ** is intended as a quick reference for Rackspace
+The **external Technical FAQ** is a quick reference for Rackspace
 customers who have questions about Rackspace Private Cloud Powered by OpenStack.
 
 The **Operations Guides** contain information and instructions for configuring
@@ -228,10 +228,12 @@ OpenStack-Ansible. This includes the following:
 How do we do OSA docs?
 ----------------------
 
-OSA is an upstream project and this means that the code lives in github,
-but it uses launchpad for bug/issue logging and management, and gerrit for code reviews.
+OSA is an upstream project. The source code lives in github and is developed and maintained
+using OpenStack tools and processes which include launchpad for bug/issue logging and management
+and gerrit for code reviews.
 
-To learn how to contribute to OSA documentation, all instructions are outlined
-here: http://docs.openstack.org/infra/manual/developers.html
+Use the following resources to learn how to contribute to the OSA documentation:
 
-AND here: http://docs.openstack.org/developer/openstack-ansible/developer-docs/contribute.html#documentation-and-release-note-guidelines
+* [OpenStack Developer's Guide](http://docs.openstack.org/infra/manual/developers.html)
+* [OpenStack Contributor's Guide Documentation and Release Notes Guidelines](http://docs.openstack.org/infra/manual/developers.html
+
