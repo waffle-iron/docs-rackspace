@@ -100,7 +100,7 @@ shared with the public:
 * Operations Guide (Internal version)
 
 For example, the internal operations guide contains the following information,
-whichis not published in the external operations guide:
+which is not published in the external operations guide:
 
 * Backups
 * Dashboard solutions tab
