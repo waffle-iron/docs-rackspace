@@ -75,11 +75,11 @@ Information Architects.
 * Information Developers are professional writers who produce technical documentation
   that helps people understand and use a product or service.
 * Information Architects ensure the structural design of shared information
-  environments (our documentation) to support usability and findability.
+  environments (our documentation) support usability and findability.
   The Information Architects are:
 
-    * Darren Chan
-    * Brian Moss
+  * Darren Chan
+  * Brian Moss
 
 Rackspace Private Cloud documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
