@@ -60,7 +60,7 @@ Managers and reports:
 The docs team consists of Information Developers (technical writers), and
 Information Architects.
 
-* Information Developers are a professional writers who produce technical documentation
+* Information Developers are professional writers who produce technical documentation
   that helps people understand and use a product or service.
 * Information Architects ensure the structural design of shared information
   environments (our documentation) to support usability and findability.
