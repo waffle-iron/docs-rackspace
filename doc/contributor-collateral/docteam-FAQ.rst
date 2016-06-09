@@ -19,12 +19,12 @@ This document addresses the following FAQs:
 1. Who is the doc team and what do we do?
 2. Rackspace Private Cloud documentation
 	a. Where do the RPC-O docs live?
-    b. What do the RPC-O docs contain?
-    c. How do we do RPC-O docs?
+	b. What do the RPC-O docs contain?
+	c. How do we do RPC-O docs?
 3. OpenStack-Ansible documentation
-    a. Where do the OSA docs live?
-    b. What do the OSA docs contain?
-    c. How do we do OSA docs?
+	a. Where do the OSA docs live?
+	b. What do the OSA docs contain?
+	c. How do we do OSA docs?
 
 Who is the doc team and what do we do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,12 +41,12 @@ Senior Manager:
 Managers and reports:
 
 * Lana Brindley (IRC: loquacities) - AU team and PTL for OpenStack manuals
-  * Darren Chan (IRC: darrenc) - OSIC
+	* Darren Chan (IRC: darrenc) - OSIC
 	* Brian Moss (IRC: bmoss) - OSIC
-  * Joseph Robinson (IRC: JRobinson_) - OSIC
+	* Joseph Robinson (IRC: JRobinson_) - OSIC
 * Karin Levenstein (IRC: klevenstein) - US team, Austin
 	* Margaret Eker - Public Cloud
-  * Kelly Holcomb - Sr. Technical Editor
+	* Kelly Holcomb - Sr. Technical Editor
 	* Catherine Richardson - Public Cloud
 	* Robb Romans (IRC: rromans) - RPC, OSA
 	* Alexandra Settle (IRC: asettle) - OSIC, RPC, OSA
