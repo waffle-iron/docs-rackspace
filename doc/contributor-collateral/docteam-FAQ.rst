@@ -13,7 +13,7 @@ can deliver to the Rackspace developer documentation and support sites.
 With this process, people with the
 expertise and product knowledge perform as much of the content production cycle
 as they reasonably can, and the Information Development team provides key guidance, process, 
-and assistance using our documentation platform and tools and on our expertise in content
+and assistance using our documentation platform and tools and applying our expertise in
 development and information architecture.
 
 The docs team provides the templates, tools, process and guidance to write content.
