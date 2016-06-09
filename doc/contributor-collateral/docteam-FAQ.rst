@@ -65,8 +65,9 @@ Information Architects.
 * Information Architects ensure the structural design of shared information
   environments (our documentation) to support usability and findability.
   The Information Architects are:
-  * Darren Chan
-  * Brian Moss
+
+    * Darren Chan
+    * Brian Moss
 
 Rackspace Private Cloud documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -193,7 +194,7 @@ These guides are:
 What do the OSA docs contain?
 -----------------------------
 
-The **OpenStack-Ansible Installation Guide(()) is intended to help deployers
+The **OpenStack-Ansible Installation Guide** is intended to help deployers
 install OpenStack-Ansible for the first time. As such, the install guide
 is somewhat opinionated, focusing on ensuring that the deployer has to make
 very few decisions and implement the least amount of configuration possible
