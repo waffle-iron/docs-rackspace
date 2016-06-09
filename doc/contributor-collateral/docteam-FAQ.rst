@@ -23,7 +23,8 @@ We also review, edit, and approve the content before publishing it.
   
   The docs team still drives the big changes, and you should always feel free to solicit
   docs team for help. The collaborative process is mainly to expedite the addition of
-  smaller changes whenever possible. If you wanna make big changes, knock yourself out.
+  smaller changes whenever possible. If you want to make large changes, feel free to
+  do so. The changes will be reviewed and edited if necessary.
   
 This document addresses the following FAQs:
 
