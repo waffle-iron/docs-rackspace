@@ -1,31 +1,33 @@
-======================
-Documentation team FAQ
-======================
+==================================================
+Documentation team FAQ for Rackspace Private Cloud
+==================================================
 
-This FAQ is intended to help developers and support team members 
+This FAQ is intended to help RPC developers and support team members
 contribute to the documentation.
 
 As a general rule: if you have the knowledge - write it down. As the developers of
-our software, you routinely communicate your deep and expert product knowledge in the 
-course of your work. If you write that down, you immediately allow our team to engage 
-with you to turn your words into expert, professional customer documentation that we 
+our software, you routinely communicate your deep and expert product knowledge in the
+course of your work. If you write that down, you immediately allow our team to engage
+with you to turn your words into expert, professional customer documentation that we
 can deliver to the Rackspace developer documentation and support sites.
-With this process, people with the
-expertise and product knowledge perform as much of the content production cycle
-as they reasonably can, and the Information Development team provides key guidance, process, 
-and assistance using our documentation platform and tools and applying our expertise in
-development and information architecture.
+
+With this process, people with the expertise and product knowledge contribute to and
+perform as much of the content production cycle as they reasonably can, and the
+Information Development team provides key guidance, process, and assistance using our
+documentation platform and tools and applying our expertise in development and
+information architecture.
 
 The docs team provides the templates, tools, process and guidance to write content.
 We also review, edit, and approve the content before publishing it.
 
 .. note::
-  
+
   The docs team still drives the big changes, and you should always feel free to solicit
-  docs team for help. The collaborative process is mainly to expedite the addition of
-  smaller changes whenever possible. If you want to make large changes, feel free to
-  do so. The changes will be reviewed and edited if necessary.
-  
+  docs team for help. Opening an issue in project GitHub repo is the quickest way to
+  do so. The collaborative process is mainly to expedite the addition of smaller
+  changes whenever possible. If you want to make large changes, feel free to do so
+  and to submit the change via PR. The changes will be reviewed and edited as necessary.
+
 This document addresses the following FAQs:
 
 1. Who is the doc team and what do we do?
@@ -57,20 +59,15 @@ Information Architects, and Editors.
   ensure all documentation establishes a consistent tone and voice as described in
   Rackspace Style Guide.
 
-Senior Manager:
-
-* Laura Clymer (IRC: onthecly)
-
-Managers and reports:
-
+* Senior Manager: Laura Clymer (IRC: onthecly)
 * Lana Brindley (IRC: loquacities) - AU team and PTL for OpenStack manuals
-	* Darren Chan (IRC: darrenc) - OSIC
-	* Brian Moss (IRC: bmoss) - OSIC
+	* Darren Chan (IRC: darrenc) - Information Architect, OSIC
+	* Brian Moss (IRC: bmoss) - Information Architect, OSIC
 	* Joseph Robinson (IRC: JRobinson_) - OSIC
 * Karin Levenstein (IRC: klevenstein) - US team, Austin
 	* Margaret Eker - Public Cloud
 	* Kelly Holcomb - Sr. Technical Editor
-	* Catherine Richardson (IRC: cathrichardson)  - Public Cloud
+	* Catherine Richardson (IRC: cathrichardson) - Public Cloud
 	* Robb Romans (IRC: rromans) - RPC, OSA
 	* Alexandra Settle (IRC: asettle) - OSIC, RPC, OSA
 	* Erik Wilson (IRC: erikmwilson) - RPC
@@ -80,23 +77,19 @@ Managers and reports:
 	* Kyle Laffoon - How-To
 	* Cat Lookabaugh - How-To, Public Cloud
 
-The Information Architects are:
-
-  * Darren Chan
-  * Brian Moss
-
 Rackspace Private Cloud documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Where do the RPC-O docs live?
 -----------------------------
 
-The docs repo is here: https://github.com/rackerlabs/docs-rpc
+The docs repo is a private repo (message one of the docs team managers for access),
+and it is located here: https://github.com/rackerlabs/docs-rpc
 
 The two most important folders here are ``/doc`` and ``/internal``.
 
-``/doc`` contains the following external guides that are published to the 
-[Rackspace developer documentation developer site](https://developer.rackspace.com/docs/#docs-private-cloud):
+``/doc`` contains the following external guides that are published to the
+`Rackspace developer documentation developer site <https://developer.rackspace.com/docs/#docs-private-cloud>`_:
 
 * Administrator Guide (rpc-admin)
 * Technical FAQ (External)
@@ -105,8 +98,8 @@ The two most important folders here are ``/doc`` and ``/internal``.
 * Standalone Object Storage Guide
 * Upgrade Guide
 
-``/internal`` contains the internal guides that contain information 
-specific to Rackspace support that is not intended for public use. 
+``/internal`` contains the internal guides that contain information
+specific to Rackspace support that is not intended for public use.
 For example, the internal operations guide contains the following information,
 which is not published in the external operations guide:
 
@@ -114,7 +107,7 @@ which is not published in the external operations guide:
 * Dashboard solutions tab
 
 The following internal guides are published to the
-[Rackspace enterprise github](https://pages.github.rackspace.com/rpc-internal/docs-rpc/)
+`Rackspace enterprise github <https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_
 using the Github pages feature:
 
 * Installation Guide
@@ -136,7 +129,7 @@ staff with the following installation information:
 * Requirements to install RPCO
 * The installation process workflow, including the necessary commands to execute each step.
 
-This **Installation Guide** is *completely different* from the OpenStack Ansible
+The RPC Installation Guide is *completely different* from the OpenStack Ansible
 (OSA) installation guide, which is maintained separately.
 
 The **internal Technical FAQ** contains Rackspace internal support questions.
@@ -240,11 +233,9 @@ How do we do OSA docs?
 ----------------------
 
 OSA is an upstream project. The source code lives in github and is developed and maintained
-using OpenStack tools and processes which include launchpad for bug/issue logging and management
-and gerrit for code reviews.
+using OpenStack tools and processes which include launchpad for bug/issue logging and management and gerrit for code reviews.
 
 Use the following resources to learn how to contribute to the OSA documentation:
 
-* [OpenStack Developer's Guide](http://docs.openstack.org/infra/manual/developers.html)
-* [OpenStack Contributor's Guide Documentation and Release Notes Guidelines](http://docs.openstack.org/infra/manual/developers.html
-
+* `OpenStack Developer's Guide <http://docs.openstack.org/infra/manual/developers.html>`_
+* `OpenStack Contributor's Guide Documentation and Release Notes Guidelines <http://docs.openstack.org/infra/manual/developers.html>`_
