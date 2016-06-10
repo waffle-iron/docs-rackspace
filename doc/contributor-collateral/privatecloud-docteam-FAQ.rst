@@ -377,5 +377,5 @@ and gerrit for code reviews.
 
 Use the following resources to learn how to contribute to the OpenStack manuals documentation:
 
-* [First timers] (http://docs.openstack.org/contributor-guide/quickstart/first-timers.html)
-* [OpenStack Documentation Contributor Guide](http://docs.openstack.org/contributor-guide/index.html)
+* `First timers <http://docs.openstack.org/contributor-guide/quickstart/first-timers.html>`_
+* `OpenStack Documentation Contributor Guide <http://docs.openstack.org/contributor-guide/index.html>`_
