@@ -1,3 +1,8 @@
+###Content deletion from Nexus
+
+In order to delete content from Nexus, follow these instructions.
+
+
 #### Prerequisites
 
 * You need an API key for the content service.
