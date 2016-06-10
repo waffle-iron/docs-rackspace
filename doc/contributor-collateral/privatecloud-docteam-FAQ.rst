@@ -39,6 +39,10 @@ This document addresses the following FAQs:
 	a. Where do the OSA docs live?
 	b. What do the OSA docs contain?
 	c. How do we do OSA docs?
+4. OpenStack manuals documentation
+	a. Where do the openstack-manuals docs live?
+	b. What do the openstack-manuals docs contain?
+	c. How do we do openstack-manuals docs?
 
 Who is the doc team and what do we do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -237,5 +241,141 @@ using OpenStack tools and processes which include launchpad for bug/issue loggin
 
 Use the following resources to learn how to contribute to the OSA documentation:
 
-* `OpenStack Developer's Guide <http://docs.openstack.org/infra/manual/developers.html>`_
-* `OpenStack Contributor's Guide Documentation and Release Notes Guidelines <http://docs.openstack.org/infra/manual/developers.html>`_
+* `OpenStack Developer's Guide: Getting Started <http://docs.openstack.org/infra/manual/developers.html>`_
+* `OpenStack Contributor Guidelines <http://docs.openstack.org/developer/openstack-ansible/developer-docs/contribute.html>`_
+
+OpenStack manuals documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Where do the openstack-manuals docs live?
+-----------------------------------------
+
+The docs repo for openstack-manuals is here: https://github.com/openstack/openstack-manuals
+
+The most important folder here for documentation is ``/doc``.
+
+``/doc`` contains the external guides that are published at http://docs.openstack.org/
+
+The Release Notes:
+
+* OpenStack Projects Release Notes
+* OpenStack Documentation Release Notes
+
+The Install Guides:
+
+* Installation Guide for openSUSE Leap 42.1 and SUSE Linux Enterprise Server 12 SP1
+* Installation Guide for Red Hat Enterprise Linux 7 and CentOS 7
+* Installation Guide for Ubuntu 14.04 (LTS)
+
+The Operations And Administrator Guides:
+
+* Administrator Guide
+* High Availability Guide
+* Operations Guide
+* Security Guide
+* Virtual Machine Image Guide
+* Architecture Design Guide
+* Networking Guide
+
+The Configuration Guides:
+
+* Configuration Reference
+
+The API Guides:
+
+* API Complete References
+* API Guide
+
+The User Guides:
+
+* End User Guide (includes Python SDK)
+* Command-Line Interface Reference
+* Open source software for application development
+
+The Contributor Guides:
+
+* OpenStack Documentation Contributor Guide
+* OpenStack Technical Committee Governance Documents
+* OpenStack Technical Committee reference documents and official resolutions
+* Python Developer Documentation
+* Language Bindings and Python Clients
+* OpenStack Project specifications
+* OpenStack Project Team Guide
+* OpenStack Developer and Community Infrastructure Documentation
+* OpenStack I18n Guide
+
+What do the openstack-manuals docs contain?
+-------------------------------------------
+
+The Release Notes contain information for new features,
+upgrades and deprecation notes, known issues, and bug fixes.
+
+The Install Guides contain getting started information with the most commonly
+used OpenStack services (openSUSE, SUSE Linux, RHEL 7, CentOS 7, and Ubuntu 14.04).
+
+The operations and administrator guides each contain different information.
+
+* Administrator Guide
+     Manage and troubleshoot an OpenStack cloud
+* High Availability Guide
+     Install and configure OpenStack for high availability
+* Operations Guide
+     Design, create, and administer a production OpenStack cloud
+* Security Guide
+     Guidelines and scenarios for creating more secure OpenStack clouds
+* Virtual Machine Image Guide
+     Obtain, create, and modify OpenStack-compatible virtual machine images
+* Architecture Design Guide
+     Guidelines for designing an OpenStack cloud
+* Networking Guide
+     Deploy and manage OpenStack Networking (neutron)
+
+The Configuration Reference guid contains installation and configuration
+options for OpenStack.
+
+The API Guides each contain different information:
+
+* API Complete References
+     Comprehensive OpenStack API reference
+* API Guide
+     Introduction to using the OpenStack API
+
+The User Guides each contain different information:
+
+* End User Guide (includes Python SDK)
+     Create and manage resources using the OpenStack dashboard, command-line client, and Python SDK
+* Command-Line Interface Reference
+     Comprehensive OpenStack command-line reference
+* Open source software for application development
+     Resources for application development on OpenStack clouds
+     
+The Contributor Guides each contain different information:
+
+* OpenStack Documentation Contributor Guide
+     Documentation workflow and conventions
+* OpenStack Technical Committee Governance Documents
+     OpenStack Technical Committee reference documents and official resolutions
+* Python Developer Documentation
+     Documentation for OpenStack developers
+* Language Bindings and Python Clients
+     Documentation for the OpenStack Python bindings
+* OpenStack Project specifications
+     Specifications for future project features
+* OpenStack Project Team Guide
+     Guide to the OpenStack project and community
+* OpenStack Developer and Community Infrastructure Documentation
+     Development and infrastructure documentation
+* OpenStack I18n Guide
+     Internationalization workflow and conventions
+
+How do we do openstack-manuals docs?
+------------------------------------
+
+OpenStack manuals is an upstream project. The source code lives in github and is developed and maintained
+using OpenStack tools and processes which include launchpad for bug/issue logging and management
+and gerrit for code reviews.
+
+Use the following resources to learn how to contribute to the OpenStack manuals documentation:
+
+* [First timers] (http://docs.openstack.org/contributor-guide/quickstart/first-timers.html)
+* [OpenStack Documentation Contributor Guide](http://docs.openstack.org/contributor-guide/index.html)
