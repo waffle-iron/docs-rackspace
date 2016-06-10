@@ -70,7 +70,7 @@ Managers and reports:
 * Karin Levenstein (IRC: klevenstein) - US team, Austin
 	* Margaret Eker - Public Cloud
 	* Kelly Holcomb - Sr. Technical Editor
-	* Catherine Richardson - Public Cloud
+	* Catherine Richardson (IRC: cathrichardson)  - Public Cloud
 	* Robb Romans (IRC: rromans) - RPC, OSA
 	* Alexandra Settle (IRC: asettle) - OSIC, RPC, OSA
 	* Erik Wilson (IRC: erikmwilson) - RPC
