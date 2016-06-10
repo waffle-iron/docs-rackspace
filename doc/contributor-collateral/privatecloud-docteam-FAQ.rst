@@ -46,6 +46,17 @@ purposes of this FAQ, we've listed the team members with their primary
 areas of expertise, but team members often do different work depending on business
 needs and priorities. Team members also contribute to OpenStack Manuals.
 
+The docs team consists of Information Developers (technical writers),
+Information Architects, and Editors.
+
+* Information Developers are professional writers who produce technical documentation
+  that helps people understand and use a product or service.
+* Information Architects ensure the structural design of shared information
+  environments (our documentation) support usability and findability.
+* Editors work closely with the Information Developers and Information Architects to
+  ensure all documentation establishes a consistent tone and voice as described in
+  Rackspace Style Guide.
+
 Senior Manager:
 
 * Laura Clymer (IRC: onthecly)
@@ -62,21 +73,14 @@ Managers and reports:
 	* Catherine Richardson - Public Cloud
 	* Robb Romans (IRC: rromans) - RPC, OSA
 	* Alexandra Settle (IRC: asettle) - OSIC, RPC, OSA
-	* Erik Wilson (erikmwilson) - RPC
+	* Erik Wilson (IRC: erikmwilson) - RPC
 * Renee Rendon - US team, San Antonio
 	* Nate Archer - How-To
 	* Stephanie Fillmon - How-To
 	* Kyle Laffoon - How-To
 	* Cat Lookabaugh - How-To, Public Cloud
 
-The docs team consists of Information Developers (technical writers), and
-Information Architects.
-
-* Information Developers are professional writers who produce technical documentation
-  that helps people understand and use a product or service.
-* Information Architects ensure the structural design of shared information
-  environments (our documentation) support usability and findability.
-  The Information Architects are:
+The Information Architects are:
 
   * Darren Chan
   * Brian Moss
@@ -89,7 +93,7 @@ Where do the RPC-O docs live?
 
 The docs repo is here: https://github.com/rackerlabs/docs-rpc
 
-The two most important folders here are `/doc` and `/internal`.
+The two most important folders here are ``/doc`` and ``/internal``.
 
 ``/doc`` contains the following external guides that are published to the 
 [Rackspace developer documentation developer site](https://developer.rackspace.com/docs/#docs-private-cloud):
@@ -132,7 +136,7 @@ staff with the following installation information:
 * Requirements to install RPCO
 * The installation process workflow, including the necessary commands to execute each step.
 
-This *Installation Guide** is *completely different* from the OpenStack Ansible
+This **Installation Guide** is *completely different* from the OpenStack Ansible
 (OSA) installation guide, which is maintained separately.
 
 The **internal Technical FAQ** contains Rackspace internal support questions.
@@ -193,7 +197,7 @@ Where do the OSA docs live?
 
 The docs repo for OSA is here: https://github.com/openstack/openstack-ansible
 
-The most important folder here for documentation is `/doc`.
+The most important folder here for documentation is ``/doc``.
 
 ``/doc`` contains the external guides that are published at http://docs.openstack.org/developer/openstack-ansible/
 
