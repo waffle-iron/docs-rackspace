@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-.. _index:
-
->>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
 =======================================
 About Rackspace technical documentation
 =======================================
@@ -10,20 +5,14 @@ About Rackspace technical documentation
 Documentation for creating, maintaining, building, and publishing Rackspace
 documentation to developer.rackspace.com.
 
-<<<<<<< HEAD
 *Last updated:* |today|
 
-=======
->>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
 .. toctree::
    :maxdepth: 1
 
    contributor-collateral/index.rst
    glossary/index.rst
-<<<<<<< HEAD
    rpc-other/index.rst
-=======
->>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
    style-guide/index.rst
    templates/index.rst
    tools/index.rst
