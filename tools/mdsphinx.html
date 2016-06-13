@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Markdown to RST table conversion &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="Tools" href="index.html"/>
+        <link rel="next" title="Development and production branches on developer.rackspace.com" href="publishing.html"/>
+        <link rel="prev" title="Importing and exporting labels" href="manage-labels-readme.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Rackspace Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc-other/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templates/index.html">InfoDev templates</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Adding support for contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Markdown to RST table conversion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#formatting-markdown-tables">Formatting markdown tables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#makefile-html-target">Makefile html target</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-prebuild">Prebuild.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-postbuild">Postbuild.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-input-and-output">Example input and output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="publishing.html">Development and production branches on developer.rackspace.com</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Tools</a> &raquo;</li>
+      
+    <li>Markdown to RST table conversion</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tools/mdsphinx.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="markdown-to-rst-table-conversion">
+<h1>Markdown to RST table conversion<a class="headerlink" href="#markdown-to-rst-table-conversion" title="Permalink to this headline">#</a></h1>
+<p>The <strong>prebuild.py</strong> and <strong>postbuild.py</strong> scripts enable markdown table
+rendering when using Sphinx and the recommonmark extension.</p>
+<ol class="arabic simple">
+<li>Prebuild.py makes temporary copies of markdown files and converts markdown
+tables fenced by <code class="docutils literal"><span class="pre">eval_rst</span></code> code blocks to RST tables.</li>
+<li>Sphinx builds HTML using the markdown files with the converted
+rst tables.</li>
+<li>Postbuild.py returns the markdown files to their original state and removes
+the temporary files created by prebuild.py.</li>
+</ol>
+<div class="section" id="formatting-markdown-tables">
+<h2>Formatting markdown tables<a class="headerlink" href="#formatting-markdown-tables" title="Permalink to this headline">#</a></h2>
+<p>To label a markdown table for conversion, place it in a code block designated
+as <code class="docutils literal"><span class="pre">eval_rst</span></code>. For example:</p>
+<div class="code ini highlight-default"><div class="highlight"><pre><span></span>```eval_rst
+| Tables        | Are           | Cool  |
+| ------------- |-------------- | ----- |
+| col 3 is      | nifty         | $1600 |
+| col 2 is      | awesome       |   $12 |
+| zebra stripes | are neat      |    $1 |
+```
+</pre></div>
+</div>
+<div class="section" id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">#</a></h3>
+<p>The underlying markdown to RST conversion is handled by Pandoc, but there are
+some limitations to what it can parse.</p>
+<p><strong>HTML tags</strong></p>
+<p>Pandoc converts HTML tags in markdown tables to raw HTML directives in RST.
+This breaks the table syntax.</p>
+<p>The <strong>prebuild.py</strong> and <strong>postbuild.py</strong> scripts can handle <code class="docutils literal"><span class="pre">&lt;br&gt;</span></code> and
+<code class="docutils literal"><span class="pre">&lt;li&gt;</span></code> HTML tags. Do not use any other HTML tags within markdown tables.</p>
+<p>An alternative to <code class="docutils literal"><span class="pre">&lt;li&gt;</span></code> tags is <code class="docutils literal"><span class="pre">&amp;bull;</span></code>, which inserts a bullet point
+character.</p>
+<p>If you require other HTML tags, please open an issue in
+<a class="reference external" href="https://github.com/rackerlabs/docs-rackspace">rackerlabs/docs-rackspace</a>
+to have support added.</p>
+<p><strong>Empty cells</strong></p>
+<p>The conversion process cannot handle empty cells in tables. If you require
+a blank cell, use <code class="docutils literal"><span class="pre">&amp;nbsp;</span></code> in the cell. Example:</p>
+<div class="code ini highlight-default"><div class="highlight"><pre><span></span>```eval_rst
+Correct name | Notes
+--- | ---
+Apache | This is a good name.
+Bash shell | &amp;nbsp;
+CentOS | &amp;nbsp;
+Git   | We all love Git.
+```
+</pre></div>
+</div>
+<p>See <a class="reference external" href="http://turner.faculty.swau.edu/webstuff/htmlsymbols.html">HTML named special symbols</a>.</p>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">#</a></h2>
+<p>The <strong>prebuild.py</strong> and <strong>postbuild.py</strong> scripts read configuration settings
+from the <code class="docutils literal"><span class="pre">tox.ini</span></code> file in the <code class="docutils literal"><span class="pre">[mdsphinx]</span></code> section. The following settings
+are available:</p>
+<dl class="docutils">
+<dt>docdir</dt>
+<dd>The documentation directory, relative to <code class="docutils literal"><span class="pre">tools/</span></code>. This is usually
+<code class="docutils literal"><span class="pre">../doc/</span></code>.</dd>
+<dt>mdsuffix</dt>
+<dd>The suffix being used for markdown files. This is usually <code class="docutils literal"><span class="pre">.md</span></code>.</dd>
+<dt>tempsuffix</dt>
+<dd>The temporary suffix used during the conversion process. This is usually
+<code class="docutils literal"><span class="pre">.temp</span></code>.</dd>
+<dt>ignore</dt>
+<dd>A comma-separated list of files to ignore. Use file names only without
+paths. Does not accept directories or wildcards (*).</dd>
+</dl>
+<p><strong>Sample configuration</strong></p>
+<div class="code ini highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">mdsphinx</span><span class="p">]</span>
+<span class="n">docdir</span> <span class="o">=</span> <span class="o">../</span><span class="n">doc</span><span class="o">/</span>
+<span class="n">mdsuffix</span> <span class="o">=</span> <span class="o">.</span><span class="n">md</span>
+<span class="n">tempsuffix</span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span>
+<span class="n">ignore</span> <span class="o">=</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span><span class="p">,</span> <span class="n">draft</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="makefile-html-target">
+<h2>Makefile html target<a class="headerlink" href="#makefile-html-target" title="Permalink to this headline">#</a></h2>
+<p>The <strong>prebuild.py</strong> and <strong>postbuild.py</strong> scripts are integrated into the
+<strong>Makefile</strong> html target. They run automatically when the <code class="docutils literal"><span class="pre">tox</span> <span class="pre">-e</span> <span class="pre">checkbuild</span></code>
+or <code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code> commands are run.</p>
+<div class="code ini highlight-default"><div class="highlight"><pre><span></span>html:
+@echo &quot;\nConverting MD tables to RST&quot;
+python3 ../tools/prebuild.py
+@echo
+$(SPHINXBUILD) -E -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+@echo &quot;\nCleaning up from MD table conversion&quot;
+python3 ../tools/postbuild.py
+@echo
+@echo &quot;Build finished. The HTML pages are in $(BUILDDIR)/html.&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-prebuild">
+<span id="prebuild-py"></span><h2>Prebuild.py<a class="headerlink" href="#module-prebuild" title="Permalink to this headline">#</a></h2>
+<p>Convert tables in MD files to RST prior to processing by Sphinx.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The script does not perform any tests on the conversion nor does it
+rollback if it encounters an error. Always check the rendered output.
+It is possible that some errors may occur that require manual fixes,
+especially when converting complex tables.</p>
+</div>
+<dl class="function">
+<dt id="prebuild.adjustrow">
+<code class="descclassname">prebuild.</code><code class="descname">adjustrow</code><span class="sig-paren">(</span><em>row</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#adjustrow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.adjustrow" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert a grid row to a list-table row.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>row</strong> (<em>str</em>) -- a row of grid table text</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a row of list-table text</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.buildtable">
+<code class="descclassname">prebuild.</code><code class="descname">buildtable</code><span class="sig-paren">(</span><em>gridtable</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#buildtable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.buildtable" title="Permalink to this definition">#</a></dt>
+<dd><p>Build an RST list-table from an RST grid table.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>gridtable</strong> (<em>list</em>) -- an RST grid table</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">an RST list-table</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.copydocs">
+<code class="descclassname">prebuild.</code><code class="descname">copydocs</code><span class="sig-paren">(</span><em>files</em>, <em>tempsuffix</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#copydocs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.copydocs" title="Permalink to this definition">#</a></dt>
+<dd><p>Copy files for processing and move originals to temp filenames.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>files</strong> (<em>list</em>) -- list of filenames</li>
+<li><strong>temptsuffix</strong> -- temporary file extension addition</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><p class="first">str</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">0 (Success), 1 (Failure)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">copydocs</span><span class="p">([</span><span class="s1">&#39;file1.md.temp&#39;</span><span class="p">,</span><span class="s1">&#39;file2.md.temp&#39;</span><span class="p">],</span> <span class="s1">&#39;.temp&#39;</span><span class="p">)</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.listfiles">
+<code class="descclassname">prebuild.</code><code class="descname">listfiles</code><span class="sig-paren">(</span><em>docroot</em>, <em>suffix</em>, <em>ignore</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#listfiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.listfiles" title="Permalink to this definition">#</a></dt>
+<dd><p>List docs with suffix extension in docroot directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>docroot</strong> (<em>str</em>) -- directory containing documentation files</li>
+<li><strong>suffix</strong> (<em>str</em>) -- extension of files to collect</li>
+<li><strong>ignore</strong> (<em>str</em>) -- file(s) to ignore</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">list of filenames in <code class="docutils literal"><span class="pre">docroot</span></code> with the <code class="docutils literal"><span class="pre">suffix</span></code> extension</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">list</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">listfiles</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="s1">&#39;.none&#39;</span><span class="p">,</span> <span class="s1">&#39;README.md&#39;</span><span class="p">)</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.listtable">
+<code class="descclassname">prebuild.</code><code class="descname">listtable</code><span class="sig-paren">(</span><em>mdstring</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#listtable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.listtable" title="Permalink to this definition">#</a></dt>
+<dd><p>Process markdown string to convert grid tables to list-tables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mdstring</strong> (<em>str</em>) -- markdown string with <code class="docutils literal"><span class="pre">eval_rst</span></code> fenced RST grid tables</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">markdown string with RST grid tables converted to RST list-tables</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.parsedoc">
+<code class="descclassname">prebuild.</code><code class="descname">parsedoc</code><span class="sig-paren">(</span><em>mdstring</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#parsedoc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.parsedoc" title="Permalink to this definition">#</a></dt>
+<dd><p>Find MD tables and convert them to RST grid tables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mdstring</strong> (<em>str</em>) -- markdown string with <code class="docutils literal"><span class="pre">eval_rst</span></code> fenced tables</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">markdown string with MD table converted to RST grid table</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">parsedoc</span><span class="p">(</span><span class="s1">&#39;A string of markdown.&#39;</span><span class="p">)</span>
+<span class="go">&#39;A string of markdown.&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.postparse">
+<code class="descclassname">prebuild.</code><code class="descname">postparse</code><span class="sig-paren">(</span><em>mdstring</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#postparse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.postparse" title="Permalink to this definition">#</a></dt>
+<dd><p>Swap HTML substitutes for strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mdstring</strong> (<em>str</em>) -- markdown string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">markdown string with parse-safe substitutes converted to strings</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">postparse</span><span class="p">(</span><span class="s1">&#39;A string of @br@markdown.&#39;</span><span class="p">)</span>
+<span class="go">&#39;A string of \n      markdown.&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.preparse">
+<code class="descclassname">prebuild.</code><code class="descname">preparse</code><span class="sig-paren">(</span><em>mdstring</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#preparse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.preparse" title="Permalink to this definition">#</a></dt>
+<dd><p>Swap HTML tags for substitutes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mdstring</strong> (<em>str</em>) -- markdown string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">markdown string with HTML tags converted to parse-safe strings</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">preparse</span><span class="p">(</span><span class="s1">&#39;A string of &lt;br /&gt;markdown.&#39;</span><span class="p">)</span>
+<span class="go">&#39;A string of @br@markdown.&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.processdocs">
+<code class="descclassname">prebuild.</code><code class="descname">processdocs</code><span class="sig-paren">(</span><em>files</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#processdocs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.processdocs" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert tables in a list of docs using parsedoc() and listtable().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> (<em>list</em>) -- files to process</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">0 (Success), 1 (Failure)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">processdocs</span><span class="p">([</span><span class="s1">&#39;file1.md.temp&#39;</span><span class="p">,</span><span class="s1">&#39;file2.md.temp&#39;</span><span class="p">])</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.readfile">
+<code class="descclassname">prebuild.</code><code class="descname">readfile</code><span class="sig-paren">(</span><em>infile</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#readfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.readfile" title="Permalink to this definition">#</a></dt>
+<dd><p>Read data from file and return text as a string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>infile</strong> (<em>str</em>) -- file to read</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">text (Success), 1 (Failure)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str or int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">readfile</span><span class="p">(</span><span class="s1">&#39;tools/example.txt&#39;</span><span class="p">)</span>
+<span class="go">&#39;Hello world!&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="prebuild.writefile">
+<code class="descclassname">prebuild.</code><code class="descname">writefile</code><span class="sig-paren">(</span><em>outfile</em>, <em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/prebuild.html#writefile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#prebuild.writefile" title="Permalink to this definition">#</a></dt>
+<dd><p>Write data to file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>outfile</strong> -- file to write</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">0 (Success), 1 (Failure)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">writefile</span><span class="p">(</span><span class="s1">&#39;tools/example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-postbuild">
+<span id="postbuild-py"></span><h2>Postbuild.py<a class="headerlink" href="#module-postbuild" title="Permalink to this headline">#</a></h2>
+<p>Remove temp files created by prebuild and rename original files.</p>
+<dl class="function">
+<dt id="postbuild.cleanup">
+<code class="descclassname">postbuild.</code><code class="descname">cleanup</code><span class="sig-paren">(</span><em>files</em>, <em>tempsuffix</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/postbuild.html#cleanup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#postbuild.cleanup" title="Permalink to this definition">#</a></dt>
+<dd><p>Revert source files and remove temp files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>files</strong> (<em>list</em>) -- files with <code class="docutils literal"><span class="pre">.temp</span></code> extension</li>
+<li><strong>temptsuffix</strong> -- temporary file extension addition</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><p class="first">str</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">0 (Success), 1 (Failure)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cleanup</span><span class="p">([</span><span class="s1">&#39;file1.md.temp&#39;</span><span class="p">,</span><span class="s1">&#39;file2.md.temp&#39;</span><span class="p">],</span> <span class="s1">&#39;.temp&#39;</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="example-input-and-output">
+<h2>Example input and output<a class="headerlink" href="#example-input-and-output" title="Permalink to this headline">#</a></h2>
+<p>Prebuild.py converts a markdown file with the following content:</p>
+<div class="code ini highlight-default"><div class="highlight"><pre><span></span># Heading 1
+This is some text
+
+## Heading 2
+This is some more text. This is an *emphasized* word.
+
+```eval_rst
+| Tables        | Are           | Cool  |
+| ------------- |-------------- | ----- |
+| col 3 is      | nifty         | $1600 |
+| col 2 is      | awesome       |   $12 |
+| zebra stripes | are neat      |    $1 |
+```
+
+More paragraphs, tables, and other markdown text.
+</pre></div>
+</div>
+<p>to a markdown file with the following content:</p>
+<div class="code ini highlight-default"><div class="highlight"><pre><span></span># Heading 1
+This is some text
+
+## Heading 2
+This is some more text. This is an *emphasized* word.
+
+```eval_rst
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 1
+
+   * - Tables
+     - Are
+     - Cool
+   * - col 3 is
+     - nifty
+     - $1600
+   * - col 2 is
+     - awesome
+     - $12
+   * - zebra stripes
+     - are neat
+     - $1
+
+```
+
+More paragraphs, tables, and other markdown text.
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="publishing.html" class="btn btn-neutral float-right" title="Development and production branches on developer.rackspace.com" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="manage-labels-readme.html" class="btn btn-neutral" title="Importing and exporting labels" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

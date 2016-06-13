@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contributing to the Rackspace How-To content repository &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/>
+        <link rel="up" title="GitHub Infra Templates" href="index.html"/>
+        <link rel="next" title="Carina by Rackspace" href="README-carina.html"/>
+        <link rel="prev" title="Rackspace How-To Content Repository" href="README-howto.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Rackspace Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rpc-other/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">InfoDev templates</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../add-github-links-to-docs.html">Adding support for contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-from-source.html">Building from Source</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">GitHub Infra Templates</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="CONTRIBUTING-carina.html">Carina by Rackspace<p>—</p>
+Guidelines for content contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GITHUBING-carina.html">GitHub Workflow :octocat:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README-devdoc.html">Rackspace Cloud Identity API documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CONTRIBUTING-devdoc.html">Contributor Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GITHUBING-devdoc.html">GitHub Workflow :octocat:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README-howto.html">Rackspace How-To Content Repository</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Contributing to the Rackspace How-To content repository</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-and-changing-articles">Creating and changing articles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#writing-guidelines">Writing guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#support-and-feedback">Support and feedback</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="README-carina.html">Carina by Rackspace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manage-labels-readme.html">Importing and exporting labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing.html">Development and production branches on developer.rackspace.com</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Tools</a> &raquo;</li>
+      
+          <li><a href="index.html">GitHub Infra Templates</a> &raquo;</li>
+      
+    <li>Contributing to the Rackspace How-To content repository</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/tools/GitHub-infra-templates/CONTRIBUTING-howto.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="contributing-to-the-rackspace-how-to-content-repository">
+<span id="contributing-to-the-rackspace-how-to-content-repository"></span><h1>Contributing to the Rackspace How-To content repository<a class="headerlink" href="#contributing-to-the-rackspace-how-to-content-repository" title="Permalink to this headline">#</a></h1>
+<p>This file describes the general process for maintaining source code for content published at <a class="reference external" href="https://support.rackspace.com/how-to/">https://support.rackspace.com/how-to/</a>.</p>
+<p>Content is grouped into one directory per product. Each directory contains one file per article.</p>
+<div class="section" id="creating-and-changing-articles">
+<span id="creating-and-changing-articles"></span><h2>Creating and changing articles<a class="headerlink" href="#creating-and-changing-articles" title="Permalink to this headline">#</a></h2>
+<p>Use the following instructions to create a new article, make edits to an existing one, or suggest edits via an issue.</p>
+<div class="section" id="create-an-article">
+<span id="create-an-article"></span><h3>Create an article<a class="headerlink" href="#create-an-article" title="Permalink to this headline">#</a></h3>
+<p>Follow these steps to create a new article within a product folder of the <strong>rackerlabs/rackspace-how-to</strong> repo.</p>
+<ol>
+<li><p class="first">Go to the <a class="reference external" href="https://github.com/rackerlabs/rackspace-how-to/tree/master/content">Rackspace How-to content folder</a> and click the product for which you want to create an article.</p>
+</li>
+<li><p class="first">Click <strong>New file</strong>.</p>
+</li>
+<li><p class="first">Enter a name for your article in the text box at the end of the <strong>rackspace-how-to/content/<em>productName</em>/</strong> string. The name should be in the format <strong>your-article-name.md</strong> and should reflect the title of the article.</p>
+</li>
+<li><p class="first">Enter header information using the format shown in the following example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>   <span class="o">---</span>
+   <span class="n">title</span><span class="p">:</span> <span class="n">Checking</span> <span class="n">cloud</span> <span class="n">status</span>
+
+   <span class="nb">type</span><span class="p">:</span> <span class="n">article</span>
+
+   <span class="n">created_date</span><span class="p">:</span> <span class="s1">&#39;2016-01-29&#39;</span>
+
+   <span class="n">created_by</span><span class="p">:</span> <span class="n">Rosie</span> <span class="n">Contreras</span>
+
+   <span class="n">last_modified_date</span><span class="p">:</span> <span class="s1">&#39;2016-01-29&#39;</span>
+
+   <span class="n">last_modified_by</span><span class="p">:</span> <span class="n">Rosie</span> <span class="n">Contreras</span>
+
+   <span class="n">product</span><span class="p">:</span> <span class="n">Cloud</span> <span class="n">Servers</span>
+
+   <span class="n">product_url</span><span class="p">:</span> <span class="n">cloud</span><span class="o">-</span><span class="n">servers</span>
+   <span class="o">---</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Write your article in Markdown.</p>
+</li>
+<li><p class="first">When you have finished writing your article, review it in the <em>Preview</em> tab.</p>
+</li>
+<li><p class="first">In the <strong>Commit new file</strong> box at the bottom of the page, create a new branch for this commit.</p>
+</li>
+<li><p class="first">Create a pull request (PR).</p>
+</li>
+</ol>
+<p>Your PR will be reviewed. Depending on the review feedback, you might be asked to make additional changes or to merge your PR to create the article.</p>
+<p><strong>Note:</strong> If your article includes images, send an email to <a class="reference external" href="tools/GitHub-infra-templates/mailto:how-to&#64;rackspace.com">how-to&#64;rackspace.com</a> with the image files. Note where the images belong in the article by using comments: <code class="docutils literal"><span class="pre">&lt;!--this</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">comment--&gt;</span></code>.</p>
+</div>
+<div class="section" id="edit-an-article">
+<span id="edit-an-article"></span><h3>Edit an article<a class="headerlink" href="#edit-an-article" title="Permalink to this headline">#</a></h3>
+<p>Follow these steps to edit an existing article within a product folder of the <strong>rackerlabs/rackspace-how-to</strong> repo.</p>
+<ol>
+<li><p class="first">Go to the <a class="reference external" href="https://github.com/rackerlabs/rackspace-how-to/tree/master/content">Rackspace How-to content folder</a> and click the product for which you want to edit the article.</p>
+</li>
+<li><p class="first">Make any edits directly through the GitHub website, through a GitHub desktop client, or on the command line.</p>
+<p><strong>Note:</strong> If you are using a desktop client or the command line, and you are forking or cloning the repo, be sure to make your changes in a new branch. Doing so ensures that you are producing a pull request (PR) rather than committing changes directly to the master.</p>
+</li>
+<li><p class="first">When you have finished editing the article, commit the edits so that GitHub can produce a PR. If you are working in the GitHub website, be sure to select <strong>Create a new branch for this commit and start a pull request</strong>.</p>
+</li>
+</ol>
+<p>Use the following guidelines to create a commit message:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Provide</span> <span class="n">a</span> <span class="n">brief</span> <span class="n">description</span> <span class="n">of</span> <span class="n">the</span> <span class="n">change</span><span class="p">,</span> <span class="n">starting</span> <span class="k">with</span> <span class="n">an</span> <span class="n">imperative</span> <span class="n">verb</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="s2">&quot;Add a paragraph about... .&quot;</span>
+<span class="o">-</span> <span class="n">If</span> <span class="n">you</span> <span class="n">make</span> <span class="n">a</span> <span class="nb">complex</span> <span class="n">edit</span><span class="p">,</span> <span class="n">explain</span> <span class="n">why</span> <span class="n">you</span> <span class="n">are</span> <span class="n">making</span> <span class="n">the</span> <span class="n">edit</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">changing</span> <span class="n">the</span> <span class="n">formatting</span> <span class="n">of</span> <span class="n">an</span> <span class="n">article</span> <span class="n">because</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">should</span> <span class="n">be</span> <span class="n">ordered</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">unordered</span><span class="p">,</span> <span class="n">say</span><span class="p">,</span> <span class="s2">&quot;Switch list in middle of article to ordered to show clear progression of steps&quot;</span><span class="o">.</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>Create a PR for your branch.</li>
+</ol>
+<p>Your PR will be reviewed. Depending on the review feedback, you might be asked to make additional changes or to merge your PR.</p>
+</div>
+<div class="section" id="request-an-article-change">
+<span id="request-an-article-change"></span><h3>Request an article change<a class="headerlink" href="#request-an-article-change" title="Permalink to this headline">#</a></h3>
+<p>To request a change, create an issue by clicking <strong>Issue</strong> near the top of this page. Describe the changes that you are requesting.</p>
+</div>
+</div>
+<div class="section" id="writing-guidelines">
+<span id="writing-guidelines"></span><h2>Writing guidelines<a class="headerlink" href="#writing-guidelines" title="Permalink to this headline">#</a></h2>
+<p>Use the following general writing guidelines, which are described in detail in <a class="reference external" href="tools/GitHub-infra-templates/style-guidelines.md">style-guidelines.md</a>:</p>
+<ul class="simple">
+<li>Use sentence-style capitalization for titles and headings</li>
+<li>Use active voice</li>
+<li>Use present tense</li>
+<li>Write to the user by using second person and imperative mood</li>
+<li>Write clear and consistent step text</li>
+<li>Use consistent text formatting</li>
+<li>Clarify pronouns such as <em>it</em>, <em>this</em>, <em>there</em>, and <em>that</em></li>
+<li>Clarify gerunds and participles</li>
+<li>Write clear and consistent code examples</li>
+<li>Use consistent terminology</li>
+</ul>
+<p>Following are some specific guidelines for How-To content:</p>
+<ul class="simple">
+<li>For the first-level headings in an article, use the H3 level (designated by ###). Avoid using more than three levels of heading in an article (H3, H4, and H5). If you need more than three levels, you should consider breaking your article into two or more articles.</li>
+<li>When an article mainly provides step-by-step instructions for users to follow, begin the title of the article with an imperative verb. For example: Install the Cloud Backup agent on Windows.</li>
+<li>If a title contains a special character, such as a colon, enclose the title with single quotation marks.</li>
+<li>When code includes placeholders, show them in camelCase and enclose them in angle brackets. For example, <code class="docutils literal"><span class="pre">&lt;hostName&gt;</span></code>.</li>
+<li>To link to another article, use the following format: <code class="docutils literal"><span class="pre">[&lt;articleName&gt;](/how-to/&lt;articleName&gt;)</span></code>. For example,  <code class="docutils literal"><span class="pre">[Rackspace</span> <span class="pre">Email</span> <span class="pre">and</span> <span class="pre">Hosted</span> <span class="pre">Exchange</span> <span class="pre">settings](/how-to/rackspace-email-and-hosted-exchange-settings)</span></code>. Note the use of the leading slash.</li>
+<li>When creating complex lists, such as procedures with sublists, graphics, and code examples, use the spacing guidelines at https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists.</li>
+</ul>
+</div>
+<div class="section" id="support-and-feedback">
+<span id="support-and-feedback"></span><h2>Support and feedback<a class="headerlink" href="#support-and-feedback" title="Permalink to this headline">#</a></h2>
+<p>If you find a problem, open a GitHub issue.</p>
+<p>If you need additional assistance, contact us at <a class="reference external" href="tools/GitHub-infra-templates/mailto:devdoc&#64;rackspace.com">devdoc&#64;rackspace.com</a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="README-carina.html" class="btn btn-neutral float-right" title="Carina by Rackspace" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="README-howto.html" class="btn btn-neutral" title="Rackspace How-To Content Repository" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
