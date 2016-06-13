@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How-To: RPC Networks on RAX Cloud Servers &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/>
+        <link rel="up" title="RPC team documentation" href="../index.html"/>
+        <link rel="next" title="RPC and DocBot" href="RPC-DocBot.html"/>
+        <link rel="prev" title="How to do RPC Docs with a fork" href="HowTo-RPCDocs-With-A-Fork.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Rackspace Glossary</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RPC team documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-Cherrypick.html">Picking commits from staging to publishing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-Fedora.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-RR.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-Publish-KnowledgeCenter.html">Publishing to the Knowledge Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMajor.html">RPCDocs: Major releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMinor.html">RPCDocs: Minor and revision releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs-With-A-Fork.html">How to do RPC Docs with a fork</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How-To: RPC Networks on RAX Cloud Servers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flat-external-network-and-vxlan-tenant-network">Flat external network and VXLAN tenant network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flat-external-network-and-vlan-tenant-network">Flat external network and VLAN tenant network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RPC-DocBot.html">RPC and DocBot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RPCDocs-Overview.html">RPC writing and publishing process overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RST-conversion.html">RST conversion instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RPC-Spheres-Of-Support.html">RPC Spheres of Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpcdocs-interaction.html">RPC Docs + the rest of RPC = better docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RaxPrivCloudFAQs.html">Rackspace Private Cloud: FAQs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpc-v10-whitepapers/index.html">Whitepapers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">InfoDev templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">RPC team documentation</a> &raquo;</li>
+      
+    <li>How-To: RPC Networks on RAX Cloud Servers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/rpc-other/HowTo-RPCDocs/HowTo-RPC-RAX-Cloud-Networks.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-rpc-networks-on-rax-cloud-servers">
+<h1>How-To: RPC Networks on RAX Cloud Servers<a class="headerlink" href="#how-to-rpc-networks-on-rax-cloud-servers" title="Permalink to this headline">#</a></h1>
+<p>This how-to provides instructions for creating neutron networks on RPC
+all-in-one and multi-host environments on RAX cloud servers.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li>Administrative (admin) and general (demo) tenants.</li>
+<li>For all-in-one environments, the br-vlan interface contains
+gateway/router IP address (typically .1). For multi-node
+environments, each br-vlan interface contains a suitable IP address
+on the lower end of the subnet (e.g., 10.1.14.11, 10.1.14.12, etc.).</li>
+<li>For multi-node environments, VXLAN tunnels among nodes must already
+exist.</li>
+</ol>
+<p>Example /etc/network/interfaces file:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span># Label rpc-mgmt1
+auto eth2
+iface eth2 inet manual
+    up ip link set eth2 up
+    down ip link set eth2 down
+
+# Label br-mgmt
+auto br-mgmt
+iface br-mgmt inet static
+    bridge_stp off
+    bridge_waitport 0
+    bridge_fd 0
+    address 10.1.11.11
+    netmask 255.255.255.0
+    bridge_ports eth2
+
+# Label br-storage
+auto br-storage
+iface br-storage inet static
+    bridge_stp off
+    bridge_waitport 0
+    bridge_fd 0
+    address 10.1.12.11
+    netmask 255.255.255.0
+    bridge_ports none
+
+# Label br-vxlan
+auto br-vxlan
+iface br-vxlan inet static
+    bridge_stp off
+    bridge_waitport 0
+    bridge_fd 0
+    address 10.1.13.11
+    netmask 255.255.255.0
+    bridge_ports none
+    # To ensure ssh checksum is correct
+    up /sbin/iptables -A POSTROUTING -t mangle -p tcp --dport 22 -j CHECKSUM --checksum-fill
+    down /sbin/iptables -D POSTROUTING -t mangle -p tcp --dport 22 -j CHECKSUM --checksum-fill
+    # To ensure dhcp checksum is correct
+    up /sbin/iptables -A POSTROUTING -t mangle -p udp --dport 68 -j CHECKSUM --checksum-fill
+    down /sbin/iptables -D POSTROUTING -t mangle -p udp --dport 68 -j CHECKSUM --checksum-fill
+    # To provide internet connectivity to instances
+    up /sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+    down /sbin/iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+# Label br-vlan
+auto br-vlan
+iface br-vlan inet static
+    bridge_stp off
+    bridge_waitport 0
+    bridge_fd 0
+    address 10.1.14.11
+    netmask 255.255.255.0
+    bridge_ports none
+    # Create veth pair, don&#39;t bomb if already exists
+    pre-up ip link add br-vlan-veth type veth peer name eth12 || true
+    # Set both ends UP
+    pre-up ip link set br-vlan-veth up
+    pre-up ip link set eth12 up
+    # Set bridge UP/DOWN
+    up ip link set $IFACE up
+    down ip link set $IFACE down
+    # Delete veth pair on DOWN
+    post-down ip link del br-vlan-veth || true
+    bridge_ports br-vlan-veth
+</pre></div>
+</div>
+<p>Example /etc/rpc_deploy/rpc_user_config.yml file:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">cidr_networks</span><span class="p">:</span>
+  <span class="n">container</span><span class="p">:</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.0</span><span class="o">/</span><span class="mi">24</span>
+  <span class="n">storage</span><span class="p">:</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">12.0</span><span class="o">/</span><span class="mi">24</span>
+  <span class="n">tunnel</span><span class="p">:</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">13.0</span><span class="o">/</span><span class="mi">24</span>
+
+<span class="n">used_ips</span><span class="p">:</span>
+  <span class="o">-</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.11</span>
+  <span class="o">-</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">12.11</span>
+  <span class="o">-</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">13.11</span>
+
+<span class="n">global_overrides</span><span class="p">:</span>
+  <span class="n">internal_lb_vip_address</span><span class="p">:</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.11</span>
+  <span class="n">external_lb_vip_address</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">public</span> <span class="n">IP</span> <span class="n">address</span><span class="o">&gt;</span>
+
+<span class="n">provider_networks</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">network</span><span class="p">:</span>
+      <span class="n">group_binds</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">all_containers</span>
+        <span class="o">-</span> <span class="n">hosts</span>
+      <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;raw&quot;</span>
+      <span class="n">container_bridge</span><span class="p">:</span> <span class="s2">&quot;br-mgmt&quot;</span>
+      <span class="n">container_interface</span><span class="p">:</span> <span class="s2">&quot;eth1&quot;</span>
+      <span class="n">ip_from_q</span><span class="p">:</span> <span class="s2">&quot;container&quot;</span>
+  <span class="o">-</span> <span class="n">network</span><span class="p">:</span>
+      <span class="n">group_binds</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">glance_api</span>
+        <span class="o">-</span> <span class="n">cinder_api</span>
+        <span class="o">-</span> <span class="n">cinder_volume</span>
+        <span class="o">-</span> <span class="n">nova_compute</span>
+      <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;raw&quot;</span>
+      <span class="n">container_bridge</span><span class="p">:</span> <span class="s2">&quot;br-storage&quot;</span>
+      <span class="n">container_interface</span><span class="p">:</span> <span class="s2">&quot;eth2&quot;</span>
+      <span class="n">ip_from_q</span><span class="p">:</span> <span class="s2">&quot;storage&quot;</span>
+  <span class="o">-</span> <span class="n">network</span><span class="p">:</span>
+      <span class="n">group_binds</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">neutron_linuxbridge_agent</span>
+      <span class="n">container_bridge</span><span class="p">:</span> <span class="s2">&quot;br-vxlan&quot;</span>
+      <span class="n">container_interface</span><span class="p">:</span> <span class="s2">&quot;eth10&quot;</span>
+      <span class="n">ip_from_q</span><span class="p">:</span> <span class="s2">&quot;tunnel&quot;</span>
+      <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;vxlan&quot;</span>
+      <span class="nb">range</span><span class="p">:</span> <span class="s2">&quot;1:1000&quot;</span>
+      <span class="n">net_name</span><span class="p">:</span> <span class="s2">&quot;vxlan&quot;</span>
+  <span class="o">-</span> <span class="n">network</span><span class="p">:</span>
+      <span class="n">group_binds</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">neutron_linuxbridge_agent</span>
+      <span class="n">container_bridge</span><span class="p">:</span> <span class="s2">&quot;br-vlan&quot;</span>
+      <span class="n">container_interface</span><span class="p">:</span> <span class="s2">&quot;eth11&quot;</span>
+      <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;vlan&quot;</span>
+      <span class="nb">range</span><span class="p">:</span> <span class="s2">&quot;1:1000&quot;</span>
+      <span class="n">net_name</span><span class="p">:</span> <span class="s2">&quot;vlan&quot;</span>
+  <span class="o">-</span> <span class="n">network</span><span class="p">:</span>
+      <span class="n">group_binds</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">neutron_linuxbridge_agent</span>
+      <span class="n">container_bridge</span><span class="p">:</span> <span class="s2">&quot;br-vlan&quot;</span>
+      <span class="n">container_interface</span><span class="p">:</span> <span class="s2">&quot;eth12&quot;</span>
+      <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;flat&quot;</span>
+      <span class="n">net_name</span><span class="p">:</span> <span class="s2">&quot;flat&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="flat-external-network-and-vxlan-tenant-network">
+<h2>Flat external network and VXLAN tenant network<a class="headerlink" href="#flat-external-network-and-vxlan-tenant-network" title="Permalink to this headline">#</a></h2>
+<ol class="arabic">
+<li><p class="first">Source the admin tenant credentials.</p>
+</li>
+<li><p class="first">Create the external network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">net</span><span class="o">-</span><span class="n">create</span> <span class="n">ext</span><span class="o">-</span><span class="n">net</span> <span class="o">--</span><span class="n">shared</span> <span class="o">--</span><span class="n">router</span><span class="p">:</span><span class="n">external</span> <span class="kc">True</span> \
+<span class="o">--</span><span class="n">provider</span><span class="p">:</span><span class="n">physical_network</span> <span class="n">flat</span> <span class="o">--</span><span class="n">provider</span><span class="p">:</span><span class="n">network_type</span> <span class="n">flat</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a subnet on the external network that uses the same subnet as
+the br-vlan interface.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">subnet</span><span class="o">-</span><span class="n">create</span> <span class="n">ext</span><span class="o">-</span><span class="n">net</span> <span class="o">--</span><span class="n">name</span> <span class="n">ext</span><span class="o">-</span><span class="n">subnet</span> \
+<span class="o">--</span><span class="n">allocation</span><span class="o">-</span><span class="n">pool</span> <span class="n">start</span><span class="o">=</span><span class="mf">10.1</span><span class="o">.</span><span class="mf">14.101</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="mf">10.1</span><span class="o">.</span><span class="mf">14.200</span> \
+<span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">dhcp</span> <span class="o">--</span><span class="n">gateway</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">14.1</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">14.0</span><span class="o">/</span><span class="mi">24</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Source the demo tenant credentials.</p>
+</li>
+<li><p class="first">Create the tenant network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">net</span><span class="o">-</span><span class="n">create</span> <span class="n">demo</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">vxlan</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a subnet on the tenant network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">subnet</span><span class="o">-</span><span class="n">create</span> <span class="n">demo</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">vxlan</span> <span class="o">--</span><span class="n">name</span> <span class="n">demo</span><span class="o">-</span><span class="n">subnet</span><span class="o">-</span><span class="n">vxlan</span> \
+<span class="o">--</span><span class="n">gateway</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.1</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.0</span><span class="o">/</span><span class="mi">24</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a router on the tenant network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">router</span><span class="o">-</span><span class="n">create</span> <span class="n">demo</span><span class="o">-</span><span class="n">router</span><span class="o">-</span><span class="n">vxlan</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add an interface on the router to the subnet on the external network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">router</span><span class="o">-</span><span class="n">interface</span><span class="o">-</span><span class="n">add</span> <span class="n">demo</span><span class="o">-</span><span class="n">router</span><span class="o">-</span><span class="n">vxlan</span> <span class="n">demo</span><span class="o">-</span><span class="n">subnet</span><span class="o">-</span><span class="n">vxlan</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add a gateway on the router to the external network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">router</span><span class="o">-</span><span class="n">gateway</span><span class="o">-</span><span class="nb">set</span> <span class="n">demo</span><span class="o">-</span><span class="n">router</span><span class="o">-</span><span class="n">vxlan</span> <span class="n">ext</span><span class="o">-</span><span class="n">net</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">On any node with the br-vlan interface, ping the tenant network
+router IP address, typically the lowest address in the external
+network subnet allocation.</p>
+</li>
+<li><p class="first">Launch an instance using the demo tenant network.</p>
+</li>
+<li><p class="first">Access the instance and ping a host on the internet.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="flat-external-network-and-vlan-tenant-network">
+<h2>Flat external network and VLAN tenant network<a class="headerlink" href="#flat-external-network-and-vlan-tenant-network" title="Permalink to this headline">#</a></h2>
+<ol class="arabic">
+<li><p class="first">Source the admin tenant credentials.</p>
+</li>
+<li><p class="first">Create the external network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">net</span><span class="o">-</span><span class="n">create</span> <span class="n">ext</span><span class="o">-</span><span class="n">net</span> <span class="o">--</span><span class="n">shared</span> <span class="o">--</span><span class="n">router</span><span class="p">:</span><span class="n">external</span> <span class="kc">True</span> \
+<span class="o">--</span><span class="n">provider</span><span class="p">:</span><span class="n">physical_network</span> <span class="n">vlan</span> <span class="o">--</span><span class="n">provider</span><span class="p">:</span><span class="n">network_type</span> <span class="n">flat</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a subnet on the external network that uses the same subnet as
+the br-vlan interface.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">subnet</span><span class="o">-</span><span class="n">create</span> <span class="n">ext</span><span class="o">-</span><span class="n">net</span> <span class="o">--</span><span class="n">name</span> <span class="n">ext</span><span class="o">-</span><span class="n">subnet</span> \
+<span class="o">--</span><span class="n">allocation</span><span class="o">-</span><span class="n">pool</span> <span class="n">start</span><span class="o">=</span><span class="mf">10.1</span><span class="o">.</span><span class="mf">14.101</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="mf">10.1</span><span class="o">.</span><span class="mf">14.200</span> \
+<span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">dhcp</span> <span class="o">--</span><span class="n">gateway</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">14.1</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">14.0</span><span class="o">/</span><span class="mi">24</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Obtain the tenant ID of the demo tenant.</p>
+</li>
+<li><p class="first">Create the tenant network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">net</span><span class="o">-</span><span class="n">create</span> <span class="o">--</span><span class="n">tenant</span><span class="o">-</span><span class="nb">id</span> <span class="mi">0</span><span class="n">be9ed7344f54daba5bc34f63a082754</span> <span class="n">demo</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">vlan</span> \
+<span class="o">--</span><span class="n">provider</span><span class="p">:</span><span class="n">network_type</span> <span class="n">vlan</span> <span class="o">--</span><span class="n">provider</span><span class="p">:</span><span class="n">physical_network</span> <span class="n">vlan</span> \
+<span class="o">--</span><span class="n">provider</span><span class="p">:</span><span class="n">segmentation_id</span> <span class="mi">101</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Source the demo tenant credentials.</p>
+</li>
+<li><p class="first">Create a subnet on the tenant network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">subnet</span><span class="o">-</span><span class="n">create</span> <span class="n">demo</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">vlan</span> <span class="o">--</span><span class="n">name</span> <span class="n">demo</span><span class="o">-</span><span class="n">subnet</span><span class="o">-</span><span class="n">vlan</span> \
+<span class="o">--</span><span class="n">gateway</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">2.1</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">2.0</span><span class="o">/</span><span class="mi">24</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a router on the tenant network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">router</span><span class="o">-</span><span class="n">create</span> <span class="n">demo</span><span class="o">-</span><span class="n">router</span><span class="o">-</span><span class="n">vlan</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add an interface on the router to the subnet on the external network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">router</span><span class="o">-</span><span class="n">interface</span><span class="o">-</span><span class="n">add</span> <span class="n">demo</span><span class="o">-</span><span class="n">router</span><span class="o">-</span><span class="n">vlan</span> <span class="n">demo</span><span class="o">-</span><span class="n">subnet</span><span class="o">-</span><span class="n">vlan</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add a gateway on the router to the external network.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">router</span><span class="o">-</span><span class="n">gateway</span><span class="o">-</span><span class="nb">set</span> <span class="n">demo</span><span class="o">-</span><span class="n">router</span><span class="o">-</span><span class="n">vlan</span> <span class="n">ext</span><span class="o">-</span><span class="n">net</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">On any node with the br-vlan interface, ping the tenant network
+router IP address, typically the lowest address in the external
+network subnet allocation.</p>
+</li>
+<li><p class="first">Launch an instance using the demo tenant network.</p>
+</li>
+<li><p class="first">Access the instance and ping a host on the internet.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="RPC-DocBot.html" class="btn btn-neutral float-right" title="RPC and DocBot" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HowTo-RPCDocs-With-A-Fork.html" class="btn btn-neutral" title="How to do RPC Docs with a fork" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

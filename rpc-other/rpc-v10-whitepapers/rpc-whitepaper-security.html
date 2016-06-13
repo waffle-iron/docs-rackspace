@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>A Guide to Security with Rackspace Private Cloud &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/>
+        <link rel="up" title="Whitepapers" href="index.html"/>
+        <link rel="next" title="A Guide to Use Case Solutions with Rackspace Private Cloud" href="rpc-whitepaper-usecases.html"/>
+        <link rel="prev" title="Rackspace Private Cloud Version 10" href="rpc-whitepaper-general.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Rackspace Glossary</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RPC team documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-BestPractices.html">RPCDocs Best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-Cherrypick.html">Picking commits from staging to publishing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud-Fedora.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud-RR.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-Publish-KnowledgeCenter.html">Publishing to the Knowledge Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-ReleaseMajor.html">RPCDocs: Major releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-ReleaseMinor.html">RPCDocs: Minor and revision releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-RPCDocs-With-A-Fork.html">How to do RPC Docs with a fork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/HowTo-RPC-RAX-Cloud-Networks.html">How-To: RPC Networks on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/RPC-DocBot.html">RPC and DocBot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/RPCDocs-Overview.html">RPC writing and publishing process overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HowTo-RPCDocs/RST-conversion.html">RST conversion instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RPC-Spheres-Of-Support.html">RPC Spheres of Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpcdocs-interaction.html">RPC Docs + the rest of RPC = better docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RaxPrivCloudFAQs.html">Rackspace Private Cloud: FAQs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Whitepapers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="rpc-whitepaper-general.html">Rackspace Private Cloud Version 10</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">A Guide to Security with Rackspace Private Cloud</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-centre-security">Data Centre Security</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security-with-ansible">Security with Ansible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security-strategy">Security Strategy</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rpc-whitepaper-usecases.html">A Guide to Use Case Solutions with Rackspace Private Cloud</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">InfoDev templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">RPC team documentation</a> &raquo;</li>
+      
+          <li><a href="index.html">Whitepapers</a> &raquo;</li>
+      
+    <li>A Guide to Security with Rackspace Private Cloud</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/rpc-other/rpc-v10-whitepapers/rpc-whitepaper-security.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a-guide-to-security-with-rackspace-private-cloud">
+<h1>A Guide to Security with Rackspace Private Cloud<a class="headerlink" href="#a-guide-to-security-with-rackspace-private-cloud" title="Permalink to this headline">#</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>Rackspace Private Cloud offers improved security soltions for your
+applications when compared to the above the degree of protection
+available within a Rackspace Public Cloud.</p>
+<p>Inter-service communication happens completely between internal
+networks.</p>
+<p>Rackspace Private Cloud Security</p>
+<p>RPC can provide your environment with LDAP authentication, tied in to
+third-party systems.</p>
+<p>Using Elastic Search, Logstash, and Kibana, RPC proveds a robust
+security solution for your environment.</p>
+</div>
+<div class="section" id="data-centre-security">
+<h2>Data Centre Security<a class="headerlink" href="#data-centre-security" title="Permalink to this headline">#</a></h2>
+<p>Rackspace Data centers around the globe supprt RPC. Physical Security
+capabilities employed by Rackspace Data Centres include:</p>
+<ul class="simple">
+<li>A Two-factor authentication requirement for entering the facilities.</li>
+<li>Electro-mechanical locks controled by biometric authentication
+(hand geometry, fingerprint scanner) and key card badges combined.</li>
+<li>Closed circuit video surveillance installed at all entrace points in
+the building's interior and exterior, with Cameras monitored 24x7x365
+by on-site security personnel, and data retanied for 90 days.</li>
+<li>Centralized Security Management Systems deployed at all Data centers
+control the Electronic Access Systems and Closed Circuit Television Networks.</li>
+<li>Sensitive equipment storage, including customer servers, is
+restricted to secure sub-areas within each Data Center's perimiter.</li>
+<li>Role-specific access only to secure sub-areas.</li>
+<li>Authorized Rackspace personnel's access to the facility is
+reviewed on a monthly basis.</li>
+<li>Role-Change and Termination procedures are ensure that any physical
+or logical access rights are removed in a timely manner when personnel
+access is no longer necessary or appropriate.</li>
+</ul>
+<p>Rackspace Data Centres remain operational 24x7x365. Staff work
+around-the-clock within security, engineering, and operations teams.</p>
+</div>
+<div class="section" id="security-with-ansible">
+<h2>Security with Ansible<a class="headerlink" href="#security-with-ansible" title="Permalink to this headline">#</a></h2>
+<p>Containers reduce the cost associated with establishing security
+for the Private Cloud. RPC reference architectecture can continue
+to provide security for the Private cloud regardless of the number of
+nodes. When setting up an environment, Ansible combined with OpenStack
+software ensures no service generates problems from unique sources. Each
+security pathway remains the same, even if the environment runs with
+1 or 500 nodes.</p>
+<p>No default passwords are used. Passwords are either set up when you
+begin using your environment, or by Rackspace support if they are
+completing set up steps for you.</p>
+</div>
+<div class="section" id="security-strategy">
+<h2>Security Strategy<a class="headerlink" href="#security-strategy" title="Permalink to this headline">#</a></h2>
+<p>Security in the RPC is multi-faceted.</p>
+<div class="section" id="incident-response-program">
+<h3>Incident Response Program<a class="headerlink" href="#incident-response-program" title="Permalink to this headline">#</a></h3>
+<p>In the event of security problems, RPC takes specific steps to
+ensure data remains safe:</p>
+<p>Tell security story with an example of data safeguarding following an incident.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rpc-whitepaper-usecases.html" class="btn btn-neutral float-right" title="A Guide to Use Case Solutions with Rackspace Private Cloud" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rpc-whitepaper-general.html" class="btn btn-neutral" title="Rackspace Private Cloud Version 10" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

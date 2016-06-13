@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RPC writing and publishing process overview &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/>
+        <link rel="up" title="RPC team documentation" href="../index.html"/>
+        <link rel="next" title="RST conversion instructions" href="RST-conversion.html"/>
+        <link rel="prev" title="RPC and DocBot" href="RPC-DocBot.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Rackspace Glossary</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RPC team documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-Cherrypick.html">Picking commits from staging to publishing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-Fedora.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-RR.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-Publish-KnowledgeCenter.html">Publishing to the Knowledge Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMajor.html">RPCDocs: Major releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMinor.html">RPCDocs: Minor and revision releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs-With-A-Fork.html">How to do RPC Docs with a fork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPC-RAX-Cloud-Networks.html">How-To: RPC Networks on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RPC-DocBot.html">RPC and DocBot</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RPC writing and publishing process overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#repository-configuration">Repository configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-publication-checklist">Pre-publication checklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#making-changes-for-the-current-rpc-version">Making changes for the current RPC version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#making-changes-for-a-previous-rpc-version">Making changes for a previous RPC version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RST-conversion.html">RST conversion instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RPC-Spheres-Of-Support.html">RPC Spheres of Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpcdocs-interaction.html">RPC Docs + the rest of RPC = better docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RaxPrivCloudFAQs.html">Rackspace Private Cloud: FAQs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpc-v10-whitepapers/index.html">Whitepapers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">InfoDev templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">RPC team documentation</a> &raquo;</li>
+      
+    <li>RPC writing and publishing process overview</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/rpc-other/HowTo-RPCDocs/RPCDocs-Overview.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rpc-writing-and-publishing-process-overview">
+<h1>RPC writing and publishing process overview<a class="headerlink" href="#rpc-writing-and-publishing-process-overview" title="Permalink to this headline">#</a></h1>
+<p>The docs publishing process currently has a number of interlocking
+stages, and the repository configuration also requires a bit of
+explanation.</p>
+<p>This document addresses only the RPC-O OpenStack process and repo
+config. Other projects, such as VMWare and RPC-R, have their own
+repositories and follow a similar process.</p>
+<p>Docs are published to (scroll down to the bottom):</p>
+<ul class="simple">
+<li>External site: <a class="reference external" href="http://docs.rackspace.com/">http://docs.rackspace.com/</a></li>
+<li>Pre-publication site (VPN): <a class="reference external" href="http://docs-internal.ipa.rackspace.com/">http://docs-internal.ipa.rackspace.com/</a></li>
+<li>WIP staging site (VPN):
+<a class="reference external" href="http://docs-staging-internal.ipa.rackspace.com/">http://docs-staging-internal.ipa.rackspace.com/</a></li>
+</ul>
+<p>As a rule, non-urgent updates (typos, grammar fixes, fixes for
+non-breaking errors) should go out with periodic V.n.n patch releases.
+Urgent updates (blatant errors that make the product unusable, incorrect
+file names, major bugs) should be published as soon as the correct
+documentation has been confirmed.</p>
+<p>If you run into issues, contact Steve Ortiz and Jayson DeLancey.</p>
+<div class="section" id="repository-configuration">
+<h2>Repository configuration<a class="headerlink" href="#repository-configuration" title="Permalink to this headline">#</a></h2>
+<p>The documentation for the RPC OpenStack product lives in the <code class="docutils literal"><span class="pre">rpcdocs</span></code>
+repo. Documentation work for the in-development version of RPC takes
+place in the <code class="docutils literal"><span class="pre">master</span></code> branch. When changes are ready to be published,
+they are cherry-picked to the publishing branch. Earlier versions have
+their own staging and publishing branches.</p>
+</div>
+<div class="section" id="pre-publication-checklist">
+<h2>Pre-publication checklist<a class="headerlink" href="#pre-publication-checklist" title="Permalink to this headline">#</a></h2>
+<p>When changes are picked from staging to publishing, they will appear
+automatically on docs.rackspace. Make sure that you have completed all
+of the following tasks:</p>
+<ul class="simple">
+<li>For new books: remove <code class="docutils literal"><span class="pre">status=&quot;draft&quot;</span></code> from the <code class="docutils literal"><span class="pre">&lt;book&gt;</span></code> tag in
+the <code class="docutils literal"><span class="pre">bk-*.xml</span></code> file</li>
+<li>For major changes (e.g. version updates): Update the <code class="docutils literal"><span class="pre">&lt;revhistory&gt;</span></code>
+section in the <code class="docutils literal"><span class="pre">bk-*.xml</span></code> file with a description of the changes
+made</li>
+<li>Release notes: ensure that the full V.n.n is in the <code class="docutils literal"><span class="pre">&lt;releaseinfo&gt;</span></code>
+tag.</li>
+<li>Ensure that the book builds correctly</li>
+<li>Verify with the RPC Docs team that publishing the update is okay</li>
+<li>Notify Steve Ortiz and Jayson DeLancey that the document will need to
+be (re-)published on docs-internal.</li>
+</ul>
+</div>
+<div class="section" id="making-changes-for-the-current-rpc-version">
+<h2>Making changes for the current RPC version<a class="headerlink" href="#making-changes-for-the-current-rpc-version" title="Permalink to this headline">#</a></h2>
+<p>This is the process for making a change that will be committed to the
+latest version of RPC. At the time of writing, the current version is
+<strong>v11</strong>.</p>
+<ol class="arabic simple">
+<li>If you haven't already done so, create a fork of the <code class="docutils literal"><span class="pre">rpcdocs</span></code>
+repository and clone that fork to your computer.</li>
+<li>In your local working repo, create a working branch in which to make
+your changes.</li>
+<li>Make the changes and push the branch to your fork.</li>
+<li>Create a pull request against <code class="docutils literal"><span class="pre">rpcdocs/master</span></code>.</li>
+<li>Have someone else review the pull request and ensure that the
+document builds, then merge the pull request.</li>
+<li>Cherry-pick the commit(s) in that pull request to a pull request
+against the <code class="docutils literal"><span class="pre">v11</span></code> branch.</li>
+<li>Have someone else review the pull request with the cherry pick(s) and
+ensure that the <code class="docutils literal"><span class="pre">v11</span></code> document builds, then merge the pull request.</li>
+</ol>
+<p>Detailed instructions for these steps are found in the following pages:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">How</span> <span class="pre">to</span> <span class="pre">RPC</span> <span class="pre">Docs</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">fork</span> <span class="pre">&lt;HowTo-RPCDocs-With-A-Fork.md&gt;</span></code>__</li>
+<li><code class="docutils literal"><span class="pre">Picking</span> <span class="pre">commits</span> <span class="pre">from</span> <span class="pre">staging</span> <span class="pre">to</span> <span class="pre">publishing</span> <span class="pre">&lt;HowTo-Cherrypick.md&gt;</span></code>__</li>
+</ul>
+</div>
+<div class="section" id="making-changes-for-a-previous-rpc-version">
+<h2>Making changes for a previous RPC version<a class="headerlink" href="#making-changes-for-a-previous-rpc-version" title="Permalink to this headline">#</a></h2>
+<p>This is the process for making a change that will be committed to a
+previous version of RPC.</p>
+<ol class="arabic simple">
+<li>Fetch the latest versions of the <code class="docutils literal"><span class="pre">vN-stage</span></code> and <code class="docutils literal"><span class="pre">vN</span></code> branches.</li>
+<li>In your local working repo, check out <code class="docutils literal"><span class="pre">vN-stage</span></code> and then create a
+working branch in which to make your changes.</li>
+<li>Make the changes and push the branch to your fork.</li>
+<li>Create a pull request against <code class="docutils literal"><span class="pre">rpcdocs/vN-stage</span></code>.</li>
+<li>Have someone else review the pull request and ensure that the
+document builds, then merge the pull request.</li>
+<li>Cherry-pick the commit(s) in that pull request to the <code class="docutils literal"><span class="pre">vN</span></code> branch.</li>
+<li>Have someone else review the pull request with the cherry pick(s) and
+ensure that the <code class="docutils literal"><span class="pre">vN</span></code> document builds, then merge the pull request.</li>
+</ol>
+<p>Detailed instructions for these steps are found in the following pages:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">How</span> <span class="pre">to</span> <span class="pre">RPC</span> <span class="pre">Docs</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">fork</span> <span class="pre">&lt;HowTo-RPCDocs-With-A-Fork.md&gt;</span></code>__</li>
+<li><code class="docutils literal"><span class="pre">Picking</span> <span class="pre">commits</span> <span class="pre">from</span> <span class="pre">staging</span> <span class="pre">to</span> <span class="pre">publishing</span> <span class="pre">&lt;HowTo-Cherrypick.md&gt;</span></code>__</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="RST-conversion.html" class="btn btn-neutral float-right" title="RST conversion instructions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="RPC-DocBot.html" class="btn btn-neutral" title="RPC and DocBot" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RPC Docs + the rest of RPC = better docs &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="RPC team documentation" href="index.html"/>
+        <link rel="next" title="Rackspace Private Cloud: FAQs" href="RaxPrivCloudFAQs.html"/>
+        <link rel="prev" title="RPC Spheres of Support" href="RPC-Spheres-Of-Support.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Rackspace Glossary</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">RPC team documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-BestPractices.html">RPCDocs Best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-Cherrypick.html">Picking commits from staging to publishing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud-Fedora.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud-RR.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-Publish-KnowledgeCenter.html">Publishing to the Knowledge Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-ReleaseMajor.html">RPCDocs: Major releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-ReleaseMinor.html">RPCDocs: Minor and revision releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-RPCDocs-With-A-Fork.html">How to do RPC Docs with a fork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-RPC-RAX-Cloud-Networks.html">How-To: RPC Networks on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/RPC-DocBot.html">RPC and DocBot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/RPCDocs-Overview.html">RPC writing and publishing process overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/RST-conversion.html">RST conversion instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RPC-Spheres-Of-Support.html">RPC Spheres of Support</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RPC Docs + the rest of RPC = better docs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#support">Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qe">QE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sales-and-marketing">Sales and marketing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#development">Development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RaxPrivCloudFAQs.html">Rackspace Private Cloud: FAQs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rpc-v10-whitepapers/index.html">Whitepapers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templates/index.html">InfoDev templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">RPC team documentation</a> &raquo;</li>
+      
+    <li>RPC Docs + the rest of RPC = better docs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/rpc-other/rpcdocs-interaction.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rpc-docs-the-rest-of-rpc-better-docs">
+<h1>RPC Docs + the rest of RPC = better docs<a class="headerlink" href="#rpc-docs-the-rest-of-rpc-better-docs" title="Permalink to this headline">#</a></h1>
+<p>The documentation team needs to interact more formally and routinely with other
+RPC teams that consume (and probably contribute to) documentation including
+support, QE, development, and sales/marketing to improve communication and
+yield more practical/accurate documentation.</p>
+<p>For all teams, schedule a weekly meeting between one or two members of the
+documentation team and one or more influential members of the other team.</p>
+<div class="section" id="support">
+<h2>Support<a class="headerlink" href="#support" title="Permalink to this headline">#</a></h2>
+<p><strong>Primary issues</strong>:</p>
+<ul class="simple">
+<li>Difficulty with feedback due to ambiguous mechanisms for reporting/tracking
+issues.</li>
+<li>Conflicting information from Support and QE in testing results/reviews of
+docs.</li>
+<li>Support's own internal documentation is a separate content base.</li>
+</ul>
+<p>At least until we converge on a single reporting mechanism, the meeting agenda
+would primarily consist of a “soft” way to obtain feedback from support. In
+other words, support reports issues during the meeting and the documentation
+team member reports/tracks them using the appropriate mechanism(s). The same
+agenda item would include progress reports on existing issues.</p>
+<p>Initial meetings should also include an audit of internal documentation that
+support publishes and maintains to determine if/how the documentation team
+can merge it into the “primary&quot; documentation.</p>
+</div>
+<div class="section" id="qe">
+<h2>QE<a class="headerlink" href="#qe" title="Permalink to this headline">#</a></h2>
+<p><strong>Primary issues</strong></p>
+<ul class="simple">
+<li>Keeping QE up to date on the most current documentation.</li>
+<li>Difficulty with feedback due to ambiguous mechanisms for reporting/tracking
+issues.</li>
+</ul>
+<p>At least until we converge on a single mechanism, the meeting agenda would
+primarily consist of a “soft” way to obtain feedback from QE.</p>
+<p>The documentation team also needs to ensure that QE knows how to find the most
+current/accurate documentation for each environment, test, etc. This is
+affected by the changing status of the publishing toolchain.</p>
+</div>
+<div class="section" id="sales-and-marketing">
+<h2>Sales and marketing<a class="headerlink" href="#sales-and-marketing" title="Permalink to this headline">#</a></h2>
+<p><strong>Primary issues</strong></p>
+<ul class="simple">
+<li>Keeping sales and marketing up to date on the most current documentation.</li>
+<li>Providing sales with the documentation tools they need for customer
+interactions.</li>
+<li>Difficulty with feedback due to ambiguous mechanisms for reporting/tracking
+issues.</li>
+</ul>
+<p>Potential customers should be able to find relevant documentation. Sales should
+have the information that they need to make appropriate offerings to customers.
+The contents of marketing and sales should accurately portray the product,
+using the documentation as a reference. For example, if the product doesn’t
+support seamless upgrades, don’t advertise it.</p>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">#</a></h2>
+<p><strong>Primary issues</strong></p>
+<ul class="simple">
+<li>Notifying the documentation team of changes that may impact documentation and
+locations of these impacts.</li>
+<li>Difficulty with feedback due to ambiguous mechanisms for reporting/tracking
+issues.</li>
+</ul>
+<p>For example, a patch for O-A may include a documentation change to the in-tree
+documentation, but not necessarily trigger a change to the RPC documentation.
+The meeting agenda should also include development of a plan to consolidate the
+reporting/tracking mechanism and potentially consolidation of documentation
+between O-A and RPC.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="RaxPrivCloudFAQs.html" class="btn btn-neutral float-right" title="Rackspace Private Cloud: FAQs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="RPC-Spheres-Of-Support.html" class="btn btn-neutral" title="RPC Spheres of Support" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

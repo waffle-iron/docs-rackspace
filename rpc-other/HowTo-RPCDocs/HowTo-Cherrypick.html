@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Picking commits from staging to publishing &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/>
+        <link rel="up" title="RPC team documentation" href="../index.html"/>
+        <link rel="next" title="OpenStack Docs for RPCers" href="HowTo-OpenStack-For-RPC.html"/>
+        <link rel="prev" title="RPCDocs Best practices" href="HowTo-BestPractices.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Rackspace Glossary</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RPC team documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Picking commits from staging to publishing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-Fedora.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-RR.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-Publish-KnowledgeCenter.html">Publishing to the Knowledge Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMajor.html">RPCDocs: Major releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMinor.html">RPCDocs: Minor and revision releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs-With-A-Fork.html">How to do RPC Docs with a fork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPC-RAX-Cloud-Networks.html">How-To: RPC Networks on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RPC-DocBot.html">RPC and DocBot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RPCDocs-Overview.html">RPC writing and publishing process overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RST-conversion.html">RST conversion instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RPC-Spheres-Of-Support.html">RPC Spheres of Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpcdocs-interaction.html">RPC Docs + the rest of RPC = better docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RaxPrivCloudFAQs.html">Rackspace Private Cloud: FAQs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpc-v10-whitepapers/index.html">Whitepapers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">InfoDev templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">RPC team documentation</a> &raquo;</li>
+      
+    <li>Picking commits from staging to publishing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/rpc-other/HowTo-RPCDocs/HowTo-Cherrypick.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="picking-commits-from-staging-to-publishing">
+<h1>Picking commits from staging to publishing<a class="headerlink" href="#picking-commits-from-staging-to-publishing" title="Permalink to this headline">#</a></h1>
+<p>Changes committed to a staging branch will not appear in publishing
+until they have been cherry-picked to the publishing branch.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only commits you should cherry-pick are commits in which
+the actual code change was made. Never cherry-pick a &quot;Merge pull
+request...&quot; commit, because that will create headaches.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Ensure that your local copies of the staging and publishing branches
+are up to date.</p>
+<p>For current versions:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout master; git fetch upstream; git merge upstream/master; git push origin master
+$ git checkout v11; git fetch upstream; git merge upstream/v11; git push origin v11
+</pre></div>
+</div>
+<p>For previous versions:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout vN-stage; git fetch upstream; git merge upstream/vN-stage; git push origin vN-stage
+   $ git checkout vN; git fetch upstream; git merge upstream/vN; git push origin vN``
+</pre></div>
+</div>
+</li>
+<li><p class="first">Identify the SHA of the commit that you want to pick. For this
+example, we'll use <code class="docutils literal"><span class="pre">54008e7</span></code>, the first seven characters of the
+full SHA.</p>
+</li>
+<li><p class="first">Check out the publishing branch:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout vN
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create and checkout a branch for the cherry-pick. A good standard is
+to include the SHA in the branch name, as in the following example.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout -b cherrypick-54008e7
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run the <code class="docutils literal"><span class="pre">cherry-pick</span></code> command:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git cherry-pick 54008e7
+</pre></div>
+</div>
+<p>You may encounter merge errors. Fix the errors as needed and commit the
+fix with <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span></code>.</p>
+</li>
+<li><p class="first">Push the branch containing the cherry-picked commit to the
+repository.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">cherrypick</span><span class="o">-</span><span class="mi">54008</span><span class="n">e7</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Go to the rpcdocs repo page on GitHub and create a pull request. On
+the <strong>Compare changes</strong> page, make sure you are comparing the vN
+publishing branch to your cherry-pick branch:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">base</span> <span class="n">fork</span><span class="p">:</span> <span class="n">rpcdocs</span><span class="o">/</span><span class="n">rpcdocs</span>
+<span class="o">*</span> <span class="n">base</span><span class="p">:</span> <span class="n">vN</span>
+<span class="o">*</span> <span class="n">head</span> <span class="n">fork</span><span class="p">:</span> <span class="n">USERNAME</span><span class="o">/</span><span class="n">rpcdocs</span>
+<span class="o">*</span> <span class="n">compare</span><span class="p">:</span> <span class="n">cherrypick</span><span class="o">-</span><span class="mi">54008</span><span class="n">e7</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Complete the pull request as normal.</p>
+</li>
+</ol>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="HowTo-OpenStack-For-RPC.html" class="btn btn-neutral float-right" title="OpenStack Docs for RPCers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HowTo-BestPractices.html" class="btn btn-neutral" title="RPCDocs Best practices" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
