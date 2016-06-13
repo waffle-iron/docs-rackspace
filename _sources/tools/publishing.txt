@@ -35,7 +35,11 @@ site configuration in the nexus-control content and template mapping files.
 
    .. code::
 
+<<<<<<< HEAD
       "^/docs/private-cloud/": "user-guide.html",
+=======
+      "^/docs/private-cloud/": "developer.rackspace.com/user-guide.html",
+>>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
 
 #. After you have updated the configuration files, submit a PR to the branch in
    your project repository and wait for PR to update with the preview link to

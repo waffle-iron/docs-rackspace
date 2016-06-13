@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+.. _index:
+
+>>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
 =====
 Tools
 =====
@@ -11,6 +16,11 @@ How to use the Cloud documentation team tools.
    build-from-source.rst
    GitHub-infra-templates/index.rst
    internal-publish-script.rst
+<<<<<<< HEAD
    manage-labels-readme.md
    mdsphinx.rst
    publishing.rst
+=======
+   publishing.rst
+   manage-labels-readme.md
+>>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b

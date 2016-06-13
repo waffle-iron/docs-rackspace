@@ -36,3 +36,7 @@ For command examples and more information, see the [github-label-manager documen
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b

@@ -45,15 +45,24 @@ For each release-specific RN file that you create, observe the following guideli
 
   **Known issues**
 
+<<<<<<< HEAD
   `|no changes|`
 
 - Include the "Documentation changes" section only if you have significant content changes, such as adding an extended example, a tutorial, or new content. If you have no significant content changes for a release, omit that section entirely.
 
 - Order your RN files from latest to earliest, so that the latest is always "on top.". For example, the release notes for version 1.1 should precede the release notes for version 1.0 in the hierarchy.
+=======
+  `|no changes|`  
+
+- Include the "Documentation changes" section only if you have significant content changes, such as adding an extended example, a tutorial, or new content. If you have no significant content changes for a release, omit that section entirely.
+
+- Order your RN files from latest to earliest, so that the latest is always "on top.". For example, the release notes for version 1.1 should precede the release notes for version 1.0 in the hierarchy.  
+>>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
 
 ## Formatting
 - Use sentence-style capitalization for all headings, including the title of the file (see the examples in the preceding section). The only exception to this rule is the high-level title of the release notes section, which is **Release Notes**.
 
+<<<<<<< HEAD
 - If a section has several items, for example there are several resolved issues to document, provide the descriptions in a bullet list. You do not need to precede the bullet list with an introductory sentence, unless one is necessary for clarity.
 
 - If you have only one item to document in a section, do not show it as a bullet item. Show it as regular text.
@@ -61,6 +70,15 @@ For each release-specific RN file that you create, observe the following guideli
 - Use the punctuation guidelines for lists at [Writing list items](../a-l-style-guidelines.html#writing-list-items).
 
 - As needed, use the [text formatting guidelines](../m-z-style-guidelines.html#text-formatting-guidelines).
+=======
+- If a section has several items&mdash;for example, there are several resolved issues to document&mdash;provide the descriptions in a bullet list. You do not need to precede the bullet list with an introductory sentence, unless one is necessary for clarity.
+
+- If you have only one item to document in a section, do not show it as a bullet item. Show it as regular text.
+
+- Use the punctuation guidelines for lists at [Writing list items](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/a-l-style-guidelines.md#lists-writing).
+
+- As needed, use the [text formatting guidelines](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/m-z-style-guidelines.md#text-formatting).
+>>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
 
 ## Wording
 You do not need to include an introductory paragraph for each file. The one that exists for the "Release Notes" section as a whole is sufficient. You can begin each file with the "What's new" heading. However, you can include an introductory paragraph if necessary&mdash;for example, if you want to state that the release notes correspond to a particular type of release, such as a Limited Availability release, or you need to introduce the first release of a major version.
@@ -87,14 +105,22 @@ Provide an initial phrase that describes the issue that was fixed. Start the phr
 
 ### Known issues
 
+<<<<<<< HEAD
 Use sentences to describe the issue. If a workaround is available, explain it.
+=======
+Use sentences to describe the issue. If a workaround is available, explain it. 	
+>>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
 
 **Example:**
 
 The create a service operation does not support Classless Inter-Domain Routing (CIDR) for IP address restrictions.
 
 ### Documentation changes
+<<<<<<< HEAD
 Provide an initial phrase that describes the issue that was fixed. Start the phrase with a past-tense verb. If necessary, include sentences to further explain the fix. If you list only phrases, do not use ending punctuation. Provide a link to the relevant section in the documentation.
+=======
+Provide an initial phrase that describes the issue that was fixed. Start the phrase with a past-tense verb. If necessary, include sentences to further explain the fix. If you list only phrases, do not use ending punctuation. Provide a link to the relevant section in the documentation. 	
+>>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
 
 **Example:**
 

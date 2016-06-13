@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+###Content deletion from Nexus
+
+In order to delete content from Nexus, follow these instructions.
+
+
+>>>>>>> a786bdc08a50e2da2acb815f92faede0b2b9409b
 #### Prerequisites
 
 * You need an API key for the content service.
