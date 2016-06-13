@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How-To: OpenStack on RAX Cloud Servers &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Rackspace Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">InfoDev templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>How-To: OpenStack on RAX Cloud Servers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/rpc-other/HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-openstack-on-rax-cloud-servers">
+<h1>How-To: OpenStack on RAX Cloud Servers<a class="headerlink" href="#how-to-openstack-on-rax-cloud-servers" title="Permalink to this headline">#</a></h1>
+<p>This how-to provides instructions for building the prerequisite
+infrastructure for installing multi-host OpenStack environments on RAX
+cloud servers using the official installation guide.</p>
+<p>The infrastructure contains three OpenStack nodes operating on private
+(tenant) networks managed by a network services (jump/firewall) node.
+The latter protects the OpenStack nodes from direct internet access and
+provides internet connectivity to instances in the environment.</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>Prepare RAX cloud environment.</li>
+<li>Build and configure network services (jump/firewall) node.</li>
+<li>Build and configure OpenStack nodes.</li>
+<li>Install and configure OpenStack services with minor modifications to
+the official installation guide.</li>
+</ul>
+</div>
+<div class="section" id="network-architecture">
+<h2>Network architecture<a class="headerlink" href="#network-architecture" title="Permalink to this headline">#</a></h2>
+<div class="figure">
+<img alt="Network architecture" src="../../_images/openstack-on-rax-cloud-arch.png" />
+</div>
+</div>
+<div class="section" id="prepare-cloud-environment">
+<h2>Prepare cloud environment<a class="headerlink" href="#prepare-cloud-environment" title="Permalink to this headline">#</a></h2>
+<p><strong>Keys</strong></p>
+<ul class="simple">
+<li>Upload a public key.</li>
+</ul>
+<p><strong>Networks</strong></p>
+<p>Create the following networks:</p>
+<ol class="arabic simple">
+<li>net-osmgmt1<ul>
+<li>10.1.11.0/24</li>
+</ul>
+</li>
+<li>net-osint1<ul>
+<li>10.1.12.0/24</li>
+</ul>
+</li>
+<li>net-osext1<ul>
+<li>10.1.13.0/24</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="launch-servers">
+<h2>Launch servers<a class="headerlink" href="#launch-servers" title="Permalink to this headline">#</a></h2>
+<div class="section" id="network-services-node-hst-ns1">
+<h3>Network services node (hst-ns1)<a class="headerlink" href="#network-services-node-hst-ns1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic">
+<li><p class="first">Launch node.</p>
+<p>OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+Flavor: 1 GB Performance 1
+Networks: PublicNet, ServiceNet, net-osmgmt1</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Adding multiple tenant networks simultaneously yields inconsistent
+network interface device names. This guide adds one tenant network at a
+time as it becomes necessary. Also, changing tenant networks after
+configuration erases changes made in this guide.</p>
+</div>
+</li>
+<li><p class="first">Access the node from the internet using the IP address assigned by
+RAX.</p>
+</li>
+<li><p class="first">Update node.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">dist</span><span class="o">-</span><span class="n">upgrade</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Install additional packages.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ntp</span> <span class="n">shorewall</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Reboot node.</p>
+</li>
+<li><p class="first">Add the <em>net-osmgmt1</em> network to node.</p>
+</li>
+<li><p class="first">Add the <em>net-osext1</em> network to node.</p>
+</li>
+<li><p class="first">Configure addtional network interfaces.</p>
+</li>
+<li><p class="first">Edit the /etc/network/interfaces file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Label net-osmgmt1</span>
+<span class="n">auto</span> <span class="n">eth2</span>
+<span class="n">iface</span> <span class="n">eth2</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.1</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="c1"># Label net-osext1</span>
+<span class="n">auto</span> <span class="n">eth3</span>
+<span class="n">iface</span> <span class="n">eth3</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">10.1</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="c1"># Label vxlan1</span>
+<span class="n">auto</span> <span class="n">vxlan1</span>
+<span class="n">iface</span> <span class="n">vxlan1</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">pre</span><span class="o">-</span><span class="n">up</span> <span class="n">ip</span> <span class="n">link</span> <span class="n">add</span> <span class="n">vxlan1</span> <span class="nb">type</span> <span class="n">vxlan</span> <span class="nb">id</span> <span class="mi">1</span> <span class="n">group</span> <span class="mf">239.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">dev</span> <span class="n">eth3</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">13.1</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">post</span><span class="o">-</span><span class="n">down</span> <span class="n">ip</span> <span class="n">link</span> <span class="k">del</span> <span class="n">vxlan1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Restart the network interfaces.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">ifdown</span> <span class="n">eth2</span> <span class="o">&amp;&amp;</span> <span class="n">ifup</span> <span class="n">eth2</span>
+<span class="n">ifdown</span> <span class="n">eth3</span> <span class="o">&amp;&amp;</span> <span class="n">ifup</span> <span class="n">eth3</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Bring up the vxlan1 interface.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">ifup</span> <span class="n">vxlan1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Configure the firewall service.</p>
+</li>
+<li><p class="first">Edit the /etc/shorewall/shorewall.conf file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">IP_FORWARDING</span><span class="o">=</span><span class="n">Yes</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/shorewall/interfaces file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">ext</span> <span class="n">eth0</span> <span class="o">-</span> <span class="n">routefilter</span><span class="p">,</span><span class="n">tcpflags</span>
+<span class="n">rax</span> <span class="n">eth1</span>
+<span class="n">osm1</span> <span class="n">eth2</span>
+<span class="n">ose1</span> <span class="n">eth3</span>
+<span class="n">os1t</span> <span class="n">vxlan1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/shorewall/masq file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">eth0</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.0</span><span class="o">/</span><span class="mi">24</span>
+<span class="n">eth0</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">13.0</span><span class="o">/</span><span class="mi">24</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/shorewall/policy file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$FW all ACCEPT
+ext all REJECT
+rax all ACCEPT
+osm1 all ACCEPT
+ose1 all ACCEPT
+os1t all ACCEPT
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/shorewall/rules file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>    Ping/ACCEPT ext $FW
+    SSH/ACCEPT ext $FW
+    #DNAT ext osm1:10.1.11.11  tcp    www
+    #DNAT ext osm1:10.1.11.11  tcp    6080
+
+.. note::
+
+   Uncomment the DNAT rules and restart Shorewall as necessary to
+   enable remote access to the dashboard and instance consoles in the
+   OpenStack environment.
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/shorewall/zones file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">fw</span> <span class="n">firewall</span>
+<span class="n">ext</span> <span class="n">ipv4</span>
+<span class="n">rax</span> <span class="n">ipv4</span>
+<span class="n">osm1</span> <span class="n">ipv4</span>
+<span class="n">ose1</span> <span class="n">ipv4</span>
+<span class="n">os1t</span> <span class="n">ipv4</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/default/shorewall file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">startup</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Start the firewall service.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">service</span> <span class="n">shorewall</span> <span class="n">start</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="openstack-controller-node-hst-os1ctl1">
+<h3>OpenStack controller node (hst-os1ctl1)<a class="headerlink" href="#openstack-controller-node-hst-os1ctl1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic">
+<li><p class="first">Launch node</p>
+<p>OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+Flavor: 4 GB Performance 1
+Networks: net-osmgmt1</p>
+</li>
+<li><p class="first">Access the node from the network services node using the IP address
+assigned by RAX.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The node cannot access the internet without additional
+configuration.</p>
+</div>
+</li>
+<li><p class="first">Configure network interfaces.</p>
+</li>
+<li><p class="first">Edit the /etc/network/interfaces file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Label net-osmgmt1</span>
+<span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.11</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">gateway</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.1</span>
+    <span class="n">dns</span><span class="o">-</span><span class="n">nameserver</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.241</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.240</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/hosts file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># hst-os1ctl1</span>
+<span class="mf">10.1</span><span class="o">.</span><span class="mf">11.11</span>  <span class="n">hst</span><span class="o">-</span><span class="n">os1ctl1</span>
+
+<span class="c1"># hst-os1net1</span>
+<span class="mf">10.1</span><span class="o">.</span><span class="mf">11.21</span>  <span class="n">hst</span><span class="o">-</span><span class="n">os1net1</span>
+
+<span class="c1"># hst-os1cpu1</span>
+<span class="mf">10.1</span><span class="o">.</span><span class="mf">11.31</span>  <span class="n">hst</span><span class="o">-</span><span class="n">os1cpu1</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Comment out or remove any existing lines containing <em>hst-os1ctl1</em>.</p>
+</div>
+</li>
+<li><p class="first">Reboot node.</p>
+</li>
+<li><p class="first">Access the node from the network services node using the new IP
+address on the <em>net-osmgmt1</em> network.</p>
+</li>
+<li><p class="first">Test network connectivity to the internet.</p>
+</li>
+<li><p class="first">Update node.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">dist</span><span class="o">-</span><span class="n">upgrade</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Reboot node.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="openstack-network-node-hst-os1net1">
+<h3>OpenStack network node (hst-os1net1)<a class="headerlink" href="#openstack-network-node-hst-os1net1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic">
+<li><p class="first">Launch node.</p>
+<p>OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+Flavor: 1 GB Performance 1
+Networks: net-osmgmt1</p>
+</li>
+<li><p class="first">Access the node from the network services node using the IP address
+assigned by RAX.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The node cannot access the internet without additional
+configuration.</p>
+</div>
+</li>
+<li><p class="first">Add the <em>net-osint1</em> network to node.</p>
+</li>
+<li><p class="first">Add the <em>net-osext1</em> network to node.</p>
+</li>
+<li><p class="first">Configure network interfaces.</p>
+</li>
+<li><p class="first">Edit the /etc/network/interfaces file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Label net-osmgmt1</span>
+<span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.21</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">gateway</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.1</span>
+    <span class="n">dns</span><span class="o">-</span><span class="n">nameserver</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.241</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.240</span>
+
+<span class="c1"># Label net-osint1</span>
+<span class="n">auto</span> <span class="n">eth1</span>
+<span class="n">iface</span> <span class="n">eth1</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">12.21</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="c1"># Label net-osext1</span>
+<span class="n">auto</span> <span class="n">eth2</span>
+<span class="n">iface</span> <span class="n">eth2</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">10.21</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="c1"># Label vxlan1</span>
+<span class="n">auto</span> <span class="n">vxlan1</span>
+<span class="n">iface</span> <span class="n">vxlan1</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">pre</span><span class="o">-</span><span class="n">up</span> <span class="n">ip</span> <span class="n">link</span> <span class="n">add</span> <span class="n">vxlan1</span> <span class="nb">type</span> <span class="n">vxlan</span> <span class="nb">id</span> <span class="mi">1</span> <span class="n">group</span> <span class="mf">239.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">dev</span> <span class="n">eth2</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">13.21</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">post</span><span class="o">-</span><span class="n">down</span> <span class="n">ip</span> <span class="n">link</span> <span class="k">del</span> <span class="n">vxlan1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/hosts file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># hst-os1ctl1</span>
+<span class="mf">10.1</span><span class="o">.</span><span class="mf">11.11</span>  <span class="n">hst</span><span class="o">-</span><span class="n">os1ctl1</span>
+
+<span class="c1"># hst-os1net1</span>
+<span class="mf">10.1</span><span class="o">.</span><span class="mf">11.21</span>  <span class="n">hst</span><span class="o">-</span><span class="n">os1net1</span>
+
+<span class="c1"># hst-os1cpu1</span>
+<span class="mf">10.1</span><span class="o">.</span><span class="mf">11.31</span>  <span class="n">hst</span><span class="o">-</span><span class="n">os1cpu1</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Comment out or remove any existing lines containing <em>hst-os1net1</em>.</p>
+</div>
+</li>
+<li><p class="first">Reboot node.</p>
+</li>
+<li><p class="first">Access the node from the network services node using the new IP
+address on the <em>net-osmgmt1</em> network.</p>
+</li>
+<li><p class="first">Test network connectivity to the internet.</p>
+</li>
+<li><p class="first">Update node.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">dist</span><span class="o">-</span><span class="n">upgrade</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Reboot node.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="openstack-compute-node-hst-os1cpu1">
+<h3>OpenStack compute node (hst-os1cpu1)<a class="headerlink" href="#openstack-compute-node-hst-os1cpu1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic">
+<li><p class="first">Launch the node.</p>
+<p>OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+Flavor:
+2 GB Performance 1 (supports several CirrOS instances)
+4 or 8 GB Performance 1 (supports a couple of Ubuntu/Fedora instances)</p>
+</li>
+</ol>
+<p>Networks: net-osmgmt1</p>
+<ol class="arabic">
+<li><p class="first">Access the node from the network services node using the IP address
+assigned by RAX.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The node cannot access the internet without additional configuration.</p>
+</div>
+</li>
+<li><p class="first">Add the <em>net-osint1</em> network to node.</p>
+</li>
+<li><p class="first">Configure network interfaces.</p>
+</li>
+<li><p class="first">Edit the /etc/network/interfaces file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Label net-osmgmt1</span>
+<span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.31</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">gateway</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">11.1</span>
+    <span class="n">dns</span><span class="o">-</span><span class="n">nameserver</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.241</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.240</span>
+
+<span class="c1"># Label net-osint1</span>
+<span class="n">auto</span> <span class="n">eth1</span>
+<span class="n">iface</span> <span class="n">eth1</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">12.31</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/hosts file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># hst-os1ctl1</span>
+<span class="mf">10.1</span><span class="o">.</span><span class="mf">11.11</span>  <span class="n">hst</span><span class="o">-</span><span class="n">os1ctl1</span>
+
+<span class="c1"># hst-os1net1</span>
+<span class="mf">10.1</span><span class="o">.</span><span class="mf">11.21</span>  <span class="n">hst</span><span class="o">-</span><span class="n">os1net1</span>
+
+<span class="c1"># hst-os1cpu1</span>
+<span class="mf">10.1</span><span class="o">.</span><span class="mf">11.31</span>  <span class="n">hst</span><span class="o">-</span><span class="n">os1cpu1</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Comment out or remove any existing lines containing <em>hst-os1cpu1</em>.</p>
+</div>
+</li>
+<li><p class="first">Reboot node.</p>
+</li>
+<li><p class="first">Access the node from the network services node using the new IP
+address on the <em>net-osmgmt1</em> network.</p>
+</li>
+<li><p class="first">Test network connectivity to the internet.</p>
+</li>
+<li><p class="first">Update node.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">dist</span><span class="o">-</span><span class="n">upgrade</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Reboot node.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="install-and-configure-openstack-services">
+<h3>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h3>
+<ol class="arabic">
+<li><p class="first">Use the <a class="reference external" href="http://docs.openstack.org/juno/install-guide/install/apt/content/">OpenStack Installation Guide</a>
+with the following changes:</p>
+</li>
+<li><p class="first">Configuring the basic environment on all nodes:</p>
+<ul class="simple">
+<li>Skip the network configuration sections.</li>
+<li>Use 10.1.11.1 (network services node) as the NTP server.</li>
+</ul>
+</li>
+<li><p class="first">Configuring the Compute service on the compute node:</p>
+<ul class="simple">
+<li>Use <em>qemu</em> instead of <em>kvm</em> virtualization.</li>
+</ul>
+</li>
+<li><p class="first">Configuring the Networking service on the network node:</p>
+<ul class="simple">
+<li>Add the <em>vxlan1</em> interface as a port on the <em>br-ex</em> bridge.</li>
+</ul>
+</li>
+<li><p class="first">Creating initial networks.</p>
+<ul class="simple">
+<li>Use the following command for the subnet on the external network:</li>
+</ul>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">subnet</span><span class="o">-</span><span class="n">create</span> <span class="n">ext</span><span class="o">-</span><span class="n">net</span> <span class="o">--</span><span class="n">name</span> <span class="n">ext</span><span class="o">-</span><span class="n">subnet</span> \
+<span class="o">--</span><span class="n">allocation</span><span class="o">-</span><span class="n">pool</span> <span class="n">start</span><span class="o">=</span><span class="mf">10.1</span><span class="o">.</span><span class="mf">13.101</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="mf">10.1</span><span class="o">.</span><span class="mf">13.200</span> \
+<span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">dhcp</span> <span class="o">--</span><span class="n">gateway</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">13.1</span> <span class="mf">10.1</span><span class="o">.</span><span class="mf">13.0</span><span class="o">/</span><span class="mi">24</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">After performing the initial tenant network creation procedure,
+try pinging 10.1.13.101 from the network services node.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

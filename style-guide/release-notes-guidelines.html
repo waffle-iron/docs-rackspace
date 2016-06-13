@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Release notes guidelines &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="Style guidelines for technical content" href="index.html"/>
+        <link rel="next" title="InfoDev templates" href="../templates/index.html"/>
+        <link rel="prev" title="Screenshot and diagram guidelines" href="screenshot-diagram-guidelines.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Rackspace Glossary</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Style guidelines for technical content</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basic-writing-guidelines.html">Basic writing guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="a-l-style-guidelines.html">A-L style reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m-z-style-guidelines.html">M-Z style reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminology-guidelines.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshot-diagram-guidelines.html">Screenshot and diagram guidelines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Release notes guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#structure">Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#formatting">Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wording">Wording</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-new">What's new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resolved-issues">Resolved issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#known-issues">Known issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#documentation-changes">Documentation changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-existing-release-notes">Editing existing release notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../templates/index.html">InfoDev templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Style guidelines for technical content</a> &raquo;</li>
+      
+    <li>Release notes guidelines</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/style-guide/release-notes-guidelines.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="release-notes-guidelines">
+<span id="release-notes-guidelines"></span><h1>Release notes guidelines<a class="headerlink" href="#release-notes-guidelines" title="Permalink to this headline">#</a></h1>
+<p>This topic provides guidelines for writing release notes (RN) for Rackspace Cloud services APIs.</p>
+<p>A template for the API RN is available in the <a class="reference external" href="https://github.com/rackerlabs/docs-common/blob/master/templates/release-note-latest-template.rst">docs-common repo</a>.</p>
+<p>For an example that illustrates most of these guidelines, see the <a class="reference external" href="https://developer.rackspace.com/docs/cloud-block-storage/v1/developer-guide/#release-notes">Cloud Block Storage Release Notes</a>.</p>
+<ul class="simple">
+<li><a class="reference external" href="#structure">Structure</a></li>
+<li><a class="reference external" href="#formatting">Formatting</a></li>
+<li><a class="reference external" href="#wording">Wording</a></li>
+<li><a class="reference external" href="#editing-existing-release-notes">Editing existing release notes</a></li>
+</ul>
+<div class="section" id="structure">
+<span id="structure"></span><h2>Structure<a class="headerlink" href="#structure" title="Permalink to this headline">#</a></h2>
+<p>For each release-specific RN file that you create, observe the following guidelines:</p>
+<ul>
+<li><p class="first">Use one of the following formats for the title of the RN file:</p>
+<ul>
+<li><p class="first">If the release has a version number, use that in the title. For example:</p>
+<p><strong>v2.20.0, June 25, 2016</strong></p>
+</li>
+<li><p class="first">If the release does not have a version number, use the API contract version and date.   For example:</p>
+<p><strong>API | contract version | updates, January 07, 2016</strong></p>
+</li>
+<li><p class="first">If you are documenting a named or initial release, indicate the initial release in the title. For example:</p>
+<p><strong>API |contract version| release, January 07, 2016</strong></p>
+<p>You can precede release with a type, such as EA or UA. For example:</p>
+<p><strong>API |contract version| EA release, January 07, 2016</strong></p>
+</li>
+</ul>
+</li>
+<li><p class="first">Use the following main sections in the release notes:</p>
+<ul class="simple">
+<li>What's new</li>
+<li>Resolved issues</li>
+<li>Known issues</li>
+<li>Documentation changes</li>
+</ul>
+<p><strong>Note:</strong> Anything previously labeled as &quot;enhancements&quot; can be included either in &quot;What's new&quot; or &quot;Resolved issues&quot; as appropriate.</p>
+</li>
+<li><p class="first">Include the &quot;What's new,&quot; &quot;Resolved issues,&quot; and &quot;Known issues&quot; sections in every RN file, even if you have no content for one of those sections. If one of these sections has no content for a release, use the |no changes| variable for the body text. This variable inserts the boilerplate text &quot;None for this release.&quot; For example:</p>
+<p><strong>Known issues</strong></p>
+<p><code class="docutils literal"><span class="pre">|no</span> <span class="pre">changes|</span></code></p>
+</li>
+<li><p class="first">Include the &quot;Documentation changes&quot; section only if you have significant content changes, such as adding an extended example, a tutorial, or new content. If you have no significant content changes for a release, omit that section entirely.</p>
+</li>
+<li><p class="first">Order your RN files from latest to earliest, so that the latest is always &quot;on top.&quot;. For example, the release notes for version 1.1 should precede the release notes for version 1.0 in the hierarchy.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="formatting">
+<span id="formatting"></span><h2>Formatting<a class="headerlink" href="#formatting" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>Use sentence-style capitalization for all headings, including the title of the file (see the examples in the preceding section). The only exception to this rule is the high-level title of the release notes section, which is <strong>Release Notes</strong>.</li>
+<li>If a section has several items<p>—</p>
+for example, there are several resolved issues to document<p>—</p>
+provide the descriptions in a bullet list. You do not need to precede the bullet list with an introductory sentence, unless one is necessary for clarity.</li>
+<li>If you have only one item to document in a section, do not show it as a bullet item. Show it as regular text.</li>
+<li>Use the punctuation guidelines for lists at <a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/a-l-style-guidelines.md#lists-writing">Writing list items</a>.</li>
+<li>As needed, use the <a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/m-z-style-guidelines.md#text-formatting">text formatting guidelines</a>.</li>
+</ul>
+</div>
+<div class="section" id="wording">
+<span id="wording"></span><h2>Wording<a class="headerlink" href="#wording" title="Permalink to this headline">#</a></h2>
+<p>You do not need to include an introductory paragraph for each file. The one that exists for the &quot;Release Notes&quot; section as a whole is sufficient. You can begin each file with the &quot;What's new&quot; heading. However, you can include an introductory paragraph if necessary<p>—</p>
+for example, if you want to state that the release notes correspond to a particular type of release, such as a Limited Availability release, or you need to introduce the first release of a major version.</p>
+<p>If you refer to content in another part of the API document, provide a link to the specific section.</p>
+<p>Use the following guideline when creating items in each section:</p>
+<div class="section" id="what-s-new">
+<span id="what-s-new"></span><h3>What's new<a class="headerlink" href="#what-s-new" title="Permalink to this headline">#</a></h3>
+<p>Use sentences to describe the new feature or enhancement. Provide details as needed, and provide a link to any section in the documentation that describes that feature.</p>
+<p><strong>Example:</strong></p>
+<p>IPv6 support has been added. When you create a server, an IPv4 address and an IPv6 address block are assigned. The IPv4 address and IPv6 address block are used for the public interface (Internet). The IPv4 address is also used for the private interface.</p>
+</div>
+<div class="section" id="resolved-issues">
+<span id="resolved-issues"></span><h3>Resolved issues<a class="headerlink" href="#resolved-issues" title="Permalink to this headline">#</a></h3>
+<p>Provide an initial phrase that describes the issue that was fixed. Start the phrase with a past-tense verb. If necessary, include sentences to further explain the fix. If you list only phrases, do not use ending punctuation.</p>
+<p><strong>Example:</strong></p>
+<ul class="simple">
+<li>Added support for Debian 8 (Jessie)</li>
+<li>Trimmed the Monitoring ID and Monitoring Token configuration variables to ensure correctness</li>
+<li>Fixed the Xen Server 6 package repo</li>
+</ul>
+</div>
+<div class="section" id="known-issues">
+<span id="known-issues"></span><h3>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">#</a></h3>
+<p>Use sentences to describe the issue. If a workaround is available, explain it.</p>
+<p><strong>Example:</strong></p>
+<p>The create a service operation does not support Classless Inter-Domain Routing (CIDR) for IP address restrictions.</p>
+</div>
+<div class="section" id="documentation-changes">
+<span id="documentation-changes"></span><h3>Documentation changes<a class="headerlink" href="#documentation-changes" title="Permalink to this headline">#</a></h3>
+<p>Provide an initial phrase that describes the issue that was fixed. Start the phrase with a past-tense verb. If necessary, include sentences to further explain the fix. If you list only phrases, do not use ending punctuation. Provide a link to the relevant section in the documentation.</p>
+<p><strong>Example:</strong></p>
+<p>Clarified the descriptions of the alert policies to include how the polling window affects the alarm state. See <a class="reference external" href="https://developer.rackspace.com/docs/cloud-monitoring/v1/developer-guide/#alert-policies">Alert policies</a>.</p>
+</div>
+</div>
+<div class="section" id="editing-existing-release-notes">
+<span id="editing-existing-release-notes"></span><h2>Editing existing release notes<a class="headerlink" href="#editing-existing-release-notes" title="Permalink to this headline">#</a></h2>
+<p>In cases where existing release notes were not accurate at the time of publication, change the content to make it accurate. You can make the following types of changes:</p>
+<ul class="simple">
+<li>Fix typos</li>
+<li>Correct links that were wrong at the time of publication</li>
+<li>Correct incorrect statements to reflect what was correct at the time of publication</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../templates/index.html" class="btn btn-neutral float-right" title="InfoDev templates" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="screenshot-diagram-guidelines.html" class="btn btn-neutral" title="Screenshot and diagram guidelines" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
