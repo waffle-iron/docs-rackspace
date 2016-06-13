@@ -71,7 +71,7 @@ Following are the members of the team:
 * Lana Brindley (IRC: loquacities) - Manager of AU team and PTL for OpenStack manuals
 	* Darren Chan (IRC: darrenc) - Information Architect, OSIC
 	* Brian Moss (IRC: bmoss) - Information Architect, OSIC
-	* Joseph Robinson (IRC: JRobinson_) - Information Developer, OSIC
+	* Joseph Robinson (IRC: `JRobinson_`) - Information Developer, OSIC
 * Karin Levenstein (IRC: klevenstein) - Manager of Austin US team
 	* Margaret Eker - Information Developer, Public Cloud
 	* Kelly Holcomb - Editor
@@ -94,8 +94,8 @@ OpenStack (RPCO) documentation.
 Where do the RPCO docs live?
 ----------------------------
 
-The RPCO docs repo is a private repo, and it is located at  https://github.com/rackerlabs/docs-rpc. Send a message to one of the docs team
-managers for access.
+The RPCO docs repo is a private repo, and it is located at  https://github.com/rackerlabs/docs-rpc.
+Send a message to one of the docs team managers for access.
 
 The two most important folders in the repo are ``/doc`` and ``/internal``.
 
@@ -189,8 +189,8 @@ RPC-O uses GitHub for code, bug and issue management, and code reviews.
 
 To learn how to contribute to RPCO documentation, see the following instructions:
 
-* https://github.com/rackerlabs/docs-rpc/blob/master/GITHUBING.rst
-* https://github.com/rackerlabs/docs-rpc/blob/master/CONTRIBUTING.rst
+* `GitHub workflow <https://github.com/rackerlabs/docs-rpc/blob/master/GITHUBING.rst>`_
+* `Contributor guidelines <https://github.com/rackerlabs/docs-rpc/blob/master/CONTRIBUTING.rst>`_
 
 
 OpenStack-Ansible (OSA) documentation
