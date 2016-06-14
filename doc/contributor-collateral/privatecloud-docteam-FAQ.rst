@@ -35,7 +35,7 @@ For additional information, see the following links:
 * `Who is the doc team and what do we do?`_
 * `Rackspace Private Cloud documentation`_
 * `OpenStack-Ansible (OSA) documentation`_
-* `OpenStack manuals documentation`_
+* `OpenStack documentation`_
 
   This collaborative process most often expedites the addition of smaller changes
   to content. The doc team still drives the overall documentation strategy and
@@ -44,22 +44,6 @@ For additional information, see the following links:
   project's GitHub repo <https://github.com/rackerlabs/docs-rpc/issues>`_.
   Alternatively, you can make and submit large changes via a PR. The doc team will
   review and edit the changes as necessary.
-
-This document answers the following questions:
-
-1. `Who is the doc team and what do we do?`_
-2. `Rackspace Private Cloud documentation`_
-	a. `Where do the RPCO docs live?`_
-	b. `What do the RPCO docs contain?`_
-	c. `How do we contribute to RPCO docs?`_
-3. `OpenStack-Ansible (OSA) documentation`_
-	a. `Where do the OSA docs live?`_
-	b. `What do the OSA docs contain?`_
-	c. `How do we contribute to OSA docs?`_
-4. `OpenStack documentation`_
-	a. `Where do the OpenStack manuals docs live?`_
-	b. `What do the OpenStack manuals docs contain?`_
-	c. `How do we contribute to OpenStack manuals?`_
 
 Who is the doc team and what do we do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
