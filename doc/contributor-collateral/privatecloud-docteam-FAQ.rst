@@ -30,26 +30,14 @@ content. We also review, edit, and approve the content before publishing it.
    changes, feel free to do so and to submit the change via PR. The changes
    will be reviewed and edited as necessary.
 
-This document addresses the following FAQs:
+For additional information, see the following links:
 
-#. Who is the doc team and what do we do?
-#. Rackspace Private Cloud documentation
 
-   a. Where do the RPC-O docs live?
-   b. What do the RPC-O docs contain?
-   c. How do we do RPC-O docs?
+* `Who is the doc team and what do we do?`_
+* `Rackspace Private Cloud documentation`_
+* `OpenStack-Ansible (OSA) documentation`_
+* `OpenStack manuals documentation`_
 
-#. OpenStack-Ansible documentation
-
-   a. Where do the OSA docs live?
-   b. What do the OSA docs contain?
-   c. How do we do OSA docs?
-
-#. OpenStack manuals documentation
-
-   a. Where do the openstack-manuals docs live?
-   b. What do the openstack-manuals docs contain?
-   c. How do we do openstack-manuals docs?
 
 Who is the doc team and what do we do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,6 +80,7 @@ Information Architects, and Editors.
   * Stephanie Fillmon - How-To
   * Kyle Laffoon - How-To
   * Cat Lookabaugh - How-To, Public Cloud
+
 
 Rackspace Private Cloud documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -263,6 +252,7 @@ documentation:
   <http://docs.openstack.org/infra/manual/developers.html>`_
 * `OpenStack Contributor Guidelines
   <http://docs.openstack.org/developer/openstack-ansible/developer-docs/contribute.html>`_
+
 
 OpenStack manuals documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
