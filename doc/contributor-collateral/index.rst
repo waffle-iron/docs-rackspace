@@ -12,3 +12,4 @@ Contributor collateral documentation.
    CONTRIBUTING.md
    GITHUBING.md
    privatecloud-docteam-FAQ.rst
+   publiccloud-docteam-FAQ.rst
