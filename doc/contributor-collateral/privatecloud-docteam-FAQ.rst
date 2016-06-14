@@ -20,14 +20,13 @@ team provides:
 * Expertise in information development and architecture
 * Reviews, editorial feedback, and publication approval
 
-.. note::
-
-   The docs team still drives the big changes, and you should always feel free
-   to   solicit docs team for help. Opening an issue in project GitHub repo is
-   the quickest way to do so. The collaborative process is mainly to expedite
-   the addition of smaller changes whenever possible. If you want to make large
-   changes, feel free to do so and to submit the change via PR. The changes
-   will be reviewed and edited as necessary.
+This collaborative process most often expedites the addition of smaller changes
+to content. The doc team still drives the overall documentation strategy and
+large changes to the content sets. If you want to make large changes but aren't
+quite sure what to do, you can ask for help by opening `an issue in the
+project's GitHub repo <https://github.com/rackerlabs/docs-rpc/issues>`_.
+Alternatively, you can make and submit large changes via a PR. The doc team will
+review and edit the changes as necessary.
 
 For additional information, see the following links:
 
@@ -37,13 +36,7 @@ For additional information, see the following links:
 * `OpenStack-Ansible (OSA) documentation`_
 * `OpenStack documentation`_
 
-  This collaborative process most often expedites the addition of smaller changes
-  to content. The doc team still drives the overall documentation strategy and
-  large changes to the content sets. If you want to make large changes but aren't
-  quite sure what to do, you can ask for help by opening `an issue in the
-  project's GitHub repo <https://github.com/rackerlabs/docs-rpc/issues>`_.
-  Alternatively, you can make and submit large changes via a PR. The doc team will
-  review and edit the changes as necessary.
+
 
 Who is the doc team and what do we do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
