@@ -31,8 +31,8 @@ For additional information, see the following sections:
 
 
 * `Who is the doc team and what do we do?`_
-* `Rackspace Public Cloud documentation`_
-* `How-To articles`_
+* `Public Cloud API documentation`_
+* `Public Cloud How-To and Control Panel articles`_
 
 Who is the doc team and what do we do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,17 +71,17 @@ Following are the members of the team:
 	* Nate Archer - Information Developer, How-To
 	* Stephanie Fillmon - Information Developer, How-To
 	* Kyle Laffoon - Information Developer, How-To
-	* Cat Lookabaugh (IRC: catlook)- Information Developer, How-To and Public Cloud
+	* Cat Lookabaugh (IRC: catlook) - Information Developer, How-To and Public Cloud
 
-Rackspace Public Cloud documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Public Cloud API documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This section answers questions about the Rackspace Public Cloud (RPUB) documentation.
+This section answers questions about the Rackspace Public Cloud API documentation.
 
-Where do the RPUB docs live?
-----------------------------
+Where do the API docs live?
+---------------------------
 
-The RPUB docs are located in the following https://github.com/rackerlabs repos:
+The API docs are located in the following https://github.com/rackerlabs repos:
 
 -  `Cloud Backup <https://github.com/rackerlabs/docs-cloud-backup>`_
 -  `Cloud Big Data <https://github.com/rackerlabs/docs-cloud-big-data>`_
@@ -102,7 +102,7 @@ The RPUB docs are located in the following https://github.com/rackerlabs repos:
 -  `Rackspace Metrics <https://github.com/rackerlabs/docs-cloud-metrics>`_
 -  `Rackspace Monitoring <https://github.com/rackerlabs/docs-cloud-monitoring>`_
 
-The most important folder in these repos is ``/api-docs`.  If the product has more than
+The most important folder in these repos is ``/api-docs``.  If the product has more than
 one supported version, separate documentation is maintained in version-specific
 directories under ``/api-docs``.
 
@@ -115,8 +115,8 @@ external guides that are published to the
 * API Reference
 * Release Notes
 
-What do the RPUB docs contain?
-------------------------------
+What do the API docs contain?
+-----------------------------
 
 The **Getting Started Guide** provides the following information:
 
@@ -125,7 +125,7 @@ The **Getting Started Guide** provides the following information:
 * Information about sending API requests
 * Instructions for API authentication
 * Use cases for basic product operations, including the necessary commands to
-  execute each step.
+  execute each step
 
 The **Developer Guide** contains information to assist software developers who
 want to develop applications by using the REST API for the product, including the
@@ -133,6 +133,7 @@ following information:
 
 * Explanation of product concepts
 * General API information, including:
+
   - Service access endpoints
   - Request and response types
   - Limits and quotas
@@ -142,20 +143,20 @@ The **API Reference** provides a list of all supported API operations, including
 
 * The operation URI
 * Additional information regarding the operation and its use
-* List of any URI, query, request body, and response body parameters
+* Lists of URI, query, request body, and response body parameters
 * Examples of request and response bodies, if any
 
 The **Release Notes** describes new features and known and resolved issues in the
-current release of the RPUB product or service.
+current release of the product or service.
 
-How do we contribute to RPUB docs?
-----------------------------------
+How do we contribute to API docs?
+---------------------------------
 
-RPUB uses GitHub for code, bug and issue management, and code reviews.
+Rackspace Public Cloud uses GitHub for code, bug and issue management, and code reviews.
 
-To learn how to contribute to RPUB documentation, see the following instructions:
+To learn how to contribute to API documentation, see the following instructions:
 
-* GitHub workflow found in GITHUBING.rst in the root director of the product repo
+* GitHub workflow found in GITHUBING.rst in the root directory of the product repo
 * Contributor guidelines found in CONTRIBUTING.rst in the root director of the product
   repo
 
@@ -164,8 +165,8 @@ For example, see the following documents in the Cloud Servers repo:
 * `GitHub workflow <https://github.com/rackerlabs/docs-cloud-servers/blob/master/GITHUBING.md>`_
 * `Contributor guidelines <https://github.com/rackerlabs/docs-cloud-servers/blob/master/CONTRIBUTING.md>`_
 
-How-To articles
-~~~~~~~~~~~~~~~
+Public Cloud How-To and Control Panel articles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section answers questions about the How-To articles.
 
@@ -180,9 +181,10 @@ with article source files, for each of the Public Cloud products and services.
 What do the How-To articles contain?
 ------------------------------------
 
-How-To articles provide user and system administrators with tactical, troubleshooting, and
-FAQ information for Rackspace products and services. How-To articles also provide instructions
-to set up and maintain Rackspace products from the Rackspace Cloud control panel.
+How-To articles provide users and system administrators with tactical, troubleshooting,
+and FAQ information for Rackspace products and services. How-To articles also provide
+instructions to set up and maintain Rackspace products from the Rackspace Cloud
+Control Panel.
 
 How do we contribute to How-To articles?
 ----------------------------------------
