@@ -89,14 +89,14 @@ The RPUB docs are located in the following https://github.com/rackerlabs repos:
 -  `Cloud Databases <https://github.com/rackerlabs/docs-cloud-databases>`_
 -  `Cloud DNS <https://github.com/rackerlabs/docs-cloud-dns>`_
 -  `Cloud Files <https://github.com/rackerlabs/docs-cloud-files>`_
--  `Cloud Identity <https://github.com/rackerlabs/docs-cloud-identity`_
+-  `Cloud Identity <https://github.com/rackerlabs/docs-cloud-identity>`_
 -  `Cloud Images <https://github.com/rackerlabs/docs-cloud-images>`_
 -  `Cloud Keep <https://github.com/rackerlabs/docs-barbican>`_
 -  `Cloud Load Balancers <https://github.com/rackerlabs/docs-cloud-load-balancers>`_
 -  `Cloud Orchestration <https://github.com/rackerlabs/docs-cloud-orchestration>`_
 -  `Cloud Networks <https://github.com/rackerlabs/docs-cloud-networks>`_
 -  `Cloud Queues <https://github.com/rackerlabs/docs-cloud-queues>`_
--  `Cloud Servers <https://github.com/rackerlabs/docs-cloud-servers>`
+-  `Cloud Servers <https://github.com/rackerlabs/docs-cloud-servers>`_
 -  `Rackspace CDN <https://github.com/rackerlabs/docs-cloud-load-cdn>`_
 -  `Rackspace Metrics <https://github.com/rackerlabs/docs-cloud-metrics>`_
 -  `Rackspace Monitoring <https://github.com/rackerlabs/docs-cloud-monitoring>`_
@@ -179,11 +179,9 @@ with article source files, for each of the Public Cloud products and services.
 What do the How-To articles contain?
 ------------------------------------
 
-The How-To articles contain tactical information for users and system admins about
-Rackspace Public cloud products and provide troubleshooting resources and answers to
-questions. The articles also offer control panel-based instruction on the set-up and
-maintenance of Rackspace products.
-
+How-To articles provide user and system administrators with tactical, troubleshooting, and 
+FAQ information for Rackspace products and services. How-To articles also provide instructions 
+to set up and maintain Rackspace products from the Rackspace Cloud control panel.
 
 How do we contribute to How-To articles?
 ----------------------------------------
