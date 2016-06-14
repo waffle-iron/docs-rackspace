@@ -97,6 +97,7 @@ The RPUB docs are located in the following https://github.com/rackerlabs repos:
 -  `Cloud Networks <https://github.com/rackerlabs/docs-cloud-networks>`_
 -  `Cloud Queues <https://github.com/rackerlabs/docs-cloud-queues>`_
 -  `Cloud Servers <https://github.com/rackerlabs/docs-cloud-servers>`_
+-  `Rackspace Autoscale <https://github.com/rackerlabs/otter/tree/master/api-docs/rst/dev-guide>`_
 -  `Rackspace CDN <https://github.com/rackerlabs/docs-cloud-load-cdn>`_
 -  `Rackspace Metrics <https://github.com/rackerlabs/docs-cloud-metrics>`_
 -  `Rackspace Monitoring <https://github.com/rackerlabs/docs-cloud-monitoring>`_
@@ -179,8 +180,8 @@ with article source files, for each of the Public Cloud products and services.
 What do the How-To articles contain?
 ------------------------------------
 
-How-To articles provide user and system administrators with tactical, troubleshooting, and 
-FAQ information for Rackspace products and services. How-To articles also provide instructions 
+How-To articles provide user and system administrators with tactical, troubleshooting, and
+FAQ information for Rackspace products and services. How-To articles also provide instructions
 to set up and maintain Rackspace products from the Rackspace Cloud control panel.
 
 How do we contribute to How-To articles?
