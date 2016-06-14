@@ -28,7 +28,7 @@ project's GitHub repo <https://github.com/rackerlabs/docs-rpc/issues>`_.
 Alternatively, you can make and submit large changes via a PR. The doc team will
 review and edit the changes as necessary.
 
-For additional information, see the following links:
+For additional information, see the following sections:
 
 
 * `Who is the doc team and what do we do?`_
@@ -177,7 +177,7 @@ current release of RPCO.
 How do we contribute to RPCO docs?
 ----------------------------------
 
-RPC-O uses GitHub for code, bug and issue management, and code reviews.
+RPCO uses GitHub for code, bug and issue management, and code reviews.
 
 To learn how to contribute to RPCO documentation, see the following instructions:
 
@@ -196,7 +196,7 @@ Where do the OSA docs live?
 The OSA docs repo is at https://github.com/openstack/openstack-ansible.
 
 The most important folder is ``/doc``. This folder contains the following external
-guides, which are published at http://docs.openstack.org/developer/openstack-ansible/:
+guides, which are published to the `OpenStack-Ansible Documentation site <http://docs.openstack.org/developer/openstack-ansible/>`_:
 
 * OpenStack-Ansible Installation Guide
 * Upgrade Documentation
@@ -213,7 +213,7 @@ OpenStack environment.
 
 .. note::
 
-  As of June 2016, The OpenStack-Ansible Installation Guide is currently under
+  As of June 2016, the OpenStack-Ansible Installation Guide is under
   review and will be newly formatted for the next release.
 
 The **Upgrade Guide** contains information and instructions for upgrading
