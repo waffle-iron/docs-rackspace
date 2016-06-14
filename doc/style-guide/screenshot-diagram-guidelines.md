@@ -6,7 +6,7 @@ documentation. Images are an essential part of helpful, clear, and concise conte
 - [Screenshot guidelines](#screenshot-guidelines)
 - [Diagram guidelines](#diagram-guidelines)
 
-**Note:** These guidelines conform to all of the rules outlined in the [writing style guide](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md).
+**Note:** These guidelines conform to all of the rules outlined in the [writing style guide](basic-writing-guidelines.md).
 
 ## Screenshot guidelines and process
 
@@ -55,7 +55,7 @@ Do not include screenshot of the following items:
 
 ### Before you create a screenshot
 
-Install Jing to capture and edit screenshots. Jing is available as a free download at https://www.techsmith.com/jing.html.
+Install Jing to capture and edit screenshots. [Jing is available as a free download](https://www.techsmith.com/jing.html).
 
 To learn how to take a screenshot and make a callout, use the Jing [capture an image](https://www.techsmith.com/tutorial-jing-capture-an-image.html) tutorial.
 
@@ -74,7 +74,7 @@ Use the following standards when creating your screenshots:
 - [ ] **Scope**: Limit the scope of a screenshot to just the portion of the UI that shows the action, plus enough surrounding detail to help the user locate the item.
 - [ ] **Callout color**: Use **Red** (hexadecimal color **FF0000**) for all callouts.
 - [ ] **File name**: Create unique and meaningful file names to easily differentiate between screenshots.
-- [ ] **Titles:** Titles are not required, especially for screenshots in procedures and tutorials. If you want to add a title to a screenshot for clarity, follow the guidelines in [Titles and headings](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/m-z-style-guidelines.md#titles-headings).
+- [ ] **Titles:** Titles are not required, especially for screenshots in procedures and tutorials. If you want to add a title to a screenshot for clarity, follow the guidelines in [Titles and headings](m-z-style-guidelines.md).
 
 To learn how to take a screenshot and make a callout in Jing, use the tutorial [capture an image](https://www.techsmith.com/tutorial-jing-capture-an-image.html)
 
@@ -84,7 +84,7 @@ Diagrams can be useful tools to help users visualize complex processes in a simp
 
 - [When to use diagrams](#when-to-use-diagrams)
 - [When not to use diagrams](#when-not-to-use-diagrams)
-- [Before you create a diagram](#before-you-create-diagram)
+- [Before you create a diagram](#before-you-create-a-diagram)
 - [Diagram checklist](#diagram-checklist)
 
 ### When to use diagrams
@@ -120,9 +120,9 @@ To get started with draw.io, see the instructions in the [Draw.io Online User Ma
 
 Download Rackspace's library of product icons and stencils. These icons and stencils are considered **objects**.
 
-- The product icons are blue and are located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/ProductIcons.zip).
+- The product icons are blue and are located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/images/zip/ProductIcons.zip).
 
-- Stencils are used to represent certain functions and hardware such as the world wide web or a server. These stencils are black and are located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/zip/RackspaceDiagramIcons.zip).
+- Stencils are used to represent certain functions and hardware such as the world wide web or a server. These stencils are black and are located in [this zip file](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/images/zip/RackspaceDiagramIcons.zip).
 
 After you download the icons and stencils, you can being making diagrams in Draw.io.
 
@@ -155,7 +155,7 @@ Each diagram property is located on the right of the Draw.io main screen under *
 
 - [ ] **Product icons**: An icon represents it's corresponding product. Product icons are always blue.
 
-   ![Cloud Images stencil](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/images.png)
+   ![Cloud Images stencil](images/img/images.png)
 
    **Note:** If you find a Rackspace product icon that is not blue, email how-to@rackspace.com and a member of our team will create a blue version of the icon.
 
@@ -175,21 +175,21 @@ Each diagram property is located on the right of the Draw.io main screen under *
 
 - [ ] **Solid lines**: Use solid lines to show a direct relationship between objects, as shown in the example below.
 
-   ![Example of solid lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/solid-lines.png)
+   ![Example of solid lines](images/img/solid-lines.png)
 
 - [ ] **Dashed lines**: Use dashed lines to group objects that are connected through a network, as shown in the example below.
 
-   ![Example of dashed lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dashed-lines.png)
+   ![Example of dashed lines](images/img/dashed-lines.png)
 
 - [ ] **Dotted lines**: Use dotted lines to show how data entered by the user travels, as shown in the example below.
 
-   ![Example of dotted lines](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/dotted-lines.png)
+   ![Example of dotted lines](images/img/dotted-lines.png)
 
 - [ ] **One-way and two-way arrows:** Use arrows to represent direct interactions between two or more stencils. If a stencil is attached to an arrow, it implies that the product represented by the stencil needs to interact with another piece of the diagram.
 
    In the following example, the CDN management service needs to interact with the CDN to perform its function. Similarly, the CDN needs to be managed by the CDN management service. The relationship is two-way, so the line has arrows on both ends pointed to both stencils.
 
-   ![Example of one-way and two-way arrows](https://github.com/rackerlabs/docs-rackspace/blob/master/_assets/img/arrowsscreenshot.png)
+   ![Example of one-way and two-way arrows](images/img/arrowsscreenshot.png)
 
 ## Next steps
 

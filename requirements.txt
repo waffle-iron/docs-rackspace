@@ -6,6 +6,7 @@ markdown
 pep8-naming
 pep257
 pyenchant
+pypandoc
 pytest
 pytest-cov
 recommonmark

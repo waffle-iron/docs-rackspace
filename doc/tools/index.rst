@@ -1,5 +1,3 @@
-.. _index:
-
 =====
 Tools
 =====
@@ -13,5 +11,6 @@ How to use the Cloud documentation team tools.
    build-from-source.rst
    GitHub-infra-templates/index.rst
    internal-publish-script.rst
-   publishing.rst
    manage-labels-readme.md
+   mdsphinx.rst
+   publishing.rst

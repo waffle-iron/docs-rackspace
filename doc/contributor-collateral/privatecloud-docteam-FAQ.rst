@@ -22,6 +22,21 @@ team provides:
 
 .. note::
 
+   The docs team still drives the big changes, and you should always feel free
+   to   solicit docs team for help. Opening an issue in project GitHub repo is
+   the quickest way to do so. The collaborative process is mainly to expedite
+   the addition of smaller changes whenever possible. If you want to make large
+   changes, feel free to do so and to submit the change via PR. The changes
+   will be reviewed and edited as necessary.
+
+For additional information, see the following links:
+
+
+* `Who is the doc team and what do we do?`_
+* `Rackspace Private Cloud documentation`_
+* `OpenStack-Ansible (OSA) documentation`_
+* `OpenStack manuals documentation`_
+
   This collaborative process most often expedites the addition of smaller changes
   to content. The doc team still drives the overall documentation strategy and
   large changes to the content sets. If you want to make large changes but aren't
@@ -249,10 +264,14 @@ OSA is an upstream project. The source code lives in GitHub, and it is developed
 and maintained by using OpenStack tools and processes, which include Launchpad for
 bug and issue logging and management, and Gerrit for code reviews.
 
-Use the following resources to learn how to contribute to the OSA documentation:
+Use the following resources to learn how to contribute to the OSA
+documentation:
 
-* `OpenStack Developer's Guide: Getting Started <http://docs.openstack.org/infra/manual/developers.html>`_
-* `OpenStack Contributor Guidelines <http://docs.openstack.org/developer/openstack-ansible/developer-docs/contribute.html>`_
+* `OpenStack Developer's Guide: Getting Started
+  <http://docs.openstack.org/infra/manual/developers.html>`_
+* `OpenStack Contributor Guidelines
+  <http://docs.openstack.org/developer/openstack-ansible/developer-docs/contribute.html>`_
+
 
 OpenStack documentation
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -274,7 +293,8 @@ Release Notes:
 
 Install Guides:
 
-* Installation Guide for openSUSE Leap 42.1 and SUSE Linux Enterprise Server 12 SP1
+* Installation Guide for openSUSE Leap 42.1 and SUSE Linux Enterprise
+  Server 12 SP1
 * Installation Guide for Red Hat Enterprise Linux 7 and CentOS 7
 * Installation Guide for Ubuntu 14.04 (LTS)
 
@@ -390,5 +410,7 @@ Launchpad for bug and issue logging and management, and Gerrit for code reviews.
 Use the following resources to learn how to contribute to the OpenStack manuals
 documentation:
 
-* `First timers <http://docs.openstack.org/contributor-guide/quickstart/first-timers.html>`_
-* `OpenStack Documentation Contributor Guide <http://docs.openstack.org/contributor-guide/index.html>`_
+* `First timers
+  <http://docs.openstack.org/contributor-guide/quickstart/first-timers.html>`_
+* `OpenStack Documentation Contributor Guide
+  <http://docs.openstack.org/contributor-guide/index.html>`_

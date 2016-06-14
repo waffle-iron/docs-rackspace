@@ -51,7 +51,12 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 html:
+	@echo "\nConverting MD tables to RST"
+	python3 ../tools/prebuild.py
+	@echo
 	$(SPHINXBUILD) -E -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	@echo "\nCleaning up from MD table conversion"
+	python3 ../tools/postbuild.py
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
