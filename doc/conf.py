@@ -12,6 +12,9 @@ All configuration values have a default; values that are commented out
 serve to show the default.
 """
 
+import os
+import sys
+
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 
@@ -28,7 +31,7 @@ except ImportError:
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-# sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('../tools/'))
 
 # -- General configuration ------------------------------------------------
 
@@ -39,8 +42,8 @@ except ImportError:
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.todo',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.viewcode',
 ]
 
 if spelling is not None:
@@ -92,7 +95,8 @@ copyright = '2016, Rackspace'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'samples', 'README.rst', 'common/*']
+exclude_patterns = ['_build', 'samples', 'README.rst', 'common/*',
+                    '*/README.*']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -123,9 +127,11 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-# html_theme = 'default'
 # html_theme = 'alabaster'
-html_theme = 'sphinx_rtd_theme'
+if sphinx_rtd_theme:
+    html_theme = 'sphinx_rtd_theme'
+else:
+    html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -203,7 +209,7 @@ html_use_smartypants = False
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'docs-rpc'
+htmlhelp_basename = 'docs-rackspace'
 
 # this will change the 'paragraph' character to '#'
 html_add_permalinks = '#'
@@ -222,7 +228,7 @@ latex_elements = {}
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [('index', 'docs-rpc.tex',
+latex_documents = [('index', 'docs-rackspace.tex',
                     'Rackspace Documentation Guides',
                     'Rackspace', 'manual')]
 
@@ -252,7 +258,7 @@ latex_documents = [('index', 'docs-rpc.tex',
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'doc-rpc',
+    ('index', 'doc-rackspace',
      'Rackspace Documentation Guides', ['Rackspace'], 1)]
 
 # If true, show URL addresses after external links.
@@ -264,9 +270,9 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [('index', 'doc-rpc',
+texinfo_documents = [('index', 'doc-rackspace',
                       'Rackspace Documentation Guides',
-                      'Rackspace', 'doc-rpc',
+                      'Rackspace', 'doc-rackspace',
                       'Rackspace Documentation Guides', 'Miscellaneous')]
 
 # Documents to append as an appendix to all manuals.
@@ -283,7 +289,7 @@ texinfo_documents = [('index', 'doc-rpc',
 
 
 def setup(app):
-    """Setup app hook."""
+    """Setup sphinx app extension hook."""
     app.add_config_value('recommonmark_config', {
         'auto_toc_tree',
         }, True)

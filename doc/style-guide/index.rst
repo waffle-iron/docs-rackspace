@@ -1,5 +1,3 @@
-.. _index:
-
 ======================================
 Style guidelines for technical content
 ======================================
@@ -11,7 +9,7 @@ Cloud documentation. Use these guidelines to create clear, concise, and
 consistent technical documentation for Rackspace Cloud services.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    basic-writing-guidelines.md
    a-l-style-guidelines.md
