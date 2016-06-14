@@ -2,154 +2,149 @@
 Documentation team FAQ for Rackspace Private Cloud
 ==================================================
 
-This FAQ is intended to help RPC developers and support team members
-contribute to the documentation.
+This FAQ is intended to help Rackspace Private Cloud (RPC) developers and support
+team members contribute to the documentation.
 
-As a general rule: if you have the knowledge - write it down. As the
-developers of our software, you routinely communicate your deep and
-expert product knowledge in the course of your work. If you write that down,
-you immediately allow our team to engage with you to turn your words into
-expert, professional customer documentation that we can deliver to the
-Rackspace developer documentation and support sites.
+As developers and support team members, you routinely communicate your expert
+product knowledge in the course of your work. When you write down that knowledge,
+you enable the Information Development (doc) team to work with you to turn your
+words into expert, professional customer documentation that we can deliver to the
+Rackspace documentation and support sites.
 
-With this process, people with the expertise and product knowledge contribute
-to and perform as much of the content production cycle as they reasonably can,
-and the Information Development team provides key guidance, process, and
-assistance using our documentation platform and tools and applying our
-expertise in development and information architecture.
+In this process, the people with the expertise and product knowledge perform as
+much of the content production cycle as they reasonably can and, in turn, the doc
+team provides:
 
-The docs team provides the templates, tools, process and guidance to write
-content. We also review, edit, and approve the content before publishing it.
+* Guidance in using our documentation platform and tools
+* Templates and writing guidance
+* Expertise in information development and architecture
+* Reviews, editorial feedback, and publication approval
 
-.. note::
+This collaborative process most often expedites the addition of smaller changes
+to content. The doc team still drives the overall documentation strategy and
+large changes to the content sets. If you want to make large changes but aren't
+quite sure what to do, you can ask for help by opening `an issue in the
+project's GitHub repo <https://github.com/rackerlabs/docs-rpc/issues>`_.
+Alternatively, you can make and submit large changes via a PR. The doc team will
+review and edit the changes as necessary.
 
-   The docs team still drives the big changes, and you should always feel free
-   to   solicit docs team for help. Opening an issue in project GitHub repo is
-   the quickest way to do so. The collaborative process is mainly to expedite
-   the addition of smaller changes whenever possible. If you want to make large
-   changes, feel free to do so and to submit the change via PR. The changes
-   will be reviewed and edited as necessary.
-
-For additional information, see the following links:
+For additional information, see the following sections:
 
 
 * `Who is the doc team and what do we do?`_
 * `Rackspace Private Cloud documentation`_
 * `OpenStack-Ansible (OSA) documentation`_
-* `OpenStack manuals documentation`_
+* `OpenStack documentation`_
+
 
 
 Who is the doc team and what do we do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Documentation is produced by the Rackspace Information Development team. For
-the purposes of this FAQ, we've listed the team members with their primary
-areas of expertise, but team members often do different work depending on
-business needs and priorities. Team members also contribute to OpenStack
-Manuals.
+Documentation is produced by the Rackspace Information Development team. This
+section lists the team members with their primary areas of expertise, but team
+members often do different work depending on business needs and priorities. Team
+members also contribute to OpenStack manuals.
 
-The docs team consists of Information Developers (technical writers),
+The team consists of Information Developers (technical writers),
 Information Architects, and Editors.
 
 * Information Developers are professional writers who produce technical
   documentation that helps people understand and use a product or service.
-* Information Architects ensure the structural design of shared information
-  environments (our documentation) support usability and findability.
-* Editors work closely with the Information Developers and Information
-  Architects to ensure all documentation establishes a consistent tone and
-  voice as described in Rackspace Style Guide.
-* Senior Manager: Laura Clymer (IRC: onthecly)
-* Lana Brindley (IRC: loquacities) - AU team and PTL for OpenStack manuals
+* Information Architects ensure that the structural design of shared information
+  environments (our documentation) supports usability and findability.
+* Editors work closely with the Information Developers and Information Architects
+  to ensure that all documentation uses a consistent tone and follows standards as
+  described in the Rackspace style guide.
 
-  * Darren Chan (IRC: darrenc) - Information Architect, OSIC
-  * Brian Moss (IRC: bmoss) - Information Architect, OSIC
-  * Joseph Robinson (IRC: JRobinson\_) - OSIC
+Following are the members of the team:
 
-* Karin Levenstein (IRC: klevenstein) - US team, Austin
-
-  * Margaret Eker - Public Cloud
-  * Kelly Holcomb - Sr. Technical Editor
-  * Catherine Richardson (IRC: cathrichardson) - Public Cloud
-  * Robb Romans (IRC: rromans) - RPC, OSA
-  * Alexandra Settle (IRC: asettle) - OSIC, RPC, OSA
-  * Erik Wilson (IRC: erikmwilson) - RPC
-
-* Renee Rendon - US team, San Antonio
-
-  * Nate Archer - How-To
-  * Stephanie Fillmon - How-To
-  * Kyle Laffoon - How-To
-  * Cat Lookabaugh - How-To, Public Cloud
-
+* **Senior Manager: Laura Clymer (IRC: onthecly)**
+* Lana Brindley (IRC: loquacities) - Manager of AU team and PTL for OpenStack manuals
+	* Darren Chan (IRC: darrenc) - Information Architect, OSIC
+	* Brian Moss (IRC: bmoss) - Information Architect, OSIC
+	* Joseph Robinson (IRC: `JRobinson_`) - Information Developer, OSIC
+* Karin Levenstein (IRC: klevenstein) - Manager of Austin US team
+	* Margaret Eker - Information Developer, Public Cloud
+	* Kelly Holcomb - Editor
+	* Catherine Richardson (IRC: cathrichardson) - Information Developer, Public Cloud
+	* Robb Romans (IRC: rromans) - Information Developer, RPC and OSA
+	* Alexandra Settle (IRC: asettle) - Information Developer, OSIC, RPC and OSA
+	* Erik Wilson (IRC: erikmwilson) - Information Developer, RPC
+* Renee Rendon - Manager of San Antonio US team
+	* Nate Archer - Information Developer, How-To
+	* Stephanie Fillmon - Information Developer, How-To
+	* Kyle Laffoon - Information Developer, How-To
+	* Cat Lookabaugh - Information Developer, How-To and Public Cloud
 
 Rackspace Private Cloud documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Where do the RPC-O docs live?
------------------------------
+This section answers questions about the Rackspace Private Cloud Powered By
+OpenStack (RPCO) documentation.
 
-The docs repo is a private repo (message one of the docs team managers for
-access), and it is located here: https://github.com/rackerlabs/docs-rpc
+Where do the RPCO docs live?
+----------------------------
 
-The two most important folders here are ``/doc`` and ``/internal``.
+The RPCO docs repo is a private repo, and it is located at  https://github.com/rackerlabs/docs-rpc.
+Send a message to one of the docs team managers for access.
 
-``/doc`` contains the following external guides that are published to the
-`Rackspace developer documentation developer site
-<https://developer.rackspace.com/docs/#docs-private-cloud>`_:
+The two most important folders in the repo are ``/doc`` and ``/internal``.
+
+The ``/doc`` folder contains the following external guides that are published to
+the `Rackspace Developer Docs site <https://developer.rackspace.com/docs/#docs-private-cloud>`_:
 
 * Administrator Guide (rpc-admin)
-* Technical FAQ (External)
+* Technical FAQ (external)
 * Operations Guide
 * Release Notes
-* Standalone Object Storage Guide
+* Standalone Object Storage Guide (swift)
 * Upgrade Guide
 
-``/internal`` contains the internal guides that contain information
-specific to Rackspace support that is not intended for public use.
-For example, the internal operations guide contains the following information,
-which is not published in the external operations guide:
+The ``/internal`` folder contains the internal guides that contain information
+specific to Rackspace support that is not intended for public use. For example,
+the internal operations guide contains the following information, which is not
+published in the external operations guide:
 
 * Backups
 * Dashboard solutions tab
 
-The following internal guides are published to the `Rackspace enterprise github
-<https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_ using the Github
+The following internal guides are published to the `Rackspace Developer Portal <https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_ using the GitHub
 pages feature:
 
 * Installation Guide
-* Technical FAQ (Internal version)
-* Operations Guide (Internal version)
+* Technical FAQ (internal)
+* Operations Guide (internal)
 
-Note that while you need to be on the Rackspace network to view the published
-internal guides, you can view the RST source in the github repo:
-https://github.com/rackerlabs/docs-rpc/blob/master/internal/
+.. note::
 
-What do the RPC-O docs contain?
--------------------------------
+  Although you need to be on the Rackspace network to view the published internal
+  guides, you do not have to be to view the RST source in the GitHub repo.
 
-The **Installation Guide** provides Rackspace support
-staff with the following installation information:
+What do the RPCO docs contain?
+------------------------------
 
-* The technology used by RPCO
-* The environment and network architecture
+The **Installation Guide** provides Rackspace support staff with the following
+installation information:
+
+* Technology used by RPCO
+* Environment and network architecture
 * Requirements to install RPCO
-* The installation process workflow, including the necessary commands to
-  execute each step.
+* Installation process workflow, including the necessary commands to execute each step.
 
-The RPC Installation Guide is *completely different* from the OpenStack Ansible
-(OSA) installation guide, which is maintained separately.
+The RPCO Installation Guide is *completely different* from the OpenStack-Ansible (OSA)
+installation guide, which is maintained separately.
 
 The **internal Technical FAQ** contains Rackspace internal support questions.
 Do not distribute this guide outside of Rackspace to any customer.
 
 The **external Technical FAQ** is a quick reference for Rackspace
-customers who have questions about Rackspace Private Cloud Powered by
-OpenStack.
+customers who have questions about RPCO.
 
 The **Operations Guides** contain information and instructions for configuring
-and managing a Rackspace Private Cloud environment. The external ops guide is
-for customer operators, and the internal ops guide is for Rackspace Support.
-These guides provide the following information for cloud operators:
+and managing a Rackspace Private Cloud environment. The external guide is
+for customer operators, and the internal guide is for Rackspace Support.
+These guides describe the following tasks for cloud operators:
 
 * Manage a deployed cloud environment
 * Manage containers
@@ -168,42 +163,40 @@ intended for customer system administrators who perform the following tasks:
 * Add and manage project security group rules
 * Diagnose and fix Identity service issues
 
-The **Standalone Object Storage Guide** is intended for Rackspace Support and
-any other Rackers who are adding standalone OpenStack Object Storage (swift)
-for a customer in a Rackspace data center or a customer data center.
+The **Standalone Object Storage Guide** is intended for Rackspace Support and any
+other Rackers who are adding stand-alone OpenStack Object Storage (swift) for a
+customer in a Rackspace data center or a customer data center.
 
 The **Upgrade Guide** contains information and instructions for upgrading a
 Rackspace Private Cloud environment. Note that this guide is different from
 the OSA upgrade documentation, which is maintained separately.
 
-The **Release Notes** describes new features and known and resolved issues in
-the current release of Rackspace Private Cloud Powered By OpenStack (RPCO).
+The **Release Notes** describes new features and known and resolved issues in the
+current release of RPCO.
 
-How do we do RPC-O docs?
-------------------------
+How do we contribute to RPCO docs?
+----------------------------------
 
-RPC-O uses github for code, as well as bug/issue management and code reviews.
+RPCO uses GitHub for code, bug and issue management, and code reviews.
 
-To learn how to contribute to RPC-O documentation, all instructions are
-outlined here: https://github.com/rackerlabs/docs-rpc/blob/master/GITHUBING.rst
+To learn how to contribute to RPCO documentation, see the following instructions:
 
-AND here: https://github.com/rackerlabs/docs-rpc/blob/master/CONTRIBUTING.rst
+* `GitHub workflow <https://github.com/rackerlabs/docs-rpc/blob/master/GITHUBING.rst>`_
+* `Contributor guidelines <https://github.com/rackerlabs/docs-rpc/blob/master/CONTRIBUTING.rst>`_
 
 
 OpenStack-Ansible (OSA) documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+This section answers questions about the OpenStack-Ansible (OSA) documentation.
+
 Where do the OSA docs live?
 ---------------------------
 
-The docs repo for OSA is here: https://github.com/openstack/openstack-ansible
+The OSA docs repo is at https://github.com/openstack/openstack-ansible.
 
-The most important folder here for documentation is ``/doc``.
-
-``/doc`` contains the external guides that are published at
-http://docs.openstack.org/developer/openstack-ansible/
-
-These guides are:
+The most important folder is ``/doc``. This folder contains the following external
+guides, which are published to the `OpenStack-Ansible Documentation site <http://docs.openstack.org/developer/openstack-ansible/>`_:
 
 * OpenStack-Ansible Installation Guide
 * Upgrade Documentation
@@ -213,12 +206,15 @@ What do the OSA docs contain?
 -----------------------------
 
 The **OpenStack-Ansible Installation Guide** is intended to help deployers
-install OpenStack-Ansible for the first time. As such, the install guide
-is somewhat opinionated, focusing on ensuring that the deployer has to make
-very few decisions and implement the least amount of configuration possible
-to deploy a running OpenStack environment.
-Please note the OpenStack-Ansible Installation Guide is currently under
-review and work will begin on a newly formatted guide before the next release.
+install OpenStack-Ansible for the first time. As such, the guide is somewhat
+opinionated, focusing on ensuring that the deployer has to make very few decisions
+and implement the least amount of configuration possible to deploy a running
+OpenStack environment.
+
+.. note::
+
+  As of June 2016, the OpenStack-Ansible Installation Guide is under
+  review and will be newly formatted for the next release.
 
 The **Upgrade Guide** contains information and instructions for upgrading
 your OSA environment per release. It specifically details manual upgrade steps,
@@ -226,9 +222,9 @@ scripts that are used in the upgrade process, and playbooks that are used in
 the upgrade process.
 
 The **Developer Documentation** provides documentation relevant to developing
-OpenStack-Ansible. This includes the following:
+OpenStack-Ansible:
 
-* Quick start (all instructions relevant to your AIO)
+* Quick start (all instructions relevant to your AIO build)
 * Included scripts (several helper scripts to manage gate jobs, install base
   requirements, and update repository information)
 * Playbooks
@@ -238,12 +234,12 @@ OpenStack-Ansible. This includes the following:
 * Adding new roles and services
 * OpenStack-Ansible inventory
 
-How do we do OSA docs?
-----------------------
+How do we contribute to OSA docs?
+---------------------------------
 
-OSA is an upstream project. The source code lives in github and is developed
-and maintained using OpenStack tools and processes which include launchpad for
-bug/issue logging and management and gerrit for code reviews.
+OSA is an upstream project. The source code lives in GitHub, and it is developed
+and maintained by using OpenStack tools and processes, which include Launchpad for
+bug and issue logging and management, and Gerrit for code reviews.
 
 Use the following resources to learn how to contribute to the OSA
 documentation:
@@ -254,33 +250,32 @@ documentation:
   <http://docs.openstack.org/developer/openstack-ansible/developer-docs/contribute.html>`_
 
 
-OpenStack manuals documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OpenStack documentation
+~~~~~~~~~~~~~~~~~~~~~~~
 
-Where do the openstack-manuals docs live?
+This section answers questions about the OpenStack manuals documentation.
+
+Where do the OpenStack manuals docs live?
 -----------------------------------------
 
-The docs repo for openstack-manuals is here:
-https://github.com/openstack/openstack-manuals
+The OpenStack manuals docs repo is at https://github.com/openstack/openstack-manuals.
 
-The most important folder here for documentation is ``/doc``.
+The most important folder is ``/doc``. This folder contains the following external
+guides, which are published at http://docs.openstack.org/.
 
-``/doc`` contains the external guides that are published at
-http://docs.openstack.org/
-
-The Release Notes:
+Release Notes:
 
 * OpenStack Projects Release Notes
 * OpenStack Documentation Release Notes
 
-The Install Guides:
+Install Guides:
 
 * Installation Guide for openSUSE Leap 42.1 and SUSE Linux Enterprise
   Server 12 SP1
 * Installation Guide for Red Hat Enterprise Linux 7 and CentOS 7
 * Installation Guide for Ubuntu 14.04 (LTS)
 
-The Operations And Administrator Guides:
+Operations And Administration Guides:
 
 * Administrator Guide
 * High Availability Guide
@@ -290,26 +285,25 @@ The Operations And Administrator Guides:
 * Architecture Design Guide
 * Networking Guide
 
-The Configuration Guides:
+Configuration Guides:
 
 * Configuration Reference
 
-The API Guides:
+API Guides:
 
 * API Complete References
 * API Guide
 
-The User Guides:
+User Guides:
 
 * End User Guide (includes Python SDK)
 * Command-Line Interface Reference
 * Open source software for application development
 
-The Contributor Guides:
+Contributor Guides:
 
 * OpenStack Documentation Contributor Guide
 * OpenStack Technical Committee Governance Documents
-* OpenStack Technical Committee reference documents and official resolutions
 * Python Developer Documentation
 * Language Bindings and Python Clients
 * OpenStack Project specifications
@@ -317,17 +311,17 @@ The Contributor Guides:
 * OpenStack Developer and Community Infrastructure Documentation
 * OpenStack I18n Guide
 
-What do the openstack-manuals docs contain?
+What do the OpenStack manuals docs contain?
 -------------------------------------------
 
-The Release Notes contain information for new features,
-upgrades and deprecation notes, known issues, and bug fixes.
+The **Release Notes** contain information about new features, upgrades, deprecations,
+known issues, and bug fixes.
 
-The Install Guides contain getting started information with the most commonly
-used OpenStack services (openSUSE, SUSE Linux, RHEL 7, CentOS 7, and
-Ubuntu 14.04).
+The **Install Guides** contain information about getting started with the most
+commonly used OpenStack services on openSUSE, SUSE Linux, Red Hat Enterprise Linux,
+CentOS, and Ubuntu.
 
-The operations and administrator guides each contain different information.
+The **Operations and Administration Guides** contain the following information:
 
 * Administrator Guide
      Manage and troubleshoot an OpenStack cloud
@@ -338,23 +332,23 @@ The operations and administrator guides each contain different information.
 * Security Guide
      Guidelines and scenarios for creating more secure OpenStack clouds
 * Virtual Machine Image Guide
-     Obtain, create, and modify OpenStack-compatible virtual machine images
+     Obtain, create, and modify OpenStack compatible virtual machine images
 * Architecture Design Guide
      Guidelines for designing an OpenStack cloud
 * Networking Guide
      Deploy and manage OpenStack Networking (neutron)
 
-The Configuration Reference guid contains installation and configuration
+The **Configuration Reference** contains installation and configuration
 options for OpenStack.
 
-The API Guides each contain different information:
+The **API Guides** contain the following information:
 
 * API Complete References
      Comprehensive OpenStack API reference
 * API Guide
      Introduction to using the OpenStack API
 
-The User Guides each contain different information:
+The **User Guides** contain the following information:
 
 * End User Guide (includes Python SDK)
      Create and manage resources using the OpenStack dashboard, command-line
@@ -364,7 +358,7 @@ The User Guides each contain different information:
 * Open source software for application development
      Resources for application development on OpenStack clouds
 
-The Contributor Guides each contain different information:
+The **Contributor Guides** contain the following information:
 
 * OpenStack Documentation Contributor Guide
      Documentation workflow and conventions
@@ -383,12 +377,12 @@ The Contributor Guides each contain different information:
 * OpenStack I18n Guide
      Internationalization workflow and conventions
 
-How do we do openstack-manuals docs?
-------------------------------------
+How do we contribute to OpenStack manuals?
+------------------------------------------
 
-OpenStack manuals is an upstream project. The source code lives in github and
-is developed and maintained using OpenStack tools and processes which include
-launchpad for bug/issue logging and management and gerrit for code reviews.
+OpenStack manuals is an upstream project. The source code lives in GitHub, and it
+is developed and maintained by using OpenStack tools and processes, which include
+Launchpad for bug and issue logging and management, and Gerrit for code reviews.
 
 Use the following resources to learn how to contribute to the OpenStack manuals
 documentation:
