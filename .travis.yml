@@ -1,0 +1,13 @@
+language: python
+branches:
+  only:
+    - master
+#    - gh-pages
+#python:
+#  - "3.4"
+#install:
+#  pip install --user -r requirements.txt
+script:
+  - tox
+#after_success:
+#  - ./tools/publish.sh
