@@ -484,12 +484,12 @@ To avoid using a transitive verb intransitively, you can make it passive if the 
 
    * - Correct
      - Incorrect
-   * - The installation program **loads** the files.
-      \ *or*\ 
+   * - The installation program **loads** the files. 
+       *or* 
        The files **are loaded**.
      - The files **load**.
-   * - The product **displays** the available servers in the right pane.
-      \ *or*\ 
+   * - The product **displays** the available servers in the right pane. 
+       *or* 
        The available servers **are displayed** in the right pane.
      - The available servers **display** in the right pane.
    * - After the installation **is completed**, ensure that the FTP services are running.

@@ -13,4 +13,5 @@ How to use the Cloud documentation team tools.
    internal-publish-script.rst
    manage-labels-readme.md
    mdsphinx.rst
+   nexus-deletion.md
    publishing.rst

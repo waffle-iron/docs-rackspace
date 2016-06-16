@@ -321,6 +321,7 @@ If the heading includes text from a user interface, the capitalization of that t
    :header-rows: 1
 
    * - Examples
+     -
    * - Preparing a cloud server to be a mail server
      - Can I buy extra IP addresses?
    * - What are cloud servers?
@@ -416,7 +417,7 @@ In examples of API authentication requests, and other examples where we are teac
 
 ```eval_rst
 .. list-table::
-   :widths: 25 25 25 25
+   :widths: 33 33 33
    :header-rows: 1
 
    * - Information
@@ -435,8 +436,9 @@ In examples of API authentication requests, and other examples where we are teac
    * - Password
      - ***yourPassword*** 
        $password
-     - J$123bb\ * API key \
-     - *\ **yourApiKey**\ \* 
+     - J$123bb\*
+   * - API key
+     - ***yourApiKey*** 
        $apikey
      - kf938gf4915e114f7ff5448910ffe68c
    * - Authentication token
@@ -657,7 +659,7 @@ Use a generic name or a standard abbreviation if one exists. If a generic name o
      - Use the term *initialization* unless you are naming a specific file.
      - The initialization files contain default parameter values.
 
-      Copy the **calibrate.ini** file.
+       Copy the **calibrate.ini** file.
    * - JSON
      - Use the term *JSON* unless you are naming a specific file.
      - You can directly edit the JSON environment file to add attributes specific to your configuration. 

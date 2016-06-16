@@ -80,10 +80,8 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Rackspace Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rpc-other/index.html">RPC team documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">InfoDev templates</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../add-github-links-to-docs.html">Adding support for contributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../build-from-source.html">Building from Source</a></li>
@@ -106,6 +104,9 @@ Guidelines for content contributors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../manage-labels-readme.html">Importing and exporting labels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nexus-deletion.html">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nexus-deletion.html#listing-content">Listing content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nexus-deletion.html#deleting-content">Deleting content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../publishing.html">Development and production branches on developer.rackspace.com</a></li>
 </ul>
 </li>
@@ -161,7 +162,7 @@ Guidelines for content contributors</a></li>
 <span id="contributor-guidelines"></span><h1>Contributor Guidelines<a class="headerlink" href="#contributor-guidelines" title="Permalink to this headline">#</a></h1>
 <p>These guidelines provide the general process for maintaining source code that builds the
 Rackspace Cloud Identity developer documentation.</p>
-<!-- Provide as little or as much information about architecture as needed to help 
+<!-- Provide as little or as much information about architecture as needed to help
 contributors figure out which file to update.--><p>This project is developed and built using the
 <a class="reference external" href="http://sphinx-doc.org/">Python Sphinx documentation generator</a>. Content is
 written in <a class="reference external" href="http://sphinx-doc.org/rest.html">reStructuredText</a>, the markup syntax and
@@ -220,12 +221,13 @@ described in detail in <a class="reference external" href="https://github.com/ra
 <li>Clarify gerunds and participles</li>
 <li>Use consistent terminology</li>
 </ul>
-<!-- Adding build from source guidelines until we can provide a link to automated gh-pages 
-output, or to the staging URL that Ash is working on. 
---> </div>
+<!-- Adding build from source guidelines until we can provide a link to automated gh-pages
+output, or to the staging URL that Ash is working on.
+--></div>
 <div class="section" id="merging-content">
 <span id="merging-content"></span><h3>Merging content<a class="headerlink" href="#merging-content" title="Permalink to this headline">#</a></h3>
-<p>All pull requests must be reviewed before merging. For minor updates and corrections,get a peer review to ensure content is error-free and doesn't introduce other issues.
+<p>All pull requests must be reviewed before merging. For minor updates and corrections,
+get a peer review to ensure content is error-free and doesn't introduce other issues.
 For more complex changes or additions, the content requires both technical and editorial
 review before it can be merged.</p>
 <p><strong>Technical review</strong></p>
@@ -260,12 +262,11 @@ same as the content delivered on developer.rackspace.com
 <ol>
 <li><p class="first">Run the following command to activate your virtual environment:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="nb">bin</span> <span class="n">activate</span> <span class="n">env</span><span class="o">-</span><span class="n">name</span>
- 
 </pre></div>
 </div>
 </li>
 <li><p class="first">In the root directory for the project, run the following commands to install Sphinx
-and other required packages::</p>
+and other required packages:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
@@ -283,10 +284,8 @@ and other required packages::</p>
 </div>
 <div class="section" id="view-the-html-build-results">
 <span id="view-the-html-build-results"></span><h4>View the HTML build results<a class="headerlink" href="#view-the-html-build-results" title="Permalink to this headline">#</a></h4>
-<p>To open the generated project, run the following command:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
-</pre></div>
-</div>
+<p>To open the generated project, run the following command:
+<code class="docutils literal"><span class="pre">open</span> <span class="pre">_build/html/index.html</span></code></p>
 </div>
 </div>
 </div>

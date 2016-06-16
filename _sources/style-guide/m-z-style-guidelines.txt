@@ -578,34 +578,34 @@ Use the following guidelines for commas. For basic comma usage, see a grammar re
      - In the section called "Parameters", enter the values for length, width, and height.
    * - Use commas in numbers with four or more digits. However, do not use commas in the following types of numbers:
 
-      • Addresses
-      • Fractional parts of decimal numbers
-      • Page numbers
-      • Literal representations of user-entered values or displayed values 
+       • Addresses
+       • Fractional parts of decimal numbers
+       • Page numbers
+       • Literal representations of user-entered values or displayed values 
 
        **Note:** Do not use European-style numbering, which uses commas in the place of periods. For example, use 3.14159, not 3,14159.
-     - 9001 N IH 35
-      1,452.7532
-      page 1055 (but 1,055 pages)
-      1,024 bytes
-     - 9,001 N IH 35
-      1,452.753,2
-      page 1,055
-      1024 bytes
+     - 9001 N IH 35 
+       1,452.7532 
+       page 1055 (but 1,055 pages) 
+       1,024 bytes
+     - 9,001 N IH 35 
+       1,452.753,2 
+       page 1,055 
+       1024 bytes
    * - When city and state names are embedded in a sentence, use a comma after the city and the state.
      - The company headquarters were in Kansas City, Missouri, before the merger.
      - The company headquarters were in Kansas City, Missouri before the merger.
    * - When a month, day, and year are embedded in a sentence, use a comma before and after the year. When only the month and year compose the date, omit the commas unless the syntax would ordinarily require a comma following the year.
-     - The company acquired a German subsidiary on July 15, 2009, and is negotiating the purchase of a small Japanese company.
+     - The company acquired a German subsidiary on July 15, 2009, and is negotiating the purchase of a small Japanese company. 
 
-      The publications plan was printed in November 2010 in Austin.
+       The publications plan was printed in November 2010 in Austin. 
 
-      In December 2012, the database restoration failed.
-     - The company acquired a German subsidiary on July 15, 2009 and is negotiating the purchase of a small Japanese company.
+       In December 2012, the database restoration failed.
+     - The company acquired a German subsidiary on July 15, 2009 and is negotiating the purchase of a small Japanese company. 
 
-      The publications plan was printed in November, 2010, in Austin.
+       The publications plan was printed in November, 2010, in Austin. 
 
-      In December 2012 the database restoration failed.
+       In December 2012 the database restoration failed.
 
 ```
 
@@ -635,9 +635,9 @@ An *en dash* is longer than a hyphen and shorter than an em dash. Use an en dash
    :header-rows: 1
 
    * - Correct
-   * - approximately 10–20 diagrams
-      options 11–15
-      2010–2013
+   * - approximately 10–20 diagrams 
+       options 11–15 
+       2010–2013
    * - ``12–13=–1``
    * - Customer Support–related queries
 
@@ -1066,16 +1066,19 @@ The following matrix indicates which upgrade scenarios are supported.
      - X
    * - 4.1.\ *x* to 4.2.1
      - X
+     -
    * - 4.1.\ *x* to 4.2.0
      -
      - X
    * - 4.1.\ *x* to 4.1.\ *x*
      - X
+     -
    * - 4.0.0 to 4.2.\ *x*
      -
      - X
    * - 4.0.0 to 4.1.\ *x*
      - X
+     -
    * - 3 (OpenCenter) to any version
      -
      - X
@@ -1092,7 +1095,8 @@ The following chart compares these top content management systems (CMSs).
    :widths: 33 33 33
    :header-rows: 1
 
-   * - Drupal
+   * - 
+     - Drupal
      - WordPress
    * - **Homepage**
      - www.drupal.org
@@ -1528,26 +1532,34 @@ The following table lists formatting conventions for items that might appear in 
        
        You can tell that the Managed Cloud post-build automation has successfully completed as follows: 
        
-       *(Windows servers)* The following file is created: \*\*C:\_managed\_cloud\_automation\_complete.txt\*\* 
+       *(Windows servers)* The following file is created: **C:\\windows\\temp\\rs\_managed\_cloud\_automation\_complete.txt** 
        
-       *(Linux servers)* The following file is created: **/tmp/rs\_managed\_cloud\_automation\_complete** Quotations 
-       (content quoted from another source) \
-     - Quotation marks, or the formatting provided by the specified tags \
-     - “Scalability is key for our business,” explained Nathan Goff, Inavero Operations Director and Partner. “There’s nothing worse than making our clients look bad to their customers.” Role names \
-     - Regular text \
-     - The full access role has the permissions to create, read, update, and delete resources within multiple designated products where access is granted. Terms, new \
-     - Italic \
-     - Cloud Servers that are built using the base Linux images are created without a dedicated swap partition and with *swappiness* (a measure of how the Linux kernel tries to use swap memory) set to 0. Terms, unique sense \
+       *(Linux servers)* The following file is created: **/tmp/rs\_managed\_cloud\_automation\_complete**
+   * - Quotations 
+       (content quoted from another source)
+     - Quotation marks, or the formatting provided by the specified tags
+     - "Scalability is key for our business," explained Nathan Goff, Inavero Operations Director and Partner. "There's nothing worse than making our clients look bad to their customers."
+   * - Role names
+     - Regular text
+     - The full access role has the permissions to create, read, update, and delete resources within multiple designated products where access is granted.
+   * - Terms, new
+     - Italic
+     - Cloud Servers that are built using the base Linux images are created without a dedicated swap partition and with *swappiness* (a measure of how the Linux kernel tries to use swap memory) set to 0.
+   * - Terms, unique sense
      - Regular text, 
-       Quotation marks on first use \
-     - The spelling checker "learns" the word. After it learns the word, the spelling checker ignores subsequent occurrences of the word in the document. URLs (not live) \
-     - Bold \
-     - To access the web interface, open your web browser and navigate to **http:// *yourDomain.com*/zipit-install.php**. URLs (live) \
-     - See `Links and cross-references <(../a-l-style-guidelines.html#links-and-cross-references)>`__. \
-     - Not applicable Variable text (placeholder text) \
-     - See `Placeholder (variable) text <#placeholder-variable-text>`__ \
-     - Not applicable Words as words \
-     - Italic \
+       Quotation marks on first use
+     - The spelling checker "learns" the word. After it learns the word, the spelling checker ignores subsequent occurrences of the word in the document.
+   * - URLs (not live)
+     - Bold
+     - To access the web interface, open your web browser and navigate to **http:// *yourDomain.com*/zipit-install.php**.
+   * - URLs (live)
+     - See `Links and cross-references <(../a-l-style-guidelines.html#links-and-cross-references)>`__.
+     - Not applicable
+   * - Variable text (placeholder text)
+     - See `Placeholder (variable) text <#placeholder-variable-text>`__
+     - Not applicable
+   * - Words as words
+     - Italic
      - Do not use *button* and *icon* interchangeably. If you are referring to a command button or toolbar button (labeled or unlabeled), use *button*. If you are referring to a graphic on a screen, window, or other area, use *icon*.
 
 ```

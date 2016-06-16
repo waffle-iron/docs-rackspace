@@ -80,7 +80,6 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Rackspace Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rpc-other/index.html">RPC team documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Style guidelines for technical content</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="basic-writing-guidelines.html">Basic writing guidelines</a></li>
@@ -143,7 +142,6 @@
 <li class="toctree-l2"><a class="reference internal" href="release-notes-guidelines.html">Release notes guidelines</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../templates/index.html">InfoDev templates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
 </ul>
 
@@ -577,6 +575,37 @@ For more information about formatting placeholders, see <a class="reference exte
 <span id="guidelines-for-sentence-style-capitalization"></span><h4>Guidelines for sentence-style capitalization<a class="headerlink" href="#guidelines-for-sentence-style-capitalization" title="Permalink to this headline">#</a></h4>
 <p>In sentence-style capitalization, you capitalize only the first word of the title or heading, plus any proper nouns, proper adjectives, and terms that are always capitalized, such as some acronyms and abbreviations. If the title includes a colon, capitalize the first word that follows the colon, regardless of its part of speech.</p>
 <p>If the heading includes text from a user interface, the capitalization of that text must match the capitalization on the interface.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Examples</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Preparing a cloud server to be a mail server</td>
+<td>Can I buy extra IP addresses?</td>
+</tr>
+<tr class="row-odd"><td>What are cloud servers?</td>
+<td>What are the PHP configuration limits for Cloud Sites?</td>
+</tr>
+<tr class="row-even"><td>Install or upgrade PHP 5.3 for CentOS 5.x</td>
+<td>How do I install my own PEAR module?</td>
+</tr>
+<tr class="row-odd"><td>Ubuntu Hardy: Using mod_python to serve your application</td>
+<td>I live outside the United States. Can I use my foreign credit card to pay for my account?</td>
+</tr>
+<tr class="row-even"><td>Shopping cart software: The basics</td>
+<td>Troubleshooting a Vyatta site-to-site VPN connection</td>
+</tr>
+<tr class="row-odd"><td>Back up your files</td>
+<td>Differences between IMAP and POP</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="guidelines-for-title-style-capitalization">
 <span id="guidelines-for-title-style-capitalization"></span><h4>Guidelines for title-style capitalization<a class="headerlink" href="#guidelines-for-title-style-capitalization" title="Permalink to this headline">#</a></h4>
@@ -678,6 +707,48 @@ An opaque string that represents an authorization to access cloud resources. Tok
 <div class="section" id="cloud-account-information">
 <span id="cloud-account-information"></span><h2>Cloud account information<a class="headerlink" href="#cloud-account-information" title="Permalink to this headline">#</a></h2>
 <p>In examples of API authentication requests, and other examples where we are teaching the use of the API and expect that users might copy the code and use it, use variables or the following standard values for account numbers, user names, passwords, API keys, and so on. Format the variables by using camelCase and italics, and also use bold within the examples.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Information</th>
+<th class="head">Use</th>
+<th class="head">Do not use</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Account or tenant ID</td>
+<td><strong>*yourAccountId*</strong> 
+<strong>*yourTenantId*</strong> 
+$account 
+$tenant</td>
+<td>658405</td>
+</tr>
+<tr class="row-odd"><td>User name</td>
+<td><strong>*yourUserName*</strong> 
+$username</td>
+<td>dian4554</td>
+</tr>
+<tr class="row-even"><td>Password</td>
+<td><strong>*yourPassword*</strong> 
+$password</td>
+<td>J$123bb*</td>
+</tr>
+<tr class="row-odd"><td>API key</td>
+<td><strong>*yourApiKey*</strong> 
+$apikey</td>
+<td>kf938gf4915e114f7ff5448910ffe68c</td>
+</tr>
+<tr class="row-even"><td>Authentication token</td>
+<td><strong>*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*</strong> 
+$token</td>
+<td>2e356864f39831523c184fc646b1997b</td>
+</tr>
+</tbody>
+</table>
 <p>In example API operation requests and responses, in which we want users to see actual values from the system, use &quot;real-looking&quot; values that are nevertheless obviously made up, such the following one for <code class="docutils literal"><span class="pre">X-Auth-Token</span></code>:</p>
 <p><code class="docutils literal"><span class="pre">abcdef123ghi4j5k67m8910n12op3qrs</span></code></p>
 <p><strong>Warning:</strong> Do not include or show actual writer or user account credentials in code examples or screenshots.</p>
@@ -873,6 +944,53 @@ Because such contractions can be confused with possessives, ensure that your usa
 <li>File name extension, such as a .zip file</li>
 </ul>
 <p>Use a generic name or a standard abbreviation if one exists. If a generic name or a standard abbreviation does not exist or is not appropriate given the context, use the file name extension. The following table provides some common file types and guidelines for referring to them.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">File type</th>
+<th class="head">Guideline</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>configuration</td>
+<td>Use the term <em>configuration</em> unless you are naming a specific file.</td>
+<td>The main logrotate configuration file is located at <code class="docutils literal"><span class="pre">/etc/logrotate.conf.</span></code></td>
+</tr>
+<tr class="row-odd"><td>HTML</td>
+<td>Use the term <em>HTML</em> unless you are naming a specific file.</td>
+<td><p class="first">From the website, you can access HTML files.</p>
+<p class="last">The frequently asked questions are located in the <strong>faq.htm</strong> file.</p>
+</td>
+</tr>
+<tr class="row-even"><td>initialization</td>
+<td>Use the term <em>initialization</em> unless you are naming a specific file.</td>
+<td><p class="first">The initialization files contain default parameter values.</p>
+<p class="last">Copy the <strong>calibrate.ini</strong> file.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>JSON</td>
+<td>Use the term <em>JSON</em> unless you are naming a specific file.</td>
+<td><p class="first">You can directly edit the JSON environment file to add attributes specific to your configuration.</p>
+<p class="last">The parameters provided with <code class="docutils literal"><span class="pre">/type=install</span></code> are visible in the <strong>bootstrap.json</strong> file.</p>
+</td>
+</tr>
+<tr class="row-even"><td>XML</td>
+<td>Use the term <em>XML</em> unless you are naming a specific file.</td>
+<td><p class="first">The file is an XML document that defines configuration information regarding the web application.</p>
+<p class="last">A service name maps to a collection of configuration entries in the Hadoop <strong>core-site.xml</strong> file.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>zip</td>
+<td>Use the term <em>zip</em> for both general and specific references.</td>
+<td>In the example, <strong>file.zip</strong> is the name that you assign to the zip file.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="glossaries">
 <span id="id1"></span><h2>Glossaries<a class="headerlink" href="#glossaries" title="Permalink to this headline">#</a></h2>
