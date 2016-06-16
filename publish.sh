@@ -37,7 +37,7 @@ rm -rf $SOURCE $CONFIG
 # add, commit, and push new html files
 git add .
 git commit -m "gh-pages: `git log master -1 --pretty=short --abbrev-commit`"
-git push origin gh-pages
+git push -f upstream gh-pages
 
 # checkout master and signal completion
 git checkout master

@@ -11,7 +11,6 @@ documentation to developer.rackspace.com.
    :maxdepth: 1
 
    contributor-collateral/index.rst
-   glossary/index.rst
    rpc-other/index.rst
    style-guide/index.rst
    templates/index.rst
