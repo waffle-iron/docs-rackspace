@@ -13,5 +13,4 @@ documentation to developer.rackspace.com.
    contributor-collateral/index.rst
    rpc-other/index.rst
    style-guide/index.rst
-   templates/index.rst
    tools/index.rst

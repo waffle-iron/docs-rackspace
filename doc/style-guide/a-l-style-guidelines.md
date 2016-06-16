@@ -198,7 +198,7 @@ In sentence-style capitalization, you capitalize only the first word of the titl
 If the heading includes text from a user interface, the capitalization of that text must match the capitalization on the interface.
 
 ```eval_rst
-| Examples |
+| Examples | &nbsp; |
 | --- | --- |
 | Preparing a cloud server to be a mail server | Can I buy extra IP addresses?|
 | What are cloud servers? | What are the PHP configuration limits for Cloud Sites? |
@@ -282,7 +282,7 @@ Information | Use | Do not use
 ---|---|---
 Account or tenant ID	| ***yourAccountId*** <br /> ***yourTenantId*** <br /> $account <br /> $tenant | 658405
 User name	| ***yourUserName***  <br /> $username | dian4554
-Password	| ***yourPassword*** <br /> $password | J$123bb*
+Password	| ***yourPassword*** <br /> $password | J$123bb\*
 API key	| ***yourApiKey*** <br /> $apikey | kf938gf4915e114f7ff5448910ffe68c
 Authentication token | ***xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*** <br /> $token | 2e356864f39831523c184fc646b1997b
 ```
@@ -461,7 +461,7 @@ File type | Guideline | Example
 --- | --- | ---
 configuration |	Use the term *configuration* unless you are naming a specific file.	| The main logrotate configuration file is located at `/etc/logrotate.conf.`
 HTML | 	Use the term *HTML* unless you are naming a specific file. | From the website, you can access HTML files. <br /><br /> The frequently asked questions are located in the **faq.htm** file.
-initialization | 	Use the term *initialization* unless you are naming a specific file.	| The initialization files contain default parameter values.<br /><br />Copy the **calibrate.ini** file.
+initialization | 	Use the term *initialization* unless you are naming a specific file.	| The initialization files contain default parameter values.<br /><br /> Copy the **calibrate.ini** file.
 JSON	| Use the term *JSON* unless you are naming a specific file. | You can directly edit the JSON environment file to add attributes specific to your configuration. <br /><br /> The parameters provided with `/type=install` are visible in the **bootstrap.json** file.
 XML |	Use the term *XML* unless you are naming a specific file.	| The file is an XML document that defines configuration information regarding the web application. <br /><br /> A service name maps to a collection of configuration entries in the Hadoop **core-site.xml** file.
 zip |	Use the term *zip* for both general and specific references. | In the example, **file.zip** is the name that you assign to the zip file.

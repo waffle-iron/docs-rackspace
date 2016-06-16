@@ -1,5 +1,4 @@
 # Rackspace How-To Content Repository
--------------------------------------
 
 Please read [CONTRIBUTING](CONTRIBUTING.md) for ways to contribute.
 

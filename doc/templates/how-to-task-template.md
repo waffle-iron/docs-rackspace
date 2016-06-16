@@ -1,14 +1,6 @@
----
-permalink: name-of-file-without-extension/
-title: Title of article
-type: article
-created_date: 'yyyy-mm-dd'
-created_by: First Last
-last_modified_date: 'yyyy-mm-dd'
-last_modified_by: First Last
-product: Product Name
-product_url: product-name
----
+permalink | title |type | created_date | created_by | last_modified_date | last_modified_by | product | product_url
+--- | --- | --- | --- | --- | --- | --- | --- | ---
+name-of-file-without-extension/ | Title of article | article | 'yyyy-mm-dd' | First Last | 'yyyy-mm-dd' | First Last | Product Name | product-name
 
 <!--
 For detailed guidelines for creating clear and effective tasks, see [the Tasks section of the style guide](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/m-z-style-guidelines.md#tasks).
@@ -78,7 +70,7 @@ Conclude with a brief description of the end state.
 
 <!--
 
-If there are known issues that the user could encounter during the task, describe those issues and their workarounds in this section. If the issues and workarounds are provided in another article, provide a link to that article.   
+If there are known issues that the user could encounter during the task, describe those issues and their workarounds in this section. If the issues and workarounds are provided in another article, provide a link to that article.
 
 -->
 

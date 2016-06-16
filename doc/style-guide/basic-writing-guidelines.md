@@ -319,8 +319,8 @@ To avoid using a transitive verb intransitively, you can make it passive if the 
 ```eval_rst
 Correct | Incorrect
 --- | ---
-The installation program **loads** the files.<br />*or*<br /> The files **are loaded**. | The files **load**.
-The product **displays** the available servers in the right pane.<br />*or*<br /> The available servers **are displayed** in the right pane. | The available servers **display** in the right pane.
+The installation program **loads** the files. <br /> *or* <br /> The files **are loaded**. | The files **load**.
+The product **displays** the available servers in the right pane. <br /> *or* <br /> The available servers **are displayed** in the right pane. | The available servers **display** in the right pane.
 After the installation **is completed**, ensure that the FTP services are running. | After the installation **completes**, ensure that the FTP services are running.
 ```
 

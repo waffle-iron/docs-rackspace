@@ -293,9 +293,9 @@ Use a comma to set off a nonrestrictive clause (one that begins with *which*). <
 Use a comma to separate an introductory word, phrase, or clause from the rest of the sentence. | When you check your email with an IMAP connection, you are accessing and managing your email directly from the email server. <br /><br /> However, you can easily update the version by using the WordPress management dashboard. <br /><br /> Unlike the other alarms in this list, you set the network check alarm variable upon network check creation. <br /><br /> For more information, see <u>Upgrading your Private Cloud</u>. | When you check your email with an IMAP connection you are accessing and managing your email directly from the email server. <br /><br /> However you can easily update the version by using the WordPress management dashboard. <br /><br /> Unlike the other alarms in this list you set the network check alarm variable upon network check creation. <br /><br /> For more information see <u>Upgrading your Private Cloud</u>.
 Do not use a comma between the verbs in a compound predicate. | These open-source Python clients run on Linux or Mac OS X systems and are easy to learn and use. | These open-source Python clients run on Linux or Mac OS X systems, and are easy to learn and use.
 When a comma is required after a quotation that is embedded in text, place the comma inside the closing quotation mark. | In the section called "Parameters," enter the values for length, width, and height. | In the section called "Parameters", enter the values for length, width, and height.
-Use commas in numbers with four or more digits. However, do not use commas in the following types of numbers:<br /><br />&bull; Addresses<br />&bull; Fractional parts of decimal numbers<br />&bull; Page numbers<br />&bull; Literal representations of user-entered values or displayed values <br /><br /> **Note:** Do not use European-style numbering, which uses commas in the place of periods. For example, use 3.14159, not 3,14159. | 9001 N IH 35<br />1,452.7532<br />page 1055 (but 1,055 pages)<br />1,024 bytes | 9,001 N IH 35<br />1,452.753,2<br />page 1,055<br />1024 bytes
+Use commas in numbers with four or more digits. However, do not use commas in the following types of numbers:<br /><br /> &bull; Addresses<br /> &bull; Fractional parts of decimal numbers<br /> &bull; Page numbers<br /> &bull; Literal representations of user-entered values or displayed values <br /><br /> **Note:** Do not use European-style numbering, which uses commas in the place of periods. For example, use 3.14159, not 3,14159. | 9001 N IH 35 <br /> 1,452.7532 <br /> page 1055 (but 1,055 pages) <br /> 1,024 bytes | 9,001 N IH 35 <br /> 1,452.753,2 <br /> page 1,055 <br /> 1024 bytes
 When city and state names are embedded in a sentence, use a comma after the city and the state. | The company headquarters were in Kansas City, Missouri, before the merger. | The company headquarters were in Kansas City, Missouri before the merger.
-When a month, day, and year are embedded in a sentence, use a comma before and after the year. When only the month and year compose the date, omit the commas unless the syntax would ordinarily require a comma following the year. | The company acquired a German subsidiary on July 15, 2009, and is negotiating the purchase of a small Japanese company.<br /><br />The publications plan was printed in November 2010 in Austin.<br /><br />In December 2012, the database restoration failed. | The company acquired a German subsidiary on July 15, 2009 and is negotiating the purchase of a small Japanese company.<br /><br />The publications plan was printed in November, 2010, in Austin.<br /><br />In December 2012 the database restoration failed.
+When a month, day, and year are embedded in a sentence, use a comma before and after the year. When only the month and year compose the date, omit the commas unless the syntax would ordinarily require a comma following the year. | The company acquired a German subsidiary on July 15, 2009, and is negotiating the purchase of a small Japanese company. <br /><br /> The publications plan was printed in November 2010 in Austin. <br /><br /> In December 2012, the database restoration failed. | The company acquired a German subsidiary on July 15, 2009 and is negotiating the purchase of a small Japanese company. <br /><br /> The publications plan was printed in November, 2010, in Austin. <br /><br /> In December 2012 the database restoration failed.
 ```
 
 ### Dashes
@@ -321,7 +321,7 @@ An *en dash* is longer than a hyphen and shorter than an em dash. Use an en dash
 ```eval_rst
 | Correct |
 | --- |
-| approximately 10–20 diagrams<br />options 11–15<br />2010–2013 |
+| approximately 10–20 diagrams <br /> options 11–15 <br /> 2010–2013 |
 | `12–13=–1` |
 | Customer Support–related queries |
 ```
@@ -579,20 +579,20 @@ The following matrix indicates which upgrade scenarios are supported.
 ```eval_rst
 Upgrade scenario |	Supported	| Not supported
 --- | --- | ---
-4.2.0 to 4.2.*x*	| |	X
-4.1.*x* to 4.2.1	| X	|
-4.1.*x* to 4.2.0	| |	X
-4.1.*x* to 4.1.*x*	| X	|
-4.0.0 to 4.2.*x*	| |	X
-4.0.0 to 4.1.*x*	| X	|
-3 (OpenCenter) to any version	| |	X
-2 (Alamo) to any version	| |	X
+4.2.0 to 4.2.*x*	| &nbsp; |	X
+4.1.*x* to 4.2.1	| X	| &nbsp;
+4.1.*x* to 4.2.0	| &nbsp; |	X
+4.1.*x* to 4.1.*x*	| X	| &nbsp;
+4.0.0 to 4.2.*x*	| &nbsp; |	X
+4.0.0 to 4.1.*x*	| X	| &nbsp;
+3 (OpenCenter) to any version	| &nbsp; |	X
+2 (Alamo) to any version	| &nbsp; |	X
 ```
 
 The following chart compares these top content management systems (CMSs).
 
 ```eval_rst
-| Drupal | WordPress
+&nbsp; | Drupal | WordPress
 --- | --- | ---
 **Homepage** |	www.drupal.org	| www.wordpress.org
 **About**	| Drupal is a powerful, developer-friendly tool for building complex sites. Like most powerful tools, it requires some expertise and experience to operate.	| WordPress began as an innovative, easy-to-use blogging platform. With an ever-increasing repertoire of themes, plug-ins, and widgets, this CMS is also widely used for other website formats.
@@ -932,8 +932,8 @@ New terms | Italic | Cloud Servers that are built using the base Linux images ar
 Permissions	| Regular text	| Log in to a shell as the user who has write permissions to ``/usr/local/bin`` on your local computer.
 Placeholder text (variable text)	| See [Placeholder (variable) text](#placeholder-variable-text) | Not applicable
 Privileges | Regular text | The following examples assume that you are making the firewall changes as a normal user with sudo privileges. <br /> <br /> The user is granted ALL privileges on the database.
-Qualifiers | Italic | 1. *(Optional)* Enter a new name for the image. <br /> <br /> You can tell that the Managed Cloud post-build automation has successfully completed as follows: <br /> <br /> *(Windows servers)* The following file is created: **C:\windows\temp\rs_managed_cloud_automation_complete.txt** <br /> <br /> *(Linux servers)* The following file is created: **/tmp/rs_managed_cloud_automation_complete**
-Quotations <br /> (content quoted from another source) | Quotation marks, or the formatting provided by the specified tags | “Scalability is key for our business,” explained Nathan Goff, Inavero Operations Director and Partner. “There’s nothing worse than making our clients look bad to their customers.”
+Qualifiers | Italic | 1. *(Optional)* Enter a new name for the image. <br /> <br /> You can tell that the Managed Cloud post-build automation has successfully completed as follows: <br /> <br /> *(Windows servers)* The following file is created: **C:\\windows\\temp\\rs_managed_cloud_automation_complete.txt** <br /> <br /> *(Linux servers)* The following file is created: **/tmp/rs_managed_cloud_automation_complete**
+Quotations <br /> (content quoted from another source) | Quotation marks, or the formatting provided by the specified tags | "Scalability is key for our business," explained Nathan Goff, Inavero Operations Director and Partner. "There's nothing worse than making our clients look bad to their customers."
 Role names | Regular text | The full access role has the permissions to create, read, update, and delete resources within multiple designated products where access is granted.
 Terms, new | Italic | Cloud Servers that are built using the base Linux images are created without a dedicated swap partition and with *swappiness* (a measure of how the Linux kernel tries to use swap memory) set to 0.
 Terms, unique sense | Regular text, <br /> Quotation marks on first use | The spelling checker "learns" the word. After it learns the word, the spelling checker ignores subsequent occurrences of the word in the document.

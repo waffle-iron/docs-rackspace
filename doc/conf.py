@@ -96,7 +96,8 @@ copyright = '2016, Rackspace'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build', 'samples', 'README.rst', 'common/*',
-                    '*/README.*', 'glossary/*']
+                    '*/README.*', 'glossary/*',
+                    'templates/how-to-task-template.md']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -291,6 +292,12 @@ texinfo_documents = [('index', 'doc-rackspace',
 def setup(app):
     """Setup sphinx app extension hook."""
     app.add_config_value('recommonmark_config', {
-        'auto_toc_tree',
+        'enable_auto_doc_ref': True,
+        'auto_toc_tree_section': None,
+        'enable_auto_toc_tree': True,
+        'enable_eval_rst': True,
+        'enable_math': False,
+        'enable_inline_math': False,
+        'url_resolver': lambda x: x,
         }, True)
     app.add_transform(AutoStructify)

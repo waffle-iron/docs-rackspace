@@ -3,6 +3,9 @@
 # Helper script for publishing documentation to a gh-page branch.
 # Run from the master branch of the repository to publish.
 
+# set current directory
+STARTDIR=`pwd`
+
 # set repo root directory
 GITDIR=`git rev-parse --show-toplevel`
 
@@ -41,6 +44,7 @@ git push -f upstream gh-pages
 
 # checkout master and signal completion
 git checkout master
+cd $STARTDIR
 echo
 tput setaf 2; echo "Docs published to http://rackerlabs.github.io/docs-rackspace/."
 tput sgr0
