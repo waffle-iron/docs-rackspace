@@ -9,8 +9,8 @@ addons:
     packages:
     - pandoc
 install:
-- pip install tox
+  - pip install tox
 script:
-- tox
-deploy:
-- ./tools/deploy.sh
+  - tox
+after_success:
+  - ./tools/deploy.sh
