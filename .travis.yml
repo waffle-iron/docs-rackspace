@@ -13,4 +13,4 @@ install:
 script:
 - tox
 deploy:
-- "./tools/deploy.sh"
+- ./tools/deploy.sh
