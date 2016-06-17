@@ -1,8 +1,4 @@
 language: python
-#env:
-#  global:
-#  - ENCRYPTION_LABEL: "a32c26061113"
-#  - COMMIT_AUTHOR_EMAIL: "kallimachos@gmail.com"
 branches:
   only:
   - master
@@ -18,6 +14,3 @@ script:
 - tox
 deploy:
 - "./tools/deploy.sh"
-#dd:
-#- openssl aes-256-cbc -K $encrypted_a32c26061113_key -iv $encrypted_a32c26061113_iv
-#  -in id_travis.enc -out ~\/.ssh/id_travis -d
