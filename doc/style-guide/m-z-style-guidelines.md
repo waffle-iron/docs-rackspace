@@ -26,7 +26,7 @@ If you help write the message text for a product or you suggest edits to message
 
 **Note:** Change message text *only* at the request of (or as a suggestion to) the developer. When citing message text in a document, cite the text that the user sees in the product.
 
-```eval_rst
+<!--table-->
 Guideline | Example | Comments
 --- | --- | ---
 Use complete sentences, when possible. | *Use:* <br /> The authentication token is not valid. <br /><br /> *Avoid:* <br /> Invalid authentication token | Include articles (*a*, *an*, *the*) to make the sentence complete. If possible, use active voice.<br /><br /> **Note:** Message text that serves as a heading or label (such as `Elapsed:hh:mm:ss`, which indicates elapsed time) is acceptable as a fragment.
@@ -37,7 +37,7 @@ Be specific.	| *Use:* <br /> The live migration of instance 89a5e582-d3f3-4665-a
 Use *n* to represent an unspecified or generic number. Use *x* to represent an unknown version number.	| The rate limit has been reached (*n* requests in 24 hours). Please try again later. <br /><br /> This option is available only for Ubuntu 12.*x*. | None
 Avoid blaming the user. | *Use:* <br /> The request could not be understood by the server because of malformed syntax. <br /><br /> *Avoid:* <br /> You entered bad request syntax. | Rewrite messages that imply fault on the part of the user. Use passive voice when necessary.
 When possible, use positive statements.	| *Use:* <br /> The given limit must be positive and must be less than 50. <br /><br /> *Avoid:* <br /> The given limit cannot be negative and cannot be greater than 50. | Positive statements are easier to understand than negative statements.
-```
+<!--endtable-->
 
 ## Names
 Do not use real or copyrighted names in examples. For example, do not use kelly.holcomb@example.com.
@@ -49,14 +49,14 @@ See the following topics for information about product names:
 ## Notes and other notation types
 Notations (notes, tips, and warnings) call out important or helpful information. Use them sparingly, according to the guidelines in the following table.
 
-```eval_rst
+<!--table-->
 Notation type | Description
 --- | ---
 Important	| Presents an important or essential point. As a rule, customers must pay attention to important notations to complete a task or understand a topic.
 Note	| Provides information that emphasizes or supplements information in the text. A note can provide information that applies only in certain cases.
 Tip	| Provides useful information that might improve product performance or make procedures easier to follow. Tips provide the following benefits: <br /><br /> &bull;  Help customers learn techniques or procedures<br /> &bull;  Show alternative ways of doing something <br /> &bull;  Provide shortcuts <br /> &bull;  Provide helpful (but not essential) information
 Warning	| Alerts customers to potential hazards or highlights critical information. Use a warning for situations in which users could lose data, compromise data integrity, or disrupt operations if they do not follow instructions carefully.
-```
+<!--endtable-->
 
 When creating notations, use the following guidelines:
 
@@ -77,7 +77,7 @@ Use the following guidelines for showing numbers in documentation.
 ### Numbers versus words
 Spell out numbers from zero through nine, except in the cases shown in the following table. In these cases, or if the number is 10 or larger, use numerals.
 
-```eval_rst
+<!--table-->
 Exception | Example
 --- | ---
 Numbers as they are displayed | The returned value is 0.
@@ -87,23 +87,23 @@ Numbers with symbols | 7%
 Numbers with units of measure or abbreviations | 5 mm, 3-inch disk
 Numbers that indicate dimensions | 8x8 feet
 Time | 5:45 p.m.
-```
+<!--endtable-->
 
 Avoid beginning a sentence with a number. If you must begin a sentence with a number, spell out the number unless the number is part of a product, service, or company name.
 
-```eval_rst
+<!--table-->
 | Use |
 | --- |
 | Ten vendors, including Rackspace, were assessed based on the following attributes: <br /> <br /> 451 Research applied a weighting system to highlight the attributes that are most valued by end users.
-```
+<!--endtable-->
 
 Do not use the spelled-out form of a number followed by a numeral in parentheses. However, if you think that a user might misread the numeral 0 as the letter O, you can clarify by spelling out zero parenthetically after the numeral.
 
-```eval_rst
+<!--table-->
 Use | Do not use
 --- | ---
 two panels <br /> zero probability <br /> Enter **0** (zero). *(acceptable)* | two (2) panels <br /> zero (0) probability
-```
+<!--endtable-->
 
 ### Commas in numbers
 Always use commas in numbers with four or more digits. However, do not use commas in the following types of numbers:
@@ -112,11 +112,11 @@ Always use commas in numbers with four or more digits. However, do not use comma
 - Page numbers
 - Literal representations of user-entered values or displayed values
 
-```eval_rst
+<!--table-->
 Use | Do not use
 --- | ---
 9001 N IH 35 <br /> 1,452.7532 <br /> page 1055 (but 1,055 pages) <br /> 1,024 bytes | 9,001 N IH 35 <br /> 1,452.753,2 <br /> page 1,055 <br /> 1024 bytes
-```
+<!--endtable-->
 
 **Note:** Do not use European-style numbering, which uses commas in the place of periods. For example, use 3.14159, not 3,14159.
 
@@ -129,24 +129,24 @@ When describing number ranges, use the following guidelines:
   - If you use *from* to introduce a range, use *through* or *to* to conclude the range.
   - Do not mix *between* or *from* with an en dash.
 
-```eval_rst
+<!--table-->
 Use | Do not use
 --- | ---
 step 12 through step 16 <br /> options 11–15 *(limited space)* <br /> any value from 1 through 258 | step 12 through step 16, inclusive
 from 10 to 20 diagrams | from 10–20 diagrams
 between 2010 and 2012 | between 2000–2002
-```
+<!--endtable-->
 
 ### Unspecified, generic, and unknown numbers
 To represent an unspecified or generic number, use *n* as the variable and apply italics.
 
 To represent an unspecified or unknown version number, use *x* for each digit and apply italics.
 
-```eval_rst
+<!--table-->
 | Use |
 | --- |
 | Move the insertion point *n* spaces to the right. <br /> Select the **Use *n* I/O Sessions** check box. <br /> Your BlackBerry software must be version 4.*x*. |
-```
+<!--endtable-->
 
 ## Parameters
 When documenting parameters, observe the following guidelines:
@@ -182,35 +182,35 @@ When creating placeholder text, use the following guidelines.
 
 **Note:** For specific information about showing placeholders for account information such as account numbers, user names, passwords, and API keys, see [Cloud account information](../a-l-style-guidelines.html#cloud-account-information).
 
-```eval_rst
+<!--table-->
 Guidelines	| Example
 --- | ---
 Show placeholder text in italics. <br /><br /> If you need to make placeholders more visible in code that customers are expected to copy and use, apply bold as well as italic. For information about applying formatting, see [Text formatting](#text-formatting). <br /><br /> If you cannot apply text formatting to the code, enclose placeholders in punctuation that does not have any other special use in the code. For example, use angle brackets or curly braces. Use a consistent convention throughout the documentation set. | `nova boot <serverName> --image <image> --flavor <flavor> --nic net-id=net1_id`
 Use lowercase letters except when showing a multiple-word placeholder.<br /><br /> To show a multiple-word placeholder, do not separate the words with spaces or symbols. To distinguish the words in the placeholder, capitalize the first letter of each word after the first word (called camelCase). Do not capitalize the first word. <br /><br /> **Note:** Use lowercase and camelCase unless you have to follow the conventions of the programming language. For example, you might need to use underscores (account_ID) or all capitals (ACCOUNT_ID). | *password* <br /> *serverName* <br /> *apiKey* <br /> *tenantId*
 In general, use one or more whole words to represent a placeholder. Do not sacrifice clarity for brevity. Create placeholders that are descriptive and meaningful.| *device* (instead of *dev*) <br /><br /> *installationDirectory* (instead of *installDir*) <br /><br /> *mode* (instead of *########*)
-```
+<!--endtable-->
 
 When explaining a placeholder, use the following guidelines.
 
-```eval_rst
+<!--table-->
 Guidelines |	Example
 --- | ---
 Avoid stand-alone clauses that begin with *where*. Instead, use a sentence. | *Use:* <br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> *yourAccountId* is your actual account number, which is returned as part of the authentication service response. <br /> <br /> *Avoid:* <br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> where *yourAccountId* is your actual account number, which is returned as part of the authentication service response.
 If you need to explain two or more placeholders, use an unordered list. | From a supported web browser, type the following URL:<br /><br /> **http://hostName:portNumber/ed/index.html** <br /><br /> The placeholders in the URL are defined as follows:<br /><br /> &bull; *hostName* is the name of the host computer on which the application server is installed. <br /><br /> &bull; *portNumber* is the port number assigned to the application server. The default is 8082.
 Show the placeholder in regular text with the same formatting that it is shown in the path or code. For example, if you can show it in italics, use italics when explaining it. If you first show the placeholder in a code block and need to enclose it in angle brackets, show it in angle brackets and monospace when explaining it. | *Use:* <br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> *yourAccountId* is your actual account number, which is returned as part of the authentication service response.<br /><br /> *Use:* <br /> Run the following command, replacing `<dockerHostName>` with the name of your Docker host: <br /><br /> `docker-machine env <dockerHostName> --shell cmd`
-```
+<!--endtable-->
 
 ## Plurals
 Use the following general guidelines for forming and using plurals. To find out how to form the plural of a particular word, or for information about whether to use the singular or plural form of a particular word, see [Terminology](terminology-guidelines.md) or consult a dictionary.
 
-```eval_rst
+<!--table-->
 Guideline	| Example
 --- | ---
 To form the plural of an abbreviation, an acronym, or a number, add a lowercase *s* without an apostrophe.<br /><br /> If an acronym already represents a plural noun, do not add an *s*. <br /><br /> **Note:** To refer to more than one FAQ document or section, add the appropriate noun after *FAQ* and make the noun plural—for example, *FAQ articles*. Follow this guideline for other plural acronyms when you need to refer to more than one instance of them. | CPUs, APIs, IDs, OSs, the 1990s, 0s and 1s <br /><br /> frequently asked questions (FAQ)
 To form the plural of a single letter or a symbol, add an apostrophe and a lowercase *s*. | x's, #'s
 Abbreviated units of measure are both singular and plural; no *s* is necessary.	| 5 mm, 20 in., 20 min
 Do not use *(s)*, */s*, *(es)*, or */es* at the end of a word to indicate the possibility of more than one item, and do not combine the singular and plural forms of a verb, such as *is/are*. Use the singular form or the plural form, use both forms joined by a conjunction, or use the phrase *one or more*. | *Use:*<br /> Close any application that is open. <br /><br /> Close any applications that are open. <br /> <br /> *Do not use:* <br /> Close any application(s) that is/are open.
-```
+<!--endtable-->
 
 ## Product names and version numbers
 When using Rackspace product names and showing version numbers, observe the following guidelines:
@@ -229,7 +229,7 @@ When using third-party company and product names, use the name as it is used by 
 
 When referring to an OpenStack service, use the actual service name, and provide the project name in parentheses. For example, use OpenStack Block Storage (Cinder). On subsequent references, use the service name instead of the project name, unless you need to use project names to differentiate between two versions of one service. See the [OpenStack documentation conventions](http://docs.openstack.org/contributor-guide/writing-style/openstack-components.html) for service and project names.
 
-```eval_rst
+<!--table-->
 Use | Do not use
 --- | ---
 Use Cloud Servers to create a server. | Use Cloud Servers to create a Server.
@@ -237,7 +237,7 @@ Use Cloud Block Storage to create volumes. | Use CBS to create volumes.
 You can add files to a server. | You can add Cloud Files to a Cloud Server.
 Microsoft SQL Server is supported. |	MSSQL is supported.
 Cloud Servers provides the core features of the OpenStack Compute (Nova) API. | Cloud Servers provides the core features of OpenStack Nova.
-```
+<!--endtable-->
 
 ## Punctuation
 Use punctuation correctly and consistently. This section provides guidelines for using punctuation in Rackspace documentation. For basic rules about punctuation, see a grammar reference, such as the Harbrace College Handbook.
@@ -260,31 +260,31 @@ For general guidelines about using symbols, see [Symbols](#symbols).
 ### Ampersands
 Do not use an ampersand (&) in text or headings to mean *and* unless you are specifically referring to the symbol on the user interface or the ampersand is part of an official name.
 
-```eval_rst
+<!--table-->
 Use | Do not use
 --- | ---
 This article describes the differences between IMAP and POP. | This article describes the differences between IMAP & POP.
 *(Title)* Setting up Microsoft Exchange 2007 email on your iPhone, iPad, and iPod <br /><br /> *(Title)* Cloud Files: How-to articles and other resources | *(Title)* Setting up Microsoft Exchange 2007 email on your iPhone, iPad, & iPod <br /><br /> *(Title)* Cloud Files: How-to articles & other resources
 *(Button name includes &)* To continue, click **Save & Go to Step 3**. | *(Button name includes &)* To continue, click **Save and Go to Step 3**.
 When Peter Medrano, IT Director at Morgan & Sampson, arrived, he found employees using disparate, consumer email services from different providers. | When Peter Medrano, IT Director at Morgan and Sampson, arrived, he found employees using disparate, consumer email services from different providers.
-```
+<!--endtable-->
 
 ### Colons
 Use the following guidelines for colons.
 
-```eval_rst
+<!--table-->
 Guideline | Example
 --- | ---
 Use a colon at the end of a sentence that introduces a list. If another sentence intervenes between the introductory sentence and the list, use a period instead of a colon. <br /><br /> **Note:** Use a sentence, rather than a fragment, to introduce a list. Fragments are difficult to translate and can be harder to comprehend than sentences, so avoid using them to introduce lists. | The following monitoring checks are available to users: <br /><br /> You can use this product to perform the following tasks: <br /><br /> You can use this product to perform the following tasks. You must extract objects from the database to complete these tasks.
 In steps, use a colon to introduce code that the user is expected to enter.	| Run the following command: <br /> `nova list`
 Do not use a colon to end the introduction to a table, figure, or example. | The following figure shows an overview of Cloud Databases infrastructure. <br /><br /> In the following request example, `Content-Type` is set to `application/json`, but `application/xml` is requested in the `Accept` header. <br /><br /> Table 5.1 lists the endpoints to use for your Cloud Databases API calls.
 Do not use a colon at the end a table column header, a title, or a heading. | 3.2. Service Endpoints <br /><br /> To create a monitoring check <br /><br /> Table 3.1. Regionalized Service Endpoints <br /><br /> Example 4.4. List Versions Response: JSON
-```
+<!--endtable-->
 
 ### Commas
 Use the following guidelines for commas. For basic comma usage, see a grammar reference, such as the *Harbrace College Handbook*.
 
-```eval_rst
+<!--table-->
 Guideline | Correct | Incorrect
 --- | --- | ---
 In a series of three or more items, use serial commas (that is, precede the conjunction with a comma). | You can upgrade, migrate, and integrate the product. | You can upgrade, migrate and integrate the product.
@@ -296,7 +296,7 @@ When a comma is required after a quotation that is embedded in text, place the c
 Use commas in numbers with four or more digits. However, do not use commas in the following types of numbers:<br /><br /> &bull; Addresses<br /> &bull; Fractional parts of decimal numbers<br /> &bull; Page numbers<br /> &bull; Literal representations of user-entered values or displayed values <br /><br /> **Note:** Do not use European-style numbering, which uses commas in the place of periods. For example, use 3.14159, not 3,14159. | 9001 N IH 35 <br /> 1,452.7532 <br /> page 1055 (but 1,055 pages) <br /> 1,024 bytes | 9,001 N IH 35 <br /> 1,452.753,2 <br /> page 1,055 <br /> 1024 bytes
 When city and state names are embedded in a sentence, use a comma after the city and the state. | The company headquarters were in Kansas City, Missouri, before the merger. | The company headquarters were in Kansas City, Missouri before the merger.
 When a month, day, and year are embedded in a sentence, use a comma before and after the year. When only the month and year compose the date, omit the commas unless the syntax would ordinarily require a comma following the year. | The company acquired a German subsidiary on July 15, 2009, and is negotiating the purchase of a small Japanese company. <br /><br /> The publications plan was printed in November 2010 in Austin. <br /><br /> In December 2012, the database restoration failed. | The company acquired a German subsidiary on July 15, 2009 and is negotiating the purchase of a small Japanese company. <br /><br /> The publications plan was printed in November, 2010, in Austin. <br /><br /> In December 2012 the database restoration failed.
-```
+<!--endtable-->
 
 ### Dashes
 An *em dash* is the longest dash. Use em dashes sparingly, and mostly in the following situations:
@@ -318,13 +318,13 @@ An *en dash* is longer than a hyphen and shorter than an em dash. Use an en dash
 
 - To join the elements of a compound modifier when one of the elements is an open compound (a combination of words that constitutes a single concept, like Customer Support).
 
-```eval_rst
+<!--table-->
 | Correct |
 | --- |
 | approximately 10–20 diagrams <br /> options 11–15 <br /> 2010–2013 |
 | `12–13=–1` |
 | Customer Support–related queries |
-```
+<!--endtable-->
 
 ### Ellipses
 An ellipsis (...) is a punctuation construct that is used in syntax or to indicate omitted code in technical content. For technical writing, an ellipsis is used only in code examples.
@@ -369,7 +369,7 @@ This section provides general guidelines for hyphenation. For guidelines about u
 #### Hyphens in compound modifiers
 When two or more words precede and modify a noun as a unit (also called a *compound modifier*), use hyphens according to the following guidelines.
 
-```eval_rst
+<!--table-->
 Guideline | Example
 --- | ---
 To clarify meaning, use a hyphen. | *Ambiguous:* <br /> high level language compiler <br /> (a language compiler that is high level or a compiler of high-level languages?) <br /><br /> *Clear:* <br /> high-level-language compiler <br /> (clearly a compiler of high-level languages)
@@ -379,7 +379,7 @@ If the first word of a compound modifier is an adverb ending in *-ly*, do not hy
 If one of the elements of a compound modifier is an open compound (multiple words that constitute a single concept, like Customer Support), use an en dash, not a hyphen, to separate the open compound from the rest of the modifier. | Customer Support–related queries
 If one of the elements of a compound modifier is a trademark, do not hyphenate the modifier. | *Use:* <br /> specific to Java <br /> Java specific <br /><br /> *Do not use:* <br /> Java-specific
 Avoid using suspended compound adjectives, unless space is limited. In a suspended compound adjective, part of the adjective is separated from the rest of the adjective, such as *first-* in *first- and next-generation servers*. If you must use suspended compound adjectives, include a hyphen with both adjectives. Avoid forming suspended compound adjectives from one-word adjectives. | *Use:* <br /> You can use any combination of uppercase and lowercase letters in a password. <br /><br /> Click the upper-right or lower-right corner. <br /><br /> *Avoid:* <br /> You can use any combination of upper- and lowercase letters in a password. <br /><br /> Click the upper- or lower-right corner.
-```
+<!--endtable-->
 
 #### Hyphens with prefixes
 Words with prefixes are not usually hyphenated. However, a hyphen might be necessary in the following cases:
@@ -408,16 +408,16 @@ Following are some acceptable uses for parentheses:
 
 Do not add *(s)* or *(es)* to the end of a noun to indicate the possibility of more than one item. Use the singular form or the plural form, or use both forms joined by a conjunction.
 
-```eval_rst
+<!--table-->
 | Use |
 | --- |
 | An access control list (ACL) allows access from an outside network into the ObjectRocket system. <br /><br /> Object names cannot contain characters such as dollar signs ($) and question marks (?). <br /><br /> One rack unit is 44.45 mm (1.75 in.) high. <br /><br /> DNS is analogous to a phone book in that it assigns a numerical identifier (for example, 210.48.108.35) to a particular name (for example, www.diversity.net.nz). <br /><br /> 4. *(Optional)* Enter first and last name information for the mailbox owner. <br /><br /> You can submit up to 10 messages (the default) in a single request. |
-```
+<!--endtable-->
 
 ### Periods
 Use the following guidelines for periods. For basic period usage, see a grammar reference, such as the *Harbrace College Handbook*.
 
-```eval_rst
+<!--table-->
 Guideline | Example
 --- | ---
 Use a period at the end of a declarative or imperative sentence, and insert only one space after the period. | I am here. Where are the donuts?
@@ -429,14 +429,14 @@ In glossary definitions, end the definition with a period, even if the definitio
 Use periods only with abbreviations that could otherwise be misread as a word, such as *in.* (for *inch*). Also, use periods in the abbreviations *a.m.* and *p.m.* | 25 mm <br /> 12 in. <br /> FAQ
 Precede a file name extension with a period.  <br /><br /> Assume that the period in a file name extension is pronounced as *dot*, and use the indefinite article *a*. | Copy the **.conf** file to your directory.
 Do not end a title or a heading with a period. | To create a monitoring check <br /> Table 3.1. Regionalized service endpoints
-```
+<!--endtable-->
 
 ### Quotation marks
 Refer to quotation marks as *quotation marks*, not as *quote marks* or *quotes*.
 
 Use single and double quotation marks according to the following guidelines.
 
-```eval_rst
+<!--table-->
 Guideline | Example
 --- | ---
 Use quotation marks in user entries or syntax only if the software requires the quotation marks. | Replace the text inside of the quotation marks on the `AuthName` line to the name of your password protected area. For example, type `"My Password Protected Directory"`.
@@ -446,7 +446,7 @@ When referring to a section of a web page, enclose the section title in parenthe
 Include appropriate punctuation, such as periods and commas, inside quotation marks unless the quotation marks are part of the syntax that the user must type. <br /><br /> For more information about using quotation marks with other marks of punctuation, see *The Chicago Manual of Style*. | For more information, see "Trademarks." <br /><br /> The symbol has one of the following values: ABST, %ABST, or "ABST".
 Do not use quotation marks for emphasis. Use italics instead. | Do not use quotation marks for emphasis.
 Use quotation marks to enclose text that is used verbatim from another source, or to enclose quotations from people. | "None did as good a job as Rackspace for experience and spam detection," Woods said.
-```
+<!--endtable-->
 
 ### Semicolons
 Avoid using semicolons, which are often misused and even when used correctly can make sentences longer and more difficult to understand.
@@ -458,26 +458,26 @@ Do not use a slash mark (/) to present a choice among, or a series of, actions o
 
 Do not use a slash in dates. For information about how to format dates, see [Dates](../a-l-style-guidelines.html#dates).
 
-```eval_rst
+<!--table-->
 Correct  | Incorrect
 --- | ---
 You can choose Cloud Backups, Cloud Files, or both. | You can choose Cloud Backups and/or Cloud Files. <br /> You can choose Cloud Backups/Files.
 To access your computer, plug it in, log in to the operating system, and type your password. | To access your computer, plug in the computer/log on/type your password.
-```
+<!--endtable-->
 
 ## Symbols
 Symbols are used in code, as punctuation, with numbers, and to indicate trademarks. Use the following general guidelines when you include symbols in your documentation.
 
 For guidelines about using specific marks of punctuation, see [Punctuation](#punctuation).
 
-```eval_rst
+<!--table-->
 Guideline	| Example
 --- | ---
 When referring explicitly to a symbol in text, do not show only the symbol. Show the name of the symbol, or the name followed by the symbol in parentheses. <br /><br /> On subsequent uses of the symbol, you can use just the name. <br /><br /> If the symbol is a common mark of punctuation, like a period or a comma, do not show the mark in parentheses. | Escape the line by typing a backslash (/) character. <br /><br /> To find files that were modified more than two days ago, type a plus sign (+) in front of the 2. <br /><br /> Type a comma.
 Use a symbol *instead of* the name of the symbol only if space is limited (for example, in a table). Do not use symbols in running text.	| *Body text:* <br /> &bull; 45 percent <br /> &bull; 16 degrees <br /> &bull; 1,800 dollars <br /><br /> *Limited space:* <br /> &bull; 45% <br /> &bull; 16º <br /> &bull; $1,800
 Do not insert a space between a number and a symbol, except when the symbol is used as a mathematical operator. | For files that use a total of 1,500 KB and a record size of 256, the equation is as follows:<br /> `1,500,000 ÷ 256 = 5,860`
 To separate the options in a menu path, use right-angle brackets (>) surrounded by spaces. |	Open Mac Mail and select **Preferences > Accounts**.
-```
+<!--endtable-->
 
 ## Tables
 Often text that is difficult to read in paragraph form is clear when put into a table. Tables clarify the relationships among information, and they are easy to scan. This topic provides the guidelines for the following aspects of tables:
@@ -552,31 +552,31 @@ When creating attribute or parameter tables in API documents, use the following 
 ### Examples
 The different parts of the preceding URL are explained in the following table.
 
-```eval_rst
+<!--table-->
 Part of URL | Explanation
 --- | ---
 ``swift://``	| The prefix that passes file system requests to the Swift file system.
 `acontainer`	| The name of the container in Swift that contains the objects to be accessed. Container names must conform to RFC952 restrictions for host names—that is, the characters A-Z, numbers 0-9, and the hyphen (-). <br /><br /> Nonconforming container names are inaccessible by swiftfs.
 `aservice`	| A user-friendly "service" name. A service name maps to a collection of configuration entries in the Hadoop core-site.xml file that specify where the container is located (for example, rackspace-dfw).
 ``/path/to/files`` | The name of the object or objects in Swift to be referenced. Although Swift doesn't support paths, swiftfs attempts to interpret names that look like paths and behave appropriately. For example, an input path named ``/path/to/*`` would qualify all objects with names prefixed by ``/path/to/``. Similarly, an output path of ``/path/to/`` would prefix the names of all newly created objects with ``/path/to/``.
-```
+<!--endtable-->
 
 The following table provides the default values for the absolute limits.
 
 **Absolute limits**
 
-```eval_rst
+<!--table-->
 Name | Description | Limit (default value)
 --- | --- | ---
 Node count |	Maximum number of allowed data nodes |	3
 Disk |	Maximum disk capacity across all data nodes, in gigabytes (GB) |	4500
 RAM |	Maximum RAM across all data nodes, in gigabytes (GB) |	23040
 VCPUs |	Maximum virtual CPUs across all data nodes |	6
-```
+<!--endtable-->
 
 The following matrix indicates which upgrade scenarios are supported.
 
-```eval_rst
+<!--table-->
 Upgrade scenario |	Supported	| Not supported
 --- | --- | ---
 4.2.0 to 4.2.*x*	| &nbsp; |	X
@@ -587,18 +587,18 @@ Upgrade scenario |	Supported	| Not supported
 4.0.0 to 4.1.*x*	| X	| &nbsp;
 3 (OpenCenter) to any version	| &nbsp; |	X
 2 (Alamo) to any version	| &nbsp; |	X
-```
+<!--endtable-->
 
 The following chart compares these top content management systems (CMSs).
 
-```eval_rst
+<!--table-->
 &nbsp; | Drupal | WordPress
 --- | --- | ---
 **Homepage** |	www.drupal.org	| www.wordpress.org
 **About**	| Drupal is a powerful, developer-friendly tool for building complex sites. Like most powerful tools, it requires some expertise and experience to operate.	| WordPress began as an innovative, easy-to-use blogging platform. With an ever-increasing repertoire of themes, plug-ins, and widgets, this CMS is also widely used for other website formats.
 **Example sites** |	Community Portal: Fast Company, Team Sugar	| Social Networking: PlayStation Blog <br /><br /> News Publishing: CNN Political Ticker <br /><br /> Education/Research: NASA Ames Research Center <br /><br /> News Publishing:The New York Observer
 **Installation** | 	Drupal Installation Forum	| WordPress Installation Forum
-```
+<!--endtable-->
 
 ## Tasks and procedures
 A *task* is a job that customers perform to achieve a goal, such as creating a server. A task is made up of a number of elements, including procedures, which are sets of sequential action steps. A task topic, article, or section focuses on the customer’s task. It provides the action steps and the essential supporting information (context and reference) that the customer needs to complete the task.
@@ -616,11 +616,11 @@ This topic provides guidelines for developing task topics and procedures.
 ### Task titles
 The title of a task topic, article, or section begins with the imperative form of the task action and uniquely, precisely, and clearly describes the task. Use a plural subject unless the singular makes more sense or is necessary for clarity.
 
-```eval_rst
+<!--table-->
 | Use | Do not use |
 | --- | --- |
 | Create users in SQL Server <br /> Configure SQL Server Management Studio to connect to SQL Server on Windows <br /> Add new ServiceNet routes to a server | Creating users in SQL Server <br /> How to create users in SQL Server <br /> To create users in SQL Server |
-```
+<!--endtable-->
 
 For guidelines about capitalizing titles, see [Capitalization](../a-l-style-guidelines.html#capitalization).
 
@@ -870,20 +870,20 @@ Use the following guidelines for telephone numbers:
 
 Use a space, not hyphens or dashes, to separate parts of the telephone number.
 
-```eval_rst
+<!--table-->
 Use | Do not use
 --- | ---
 1 210 312 4600 |	1-210-312-4600
 1 800 961 4454 |	1 (800) 961-4454
-```
+<!--endtable-->
 
 Precede US and Canadian telephone numbers with 1. Precede all other telephone numbers with a plus sign.
 
-```eval_rst
+<!--table-->
 US and Canadian | All others
 --- | ---
 1 210 312 4600	| +44 0 20 8734 2700 <br /> +45 7734 5764
-```
+<!--endtable-->
 
 If you are showing phone numbers in screenshots or in examples, use the following guidelines:
 
@@ -912,7 +912,7 @@ The conventions are divided into tables based on the content in which they would
 ### Conventions for common items
 The following table lists formatting conventions for items that might appear in content that documents a UI, CLI, or API.
 
-```eval_rst
+<!--table-->
 Text item | Treatment | Output example
 --- | --- | ---
 Application names	| Regular text | You must configure the RabbitMQ application.
@@ -941,12 +941,12 @@ URLs (not live) | Bold | To access the web interface, open your web browser and 
 URLs (live) | See [Links and cross-references]((../a-l-style-guidelines.html#links-and-cross-references)). | Not applicable
 Variable text (placeholder text) | See [Placeholder (variable) text](#placeholder-variable-text) | Not applicable
 Words as words | Italic | Do not use *button* and *icon* interchangeably. If you are referring to a command button or toolbar button (labeled or unlabeled), use *button*. If you are referring to a graphic on a screen, window, or other area, use *icon*.
-```
+<!--endtable-->
 
 ### Conventions for API and CLI
 The following table lists formatting conventions for items that usually appear in content that documents a CLI or API environment.
 
-```eval_rst
+<!--table-->
 Text item | Treatment | Output example
 --- | --- | ---
 API operation names | Regular text <br /> <br /> All lowercase | The following table describes the request attributes for the operation for migrating vaults.
@@ -973,12 +973,12 @@ Paths | Monospace | The path to Perl is ``#!/usr/bin/perl -w``. <br /><br /> In 
 Syntax statements | Monospace | The main command used to change a file’s owner or group is `chown`. The most common syntax used with `chown` is as follows: <br /> `chown user:group file1 file2 file3`
 User input | Monospace | Create a file by using a text editor, and insert the following code: ``<?php phpinfo(); ?>`` <br /><br /> For the username, enter `admin`.
 Variables, environment | Monospace | You can set the `MYSQL_HOST` environment variable to the remote host's address. <br /><br /> You can export the tenant ID to the ``$account`` environment variable and the authentication token to the ``$token`` environment variable.
-```
+<!--endtable-->
 
 ### Conventions for UI
 The following table lists formatting conventions for items that usually appear in content that documents a graphical UI.
 
-```eval_rst
+<!--table-->
 Text item | Treatment | Output example
 --- | --- | ---
 Area (group box) names | Bold | In the **Edit Signature** area, enter the text that you want to appear in your signature.
@@ -1012,7 +1012,7 @@ UI labels | Bold <br /><br /> **Exception:** Show window, dialog box, wizard, pa
 User input | Bold | In the Server text box, type **outlook**.
 Window names | Regular text | In the Network Connections window, right-click the private adapter and select **Properties**.
 Wizard names and wizard page names | Regular text | On the Welcome page of the Active Directory Domain Services Installation Wizard, ensure that the **Use advanced mode installation** check box is cleared, and then click **Next**.
-```
+<!--endtable-->
 
 ## Time
 You can show time by using either the 12-hour or 24-hour clock. The preferred format for international audiences, and the format used in most computer systems, is the 24-hour clock. Use the 24-hour clock when possible. If the technology or interface that you are documenting shows or uses the 12-hour clock, then be consistent with the interface.
@@ -1024,7 +1024,7 @@ When you use the 24-hour clock to show time, use the following guidelines:
 - Show the hours, minutes, and second with two digits each, even if the leading digit is 0.
 - If you need to show a time zone, use Coordinated Universal Time (UTC), and indicate the time-zone offset from UTC.
 
-```eval_rst
+<!--table-->
 | Examples |
 | --- |
 | 08:29:37 |
@@ -1033,7 +1033,7 @@ When you use the 24-hour clock to show time, use the following guidelines:
 | 10:30:00 (UTC -6) (refers to CT) |
 | 12:00:00 (noon) |
 | 00:00:00 (midnight) |
-```
+<!--endtable-->
 
 ### 12-hour clock
 When you use the 12-hour clock to show time, use the following guidelines:
@@ -1044,7 +1044,7 @@ When you use the 12-hour clock to show time, use the following guidelines:
 - Avoid references to standard and daylight saving time because the appropriate designation changes frequently. However, if you need to include such a reference, insert *S* (for standard) or *D* (for daylight) as the second character in the abbreviation.
 - When referring to 12 a.m., use *12 midnight* or just *midnight*. When referring to 12 p.m., use *12 noon* or just *noon*.
 
-```eval_rst
+<!--table-->
 | Examples |
 | --- |
 | 10:29 a.m. |
@@ -1053,7 +1053,7 @@ When you use the 12-hour clock to show time, use the following guidelines:
 | 10:30 a.m. central time (CT) |
 | 1:30 p.m. central standard time (CST) |
 | midnight |
-```
+<!--endtable-->
 
 ## Titles and headings
 This topic provides guidelines for creating titles and headings in documentation.
@@ -1099,7 +1099,7 @@ Observe the following guidelines when you are creating titles for stand-alone ar
 
 - Use a consistent grammatical structure for titles of specific types of articles:
 
-```eval_rst
+<!--table-->
 For the title of an article that provides mainly this kind of information | Begin with this grammatical structure | Examples
 --- | --- | ---
 Conceptual |	Any grammatical structure that is appropriate, except a verb, gerund, or infinitive.	| Linux distributions <br /> <br /> Best practices for backing up your data: Cloud Block Storage versus Cloud Backup
@@ -1108,7 +1108,7 @@ Tutorial or high-level process |	A gerund.	| Understanding logrotate: Configurin
 FAQ	| A descriptive noun or noun phrase, followed by *FAQ*. | Rackspace Cloud Billing FAQ <br /> <br /> Scheduled images FAQ
 Reference	| A plural noun or a noun phrase.	| Permissions matrix for Cloud Networks <br /> <br /> Rackspace Auto Scale glossary
 Troubleshooting	| A grammatical structure that is appropriate for the type of content. A troubleshooting topic can contain task, tutorial, concept, or reference information.	| Troubleshooting alarms <br /> <br /> Service troubleshooting on Linux
-```
+<!--endtable-->
 
 #### Headings in articles
 Observe the following guidelines when you are creating headings within articles:
@@ -1171,7 +1171,7 @@ Observe the following guidelines when you are creating section titles and headin
 
 - Use a consistent grammatical structure for titles of specific types of sections:
 
-```eval_rst
+<!--table-->
 For the title of a section that provides mainly this kind of information | Begin with this grammatical structure | Example
 --- | --- | ---
 Conceptual | Any grammatical structure that is appropriate, except a verb, gerund, or infinitive.	| Core concepts <br /><br /> How Cloud Monitoring works <br /><br /> Limitations of detaching from Rackspace networks
@@ -1179,7 +1179,7 @@ Step-by-step instructions (a task) |	An imperative verb.	| Sign up for a Rackspa
 Reference	| A plural noun or a noun phrase.	| Environment variables for the nova and supernova clients  <br /><br /> Restore operations  <br /><br /> cURL command summary
 High-level process or tutorial	| A gerund.	| Working with your first message queue
 Troubleshooting	| A grammatical structure that is appropriate for the type of content. A troubleshooting topic can contain task, tutorial, concept, or reference information.	| Troubleshooting
-```
+<!--endtable-->
 
 ### Tables of contents
 
@@ -1216,11 +1216,11 @@ Body text must follow titles and section headings. Do not follow a title or head
 
 The body text of a section or article must be independent from the title or heading text. Don't use a title or heading as an antecedent in the sentence that follows it. Put another way, be sure to repeat the subject in the first sentence that follows the title or heading, rather than using a pronoun that refers to the title or heading as its antecedent.
 
-```eval_rst
+<!--table-->
 Use | Do not use
 --- | ---
 **Identify network interfaces on Linux** <br /><br /> This article briefly describes how to identify which network interfaces on a Linux server are associated with which IP addresses. | **Identify network interfaces on Linux** <br /><br /> This article briefly describes how to do this.
-```
+<!--endtable-->
 
 ## Trademarks
 Using Rackspace trademarks correctly protects Rackspace brands and intellectual property, and promotes our reputation. Using third-party trademarks correctly protects Rackspace from legal action.
@@ -1252,7 +1252,7 @@ If you need to verify whether a name is a trademark, see that company's website.
 ### Trademark usage guidelines
 Use the following guidelines when showing Rackspace and third-party trademarks in documentation.
 
-```eval_rst
+<!--table-->
 Guideline | Example — Use | Example — Do not use
 --- | --- | ---
 Show a trademark exactly as it is shown by the owning company (Rackspace or third-party). Do not change the capitalization or abbreviate the trademark. <br /><br /> Abbreviations are acceptable only if they are used by the owning company and also trademarked. | This article describes the process of backing up a Microsoft SQL Server 2008 database. These actions need to be completed by the Administrator user or by a user who is part of the SQL Server Admin user group. | This article describes the process of backing up an MS SQL Server 2008 database. These actions need to be completed by the Administrator user or by a user that is part of the MS SQL Admin user group.
@@ -1261,7 +1261,7 @@ Do not combine a trademark with any other term, including another trademark. For
 Do not use a trademark as a possessive or as a plural. If necessary, form a possessive or plural from the noun that follows the trademark (which is used as an adjective). |	The packaged version of NGINX from Ubuntu uses a sites-available and sites-enabled layout in the same manner as an Apache installation based on Debian. | Ubuntu's packaged version of NGINX uses a sites-available and sites-enabled layout in the same manner as a Debian-based Apache installation.
 Always distinguish a third-party trademark from a Rackspace product name or trademark. Generally you can do this through ensuring that words intervene between the trademarks. <br /><br /> Show trademarks of different companies together only if a license or agreement exists between the two companies. In such cases, use italics to distinguish one trademark from the other. You can generally do this just on first use of the two terms together in the document or article. | The version of MySQL installed on Cloud Sites that use Windows technology is currently MySQL Connector version 5.2.5. <br /><br /> The Rackspace Cloud Storage App for Microsoft SharePoint enables you to work with files inside of Rackspace Cloud Files alongside SharePoint content. | The version of MySQL installed on Windows Cloud Sites is currently MySQL Connector version 5.2.5. <br /><br /> The Rackspace Cloud Storage App for Microsoft SharePoint enables you to work with files inside of Rackspace Cloud Files alongside SharePoint content.
 Always use Fanatical Support as a trademark. Do not use *fanatical* outside of the trademark. Also, always distinguish this trademark from surrounding text by using italics. <br /><br /> For more information, see the [Rackspace Trademark Guidelines PDF from Legal](https://one.rackspace.com/download/attachments/72684499/RACKSPACE-%2327629-v1-Rackspace_Trademark_Guidelines.pdf?version=1&modificationDate=1387917185000&api=v2). | We provide *Fanatical Support*. | Our support is Fanatical.
-```
+<!--endtable-->
 
 ## URLs and domain names
 Some samples, such as those related to the Customer Service Layer API, include a sample customer's URL or email address. Do not invent a fake domain name for this purpose. Even if that name is not registered today, someone might claim it tomorrow. Instead, use a domain name permanently reserved for the purpose of demonstration and documentation. **example.com** and **example.org** are reserved globally by the Internet Assigned Numbers Authority (IANA).

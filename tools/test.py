@@ -31,13 +31,13 @@ This is some text
 This is some more text.
 This is an *emphasized* word.
 
-```eval_rst
+<!--table-->
 | Tables        | Are           | Cool  |
 | ------------- |-------------- | ----- |
 | col 3 is      | nifty         | $1600 |
 | col 2 is      | awesome       |   $12 |
 | zebra stripes | are neat      |    $1 |
-```
+<!--endtable-->
 
 More paragraphs."""
 

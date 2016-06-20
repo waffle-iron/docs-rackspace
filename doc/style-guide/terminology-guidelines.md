@@ -23,7 +23,7 @@ Additionally, the table uses the following abbreviations to indicate parts of sp
 - (adj)=adjective
 - (adv)=adverb
 
-```eval_rst
+<!--table-->
 Term | Special Usage | Comments
 --- | --- | ---
 24x7x365 | 	| Use this phrase to describe continuous availability. Do not replace the *x*'s with slashes, hyphens, or the word *by*. <br /><br /> *Use:* <br /> *Fanatical Support* sets Rackspace apart. We are here to help, 24x7x365.
@@ -343,14 +343,14 @@ work around (v), workaround (n) | | *Use:* <br /> The best workaround for hostin
 write-only | | Always hyphenate.
 wrong | Avoid | Use *incorrect* or *inconsistent* instead.
 zeros | | Use *zeros*, not *zeroes*, as the plural of *zero*.
-```
+<!--endtable-->
 
 ## Concise terms
 Use shorter terms and phrases to convey an idea clearly. The following table lists concise terms to use instead of their longer counterparts. Use a longer counterpart only if the two terms or phrases are not interchangeable because of context.
 
 In addition to using concise terms, use the shorter of two approved spellings (for example, *canceled*  instead of *cancelled*).
 
-```eval_rst
+<!--table-->
 Avoid	| Preferred
 --- | ---
 a great many | many
@@ -435,12 +435,12 @@ will need to | must
 will not be able to | cannot
 with respect to | about
 with the exception of | except for
-```
+<!--endtable-->
 
 ## Third-party names and trademarks
 For legal reasons, you must show third-party names and trademarks correctly. The following table shows common third-party names used in Rackspace content in the format they should be used. Common misuses are also provided.
 
-```eval_rst
+<!--table-->
 Correct name | Notes
 --- | ---
 Apache | Apache is a trademark, so it must always be spelled and capitalized as shown.
@@ -468,4 +468,4 @@ SQL Server	| On the first occurrence of this trademarked product name, use Micro
 Ubuntu	| Ubuntu is a trademark, so it must always be spelled and capitalized as shown.
 UNIX	| UNIX is a trademark, so it must always be spelled and capitalized as shown. Do not use Unix.
 WordPress | &nbsp;
-```
+<!--endtable-->

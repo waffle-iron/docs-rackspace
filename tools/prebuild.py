@@ -132,7 +132,7 @@ def listtable(mdstring):
     """
     Process markdown string to convert grid tables to list-tables.
 
-    :param mdstring: markdown string with ``eval_rst`` fenced RST grid tables
+    :param mdstring: markdown string with RST grid tables
     :type mdstring: str
     :returns: markdown string with RST grid tables converted to RST list-tables
     :rtype: str
@@ -168,7 +168,8 @@ def parsedoc(mdstring):
     """
     Find MD tables and convert them to RST grid tables.
 
-    :param mdstring: markdown string with ``eval_rst`` fenced tables
+    :param mdstring: markdown string with ``<!--table--> <!--endtable-->``
+                     fenced tables
     :type mdstring: str
     :returns: markdown string with MD table converted to RST grid table
     :rtype: str
@@ -181,17 +182,19 @@ def parsedoc(mdstring):
     mdstring = preparse(mdstring)
     mdstring = mdstring.splitlines()
     start = False
+    startmark = "<!--table-->"
+    endmark = "<!--endtable-->"
     for line in mdstring:
-        if line.startswith("```eval_rst") is True:
+        if line.startswith(startmark) is True:
             start = True
             table = ''
-            output.append(line)
-        elif start is True and line.startswith("```") is False:
+            output.append("```eval_rst")
+        elif start is True and line.startswith(endmark) is False:
             table += line + "\n"
-        elif start is True and line.startswith("```") is True:
+        elif start is True and line.startswith(endmark) is True:
             converted = pypandoc.convert(table, 'rst', format='md')
             output.append(converted)
-            output.append(line)
+            output.append("```")
             start = False
             global numtables
             numtables += 1
