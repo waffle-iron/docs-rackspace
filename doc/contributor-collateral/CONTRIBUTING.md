@@ -21,6 +21,7 @@ parser component of [Python Docutils](http://docutils.sourceforge.net/index.html
 Source files for the Sphinx documentation project are in the ``api-docs`` directory.
 Following are the key files that define project and content architecture:
 
+<!--table-->
 Content | File
 --- | ---
 |Index page for the main content structure| [index.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/index.rst)
@@ -43,7 +44,7 @@ Content | File
 |Sphinx documentation configuration file| [conf.py](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/conf.py) (Typically, this file does not require changes.)
 |Linux and OS X build script|``Makefile``|
 |Windows build script|``make.bat``|
-
+<!--endtable-->
 
 
 ## Updating and adding content

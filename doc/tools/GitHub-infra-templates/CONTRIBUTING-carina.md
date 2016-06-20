@@ -1,4 +1,4 @@
-# Carina by Rackspace&mdash;Guidelines for content contributors
+# Carina by Rackspace - Guidelines for content contributors
 
 This [Jekyll](http://jekyllrb.com/) repo houses documentation and tutorials for Carina by Rackspace. This file provides guidelines for the documentation process, from creating an article, to getting it reviewed, to publishing it.
 
@@ -44,7 +44,7 @@ Following are some specific guidelines for Carina content:
 
 - When code includes placeholders, show them in camelCase and enclose them in angle brackets. For example, `<hostName>`.
 
-- Show the long forms of command flags on first use in tutorials intended for beginners. For example, `--interactive` and `--tty`. You can then introduce the short version (for example, `-i`, `-t`, or `-it`) and use it consistently throughout the article. Long versions are preceded by a double hyphen; short versions are preceded by a single hyphen.   
+- Show the long forms of command flags on first use in tutorials intended for beginners. For example, `--interactive` and `--tty`. You can then introduce the short version (for example, `-i`, `-t`, or `-it`) and use it consistently throughout the article. Long versions are preceded by a double hyphen; short versions are preceded by a single hyphen.
 
 - To link to another article, use the permalink for that article, preceded by `{{site.baseurl}}`. The permalink is defined in the frontmatter metadata of the article. Format the link as follows: `({{site.baseurl}}/docs/<directoryName>/<articleName>/)`. For example, `({{site.baseurl}}/docs/concepts/introduction-docker-swarm/)`. Note the use of both leading and trailing slashes.
 
@@ -70,7 +70,7 @@ When populating the frontmatter metadata of your article, use the guidelines in 
 
 Do not use the name Docker in any public facing repositories. Docker is a trademark and should be used only when referring to the tools produced by Docker. Do *not* include the name Docker in the name of anything that you create.
 
-For an example how Docker responds when someone uses their name in an unauthorized way, see [Legal request - Change domain name to drop Docker](https://github.com/j-bennet/wharfee/issues/89).  
+For an example how Docker responds when someone uses their name in an unauthorized way, see [Legal request - Change domain name to drop Docker](https://github.com/j-bennet/wharfee/issues/89).
 
 ### Images
 
