@@ -3,6 +3,9 @@
 # Helper script for publishing documentation to a gh-page branch.
 # Run from the master branch of the repository to publish.
 
+# get terminal
+TERMINAL = $TERM
+
 # set current directory
 STARTDIR=`pwd`
 
@@ -46,5 +49,5 @@ git push -f upstream gh-pages
 git checkout master
 cd $STARTDIR
 echo
-tput setaf 2; echo "Docs published to http://rackerlabs.github.io/docs-rackspace/."
-tput sgr0
+tput -t $TERMINAL setaf 2; echo "Docs published to http://rackerlabs.github.io/docs-rackspace/."
+tput -t $TERMINAL sgr0
