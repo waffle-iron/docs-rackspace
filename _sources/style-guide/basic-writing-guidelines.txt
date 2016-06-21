@@ -463,7 +463,7 @@ Don't use nouns or adjectives as verbs, and do not add verb suffixes to abbrevia
      - Incorrect
    * - You can **reorganize** the table space.
      - You can **REORG** the table space.
-   * - Verify the change **by using the ``ping`` command** to contact the server.
+   * - Verify the change **by using the ping command** to contact the server.
      - Verify the change **by pinging** the server.
    * - Some databases and search engines **insert the AND operator** between adjacent words in a keyword search.
      - Some databases and search engines **AND** adjacent words in a keyword search.

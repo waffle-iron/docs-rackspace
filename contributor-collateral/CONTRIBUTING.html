@@ -28,6 +28,8 @@
   
 
   
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
 
   
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
@@ -164,28 +166,79 @@ written in <a class="reference external" href="http://sphinx-doc.org/rest.html">
 parser component of <a class="reference external" href="http://docutils.sourceforge.net/index.html">Python Docutils</a>.</p>
 <p>Source files for the Sphinx documentation project are in the <code class="docutils literal"><span class="pre">api-docs</span></code> directory.
 Following are the key files that define project and content architecture:</p>
-<p>Content | File
---- | ---
-|Index page for the main content structure| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/index.rst">index.rst</a>
-|About the API index| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/overview/index.rst">overview/index.rst</a>
-|Getting Started introduction| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/getting-started.rst">getting-started.rst</a>
-|Getting Started index|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/getting-started/index.rst">getting-started/index.rst</a>
-|Developer Guide introduction|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/developer-guide.rst">developer-guide.rst</a>
-|Concepts section| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/concepts.rst">concepts.rst</a>
-|General API information index|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/general-api-info/index.rst">general-api-info/index.rst</a>
-|API Reference introduction|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/api-reference.rst">api-reference.rst</a>
-|API Reference index for storage operations|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/storage-api-operations/index.rst">storage-api-operations/index.rest</a>
-|API Reference index for CDN operations|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/cdn-api-operations/index.rst">cdn-api-operations/index.rst</a>
-|API operations methods for storage, including code samples|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/tree/master/api-docs/storage-api-operations/methods">storage-api-operations/methods</a>
-|API operations methods for CDN, including code samples|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/tree/master/api-docs/cdn-api-operations/methods">cdn-api-operations/methods</a>
-|Special Use Cases introduction|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/use-cases-information.rst">use-cases-information.rst</a>
-|Static websites using CDN-enabled containers|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/static-websites-using-cdn-enabled-containers/index.rst">static-websites-using-cdn-enabled-containers/index.rst</a>
-|Bulk operations|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/bulk-operations/index.rst">bulk-operations/index.rst</a>
-|Public access to your Cloud Files account|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/public-access-to-your-cloud-files-account/index.rst">public-access-to-your-cloud-files-account/index.rst</a>
-|Release notes|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/release-notes.rst">release-notes.rst</a>
-|Sphinx documentation configuration file| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/conf.py">conf.py</a> (Typically, this file does not require changes.)
-|Linux and OS X build script|<code class="docutils literal"><span class="pre">Makefile</span></code>|
-|Windows build script|<code class="docutils literal"><span class="pre">make.bat</span></code>|</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Content</th>
+<th class="head">File</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Index page for the main content structure</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/index.rst">index.rst</a></td>
+</tr>
+<tr class="row-odd"><td>About the API index</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/overview/index.rst">overview/index.rst</a></td>
+</tr>
+<tr class="row-even"><td>Getting Started introduction</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/getting-started.rst">getting-started.rst</a></td>
+</tr>
+<tr class="row-odd"><td>Getting Started index</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/getting-started/index.rst">getting-started/index.rst</a></td>
+</tr>
+<tr class="row-even"><td>Developer Guide introduction</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/developer-guide.rst">developer-guide.rst</a></td>
+</tr>
+<tr class="row-odd"><td>Concepts section</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/concepts.rst">concepts.rst</a></td>
+</tr>
+<tr class="row-even"><td>General API information index</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/general-api-info/index.rst">general-api-info/index.rst</a></td>
+</tr>
+<tr class="row-odd"><td>API Reference introduction</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/api-reference.rst">api-reference.rst</a></td>
+</tr>
+<tr class="row-even"><td>API Reference index for storage operations</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/storage-api-operations/index.rst">storage-api-operations/index.rest</a></td>
+</tr>
+<tr class="row-odd"><td>API Reference index for CDN operations</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/cdn-api-operations/index.rst">cdn-api-operations/index.rst</a></td>
+</tr>
+<tr class="row-even"><td>API operations methods for storage, including code samples</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/tree/master/api-docs/storage-api-operations/methods">storage-api-operations/methods</a></td>
+</tr>
+<tr class="row-odd"><td>API operations methods for CDN, including code samples</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/tree/master/api-docs/cdn-api-operations/methods">cdn-api-operations/methods</a></td>
+</tr>
+<tr class="row-even"><td>Special Use Cases introduction</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/use-cases-information.rst">use-cases-information.rst</a></td>
+</tr>
+<tr class="row-odd"><td>Static websites using CDN-enabled containers</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/static-websites-using-cdn-enabled-containers/index.rst">static-websites-using-cdn-enabled-containers/index.rst</a></td>
+</tr>
+<tr class="row-even"><td>Bulk operations</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/bulk-operations/index.rst">bulk-operations/index.rst</a></td>
+</tr>
+<tr class="row-odd"><td>Public access to your Cloud Files account</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/public-access-to-your-cloud-files-account/index.rst">public-access-to-your-cloud-files-account/index.rst</a></td>
+</tr>
+<tr class="row-even"><td>Release notes</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/release-notes.rst">release-notes.rst</a></td>
+</tr>
+<tr class="row-odd"><td>Sphinx documentation configuration file</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/conf.py">conf.py</a> (Typically, this file does not require changes.)</td>
+</tr>
+<tr class="row-even"><td>Linux and OS X build script</td>
+<td><code class="docutils literal"><span class="pre">Makefile</span></code></td>
+</tr>
+<tr class="row-odd"><td>Windows build script</td>
+<td><code class="docutils literal"><span class="pre">make.bat</span></code></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="updating-and-adding-content">
 <span id="updating-and-adding-content"></span><h2>Updating and adding content<a class="headerlink" href="#updating-and-adding-content" title="Permalink to this headline">#</a></h2>

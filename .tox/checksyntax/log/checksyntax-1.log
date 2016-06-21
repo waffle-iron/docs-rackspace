@@ -1,0 +1,71 @@
+actionid: checksyntax
+msg: getenv
+cmdargs: [local('/Users/bmoss/rpcdocs/docs-rackspace/.tox/checksyntax/bin/pip'), 'install', '-r/Users/bmoss/rpcdocs/docs-rackspace/requirements.txt']
+env: {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'TERM_PROGRAM_VERSION': '343.7', 'LOGNAME': 'bmoss', 'USER': 'bmoss', 'PATH': '/Users/bmoss/rpcdocs/docs-rackspace/.tox/checksyntax/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/apache-maven-3.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/bmoss/.local/bin:/Users/bmoss/bin', 'HOME': '/Users/bmoss', 'TERM_PROGRAM': 'Apple_Terminal', 'LANG': 'en_AU.UTF-8', 'TERM': 'xterm-256color', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.bEbHj7zDll/Render', 'VERSIONER_PYTHON_VERSION': '2.7', 'SHLVL': '1', 'SECURITYSESSIONID': '186a5', 'XPC_FLAGS': '0x0', 'PYTHONHASHSEED': '4234253259', 'TMPDIR': '/var/folders/7v/2ym60lp139v5wyzf0bslphq00000gn/T/', 'TERM_SESSION_ID': '00BC1080-07CE-4A89-8F2A-6C894F61819B', 'XPC_SERVICE_NAME': '0', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.dvUBBCKS0z/Listeners', 'VIRTUAL_ENV': '/Users/bmoss/rpcdocs/docs-rackspace/.tox/checksyntax', 'SHELL': '/bin/bash', '_': '/usr/local/bin/tox', 'OLDPWD': '/Users/bmoss', '__CF_USER_TEXT_ENCODING': '0x1F5:0x0:0x0', 'PWD': '/Users/bmoss/rpcdocs/docs-rackspace', 'GIT_PROXY_COMMAND': '/Users/bmoss/bin/git-proxy.sh'}
+
+Collecting bashate (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 1))
+  Using cached bashate-0.5.1-py2-none-any.whl
+Collecting doc8 (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 2))
+  Using cached doc8-0.7.0-py2.py3-none-any.whl
+Collecting flake8 (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 3))
+  Using cached flake8-2.6.0-py2.py3-none-any.whl
+Collecting isort (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 4))
+  Using cached isort-4.2.5-py2.py3-none-any.whl
+Collecting markdown (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 5))
+Collecting pep8-naming (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 6))
+  Using cached pep8_naming-0.3.3-py2.py3-none-any.whl
+Collecting pep257 (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 7))
+  Using cached pep257-0.7.0-py2.py3-none-any.whl
+Collecting pyenchant (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 8))
+  Using cached pyenchant-1.6.6-py2.py3.cp27.cp26.cp32.cp33.cp34.pp27-none-macosx_10_6_intel.macosx_10_9_intel.whl
+Collecting pypandoc (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 9))
+  Using cached pypandoc-1.1.3-cp27-none-macosx_10_5_x86_64.whl
+Collecting pytest (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 10))
+  Using cached pytest-2.9.2-py2.py3-none-any.whl
+Collecting pytest-cov (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 11))
+  Using cached pytest_cov-2.2.1-py2.py3-none-any.whl
+Collecting recommonmark (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 12))
+  Using cached recommonmark-0.4.0-py2.py3-none-any.whl
+Collecting sphinx>=1.4.1 (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 13))
+  Using cached Sphinx-1.4.4-py2.py3-none-any.whl
+Collecting sphinxcontrib-spelling (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 14))
+Collecting sphinx_rtd_theme>=0.1.9 (from -r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 15))
+  Using cached sphinx_rtd_theme-0.1.9-py2-none-any.whl
+Collecting Babel>=1.3 (from bashate->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 1))
+  Using cached Babel-2.3.4-py2.py3-none-any.whl
+Collecting pbr>=1.6 (from bashate->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 1))
+  Using cached pbr-1.10.0-py2.py3-none-any.whl
+Collecting restructuredtext-lint>=0.7 (from doc8->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 2))
+Collecting docutils (from doc8->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 2))
+Collecting chardet (from doc8->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 2))
+Collecting stevedore (from doc8->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 2))
+  Using cached stevedore-1.15.0-py2.py3-none-any.whl
+Collecting six (from doc8->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 2))
+  Using cached six-1.10.0-py2.py3-none-any.whl
+Collecting pyflakes!=1.2.0,!=1.2.1,!=1.2.2,<1.3,>=0.8.1 (from flake8->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 3))
+  Using cached pyflakes-1.2.3-py2.py3-none-any.whl
+Collecting mccabe<0.6,>=0.2.1 (from flake8->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 3))
+  Using cached mccabe-0.5.0-py2.py3-none-any.whl
+Collecting pycodestyle<2.1,>=2.0 (from flake8->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 3))
+  Using cached pycodestyle-2.0.0-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): setuptools in ./.tox/checksyntax/lib/python2.7/site-packages (from pypandoc->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 9))
+Collecting py>=1.4.29 (from pytest->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 10))
+  Using cached py-1.4.31-py2.py3-none-any.whl
+Collecting coverage>=3.7.1 (from pytest-cov->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 11))
+  Using cached coverage-4.1-cp27-cp27m-macosx_10_10_x86_64.whl
+Collecting commonmark<=0.5.4 (from recommonmark->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 12))
+Collecting alabaster<0.8,>=0.7 (from sphinx>=1.4.1->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 13))
+  Using cached alabaster-0.7.8-py2.py3-none-any.whl
+Collecting imagesize (from sphinx>=1.4.1->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 13))
+  Using cached imagesize-0.7.1-py2.py3-none-any.whl
+Collecting Pygments>=2.0 (from sphinx>=1.4.1->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 13))
+  Using cached Pygments-2.1.3-py2.py3-none-any.whl
+Collecting Jinja2>=2.3 (from sphinx>=1.4.1->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 13))
+  Using cached Jinja2-2.8-py2.py3-none-any.whl
+Collecting snowballstemmer>=1.1 (from sphinx>=1.4.1->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 13))
+  Using cached snowballstemmer-1.2.1-py2.py3-none-any.whl
+Collecting pytz>=0a (from Babel>=1.3->bashate->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 1))
+  Using cached pytz-2016.4-py2.py3-none-any.whl
+Collecting MarkupSafe (from Jinja2>=2.3->sphinx>=1.4.1->-r /Users/bmoss/rpcdocs/docs-rackspace/requirements.txt (line 13))
+Installing collected packages: pytz, Babel, pbr, bashate, docutils, restructuredtext-lint, chardet, six, stevedore, doc8, pyflakes, mccabe, pycodestyle, flake8, isort, markdown, pep8-naming, pep257, pyenchant, pypandoc, py, pytest, coverage, pytest-cov, commonmark, recommonmark, alabaster, imagesize, Pygments, MarkupSafe, Jinja2, snowballstemmer, sphinx, sphinxcontrib-spelling, sphinx-rtd-theme
+Successfully installed Babel-2.3.4 Jinja2-2.8 MarkupSafe-0.23 Pygments-2.1.3 alabaster-0.7.8 bashate-0.5.1 chardet-2.3.0 commonmark-0.5.4 coverage-4.1 doc8-0.7.0 docutils-0.12 flake8-2.6.0 imagesize-0.7.1 isort-4.2.5 markdown-2.6.6 mccabe-0.5.0 pbr-1.10.0 pep257-0.7.0 pep8-naming-0.3.3 py-1.4.31 pycodestyle-2.0.0 pyenchant-1.6.6 pyflakes-1.2.3 pypandoc-1.1.3 pytest-2.9.2 pytest-cov-2.2.1 pytz-2016.4 recommonmark-0.4.0 restructuredtext-lint-0.14.3 six-1.10.0 snowballstemmer-1.2.1 sphinx-1.4.4 sphinx-rtd-theme-0.1.9 sphinxcontrib-spelling-2.1.2 stevedore-1.15.0

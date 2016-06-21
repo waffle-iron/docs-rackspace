@@ -28,6 +28,8 @@
   
 
   
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
 
   
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/>
@@ -86,8 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../add-github-links-to-docs.html">Adding support for contributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../build-from-source.html">Building from Source</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">GitHub Infra Templates</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="CONTRIBUTING-carina.html">Carina by Rackspace<p>—</p>
-Guidelines for content contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CONTRIBUTING-carina.html">Carina by Rackspace - Guidelines for content contributors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GITHUBING-carina.html">GitHub Workflow :octocat:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="README-devdoc.html">Rackspace Cloud Identity API documentation</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Contributor Guidelines</a><ul>
@@ -104,9 +105,7 @@ Guidelines for content contributors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../manage-labels-readme.html">Importing and exporting labels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../mdsphinx.html">Markdown to RST table conversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nexus-deletion.html">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nexus-deletion.html#listing-content">Listing content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nexus-deletion.html#deleting-content">Deleting content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nexus-deletion.html">Content deletion from Nexus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../publishing.html">Development and production branches on developer.rackspace.com</a></li>
 </ul>
 </li>
@@ -169,22 +168,61 @@ written in <a class="reference external" href="http://sphinx-doc.org/rest.html">
 parser component of <a class="reference external" href="http://docutils.sourceforge.net/index.html">Python Docutils</a>.</p>
 <p>Source files for the Sphinx documentation project are in the <code class="docutils literal"><span class="pre">api-docs</span></code> directory.
 Here are key files that define project and content architecture:</p>
-<p>Content | File
---- | ---
-|Index page for the main content structure| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/index.rst">index.rst</a>
-|About the API index| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/overview/index.rst">overview/index.rst</a>
-|Quickstart Guide| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/quickstart-guide.rst">quickstart-guide.rst</a>
-|Developer Guide introduction|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/developer-guide.rst">developer-guide.rst</a>
-|Concepts section| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/concepts.rst">concepts.rst</a>
-|General API information index|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/general-api-info/index.rst">general-api-info/index.rst</a>
-|Authentication section index| [<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/authentication-info">authentication-info/index.rst</a>
-|API Reference introduction|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-reference.rst">api-reference.rst</a>
-|API Reference index|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-operations/index.rst">api-operations/index.rst</a>
-|API operations methods, including code samples|<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/api-operations/methods">api-operations/methods</a>
-|Sphinx documentation configuration file| <a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/conf.py">conf.py</a> (Typically, this file does not require changes.)
-|Linux and OS X build script|<code class="docutils literal"><span class="pre">Makefile</span></code>|
-|Windows build script|<code class="docutils literal"><span class="pre">make.bat</span></code>|
-|Requirements file to support local builds| <code class="docutils literal"><span class="pre">requirements.txt</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Content</th>
+<th class="head">File</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Index page for the main content structure</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/index.rst">index.rst</a></td>
+</tr>
+<tr class="row-odd"><td>About the API index</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/overview/index.rst">overview/index.rst</a></td>
+</tr>
+<tr class="row-even"><td>Quickstart Guide</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/quickstart-guide.rst">quickstart-guide.rst</a></td>
+</tr>
+<tr class="row-odd"><td>Developer Guide introduction</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/developer-guide.rst">developer-guide.rst</a></td>
+</tr>
+<tr class="row-even"><td>Concepts section</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/concepts.rst">concepts.rst</a></td>
+</tr>
+<tr class="row-odd"><td>General API information index</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/general-api-info/index.rst">general-api-info/index.rst</a></td>
+</tr>
+<tr class="row-even"><td>Authentication section index</td>
+<td>[<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/authentication-info">authentication-info/index.rst</a></td>
+</tr>
+<tr class="row-odd"><td>API Reference introduction</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-reference.rst">api-reference.rst</a></td>
+</tr>
+<tr class="row-even"><td>API Reference index</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-operations/index.rst">api-operations/index.rst</a></td>
+</tr>
+<tr class="row-odd"><td>API operations methods, including code samples</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/api-operations/methods">api-operations/methods</a></td>
+</tr>
+<tr class="row-even"><td>Sphinx documentation configuration file</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/conf.py">conf.py</a> (Typically, this file does not require changes.)</td>
+</tr>
+<tr class="row-odd"><td>Linux and OS X build script</td>
+<td><code class="docutils literal"><span class="pre">Makefile</span></code></td>
+</tr>
+<tr class="row-even"><td>Windows build script</td>
+<td><code class="docutils literal"><span class="pre">make.bat</span></code></td>
+</tr>
+<tr class="row-odd"><td>Requirements file to support local builds</td>
+<td><code class="docutils literal"><span class="pre">requirements.txt</span></code></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
 <li>Update the source files by using the GitHub editor or any plain text editor.</li>
 <li>Format source files with

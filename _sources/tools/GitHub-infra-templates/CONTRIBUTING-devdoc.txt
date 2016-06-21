@@ -15,23 +15,43 @@ parser component of [Python Docutils](http://docutils.sourceforge.net/index.html
 Source files for the Sphinx documentation project are in the ``api-docs`` directory.
 Here are key files that define project and content architecture:
 
-Content | File
---- | ---
-|Index page for the main content structure| [index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/index.rst)
-|About the API index| [overview/index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/overview/index.rst)
-|Quickstart Guide| [quickstart-guide.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/quickstart-guide.rst)
-|Developer Guide introduction|[developer-guide.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/developer-guide.rst)
-|Concepts section| [concepts.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/concepts.rst)
-|General API information index|[general-api-info/index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/general-api-info/index.rst)
-|Authentication section index| [[authentication-info/index.rst](https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/authentication-info)
-|API Reference introduction|[api-reference.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-reference.rst)
-|API Reference index|[api-operations/index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-operations/index.rst)
-|API operations methods, including code samples|[api-operations/methods](https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/api-operations/methods)
-|Sphinx documentation configuration file| [conf.py](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/conf.py) (Typically, this file does not require changes.)
-|Linux and OS X build script|``Makefile``|
-|Windows build script|``make.bat``|
-|Requirements file to support local builds| ``requirements.txt``
+```eval_rst
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
 
+   * - Content
+     - File
+   * - Index page for the main content structure
+     - `index.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/index.rst>`__
+   * - About the API index
+     - `overview/index.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/overview/index.rst>`__
+   * - Quickstart Guide
+     - `quickstart-guide.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/quickstart-guide.rst>`__
+   * - Developer Guide introduction
+     - `developer-guide.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/developer-guide.rst>`__
+   * - Concepts section
+     - `concepts.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/concepts.rst>`__
+   * - General API information index
+     - `general-api-info/index.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/general-api-info/index.rst>`__
+   * - Authentication section index
+     - [`authentication-info/index.rst <https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/authentication-info>`__
+   * - API Reference introduction
+     - `api-reference.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-reference.rst>`__
+   * - API Reference index
+     - `api-operations/index.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-operations/index.rst>`__
+   * - API operations methods, including code samples
+     - `api-operations/methods <https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/api-operations/methods>`__
+   * - Sphinx documentation configuration file
+     - `conf.py <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/conf.py>`__ (Typically, this file does not require changes.)
+   * - Linux and OS X build script
+     - ``Makefile``
+   * - Windows build script
+     - ``make.bat``
+   * - Requirements file to support local builds
+     - ``requirements.txt``
+
+```
 
 * Update the source files by using the GitHub editor or any plain text editor.
 * Format source files with

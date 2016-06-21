@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Prerequisites &mdash; Rackspace Documentation Guides  documentation</title>
+  <title>Content deletion from Nexus &mdash; Rackspace Documentation Guides  documentation</title>
   
 
   
@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
   
 
   
@@ -89,9 +91,12 @@
 <li class="toctree-l2"><a class="reference internal" href="internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#listing-content">Listing content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#deleting-content">Deleting content</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Content deletion from Nexus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#listing-content">Listing content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-content">Deleting content</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="publishing.html">Development and production branches on developer.rackspace.com</a></li>
 </ul>
 </li>
@@ -127,7 +132,7 @@
       
           <li><a href="index.html">Tools</a> &raquo;</li>
       
-    <li>Prerequisites</li>
+    <li>Content deletion from Nexus</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -141,43 +146,59 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>###Content deletion from Nexus</p>
+  <div class="section" id="content-deletion-from-nexus">
+<span id="content-deletion-from-nexus"></span><h1>Content deletion from Nexus<a class="headerlink" href="#content-deletion-from-nexus" title="Permalink to this headline">#</a></h1>
 <p>In order to delete content from Nexus, follow these instructions.</p>
 <div class="section" id="prerequisites">
-<span id="prerequisites"></span><h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h1>
+<span id="prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li>You need an API key for the content service.</li>
 <li>You can't be on the VPN (because it blocks port 9000).</li>
-<li>It's helpful to have some kind of JSON formatter for your browser like <a class="reference external" href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa">this one for Chrome</a>.</li>
-<li>A <a class="reference external" href="http://meyerweb.com/eric/tools/dencoder/">URL encoder</a> of some kind. I personally use <a class="reference external" href="https://atom.io/packages/escape-utils">the escape-utils Atom package</a>.</li>
+<li>It's helpful to have some kind of JSON formatter for your browser like <a class="reference external" href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa">this
+one for
+Chrome</a>.</li>
+<li>A <a class="reference external" href="http://meyerweb.com/eric/tools/dencoder/">URL encoder</a> of some kind. I
+personally use <a class="reference external" href="https://atom.io/packages/escape-utils">the escape-utils Atom
+package</a>.</li>
 </ul>
 </div>
 <div class="section" id="listing-content">
-<span id="listing-content"></span><h1>Listing content<a class="headerlink" href="#listing-content" title="Permalink to this headline">#</a></h1>
-<p>Before deleting content in production, it's a good idea to make sure you know what you're about to delete. You can list the content IDs that are currently present in Nexus by visiting the <code class="docutils literal"><span class="pre">/content/</span></code> endpoint:</p>
+<span id="listing-content"></span><h2>Listing content<a class="headerlink" href="#listing-content" title="Permalink to this headline">#</a></h2>
+<p>Before deleting content in production, it's a good idea to make sure you know
+what you're about to delete. You can list the content IDs that are currently
+present in Nexus by visiting the <code class="docutils literal"><span class="pre">/content/</span></code> endpoint:</p>
 <p><a class="reference external" href="https://developer.rackspace.com:9000/content/">https://developer.rackspace.com:9000/content/</a></p>
-<p>List content IDs that begin with a specific base by providing a URL-encoded <code class="docutils literal"><span class="pre">?prefix=</span></code> parameter, such as:</p>
+<p>List content IDs that begin with a specific base by providing a URL-encoded
+<code class="docutils literal"><span class="pre">?prefix=</span></code> parameter, such as:</p>
 <p><a class="reference external" href="https://developer.rackspace.com:9000/content?prefix=https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud">https://developer.rackspace.com:9000/content?prefix=https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud</a></p>
-<p>Results are returned 100 at a time. You can paginate (awkwardly) by adding <code class="docutils literal"><span class="pre">&amp;pageNumber=2</span></code> to the end of the URL. The full documentation is in <a class="reference external" href="https://github.com/deconst/content-service#get-contentprefixid_prefixpagenumbernumperpagesize">the content service README</a>.</p>
+<p>Results are returned 100 at a time. You can paginate (awkwardly) by adding
+<code class="docutils literal"><span class="pre">&amp;pageNumber=2</span></code> to the end of the URL. The full documentation is in <a class="reference external" href="https://github.com/deconst/content-service#get-contentprefixid_prefixpagenumbernumperpagesize">the
+content service
+README</a>.</p>
 </div>
 <div class="section" id="deleting-content">
-<span id="deleting-content"></span><h1>Deleting content<a class="headerlink" href="#deleting-content" title="Permalink to this headline">#</a></h1>
-<p>Delete individual envelopes by using <code class="docutils literal"><span class="pre">curl</span></code> to issue a <code class="docutils literal"><span class="pre">DELETE</span></code> request to the content service API, using the URL-encoded content ID:</p>
+<span id="deleting-content"></span><h2>Deleting content<a class="headerlink" href="#deleting-content" title="Permalink to this headline">#</a></h2>
+<p>Delete individual envelopes by using <code class="docutils literal"><span class="pre">curl</span></code> to issue a <code class="docutils literal"><span class="pre">DELETE</span></code> request to the
+content service API, using the URL-encoded content ID:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">APIKEY</span><span class="o">=</span><span class="s2">&quot;...&quot;</span>
 
 curl -X DELETE -H <span class="s2">&quot;Authorization: deconst </span><span class="si">${</span><span class="nv">APIKEY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
   https://developer.rackspace.com:9000/content/https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud
 </pre></div>
 </div>
-<p>(You can copy and paste the <code class="docutils literal"><span class="pre">/content/...</span></code> bit from the <code class="docutils literal"><span class="pre">url</span></code> key in the search results in your browser.)</p>
-<p>To bulk delete <em>all</em> envelopes beneath a content ID base that you've removed or renamed, specify the <code class="docutils literal"><span class="pre">?prefix=true</span></code> parameter:</p>
+<p>(You can copy and paste the <code class="docutils literal"><span class="pre">/content/...</span></code> bit from the <code class="docutils literal"><span class="pre">url</span></code> key in the search
+results in your browser.)</p>
+<p>To bulk delete <em>all</em> envelopes beneath a content ID base that you've removed or
+renamed, specify the <code class="docutils literal"><span class="pre">?prefix=true</span></code> parameter:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">APIKEY</span><span class="o">=</span><span class="s2">&quot;...&quot;</span>
 
 curl -X DELETE -H <span class="s2">&quot;Authorization: deconst </span><span class="si">${</span><span class="nv">APIKEY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
   https://developer.rackspace.com:9000/content/https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud?prefix<span class="o">=</span><span class="nb">true</span>
 </pre></div>
 </div>
-<p>The documentation for this endpoint is also in <a class="reference external" href="https://github.com/deconst/content-service#delete-contentidprefixtrue">the content service README</a>.</p>
+<p>The documentation for this endpoint is also in <a class="reference external" href="https://github.com/deconst/content-service#delete-contentidprefixtrue">the content service
+README</a>.</p>
+</div>
 </div>
 
 

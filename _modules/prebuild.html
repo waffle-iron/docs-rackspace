@@ -28,6 +28,8 @@
   
 
   
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
 
   
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
@@ -260,7 +262,7 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Process markdown string to convert grid tables to list-tables.</span>
 
-<span class="sd">    :param mdstring: markdown string with ``eval_rst`` fenced RST grid tables</span>
+<span class="sd">    :param mdstring: markdown string with RST grid tables</span>
 <span class="sd">    :type mdstring: str</span>
 <span class="sd">    :returns: markdown string with RST grid tables converted to RST list-tables</span>
 <span class="sd">    :rtype: str</span>
@@ -296,7 +298,8 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Find MD tables and convert them to RST grid tables.</span>
 
-<span class="sd">    :param mdstring: markdown string with ``eval_rst`` fenced tables</span>
+<span class="sd">    :param mdstring: markdown string with ``&lt;!--table--&gt; &lt;!--endtable--&gt;``</span>
+<span class="sd">                     fenced tables</span>
 <span class="sd">    :type mdstring: str</span>
 <span class="sd">    :returns: markdown string with MD table converted to RST grid table</span>
 <span class="sd">    :rtype: str</span>
@@ -309,17 +312,19 @@
     <span class="n">mdstring</span> <span class="o">=</span> <span class="n">preparse</span><span class="p">(</span><span class="n">mdstring</span><span class="p">)</span>
     <span class="n">mdstring</span> <span class="o">=</span> <span class="n">mdstring</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
     <span class="n">start</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">startmark</span> <span class="o">=</span> <span class="s2">&quot;&lt;!--table--&gt;&quot;</span>
+    <span class="n">endmark</span> <span class="o">=</span> <span class="s2">&quot;&lt;!--endtable--&gt;&quot;</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">mdstring</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;```eval_rst&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">startmark</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
             <span class="n">start</span> <span class="o">=</span> <span class="bp">True</span>
             <span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;```&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;```eval_rst&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">endmark</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
             <span class="n">table</span> <span class="o">+=</span> <span class="n">line</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="k">elif</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;```&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">endmark</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
             <span class="n">converted</span> <span class="o">=</span> <span class="n">pypandoc</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="s1">&#39;rst&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;md&#39;</span><span class="p">)</span>
             <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">converted</span><span class="p">)</span>
-            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;```&quot;</span><span class="p">)</span>
             <span class="n">start</span> <span class="o">=</span> <span class="bp">False</span>
             <span class="k">global</span> <span class="n">numtables</span>
             <span class="n">numtables</span> <span class="o">+=</span> <span class="mi">1</span>

@@ -6,7 +6,8 @@ The **prebuild.py** and **postbuild.py** scripts enable markdown table
 rendering when using Sphinx and the recommonmark extension.
 
 #. Prebuild.py makes temporary copies of markdown files and converts markdown
-   tables fenced by ``eval_rst`` code blocks to RST tables.
+   tables fenced by ``<!--table--> <!--endtable-->`` comment lines to RST
+   tables fenced by ``eval_rst`` code blocks.
 
 #. Sphinx builds HTML using the markdown files with the converted
    rst tables.
@@ -18,18 +19,19 @@ rendering when using Sphinx and the recommonmark extension.
 Formatting markdown tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To label a markdown table for conversion, place it in a code block designated
-as ``eval_rst``. For example:
+To label a markdown table for conversion, add ``<!--table-->`` on the line
+prior to the table and ``<!--endtable-->`` on the line after the table.
+For example:
 
 .. code:: ini
 
-   ```eval_rst
+   <!--table-->
    | Tables        | Are           | Cool  |
    | ------------- |-------------- | ----- |
    | col 3 is      | nifty         | $1600 |
    | col 2 is      | awesome       |   $12 |
    | zebra stripes | are neat      |    $1 |
-   ```
+   <!--endtable-->
 
 Limitations
 -----------
@@ -59,14 +61,14 @@ a blank cell, use ``&nbsp;`` in the cell. Example:
 
 .. code:: ini
 
-   ```eval_rst
+   <!--table-->
    Correct name | Notes
    --- | ---
    Apache | This is a good name.
    Bash shell | &nbsp;
    CentOS | &nbsp;
    Git	 | We all love Git.
-   ```
+   <!--endtable-->
 
 See `HTML named special symbols
 <http://turner.faculty.swau.edu/webstuff/htmlsymbols.html>`_.
@@ -152,13 +154,13 @@ Prebuild.py converts a markdown file with the following content:
    ## Heading 2
    This is some more text. This is an *emphasized* word.
 
-   ```eval_rst
+   <!--table-->
    | Tables        | Are           | Cool  |
    | ------------- |-------------- | ----- |
    | col 3 is      | nifty         | $1600 |
    | col 2 is      | awesome       |   $12 |
    | zebra stripes | are neat      |    $1 |
-   ```
+   <!--endtable-->
 
    More paragraphs, tables, and other markdown text.
 

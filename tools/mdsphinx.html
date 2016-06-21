@@ -28,11 +28,13 @@
   
 
   
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
 
   
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
         <link rel="up" title="Tools" href="index.html"/>
-        <link rel="next" title="Prerequisites" href="nexus-deletion.html"/>
+        <link rel="next" title="Content deletion from Nexus" href="nexus-deletion.html"/>
         <link rel="prev" title="Importing and exporting labels" href="manage-labels-readme.html"/> 
 
   
@@ -100,9 +102,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#example-input-and-output">Example input and output</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html#listing-content">Listing content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html#deleting-content">Deleting content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Content deletion from Nexus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="publishing.html">Development and production branches on developer.rackspace.com</a></li>
 </ul>
 </li>
@@ -158,7 +158,8 @@
 rendering when using Sphinx and the recommonmark extension.</p>
 <ol class="arabic simple">
 <li>Prebuild.py makes temporary copies of markdown files and converts markdown
-tables fenced by <code class="docutils literal"><span class="pre">eval_rst</span></code> code blocks to RST tables.</li>
+tables fenced by <code class="docutils literal"><span class="pre">&lt;!--table--&gt;</span> <span class="pre">&lt;!--endtable--&gt;</span></code> comment lines to RST
+tables fenced by <code class="docutils literal"><span class="pre">eval_rst</span></code> code blocks.</li>
 <li>Sphinx builds HTML using the markdown files with the converted
 rst tables.</li>
 <li>Postbuild.py returns the markdown files to their original state and removes
@@ -166,15 +167,16 @@ the temporary files created by prebuild.py.</li>
 </ol>
 <div class="section" id="formatting-markdown-tables">
 <h2>Formatting markdown tables<a class="headerlink" href="#formatting-markdown-tables" title="Permalink to this headline">#</a></h2>
-<p>To label a markdown table for conversion, place it in a code block designated
-as <code class="docutils literal"><span class="pre">eval_rst</span></code>. For example:</p>
-<div class="code ini highlight-default"><div class="highlight"><pre><span></span>```eval_rst
+<p>To label a markdown table for conversion, add <code class="docutils literal"><span class="pre">&lt;!--table--&gt;</span></code> on the line
+prior to the table and <code class="docutils literal"><span class="pre">&lt;!--endtable--&gt;</span></code> on the line after the table.
+For example:</p>
+<div class="code ini highlight-default"><div class="highlight"><pre><span></span>&lt;!--table--&gt;
 | Tables        | Are           | Cool  |
 | ------------- |-------------- | ----- |
 | col 3 is      | nifty         | $1600 |
 | col 2 is      | awesome       |   $12 |
 | zebra stripes | are neat      |    $1 |
-```
+&lt;!--endtable--&gt;
 </pre></div>
 </div>
 <div class="section" id="limitations">
@@ -194,14 +196,14 @@ to have support added.</p>
 <p><strong>Empty cells</strong></p>
 <p>The conversion process cannot handle empty cells in tables. If you require
 a blank cell, use <code class="docutils literal"><span class="pre">&amp;nbsp;</span></code> in the cell. Example:</p>
-<div class="code ini highlight-default"><div class="highlight"><pre><span></span>```eval_rst
+<div class="code ini highlight-default"><div class="highlight"><pre><span></span>&lt;!--table--&gt;
 Correct name | Notes
 --- | ---
 Apache | This is a good name.
 Bash shell | &amp;nbsp;
 CentOS | &amp;nbsp;
 Git   | We all love Git.
-```
+&lt;!--endtable--&gt;
 </pre></div>
 </div>
 <p>See <a class="reference external" href="http://turner.faculty.swau.edu/webstuff/htmlsymbols.html">HTML named special symbols</a>.</p>
@@ -369,7 +371,7 @@ especially when converting complex tables.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mdstring</strong> (<em>str</em>) -- markdown string with <code class="docutils literal"><span class="pre">eval_rst</span></code> fenced RST grid tables</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mdstring</strong> (<em>str</em>) -- markdown string with RST grid tables</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">markdown string with RST grid tables converted to RST list-tables</td>
 </tr>
@@ -387,7 +389,8 @@ especially when converting complex tables.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mdstring</strong> (<em>str</em>) -- markdown string with <code class="docutils literal"><span class="pre">eval_rst</span></code> fenced tables</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mdstring</strong> (<em>str</em>) -- markdown string with <code class="docutils literal"><span class="pre">&lt;!--table--&gt;</span> <span class="pre">&lt;!--endtable--&gt;</span></code>
+fenced tables</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">markdown string with MD table converted to RST grid table</td>
 </tr>
@@ -570,13 +573,13 @@ This is some text
 ## Heading 2
 This is some more text. This is an *emphasized* word.
 
-```eval_rst
+&lt;!--table--&gt;
 | Tables        | Are           | Cool  |
 | ------------- |-------------- | ----- |
 | col 3 is      | nifty         | $1600 |
 | col 2 is      | awesome       |   $12 |
 | zebra stripes | are neat      |    $1 |
-```
+&lt;!--endtable--&gt;
 
 More paragraphs, tables, and other markdown text.
 </pre></div>
@@ -621,7 +624,7 @@ More paragraphs, tables, and other markdown text.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="nexus-deletion.html" class="btn btn-neutral float-right" title="Prerequisites" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="nexus-deletion.html" class="btn btn-neutral float-right" title="Content deletion from Nexus" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="manage-labels-readme.html" class="btn btn-neutral" title="Importing and exporting labels" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
