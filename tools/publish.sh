@@ -46,5 +46,5 @@ git push -f upstream gh-pages
 git checkout master
 cd $STARTDIR
 echo
-tput setaf 2; echo "Docs published to http://rackerlabs.github.io/docs-rackspace/."
-tput sgr0
+tput -T $TERM setaf 2; echo "Docs published to http://rackerlabs.github.io/docs-rackspace/."
+tput -T $TERM sgr0
