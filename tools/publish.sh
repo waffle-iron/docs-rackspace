@@ -46,5 +46,10 @@ git push -f upstream gh-pages
 git checkout master
 cd $STARTDIR
 echo
-tput -T $TERM setaf 2; echo "Docs published to http://rackerlabs.github.io/docs-rackspace/."
-tput -T $TERM sgr0
+if test `tput -T $TERM colors` -lt 256; then
+    echo "Docs published to http://rackerlabs.github.io/docs-rackspace/."
+else
+    tput -T $TERM setaf 2
+    echo "Docs published to http://rackerlabs.github.io/docs-rackspace/."
+    tput -T $TERM sgr0
+fi
