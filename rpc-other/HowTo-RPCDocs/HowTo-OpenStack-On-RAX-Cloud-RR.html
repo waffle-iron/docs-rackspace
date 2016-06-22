@@ -1,0 +1,708 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How-To: OpenStack on RAX Cloud Servers &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/>
+        <link rel="up" title="RPC team documentation" href="../index.html"/>
+        <link rel="next" title="Publishing to the Knowledge Center" href="HowTo-Publish-KnowledgeCenter.html"/>
+        <link rel="prev" title="How-To: OpenStack on RAX Cloud Servers" href="HowTo-OpenStack-On-RAX-Cloud.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RPC team documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-Cherrypick.html">Picking commits from staging to publishing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-Fedora.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How-To: OpenStack on RAX Cloud Servers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-architecture">Network architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prepare-cloud-environment">Prepare cloud environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#networks">Networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-servers">Launch servers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jump-box-node-robb-dev1">Jump box node (robb-dev1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openstack-controller-node-robb-controller1">OpenStack controller node (robb-controller1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openstack-network-node-robb-net1">OpenStack network node (robb-net1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openstack-compute-node-robb-comp1">OpenStack compute node (robb-comp1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-and-configure-openstack-services">Install and configure OpenStack services</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-Publish-KnowledgeCenter.html">Publishing to the Knowledge Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMajor.html">RPCDocs: Major releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMinor.html">RPCDocs: Minor and revision releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs-With-A-Fork.html">How to do RPC Docs with a fork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPC-RAX-Cloud-Networks.html">How-To: RPC Networks on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RPC-DocBot.html">RPC and DocBot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RPCDocs-Overview.html">RPC writing and publishing process overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RST-conversion.html">RST conversion instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RPC-Spheres-Of-Support.html">RPC Spheres of Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpcdocs-interaction.html">RPC Docs + the rest of RPC = better docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RaxPrivCloudFAQs.html">Rackspace Private Cloud: FAQs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpc-v10-whitepapers/index.html">Whitepapers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">RPC team documentation</a> &raquo;</li>
+      
+    <li>How-To: OpenStack on RAX Cloud Servers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/rpc-other/HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud-RR.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-openstack-on-rax-cloud-servers">
+<h1>How-To: OpenStack on RAX Cloud Servers<a class="headerlink" href="#how-to-openstack-on-rax-cloud-servers" title="Permalink to this headline">#</a></h1>
+<p>(Based on Matt's doc)</p>
+<p>This how-to provides instructions for building the prerequisite
+infrastructure for installing multi-host OpenStack environments on RAX
+cloud servers using the official installation guide.</p>
+<p>The infrastructure contains three OpenStack nodes operating on private
+(tenant) networks managed by a network services (jump/firewall) node.
+The latter protects the OpenStack nodes from direct internet access and
+provides internet connectivity to instances in the environment.</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>Prepare RAX cloud environment.</li>
+<li>Build and configure network services (jump/firewall) node.</li>
+<li>Build and configure OpenStack nodes.</li>
+<li>Install and configure OpenStack services with minor modifications to
+the official installation guide.</li>
+</ul>
+</div>
+<div class="section" id="network-architecture">
+<h2>Network architecture<a class="headerlink" href="#network-architecture" title="Permalink to this headline">#</a></h2>
+<div class="figure">
+<img alt="Network architecture" src="../../_images/openstack-on-rax-cloud-arch.png" />
+</div>
+</div>
+<div class="section" id="prepare-cloud-environment">
+<h2>Prepare cloud environment<a class="headerlink" href="#prepare-cloud-environment" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>Upload a public key.</li>
+</ul>
+</div>
+<div class="section" id="networks">
+<h2>Networks<a class="headerlink" href="#networks" title="Permalink to this headline">#</a></h2>
+<p>Create the following networks:</p>
+<p>Note: The CIDR you assign does not have to match the CIDR initially
+assigned to a network when the network is created in the RAX cloud
+control panel. You can specify any valid subnet. Multiple networks can
+use the same subnet without collision.</p>
+<ol class="arabic simple">
+<li>robb-test-net</li>
+</ol>
+<ul class="simple">
+<li>192.168.20.0/24</li>
+</ul>
+<ol class="arabic simple" start="2">
+<li>robb-vmnet</li>
+</ol>
+<ul class="simple">
+<li>192.168.27.0/24</li>
+</ul>
+<ol class="arabic simple" start="3">
+<li>robb-ext1</li>
+</ol>
+<ul class="simple">
+<li>192.168.33.0/24</li>
+</ul>
+</div>
+<div class="section" id="launch-servers">
+<h2>Launch servers<a class="headerlink" href="#launch-servers" title="Permalink to this headline">#</a></h2>
+<div class="section" id="jump-box-node-robb-dev1">
+<h3>Jump box node (robb-dev1)<a class="headerlink" href="#jump-box-node-robb-dev1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li>Launch node.</li>
+</ol>
+<div class="line-block">
+<div class="line">OS: Ubuntu 14.04 (Trusty Tahr) PVHVM</div>
+<div class="line">&nbsp;Flavor: 1 GB Performance 1</div>
+<div class="line">&nbsp;Networks: PublicNet, ServiceNet, robb-test-net, robb-ext1</div>
+</div>
+<p>Note: Adding multiple tenant networks simultaneously yields inconsistent
+network interface device names. This guide adds one tenant network at a
+time as it becomes necessary. Also, changing tenant networks after
+configuration erases changes made in this guide.</p>
+<ol class="arabic simple">
+<li>Access the node from the internet using the IP address assigned by
+RAX.</li>
+<li>Update node.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">update</span> <span class="pre">&amp;&amp;</span> <span class="pre">apt-get</span> <span class="pre">dist-upgrade</span></code></p>
+<ol class="arabic simple">
+<li>Install additional packages.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">ntp</span> <span class="pre">shorewall</span></code></p>
+<ol class="arabic">
+<li><p class="first">Reboot node.</p>
+</li>
+<li><p class="first">Add the <em>robb-test-net</em> network to node.</p>
+</li>
+<li><p class="first">Add the <em>robb-ext1</em> network to node.</p>
+</li>
+<li><p class="first">Configure addtional network interfaces.</p>
+</li>
+<li><p class="first">Edit the /etc/network/interfaces file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Label robb-test-net</span>
+<span class="n">auto</span> <span class="n">eth3</span>
+<span class="n">iface</span> <span class="n">eth2</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">20.1</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="c1"># Label robb-ext1</span>
+<span class="n">auto</span> <span class="n">eth4</span>
+<span class="n">iface</span> <span class="n">eth3</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">33.1</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="c1"># Label vxlan1</span>
+<span class="n">auto</span> <span class="n">vxlan1</span>
+<span class="n">iface</span> <span class="n">vxlan1</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">pre</span><span class="o">-</span><span class="n">up</span> <span class="n">ip</span> <span class="n">link</span> <span class="n">add</span> <span class="n">vxlan1</span> <span class="nb">type</span> <span class="n">vxlan</span> <span class="nb">id</span> <span class="mi">1</span> <span class="n">group</span> <span class="mf">239.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">dev</span> <span class="n">eth3</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">28.1</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">post</span><span class="o">-</span><span class="n">down</span> <span class="n">ip</span> <span class="n">link</span> <span class="k">del</span> <span class="n">vxlan1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Restart the network interfaces.</p>
+<div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">ifdown</span> <span class="pre">eth3</span> <span class="pre">&amp;&amp;</span> <span class="pre">ifup</span> <span class="pre">eth3</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">ifdown</span> <span class="pre">eth4</span> <span class="pre">&amp;&amp;</span> <span class="pre">ifup</span> <span class="pre">eth4</span></code></div>
+</div>
+</li>
+<li><p class="first">Bring up the vxlan1 interface.</p>
+<p><code class="docutils literal"><span class="pre">ifup</span> <span class="pre">vxlan1</span></code></p>
+</li>
+<li><p class="first">Configure the firewall service.</p>
+</li>
+<li><p class="first">Edit the /etc/shorewall/shorewall.conf file.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>IP_FORWARDING=Yes</p>
+</div></blockquote>
+</li>
+<li><p class="first">Edit the /etc/shorewall/interfaces file.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>ext eth0 - routefilter,tcpflags
+snet eth1
+rtnet eth3
+rext1 eth4
+rvxln vxlan1</p>
+</div></blockquote>
+</li>
+<li><p class="first">Edit the /etc/shorewall/masq file.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>eth0 192.168.20.0/24
+eth0 192.168.28.0/24
+eth0 192.168.33.0/24</p>
+</div></blockquote>
+</li>
+<li><p class="first">Edit the /etc/shorewall/policy file.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>$FW all ACCEPT
+ext all REJECT
+snet all ACCEPT
+rtnet all ACCEPT
+rext1 all ACCEPT
+rvxln all ACCEPT</p>
+</div></blockquote>
+</li>
+<li><p class="first">Edit the /etc/shorewall/rules file.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>Ping/ACCEPT ext $FW
+SMTP/ACCEPT ext $FW
+ACCEPT ext $FW tcp 32
+SSH/ACCEPT ext $FW
+HTTPS/ACCEPT ext $FW
+ACCEPT ext $FW udp 60001:61000
+DNAT ext rtnet:192.168.20.11 tcp www
+DNAT ext rtnet:192.168.20.11 tcp 6080</p>
+</div></blockquote>
+<p>Note: Uncomment the DNAT rules and restart Shorewall as necessary to
+enable remote access to the dashboard and instance consoles in the
+OpenStack environment.</p>
+</li>
+<li><p class="first">Edit the /etc/shorewall/zones file.</p>
+<p>Note: Shorewall zone names are limited to 5 characters because
+stupid.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>fw firewall
+ext ipv4
+snet ipv4
+rtnet ipv4
+rext1 ipv4
+rvxln ipv4</p>
+</div></blockquote>
+</li>
+<li><p class="first">Edit the /etc/default/shorewall file.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>startup=1</p>
+</div></blockquote>
+</li>
+<li><p class="first">Check the shorewall configuration.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p># shorewall check</p>
+</div></blockquote>
+</li>
+<li><p class="first">Start the firewall service.</p>
+<p><code class="docutils literal"><span class="pre">service</span> <span class="pre">shorewall</span> <span class="pre">start</span></code></p>
+</li>
+</ol>
+</div>
+<div class="section" id="openstack-controller-node-robb-controller1">
+<h3>OpenStack controller node (robb-controller1)<a class="headerlink" href="#openstack-controller-node-robb-controller1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li>Launch node</li>
+</ol>
+<div class="line-block">
+<div class="line">OS: Ubuntu 14.04 (Trusty Tahr) PVHVM</div>
+<div class="line">&nbsp;Flavor: 4 GB Performance 1</div>
+<div class="line">&nbsp;Networks: robb-test-net</div>
+</div>
+<ol class="arabic simple">
+<li>Access the node from the jump box node using the IP address assigned
+by RAX.</li>
+</ol>
+<p>Note: The node cannot access the internet without additional
+configuration.</p>
+<ol class="arabic">
+<li><p class="first">Configure network interfaces.</p>
+</li>
+<li><p class="first">Edit the /etc/network/interfaces file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Label robb-test-net</span>
+<span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">20.11</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">gateway</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">20.1</span>
+    <span class="n">dns</span><span class="o">-</span><span class="n">nameservers</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.241</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.240</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/hosts file.</p>
+</li>
+</ol>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p># robb-controller
+192.168.20.11   robb-controller</p>
+<p># robb-net1
+192.168.20.21   robb-net1</p>
+<p># robb-comp1
+192.168.20.31   robb-comp1</p>
+</div></blockquote>
+<p>Note: Comment out or remove any existing lines containing
+<em>robb-controller</em>.</p>
+<ol class="arabic simple" start="4">
+<li>Reboot node.</li>
+<li>Access the node from the network services node using the new IP
+address on the <em>robb-test-net</em> network.</li>
+<li>Test network connectivity to the internet.</li>
+<li>Update node.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">update</span> <span class="pre">&amp;&amp;</span> <span class="pre">apt-get</span> <span class="pre">dist-upgrade</span></code></p>
+<ol class="arabic simple" start="8">
+<li>Reboot node.</li>
+</ol>
+</div>
+<div class="section" id="openstack-network-node-robb-net1">
+<h3>OpenStack network node (robb-net1)<a class="headerlink" href="#openstack-network-node-robb-net1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li>Launch node.</li>
+</ol>
+<div class="line-block">
+<div class="line">OS: Ubuntu 14.04 (Trusty Tahr) PVHVM</div>
+<div class="line">&nbsp;Flavor: 1 GB Performance 1</div>
+<div class="line">&nbsp;Networks: robb-test-net</div>
+</div>
+<ol class="arabic simple">
+<li>Access the node from the network services node using the IP address
+assigned by RAX.</li>
+</ol>
+<p>Note: The node cannot access the internet without additional
+configuration.</p>
+<ol class="arabic">
+<li><p class="first">Add the <em>robb-vmnet</em> network to node.</p>
+</li>
+<li><p class="first">Add the <em>robb-ext1</em> network to node.</p>
+</li>
+<li><p class="first">Configure network interfaces.</p>
+</li>
+<li><p class="first">Edit the /etc/network/interfaces file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Label robb-test-net</span>
+<span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">20.21</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">gateway</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">20.1</span>
+    <span class="n">dns</span><span class="o">-</span><span class="n">nameservers</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.241</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.240</span>
+
+<span class="c1"># Label robb-vmnet</span>
+<span class="n">auto</span> <span class="n">eth1</span>
+<span class="n">iface</span> <span class="n">eth1</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">27.21</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="c1"># Label robb-ext1</span>
+<span class="n">auto</span> <span class="n">eth2</span>
+<span class="n">iface</span> <span class="n">eth2</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">33.21</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+
+<span class="c1"># Label vxlan1</span>
+<span class="n">auto</span> <span class="n">vxlan1</span>
+<span class="n">iface</span> <span class="n">vxlan1</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">pre</span><span class="o">-</span><span class="n">up</span> <span class="n">ip</span> <span class="n">link</span> <span class="n">add</span> <span class="n">vxlan1</span> <span class="nb">type</span> <span class="n">vxlan</span> <span class="nb">id</span> <span class="mi">1</span> <span class="n">group</span> <span class="mf">239.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">dev</span> <span class="n">eth2</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">28.21</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">post</span><span class="o">-</span><span class="n">down</span> <span class="n">ip</span> <span class="n">link</span> <span class="k">del</span> <span class="n">vxlan1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/hosts file.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p># robb-controller
+192.168.20.11   robb-controller</p>
+<p># robb-net1
+192.168.20.21   robb-net1</p>
+<p># robb-comp1
+192.168.20.31   robb-comp1</p>
+</div></blockquote>
+<p>Note: Comment out or remove any existing lines containing
+<em>robb-net1</em>.</p>
+</li>
+<li><p class="first">Reboot node.</p>
+</li>
+<li><p class="first">Access the node from the network services node using the new IP
+address on the <em>robb-test-net</em> network.</p>
+</li>
+<li><p class="first">Test network connectivity to the internet.</p>
+</li>
+<li><p class="first">Update node.</p>
+<p><code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">update</span> <span class="pre">&amp;&amp;</span> <span class="pre">apt-get</span> <span class="pre">dist-upgrade</span></code></p>
+</li>
+<li><p class="first">Reboot node.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="openstack-compute-node-robb-comp1">
+<h3>OpenStack compute node (robb-comp1)<a class="headerlink" href="#openstack-compute-node-robb-comp1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li>Launch the node.</li>
+</ol>
+<div class="line-block">
+<div class="line">OS: Ubuntu 14.04 (Trusty Tahr) PVHVM</div>
+<div class="line">&nbsp;Flavor:</div>
+<div class="line">&nbsp;* 2 GB Performance 1 (supports several CirrOS instances) * 4 or 8
+GB Performance 1 (supports a couple of Ubuntu/Fedora instances)</div>
+</div>
+<p>Networks: robb-test-net</p>
+<ol class="arabic simple">
+<li>Access the node from the network services node using the IP address
+assigned by RAX.</li>
+</ol>
+<p>Note: The node cannot access the internet without additional
+configuration.</p>
+<ol class="arabic">
+<li><p class="first">Add the <em>robb-vmnet</em> network to node.</p>
+</li>
+<li><p class="first">Configure network interfaces.</p>
+</li>
+<li><p class="first">Edit the /etc/network/interfaces file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Label robb-test-net</span>
+<span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">20.31</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+    <span class="n">gateway</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">20.1</span>
+    <span class="n">dns</span><span class="o">-</span><span class="n">nameservers</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.241</span> <span class="mf">72.3</span><span class="o">.</span><span class="mf">128.240</span>
+
+<span class="c1"># Label robb-vmnet</span>
+<span class="n">auto</span> <span class="n">eth1</span>
+<span class="n">iface</span> <span class="n">eth1</span> <span class="n">inet</span> <span class="n">static</span>
+    <span class="n">address</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">27.31</span>
+    <span class="n">netmask</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the /etc/hosts file.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># robb-controller</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="mf">20.11</span>   <span class="n">robb</span><span class="o">-</span><span class="n">controller</span>
+
+<span class="c1"># robb-net1</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="mf">20.21</span>   <span class="n">robb</span><span class="o">-</span><span class="n">net1</span>
+
+<span class="c1"># robb-comp1</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="mf">20.31</span>   <span class="n">robb</span><span class="o">-</span><span class="n">comp1</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Note: Comment out or remove any existing lines containing <em>robb-comp1</em>.</p>
+<ol class="arabic simple" start="5">
+<li>Reboot node.</li>
+<li>Access the node from the network services node using the new IP
+address on the <em>robb-test-net</em> network.</li>
+<li>Test network connectivity to the internet.</li>
+<li>Update node.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">update</span> <span class="pre">&amp;&amp;</span> <span class="pre">apt-get</span> <span class="pre">dist-upgrade</span></code></p>
+<ol class="arabic simple" start="9">
+<li>Reboot node.</li>
+</ol>
+</div>
+<div class="section" id="install-and-configure-openstack-services">
+<h3>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li>Use the <a class="reference external" href="http://docs.openstack.org/juno/install-guide/install/apt/content/">OpenStack Installation Guide</a>
+with the following changes:</li>
+<li>Configuring the basic environment on all nodes:</li>
+</ol>
+<ul class="simple">
+<li>Skip the network configuration sections.</li>
+<li>Use 192.168.20.1 (jump box node) as the NTP server.</li>
+</ul>
+<ol class="arabic simple" start="3">
+<li>Configuring the Compute service on the compute node:</li>
+</ol>
+<ul class="simple">
+<li>Use <em>qemu</em> instead of <em>kvm</em> virtualization.</li>
+</ul>
+<ol class="arabic simple" start="4">
+<li>Configuring the Networking service on the network node:</li>
+</ol>
+<ul class="simple">
+<li>Add the <em>vxlan1</em> interface as a port on the <em>br-ex</em> bridge.</li>
+</ul>
+<ol class="arabic simple" start="5">
+<li>Creating initial networks.</li>
+</ol>
+<ul>
+<li><p class="first">Use the following command for the subnet on the external network:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">neutron</span> <span class="n">subnet</span><span class="o">-</span><span class="n">create</span> <span class="n">ext</span><span class="o">-</span><span class="n">net</span> <span class="o">--</span><span class="n">name</span> <span class="n">ext</span><span class="o">-</span><span class="n">subnet</span> \
+<span class="o">--</span><span class="n">allocation</span><span class="o">-</span><span class="n">pool</span> <span class="n">start</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">28.101</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">28.200</span> \
+<span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">dhcp</span> <span class="o">--</span><span class="n">gateway</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">28.1</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">28.0</span><span class="o">/</span><span class="mi">24</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Note: After performing the initial tenant network creation procedure,
+try pinging 192.168.28.101 from the network services node.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="HowTo-Publish-KnowledgeCenter.html" class="btn btn-neutral float-right" title="Publishing to the Knowledge Center" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HowTo-OpenStack-On-RAX-Cloud.html" class="btn btn-neutral" title="How-To: OpenStack on RAX Cloud Servers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

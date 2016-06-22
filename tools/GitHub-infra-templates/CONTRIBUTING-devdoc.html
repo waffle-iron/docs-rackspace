@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contributor Guidelines &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/>
+        <link rel="up" title="GitHub Infra Templates" href="index.html"/>
+        <link rel="next" title="GitHub Workflow :octocat:" href="GITHUBING-devdoc.html"/>
+        <link rel="prev" title="Rackspace Cloud Identity API documentation" href="README-devdoc.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rpc-other/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../add-github-links-to-docs.html">Adding support for contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-from-source.html">Building from Source</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">GitHub Infra Templates</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="CONTRIBUTING-carina.html">Carina by Rackspace - Guidelines for content contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GITHUBING-carina.html">GitHub Workflow :octocat:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README-devdoc.html">Rackspace Cloud Identity API documentation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Contributor Guidelines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#edit-or-add-content">Edit or add content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preview-your-changes">Preview your changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GITHUBING-devdoc.html">GitHub Workflow :octocat:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README-howto.html">Rackspace How-To Content Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CONTRIBUTING-howto.html">Contributing to the Rackspace How-To content repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README-carina.html">Carina by Rackspace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manage-labels-readme.html">Importing and exporting labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nexus-deletion.html">Content deletion from Nexus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing.html">Development and production branches on developer.rackspace.com</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Tools</a> &raquo;</li>
+      
+          <li><a href="index.html">GitHub Infra Templates</a> &raquo;</li>
+      
+    <li>Contributor Guidelines</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/tools/GitHub-infra-templates/CONTRIBUTING-devdoc.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="contributor-guidelines">
+<span id="contributor-guidelines"></span><h1>Contributor Guidelines<a class="headerlink" href="#contributor-guidelines" title="Permalink to this headline">#</a></h1>
+<p>These guidelines provide the general process for maintaining source code that builds the
+Rackspace Cloud Identity developer documentation.</p>
+<!-- Provide as little or as much information about architecture as needed to help
+contributors figure out which file to update.--><p>This project is developed and built using the
+<a class="reference external" href="http://sphinx-doc.org/">Python Sphinx documentation generator</a>. Content is
+written in <a class="reference external" href="http://sphinx-doc.org/rest.html">reStructuredText</a>, the markup syntax and
+parser component of <a class="reference external" href="http://docutils.sourceforge.net/index.html">Python Docutils</a>.</p>
+<p>Source files for the Sphinx documentation project are in the <code class="docutils literal"><span class="pre">api-docs</span></code> directory.
+Here are key files that define project and content architecture:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Content</th>
+<th class="head">File</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Index page for the main content structure</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/index.rst">index.rst</a></td>
+</tr>
+<tr class="row-odd"><td>About the API index</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/overview/index.rst">overview/index.rst</a></td>
+</tr>
+<tr class="row-even"><td>Quickstart Guide</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/quickstart-guide.rst">quickstart-guide.rst</a></td>
+</tr>
+<tr class="row-odd"><td>Developer Guide introduction</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/developer-guide.rst">developer-guide.rst</a></td>
+</tr>
+<tr class="row-even"><td>Concepts section</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/concepts.rst">concepts.rst</a></td>
+</tr>
+<tr class="row-odd"><td>General API information index</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/general-api-info/index.rst">general-api-info/index.rst</a></td>
+</tr>
+<tr class="row-even"><td>Authentication section index</td>
+<td>[<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/authentication-info">authentication-info/index.rst</a></td>
+</tr>
+<tr class="row-odd"><td>API Reference introduction</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-reference.rst">api-reference.rst</a></td>
+</tr>
+<tr class="row-even"><td>API Reference index</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-operations/index.rst">api-operations/index.rst</a></td>
+</tr>
+<tr class="row-odd"><td>API operations methods, including code samples</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/api-operations/methods">api-operations/methods</a></td>
+</tr>
+<tr class="row-even"><td>Sphinx documentation configuration file</td>
+<td><a class="reference external" href="https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/conf.py">conf.py</a> (Typically, this file does not require changes.)</td>
+</tr>
+<tr class="row-odd"><td>Linux and OS X build script</td>
+<td><code class="docutils literal"><span class="pre">Makefile</span></code></td>
+</tr>
+<tr class="row-even"><td>Windows build script</td>
+<td><code class="docutils literal"><span class="pre">make.bat</span></code></td>
+</tr>
+<tr class="row-odd"><td>Requirements file to support local builds</td>
+<td><code class="docutils literal"><span class="pre">requirements.txt</span></code></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>Update the source files by using the GitHub editor or any plain text editor.</li>
+<li>Format source files with
+<a class="reference external" href="http://www.sphinx-doc.org/en/stable/rest.html">reStructuredText syntax</a>.</li>
+<li>For quick syntax checking, try the
+<a class="reference external" href="http://rst.ninjs.org/">Online reStructuredText editor</a>.</li>
+</ul>
+<div class="section" id="edit-or-add-content">
+<span id="edit-or-add-content"></span><h2>Edit or add content<a class="headerlink" href="#edit-or-add-content" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>Follow the <a class="reference external" href="tools/GitHub-infra-templates/GITHUBING.md">GitHub workflow</a> for this repository to work
+with the source files.</li>
+<li>Update the source files by using the GitHub editor or any plain text editor.</li>
+<li>Format source files with
+<a class="reference external" href="http://www.sphinx-doc.org/en/stable/rest.html">reStructuredText syntax</a>.</li>
+<li>For quick syntax checking, try the
+<a class="reference external" href="http://rst.ninjs.org/">Online reStructuredText editor</a>.</li>
+</ul>
+<p><strong>Optional:</strong> Preview your changes before submitting a
+pull request by <a class="reference external" href="#building-from-source">building from source</a>.</p>
+<div class="section" id="follow-general-style-guidelines">
+<span id="follow-general-style-guidelines"></span><h3>Follow general style guidelines<a class="headerlink" href="#follow-general-style-guidelines" title="Permalink to this headline">#</a></h3>
+<p>When you add or update content, use the following general style guidelines, which are
+described in detail in <a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/tree/master/style-guide">Style guidelines for technical content</a>:</p>
+<ul class="simple">
+<li>Use sentence-style capitalization for titles and headings</li>
+<li>Use consistent text formatting</li>
+<li>Write clear and consistent code examples</li>
+<li>Use active voice</li>
+<li>Use present tense</li>
+<li>Write to the user by using second person and imperative mood</li>
+<li>Write clear and consistent step text</li>
+<li>Clarify pronouns such as <em>it</em>, <em>this</em>, <em>there</em>, and <em>that</em></li>
+<li>Clarify gerunds and participles</li>
+<li>Use consistent terminology</li>
+</ul>
+<!-- Adding build from source guidelines until we can provide a link to automated gh-pages
+output, or to the staging URL that Ash is working on.
+--></div>
+<div class="section" id="merging-content">
+<span id="merging-content"></span><h3>Merging content<a class="headerlink" href="#merging-content" title="Permalink to this headline">#</a></h3>
+<p>All pull requests must be reviewed before merging. For minor updates and corrections,
+get a peer review to ensure content is error-free and doesn't introduce other issues.
+For more complex changes or additions, the content requires both technical and editorial
+review before it can be merged.</p>
+<p><strong>Technical review</strong></p>
+<p><em>Quality team to add info here.</em></p>
+<p><strong>Editorial review</strong></p>
+<p><em>Quality team to add info here.</em></p>
+</div>
+</div>
+<div class="section" id="preview-your-changes">
+<span id="preview-your-changes"></span><h2>Preview your changes<a class="headerlink" href="#preview-your-changes" title="Permalink to this headline">#</a></h2>
+<p>To preview changes, build the documentation locally using either of the
+following options:</p>
+<ul class="simple">
+<li>Install and run the <a class="reference external" href="http://sphinx-doc.org/">Sphinx documentation generator</a> to build
+the project locally with the <a class="reference external" href="http://docs.readthedocs.org/en/latest/theme.html">Read the Docs theme</a>.</li>
+<li>Install and run the <a class="reference external" href="https://github.com/deconst/client">deconst client</a> to build the
+project with the Rackspace-branded theme. This build creates content that looks the
+same as the content delivered on developer.rackspace.com
+<a class="reference external" href="https://github.com/rackerlabs/docs-migration/blob/master/docs/migration-instructions.rst#building-your-project-with-the-local-deconst-client">instructions for building with the client</a>.</li>
+</ul>
+<div class="section" id="building-with-sphinx">
+<span id="building-with-sphinx"></span><h3>Building with Sphinx<a class="headerlink" href="#building-with-sphinx" title="Permalink to this headline">#</a></h3>
+<p><strong>Prerequisites</strong></p>
+<ul class="simple">
+<li>Python 2.7 or later</li>
+<li>Mac OSx: Install <a class="reference external" href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtualenv</a> or <a class="reference external" href="https://github.com/yyuu/pyenv">pyenv</a></li>
+<li>Windows:
+<a class="reference external" href="http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/">Install Python, pip, and virtualenv with PowerShell</a>).</li>
+</ul>
+<div class="section" id="set-up-your-build-environment">
+<span id="set-up-your-build-environment"></span><h4>Set up your build environment<a class="headerlink" href="#set-up-your-build-environment" title="Permalink to this headline">#</a></h4>
+<ol>
+<li><p class="first">Run the following command to activate your virtual environment:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="nb">bin</span> <span class="n">activate</span> <span class="n">env</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">In the root directory for the project, run the following commands to install Sphinx
+and other required packages:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="build-the-project">
+<span id="build-the-project"></span><h4>Build the project<a class="headerlink" href="#build-the-project" title="Permalink to this headline">#</a></h4>
+<p>To build the documentation project, run the following commands:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">api</span><span class="o">-</span><span class="n">docs</span>
+<span class="n">make</span> <span class="n">clean</span> <span class="n">singlehtml</span>
+</pre></div>
+</div>
+<p>These commands generate a single page html document with a navigation bar on the right.</p>
+</div>
+<div class="section" id="view-the-html-build-results">
+<span id="view-the-html-build-results"></span><h4>View the HTML build results<a class="headerlink" href="#view-the-html-build-results" title="Permalink to this headline">#</a></h4>
+<p>To open the generated project, run the following command:
+<code class="docutils literal"><span class="pre">open</span> <span class="pre">_build/html/index.html</span></code></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="GITHUBING-devdoc.html" class="btn btn-neutral float-right" title="GitHub Workflow :octocat:" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="README-devdoc.html" class="btn btn-neutral" title="Rackspace Cloud Identity API documentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
