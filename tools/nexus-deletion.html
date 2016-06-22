@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Content deletion from Nexus &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="Tools" href="index.html"/>
+        <link rel="next" title="Development and production branches on developer.rackspace.com" href="publishing.html"/>
+        <link rel="prev" title="Markdown to RST table conversion" href="mdsphinx.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc-other/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Adding support for contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Content deletion from Nexus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#listing-content">Listing content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleting-content">Deleting content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="publishing.html">Development and production branches on developer.rackspace.com</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Tools</a> &raquo;</li>
+      
+    <li>Content deletion from Nexus</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tools/nexus-deletion.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="content-deletion-from-nexus">
+<span id="content-deletion-from-nexus"></span><h1>Content deletion from Nexus<a class="headerlink" href="#content-deletion-from-nexus" title="Permalink to this headline">#</a></h1>
+<p>In order to delete content from Nexus, follow these instructions.</p>
+<div class="section" id="prerequisites">
+<span id="prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>You need an API key for the content service.</li>
+<li>You can't be on the VPN (because it blocks port 9000).</li>
+<li>It's helpful to have some kind of JSON formatter for your browser like <a class="reference external" href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa">this
+one for
+Chrome</a>.</li>
+<li>A <a class="reference external" href="http://meyerweb.com/eric/tools/dencoder/">URL encoder</a> of some kind. I
+personally use <a class="reference external" href="https://atom.io/packages/escape-utils">the escape-utils Atom
+package</a>.</li>
+</ul>
+</div>
+<div class="section" id="listing-content">
+<span id="listing-content"></span><h2>Listing content<a class="headerlink" href="#listing-content" title="Permalink to this headline">#</a></h2>
+<p>Before deleting content in production, it's a good idea to make sure you know
+what you're about to delete. You can list the content IDs that are currently
+present in Nexus by visiting the <code class="docutils literal"><span class="pre">/content/</span></code> endpoint:</p>
+<p><a class="reference external" href="https://developer.rackspace.com:9000/content/">https://developer.rackspace.com:9000/content/</a></p>
+<p>List content IDs that begin with a specific base by providing a URL-encoded
+<code class="docutils literal"><span class="pre">?prefix=</span></code> parameter, such as:</p>
+<p><a class="reference external" href="https://developer.rackspace.com:9000/content?prefix=https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud">https://developer.rackspace.com:9000/content?prefix=https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud</a></p>
+<p>Results are returned 100 at a time. You can paginate (awkwardly) by adding
+<code class="docutils literal"><span class="pre">&amp;pageNumber=2</span></code> to the end of the URL. The full documentation is in <a class="reference external" href="https://github.com/deconst/content-service#get-contentprefixid_prefixpagenumbernumperpagesize">the
+content service
+README</a>.</p>
+</div>
+<div class="section" id="deleting-content">
+<span id="deleting-content"></span><h2>Deleting content<a class="headerlink" href="#deleting-content" title="Permalink to this headline">#</a></h2>
+<p>Delete individual envelopes by using <code class="docutils literal"><span class="pre">curl</span></code> to issue a <code class="docutils literal"><span class="pre">DELETE</span></code> request to the
+content service API, using the URL-encoded content ID:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">APIKEY</span><span class="o">=</span><span class="s2">&quot;...&quot;</span>
+
+curl -X DELETE -H <span class="s2">&quot;Authorization: deconst </span><span class="si">${</span><span class="nv">APIKEY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+  https://developer.rackspace.com:9000/content/https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud
+</pre></div>
+</div>
+<p>(You can copy and paste the <code class="docutils literal"><span class="pre">/content/...</span></code> bit from the <code class="docutils literal"><span class="pre">url</span></code> key in the search
+results in your browser.)</p>
+<p>To bulk delete <em>all</em> envelopes beneath a content ID base that you've removed or
+renamed, specify the <code class="docutils literal"><span class="pre">?prefix=true</span></code> parameter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">APIKEY</span><span class="o">=</span><span class="s2">&quot;...&quot;</span>
+
+curl -X DELETE -H <span class="s2">&quot;Authorization: deconst </span><span class="si">${</span><span class="nv">APIKEY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+  https://developer.rackspace.com:9000/content/https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud?prefix<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+<p>The documentation for this endpoint is also in <a class="reference external" href="https://github.com/deconst/content-service#delete-contentidprefixtrue">the content service
+README</a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="publishing.html" class="btn btn-neutral float-right" title="Development and production branches on developer.rackspace.com" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mdsphinx.html" class="btn btn-neutral" title="Markdown to RST table conversion" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

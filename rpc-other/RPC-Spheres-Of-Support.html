@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RPC Spheres of Support &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="RPC team documentation" href="index.html"/>
+        <link rel="next" title="RPC Docs + the rest of RPC = better docs" href="rpcdocs-interaction.html"/>
+        <link rel="prev" title="RST conversion instructions" href="HowTo-RPCDocs/RST-conversion.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">RPC team documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-BestPractices.html">RPCDocs Best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-Cherrypick.html">Picking commits from staging to publishing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud-Fedora.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-OpenStack-On-RAX-Cloud-RR.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-Publish-KnowledgeCenter.html">Publishing to the Knowledge Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-ReleaseMajor.html">RPCDocs: Major releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-ReleaseMinor.html">RPCDocs: Minor and revision releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-RPCDocs-With-A-Fork.html">How to do RPC Docs with a fork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/HowTo-RPC-RAX-Cloud-Networks.html">How-To: RPC Networks on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/RPC-DocBot.html">RPC and DocBot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/RPCDocs-Overview.html">RPC writing and publishing process overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPCDocs/RST-conversion.html">RST conversion instructions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RPC Spheres of Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#operating-systems">Operating systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web-and-database-servers">Web and database servers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intended-capabilities-of-rackspace-private-cloud">Intended capabilities of Rackspace Private Cloud</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#openstack-features">OpenStack Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rpcdocs-interaction.html">RPC Docs + the rest of RPC = better docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaxPrivCloudFAQs.html">Rackspace Private Cloud: FAQs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rpc-v10-whitepapers/index.html">Whitepapers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">RPC team documentation</a> &raquo;</li>
+      
+    <li>RPC Spheres of Support</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/rpc-other/RPC-Spheres-Of-Support.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rpc-spheres-of-support">
+<h1>RPC Spheres of Support<a class="headerlink" href="#rpc-spheres-of-support" title="Permalink to this headline">#</a></h1>
+<p>Rackspace Private Cloud is Rackspace’s architecture for and support of a
+production-ready, scalable, OpenStack based private cloud. To ensure
+fanatical support, Rackspace provides support for specific server
+configurations and OpenStack projects in Rackspace Private Cloud v9 and
+v10.</p>
+<p>This document describes what is and is not supported in Rackspace
+Private Cloud v9 and v10.</p>
+<div class="section" id="operating-systems">
+<h2>Operating systems<a class="headerlink" href="#operating-systems" title="Permalink to this headline">#</a></h2>
+<p>Rackspace Private Cloud v9 and v10 support Ubuntu 14.04 LTS (Trusty
+Tahr) 64-bit server edition, with with Linux kernel version
+3.13.0-34-generic or later. Only OpenStack API clients are supported.</p>
+<p>Rackspace does not support the contents of user VMs and will not manage
+the VMs once they are running. We do not support clients on Windows.</p>
+</div>
+<div class="section" id="web-and-database-servers">
+<h2>Web and database servers<a class="headerlink" href="#web-and-database-servers" title="Permalink to this headline">#</a></h2>
+<p>Rackspace Private Cloud uses Apache for its web server, and MariaDB +
+Galera for its database server. No other web and database servers are
+supported</p>
+</div>
+<div class="section" id="intended-capabilities-of-rackspace-private-cloud">
+<h2>Intended capabilities of Rackspace Private Cloud<a class="headerlink" href="#intended-capabilities-of-rackspace-private-cloud" title="Permalink to this headline">#</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+<th class="head">Rackspace DC</th>
+<th class="head">Customer DC</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Monitoring</strong></td>
+<td>Hardware, Compute/Disk/Memory, OpenStack Services</td>
+<td>Yes</td>
+<td><ul class="first last simple">
+<li>OpenStack services</li>
+<li>CPU/Disk/Memory Utilization only</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>Manual Patching Processes</strong></td>
+<td>Host OS</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td><strong>Multi-Region Support</strong></td>
+<td>Hosting components over multiple data centers</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><strong>OpenStack Endpoint SSL (Ingress)</strong></td>
+<td>Encryption of all API calls</td>
+<td>Yes - With SSL termination at a physical load balancer.</td>
+<td>Yes - With SSL termination at a physical load balancer.</td>
+</tr>
+<tr class="row-even"><td><strong>Encryption of all management traffic</strong></td>
+<td>Encrypting management traffic in addition to the API call encryption</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><strong>Disaster Recovery</strong></td>
+<td>Recovery from Data Center failures or &quot;Acts of God&quot;</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><strong>Deploy from mirror</strong></td>
+<td>Deploy RPC from an off-line local repository</td>
+<td>N/A</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><strong>Customer images</strong></td>
+<td>Reference glance images provided</td>
+<td><ul class="first last simple">
+<li>CentOS 6 and 7</li>
+<li>Ubuntu 12.04 LTS, 14.04 LTS, 14.10</li>
+<li>Windows 2012R2 Datacenter</li>
+<li>Red Hat Enterprise Linux: Contact Red Hat for availability of images
+and licensing</li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li>CentOS 6 and 7</li>
+<li>Ubuntu 12.04 LTS, 14.04 LTS, 14.10</li>
+<li>Red Hat Enterprise Linux: Contact Red Hat for availability of images
+and licensing</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="openstack-features">
+<h3>OpenStack Features<a class="headerlink" href="#openstack-features" title="Permalink to this headline">#</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head"><strong>Installation</strong></th>
+<th class="head">Configuration</th>
+<th class="head">Troubleshooting</th>
+<th class="head">Monitoring</th>
+<th class="head">Patching</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Nova Compute</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td><strong>Glance Image Service</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td><strong>Keystone Identity Service</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td><strong>Swift Object Store</strong></td>
+<td>v10 only</td>
+<td>v10 only</td>
+<td>v10 only</td>
+<td>v10 only</td>
+<td>v10 only</td>
+</tr>
+<tr class="row-even"><td><strong>Cinder Block Storage</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td><strong>Neutron Networking</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td><strong>nova-network</strong></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><strong>Horizon Dashboard</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td><strong>Ceilometer Telemetry</strong></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><strong>Heat Orchestration</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rpcdocs-interaction.html" class="btn btn-neutral float-right" title="RPC Docs + the rest of RPC = better docs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HowTo-RPCDocs/RST-conversion.html" class="btn btn-neutral" title="RST conversion instructions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
