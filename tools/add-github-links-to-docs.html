@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Adding support for contributions &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="Tools" href="index.html"/>
+        <link rel="next" title="Building from Source" href="build-from-source.html"/>
+        <link rel="prev" title="Tools" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc-other/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Adding support for contributions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-github-links">Configuring GitHub links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Content deletion from Nexus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing.html">Development and production branches on developer.rackspace.com</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Tools</a> &raquo;</li>
+      
+    <li>Adding support for contributions</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tools/add-github-links-to-docs.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="adding-support-for-contributions">
+<h1>Adding support for contributions<a class="headerlink" href="#adding-support-for-contributions" title="Permalink to this headline">#</a></h1>
+<p>Add GitHub links to the documentation navigation menu to make it easy for
+readers to propose changes or submit feedback directly to the GitHub repository
+where you manage the project.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These instructions apply to Sphinx documentation projects that are
+deployed by the Nexus publishing platform.</p>
+</div>
+<p>You can add either of the following GitHub links:</p>
+<ul>
+<li><p class="first">An <strong>Edit on GitHub</strong> link opens an editable copy of the source file for the
+current topic so that people can update the source and submit
+a GitHub pull request for review.</p>
+<p>Add support for <em>Edit on GitHub</em> link if your documentation is in a public
+repository and you want active, direct contributions. This type of link works
+best for projects that use a topic-based content architecture where each
+major topic is displayed on its own page.</p>
+</li>
+<li><p class="first">The <strong>Submit an Issue</strong> link opens a GitHub issue page so that people can
+report a bug or provide feedback about the documentation.</p>
+<p>Add support for <em>Submit an issue</em> links if your project is in a private
+repository, or if you prefer people to report issues or problems rather than
+updating content directly.  This link type works best for projects that
+display a large collection of topics in a single view. In these projects,
+the <em>Edit on GitHub</em> link is less useful because it opens the source file
+for the first topic, which can make it difficult for contributors to find
+the content they want to change.</p>
+</li>
+</ul>
+<div class="section" id="configuring-github-links">
+<h2>Configuring GitHub links<a class="headerlink" href="#configuring-github-links" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div>You configure GitHub links for a documentation project by updating the
+<code class="docutils literal"><span class="pre">_deconst.json</span></code> file in the same directory as your documentation project
+configuration file as shown in the following examples.</div></blockquote>
+<p><strong>Example: Configuring an &quot;Edit on GitHub link&quot;</strong></p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;contentIDBase&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/$reponame/$version/&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;githubUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/$reponame/&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;githubBranch&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;preferGithubIssues&quot;</span><span class="p">:</span> <span class="n">false</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <em>$reponame</em> and <em>$version</em> variables represent the values for each project.
+Not all projects have a version in the path.</p>
+<p><strong>Example: Configuring a &quot;Submit an issue&quot; link</strong></p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;contentIDBase&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/$reponame/$version&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;githubUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rackspace/&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;githubBranch&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;preferGithubIssues&quot;</span><span class="p">:</span> <span class="n">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Configuration parameters</strong></p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">contentIDBase</span></code></dt>
+<dd>A unique ID that identifies the content repository to the Nexus
+publishing platform. The value specified must match the one specified
+in the <a class="reference external" href="https://github.com/rackerlabs/nexus-control/tree/master/config/content.d">deconst control repository configuration file</a>
+for the site where content is deployed. This value is required to build
+and deploy the content.</dd>
+<dt><code class="docutils literal"><span class="pre">githubUrl</span></code></dt>
+<dd><p class="first">The base URL for constructing the GitHub links to display in the
+navigation menu. For <em>Edit on GitHub</em> links, specify the URL for the
+documentation source repository. For <em>Submit an issue</em> links, decide
+whether you want issues to be created in the documentation project
+repository or in a different respository. Then, specify the URL for the
+target repository.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If your repository is private, specify the URL for
+another repository. Otherwise, the link target
+returns a 404 for users that cannot access the private repository.</p>
+</div>
+</dd>
+<dt><code class="docutils literal"><span class="pre">githubBranch</span></code></dt>
+<dd>The target branch that determines the branch for submitting changes.
+If this value is not specified, it defaults to master. To override the
+default, set this parameter to the branch name.</dd>
+<dt><code class="docutils literal"><span class="pre">preferGithubIssues</span></code></dt>
+<dd><blockquote class="first">
+<div>Indicates the GitHub link type. Set this value to true
+to include the <em>Submit an issue</em> link. Set it to false to include an
+<em>Edit on GitHub</em> link.&quot;</div></blockquote>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For more information about the _deconst.json configuration parameters,
+see <a class="reference external" href="https://deconst.horse/writing-docs/author/">Authoring Content for Deconst</a> in the Deconst
+documentation.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="build-from-source.html" class="btn btn-neutral float-right" title="Building from Source" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Tools" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

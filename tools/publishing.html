@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Development and production branches on developer.rackspace.com &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="Tools" href="index.html"/>
+        <link rel="prev" title="Content deletion from Nexus" href="nexus-deletion.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc-other/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Adding support for contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Content deletion from Nexus</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Development and production branches on developer.rackspace.com</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configure-pr-previews-for-development-content">Configure PR previews for development content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-strider-production-build">Create Strider production build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-nexus-control-configuration">Update nexus-control configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-docs-quickstart">Update docs-quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reference">Reference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Tools</a> &raquo;</li>
+      
+    <li>Development and production branches on developer.rackspace.com</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tools/publishing.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="development-and-production-branches-on-developer-rackspace-com">
+<h1>Development and production branches on developer.rackspace.com<a class="headerlink" href="#development-and-production-branches-on-developer-rackspace-com" title="Permalink to this headline">#</a></h1>
+<p>This document describes how to preview development branches and enable
+publishing to production on <a class="reference external" href="https://developer.rackspace.com/docs/">developer.rackspace.com</a> for a new branch.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Existing branches are continuously integrated by
+<a class="reference external" href="https://build.developer.rackspace.com/">Strider</a>. Merging a pull request
+to a branch that is currently being published updates
+<a class="reference external" href="https://developer.rackspace.com/docs/">developer.rackspace.com</a>
+automatically.</p>
+</div>
+<div class="section" id="configure-pr-previews-for-development-content">
+<h2>Configure PR previews for development content<a class="headerlink" href="#configure-pr-previews-for-development-content" title="Permalink to this headline">#</a></h2>
+<p>To preview development-only builds on a branch, update the <code class="docutils literal"><span class="pre">staging.horse</span></code>
+site configuration in the nexus-control content and template mapping files.</p>
+<ol class="arabic">
+<li><p class="first">Add the contentIDbase for the branch content to the
+<a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/content.d/staging.horse.json">config/content.d/staging.horse.json</a>
+configuration file. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;/docs/private-cloud/rpc/master/&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rpc/master/&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add the template mapping to <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/routes.d/staging.horse.json">config/routes.d/staging.horse.json</a>
+configuration file. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;^/docs/private-cloud/&quot;</span><span class="p">:</span> <span class="s2">&quot;developer.rackspace.com/user-guide.html&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">After you have updated the configuration files, submit a PR to the branch in
+your project repository and wait for PR to update with the preview link to
+review your content.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="create-strider-production-build">
+<h2>Create Strider production build<a class="headerlink" href="#create-strider-production-build" title="Permalink to this headline">#</a></h2>
+<p>You can automatically generate the Strider production build job by adding the
+source repository URL to the Nexus control configuration. For each repository,
+you can configure builds for one or more branches. By default, Strider builds
+from the master branch. If you want to build from other branches, you must
+specify the branch name.</p>
+<p><strong>Prerequisite</strong>
+The source repository must have the <code class="docutils literal"><span class="pre">rackernexus</span></code> GitHub ID configured as
+an outside collaborator with Admin access.</p>
+<ol class="arabic">
+<li><p class="first">Add the repository to the <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/content-repositories.json">content-repositories.json</a>
+file. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;github&quot;</span><span class="p">,</span> <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;rackerlabs/docs-rpc&quot;</span> <span class="p">},</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">To add builds for a specific branch, add the branch name.</p>
+<p>For example, the following specification shows the configuration to build
+from master, v10, v11, and v12 branches:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;github&quot;</span><span class="p">,</span> <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;rackerlabs/docs-rpc&quot;</span><span class="p">,</span> <span class="s2">&quot;branches&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">master</span><span class="p">,</span> <span class="s2">&quot;v10&quot;</span><span class="p">,</span> <span class="s2">&quot;v11&quot;</span><span class="p">,</span> <span class="s2">&quot;v12&quot;</span><span class="p">]</span> <span class="p">},</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="update-nexus-control-configuration">
+<h2>Update nexus-control configuration<a class="headerlink" href="#update-nexus-control-configuration" title="Permalink to this headline">#</a></h2>
+<p>To build and deploy the content on the branch you added, update the
+nexus-control configuration files for <code class="docutils literal"><span class="pre">developer.rackspace.com</span></code> to
+define the URL for content deployment and to specify the template to apply
+during the build process.</p>
+<ol class="arabic">
+<li><p class="first">Add the branch to the <code class="docutils literal"><span class="pre">developer.rackspace.com</span></code>
+<a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/content.d/developer.rackspace.com.json">content.d/developer.rackspace.com.json</a>
+configuration file. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;/docs/private-cloud/rpc/v12/&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rpc/v12/&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Check the <code class="docutils literal"><span class="pre">developer.rackspace.com</span></code> <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/routes.d/developer.rackspace.com.json">routes.d/developer.rackspace.com.json</a>
+configuration file to confirm that a template has been listed for the
+URL pattern you specified for the branch. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;^/docs/private-cloud/&quot;</span><span class="p">:</span> <span class="s2">&quot;user-guide.html&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">After you have updated the configuration files, submit a PR to the branch in
+your project repository and wait for PR to update with the preview link to
+review your content.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="update-docs-quickstart">
+<h2>Update docs-quickstart<a class="headerlink" href="#update-docs-quickstart" title="Permalink to this headline">#</a></h2>
+<p>Add the new documents to the landing page.</p>
+<ol class="arabic">
+<li><p class="first">Update <a class="reference external" href="https://github.com/rackerlabs/docs-quickstart/blob/master/index.rst">docs-quickstart</a> to
+add the new documents to the appropriate card on the
+<a class="reference external" href="https://developer.rackspace.com/docs/">developer.rackspace.com</a>
+landing page. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">h5</span><span class="o">&gt;</span><span class="n">Rackspace</span> <span class="n">Private</span> <span class="n">Cloud</span> <span class="n">v12</span><span class="o">&lt;/</span><span class="n">h5</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-admin/&quot;</span><span class="o">&gt;</span><span class="n">Administrator</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-faq-external/&quot;</span><span class="o">&gt;</span><span class="n">Technical</span> <span class="n">FAQ</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-ops/&quot;</span><span class="o">&gt;</span><span class="n">Operations</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-releasenotes&quot;</span><span class="o">&gt;</span><span class="n">Release</span> <span class="n">Notes</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-swift&quot;</span><span class="o">&gt;</span><span class="n">Standalone</span> <span class="n">Object</span> <span class="n">Storage</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-upgrade&quot;</span><span class="o">&gt;</span><span class="n">Upgrade</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h2>
+<p>For more information on adding a new content repository, see the
+<a class="reference external" href="https://deconst.horse/writing-docs/author/#adding-a-new-content-repository">deconst documentation</a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="nexus-deletion.html" class="btn btn-neutral" title="Content deletion from Nexus" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

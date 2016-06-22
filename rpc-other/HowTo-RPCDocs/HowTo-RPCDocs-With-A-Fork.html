@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to do RPC Docs with a fork &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../../index.html"/>
+        <link rel="up" title="RPC team documentation" href="../index.html"/>
+        <link rel="next" title="How-To: RPC Networks on RAX Cloud Servers" href="HowTo-RPC-RAX-Cloud-Networks.html"/>
+        <link rel="prev" title="RPCDocs: Minor and revision releases" href="HowTo-ReleaseMinor.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RPC team documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-Cherrypick.html">Picking commits from staging to publishing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-Fedora.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-RR.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-Publish-KnowledgeCenter.html">Publishing to the Knowledge Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMajor.html">RPCDocs: Major releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-ReleaseMinor.html">RPCDocs: Minor and revision releases</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to do RPC Docs with a fork</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#forking-the-repository">Forking the repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#making-sure-you-have-the-latest-upstream">Making sure you have the latest upstream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-branching-and-pull-requests">Editing, branching, and pull requests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-pull-request-against-a-version-branch">Creating a pull request against a version branch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-RPC-RAX-Cloud-Networks.html">How-To: RPC Networks on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RPC-DocBot.html">RPC and DocBot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RPCDocs-Overview.html">RPC writing and publishing process overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RST-conversion.html">RST conversion instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RPC-Spheres-Of-Support.html">RPC Spheres of Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpcdocs-interaction.html">RPC Docs + the rest of RPC = better docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RaxPrivCloudFAQs.html">Rackspace Private Cloud: FAQs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rpc-v10-whitepapers/index.html">Whitepapers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">RPC team documentation</a> &raquo;</li>
+      
+    <li>How to do RPC Docs with a fork</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/rpc-other/HowTo-RPCDocs/HowTo-RPCDocs-With-A-Fork.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-do-rpc-docs-with-a-fork">
+<h1>How to do RPC Docs with a fork<a class="headerlink" href="#how-to-do-rpc-docs-with-a-fork" title="Permalink to this headline">#</a></h1>
+<p>Before you begin, ask Lana or Karin to grant you access to the rpcdocs
+organization on GitHub.</p>
+<p>Working with a fork provides an extra layer of &quot;insulation&quot; between your
+work in progress and the main repo. You can create branches in the main
+repo if you really want to, but note that many extra branches in the
+main repo can create clutter, in the form of branches that go stale and
+need to be pruned.</p>
+<div class="section" id="forking-the-repository">
+<h2>Forking the repository<a class="headerlink" href="#forking-the-repository" title="Permalink to this headline">#</a></h2>
+<p>The procedure here uses https as an example. You can use ssh as well.</p>
+<ol class="arabic">
+<li><p class="first">In your browser, navigate to the <a class="reference external" href="https://github.com/rpcdocs/rpcdocs">rpcdocs repository</a>.</p>
+</li>
+<li><p class="first">Click on <strong>Fork</strong>. When prompted, select your user ID.</p>
+</li>
+<li><p class="first">When the forking is complete, open a Terminal window. Create an
+<code class="docutils literal"><span class="pre">rpcdocs</span></code> folder and switch to that folder.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ mkdir rpcdocs
+$ cd rpcdocs
+</pre></div>
+</div>
+</li>
+</ol>
+<ol class="arabic" start="3">
+<li><p class="first">Clone your fork.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git clone https://github.com/USERNAME/rpcdocs.git
+</pre></div>
+</div>
+</li>
+<li><p class="first">Switch to the new cloned folder.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cd rpcdocs
+</pre></div>
+</div>
+</li>
+<li><p class="first">Set your upstream to <code class="docutils literal"><span class="pre">rpcdocs/rpcdocs</span></code>.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git remote add upstream https://github.com/rpcdocs/rpcdocs.git
+</pre></div>
+</div>
+</li>
+<li><p class="first">Re-point your origin back to your fork.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git remote set-url origin https://github.com/USERNAME/rpcdocs.git
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Repeat these steps whenever you need access to one of the <code class="docutils literal"><span class="pre">rpcdocs</span></code>
+repositories.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>You can also set remotes to point to other users' forks. This
+is useful for more easily reviewing pull requests or collaborating on a
+change. For instance, if you want to create a remote for user <code class="docutils literal"><span class="pre">janedoe</span></code>:</p>
+<div class="code last highlight-default"><div class="highlight"><pre><span></span>$ git remote add janedoe https://github.com/janedoe/rpcdocs.git
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="making-sure-you-have-the-latest-upstream">
+<h2>Making sure you have the latest upstream<a class="headerlink" href="#making-sure-you-have-the-latest-upstream" title="Permalink to this headline">#</a></h2>
+<ol class="arabic">
+<li><p class="first">Navigate to the repo you want to update.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cd REPONAME
+</pre></div>
+</div>
+</li>
+<li><p class="first">Fetch and merge the upstream code.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout master
+$ git fetch upstream
+$ git merge upstream/master
+</pre></div>
+</div>
+</li>
+<li><p class="first">Push the updated upstream code to your GitHub fork.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git push origin master
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you're feeling clever, you can cut and paste all those
+commands into a single line:</p>
+</div>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout master; git fetch upstream; git merge upstream/master; git push origin master
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Do <strong>not</strong> forget the <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code> step. Otherwise your
+fork on GitHub will fall behind the upstream repo, even though your
+local repo is up to date.</p>
+</div>
+<div class="section" id="editing-branching-and-pull-requests">
+<h2>Editing, branching, and pull requests<a class="headerlink" href="#editing-branching-and-pull-requests" title="Permalink to this headline">#</a></h2>
+<p>Before you begin, make sure you've grabbed the latest upstream code.</p>
+<ol class="arabic">
+<li><p class="first">Create a branch off <code class="docutils literal"><span class="pre">master</span></code> in which to do your work. A good
+naming convention for a branch is your initials, something indicating
+what you're fixing, and the date. For example: <code class="docutils literal"><span class="pre">kl-configure-0930</span></code></p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout -b BRANCHNAME
+</pre></div>
+</div>
+</li>
+<li><p class="first">After you've finished your work locally, commit it. If it resolves an
+issue, be sure to include the issue number in the correct format.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git commit
+</pre></div>
+</div>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">Meaningful</span> <span class="n">commit</span> <span class="n">message</span> <span class="n">on</span> <span class="n">first</span> <span class="n">line</span>
+
+<span class="n">Further</span> <span class="n">explanation</span> <span class="k">if</span> <span class="n">needed</span>
+
+<span class="n">Fixes</span> <span class="n">rpcdocs</span><span class="o">/</span><span class="n">issues</span><span class="c1">#NNN</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Push the change to your fork on GitHub.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git push origin BRANCHNAME
+</pre></div>
+</div>
+</li>
+<li><p class="first">In your browser, go to your forked repository.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ open https://github.com/USERNAME/rpcdocs
+</pre></div>
+</div>
+</li>
+<li><p class="first">At the top of the screen you'll see a status bar showing the change
+you've just committed and a green button to compare and create a pull
+request. Verify that the base branch is correct, then follow the
+prompts to create the pull request.</p>
+</li>
+<li><p class="first">Ask someone else to review, test build, and merge your commit.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="creating-a-pull-request-against-a-version-branch">
+<h2>Creating a pull request against a version branch<a class="headerlink" href="#creating-a-pull-request-against-a-version-branch" title="Permalink to this headline">#</a></h2>
+<p>Sometimes you may need to make a change on a particular version branch
+that affects only that version. This is the procedure.</p>
+<ol class="arabic">
+<li><p class="first">Check your git remote setup.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git remote -v
+</pre></div>
+</div>
+<p>You should have something like this:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">USERAME</span><span class="o">/</span><span class="n">rpcdocs</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+<span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">rpcdocs</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="n">upstream</span>   <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">rpcdocs</span><span class="o">/</span><span class="n">rpcdocs</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="n">upstream</span>   <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">rpcdocs</span><span class="o">/</span><span class="n">rpcdocs</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run the following command to grab the latest version staging branch
+(substitute the appropriate number for vN) and update it on your
+rpcdocs fork:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout vN-stage; git fetch upstream; git merge upstream/vN-stage; git push origin vN-stage
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a working branch off the version staging branch:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout –b BRANCHNAME
+</pre></div>
+</div>
+</li>
+<li><p class="first">Make your changes and commit them.</p>
+</li>
+<li><p class="first">Push the changes to your fork:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git push origin BRANCHNAME
+</pre></div>
+</div>
+</li>
+<li><p class="first">Go to the rpcdocs repo page on GitHub and create a pull request. On
+the <strong>Compare changes</strong> page, make sure you have the following
+options selected:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">base</span> <span class="n">fork</span><span class="p">:</span> <span class="n">rpcdocs</span><span class="o">/</span><span class="n">rpcdocs</span>
+<span class="o">*</span> <span class="n">base</span><span class="p">:</span> <span class="n">vN</span><span class="o">-</span><span class="n">stage</span>
+<span class="o">*</span> <span class="n">head</span> <span class="n">fork</span><span class="p">:</span> <span class="n">USERNAME</span><span class="o">/</span><span class="n">rpcdocs</span>
+<span class="o">*</span> <span class="n">compare</span><span class="p">:</span> <span class="n">BRANCHNAME</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Complete the pull request as normal.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="HowTo-RPC-RAX-Cloud-Networks.html" class="btn btn-neutral float-right" title="How-To: RPC Networks on RAX Cloud Servers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HowTo-ReleaseMinor.html" class="btn btn-neutral" title="RPCDocs: Minor and revision releases" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
