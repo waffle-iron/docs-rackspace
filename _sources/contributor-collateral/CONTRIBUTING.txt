@@ -22,6 +22,7 @@ Source files for the Sphinx documentation project are in the ``api-docs`` direct
 Following are the key files that define project and content architecture:
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -68,6 +69,46 @@ Following are the key files that define project and content architecture:
      - ``Makefile``
    * - Windows build script
      - ``make.bat``
+=======
+Content \| File --- \| --- \|Index page for the main content structure\|
+`index.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/index.rst>`_
+\|About the API index\|
+`overview/index.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/overview/index.rst>`_
+\|Getting Started introduction\|
+`getting-started.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/getting-started.rst>`_
+\|Getting Started
+index\|`getting-started/index.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/getting-started/index.rst>`_
+\|Developer Guide
+introduction\|`developer-guide.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/developer-guide.rst>`_
+\|Concepts section\|
+`concepts.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/concepts.rst>`_
+\|General API information
+index\|`general-api-info/index.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/general-api-info/index.rst>`_
+\|API Reference
+introduction\|`api-reference.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/api-reference.rst>`_
+\|API Reference index for storage
+operations\|`storage-api-operations/index.rest <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/storage-api-operations/index.rst>`_
+\|API Reference index for CDN
+operations\|`cdn-api-operations/index.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/cdn-api-operations/index.rst>`_
+\|API operations methods for storage, including code
+samples\|`storage-api-operations/methods <https://github.com/rackerlabs/docs-cloud-files/tree/master/api-docs/storage-api-operations/methods>`_
+\|API operations methods for CDN, including code
+samples\|`cdn-api-operations/methods <https://github.com/rackerlabs/docs-cloud-files/tree/master/api-docs/cdn-api-operations/methods>`_
+\|Special Use Cases
+introduction\|`use-cases-information.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/use-cases-information.rst>`_
+\|Static websites using CDN-enabled
+containers\|`static-websites-using-cdn-enabled-containers/index.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/static-websites-using-cdn-enabled-containers/index.rst>`_
+\|Bulk
+operations\|`bulk-operations/index.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/bulk-operations/index.rst>`_
+\|Public access to your Cloud Files
+account\|`public-access-to-your-cloud-files-account/index.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/public-access-to-your-cloud-files-account/index.rst>`_
+\|Release
+notes\|`release-notes.rst <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/release-notes.rst>`_
+\|Sphinx documentation configuration file\|
+`conf.py <https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/conf.py>`_
+(Typically, this file does not require changes.) \|Linux and OS X build
+script\|``Makefile``\| \|Windows build script\|``make.bat``\|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 

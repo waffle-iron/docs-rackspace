@@ -16,6 +16,7 @@ Source files for the Sphinx documentation project are in the ``api-docs`` direct
 Here are key files that define project and content architecture:
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -50,6 +51,33 @@ Here are key files that define project and content architecture:
      - ``make.bat``
    * - Requirements file to support local builds
      - ``requirements.txt``
+=======
+Content \| File --- \| --- \|Index page for the main content structure\|
+`index.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/index.rst>`_
+\|About the API index\|
+`overview/index.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/overview/index.rst>`_
+\|Quickstart Guide\|
+`quickstart-guide.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/quickstart-guide.rst>`_
+\|Developer Guide
+introduction\|`developer-guide.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/developer-guide.rst>`_
+\|Concepts section\|
+`concepts.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/concepts.rst>`_
+\|General API information
+index\|`general-api-info/index.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/general-api-info/index.rst>`_
+\|Authentication section index\|
+[`authentication-info/index.rst <https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/authentication-info>`_
+\|API Reference
+introduction\|`api-reference.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-reference.rst>`_
+\|API Reference
+index\|`api-operations/index.rst <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-operations/index.rst>`_
+\|API operations methods, including code
+samples\|`api-operations/methods <https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/api-operations/methods>`_
+\|Sphinx documentation configuration file\|
+`conf.py <https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/conf.py>`_
+(Typically, this file does not require changes.) \|Linux and OS X build
+script\|``Makefile``\| \|Windows build script\|``make.bat``\|
+\|Requirements file to support local builds\| ``requirements.txt``
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 

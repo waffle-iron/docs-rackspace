@@ -26,6 +26,7 @@ Unless an abbreviation is common, spell out the root words of the abbreviation o
 Do not capitalize the spelled-out term unless it is a proper name or normally capitalized. For example, the spelled-out term for *AJAX* is *Asynchronous JavaScript and XML*, but the spelled-out term for *ACL* is *access control list*.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 33 33 33
    :header-rows: 1
@@ -45,12 +46,22 @@ Do not capitalize the spelled-out term unless it is a proper name or normally ca
    * - First
      - OS
      - operating system (OS)
+=======
+Occurrence \| Use \| Do not use --- \| --- \| --- First \| access
+control list (ACL) \| ACL 
+       ACL (access control list) 
+       ACL
+(Access Control List) 
+       Access Control List (ACL) Subsequent \| ACL
+\| access control list First \| OS \| operating system (OS)
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
 Also use the following guidelines related to abbreviations.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 33 33 33
    :header-rows: 1
@@ -120,6 +131,77 @@ Also use the following guidelines related to abbreviations.
    * - Do not use Latin abbreviations or non-English words and phrases. For more information, see `Avoid obscure non-English words and abbreviations <../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations>`__.
      - for example
      - e.g.
+=======
+Guideline \| Use \| Do not use --- \| --- \| --- In titles and headings,
+do *not* show both the spelled-out term and its abbreviation. In most
+cases, you can use the abbreviation in the title or heading and show the
+spelled-out term and its abbreviation on first use in the text. \|
+**Adding an ACL** 
+       
+       An access control list (ACL) allows access
+from an outside network into the ObjectRocket system. \| **Adding an
+access control list (ACL)** 
+       
+       An ACL allows access from an
+outside network into the ObjectRocket system. Use only established
+abbreviations. Do not create new ones. \| hybrid cloud \| HC Do not use
+abbreviated forms of Rackspace product names. 
+
+       However, if you
+think that a customer might use an abbreviated name in a search, you can
+tag the document with the abbreviation. \| Cloud Block Storage \| CBS
+Use the indefinite article (*a* or *an*) that is appropriate with the
+pronunciation of the abbreviation. For example, the abbreviation of
+*Structured Query Language (SQL)* is pronounced "es-cue-el" and takes
+the article *an*. *SQL* in the Microsoft product name *SQL Server* is
+pronounced "sequel" and takes the article *a*. \| an SDK 
+
+       a SQL
+Server instance \| a SDK 
+
+       an SQL Server instance If an
+abbreviation is used as part of a compound modifier, hyphenate it as you
+would a word. \| 1000-bps rate \| 1000 bps rate Do not surround
+abbreviations with quotation marks. \| OS \| "OS" Use periods only if
+the abbreviation normally has them (for example, *a.m.* and *p.m.*) or
+could otherwise be misread as a word, such as *in.* (for *inch*). \| FAQ
+\| F.A.Q. Do not use an abbreviation as a verb. \| Use FTP to copy the
+file to the server. \| FTP the file to the server. Avoid using
+abbreviations in the possessive. Instead, treat the abbreviation as an
+adjective or put it in a prepositional phrase. \| Type the DBA password.
+
+
+       Type the password of the DBA. \| Type the DBA's password. To
+form the plural of an abbreviation, except for a unit of measure, append
+a lowercase *s* without an apostrophe. 
+
+       For most abbreviations
+of units of measure, the singular and plural forms are the same (for
+example, 1 pt and 10 pt). 
+
+       If an acronym already represents a
+plural noun, do not add an *s*. 
+
+       **Note:** To refer to more than
+one FAQ document or section, add the appropriate noun after *FAQ* and
+make the noun plural—for example, *FAQ articles*. Follow this guideline
+for other plural acronyms when you need to refer to more than one
+instance of them. \| user IDs 
+
+       10 mm 
+
+       FAQ \| user ID's
+
+
+       10 mms 
+
+       FAQs For abbreviated units of measure, insert a
+space between the number and the abbreviation. \| 256 MB \| 256MB Do not
+use Latin abbreviations or non-English words and phrases. For more
+information, see `Avoid obscure non-English words and
+abbreviations <../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations>`_.
+\| for example \| e.g.
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -127,6 +209,7 @@ Also use the following guidelines related to abbreviations.
 *Byte* is abbreviated with an uppercase *B*. *Bit* is abbreviated with a lowercase *b*. For example, *gigabyte* is abbreviated as *GB*, and *gigabit* is abbreviated as *Gb*. In general, use such abbreviations only with a number value; otherwise, spell out the term. If you want to emphasize *bit* or *byte*, use the spelled-out term rather than or in addition to the abbreviation.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
@@ -134,6 +217,11 @@ Also use the following guidelines related to abbreviations.
    * - Examples
    * - The 100 GB drive appears as 107.4 GB because of how the megabytes are counted.
    * - The unit of value for this alarm is megabits per second (Mbps).
+=======
+\| Examples \| \| --- \| \| The 100 GB drive appears as 107.4 GB because
+of how the megabytes are counted. \| \| The unit of value for this alarm
+is megabits per second (Mbps). \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -172,6 +260,7 @@ Proper nouns and adjectives include the names of people, places, companies, orga
 Be aware that some of these names might have nonstandard or no capitalization. You should always follow the capitalization that is used by the company, shown in a dictionary, or accepted as standard in the industry.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -194,6 +283,12 @@ Be aware that some of these names might have nonstandard or no capitalization. Y
      - Wi-Fi
    * - PuTTY
      - lighttpd
+=======
+Examples \|   --- \| --- Rackspace \| Service Advertising Protocol Hong
+Kong \| WordPress Fanatical Support \| Boolean Cloud Servers \|
+OpenStack Linux \| Internet Microsoft Windows \| Ethernet SQL Server \|
+Wi-Fi PuTTY \| lighttpd
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -205,6 +300,7 @@ For the correct capitalization of some commonly used third-party names, see [Thi
 Most abbreviated forms of terms use all capitals, although exceptions exist. Also, be aware that the corresponding spelled-out terms of abbreviations are often not capitalized. When in doubt about the capitalization of an abbreviation or its spelled-out term, consult a dictionary, industry style guide, reputable website, or editor. Following are some examples.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -231,6 +327,14 @@ Most abbreviated forms of terms use all capitals, although exceptions exist. Als
      - service-oriented architecture
    * - WSDL
      - Web Services Description Language
+=======
+Abbreviation \| Spelled out term --- \| --- API \| application
+programming interface GB \| gigabyte GHz \| gigahertz I/O \|
+input/output JSON \| JavaScript Object Notation Kbps \| kilobits per
+second REST \| Representational State Transfer SaaS \| software as a
+service SOA \| service-oriented architecture WSDL \| Web Services
+Description Language
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -242,6 +346,7 @@ When you are documenting part of the interface within a procedure or other type 
 However, when you use terms from the interface as common nouns, do not capitalize the terms.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
@@ -249,6 +354,11 @@ However, when you use terms from the interface as common nouns, do not capitaliz
    * - Use
    * - Click the action cog to the left of the check name and select **Rename Check**.
    * - From the Cloud Control Panel, you can rename a check.
+=======
+\| Use \| \| --- \| \| Click the action cog to the left of the check
+name and select **Rename Check**. \| \| From the Cloud Control Panel,
+you can rename a check. \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -262,6 +372,7 @@ Many terms that might be capitalized on the interface are not capitalized when u
 - When you refer generally to a component, you can use lowercase (as in the utility or the agent).
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
@@ -275,6 +386,11 @@ Many terms that might be capitalized on the interface are not capitalized when u
    * - backups
    * - containers
    * - authentication
+=======
+\| Examples \| \| --- \| \| Cloud Control Panel \| \| Zipit Backup
+Utility \| \| Rate Limiting component \| \| Cloud Identity service \| \|
+servers \| \| backups \| \| containers \| \| authentication \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -282,6 +398,7 @@ Many terms that might be capitalized on the interface are not capitalized when u
 Most of the time, we have no trouble determining whether a noun is proper or common. However, there is a tendency to capitalize product-specific terms even when they are really just being used as common nouns. A common noun denotes a whole class of something (for example, *servers*) or a random member of a class (for example, *a server*). As a general rule, if you can have more than one of something, it is a common noun and therefore not capitalized.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -292,6 +409,15 @@ Most of the time, we have no trouble determining whether a noun is proper or com
      - You can submit up to 10 Messages in a single Request, but you must encapsulate them in a Collection Container (an Array in JSON).
    * - Repose authentication provides caching for user tokens, roles, and groups.
      - Repose Authentication provides caching for User Tokens, Roles, and Groups.
+=======
+Use \| Do not use --- \| --- You can submit up to 10 messages in a
+single request, but you must encapsulate them in a collection container
+(an array in JSON). \| You can submit up to 10 Messages in a single
+Request, but you must encapsulate them in a Collection Container (an
+Array in JSON). Repose authentication provides caching for user tokens,
+roles, and groups. \| Repose Authentication provides caching for User
+Tokens, Roles, and Groups.
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -316,6 +442,7 @@ In sentence-style capitalization, you capitalize only the first word of the titl
 If the heading includes text from a user interface, the capitalization of that text must match the capitalization on the interface.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -334,6 +461,17 @@ If the heading includes text from a user interface, the capitalization of that t
      - Troubleshooting a Vyatta site-to-site VPN connection
    * - Back up your files
      - Differences between IMAP and POP
+=======
+\| Examples \|   \| \| --- \| --- \| \| Preparing a cloud server to be a
+mail server \| Can I buy extra IP addresses?\| \| What are cloud
+servers? \| What are the PHP configuration limits for Cloud Sites? \| \|
+Install or upgrade PHP 5.3 for CentOS 5.x \| How do I install my own
+PEAR module?\| \| Ubuntu Hardy: Using mod\_python to serve your
+application \| I live outside the United States. Can I use my foreign
+credit card to pay for my account?\| \| Shopping cart software: The
+basics \| Troubleshooting a Vyatta site-to-site VPN connection \| \|
+Back up your files \| Differences between IMAP and POP \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -349,6 +487,7 @@ Capitalize all words in the title except for the following types of words:
 - Words that always begin with a lowercase letter, such as literal command names or certain product or software names
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
@@ -359,6 +498,12 @@ Capitalize all words in the title except for the following types of words:
    * - Cloud Files Introduction
    * - Cloud Networks Release Notes
    * - API Writers Guide
+=======
+\| Examples \| \|---\| \| Next Generation Cloud Servers Developer Guide
+\| \| Rackspace Cloud DNS Getting Started Guide \| \| Cloud Files
+Introduction \| \| Cloud Networks Release Notes \| \| API Writers Guide
+\|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -376,6 +521,7 @@ Use the following guidelines for capitalizing terms and definitions in glossarie
 - For the definition, use [sentence-style capitalization](#sentence-style-capitalization).
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
@@ -383,6 +529,12 @@ Use the following guidelines for capitalizing terms and definitions in glossarie
    * - Example
    * - **token** 
        An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration.
+=======
+\| Example \| \| --- \| \| **token** 
+       An opaque string that
+represents an authorization to access cloud resources. Tokens might be
+revoked at any time and are valid for a finite duration. \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -416,6 +568,7 @@ Occasionally you might want to include content from a third-party source. If you
 In examples of API authentication requests, and other examples where we are teaching the use of the API and expect that users might copy the code and use it, use variables or the following standard values for account numbers, user names, passwords, API keys, and so on. Format the variables by using camelCase and italics, and also use bold within the examples.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 33 33 33
    :header-rows: 1
@@ -445,6 +598,22 @@ In examples of API authentication requests, and other examples where we are teac
      - ***xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*** 
        $token
      - 2e356864f39831523c184fc646b1997b
+=======
+Information \| Use \| Do not use ---\|---\|--- Account or tenant ID \|
+***yourAccountId*** 
+       ***yourTenantId*** 
+       $account 
+       $tenant
+\| 658405 User name \| ***yourUserName*** 
+       $username \| dian4554
+Password \| ***yourPassword*** 
+       $password \| J$123bb\* API key \|
+***yourApiKey*** 
+       $apikey \| kf938gf4915e114f7ff5448910ffe68c
+Authentication token \| ***xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*** 
+      
+$token \| 2e356864f39831523c184fc646b1997b
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -573,6 +742,7 @@ Dates are displayed differently in different countries, so you must use a date f
 Unless space is limited, always show dates in the following format: *month day*, *year*. Always spell out the month.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -582,6 +752,11 @@ Unless space is limited, always show dates in the following format: *month day*,
    * - November 12, 2010
      - 12 Nov 2010 
        2010-Nov-12 
+=======
+Use \| Avoid --- \| --- November 12, 2010 \| 12 Nov 2010 
+      
+2010-Nov-12 
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
        12/11/10 
        11/12/10 
        10-11-12
@@ -593,6 +768,7 @@ Unless space is limited, always show dates in the following format: *month day*,
 When the month, day, and year are embedded in a sentence, use a comma before and after the year. When only the month and year are embedded in a sentence, omit the commas unless the syntax would ordinarily require a comma following the year.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
@@ -601,6 +777,14 @@ When the month, day, and year are embedded in a sentence, use a comma before and
    * - Any sites that are using MySQL 4 after November 1, 2011, will be automatically migrated to MySQL 5.
    * - The Alert Logic Security Research Team used 12 months of security event data captured from July 2010 through June 2011.
    * - As of September 2013, a subset of customer accounts were not being billed for actual usage in comparison to their preselected SQL Server storage allocations.
+=======
+\| Use \| \| --- \| \| Any sites that are using MySQL 4 after November
+1, 2011, will be automatically migrated to MySQL 5. \| \| The Alert
+Logic Security Research Team used 12 months of security event data
+captured from July 2010 through June 2011. \| \| As of September 2013, a
+subset of customer accounts were not being billed for actual usage in
+comparison to their preselected SQL Server storage allocations. \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -611,12 +795,18 @@ Use an all-numeric date only in the following situations:
 Because all-numeric dates are interpreted differently in different countries, explain the format of a numeric date, and use a consistent format throughout the  documentation. If possible, use the ISO 8601 format, which is *yyyy*-*mm*-*dd* (for example, 2012-11-10 for November 10, 2012).
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
 
    * - Use
    * - The value that is shown for 8/19/10 represents the average number of extents from data collections beginning August 19, 2010.
+=======
+\| Use \| \| --- \| \| The value that is shown for 8/19/10 represents
+the average number of extents from data collections beginning August 19,
+2010. \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -640,6 +830,7 @@ For references to a file type in text (not code), use one of the following namin
 Use a generic name or a standard abbreviation if one exists. If a generic name or a standard abbreviation does not exist or is not appropriate given the context, use the file name extension. The following table provides some common file types and guidelines for referring to them.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 33 33 33
    :header-rows: 1
@@ -673,6 +864,35 @@ Use a generic name or a standard abbreviation if one exists. If a generic name o
    * - zip
      - Use the term *zip* for both general and specific references.
      - In the example, **file.zip** is the name that you assign to the zip file.
+=======
+File type \| Guideline \| Example --- \| --- \| --- configuration \| Use
+the term *configuration* unless you are naming a specific file. \| The
+main logrotate configuration file is located at ``/etc/logrotate.conf.``
+HTML \| Use the term *HTML* unless you are naming a specific file. \|
+From the website, you can access HTML files. 
+
+       The frequently
+asked questions are located in the **faq.htm** file. initialization \|
+Use the term *initialization* unless you are naming a specific file. \|
+The initialization files contain default parameter values.
+
+       Copy
+the **calibrate.ini** file. JSON \| Use the term *JSON* unless you are
+naming a specific file. \| You can directly edit the JSON environment
+file to add attributes specific to your configuration. 
+
+       The
+parameters provided with ``/type=install`` are visible in the
+**bootstrap.json** file. XML \| Use the term *XML* unless you are naming
+a specific file. \| The file is an XML document that defines
+configuration information regarding the web application. 
+
+       A
+service name maps to a collection of configuration entries in the Hadoop
+**core-site.xml** file. zip \| Use the term *zip* for both general and
+specific references. \| In the example, **file.zip** is the name that
+you assign to the zip file.
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -698,6 +918,7 @@ To show the glossary term that you are defining, use the following guidelines:
 To alphabetize glossary terms, use the word-by-word method. In this method, terms that contain more than one word separated by spaces or commas are alphabetized by the first word only, unless the first word of two or more entries is the same. In that case, the second and subsequent words are used to determine the alphabetical order. Hyphens, slashes, and apostrophes continue a single word.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
@@ -707,6 +928,13 @@ To alphabetize glossary terms, use the word-by-word method. In this method, term
        newborn 
        new/old 
        newspaper
+=======
+\| Example word-by-word alphabetization \| \| ---\| \| new math 
+      
+newborn 
+       new/old 
+       newspaper \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -727,6 +955,7 @@ The following table shows examples.
 **Note:** In a comprehensive glossary, you might need to start the definition with a qualifier that identifies the service to which the term relates. For more information, see [Guidelines for a comprehensive glossary](#guidelines-for-a-comprehensive-glossary).
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -745,6 +974,22 @@ The following table shows examples.
    * - Abbreviation
      - **API** 
        Application Programming Interface. A set of commands, functions, and protocols that programmers can use to create application services by using an open application.
+=======
+Type \| Example --- \| --- Noun \| **token** 
+       An opaque string that
+represents an authorization to access cloud resources. Tokens might be
+revoked at any time and are valid for a finite duration. Verb \|
+**resize** 
+       To convert an existing server to a different flavor, in
+essence, scaling the server up or down. The original server is saved for
+a period of time to allow rollback if a problem occurs. Adjective \|
+**RESTful** 
+       Describes a kind of web service API that uses REST.
+Abbreviation \| **API** 
+       Application Programming Interface. A set of
+commands, functions, and protocols that programmers can use to create
+application services by using an open application.
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -764,6 +1009,7 @@ Use the following guidelines when creating cross-references within a glossary:
   - Make the term a link to the cross-referenced term.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
@@ -777,6 +1023,19 @@ Use the following guidelines when creating cross-references within a glossary:
        A value that stores metrics. Metrics are stored as full resolution data points, which are periodically rolled up (condensed) into coarser data points. *See also* data granularity.
    * - **replace** 
        To recover by dropping the selected database and re-creating it. *Contrast with* copy over.
+=======
+\| Examples \| \| --- \| \| **address** 
+       See address space. \| \|
+**collection** 
+       A group of packages that have the same qualifier. \|
+\| **data point** 
+       A value that stores metrics. Metrics are stored
+as full resolution data points, which are periodically rolled up
+(condensed) into coarser data points. *See also* data granularity. \| \|
+**replace** 
+       To recover by dropping the selected database and
+re-creating it. *Contrast with* copy over. \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -809,6 +1068,7 @@ When you are discussing IP addresses or referring to a specific IP address, do n
 When you need to refer to a specific version of the IP, use *IPv4 address* or *IPv6 address* as appropriate.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 100
    :header-rows: 1
@@ -820,6 +1080,18 @@ When you need to refer to a specific version of the IP, use *IPv4 address* or *I
         Additional: 72.32.36.144/28 (72.32.36.145 - 72.32.36.158)
    * - Each Vyatta appliance is assigned one public IPv4 address.
    * - If you are using IPv6 on your server, you might need to add the IPv6 addresses of your name servers to the **resolv.conf** file.
+=======
+\| Examples \| \| --- \| \| If your website is hosted in the DFW data
+center, you can use the following primary and secondary IP addresses:
+
+        Primary: 74.205.61.228 
+        Secondary: 74.205.61.229 
+       
+Additional: 72.32.36.144/28 (72.32.36.145 - 72.32.36.158) \| \| Each
+Vyatta appliance is assigned one public IPv4 address. \| \| If you are
+using IPv6 on your server, you might need to add the IPv6 addresses of
+your name servers to the **resolv.conf** file. \|
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -853,6 +1125,7 @@ Different keyboards use different names for common keys. For consistency, use th
 When showing specific key names and key combinations, apply bold and use the following guidelines:
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -887,6 +1160,55 @@ When showing specific key names and key combinations, apply bold and use the fol
      - To jump to the end of the file, press **Shift+G**. 
 
        To apply the general number format, press **Ctrl+Shift+~**.
+=======
+Guideline \| Example --- \| --- When telling users to *type* a letter
+key (as in a command), use lowercase for the letter unless uppercase is
+required. Use *type* or *enter* when the action results in output on the
+interface. \| When prompted, type ``y`` and then press **Enter**.
+
+
+       To change from command mode to insert mode, type ``i``. When
+telling users to press a letter key (as in a key combination),
+capitalize the letter. Use press when the action does not result in
+output on the interface. 
+       
+       **Notes:** 
+
+       Do not use the
+verbs *hit*, *strike*, or *punch*. 
+
+       Separate the key names by
+**-** or **+**, depending on whether you are documenting Linux or
+Windows. If you are documenting for both, pick one symbol and use it
+consistently. \| When you are finished, press **Ctrl+X** to exit, type
+``y`` to confirm your changes, and then press **Enter** to save as the
+indicated file. 
+
+       Press **F3** to find the next matching process,
+or press **Esc** to quit the search. 
+
+       To move forward word by
+word, press **W**. To move back word by word, press **B**. Avoid using
+*key* with specific key names. 
+
+       If needed for clarity, on the
+first use of a key name, you can use the definite article *the* and
+*key* with the name. On subsequent uses, refer to the key only by its
+name. \| Press **F3** to find the next matching process, or press
+**Esc** to quit the search. 
+
+       Press the Help key (**F1**). To
+show a key combination, use a plus sign between the names of the keys.
+\| To toggle between the progress bar screen and a Linux TTY screen,
+press **Ctrl+Alt+F2**. If part of a key combination requires the use of
+the **Shift** key (such as typing an asterisk or an uppercase letter),
+add **Shift** to the combination and then provide the name or symbol
+that results from pressing **Shift** (such as \*\*\*\*\* or **P**). \|
+To jump to the end of the file, press **Shift+G**. 
+
+       To apply the
+general number format, press **Ctrl+Shift+~**.
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -923,6 +1245,7 @@ When you create a cross-reference sentence to point to other information, linked
   - Lists
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -935,6 +1258,18 @@ When you create a cross-reference sentence to point to other information, linked
      - Snapshots are described later in this Getting Started Guide.
    * - The following table lists the OpenStack versions and components supported by the current releases of Rackspace Private Cloud.
      - The table below lists the OpenStack versions and components supported by the current releases of Rackspace Private Cloud.
+=======
+Use \| Avoid --- \| --- For more information about the protocols that
+you can choose when configuring a load balancer, see Choosing the right
+protocol. \| See Choosing the right protocol for more information about
+the protocols that you can choose when configuring a load balancer.
+Snapshots are described in Create and use Cloud Block Storage snapshots.
+\| Snapshots are described later in this Getting Started Guide. The
+following table lists the OpenStack versions and components supported by
+the current releases of Rackspace Private Cloud. \| The table below
+lists the OpenStack versions and components supported by the current
+releases of Rackspace Private Cloud.
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -976,6 +1311,7 @@ When you provide links, observe the following guidelines for placement, construc
 - Create and format links according to the authoring tool that you are using. Test links to ensure that they are live and that they point to the correct destination.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -998,6 +1334,39 @@ When you provide links, observe the following guidelines for placement, construc
      - For more information about cross-domain XML files, go to Adobe's website.
    * - Cloud Load Balancers [product page] has a content caching feature that stores recently accessed files on the load balancer for easy retrieval by web clients. *(when linking to the www.rackspace.com product page)*
      - Cloud Load Balancers has a content caching feature that stores recently accessed files on the load balancer for easy retrieval by web clients. *(when linking to the www.rackspace.com product page)*
+=======
+Use \| Avoid --- \| --- The most current versions of all SDKs are
+located in the SDK guide. \| The most current versions of all SDKs are
+located in the SDK guide:
+http://docs.rackspace.com/sdks/guide/content/intro.html. You can obtain
+the key by logging in to the Cloud Control Panel and selecting **Account
+Settings** from the ***yourAccount*** menu in the top-right corner of
+the window. \| You can obtain the key from the Cloud Control Panel by
+selecting **Account Settings** from the ***yourAccount*** menu in the
+top-right corner of the window. (Log in at
+https://mycloud.rackspace.com/.) If you want your additional storage to
+be more portable or you need to be able to take data snapshots, consider
+adding one or more volumes to the new server. \| If you want your
+additional storage to be more portable or you need to be able to take
+data snapshots, consider adding one or volumes to the new server. See
+Create and Attach a Cloud Block Storage Volume. Set the transmit rate
+for **Warning** and **Critical State**. (For more information about
+transmit rates, see Rackspace Cloud Monitoring checks and alarms.) \|
+Set the transmit rate for **Warning** and **Critical State**. (For more
+information about what this means, click here.) If you need assistance
+opening the web console, see Managing your server 2 - console session.
+\| If you need assistance opening the web console, see this article.
+Download PuTTY from the PuTTY website. \| Download PuTTY. For more
+information about cross-domain XML files, read the Cross-domain policy
+file specification article on the Adobe website. \| For more information
+about cross-domain XML files, go to Adobe's website. Cloud Load
+Balancers [product page] has a content caching feature that stores
+recently accessed files on the load balancer for easy retrieval by web
+clients. *(when linking to the www.rackspace.com product page)* \| Cloud
+Load Balancers has a content caching feature that stores recently
+accessed files on the load balancer for easy retrieval by web clients.
+*(when linking to the www.rackspace.com product page)*
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
 ```
 
@@ -1018,6 +1387,7 @@ This topic provides the following guidelines for lists:
 All lists are preceded by introductory text that provides the context for the list. One exception is procedures, which can be preceded only by a procedure title. Use the following guidelines when introducing lists.
 
 ```eval_rst
+<<<<<<< HEAD
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -1052,6 +1422,54 @@ All lists are preceded by introductory text that provides the context for the li
        
        *Do not use:* 
        You can use this product to do the following: 
+=======
+Guideline \| Example --- \| --- Introduce a list with a sentence, and
+end the sentence with a colon. If another sentence intervenes between
+the introductory sentence and the first list item, end the introductory
+sentence with a period instead of a colon. 
+       
+       In a procedure,
+apply this guideline to text that introduces a list of substeps. 
+      
+
+       **Note:** Avoid using fragments to introduce lists. Fragments are
+difficult to translate and can be harder to comprehend than sentences.
+\| You can use this product to perform the following tasks: 
+       
+      
+You can use this product to perform the following tasks. You must
+extract objects from the database to complete these tasks. For a partial
+list, use the verb include in the introductory text. \| The directory
+includes the following files: 
+       
+       (*Includes* is correct only if
+you are listing some, but not all, files in the directory.) Do not
+quantify items in introductory text. Quantifying items could cause an
+error if the list changes. \| *Use:* 
+       The following methods are
+available: 
+       
+       *Do not use:* 
+       The following three methods are
+available: Don’t tell users to "do the following." The verb *do* is
+weak, using *following* as a noun in this context is incorrect, and the
+whole phrase is ambiguous. 
+       
+       Use a stronger and more meaningful
+verb. Use *following* only as an adjective, unless you are referring to
+an entourage, posse, retinue, or group of fans. Ensure that the
+introduction to a list provides enough context for users to understand
+what information the list is providing. \| *Use:* 
+       You can use this
+product to perform the following tasks: 
+
+       The following methods
+are available: 
+       
+       *Do not use:* 
+       You can use this product to
+do the following: 
+>>>>>>> 21df6f80aa6041095745190a81864127b7513299
 
        The following are available:
 
