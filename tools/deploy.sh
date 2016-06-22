@@ -4,7 +4,7 @@ if [ "$TRAVIS_REPO_SLUG" == "rackerlabs/docs-rackspace" ] && [ "$TRAVIS_PULL_REQ
 
   echo -e "Publishing gh-pages...\n"
 
-  cp -R doc/_build/html $HOME/html
+  cp -r doc/_build/html $HOME
 
   cd $HOME
   git config --global user.email "travis@travis-ci.org"
