@@ -4,7 +4,7 @@ if [ "$TRAVIS_REPO_SLUG" == "rackerlabs/docs-rackspace" ] && [ "$TRAVIS_PULL_REQ
 
   echo -e "Publishing gh-pages...\n"
 
-  cp -R doc/_build/html $HOME/html
+  cp -r doc/_build/html $HOME
 
   cd $HOME
   git config --global user.email "travis@travis-ci.org"
@@ -13,7 +13,7 @@ if [ "$TRAVIS_REPO_SLUG" == "rackerlabs/docs-rackspace" ] && [ "$TRAVIS_PULL_REQ
 
   cd gh-pages
   find * -not -name ".*" -delete
-  cp -Rf $HOME/html ./
+  cp -rv $HOME/html/* ./
   git add -A .
   git commit -m "Latest doc on successful travis build #$TRAVIS_BUILD_NUMBER auto-pushed to gh-pages"
   git push -fq origin gh-pages > /dev/null
