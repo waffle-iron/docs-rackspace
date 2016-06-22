@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Publishing to pages.github.rackspace.com &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="Tools" href="index.html"/>
+        <link rel="next" title="Importing and exporting labels" href="manage-labels-readme.html"/>
+        <link rel="prev" title="Carina by Rackspace" href="GitHub-infra-templates/README-carina.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc-other/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Adding support for contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Publishing to pages.github.rackspace.com</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#initial-setup">Initial setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing">Publishing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publish-sh">publish.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Content deletion from Nexus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing.html">Development and production branches on developer.rackspace.com</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Tools</a> &raquo;</li>
+      
+    <li>Publishing to pages.github.rackspace.com</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tools/internal-publish-script.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="publishing-to-pages-github-rackspace-com">
+<h1>Publishing to pages.github.rackspace.com<a class="headerlink" href="#publishing-to-pages-github-rackspace-com" title="Permalink to this headline">#</a></h1>
+<p>The <a class="reference internal" href="#publish-sh"><span class="std std-ref">publish.sh</span></a> script publishes documentation to a Rackspace GitHub
+pages URL accessible only to internal users (pages.github.rackspace.com). To
+use the script, you have to do some initial setup to fetch the content for
+publishing.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">After running the script, always check the published books. The script does
+not catch errors and has no test suite. Use it with cautious optimism.</p>
+</div>
+<div class="section" id="initial-setup">
+<h2>Initial setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">#</a></h2>
+<p>The <strong>publish.sh</strong> script enables you to publish internal content from an
+external github.com repository to an internal github.rackspace.com
+gh-pages URL. It assumes two repositories:</p>
+<ul class="simple">
+<li>an internal repository on github.rackspace.com which you clone to your local
+machine</li>
+<li>a public or private repository on github.com, which is set as the upstream
+source for your local clone of the internal repository</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do not edit the internal repository directly, as it acts as a
+mirror of the external repository. Make all changes upstream in the
+github.com repository then push those changes to the internal
+github.rackspace.com repository.</p>
+</div>
+<p>These instructions use <strong>docs-rpc</strong> as an example repository. Update the
+script and substitute your repositories as required.</p>
+<p>Run the following commands while connected to the Rackspace network directly
+or through VPN.</p>
+<ol class="arabic">
+<li><p class="first">Clone the internal repository:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git clone git@github.rackspace.com:rpc-internal/docs-rpc.git
+</pre></div>
+</div>
+</li>
+<li><p class="first">Change into the cloned <strong>docs-rpc</strong> directory and set the upstream to the
+rackerlabs/docs-rpc repository:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cd docs-rpc
+$ git remote add upstream git@github.com:rackerlabs/docs-rpc.git
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order to avoid confusion with the rackerlabs repository of the same
+name, you may want to change the directory name of <strong>docs-rpc</strong>.</p>
+</div>
+</li>
+<li><p class="first">Confirm your setup by pulling from upstream and pushing to origin:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git fetch upstream
+$ git merge upstream/master
+$ git push origin master
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create local versions of the stable upstream branches:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout v10
+$ git checkout v11
+</pre></div>
+</div>
+</li>
+<li><p class="first">Checkout master. You are now ready to publish internally.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout master
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="publishing">
+<h2>Publishing<a class="headerlink" href="#publishing" title="Permalink to this headline">#</a></h2>
+<p>Run the following command while connected to the Rackspace network directly
+or through VPN.</p>
+<ol class="arabic">
+<li><p class="first">To build and publish the content using GitHub pages, run the <strong>publish.sh</strong>
+script from the master branch of the cloned enterprise repository:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ . publish.sh
+</pre></div>
+</div>
+</li>
+<li><p class="first">Check the published output at the URL provided by the script. For the
+<strong>docs-rpc</strong> books, this is
+<a class="reference external" href="https://pages.github.rackspace.com/rpc-internal/docs-rpc/">https://pages.github.rackspace.com/rpc-internal/docs-rpc/</a>. You must be on
+the Rackspace network to view this page.</p>
+</li>
+</ol>
+<p>For more information on the commands run, see the code comments in the
+<a class="reference internal" href="#publish-sh"><span class="std std-ref">publish.sh</span></a> script.</p>
+<p>For more information on publishing to gh-pages manually, see
+<a class="reference external" href="https://help.github.com/articles/creating-project-pages-manually/">Creating project pages manually</a>.</p>
+</div>
+<div class="section" id="publish-sh">
+<span id="id1"></span><h2>publish.sh<a class="headerlink" href="#publish-sh" title="Permalink to this headline">#</a></h2>
+<p>The following version of the <strong>publish.sh</strong> script publishes the internal-only
+v10 and v11 RPC books. It also publishes the internal books from the master
+branch (v12), which are labelled as DRAFT.</p>
+<p>Adapt the script as required for your repositories.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
+
+# Helper script for publishing RPC documentation to pages.github.rackspace.com.
+# Run from the master branch of the internal RPC repository.
+
+# set repo root directory
+GITDIR=`git rev-parse --show-toplevel`
+
+# set source directories
+SOURCE=&#39;internal common figures&#39;
+V11SOURCE=&#39;internal/rpc-v11-faq-internal internal/rpc-v11-install internal/rpc-v11-ops-internal internal/rpc-v11-releasenotes-internal-supp&#39;
+V10SOURCE=&#39;internal/rpc-v10-faq-internal internal/rpc-v10-installation internal/rpc-v10-releasenotes-internal-supp&#39;
+
+# set branches to build
+BRANCHES=(v10 v11 master)
+
+# ensure branches are up-to-date
+for branch in ${BRANCHES[@]}; do
+    cd $GITDIR
+    git checkout $branch
+    git fetch upstream
+    git merge upstream/$branch
+    git push origin $branch
+done
+
+# checkout gh-pages branch and delete contents except . files
+git checkout gh-pages
+find * -not -name &quot;.*&quot; -delete
+
+# checkout source directories and reset HEAD
+git checkout master $SOURCE
+git checkout v11 $V11SOURCE
+git checkout v10 $V10SOURCE
+git reset HEAD
+
+# build html from rst in internal directory
+cd internal
+make html
+
+# move html files to root directory
+mv -fv _build/html/* ../
+
+# remove source files
+cd $GITDIR
+rm -rf $SOURCE
+
+# add, commit, and push new html files
+git add .
+git commit -m &quot;gh-pages: `git log master -1 --pretty=short --abbrev-commit`&quot;
+git push origin gh-pages
+
+# checkout master and signal completion
+git checkout master
+echo
+tput setaf 2
+echo &quot;Published at: https://pages.github.rackspace.com/rpc-internal/docs-rpc/&quot;
+tput sgr0
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="manage-labels-readme.html" class="btn btn-neutral float-right" title="Importing and exporting labels" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="GitHub-infra-templates/README-carina.html" class="btn btn-neutral" title="Carina by Rackspace" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
