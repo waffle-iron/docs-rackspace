@@ -35,6 +35,7 @@ For additional information, see the following sections:
 * `Rackspace Private Cloud documentation`_
 * `OpenStack-Ansible (OSA) documentation`_
 * `OpenStack documentation`_
+* `Private Cloud How-To and Control Panel articles`_
 
 
 Who is the doc team and what do we do?
@@ -412,3 +413,35 @@ documentation:
   <http://docs.openstack.org/contributor-guide/quickstart/first-timers.html>`_
 * `OpenStack Documentation Contributor Guide
   <http://docs.openstack.org/contributor-guide/index.html>`_
+
+Private Cloud How-To and Control Panel articles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This section answers questions about the How-To articles.
+
+Where do the How-To articles live?
+----------------------------------
+
+The How-To article repo is at
+`<https://github.com/rackerlabs/rackspace-how-to>`_.
+
+The most important folder is ``/content``. This folder contains the
+subdirectories, with article source files, for each of the Private
+and Public Cloud products and services.
+
+What do the How-To articles contain?
+------------------------------------
+
+How-To articles provide users and system administrators with tactical,
+troubleshooting, and FAQ information for Rackspace products and services.
+How-To articles also provide instructions to set up and maintain Rackspace
+products from the Rackspace Cloud Control Panel.
+
+How do we contribute to How-To articles?
+----------------------------------------
+
+The How-To uses GitHub for code, bug and issue management, and code reviews.
+
+To learn how to contribute to How-To articles, see `Contributing to the
+Rackspace How-To content repository
+<https://github.com/rackerlabs/rackspace-how-to/blob/master/CONTRIBUTING.md>`_.
