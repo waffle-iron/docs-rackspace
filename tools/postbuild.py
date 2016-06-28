@@ -27,6 +27,7 @@ def cleanup(files, tempsuffix):
     0
 
     """
+    logging.debug('Running cleanup()')
     try:
         for file in files:
             if path.exists(file):
@@ -41,6 +42,8 @@ if __name__ == '__main__':
     config = configparser.ConfigParser()
     config.read(['tox.ini', '../tox.ini'])
     conf = dict(config.items('mdsphinx'))
+    if conf['debug'] == 'True':
+        logging.basicConfig(level=logging.DEBUG)
     files = listfiles(conf['docdir'], conf['tempsuffix'], conf['ignore'])
     result = cleanup(files, conf['tempsuffix'])
     if result == 0:

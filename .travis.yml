@@ -1,9 +1,11 @@
+sudo: required
+dist: trusty
 language: python
 branches:
   only:
   - master
 python:
-- '3.4'
+  - '3.4'
 addons:
   apt:
     packages:
