@@ -134,7 +134,7 @@ Use the following standards when creating diagrams:
 
 Each diagram property is located on the right of the Draw.io main screen under **Diagrams**.
 
-- [ ] **Paper size**: Set the paper siza to **A4 (210 mm x 297 mm)** and **Landscape**.
+- [ ] **Paper size**: Set the paper size to **A4 (210 mm x 297 mm)** and **Landscape**.
 
 - [ ] **Background color**: Set the background color to **none**.
 
