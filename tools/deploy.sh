@@ -19,10 +19,10 @@ if [ "$TRAVIS_REPO_SLUG" == "rackerlabs/docs-rackspace" ] && [ "$TRAVIS_PULL_REQ
   git push -fq origin gh-pages > /dev/null
 
   if test `tput -T $TERM colors` -lt 256; then
-    echo "\nDocs published to http://rackerlabs.github.io/docs-rackspace/"
+    echo "Docs published to http://rackerlabs.github.io/docs-rackspace/"
   else
     tput -T $TERM setaf 2
-    echo "\nDocs published to http://rackerlabs.github.io/docs-rackspace/"
+    echo "Docs published to http://rackerlabs.github.io/docs-rackspace/"
     tput -T $TERM sgr0
   fi
 

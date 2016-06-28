@@ -319,6 +319,8 @@ if __name__ == '__main__':
     config = configparser.ConfigParser()
     config.read(['tox.ini', '../tox.ini'])
     conf = dict(config.items('mdsphinx'))
+    if conf['debug'] == 'True':
+        logging.basicConfig(level=logging.DEBUG)
     files = listfiles(conf['docdir'], conf['mdsuffix'], conf['ignore'])
     copydocs(files, conf['tempsuffix'])
     processdocs(files)

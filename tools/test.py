@@ -5,12 +5,8 @@
 from os import listdir, path, remove
 from shutil import copyfile
 
-from pytest import mark
-
 import postbuild
 import prebuild
-
-xfail = mark.xfail
 
 docdir = "tools/"
 mdsuffix = '.md'
@@ -134,7 +130,6 @@ def test_listtable():
     assert prebuild.listtable(sampleoutput) == ltable
 
 
-@xfail
 def test_parsedoc():
     """Test parsedoc."""
     assert prebuild.parsedoc(samplemd) == sampleoutput
