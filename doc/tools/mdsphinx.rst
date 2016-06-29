@@ -96,6 +96,11 @@ ignore
    A comma-separated list of files to ignore. Use file names only without
    paths. Does not accept directories or wildcards (\*).
 
+debug
+   ``True`` - show debugging output.
+
+   ``False`` - hide debugging output.
+
 **Sample configuration**
 
 .. code:: ini
@@ -105,6 +110,7 @@ ignore
    mdsuffix = .md
    tempsuffix = .temp
    ignore = README.md, draft.md
+   debug = False
 
 
 Makefile html target

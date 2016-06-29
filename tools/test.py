@@ -5,6 +5,9 @@
 from os import listdir, path, remove
 from shutil import copyfile
 
+from pypandoc import get_pandoc_version
+from pytest import mark
+
 import postbuild
 import prebuild
 
@@ -115,7 +118,7 @@ def test_copydocs():
     for file in listdir(docdir):
         if any(file.endswith(ext) for ext in extensions):
             dirpass.append('tools/' + file)
-    assert dirpass == alteredlist
+    assert set(dirpass) == set(alteredlist)
     assert prebuild.copydocs('failext', tempsuffix) == 1
 
 
@@ -130,6 +133,8 @@ def test_listtable():
     assert prebuild.listtable(sampleoutput) == ltable
 
 
+@mark.skipif(get_pandoc_version() < '1.13',
+             reason='requires pandoc >= 1.13')
 def test_parsedoc():
     """Test parsedoc."""
     assert prebuild.parsedoc(samplemd) == sampleoutput

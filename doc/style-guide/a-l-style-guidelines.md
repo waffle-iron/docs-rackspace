@@ -280,11 +280,11 @@ In examples of API authentication requests, and other examples where we are teac
 <!--table-->
 Information | Use | Do not use
 ---|---|---
-Account or tenant ID	| ***yourAccountId*** <br /> ***yourTenantId*** <br /> $account <br /> $tenant | 658405
-User name	| ***yourUserName***  <br /> $username | dian4554
-Password	| ***yourPassword*** <br /> $password | J$123bb\*
-API key	| ***yourApiKey*** <br /> $apikey | kf938gf4915e114f7ff5448910ffe68c
-Authentication token | ***xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*** <br /> $token | 2e356864f39831523c184fc646b1997b
+Account or tenant ID	| *yourAccountId* <br /> *yourTenantId* <br /> \$account <br /> \$tenant | 658405
+User name	| *yourUserName*  <br /> \$username | dian4554
+Password	| *yourPassword* <br /> \$password | J\$123bb\*
+API key	| *yourApiKey* <br /> \$apikey | kf938gf4915e114f7ff5448910ffe68c
+Authentication token | *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* <br /> \$token | 2e356864f39831523c184fc646b1997b
 <!--endtable-->
 
 In example API operation requests and responses, in which we want users to see actual values from the system, use "real-looking" values that are nevertheless obviously made up, such the following one for `X-Auth-Token`:

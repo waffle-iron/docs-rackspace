@@ -193,8 +193,7 @@ def parsedoc(mdstring):
             table += line + "\n"
         elif start is True and line.startswith(endmark) is True:
             converted = pypandoc.convert(table, 'rst', format='md')
-            output.append(converted)
-            output.append("```")
+            output.append(converted + "\n```")
             start = False
             global numtables
             numtables += 1
