@@ -1860,7 +1860,6 @@ Additionally, the table uses the following abbreviations to indicate parts of sp
      -
      - Use *zeros*, not *zeroes*, as the plural of *zero*.
 
-
 ```
 
 ## Concise terms
@@ -2040,7 +2039,6 @@ In addition to using concise terms, use the shorter of two approved spellings (f
    * - with the exception of
      - except for
 
-
 ```
 
 ## Third-party names and trademarks
@@ -2103,6 +2101,5 @@ For legal reasons, you must show third-party names and trademarks correctly. The
      - UNIX is a trademark, so it must always be spelled and capitalized as shown. Do not use Unix.
    * - WordPress
      -
-
 
 ```

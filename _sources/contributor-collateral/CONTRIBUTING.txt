@@ -69,7 +69,6 @@ Following are the key files that define project and content architecture:
    * - Windows build script
      - ``make.bat``
 
-
 ```
 
 

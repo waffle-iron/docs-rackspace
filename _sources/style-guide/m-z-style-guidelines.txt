@@ -48,10 +48,10 @@ If you help write the message text for a product or you suggest edits to message
      - Write brief and simple sentences that clearly state the problem. Separate the sentences with a period (or question mark, if applicable), not with a semicolon.
    * - Avoid using only uppercase letters.
      - *Use:* 
-       The requested image :math:`UUID has automatic disk resizing disabled. 
+       The requested image $UUID has automatic disk resizing disabled. 
 
        *Avoid:* 
-       THE REQUESTED IMAGE `\ UUID HAS AUTOMATIC DISK RESIZING DISABLED.
+       THE REQUESTED IMAGE $UUID HAS AUTOMATIC DISK RESIZING DISABLED.
      - Lines with excessive capitalization are hard to read. Use all uppercase letters only for words that require it, such as a keyword, a data type, or a specific table name that is displayed in all uppercase letters to a database user.
    * - When possible, include a recommendation, either a potential fix or a reference to a document for more information.
      - The system is out of virtual IP addresses. Contact Support so they can allocate more virtual IP addresses. 
@@ -85,7 +85,6 @@ If you help write the message text for a product or you suggest edits to message
        The given limit cannot be negative and cannot be greater than 50.
      - Positive statements are easier to understand than negative statements.
 
-
 ```
 
 ## Names
@@ -118,7 +117,6 @@ Notations (notes, tips, and warnings) call out important or helpful information.
        • Provide helpful (but not essential) information
    * - Warning
      - Alerts customers to potential hazards or highlights critical information. Use a warning for situations in which users could lose data, compromise data integrity, or disrupt operations if they do not follow instructions carefully.
-
 
 ```
 
@@ -163,19 +161,19 @@ Spell out numbers from zero through nine, except in the cases shown in the follo
    * - Time
      - 5:45 p.m.
 
-
 ```
 
 Avoid beginning a sentence with a number. If you must begin a sentence with a number, spell out the number unless the number is part of a product, service, or company name.
 
 ```eval_rst
-| Use \|
-| --- \|
-| Ten vendors, including Rackspace, were assessed based on the following
-attributes: 
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Use
+   * - Ten vendors, including Rackspace, were assessed based on the following attributes: 
        
-       451 Research applied a weighting system to
-highlight the attributes that are most valued by end users.
+       451 Research applied a weighting system to highlight the attributes that are most valued by end users.
 
 ```
 
@@ -193,7 +191,6 @@ Do not use the spelled-out form of a number followed by a numeral in parentheses
        Enter **0** (zero). *(acceptable)*
      - two (2) panels 
        zero (0) probability
-
 
 ```
 
@@ -219,7 +216,6 @@ Always use commas in numbers with four or more digits. However, do not use comma
        1,452.753,2 
        page 1,055 
        1024 bytes
-
 
 ```
 
@@ -250,7 +246,6 @@ When describing number ranges, use the following guidelines:
    * - between 2010 and 2012
      - between 2000–2002
 
-
 ```
 
 ### Unspecified, generic, and unknown numbers
@@ -259,13 +254,14 @@ To represent an unspecified or generic number, use *n* as the variable and apply
 To represent an unspecified or unknown version number, use *x* for each digit and apply italics.
 
 ```eval_rst
-| Use \|
-| --- \|
-| Move the insertion point *n* spaces to the right. 
-       Select the
-**Use *n* I/O Sessions** check box. 
-       Your BlackBerry software must
-be version 4.\ *x*. \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Use
+   * - Move the insertion point *n* spaces to the right. 
+       Select the **Use *n* I/O Sessions** check box. 
+       Your BlackBerry software must be version 4.\ *x*.
 
 ```
 
@@ -332,7 +328,6 @@ When creating placeholder text, use the following guidelines.
 
        *mode* (instead of *########*)
 
-
 ```
 
 When explaining a placeholder, use the following guidelines.
@@ -375,7 +370,6 @@ When explaining a placeholder, use the following guidelines.
 
        ``docker-machine env <dockerHostName> --shell cmd``
 
-
 ```
 
 ## Plurals
@@ -408,7 +402,6 @@ Use the following general guidelines for forming and using plurals. To find out 
        
        *Do not use:* 
        Close any application(s) that is/are open.
-
 
 ```
 
@@ -446,7 +439,6 @@ When referring to an OpenStack service, use the actual service name, and provide
      - MSSQL is supported.
    * - Cloud Servers provides the core features of the OpenStack Compute (Nova) API.
      - Cloud Servers provides the core features of OpenStack Nova.
-
 
 ```
 
@@ -491,7 +483,6 @@ Do not use an ampersand (&) in text or headings to mean *and* unless you are spe
    * - When Peter Medrano, IT Director at Morgan & Sampson, arrived, he found employees using disparate, consumer email services from different providers.
      - When Peter Medrano, IT Director at Morgan and Sampson, arrived, he found employees using disparate, consumer email services from different providers.
 
-
 ```
 
 ### Colons
@@ -529,7 +520,6 @@ Use the following guidelines for colons.
        Table 3.1. Regionalized Service Endpoints 
 
        Example 4.4. List Versions Response: JSON
-
 
 ```
 
@@ -617,7 +607,6 @@ Use the following guidelines for commas. For basic comma usage, see a grammar re
 
        In December 2012 the database restoration failed.
 
-
 ```
 
 ### Dashes
@@ -641,13 +630,16 @@ An *en dash* is longer than a hyphen and shorter than an em dash. Use an en dash
 - To join the elements of a compound modifier when one of the elements is an open compound (a combination of words that constitutes a single concept, like Customer Support).
 
 ```eval_rst
-| Correct \|
-| --- \|
-| approximately 10–20 diagrams 
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Correct
+   * - approximately 10–20 diagrams 
        options 11–15 
-       2010–2013 \|
-| ``12–13=–1`` \|
-| Customer Support–related queries \|
+       2010–2013
+   * - ``12–13=–1``
+   * - Customer Support–related queries
 
 ```
 
@@ -747,7 +739,6 @@ When two or more words precede and modify a noun as a unit (also called a *compo
 
        Click the upper- or lower-right corner.
 
-
 ```
 
 #### Hyphens with prefixes
@@ -778,27 +769,22 @@ Following are some acceptable uses for parentheses:
 Do not add *(s)* or *(es)* to the end of a noun to indicate the possibility of more than one item. Use the singular form or the plural form, or use both forms joined by a conjunction.
 
 ```eval_rst
-| Use \|
-| --- \|
-| An access control list (ACL) allows access from an outside network
-into the ObjectRocket system. 
+.. list-table::
+   :widths: 100
+   :header-rows: 1
 
-       Object names cannot contain
-characters such as dollar signs ($) and question marks (?). 
+   * - Use
+   * - An access control list (ACL) allows access from an outside network into the ObjectRocket system. 
 
-       One
-rack unit is 44.45 mm (1.75 in.) high. 
+       Object names cannot contain characters such as dollar signs ($) and question marks (?). 
 
-       DNS is analogous to a
-phone book in that it assigns a numerical identifier (for example,
-210.48.108.35) to a particular name (for example, www.diversity.net.nz).
+       One rack unit is 44.45 mm (1.75 in.) high. 
 
+       DNS is analogous to a phone book in that it assigns a numerical identifier (for example, 210.48.108.35) to a particular name (for example, www.diversity.net.nz). 
 
-       4. *(Optional)* Enter first and last name information for the
-mailbox owner. 
+       4. *(Optional)* Enter first and last name information for the mailbox owner. 
 
-       You can submit up to 10 messages (the default)
-in a single request. \|
+       You can submit up to 10 messages (the default) in a single request.
 
 ```
 
@@ -845,7 +831,6 @@ Use the following guidelines for periods. For basic period usage, see a grammar 
      - To create a monitoring check 
        Table 3.1. Regionalized service endpoints
 
-
 ```
 
 ### Quotation marks
@@ -879,7 +864,6 @@ Use single and double quotation marks according to the following guidelines.
    * - Use quotation marks to enclose text that is used verbatim from another source, or to enclose quotations from people.
      - "None did as good a job as Rackspace for experience and spam detection," Woods said.
 
-
 ```
 
 ### Semicolons
@@ -904,7 +888,6 @@ Do not use a slash in dates. For information about how to format dates, see [Dat
        You can choose Cloud Backups/Files.
    * - To access your computer, plug it in, log in to the operating system, and type your password.
      - To access your computer, plug in the computer/log on/type your password.
-
 
 ```
 
@@ -945,7 +928,6 @@ For guidelines about using specific marks of punctuation, see [Punctuation](#pun
        ``1,500,000 ÷ 256 = 5,860``
    * - To separate the options in a menu path, use right-angle brackets (>) surrounded by spaces.
      - Open Mac Mail and select **Preferences > Accounts**.
-
 
 ```
 
@@ -1040,7 +1022,6 @@ The different parts of the preceding URL are explained in the following table.
    * - ``/path/to/files``
      - The name of the object or objects in Swift to be referenced. Although Swift doesn't support paths, swiftfs attempts to interpret names that look like paths and behave appropriately. For example, an input path named ``/path/to/*`` would qualify all objects with names prefixed by ``/path/to/``. Similarly, an output path of ``/path/to/`` would prefix the names of all newly created objects with ``/path/to/``.
 
-
 ```
 
 The following table provides the default values for the absolute limits.
@@ -1067,7 +1048,6 @@ The following table provides the default values for the absolute limits.
    * - VCPUs
      - Maximum virtual CPUs across all data nodes
      - 6
-
 
 ```
 
@@ -1106,7 +1086,6 @@ The following matrix indicates which upgrade scenarios are supported.
      -
      - X
 
-
 ```
 
 The following chart compares these top content management systems (CMSs).
@@ -1137,7 +1116,6 @@ The following chart compares these top content management systems (CMSs).
    * - **Installation**
      - Drupal Installation Forum
      - WordPress Installation Forum
-
 
 ```
 
@@ -1170,7 +1148,6 @@ The title of a task topic, article, or section begins with the imperative form o
      - Creating users in SQL Server 
        How to create users in SQL Server 
        To create users in SQL Server
-
 
 ```
 
@@ -1434,7 +1411,6 @@ Use a space, not hyphens or dashes, to separate parts of the telephone number.
    * - 1 800 961 4454
      - 1 (800) 961-4454
 
-
 ```
 
 Precede US and Canadian telephone numbers with 1. Precede all other telephone numbers with a plus sign.
@@ -1449,7 +1425,6 @@ Precede US and Canadian telephone numbers with 1. Precede all other telephone nu
    * - 1 210 312 4600
      - +44 0 20 8734 2700 
        +45 7734 5764
-
 
 ```
 
@@ -1587,7 +1562,6 @@ The following table lists formatting conventions for items that might appear in 
      - Italic
      - Do not use *button* and *icon* interchangeably. If you are referring to a command button or toolbar button (labeled or unlabeled), use *button*. If you are referring to a graphic on a screen, window, or other area, use *icon*.
 
-
 ```
 
 ### Conventions for API and CLI
@@ -1694,7 +1668,6 @@ The following table lists formatting conventions for items that usually appear i
      - You can set the ``MYSQL_HOST`` environment variable to the remote host's address. 
 
        You can export the tenant ID to the ``$account`` environment variable and the authentication token to the ``$token`` environment variable.
-
 
 ```
 
@@ -1841,7 +1814,6 @@ The following table lists formatting conventions for items that usually appear i
      - Regular text
      - On the Welcome page of the Active Directory Domain Services Installation Wizard, ensure that the **Use advanced mode installation** check box is cleared, and then click **Next**.
 
-
 ```
 
 ## Time
@@ -1855,14 +1827,17 @@ When you use the 24-hour clock to show time, use the following guidelines:
 - If you need to show a time zone, use Coordinated Universal Time (UTC), and indicate the time-zone offset from UTC.
 
 ```eval_rst
-| Examples \|
-| --- \|
-| 08:29:37 \|
-| 18:30:59 \|
-| 18:00:00 to 20:30:00 \|
-| 10:30:00 (UTC -6) (refers to CT) \|
-| 12:00:00 (noon) \|
-| 00:00:00 (midnight) \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Examples
+   * - 08:29:37
+   * - 18:30:59
+   * - 18:00:00 to 20:30:00
+   * - 10:30:00 (UTC -6) (refers to CT)
+   * - 12:00:00 (noon)
+   * - 00:00:00 (midnight)
 
 ```
 
@@ -1876,14 +1851,17 @@ When you use the 12-hour clock to show time, use the following guidelines:
 - When referring to 12 a.m., use *12 midnight* or just *midnight*. When referring to 12 p.m., use *12 noon* or just *noon*.
 
 ```eval_rst
-| Examples \|
-| --- \|
-| 10:29 a.m. \|
-| 6 p.m. \|
-| 6:00 p.m. to 8:30 p.m. \|
-| 10:30 a.m. central time (CT) \|
-| 1:30 p.m. central standard time (CST) \|
-| midnight \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Examples
+   * - 10:29 a.m.
+   * - 6 p.m.
+   * - 6:00 p.m. to 8:30 p.m.
+   * - 10:30 a.m. central time (CT)
+   * - 1:30 p.m. central standard time (CST)
+   * - midnight
 
 ```
 
@@ -1969,7 +1947,6 @@ Observe the following guidelines when you are creating titles for stand-alone ar
      - Troubleshooting alarms 
        
        Service troubleshooting on Linux
-
 
 ```
 
@@ -2068,7 +2045,6 @@ Observe the following guidelines when you are creating section titles and headin
      - A grammatical structure that is appropriate for the type of content. A troubleshooting topic can contain task, tutorial, concept, or reference information.
      - Troubleshooting
 
-
 ```
 
 ### Tables of contents
@@ -2119,7 +2095,6 @@ The body text of a section or article must be independent from the title or head
      - **Identify network interfaces on Linux** 
 
        This article briefly describes how to do this.
-
 
 ```
 
@@ -2193,7 +2168,6 @@ Use the following guidelines when showing Rackspace and third-party trademarks i
        For more information, see the `Rackspace Trademark Guidelines PDF from Legal <https://one.rackspace.com/download/attachments/72684499/RACKSPACE-%2327629-v1-Rackspace_Trademark_Guidelines.pdf?version=1&modificationDate=1387917185000&api=v2>`__.
      - We provide *Fanatical Support*.
      - Our support is Fanatical.
-
 
 ```
 

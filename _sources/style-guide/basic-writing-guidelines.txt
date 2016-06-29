@@ -47,7 +47,6 @@ As often as possible, use the sentence structure *subject*—*verb*—*object*. 
    * - If you must monitor clients from the host, you can configure your settings in the directory.
      - You can configure your settings in the directory if you must monitor clients from the host.
 
-
 ```
 
 ### Restrict sentence length
@@ -65,7 +64,6 @@ Even when a long sentence is well written, it can be harder to follow and unders
      - After you choose a data center, the app retrieves a list of the containers that are hosted within that data center, along with the number of files in each container and the approximate size.
    * - Select whether to overwrite files with the same name or to restore files to their original folders. Then, click **Next**.
      - Click the check boxes to confirm whether you would like to Overwrite files with the same name or restore the files to their original folders and then click the **Next** button.
-
 
 ```
 
@@ -88,7 +86,6 @@ Ask yourself whether customers need to be told everything you are telling them. 
      - The flexibility, extensibility, rich feature set and ease-of-use offered by SharePoint make it the logical choice for many businesses when it comes to their Collaboration, Content Management and Business Intelligence needs. As you turn to SharePoint to manage more of your business-critical processes and workflows, you need reliable SharePoint hosting, backed by solid SharePoint expertise, to keep your environment performing optimally.
    * - In an environment where the product is running, you can use the ESP utility to monitor and audit your backup and recovery activities across the enterprise.
      - In an environment where the product is installed and running on one or more hosts, the ESP utility enables you to monitor your backup and recovery activities and audit your backup and recovery practices from an enterprise-wide perspective.
-
 
 ```
 
@@ -124,7 +121,6 @@ If a sentence contains a series of items, converting the items to a bullet list 
        - Manage jobs in the job queue.
      - From the Job Scheduler page, you can run a generated script immediately, schedule a generated script to run at a later time, track the execution of submitted jobs, and manage jobs in the job queue.
 
-
 ```
 
 ## Use active voice
@@ -152,7 +148,6 @@ Active-voice sentences clarify the performer of an action and are easier to unde
    * - Rackspace products and services solve your business problems.
      - Your business problems are solved by Rackspace products and services.
 
-
 ```
 
 However, passive voice is acceptable in the following situations:
@@ -179,7 +174,6 @@ However, passive voice is acceptable in the following situations:
      - Administrators cannot assign account owners additional roles, and they cannot restrict the access of account owners.
      - In this context, the object, account owners, is more important than the actor, administrators.
 
-
 ```
 
 ## Use present tense
@@ -196,7 +190,7 @@ Use future tense only when you need to emphasize that something will occur later
    * - Use
      - Avoid
    * - The product **prompts** you to verify the deletion.
-     - The product ***will prompt*** you to verify the deletion.
+     - The product **will prompt** you to verify the deletion.
    * - After you log in, your account **begins** the verification process.
      - After you log in, your account **will then begin** the verification process.
    * - To back up Cloud Sites to Cloud Files by using this example, you **create** two cron jobs. One job **backs up** the cloud site and database, and the second job **uploads** the backup to Cloud Files.
@@ -205,7 +199,6 @@ Use future tense only when you need to emphasize that something will occur later
      - Any customer with a Cloud account **will be able to provision** multiple ServiceNet database instances.
    * - When the contract changes, Rackspace **will notify** customers in release notes.
      - Not applicable. Future tense is appropriate in this example.
-
 
 ```
 
@@ -243,7 +236,6 @@ Avoid switching person (point of view) in the same document. Switching person is
    * - I want to update everyone about the current status of the project and our future plans. (from a blog post)
      - This post describes the current status of the project and future plans.
 
-
 ```
 
 ## Create short paragraphs
@@ -272,7 +264,6 @@ The following example shows how breaking up a long paragraph by using a list mak
        When you delete a file, it is permanently removed from the Cloud Files container.
      - Within the Cloud Storage App for Microsoft SharePoint, you can delete a single file or multiple files from a container. You can delete a single file by clicking the delete icon to the right of the file's name. You can delete multiple files at one time by selecting the cloud icon to the left of each file's name and then clicking Delete Selected. Rows that you select for deletion are highlighted with a dark gray background. When you delete a file, it is permanently removed from the Cloud Files container.
 
-
 ```
 
 ## Use short, familiar words and phrases
@@ -291,7 +282,6 @@ If a word has variant spellings that are equally acceptable (such as *canceled* 
      - At the current time we test on Python 2.7.x, but in the future we will fully support Python 3.3.x.
    * - This guide is designed to get you started with the service and to answer your questions about the service.
      - This guide is designed to get you up and running with the service and to answer any questions that you may have about the service.
-
 
 ```
 
@@ -358,7 +348,6 @@ When you use weak verbs like *be*, *have*, *make*, or *do* (and their variants),
    * - When you **create** a server, ...
      - When **creating** a server, ...
 
-
 ```
 
 ### Turn noun+verb constructions into verb-only constructions
@@ -377,7 +366,6 @@ Many nouns that we commonly use are built from verbs. When a verb is transformed
      - **Perform the installation** of the product by completing the following tasks.
    * - The program **encrypts** user IDs and passwords.
      - The program **enables the encryption of** user IDs and passwords.
-
 
 ```
 
@@ -398,7 +386,6 @@ Simple verbs, such as verbs in the present tense, are easier to read and underst
    * - If you **use** a Red Hat distribution, iptables works a little differently.
      - If you **are using** a Red Hat distribution, iptables works a little differently.
 
-
 ```
 
 ### Use helping verbs accurately
@@ -410,16 +397,16 @@ If you need to use the following helping verbs, use them accurately and consiste
 - **Should**: Use *should* to tell customers what they *ought* to do. Because *should* implies uncertainty, avoid using it unless you explain further.
 
 ```eval_rst
-| Use \|
-| --- \|
-| You **can** customize Cloud Queues to achieve a wide range of
-performance, durability, availability, and efficiency goals. \|
-| If you need space, you **may** uninstall the program. \|
-| A service **might** expose endpoints in different regions. \|
-| The worker **must** delete the message when work is done. \|
-| To avoid losing a claim in the middle of processing a message, clients
-**should** periodically renew claims during long-running batches of
-work. \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Use
+   * - You **can** customize Cloud Queues to achieve a wide range of performance, durability, availability, and efficiency goals.
+   * - If you need space, you **may** uninstall the program.
+   * - A service **might** expose endpoints in different regions.
+   * - The worker **must** delete the message when work is done.
+   * - To avoid losing a claim in the middle of processing a message, clients **should** periodically renew claims during long-running batches of work.
 
 ```
 
@@ -444,7 +431,6 @@ If you must use a phrasal verb, keep the parts of the verb together unless that 
    * - You can safely **back up a database** by using Rackspace Cloud Backup.
      - You can safely **back a database up** by using Rackspace Cloud Backup.
 
-
 ```
 
 ### Do not use verbs as nouns or adjectives
@@ -462,7 +448,6 @@ If a word is defined in the dictionary as a verb, do not use it as a noun or adj
      - When you complete the **install**, you can begin the **configure**.
    * - After rubygems **is compiled**, the following message appears at the bottom of the output text.
      - When the **compile process** is finished, the following message appears at the bottom of the output text.
-
 
 ```
 
@@ -484,7 +469,6 @@ Don't use nouns or adjectives as verbs, and do not add verb suffixes to abbrevia
      - Some databases and search engines **AND** adjacent words in a keyword search.
    * - **Navigate** to the new directory.
      - **CD** to the new directory.
-
 
 ```
 
@@ -511,7 +495,6 @@ To avoid using a transitive verb intransitively, you can make it passive if the 
    * - After the installation **is completed**, ensure that the FTP services are running.
      - After the installation **completes**, ensure that the FTP services are running.
 
-
 ```
 
 ### Avoid using anthropomorphic verbs to describe inanimate objects
@@ -532,7 +515,6 @@ The following anthropomorphic verbs are acceptable in the computer industry: acc
      - Mission-critical web-based applications and workloads **need** an HA solution.
    * - The software **stores** your security profile and uses it the next time you log in.
      - The software **remembers** your security profile and uses it the next time you log in.
-
 
 ```
 
@@ -555,7 +537,6 @@ Participles are verbs that end in *-ed* or *-ing* and act as modifiers. Gerunds 
      - Test the certificate **using** a browser to connect to your server.
    * - When **you use** a load balancer with a public-facing IP address, this address becomes the IP address of your website.
      - When **using** a load balancer with a public-facing IP address, this address becomes the IP address of your website.
-
 
 ```
 
@@ -581,7 +562,6 @@ Gerunds are used to start headings for process topics. Ensure that their meaning
    * - Changing a Password
      - Changing Passwords
 
-
 ```
 
 ## Back up statements with details
@@ -602,7 +582,6 @@ Back up statements with solid, specific details. Do not sacrifice clarity and co
      - Rackspace offers scalability and agility.
    * - The next generation Cloud Servers powered by OpenStack is a fast, reliable, and scalable cloud compute solution. It enables you to provision servers in the Rackspace cloud in minutes.
      - The next generation Cloud Servers is a fast cloud compute solution.
-
 
 ```
 
@@ -630,7 +609,6 @@ A nonrestrictive clause does not change the core meaning of the sentence. You se
    * - Enter the user name and password **that you just created**. (Not the user name and password that you created last month)
      - The hourly backups are rolled into a nightly backup, **which is retained for two days**.
 
-
 ```
 
 Be sure to clarify restrictive clauses, as follows:
@@ -653,7 +631,6 @@ Be sure to clarify restrictive clauses, as follows:
      - A task presents **information a customer needs** to achieve a specific goal. 
 
        A task presents **information which a customer needs** to achieve a specific goal.
-
 
 ```
 
@@ -678,7 +655,6 @@ Avoid using *it is* to begin a sentence. Such a construction hides the real subj
    * - You must close all open windows before you run the script.
      - It is important that you close all open windows before you run the script.
 
-
 ```
 
 ### This
@@ -693,7 +669,6 @@ Avoid beginning a sentence with the pronoun *this*, unless you follow *this* wit
      - Avoid
    * - This option causes an error when you run the program.
      - This causes an error when you run the program.
-
 
 ```
 
@@ -716,7 +691,6 @@ Avoid using *there is* and *there are* as the subject of a sentence or clause. U
    * - The Cloud Sites FTP service supports resumable uploading. If a connection fails during an upload, you do not need to restart the upload from the beginning.
      - The Cloud Sites FTP service supports resumable uploading. This means that if there is a connection failure during an upload, it does not have to be started from the beginning.
 
-
 ```
 
 ### That
@@ -734,7 +708,6 @@ Although you should use *that* as a relative pronoun (see [Use restrictive and n
    * - You can also edit or delete your CNAME by managing your DNS in your existing tool.
      - If you want to edit or delete your CNAME, you can also do that by managing your DNS in your existing tool.
 
-
 ```
 
 ## Include all necessary words
@@ -751,7 +724,6 @@ Include all the words that are necessary to make the meaning of a sentence clear
      - Empty file.
    * - The Label option is not supported for this file format.
      - Label option not supported for file format.
-
 
 ```
 
@@ -771,7 +743,6 @@ Positive statements are easier to understand than negative statements.
      - Do not forget to involve your business users in the scheduling process.
    * - Sometimes you want to prevent a search engine from indexing a website.
      - It is not uncommon in certain situations to not want to allow indexing of a site by a search engine.
-
 
 ```
 
@@ -800,7 +771,6 @@ Also, try to avoid the following negative words, using instead the suggested alt
      - remove
    * - wrong
      - incorrect, inconsistent
-
 
 ```
 
@@ -832,7 +802,6 @@ Use the following terms consistently:
      - The required namespace kernel features are not available in the default kernel shipped with Red Hat Enterprise Linux 6.4, CentOS 6.4, and **earlier** versions of these operating systems.
 
        Rackspace Private Cloud version 4.0 has not been tested on versions of Ubuntu **later** than 12.04.
-
 
 ```
 
@@ -915,7 +884,6 @@ Some non-English words and abbreviations are difficult to translate, and some cu
        
        Full migration vs. package migration *(heading)*
 
-
 ```
 
 ## Write for a global audience
@@ -976,7 +944,6 @@ The following table lists some idioms and colloquialisms, and provides alternati
    * - when you are done
      - when you are finished
 
-
 ```
 
 ### Avoid metaphorical terms
@@ -1001,7 +968,6 @@ The following table provides some examples of metaphorical terms that can easily
      - avoid common problems
    * - the drawback of frequent updates
      - the disadvantage of frequent updates
-
 
 ```
 
@@ -1089,7 +1055,6 @@ The following table lists some jargon typically used in the high tech industry a
      - generate
      - If the program fails, an error is generated.
 
-
 ```
 
 ### Use culture-neutral language and examples
@@ -1130,7 +1095,6 @@ Date formats vary among cultures. Write out dates, unless you are showing a lite
      - 8/12/2012
        
        8-12-12
-
 
 ```
 

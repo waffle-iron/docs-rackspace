@@ -51,7 +51,6 @@ Here are key files that define project and content architecture:
    * - Requirements file to support local builds
      - ``requirements.txt``
 
-
 ```
 
 * Update the source files by using the GitHub editor or any plain text editor.

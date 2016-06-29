@@ -46,7 +46,6 @@ Do not capitalize the spelled-out term unless it is a proper name or normally ca
      - OS
      - operating system (OS)
 
-
 ```
 
 Also use the following guidelines related to abbreviations.
@@ -122,18 +121,19 @@ Also use the following guidelines related to abbreviations.
      - for example
      - e.g.
 
-
 ```
 
 ### Abbreviations of byte and bit
 *Byte* is abbreviated with an uppercase *B*. *Bit* is abbreviated with a lowercase *b*. For example, *gigabyte* is abbreviated as *GB*, and *gigabit* is abbreviated as *Gb*. In general, use such abbreviations only with a number value; otherwise, spell out the term. If you want to emphasize *bit* or *byte*, use the spelled-out term rather than or in addition to the abbreviation.
 
 ```eval_rst
-| Examples \|
-| --- \|
-| The 100 GB drive appears as 107.4 GB because of how the megabytes are
-counted. \|
-| The unit of value for this alarm is megabits per second (Mbps). \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Examples
+   * - The 100 GB drive appears as 107.4 GB because of how the megabytes are counted.
+   * - The unit of value for this alarm is megabits per second (Mbps).
 
 ```
 
@@ -195,7 +195,6 @@ Be aware that some of these names might have nonstandard or no capitalization. Y
    * - PuTTY
      - lighttpd
 
-
 ```
 
 For the correct capitalization of Rackspace product names, see the [Rackspace Cloud corporate website](https://www.rackspace.com/cloud).
@@ -233,7 +232,6 @@ Most abbreviated forms of terms use all capitals, although exceptions exist. Als
    * - WSDL
      - Web Services Description Language
 
-
 ```
 
 For more information about abbreviations, see [Acronyms and other abbreviations](#acronyms-and-other-abbreviations).
@@ -244,11 +242,13 @@ When you are documenting part of the interface within a procedure or other type 
 However, when you use terms from the interface as common nouns, do not capitalize the terms.
 
 ```eval_rst
-| Use \|
-| --- \|
-| Click the action cog to the left of the check name and select **Rename
-Check**. \|
-| From the Cloud Control Panel, you can rename a check. \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Use
+   * - Click the action cog to the left of the check name and select **Rename Check**.
+   * - From the Cloud Control Panel, you can rename a check.
 
 ```
 
@@ -262,16 +262,19 @@ Many terms that might be capitalized on the interface are not capitalized when u
 - When you refer generally to a component, you can use lowercase (as in the utility or the agent).
 
 ```eval_rst
-| Examples \|
-| --- \|
-| Cloud Control Panel \|
-| Zipit Backup Utility \|
-| Rate Limiting component \|
-| Cloud Identity service \|
-| servers \|
-| backups \|
-| containers \|
-| authentication \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Examples
+   * - Cloud Control Panel
+   * - Zipit Backup Utility
+   * - Rate Limiting component
+   * - Cloud Identity service
+   * - servers
+   * - backups
+   * - containers
+   * - authentication
 
 ```
 
@@ -289,7 +292,6 @@ Most of the time, we have no trouble determining whether a noun is proper or com
      - You can submit up to 10 Messages in a single Request, but you must encapsulate them in a Collection Container (an Array in JSON).
    * - Repose authentication provides caching for user tokens, roles, and groups.
      - Repose Authentication provides caching for User Tokens, Roles, and Groups.
-
 
 ```
 
@@ -333,7 +335,6 @@ If the heading includes text from a user interface, the capitalization of that t
    * - Back up your files
      - Differences between IMAP and POP
 
-
 ```
 
 #### Guidelines for title-style capitalization
@@ -348,10 +349,16 @@ Capitalize all words in the title except for the following types of words:
 - Words that always begin with a lowercase letter, such as literal command names or certain product or software names
 
 ```eval_rst
-\| Examples \| \|---\| \| Next Generation Cloud Servers Developer Guide
-\| \| Rackspace Cloud DNS Getting Started Guide \| \| Cloud Files
-Introduction \| \| Cloud Networks Release Notes \| \| API Writers Guide
-\|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Examples
+   * - Next Generation Cloud Servers Developer Guide
+   * - Rackspace Cloud DNS Getting Started Guide
+   * - Cloud Files Introduction
+   * - Cloud Networks Release Notes
+   * - API Writers Guide
 
 ```
 
@@ -369,12 +376,13 @@ Use the following guidelines for capitalizing terms and definitions in glossarie
 - For the definition, use [sentence-style capitalization](#sentence-style-capitalization).
 
 ```eval_rst
-| Example \|
-| --- \|
-| **token** 
-       An opaque string that represents an authorization to
-access cloud resources. Tokens might be revoked at any time and are
-valid for a finite duration. \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Example
+   * - **token** 
+       An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration.
 
 ```
 
@@ -437,7 +445,6 @@ In examples of API authentication requests, and other examples where we are teac
      - *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* 
        $token
      - 2e356864f39831523c184fc646b1997b
-
 
 ```
 
@@ -579,7 +586,6 @@ Unless space is limited, always show dates in the following format: *month day*,
        11/12/10 
        10-11-12
 
-
 ```
 
 **Note:** Do not use ordinal numbers for dates. For example, do not use *January 1st*; use *January 1* instead.
@@ -587,15 +593,14 @@ Unless space is limited, always show dates in the following format: *month day*,
 When the month, day, and year are embedded in a sentence, use a comma before and after the year. When only the month and year are embedded in a sentence, omit the commas unless the syntax would ordinarily require a comma following the year.
 
 ```eval_rst
-| Use \|
-| --- \|
-| Any sites that are using MySQL 4 after November 1, 2011, will be
-automatically migrated to MySQL 5. \|
-| The Alert Logic Security Research Team used 12 months of security
-event data captured from July 2010 through June 2011. \|
-| As of September 2013, a subset of customer accounts were not being
-billed for actual usage in comparison to their preselected SQL Server
-storage allocations. \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Use
+   * - Any sites that are using MySQL 4 after November 1, 2011, will be automatically migrated to MySQL 5.
+   * - The Alert Logic Security Research Team used 12 months of security event data captured from July 2010 through June 2011.
+   * - As of September 2013, a subset of customer accounts were not being billed for actual usage in comparison to their preselected SQL Server storage allocations.
 
 ```
 
@@ -606,10 +611,12 @@ Use an all-numeric date only in the following situations:
 Because all-numeric dates are interpreted differently in different countries, explain the format of a numeric date, and use a consistent format throughout the  documentation. If possible, use the ISO 8601 format, which is *yyyy*-*mm*-*dd* (for example, 2012-11-10 for November 10, 2012).
 
 ```eval_rst
-| Use \|
-| --- \|
-| The value that is shown for 8/19/10 represents the average number of
-extents from data collections beginning August 19, 2010. \|
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Use
+   * - The value that is shown for 8/19/10 represents the average number of extents from data collections beginning August 19, 2010.
 
 ```
 
@@ -667,7 +674,6 @@ Use a generic name or a standard abbreviation if one exists. If a generic name o
      - Use the term *zip* for both general and specific references.
      - In the example, **file.zip** is the name that you assign to the zip file.
 
-
 ```
 
 ## Glossaries
@@ -692,12 +698,15 @@ To show the glossary term that you are defining, use the following guidelines:
 To alphabetize glossary terms, use the word-by-word method. In this method, terms that contain more than one word separated by spaces or commas are alphabetized by the first word only, unless the first word of two or more entries is the same. In that case, the second and subsequent words are used to determine the alphabetical order. Hyphens, slashes, and apostrophes continue a single word.
 
 ```eval_rst
-| Example word-by-word alphabetization \|
-| ---\|
-| new math 
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Example word-by-word alphabetization
+   * - new math 
        newborn 
        new/old 
-       newspaper \|
+       newspaper
 
 ```
 
@@ -737,7 +746,6 @@ The following table shows examples.
      - **API** 
        Application Programming Interface. A set of commands, functions, and protocols that programmers can use to create application services by using an open application.
 
-
 ```
 
 ### Cross-references to glossary terms
@@ -756,20 +764,19 @@ Use the following guidelines when creating cross-references within a glossary:
   - Make the term a link to the cross-referenced term.
 
 ```eval_rst
-| Examples \|
-| --- \|
-| **address** 
-       See address space. \|
-| **collection** 
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Examples
+   * - **address** 
+       See address space.
+   * - **collection** 
        A group of packages that have the same qualifier.
-\|
-| **data point** 
-       A value that stores metrics. Metrics are stored as
-full resolution data points, which are periodically rolled up
-(condensed) into coarser data points. *See also* data granularity. \|
-| **replace** 
-       To recover by dropping the selected database and
-re-creating it. *Contrast with* copy over. \|
+   * - **data point** 
+       A value that stores metrics. Metrics are stored as full resolution data points, which are periodically rolled up (condensed) into coarser data points. *See also* data granularity.
+   * - **replace** 
+       To recover by dropping the selected database and re-creating it. *Contrast with* copy over.
 
 ```
 
@@ -802,18 +809,17 @@ When you are discussing IP addresses or referring to a specific IP address, do n
 When you need to refer to a specific version of the IP, use *IPv4 address* or *IPv6 address* as appropriate.
 
 ```eval_rst
-| Examples \|
-| --- \|
-| If your website is hosted in the DFW data center, you can use the
-following primary and secondary IP addresses: 
-        Primary:
-74.205.61.228 
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Examples
+   * - If your website is hosted in the DFW data center, you can use the following primary and secondary IP addresses: 
+        Primary: 74.205.61.228 
         Secondary: 74.205.61.229 
-        Additional:
-72.32.36.144/28 (72.32.36.145 - 72.32.36.158) \|
-| Each Vyatta appliance is assigned one public IPv4 address. \|
-| If you are using IPv6 on your server, you might need to add the IPv6
-addresses of your name servers to the **resolv.conf** file. \|
+        Additional: 72.32.36.144/28 (72.32.36.145 - 72.32.36.158)
+   * - Each Vyatta appliance is assigned one public IPv4 address.
+   * - If you are using IPv6 on your server, you might need to add the IPv6 addresses of your name servers to the **resolv.conf** file.
 
 ```
 
@@ -882,7 +888,6 @@ When showing specific key names and key combinations, apply bold and use the fol
 
        To apply the general number format, press **Ctrl+Shift+~**.
 
-
 ```
 
 ## Links and cross-references
@@ -930,7 +935,6 @@ When you create a cross-reference sentence to point to other information, linked
      - Snapshots are described later in this Getting Started Guide.
    * - The following table lists the OpenStack versions and components supported by the current releases of Rackspace Private Cloud.
      - The table below lists the OpenStack versions and components supported by the current releases of Rackspace Private Cloud.
-
 
 ```
 
@@ -995,7 +999,6 @@ When you provide links, observe the following guidelines for placement, construc
    * - Cloud Load Balancers [product page] has a content caching feature that stores recently accessed files on the load balancer for easy retrieval by web clients. *(when linking to the www.rackspace.com product page)*
      - Cloud Load Balancers has a content caching feature that stores recently accessed files on the load balancer for easy retrieval by web clients. *(when linking to the www.rackspace.com product page)*
 
-
 ```
 
 ## Lists
@@ -1051,7 +1054,6 @@ All lists are preceded by introductory text that provides the context for the li
        You can use this product to do the following: 
 
        The following are available:
-
 
 ```
 
