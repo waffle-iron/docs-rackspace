@@ -33,7 +33,7 @@ cd $SOURCE
 make html
 
 # move html files to root directory
-cp -rv _build/html/* ../
+cp -rv _build/html/* $GITDIR/
 
 # remove source files
 cd $GITDIR
