@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Importing and exporting labels &mdash; Rackspace Documentation Guides  documentation</title>
+  <title>Table width fix for Read the Docs Sphinx theme &mdash; Rackspace Documentation Guides  documentation</title>
   
 
   
@@ -34,8 +34,7 @@
   
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
         <link rel="up" title="Tools" href="index.html"/>
-        <link rel="next" title="Markdown to RST table conversion" href="mdsphinx.html"/>
-        <link rel="prev" title="Publishing to pages.github.rackspace.com" href="internal-publish-script.html"/> 
+        <link rel="prev" title="Development and production branches on developer.rackspace.com" href="publishing.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -89,15 +88,11 @@
 <li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Building from Source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Importing and exporting labels</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#set-up">Set up</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Content deletion from Nexus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="publishing.html">Development and production branches on developer.rackspace.com</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rtd-tables.html">Table width fix for Read the Docs Sphinx theme</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Table width fix for Read the Docs Sphinx theme</a></li>
 </ul>
 </li>
 </ul>
@@ -132,11 +127,11 @@
       
           <li><a href="index.html">Tools</a> &raquo;</li>
       
-    <li>Importing and exporting labels</li>
+    <li>Table width fix for Read the Docs Sphinx theme</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/tools/manage-labels-readme.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/tools/rtd-tables.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -146,48 +141,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="importing-and-exporting-labels">
-<span id="importing-and-exporting-labels"></span><h1>Importing and exporting labels<a class="headerlink" href="#importing-and-exporting-labels" title="Permalink to this headline">#</a></h1>
-<p>Instead of manually copying and updating each label in a GitHub repository, you
-can use the <a class="reference external" href="https://www.npmjs.com/package/github-label-manager">github-label-manager npm
-module</a> to manage your
-GitHub label configuration across repositories.</p>
-<ul class="simple">
-<li>Export label configuration from an existing repository to a JSON schema file.</li>
-<li>Copy new labels from one repo to another repo without overwriting the
-existing labels.</li>
-<li>Delete all labels and import a replacement set from an existing label
-configuration file.</li>
-</ul>
-<div class="section" id="prerequisites">
-<span id="prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li>Install Node.js and npm</li>
-<li>Configure system to <a class="reference external" href="http://www.sitepoint.com/beginners-guide-node-package-manager/">install and use global npm
-packages</a></li>
-</ul>
+  <div class="section" id="table-width-fix-for-read-the-docs-sphinx-theme">
+<h1>Table width fix for Read the Docs Sphinx theme<a class="headerlink" href="#table-width-fix-for-read-the-docs-sphinx-theme" title="Permalink to this headline">#</a></h1>
+<p>The <strong>Read the Docs</strong> Sphinx theme contains a bug that causes text in table
+cells not to wrap. This results in very wide tables with horizontal scroll
+bars.</p>
+<p>You can workaround this issue by defining a custom CCS override file.</p>
+<ol class="arabic">
+<li><p class="first">Change into your documentation directory. This is usually where
+the <code class="docutils literal"><span class="pre">index.rst</span></code> and <code class="docutils literal"><span class="pre">conf.py</span></code> files are located:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cd doc
+</pre></div>
 </div>
-<div class="section" id="set-up">
-<span id="set-up"></span><h2>Set up<a class="headerlink" href="#set-up" title="Permalink to this headline">#</a></h2>
-<p>Complete the following steps to install the Github label manager software and
-configure environment variables required to authenticate and run commands
-against GitHub repositories that you have permission to update.</p>
-<ol class="simple">
-<li>Follow the instructions to install the
-<a class="reference external" href="https://www.npmjs.com/package/github-label-manager">github-label-manager npm
-module</a>.</li>
-<li>Generate a <a class="reference external" href="https://github.com/settings/tokens">GitHub personal access token</a>
-or copy an existing one so that you can authenticate when submitting
-requests.</li>
-<li>Export your GitHub username and personal access token value to environment
-variables, or add them to your <code class="docutils literal"><span class="pre">~/.bash_profile</span></code> .</li>
+</li>
+<li><p class="first">If it does not already exist, create a <code class="docutils literal"><span class="pre">_static</span></code> directory:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ mkdir _static
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a <code class="docutils literal"><span class="pre">theme_overrides.css</span></code> file in the <code class="docutils literal"><span class="pre">_static</span></code> directory:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ touch _static/theme_overrides.css
+</pre></div>
+</div>
+</li>
+<li><p class="first">Open the <code class="docutils literal"><span class="pre">theme_overrides.css</span></code> file and add the following CSS:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>/* override table width restrictions */
+@media screen and (min-width: 767px) {
+
+   .wy-table-responsive table td {
+      /* !important prevents the common CSS stylesheets from overriding
+         this as on RTD they are loaded after this stylesheet */
+      white-space: normal !important;
+   }
+
+   .wy-table-responsive {
+      overflow: visible !important;
+   }
+}
+</pre></div>
+</div>
+</li>
+<li><p class="first">Open the <code class="docutils literal"><span class="pre">conf.py</span></code> file and add the following configuration options:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+
+<span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;css_files&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;_static/theme_overrides.css&#39;</span><span class="p">,</span>  <span class="c1"># override wide tables in RTD theme</span>
+        <span class="p">],</span>
+     <span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Build your documentation using Sphinx and check the tables; cells should
+now wrap correctly.</p>
+</li>
 </ol>
-<p>You can find existing label configuration files in the <a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/tree/master/tools/GitHub-infra-templates">docs-rackpace
-repository</a>.
-To import these configurations to a repository, download them to your system.</p>
-<p>For command examples and more information, see the <a class="reference external" href="https://www.npmjs.com/package/github-label-manager">github-label-manager
-documentation</a>.</p>
-</div>
 </div>
 
 
@@ -197,10 +205,8 @@ documentation</a>.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mdsphinx.html" class="btn btn-neutral float-right" title="Markdown to RST table conversion" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="internal-publish-script.html" class="btn btn-neutral" title="Publishing to pages.github.rackspace.com" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="publishing.html" class="btn btn-neutral" title="Development and production branches on developer.rackspace.com" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

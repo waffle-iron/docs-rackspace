@@ -15,3 +15,4 @@ How to use the Cloud documentation team tools.
    mdsphinx.rst
    nexus-deletion.md
    publishing.rst
+   rtd-tables.rst
