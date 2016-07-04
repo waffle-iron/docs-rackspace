@@ -221,9 +221,9 @@ htmlhelp_basename = 'docs-rackspace'
 # this will change the 'paragraph' character to '#'
 html_add_permalinks = '#'
 
-# config for recommonmark extension
+
 def setup(app):
-    """Setup sphinx app extension hook."""
+    """Setup sphinx app extension hook for recommonmark."""
     app.add_config_value('recommonmark_config', {
         'enable_auto_doc_ref': True,
         'auto_toc_tree_section': None,
