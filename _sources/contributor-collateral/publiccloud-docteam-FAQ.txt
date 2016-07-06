@@ -113,7 +113,7 @@ The API docs are located in the following https://github.com/rackerlabs repos:
 -  `Cloud Servers <https://github.com/rackerlabs/docs-cloud-servers>`_
 -  `Rackspace Autoscale
    <https://github.com/rackerlabs/otter/tree/master/api-docs/rst/dev-guide>`_
--  `Rackspace CDN <https://github.com/rackerlabs/docs-cloud-load-cdn>`_
+-  `Rackspace CDN <https://github.com/rackerlabs/docs-cloud-cdn>`_
 -  `Rackspace Metrics <https://github.com/rackerlabs/docs-cloud-metrics>`_
 -  `Rackspace Monitoring
    <https://github.com/rackerlabs/docs-cloud-monitoring>`_
