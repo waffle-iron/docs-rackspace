@@ -11,6 +11,6 @@ documentation to developer.rackspace.com.
    :maxdepth: 1
 
    contributor-collateral/index.rst
-   rpc-other/index.rst
+   rpc/index.rst
    style-guide/index.rst
    tools/index.rst
