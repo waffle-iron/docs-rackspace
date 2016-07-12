@@ -49,7 +49,7 @@ For each release-specific RN file that you create, observe the following guideli
 
 - Include the "Documentation changes" section only if you have significant content changes, such as adding an extended example, a tutorial, or new content. If you have no significant content changes for a release, omit that section entirely.
 
-- Order your RN files from latest to earliest, so that the latest is always "on top.". For example, the release notes for version 1.1 should precede the release notes for version 1.0 in the hierarchy.
+- Order your RN files from latest to earliest, so that the latest is always "on top." For example, the release notes for version 1.1 should precede the release notes for version 1.0 in the hierarchy.
 
 ## Formatting
 - Use sentence-style capitalization for all headings, including the title of the file (see the examples in the preceding section). The only exception to this rule is the high-level title of the release notes section, which is **Release Notes**.
