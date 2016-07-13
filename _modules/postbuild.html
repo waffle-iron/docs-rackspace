@@ -135,10 +135,10 @@
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">configparser</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">ConfigParser</span> <span class="kn">as</span> <span class="nn">configparser</span>
+    <span class="kn">import</span> <span class="nn">ConfigParser</span> <span class="k">as</span> <span class="nn">configparser</span>
 <span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">rename</span>
-<span class="kn">from</span> <span class="nn">prebuild</span> <span class="kn">import</span> <span class="n">listfiles</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="k">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">rename</span>
+<span class="kn">from</span> <span class="nn">prebuild</span> <span class="k">import</span> <span class="n">listfiles</span>
 
 
 <div class="viewcode-block" id="cleanup"><a class="viewcode-back" href="../tools/mdsphinx.html#postbuild.cleanup">[docs]</a><span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">tempsuffix</span><span class="p">):</span>
@@ -159,9 +159,9 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Running cleanup()&#39;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
-                <span class="n">rename</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="nb">file</span><span class="p">[:</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">tempsuffix</span><span class="p">)])</span>
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+                <span class="n">rename</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">file</span><span class="p">[:</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">tempsuffix</span><span class="p">)])</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Cleanup error (cleanup): &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
@@ -177,9 +177,9 @@
     <span class="n">files</span> <span class="o">=</span> <span class="n">listfiles</span><span class="p">(</span><span class="n">conf</span><span class="p">[</span><span class="s1">&#39;docdir&#39;</span><span class="p">],</span> <span class="n">conf</span><span class="p">[</span><span class="s1">&#39;tempsuffix&#39;</span><span class="p">],</span> <span class="n">conf</span><span class="p">[</span><span class="s1">&#39;ignore&#39;</span><span class="p">])</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">cleanup</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">conf</span><span class="p">[</span><span class="s1">&#39;tempsuffix&#39;</span><span class="p">])</span>
     <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Cleanup complete.&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cleanup complete.&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Cleanup failed.&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cleanup failed.&#39;</span><span class="p">)</span>
 </pre></div>
 
            </div>

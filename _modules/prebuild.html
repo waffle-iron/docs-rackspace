@@ -144,10 +144,10 @@
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">configparser</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">ConfigParser</span> <span class="kn">as</span> <span class="nn">configparser</span>
+    <span class="kn">import</span> <span class="nn">ConfigParser</span> <span class="k">as</span> <span class="nn">configparser</span>
 <span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">walk</span>
-<span class="kn">from</span> <span class="nn">shutil</span> <span class="kn">import</span> <span class="n">copyfile</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="k">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">walk</span>
+<span class="kn">from</span> <span class="nn">shutil</span> <span class="k">import</span> <span class="n">copyfile</span>
 
 <span class="kn">import</span> <span class="nn">pypandoc</span>
 
@@ -163,7 +163,7 @@
 <span class="sd">    :return: a row of list-table text</span>
 <span class="sd">    :rtype: str</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">return</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">row</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
     <span class="n">new_row</span> <span class="o">=</span> <span class="p">[]</span>
@@ -220,9 +220,9 @@
 <span class="sd">    1</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-            <span class="n">newfile</span> <span class="o">=</span> <span class="nb">file</span> <span class="o">+</span> <span class="n">tempsuffix</span>
-            <span class="n">copyfile</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">newfile</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">newfile</span> <span class="o">=</span> <span class="n">file</span> <span class="o">+</span> <span class="n">tempsuffix</span>
+            <span class="n">copyfile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">newfile</span><span class="p">)</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;copydocs(): &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
@@ -251,8 +251,8 @@
     <span class="n">docroot</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">docroot</span><span class="p">)</span>
     <span class="n">filelist</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">subdir</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">walk</span><span class="p">(</span><span class="n">docroot</span><span class="p">):</span>
-        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-            <span class="n">filepath</span> <span class="o">=</span> <span class="n">subdir</span> <span class="o">+</span> <span class="n">sep</span> <span class="o">+</span> <span class="nb">file</span>
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">filepath</span> <span class="o">=</span> <span class="n">subdir</span> <span class="o">+</span> <span class="n">sep</span> <span class="o">+</span> <span class="n">file</span>
             <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">suffix</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">filepath</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">ignore</span><span class="p">):</span>
                 <span class="n">filelist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
     <span class="k">return</span><span class="p">(</span><span class="n">filelist</span><span class="p">)</span></div>
@@ -268,22 +268,22 @@
 <span class="sd">    :rtype: str</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">mdstring</span> <span class="o">=</span> <span class="n">mdstring</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-    <span class="n">grid</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="n">insert</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">grid</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">insert</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">gridtable</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">content</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">mdstring</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+--&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span> <span class="ow">or</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+==&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="n">grid</span> <span class="o">=</span> <span class="bp">True</span>
-            <span class="n">insert</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+--&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">or</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+==&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">grid</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">insert</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="n">gridtable</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">grid</span> <span class="ow">is</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">grid</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">gridtable</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">grid</span> <span class="o">=</span> <span class="bp">False</span>
-        <span class="k">if</span> <span class="n">grid</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">insert</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
-                <span class="n">insert</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="n">grid</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">grid</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">insert</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="n">insert</span> <span class="o">=</span> <span class="kc">False</span>
                 <span class="n">newtable</span> <span class="o">=</span> <span class="n">buildtable</span><span class="p">(</span><span class="n">gridtable</span><span class="p">)</span>
                 <span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newtable</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
                 <span class="n">gridtable</span> <span class="o">=</span> <span class="p">[]</span>
@@ -311,20 +311,20 @@
     <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">mdstring</span> <span class="o">=</span> <span class="n">preparse</span><span class="p">(</span><span class="n">mdstring</span><span class="p">)</span>
     <span class="n">mdstring</span> <span class="o">=</span> <span class="n">mdstring</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-    <span class="n">start</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">startmark</span> <span class="o">=</span> <span class="s2">&quot;&lt;!--table--&gt;&quot;</span>
     <span class="n">endmark</span> <span class="o">=</span> <span class="s2">&quot;&lt;!--endtable--&gt;&quot;</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">mdstring</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">startmark</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="n">start</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">startmark</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
             <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;```eval_rst&quot;</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">endmark</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">start</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">endmark</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
             <span class="n">table</span> <span class="o">+=</span> <span class="n">line</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="k">elif</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">endmark</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="n">converted</span> <span class="o">=</span> <span class="n">pypandoc</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="s1">&#39;rst&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;md&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">start</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">endmark</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">converted</span> <span class="o">=</span> <span class="n">pypandoc</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="s1">&#39;rst&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;md&#39;</span><span class="p">)</span>
             <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">converted</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">```&quot;</span><span class="p">)</span>
-            <span class="n">start</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="kc">False</span>
             <span class="k">global</span> <span class="n">numtables</span>
             <span class="n">numtables</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">else</span><span class="p">:</span>
@@ -366,13 +366,13 @@
 <span class="sd">    1</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-            <span class="n">doc</span> <span class="o">=</span> <span class="n">readfile</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">doc</span> <span class="o">=</span> <span class="n">readfile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">parsedoc</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
-            <span class="n">writefile</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
-            <span class="n">doc</span> <span class="o">=</span> <span class="n">readfile</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+            <span class="n">writefile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+            <span class="n">doc</span> <span class="o">=</span> <span class="n">readfile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">listtable</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
-            <span class="n">writefile</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+            <span class="n">writefile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Process docs error (processdocs): &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
@@ -453,7 +453,7 @@
     <span class="n">files</span> <span class="o">=</span> <span class="n">listfiles</span><span class="p">(</span><span class="n">conf</span><span class="p">[</span><span class="s1">&#39;docdir&#39;</span><span class="p">],</span> <span class="n">conf</span><span class="p">[</span><span class="s1">&#39;mdsuffix&#39;</span><span class="p">],</span> <span class="n">conf</span><span class="p">[</span><span class="s1">&#39;ignore&#39;</span><span class="p">])</span>
     <span class="n">copydocs</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">conf</span><span class="p">[</span><span class="s1">&#39;tempsuffix&#39;</span><span class="p">])</span>
     <span class="n">processdocs</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Tables converted: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">numtables</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tables converted: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">numtables</span><span class="p">))</span>
 </pre></div>
 
            </div>
