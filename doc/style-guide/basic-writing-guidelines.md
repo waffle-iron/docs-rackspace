@@ -19,7 +19,7 @@ If you want to write Rackspace content that is clear and consistent and that hel
 - [Use consistent references to time, space, and versions](#use-consistent-references-to-time-space-and-versions)
 - [Use correct punctuation](#use-correct-punctuation)
 - [Avoid obscure non-English words and abbreviations](#avoid-obscure-non-english-words-and-abbreviations)
-- [Write for a global audience](#write-global-for-a-global-audience)
+- [Write for a global audience](#write-for-a-global-audience)
 
 ## Write short, concise sentences
 
