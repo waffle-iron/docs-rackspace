@@ -25,7 +25,7 @@ except ImportError:
 
 try:
     from sphinxcontrib import spelling
-except ImportError:
+except:
     spelling = None
 
 # If extensions (or modules to document with autodoc) are in another directory,
