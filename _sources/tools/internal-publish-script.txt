@@ -13,24 +13,40 @@ publishing.
    not catch errors and has no test suite. Use it with cautious optimism.
 
 
-Initial setup
+Prerequisites
 ~~~~~~~~~~~~~
 
+Sphinx is required for building HTML from the RST source:
+
+.. code::
+
+   $ sudo pip install sphinx
+
+(Optional) Install tox for testing. It can also run the publish.sh script.
+
+.. code::
+
+   $ sudo pip install tox
+
+
+Initial repository setup
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 The **publish.sh** script enables you to publish internal content from an
-external github.com repository to an internal github.rackspace.com
+external github.com repository to an internal *github.rackspace.com*
 gh-pages URL. It assumes two repositories:
 
-- an internal repository on github.rackspace.com which you clone to your local
-  machine
-- a public or private repository on github.com, which is set as the upstream
+- an internal repository on *github.rackspace.com* which you clone to your
+  local machine
+- a public or private repository on *github.com*, which is set as the upstream
   source for your local clone of the internal repository
 
 .. warning::
 
-   Do not edit the internal repository directly, as it acts as a
+   **Do not edit the internal repository directly**, as it acts as a
    mirror of the external repository. Make all changes upstream in the
-   github.com repository then push those changes to the internal
-   github.rackspace.com repository.
+   *github.com* repository then push those changes to the internal
+   *github.rackspace.com* repository.
 
 These instructions use **docs-rpc** as an example repository. Update the
 script and substitute your repositories as required.
@@ -42,22 +58,39 @@ or through VPN.
 
    .. code::
 
-      $ git clone git@github.rackspace.com:rpc-internal/docs-rpc.git
-
-#. Change into the cloned **docs-rpc** directory and set the upstream to the
-   rackerlabs/docs-rpc repository:
-
-   .. code::
-
-      $ cd docs-rpc
-      $ git remote add upstream git@github.com:rackerlabs/docs-rpc.git
+      $ git clone git@github.rackspace.com:rpc-internal/docs-rpc.git internal-docs-rpc
 
    .. note::
 
       In order to avoid confusion with the rackerlabs repository of the same
-      name, you may want to change the directory name of **docs-rpc**.
+      name, the internal repository is cloned into **internal-docs-rpc**.
 
-#. Confirm your setup by pulling from upstream and pushing to origin:
+#. Change into the cloned **internal-docs-rpc** directory and set the upstream
+   to the **rackerlabs/docs-rpc** repository:
+
+   .. code::
+
+      $ cd internal-docs-rpc
+      $ git remote add upstream git@github.com:rackerlabs/docs-rpc.git
+
+#. Confirm the origin and upstream remotes are correctly set:
+
+   .. code::
+
+      $ git remote -v
+
+      origin	git@github.rackspace.com:rpc-internal/docs-rpc.git (fetch)
+      origin	git@github.rackspace.com:rpc-internal/docs-rpc.git (push)
+      upstream	git@github.com:rackerlabs/docs-rpc.git (fetch)
+      upstream	git@github.com:rackerlabs/docs-rpc.git (push)
+
+#. Set the remote for master to upstream:
+
+   .. code::
+
+      $ git branch --set-upstream-to upstream/master
+
+#. Confirm you can pull from upstream and push to origin:
 
    .. code::
 
@@ -65,12 +98,25 @@ or through VPN.
       $ git merge upstream/master
       $ git push origin master
 
+   .. note::
+
+      If the ``git merge upstream/master`` command results in merge conflicts,
+      origin and upstream are not in sync. To reset your local branch and
+      origin to upstream, run the following commands:
+
+      .. code::
+
+         $ git remote update
+         $ git reset --hard upstream/master --
+         $ git push origin +master
+
 #. Create local versions of the stable upstream branches:
 
    .. code::
 
-      $ git checkout v10
-      $ git checkout v11
+      $ git checkout -b v10 upstream/v10
+      $ git checkout -b v11 upstream/v11
+      $ git checkout -b v12 upstream/v12
 
 #. Checkout master. You are now ready to publish internally.
 
@@ -90,7 +136,20 @@ or through VPN.
 
    .. code::
 
-      $ . publish.sh
+      $ bash publish.sh
+
+   Alternatively, you can run the **publish.sh** script using tox:
+
+   .. code::
+
+      $ tox -e publish
+
+   .. note::
+
+      You can also run publish.sh by sourcing it: ``. publish.sh``. If you
+      do this and the script encounters an error, it exits the shell
+      session entirely. Using ``bash`` or ``tox`` is preferred, as they
+      return you to the current session with an error message.
 
 #. Check the published output at the URL provided by the script. For the
    **docs-rpc** books, this is
@@ -110,68 +169,5 @@ For more information on publishing to gh-pages manually, see
 publish.sh
 ~~~~~~~~~~
 
-The following version of the **publish.sh** script publishes the internal-only
-v10 and v11 RPC books. It also publishes the internal books from the master
-branch (v12), which are labelled as DRAFT.
-
-Adapt the script as required for your repositories.
-
-.. code::
-
-    #!/bin/bash
-
-    # Helper script for publishing RPC documentation to pages.github.rackspace.com.
-    # Run from the master branch of the internal RPC repository.
-
-    # set repo root directory
-    GITDIR=`git rev-parse --show-toplevel`
-
-    # set source directories
-    SOURCE='internal common figures'
-    V11SOURCE='internal/rpc-v11-faq-internal internal/rpc-v11-install internal/rpc-v11-ops-internal internal/rpc-v11-releasenotes-internal-supp'
-    V10SOURCE='internal/rpc-v10-faq-internal internal/rpc-v10-installation internal/rpc-v10-releasenotes-internal-supp'
-
-    # set branches to build
-    BRANCHES=(v10 v11 master)
-
-    # ensure branches are up-to-date
-    for branch in ${BRANCHES[@]}; do
-        cd $GITDIR
-        git checkout $branch
-        git fetch upstream
-        git merge upstream/$branch
-        git push origin $branch
-    done
-
-    # checkout gh-pages branch and delete contents except . files
-    git checkout gh-pages
-    find * -not -name ".*" -delete
-
-    # checkout source directories and reset HEAD
-    git checkout master $SOURCE
-    git checkout v11 $V11SOURCE
-    git checkout v10 $V10SOURCE
-    git reset HEAD
-
-    # build html from rst in internal directory
-    cd internal
-    make html
-
-    # move html files to root directory
-    mv -fv _build/html/* ../
-
-    # remove source files
-    cd $GITDIR
-    rm -rf $SOURCE
-
-    # add, commit, and push new html files
-    git add .
-    git commit -m "gh-pages: `git log master -1 --pretty=short --abbrev-commit`"
-    git push origin gh-pages
-
-    # checkout master and signal completion
-    git checkout master
-    echo
-    tput setaf 2
-    echo "Published at: https://pages.github.rackspace.com/rpc-internal/docs-rpc/"
-    tput sgr0
+See https://github.com/rackerlabs/docs-rpc/blob/master/publish.sh for the
+lastest version of the publish.sh script.
