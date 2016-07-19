@@ -11,6 +11,4 @@ consistent technical documentation for Rackspace Cloud services.
 - [Screenshot and diagram guidelines](screenshot-diagram-guidelines.md)
 - [Release notes guidelines](release-notes-guidelines.md)
 
-**Note:** Migrating these guidelines from the internal Rackspace wiki to
-GitHub is a work in progress. If you have any questions, please submit an
-issue.
+**Note:** A GitHub pages rendering of the style guide is available at http://rackerlabs.github.io/docs-rackspace/style-guide/index.html. 
