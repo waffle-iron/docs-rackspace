@@ -11,6 +11,7 @@ services.
 - [Terminology guidelines](terminology-guidelines.md)
 - [Screenshot and diagram guidelines](screenshot-diagram-guidelines.md)
 - [Release notes guidelines](release-notes-guidelines.md)
+- [Style guide revision history] (revision-history.md)
 
 **Note:** A GitHub pages rendering of the style guide is available at 
 http://rackerlabs.github.io/docs-rackspace/style-guide/index.html.
