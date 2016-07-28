@@ -15,6 +15,7 @@ This file summarizes the changes that have been made to the style guide.
 - [Text formatting](m-z-style-guidelines#text-formatting): Updated guidelines to use RST directives when available, and noted style differences between Public and Private Cloud.
   - Command names: Use monospace for Public, apply the `:command:` directive (bold) for Private.
   - Directory names, file names, paths: Use bold for Public, monospace for Private.
+  - Glossary terms: In RST, apply the `:term:` directive.
   - GUI labels: In RST, apply the `:guilabel:` directive.
   - Keyboard keys: Use bold for Public, monospace for Private.
   - Menu sequences: In RST, apply the `:menuselection:` directive.
