@@ -1,9 +1,10 @@
-==============================================================
-Development and production branches on developer.rackspace.com
-==============================================================
+===============================================================
+Configure development and production builds for Sphinx projects
+===============================================================
 
-This document describes how to preview development branches and enable
-publishing to production on `developer.rackspace.com
+This document describes how to configure development branches
+to enable PR previews, and how to create and configure Strider
+production builds.
 <https://developer.rackspace.com/docs/>`_ for a new branch.
 
 .. note::
