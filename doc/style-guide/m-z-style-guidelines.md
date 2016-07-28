@@ -332,7 +332,7 @@ An ellipsis (...) is a punctuation construct that is used in syntax or to indica
 Do not use an ellipsis in the following cases:
 
 - When writing header text for table columns and rows.
-- When showing the name of an interface element, such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface. However, if you think that omitting the ellipsis might cause confusion, you can include it.  
+- When showing the name of an interface element, such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface. However, if an ellipsis is displayed on the interface and you think that omitting it might cause confusion, you can include it.  
 
 The following example shows acceptable use of an ellipsis in a code sample:
 
