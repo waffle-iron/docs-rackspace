@@ -18,3 +18,4 @@ services.
    terminology-guidelines.md
    screenshot-diagram-guidelines.md
    release-notes-guidelines.md
+   revision-history.md
