@@ -169,6 +169,7 @@
 <li class="toctree-l2"><a class="reference internal" href="terminology-guidelines.html">Terminology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screenshot-diagram-guidelines.html">Screenshot and diagram guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-notes-guidelines.html">Release notes guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision-history.html">Style guide revision history</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
@@ -455,7 +456,7 @@ zero (0) probability</td>
 </div>
 <div class="section" id="commas-in-numbers">
 <span id="commas-in-numbers"></span><h3>Commas in numbers<a class="headerlink" href="#commas-in-numbers" title="Permalink to this headline">#</a></h3>
-<p>Always use commas in numbers with four or more digits. However, do not use commas in the following types of numbers:</p>
+<p>Use commas in numbers with five or more digits. However, do not use commas in the following types of numbers:</p>
 <ul class="simple">
 <li>Addresses</li>
 <li>Fractional part of a decimal number</li>
@@ -474,13 +475,13 @@ zero (0) probability</td>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>9001 N IH 35 
-1,452.7532 
-page 1055 (but 1,055 pages) 
-1,024 bytes</td>
+1452.7532 
+page 1055 
+1024 bytes</td>
 <td>9,001 N IH 35 
 1,452.753,2 
 page 1,055 
-1024 bytes</td>
+1,024 bytes</td>
 </tr>
 </tbody>
 </table>
@@ -585,11 +586,11 @@ Your BlackBerry software must be version 4.<em>x</em>.</td>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><p class="first">Show placeholder text in italics.</p>
-<p>If you need to make placeholders more visible in code that customers are expected to copy and use, apply bold as well as italic. For information about applying formatting, see <a class="reference external" href="#text-formatting">Text formatting</a>.</p>
+<tr class="row-even"><td><p class="first">Within regular text, show placeholder text in italics.</p>
+<p>Within code samples, use the RST <code class="docutils literal"><span class="pre">:samp:</span></code> directive, and enclose the placeholder text in curly braces. This formatting renders the placeholder in italics.</p>
 <p class="last">If you cannot apply text formatting to the code, enclose placeholders in punctuation that does not have any other special use in the code. For example, use angle brackets or curly braces. Use a consistent convention throughout the documentation set.</p>
 </td>
-<td><code class="docutils literal"><span class="pre">nova</span> <span class="pre">boot</span> <span class="pre">&lt;serverName&gt;</span> <span class="pre">--image</span> <span class="pre">&lt;image&gt;</span> <span class="pre">--flavor</span> <span class="pre">&lt;flavor&gt;</span> <span class="pre">--nic</span> <span class="pre">net-id=net1_id</span></code></td>
+<td><code class="docutils literal"><span class="pre">nova</span> <span class="pre">boot</span> <span class="pre">&lt;serverName&gt;</span> <span class="pre">--image</span> <span class="pre">&lt;image&gt;</span> <span class="pre">--flavor</span> <span class="pre">&lt;flavor&gt;</span> <span class="pre">--nic</span> <span class="pre">net-id=net1_id</span></code> <em>(not RST)</em></td>
 </tr>
 <tr class="row-odd"><td><p class="first">Use lowercase letters except when showing a multiple-word placeholder.</p>
 <p>To show a multiple-word placeholder, do not separate the words with spaces or symbols. To distinguish the words in the placeholder, capitalize the first letter of each word after the first word (called camelCase). Do not capitalize the first word.</p>
@@ -961,11 +962,11 @@ options 11–15
 </div>
 <div class="section" id="ellipses">
 <span id="ellipses"></span><h3>Ellipses<a class="headerlink" href="#ellipses" title="Permalink to this headline">#</a></h3>
-<p>An ellipsis (...) is a punctuation construct that is used in syntax or to indicate omitted code in technical content. For technical writing, an ellipsis is used only in code examples.</p>
+<p>An ellipsis (...) is a punctuation construct that is used in syntax or to indicate omitted code in technical content. For technical writing, an ellipsis is used mainly in code examples.</p>
 <p>Do not use an ellipsis in the following cases:</p>
 <ul class="simple">
-<li>When showing the name of an interface element such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface</li>
-<li>When writing header text for table columns and rows</li>
+<li>When writing header text for table columns and rows.</li>
+<li>When showing the name of an interface element, such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface. However, if an ellipsis is displayed on the interface and you think that omitting it might cause confusion, you can include it.</li>
 </ul>
 <p>The following example shows acceptable use of an ellipsis in a code sample:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>HTTP/1.1 200 OK
@@ -1874,12 +1875,18 @@ To create users in SQL Server</td>
 <p>Certain text should be formatted differently from the surrounding text to designate a special meaning or to make the text stand out to the customer. Usually this formatting is accomplished by applying a different font treatment (bold, italics, or monospace).</p>
 <p><strong>Note:</strong> <em>Monospace</em> is also called a <em>fixed-pitch</em> or <em>fixed-width</em> font. In monospace, each letter and character occupy the same amount of horizontal space. An example of a monospace font is Courier, and it looks as follows: <code class="docutils literal"><span class="pre">monospace</span> <span class="pre">font</span></code>.</p>
 <p>Observe the following general guidelines when formatting text:</p>
-<ul class="simple">
-<li>To apply a font treatment, use the appropriate markup in your authoring tool.</li>
-<li>Do not apply font treatments to text elements in titles and headings.</li>
-<li>Do not use capitalization to emphasize a term (for example, showing a general term in all capitals). Follow the capitalization that is normally used for a term, or follow the capitalization guidelines in the following table. For more information, see <a class="reference external" href="a-l-style-guidelines.html#capitalization">Capitalization</a>.</li>
-<li>Do not use color alone to distinguish text. Color is powerful but unreliable. Not everyone can see every color, most people do not print using color, and monitors and browsers limit themselves to color subsets. Also, people can personalize their displays to override your color selections.</li>
-<li>Use quotation marks only as directed in this topic and in <a class="reference external" href="#quotation-marks">Quotation marks</a>.</li>
+<ul>
+<li><p class="first">To apply a font treatment, use the appropriate markup in your authoring tool. In RST, use a directive if one is available. See the tables in this section for details.</p>
+<p><strong>Note:</strong> Apply directives only if the style sheet has been updated to support them. If they are not supported, apply formatting manually.</p>
+</li>
+<li><p class="first">Do not apply font treatments to text elements in titles and headings.</p>
+</li>
+<li><p class="first">Do not use capitalization to emphasize a term (for example, showing a general term in all capitals). Follow the capitalization that is normally used for a term, or follow the capitalization guidelines in the following table. For more information, see <a class="reference external" href="a-l-style-guidelines.html#capitalization">Capitalization</a>.</p>
+</li>
+<li><p class="first">Do not use color alone to distinguish text. Color is powerful but unreliable. Not everyone can see every color, most people do not print using color, and monitors and browsers limit themselves to color subsets. Also, people can personalize their displays to override your color selections.</p>
+</li>
+<li><p class="first">Use quotation marks only as directed in this topic and in <a class="reference external" href="#quotation-marks">Quotation marks</a>.</p>
+</li>
 </ul>
 <p>The conventions are divided into tables based on the content in which they would most likely be used. If you can't find what you are looking for in one table, be sure to look in the others.</p>
 <ul class="simple">
@@ -1887,6 +1894,7 @@ To create users in SQL Server</td>
 <li><a class="reference external" href="#conventions-for-api-and-cli">Conventions for API and CLI</a></li>
 <li><a class="reference external" href="#conventions-for-ui">Conventions for UI</a></li>
 </ul>
+<p><strong>Note:</strong> Any differences in style between Public Cloud and Private Cloud are highlighted.</p>
 <div class="section" id="conventions-for-common-items">
 <span id="conventions-for-common-items"></span><h3>Conventions for common items<a class="headerlink" href="#conventions-for-common-items" title="Permalink to this headline">#</a></h3>
 <p>The following table lists formatting conventions for items that might appear in content that documents a UI, CLI, or API.</p>
@@ -1946,9 +1954,13 @@ To create users in SQL Server</td>
 <td>Not applicable</td>
 </tr>
 <tr class="row-odd"><td>Keyboard key combinations, names, and shortcuts</td>
-<td>Bold</td>
-<td><p class="first">To skip to the end of the file, press <strong>Shift-G</strong>.</p>
-<p class="last">Press <strong>Enter</strong>.</p>
+<td><p class="first"><em>(Public)</em> Bold</p>
+<p class="last"><em>(Private)</em> Monospace</p>
+</td>
+<td><p class="first"><em>(Public)</em> To skip to the end of the file, press <strong>Shift-G</strong>. 
+<em>(Public)</em> Press <strong>Enter</strong>.</p>
+<p class="last"><em>(Private)</em> To skip to the end of the file, press <code class="docutils literal"><span class="pre">Shift-G</span></code>. 
+<em>(Private)</em> Press <code class="docutils literal"><span class="pre">Enter</span></code>.</p>
 </td>
 </tr>
 <tr class="row-even"><td>Letters as letters</td>
@@ -1995,7 +2007,7 @@ To create users in SQL Server</td>
 </tr>
 <tr class="row-even"><td>Quotations 
 (content quoted from another source)</td>
-<td>Quotation marks, or the formatting provided by the specified tags</td>
+<td>Quotation marks, or block quote formatting</td>
 <td>&quot;Scalability is key for our business,&quot; explained Nathan Goff, Inavero Operations Director and Partner. &quot;There's nothing worse than making our clients look bad to their customers.&quot;</td>
 </tr>
 <tr class="row-odd"><td>Role names</td>
@@ -2007,7 +2019,7 @@ To create users in SQL Server</td>
 <td>Cloud Servers that are built using the base Linux images are created without a dedicated swap partition and with <em>swappiness</em> (a measure of how the Linux kernel tries to use swap memory) set to 0.</td>
 </tr>
 <tr class="row-odd"><td>Terms, unique sense</td>
-<td>Regular text, 
+<td>Regular text 
 Quotation marks on first use</td>
 <td>The spelling checker &quot;learns&quot; the word. After it learns the word, the spelling checker ignores subsequent occurrences of the word in the document.</td>
 </tr>
@@ -2068,9 +2080,13 @@ Quotation marks on first use</td>
 <p class="last">To set the environment variable, run <code class="docutils literal"><span class="pre">export</span> <span class="pre">token=&quot;token&quot;</span></code>.</p>
 </td>
 </tr>
-<tr class="row-even"><td>Command names and options (CLI)</td>
-<td>Monospace</td>
-<td>You can check the architecture on Linux by using the <code class="docutils literal"><span class="pre">uname</span> <span class="pre">-a</span></code> command.</td>
+<tr class="row-even"><td>Command names (CLI)</td>
+<td><p class="first"><em>(Public)</em> Monospace</p>
+<p class="last"><em>(Private)</em> Bold, by applying the <code class="docutils literal"><span class="pre">:command:</span></code> directive in RST</p>
+</td>
+<td><p class="first"><em>(Public)</em> You can check the architecture on Linux by using the <code class="docutils literal"><span class="pre">uname</span> <span class="pre">-a</span></code> command.</p>
+<p class="last"><em>(Private)</em> You can check the architecture on Linux by using the <strong>uname -a</strong> command.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>Command syntax</td>
 <td>Monospace</td>
@@ -2127,7 +2143,9 @@ All capitals</td>
 <td>Client authentication is provided through a REST interface by using the <strong>GET</strong> method.</td>
 </tr>
 <tr class="row-odd"><td>Option names, command</td>
-<td>Monospace</td>
+<td><p class="first">Monospace</p>
+<p class="last">In RST, apply the <code class="docutils literal"><span class="pre">:option:</span></code> directive.</p>
+</td>
 <td>The <code class="docutils literal"><span class="pre">--ip-addresses</span></code> option specifies the IP address and an alias for the target.</td>
 </tr>
 <tr class="row-even"><td>Package names</td>
@@ -2135,7 +2153,9 @@ All capitals</td>
 <td>You must install the <code class="docutils literal"><span class="pre">libvirt</span></code> package.</td>
 </tr>
 <tr class="row-odd"><td>Parameter names</td>
-<td>Monospace</td>
+<td><p class="first">Monospace</p>
+<p class="last">In RST, apply the <code class="docutils literal"><span class="pre">:option:</span></code> directive.</p>
+</td>
 <td><p class="first">The <code class="docutils literal"><span class="pre">display_description</span></code> parameter is optional.</p>
 <p class="last">Use the <code class="docutils literal"><span class="pre">--flavor</span></code> and <code class="docutils literal"><span class="pre">--image</span></code> parameters to specify the IDs or names of the flavor and image to use for the image.</p>
 </td>
@@ -2201,7 +2221,8 @@ All capitals</td>
 <tr class="row-odd"><td>Cascades 
 (menu, field)</td>
 <td><p class="first">Bold</p>
-<p class="last">Use <strong>&gt;</strong> to separate.</p>
+<p>Use <strong>&gt;</strong> to separate.</p>
+<p class="last">In RST, apply the <code class="docutils literal"><span class="pre">:menuselection:</span></code> directive.</p>
 </td>
 <td><p class="first">Select <strong>Start &gt; Control Panel</strong>, and then click the <strong>Mail</strong> icon.</p>
 <p class="last">You can find more documentation about RackConnect in the <strong>Community &gt; Discussions &gt; RackConnect</strong> section of the MyRackspace Portal.</p>
@@ -2236,27 +2257,42 @@ All capitals</td>
 <td>In the Microsoft Exchange dialog box, click <strong>Apply</strong> and then click <strong>OK</strong>.</td>
 </tr>
 <tr class="row-odd"><td>Directory names</td>
-<td>Bold</td>
-<td>Place all the contents of the uncompressed <strong>wordpress</strong> directory (excluding the directory itself) into the <strong>/web/content/</strong> directory, which is the root directory of the site.</td>
+<td><p class="first"><em>(Public)</em> Bold</p>
+<p class="last"><em>(Private)</em> Monospace</p>
+</td>
+<td><p class="first"><em>(Public)</em> Place all the contents of the uncompressed <strong>wordpress</strong> directory (excluding the directory itself) into the <strong>/web/content/</strong> directory, which is the root directory of the site.</p>
+<p class="last"><em>(Private)</em> Place all the contents of the uncompressed <code class="docutils literal"><span class="pre">wordpress</span></code> directory (excluding the directory itself) into the <code class="docutils literal"><span class="pre">/web/content/</span></code> directory, which is the root directory of the site.</p>
+</td>
 </tr>
 <tr class="row-even"><td>Field names</td>
 <td>Bold</td>
 <td>In the <strong>Database Name</strong> field, enter a database name identifier.</td>
 </tr>
 <tr class="row-odd"><td>File names and extensions</td>
-<td>Bold</td>
-<td>To remove the <strong>vs_quantum-api.cfg</strong> file from the <strong>haproxy.d</strong> directory and retain it, you can move it to another directory.</td>
+<td><p class="first"><em>(Public)</em> Bold</p>
+<p class="last"><em>(Private)</em> Monospace</p>
+</td>
+<td><p class="first"><em>(Public)</em> To remove the <strong>vs_quantum-api.cfg</strong> file from the <strong>haproxy.d</strong> directory and retain it, you can move it to another directory.</p>
+<p class="last"><em>(Private)</em> To remove the <code class="docutils literal"><span class="pre">vs_quantum-api.cfg</span></code> file from the <code class="docutils literal"><span class="pre">haproxy.d</span></code> directory and retain it, you can move it to another directory.</p>
+</td>
 </tr>
 <tr class="row-even"><td>Folder names</td>
 <td>Bold</td>
 <td>Copy the <strong>index.php</strong> file from your computer to the <strong>content</strong> folder.</td>
 </tr>
-<tr class="row-odd"><td>Group box names</td>
+<tr class="row-odd"><td>Glossary terms</td>
+<td><p class="first">Italic, by applying the <code class="docutils literal"><span class="pre">:term:</span></code> directive in RST</p>
+<p class="last">This directive also links the term to the definition in the glossary.</p>
+</td>
+<td>Rackspace provides an <em>IaaS</em> solution through a variety of complementary <em>services</em>.</td>
+</tr>
+<tr class="row-even"><td>Group box names</td>
 <td>Bold</td>
 <td>In the <strong>Edit Signature</strong> area, enter the text that you want to appear in your signature.</td>
 </tr>
-<tr class="row-even"><td>GUI labels</td>
+<tr class="row-odd"><td>GUI labels</td>
 <td><p class="first">Bold</p>
+<p>In RST, apply the <code class="docutils literal"><span class="pre">:guilabel:</span></code> directive.</p>
 <p class="last"><strong>Exception:</strong> Show window, dialog box, wizard, page, panel, and screen names in regular text unless they need to be distinguished from the surrounding text. In such cases, use bold.</p>
 </td>
 <td><p class="first">In the Microsoft Exchange dialog box, click <strong>Apply</strong> and then click <strong>OK</strong>.</p>
@@ -2264,64 +2300,72 @@ All capitals</td>
 <p class="last">Read the preliminary steps in the Configure Your Server wizard, and then click <strong>Next</strong>.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>Icon names</td>
+<tr class="row-even"><td>Icon names</td>
 <td>Bold</td>
 <td>To verify which OS version you are running, click the <strong>Apple</strong> icon in the top-left corner and then select <strong>About This Mac</strong>.</td>
 </tr>
-<tr class="row-even"><td>List box names and selections</td>
+<tr class="row-odd"><td>List box names and selections</td>
 <td>Bold</td>
 <td><p class="first">From the <strong>Account Type</strong> list, select <strong>Exchange 2007</strong>.</p>
 <p class="last">To view these settings, select <strong>Configure Backup</strong> from the <strong>Backup Actions</strong> list.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>Menu names, commands, and sequences</td>
-<td>Bold</td>
+<tr class="row-even"><td>Menu names, commands, and sequences</td>
+<td><p class="first">Bold</p>
+<p class="last">In RST, apply the <code class="docutils literal"><span class="pre">:menuselection:</span></code> directive to sequences.</p>
+</td>
 <td><p class="first">Right-click the volume and select <strong>Take Offline</strong>.</p>
 <p>From the <strong>Outlook</strong> menu, select <strong>Preferences</strong>.</p>
 <p class="last">Select <strong>Start &gt; Control Panel</strong>, and then click the <strong>Mail</strong> icon.</p>
 </td>
 </tr>
-<tr class="row-even"><td>Option button names</td>
+<tr class="row-odd"><td>Option button names</td>
 <td>Bold</td>
 <td>Select <strong>Microsoft Exchange</strong> and then click <strong>Next</strong>.</td>
 </tr>
-<tr class="row-odd"><td>Page names</td>
+<tr class="row-even"><td>Page names</td>
 <td>Regular text</td>
 <td><p class="first">On the Preferences page, you determine how frequently you receive email about all the activity on your account: daily, weekly, or both.</p>
 <p class="last">On the Server Settings page, click <strong>Check Name</strong>, type your password, and then click <strong>OK</strong>.</p>
 </td>
 </tr>
-<tr class="row-even"><td>Panes, named and unnamed</td>
+<tr class="row-odd"><td>Panes, named and unnamed</td>
 <td>Regular text</td>
 <td><p class="first">To verify that your SSL binding works, select your website in the Connections pane (if it is not already selected) and then click <strong>Browse *ipAddress* (https)</strong> in the Actions pane.</p>
 <p class="last">In the navigation pane, select <strong>Composing Email</strong>.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>Paths</td>
-<td>Bold</td>
-<td><p class="first">The path to Perl is <strong>#!/usr/bin/perl -w</strong>.</p>
-<p class="last">In the URI path <strong>https://incident.api.rackspacecloud.com/v1/...</strong>, the API version is 1.</p>
+<tr class="row-even"><td>Paths</td>
+<td><p class="first"><em>(Public)</em> Bold</p>
+<p class="last"><em>(Private)</em> Monospace</p>
+</td>
+<td><p class="first"><em>(Public)</em> The path to Perl is <strong>#!/usr/bin/perl -w</strong>. 
+<em>(Public)</em> In the URI path <strong>https://incident.api.rackspacecloud.com/v1/...</strong>, the API version is 1.</p>
+<p class="last"><em>(Private)</em> The path to Perl is <code class="docutils literal"><span class="pre">#!/usr/bin/perl</span> <span class="pre">-w</span></code>. 
+<em>(Private)</em> In the URI path <code class="docutils literal"><span class="pre">https://incident.api.rackspacecloud.com/v1/...</span></code>, the API version is 1.</p>
 </td>
 </tr>
-<tr class="row-even"><td>Radio button names</td>
+<tr class="row-odd"><td>Radio button names</td>
 <td>Bold</td>
 <td>Select <strong>Microsoft Exchange</strong> and then click <strong>Next</strong>.</td>
 </tr>
-<tr class="row-odd"><td>Sequences 
+<tr class="row-even"><td>Sequences 
 (menu, field)</td>
 <td><p class="first">Bold</p>
-<p class="last">Use <strong>&gt;</strong> to separate.</p>
+<p>Use <strong>&gt;</strong> to separate.</p>
+<p class="last">In RST, apply the <code class="docutils literal"><span class="pre">:menuselection:</span></code> directive.</p>
 </td>
 <td><p class="first">Select <strong>Start &gt; Control Panel</strong>, and then click the <strong>Mail</strong> icon.</p>
 <p class="last">You can find more documentation about RackConnect in the <strong>Community &gt; Discussions &gt; RackConnect</strong> section of the MyRackspace Portal.</p>
 </td>
 </tr>
-<tr class="row-even"><td>Tab names</td>
+<tr class="row-odd"><td>Tab names</td>
 <td>Bold</td>
 <td>In the Microsoft Exchange dialog box, click the <strong>Connection</strong> tab and then select the <strong>Connect to Microsoft Exchange using HTTP</strong> check box.</td>
 </tr>
-<tr class="row-odd"><td>UI labels</td>
+<tr class="row-even"><td>UI labels</td>
 <td><p class="first">Bold</p>
+<p>In RST, apply the <code class="docutils literal"><span class="pre">:guilabel:</span></code> directive.</p>
 <p class="last"><strong>Exception:</strong> Show window, dialog box, wizard, page, panel, and screen names in regular text unless they need to be distinguished from the surrounding text. In such cases, use bold.</p>
 </td>
 <td><p class="first">In the Microsoft Exchange dialog box, click <strong>Apply</strong> and then click <strong>OK</strong>.</p>
@@ -2329,15 +2373,15 @@ All capitals</td>
 <p class="last">Read the preliminary steps in the Configure Your Server wizard, and then click <strong>Next</strong>.</p>
 </td>
 </tr>
-<tr class="row-even"><td>User input</td>
+<tr class="row-odd"><td>User input</td>
 <td>Bold</td>
 <td>In the Server text box, type <strong>outlook</strong>.</td>
 </tr>
-<tr class="row-odd"><td>Window names</td>
+<tr class="row-even"><td>Window names</td>
 <td>Regular text</td>
 <td>In the Network Connections window, right-click the private adapter and select <strong>Properties</strong>.</td>
 </tr>
-<tr class="row-even"><td>Wizard names and wizard page names</td>
+<tr class="row-odd"><td>Wizard names and wizard page names</td>
 <td>Regular text</td>
 <td>On the Welcome page of the Active Directory Domain Services Installation Wizard, ensure that the <strong>Use advanced mode installation</strong> check box is cleared, and then click <strong>Next</strong>.</td>
 </tr>

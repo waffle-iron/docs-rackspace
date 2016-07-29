@@ -256,6 +256,9 @@ Additionally, the table uses the following abbreviations to indicate parts of sp
    * - bad
      - Avoid
      - Use *serious* instead, or provide an explanation.
+   * - be sure
+     - Avoid
+     - Depending on context, use *ensure* or *verify* instead.
    * - because
      -
      - Use *because* (not *since* or *as*) to express causality. 
@@ -535,12 +538,12 @@ Additionally, the table uses the following abbreviations to indicate parts of sp
    * - data center
      -
      - Use *region* rather than *data center*. *Region* is the term used in the control panel and API. If you need to use *data center*, show it as two words and do not capitalize it.
+   * - data store
+     -
+     - Use *data store* as two words.
    * - database
      -
      - Use *database* as one word.
-   * - datastore
-     -
-     - Use *datastore* as one word.
    * - default (n, adj)
      -
      - Use *default* as a noun or adjective. Do not use *default* as a verb. 
@@ -565,6 +568,9 @@ Additionally, the table uses the following abbreviations to indicate parts of sp
    * - destroy
      - Avoid
      - Use *remove* or *delete* instead.
+   * - dialog
+     - Avoid
+     - See `dialog box <#dialog-box>`__.
    * - dialog box
      -
      - Do not use *dialog*, *dialogue*, *window*, *pop-up*, *screen*, or *display* to mean dialog box. Capitalize *dialog box* only if it is part of a name that is shown in the software. Use lowercase letters for generic references (the filter dialog box). 
@@ -719,6 +725,7 @@ Additionally, the table uses the following abbreviations to indicate parts of sp
      - Use *ensure* to mean *make certain of an action, event, or outcome*. Do not use the following similar terms to convey that meaning: 
 
        • *assure* (which means to set someone's mind at ease) 
+       • *be sure* 
        • *insure* (which means to guarantee financially against risk) 
        • *make sure*
    * - error message

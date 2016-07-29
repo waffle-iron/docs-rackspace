@@ -5,8 +5,9 @@ Style guidelines for technical content
 *Last updated:* |today|
 
 This folder contains writing, style, and terminology guidelines for Rackspace
-Cloud documentation. Use these guidelines to create clear, concise, and
-consistent technical documentation for Rackspace Cloud services.
+Public Cloud and Private Cloud documentation. Use these guidelines to create
+clear, concise, and consistent technical documentation for Rackspace Cloud
+services.
 
 .. toctree::
    :maxdepth: 1
@@ -17,3 +18,4 @@ consistent technical documentation for Rackspace Cloud services.
    terminology-guidelines.md
    screenshot-diagram-guidelines.md
    release-notes-guidelines.md
+   revision-history.md
