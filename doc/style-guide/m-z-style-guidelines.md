@@ -106,7 +106,7 @@ two panels <br /> zero probability <br /> Enter **0** (zero). *(acceptable)* | t
 <!--endtable-->
 
 ### Commas in numbers
-Always use commas in numbers with four or more digits. However, do not use commas in the following types of numbers:
+Use commas in numbers with five or more digits. However, do not use commas in the following types of numbers:
 - Addresses
 - Fractional part of a decimal number
 - Page numbers
@@ -115,7 +115,7 @@ Always use commas in numbers with four or more digits. However, do not use comma
 <!--table-->
 Use | Do not use
 --- | ---
-9001 N IH 35 <br /> 1,452.7532 <br /> page 1055 (but 1,055 pages) <br /> 1,024 bytes | 9,001 N IH 35 <br /> 1,452.753,2 <br /> page 1,055 <br /> 1024 bytes
+9001 N IH 35 <br /> 1452.7532 <br /> page 1055 <br /> 1024 bytes | 9,001 N IH 35 <br /> 1,452.753,2 <br /> page 1,055 <br /> 1,024 bytes
 <!--endtable-->
 
 **Note:** Do not use European-style numbering, which uses commas in the place of periods. For example, use 3.14159, not 3,14159.
@@ -185,7 +185,7 @@ When creating placeholder text, use the following guidelines.
 <!--table-->
 Guidelines	| Example
 --- | ---
-Show placeholder text in italics. <br /><br /> If you need to make placeholders more visible in code that customers are expected to copy and use, apply bold as well as italic. For information about applying formatting, see [Text formatting](#text-formatting). <br /><br /> If you cannot apply text formatting to the code, enclose placeholders in punctuation that does not have any other special use in the code. For example, use angle brackets or curly braces. Use a consistent convention throughout the documentation set. | `nova boot <serverName> --image <image> --flavor <flavor> --nic net-id=net1_id`
+Within regular text, show placeholder text in italics. <br /><br /> Within code samples, use the RST `:samp:` directive, and enclose the placeholder text in curly braces. This formatting renders the placeholder in italics. <br /><br /> If you cannot apply text formatting to the code, enclose placeholders in punctuation that does not have any other special use in the code. For example, use angle brackets or curly braces. Use a consistent convention throughout the documentation set. | `nova boot <serverName> --image <image> --flavor <flavor> --nic net-id=net1_id` *(not RST)*
 Use lowercase letters except when showing a multiple-word placeholder.<br /><br /> To show a multiple-word placeholder, do not separate the words with spaces or symbols. To distinguish the words in the placeholder, capitalize the first letter of each word after the first word (called camelCase). Do not capitalize the first word. <br /><br /> **Note:** Use lowercase and camelCase unless you have to follow the conventions of the programming language. For example, you might need to use underscores (account_ID) or all capitals (ACCOUNT_ID). | *password* <br /> *serverName* <br /> *apiKey* <br /> *tenantId*
 In general, use one or more whole words to represent a placeholder. Do not sacrifice clarity for brevity. Create placeholders that are descriptive and meaningful.| *device* (instead of *dev*) <br /><br /> *installationDirectory* (instead of *installDir*) <br /><br /> *mode* (instead of *########*)
 <!--endtable-->
@@ -327,12 +327,12 @@ An *en dash* is longer than a hyphen and shorter than an em dash. Use an en dash
 <!--endtable-->
 
 ### Ellipses
-An ellipsis (...) is a punctuation construct that is used in syntax or to indicate omitted code in technical content. For technical writing, an ellipsis is used only in code examples.
+An ellipsis (...) is a punctuation construct that is used in syntax or to indicate omitted code in technical content. For technical writing, an ellipsis is used mainly in code examples.
 
 Do not use an ellipsis in the following cases:
 
-- When showing the name of an interface element such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface
-- When writing header text for table columns and rows
+- When writing header text for table columns and rows.
+- When showing the name of an interface element, such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface. However, if an ellipsis is displayed on the interface and you think that omitting it might cause confusion, you can include it.  
 
 The following example shows acceptable use of an ellipsis in a code sample:
 
@@ -897,7 +897,10 @@ Certain text should be formatted differently from the surrounding text to design
 
 Observe the following general guidelines when formatting text:
 
-- To apply a font treatment, use the appropriate markup in your authoring tool.
+- To apply a font treatment, use the appropriate markup in your authoring tool. In RST, use a directive if one is available. See the tables in this section for details.
+
+  **Note:** Apply directives only if the style sheet has been updated to support them. If they are not supported, apply formatting manually. 
+
 - Do not apply font treatments to text elements in titles and headings.
 - Do not use capitalization to emphasize a term (for example, showing a general term in all capitals). Follow the capitalization that is normally used for a term, or follow the capitalization guidelines in the following table. For more information, see [Capitalization](../a-l-style-guidelines.html#capitalization).
 - Do not use color alone to distinguish text. Color is powerful but unreliable. Not everyone can see every color, most people do not print using color, and monitors and browsers limit themselves to color subsets. Also, people can personalize their displays to override your color selections.
@@ -908,6 +911,8 @@ The conventions are divided into tables based on the content in which they would
 - [Conventions for common items](#conventions-for-common-items)
 - [Conventions for API and CLI](#conventions-for-api-and-cli)
 - [Conventions for UI](#conventions-for-ui)
+
+**Note:** Any differences in style between Public Cloud and Private Cloud are highlighted.
 
 ### Conventions for common items
 The following table lists formatting conventions for items that might appear in content that documents a UI, CLI, or API.
@@ -924,7 +929,7 @@ Emphasis | Italic | Offset *must* be a multiple of the limit (or zero); otherwis
 Equations | Monospace | ``(600,000 – 400,000) ÷ 400,000 = 50%``
 Error messages | Monospace | In SQL Server Management Studio, when you right-click a SQL Server 2012 database and selecting **Properties**, the following error message appears: <br /> <br /> ``The user does not have permission to perform this action.``
 Hyperlinks (live) | See [Links and cross-references](a-l-style-guidelines.md#links). | Not applicable
-Keyboard key combinations, names, and shortcuts | Bold | To skip to the end of the file, press **Shift-G**. <br /> <br /> Press **Enter**.
+Keyboard key combinations, names, and shortcuts | *(Public)* Bold <br /> <br /> *(Private)* Monospace | *(Public)* To skip to the end of the file, press **Shift-G**. <br /> *(Public)* Press **Enter**. <br /> <br /> *(Private)* To skip to the end of the file, press `Shift-G`. <br /> *(Private)* Press `Enter`.
 Letters as letters | Italic | Place *i* before *e* except after *c*.
 Links (live) | See [Links and cross-references](../a-l-style-guidelines.html#links-and-cross-references). | Not applicable
 Messages, error | Monospace | In SQL Server Management Studio, when you right-click a SQL Server 2012 database and selecting **Properties**, the following error message appears: <br /> <br /> ``The user does not have permission to perform this action.``
@@ -933,10 +938,10 @@ Permissions	| Regular text	| Log in to a shell as the user who has write permiss
 Placeholder text (variable text)	| See [Placeholder (variable) text](#placeholder-variable-text) | Not applicable
 Privileges | Regular text | The following examples assume that you are making the firewall changes as a normal user with sudo privileges. <br /> <br /> The user is granted ALL privileges on the database.
 Qualifiers | Italic | 1. *(Optional)* Enter a new name for the image. <br /> <br /> You can tell that the Managed Cloud post-build automation has successfully completed as follows: <br /> <br /> *(Windows servers)* The following file is created: **C:\\windows\\temp\\rs_managed_cloud_automation_complete.txt** <br /> <br /> *(Linux servers)* The following file is created: **/tmp/rs_managed_cloud_automation_complete**
-Quotations <br /> (content quoted from another source) | Quotation marks, or the formatting provided by the specified tags | "Scalability is key for our business," explained Nathan Goff, Inavero Operations Director and Partner. "There's nothing worse than making our clients look bad to their customers."
+Quotations <br /> (content quoted from another source) | Quotation marks, or block quote formatting | "Scalability is key for our business," explained Nathan Goff, Inavero Operations Director and Partner. "There's nothing worse than making our clients look bad to their customers."
 Role names | Regular text | The full access role has the permissions to create, read, update, and delete resources within multiple designated products where access is granted.
 Terms, new | Italic | Cloud Servers that are built using the base Linux images are created without a dedicated swap partition and with *swappiness* (a measure of how the Linux kernel tries to use swap memory) set to 0.
-Terms, unique sense | Regular text, <br /> Quotation marks on first use | The spelling checker "learns" the word. After it learns the word, the spelling checker ignores subsequent occurrences of the word in the document.
+Terms, unique sense | Regular text <br /> Quotation marks on first use | The spelling checker "learns" the word. After it learns the word, the spelling checker ignores subsequent occurrences of the word in the document.
 URLs (not live) | Bold | To access the web interface, open your web browser and navigate to **http:// *yourDomain.com*/zipit-install.php**.
 URLs (live) | See [Links and cross-references]((../a-l-style-guidelines.html#links-and-cross-references)). | Not applicable
 Variable text (placeholder text) | See [Placeholder (variable) text](#placeholder-variable-text) | Not applicable
@@ -953,7 +958,7 @@ API operation names | Regular text <br /> <br /> All lowercase | The following t
 Argument names | Monospace | To list or retrieve files from a node that is running the OpenCenter agent, use the `file` argument with the `opencentercli` node command.
 Attribute names | Monospace | The `expires` attribute denotes the time after which the token automatically becomes invalid.
 Code | Monospace | `$ grep "ftp" /etc/xinetd.d/*` <br /> ` /etc/xinetd.d/vsftpd:service ftp` <br /> `/etc/xinetd.d/vsftpd:server = /usr/sbin/vsftpd` <br /><br /> To set the environment variable, run `export token="token"`.
-Command names and options (CLI) | Monospace | You can check the architecture on Linux by using the `uname -a` command.
+Command names (CLI) | *(Public)* Monospace <br /><br /> *(Private)* Bold, by applying the `:command:` directive in RST | *(Public)* You can check the architecture on Linux by using the `uname -a` command. <br /><br /> *(Private)* You can check the architecture on Linux by using the **uname -a** command.
 Command syntax | Monospace | If a service is not running, use the service command to start it, as follows: <br /> ``$ sudo service httpd start``
 Database names | Monospace | Start by creating a new database called `mytestdb`.
 Directory names | Monospace | The following example shows a basic configuration for the FTP service, in a file in the ``/etc/xinetd.d directory``.
@@ -966,9 +971,9 @@ Folder names | Monospace | Copy the `index.php` file from your computer to the `
 Functions | Monospace | Container names are sorted based on a binary comparison, a single built-in collating sequence that compares string data using the ``memcmp()`` function, regardless of text encoding.
 HTML tags | Monospace | Avoid putting the `xml:id` attribute on the `title` tag.
 Method names (HTTP) | Bold <br /> All capitals | Client authentication is provided through a REST interface by using the **GET** method.
-Option names, command	| Monospace |	The ``--ip-addresses`` option specifies the IP address and an alias for the target.
+Option names, command	| Monospace <br /> <br /> In RST, apply the `:option:` directive. |	The ``--ip-addresses`` option specifies the IP address and an alias for the target.
 Package names	| Monospace |	You must install the `libvirt` package.
-Parameter names	| Monospace | The `display_description` parameter is optional. <br /><br /> Use the ``--flavor`` and ``--image`` parameters to specify the IDs or names of the flavor and image to use for the image.
+Parameter names	| Monospace <br /> <br /> In RST, apply the `:option:` directive. | The `display_description` parameter is optional. <br /><br /> Use the ``--flavor`` and ``--image`` parameters to specify the IDs or names of the flavor and image to use for the image.
 Paths | Monospace | The path to Perl is ``#!/usr/bin/perl -w``. <br /><br /> In the URI path ``https://incident.api.rackspacecloud.com/v1/...``, the API version is 1.
 Syntax statements | Monospace | The main command used to change a file’s owner or group is `chown`. The most common syntax used with `chown` is as follows: <br /> `chown user:group file1 file2 file3`
 User input | Monospace | Create a file by using a text editor, and insert the following code: ``<?php phpinfo(); ?>`` <br /><br /> For the username, enter `admin`.
@@ -984,7 +989,7 @@ Text item | Treatment | Output example
 Area (group box) names | Bold | In the **Edit Signature** area, enter the text that you want to appear in your signature.
 Box names <br /> (check box, combo box, group box, list box, spin box, text box, but not dialog box) | Bold | Select the **Manually configure server settings or additional server types** check box. <br /><br /> Retype the password that you entered in the **Password** box.
 Button names <br /> (command, option, radio) | Bold | Select **Microsoft Exchange** and then click **Next**.
-Cascades <br /> (menu, field) | Bold <br /><br /> Use **>** to separate. | Select **Start > Control Panel**, and then click the **Mail** icon. <br /><br /> You can find more documentation about RackConnect in the **Community > Discussions > RackConnect** section of the MyRackspace Portal.
+Cascades <br /> (menu, field) | Bold <br /><br /> Use **>** to separate. <br /> <br /> In RST, apply the `:menuselection:` directive.| Select **Start > Control Panel**, and then click the **Mail** icon. <br /><br /> You can find more documentation about RackConnect in the **Community > Discussions > RackConnect** section of the MyRackspace Portal.
 Check box names | Bold | Select the **Manually configure server settings or additional server types** check box.
 Column names | Bold | You can sort the backups by server by clicking the **Server** column label.
 Combo box names | Bold | Select a name from the **Send to** list, or type a new name.
@@ -992,23 +997,24 @@ Command button names | Bold | Select **Microsoft Exchange** and then click **Nex
 Command names, menu | Bold | To re-enable the system, select **Enable System** from the **System Actions** menu.
 Database names | Bold | Start by creating a new database called **mytestdb**.
 Dialog box names | Regular text | In the Microsoft Exchange dialog box, click **Apply** and then click **OK**.
-Directory names | Bold | Place all the contents of the uncompressed **wordpress** directory (excluding the directory itself) into the **/web/content/** directory, which is the root directory of the site.
+Directory names | *(Public)* Bold <br /><br /> *(Private)* Monospace | *(Public)* Place all the contents of the uncompressed **wordpress** directory (excluding the directory itself) into the **/web/content/** directory, which is the root directory of the site. <br /><br /> *(Private)* Place all the contents of the uncompressed `wordpress` directory (excluding the directory itself) into the `/web/content/` directory, which is the root directory of the site.
 Field names | Bold | In the **Database Name** field, enter a database name identifier.
-File names and extensions | Bold | To remove the **vs_quantum-api.cfg** file from the **haproxy.d** directory and retain it, you can move it to another directory.
+File names and extensions | *(Public)* Bold <br /><br /> *(Private)* Monospace | *(Public)* To remove the **vs_quantum-api.cfg** file from the **haproxy.d** directory and retain it, you can move it to another directory. <br /><br /> *(Private)* To remove the `vs_quantum-api.cfg` file from the `haproxy.d` directory and retain it, you can move it to another directory.
 Folder names | Bold | Copy the **index.php** file from your computer to the **content** folder.
+Glossary terms | Italic, by applying the `:term:` directive in RST <br /><br /> This directive also links the term to the definition in the glossary. | Rackspace provides an *IaaS* solution through a variety of complementary *services*.
 Group box names | Bold | In the **Edit Signature** area, enter the text that you want to appear in your signature.
-GUI labels | Bold <br /><br /> **Exception:** Show window, dialog box, wizard, page, panel, and screen names in regular text unless they need to be distinguished from the surrounding text. In such cases, use bold. | In the Microsoft Exchange dialog box, click **Apply** and then click **OK**. <br /><br /> On the Choose Service page, select **Microsoft Exchange or compatible service**, and then click **Next**. <br /><br /> Read the preliminary steps in the Configure Your Server wizard, and then click **Next**.
+GUI labels | Bold <br /><br /> In RST, apply the `:guilabel:` directive. <br /><br /> **Exception:** Show window, dialog box, wizard, page, panel, and screen names in regular text unless they need to be distinguished from the surrounding text. In such cases, use bold. | In the Microsoft Exchange dialog box, click **Apply** and then click **OK**. <br /><br /> On the Choose Service page, select **Microsoft Exchange or compatible service**, and then click **Next**. <br /><br /> Read the preliminary steps in the Configure Your Server wizard, and then click **Next**.
 Icon names | Bold | To verify which OS version you are running, click the **Apple** icon in the top-left corner and then select **About This Mac**.
 List box names and selections | Bold | From the **Account Type** list, select **Exchange 2007**. <br /><br /> To view these settings, select **Configure Backup** from the **Backup Actions** list.
-Menu names, commands, and sequences | Bold | Right-click the volume and select **Take Offline**. <br /><br /> From the **Outlook** menu, select **Preferences**. <br /><br /> Select **Start > Control Panel**, and then click the **Mail** icon.
+Menu names, commands, and sequences | Bold <br /><br /> In RST, apply the `:menuselection:` directive to sequences. | Right-click the volume and select **Take Offline**. <br /><br /> From the **Outlook** menu, select **Preferences**. <br /><br /> Select **Start > Control Panel**, and then click the **Mail** icon.
 Option button names	| Bold | Select **Microsoft Exchange** and then click **Next**.
 Page names | Regular text | On the Preferences page, you determine how frequently you receive email about all the activity on your account: daily, weekly, or both. <br /><br /> On the Server Settings page, click **Check Name**, type your password, and then click **OK**.
 Panes, named and unnamed | Regular text | To verify that your SSL binding works, select your website in the Connections pane (if it is not already selected) and then click **Browse *ipAddress* (https)** in the Actions pane. <br /><br /> In the navigation pane, select **Composing Email**.
-Paths	| Bold | The path to Perl is **#!/usr/bin/perl -w**. <br /><br /> In the URI path **https://incident.api.rackspacecloud.com/v1/...**, the API version is 1.
+Paths	| *(Public)* Bold <br /><br /> *(Private)* Monospace | *(Public)* The path to Perl is **#!/usr/bin/perl -w**. <br /> *(Public)* In the URI path **https://incident.api.rackspacecloud.com/v1/...**, the API version is 1. <br /> <br /> *(Private)* The path to Perl is `#!/usr/bin/perl -w`. <br /> *(Private)* In the URI path `https://incident.api.rackspacecloud.com/v1/...`, the API version is 1.
 Radio button names | Bold | Select **Microsoft Exchange** and then click **Next**.
-Sequences <br /> (menu, field) | Bold <br /><br /> Use **>** to separate. | Select **Start > Control Panel**, and then click the **Mail** icon. <br /><br /> You can find more documentation about RackConnect in the **Community > Discussions > RackConnect** section of the MyRackspace Portal.
+Sequences <br /> (menu, field) | Bold <br /><br /> Use **>** to separate. <br /><br /> In RST, apply the `:menuselection:` directive.  | Select **Start > Control Panel**, and then click the **Mail** icon. <br /><br /> You can find more documentation about RackConnect in the **Community > Discussions > RackConnect** section of the MyRackspace Portal.
 Tab names | Bold | In the Microsoft Exchange dialog box, click the **Connection** tab and then select the **Connect to Microsoft Exchange using HTTP** check box.
-UI labels | Bold <br /><br /> **Exception:** Show window, dialog box, wizard, page, panel, and screen names in regular text unless they need to be distinguished from the surrounding text. In such cases, use bold. | In the Microsoft Exchange dialog box, click **Apply** and then click **OK**. <br /><br /> On the Choose Service page, select **Microsoft Exchange or compatible service**, and then click **Next**. <br /><br /> Read the preliminary steps in the Configure Your Server wizard, and then click **Next**.
+UI labels | Bold <br /><br /> In RST, apply the `:guilabel:` directive. <br /><br /> **Exception:** Show window, dialog box, wizard, page, panel, and screen names in regular text unless they need to be distinguished from the surrounding text. In such cases, use bold. | In the Microsoft Exchange dialog box, click **Apply** and then click **OK**. <br /><br /> On the Choose Service page, select **Microsoft Exchange or compatible service**, and then click **Next**. <br /><br /> Read the preliminary steps in the Configure Your Server wizard, and then click **Next**.
 User input | Bold | In the Server text box, type **outlook**.
 Window names | Regular text | In the Network Connections window, right-click the private adapter and select **Properties**.
 Wizard names and wizard page names | Regular text | On the Welcome page of the Active Directory Domain Services Installation Wizard, ensure that the **Use advanced mode installation** check box is cleared, and then click **Next**.
