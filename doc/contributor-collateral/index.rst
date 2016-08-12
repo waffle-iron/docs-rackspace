@@ -8,8 +8,7 @@ Contributor collateral documentation.
 
 .. toctree::
    :maxdepth: 2
-
-   CONTRIBUTING.md
-   GITHUBING.md
    privatecloud-docteam-FAQ.rst
    publiccloud-docteam-FAQ.rst
+   CONTRIBUTING.md
+   GITHUBING.md
