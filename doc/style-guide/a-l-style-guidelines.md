@@ -49,7 +49,7 @@ Do not use an abbreviation as a verb.	| Use FTP to copy the file to the server.	
 Avoid using abbreviations in the possessive. Instead, treat the abbreviation as an adjective or put it in a prepositional phrase.	| Type the DBA password. <br /><br /> Type the password of the DBA. | Type the DBA's password.
 To form the plural of an abbreviation, except for a unit of measure, append a lowercase *s* without an apostrophe. <br /><br /> For most abbreviations of units of measure, the singular and plural forms are the same (for example, 1 pt and 10 pt). <br /><br /> If an acronym already represents a plural noun, do not add an *s*. <br /><br /> **Note:** To refer to more than one FAQ document or section, add the appropriate noun after *FAQ* and make the noun plural—for example, *FAQ articles*. Follow this guideline for other plural acronyms when you need to refer to more than one instance of them. | user IDs <br /><br /> 10 mm <br /><br /> FAQ | user ID's <br /><br /> 10 mms <br /><br /> FAQs
 For abbreviated units of measure, insert a space between the number and the abbreviation. |	256 MB	| 256MB
-Do not use Latin abbreviations or non-English words and phrases. For more information, see  [Avoid obscure non-English words and abbreviations](../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations).	| for example	| e.g.
+Do not use Latin abbreviations or non-English words and phrases. For more information, see [Avoid obscure non-English words and abbreviations](../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations).	| for example	| e.g.
 <!--endtable-->
 
 ### Abbreviations of byte and bit
