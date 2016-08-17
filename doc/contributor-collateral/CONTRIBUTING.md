@@ -62,18 +62,18 @@ To update existing source files or add new ones, follow the [GitHub workflow](GI
 ## General style guidelines
 
 When you add or update content, use the following general style guidelines, which are
-described in detail in [Style guidelines for technical content](https://github.com/rackerlabs/docs-rackspace/tree/master/style-guide):
+described in detail in [Style guidelines for technical content](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/README.md):
 
-- Use [sentence-style capitalization](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/a-l-style-guidelines.md#cap-sentence-style) for titles and headings
-- Use consistent [text formatting](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/m-z-style-guidelines.md#text-formatting)
-- Write clear and consistent [code examples](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/a-l-style-guidelines.md#code-examples)
-- Use [active voice](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md#use-active-voice)
-- Use [present tense](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md#use-present-tense)
-- Write to the user by using [second person and imperative mood](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md#write-to-user)
-- Write clear and consistent [step text](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/m-z-style-guidelines.md#tasks-steps)
-- Clarify [pronouns](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md#clarify-pronouns) such as *it*, *this*, *there*, and *that*
-- Clarify [gerunds and participles](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md#clarify-gerunds-and-participles)
-- Use [consistent terminology](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/basic-writing-guidelines.md#use-consistent-terminology)
+- Use [sentence-style capitalization](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/a-l-style-guidelines.md#guidelines-for-sentence-style-capitalization) for titles and headings
+- Use consistent [text formatting](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/m-z-style-guidelines.md#text-formatting)
+- Write clear and consistent [code examples](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/a-l-style-guidelines.md#code-examples)
+- Use [active voice](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/basic-writing-guidelines.md#use-active-voice)
+- Use [present tense](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/basic-writing-guidelines.md#use-present-tense)
+- Write to the user by using [second person and imperative mood](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/basic-writing-guidelines.md#write-to-the-user-by-using-second-person-and-imperative-mood)
+- Use numbered lists for instructions, and write clear [step text](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/m-z-style-guidelines.md#procedural-steps)
+- Clarify [pronouns](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/basic-writing-guidelines.md#clarify-pronouns) such as *it*, *this*, *there*, and *that*
+- Clarify [gerunds and participles](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/basic-writing-guidelines.md#clarify-gerunds-and-participles)
+- Use [consistent terminology](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/basic-writing-guidelines.md#use-consistent-terminology)
 
 <!-- Adding build from source guidelines until we can provide a link to automated gh-pages
 output, or to the staging URL that Ash is working on.
