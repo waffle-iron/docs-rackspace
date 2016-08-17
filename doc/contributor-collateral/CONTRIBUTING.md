@@ -79,7 +79,7 @@ described in detail in [Style guidelines for technical content](https://github.c
 output, or to the staging URL that Ash is working on.
 -->
 
-# Submitting changes
+## Submitting changes
 
 When you've completed your changes, submit a pull request. Someone on the Information Development team will review your PR.
 - Minor updates and corrections get a quick review to ensure that content is error-free and doesn't introduce other issues.
