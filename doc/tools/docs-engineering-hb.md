@@ -1,14 +1,14 @@
 # Documentation for applications and services
 
-As a developer, you create and update applications and services to provide new and additional functionality for customers. Often that functionality needs to
-be documented so that customers can use it effectively. In these cases, you collaborate with the Information Development team to create and deliver customer-facing documentation like user and administrator guides, expert How-To articles, and API reference documentation. They can help you with tasks like the following:
-- determining what kind of documentation customers need
-- coordinating publishing with product release schedules
-- developing and delivering documentation
+As a developer, you create and update applications and services to provide new and additional functionality for customers. Often that functionality needs to be documented so that customers can use it effectively. In these cases, you collaborate with the Information Development (Info Dev) team to create and deliver customer-facing documentation like user and administrator guides, expert How-To articles, and API reference documentation. The Info Dev team can help you with tasks like the following ones:
 
-Like other teams in Engineering, the Information Development team provides a framework of common standards and practices and a shared build environment that supports a continuous integration and delivery (CI/CD) workflow. Using this framework allows you to focus on documenting your product or service for customers rather than figuring out new ways to create and deliver documentation.
+- Determining what kind of documentation customers need
+- Coordinating publishing with product release schedules
+- Developing and delivering documentation
 
-In this collaborative process, the people with the expertise and product knowledge (you) perform as much of the content production cycle as you reasonably can and, in turn, the Information Development team provides:
+Like other teams in Engineering, the Info Dev team provides a framework of common standards and practices and a shared build environment that supports a continuous integration and delivery (CI/CD) workflow. Using this framework allows you to focus on documenting your product or service for customers rather than figuring out new ways to create and deliver documentation.
+
+In this collaborative process, the people with the expertise and product knowledge (you) perform as much of the content production cycle as you reasonably can and, in turn, the Info Dev team provides:
 
 - Guidance in using the documentation tools and CI/CD workflow
 - Templates and writing guidance
@@ -127,85 +127,84 @@ For details, see [Coordinating a Deconst site](https://deconst.horse/writing-doc
 
 For detailed information about contributing to existing repositories, see the [Contributing to the documentation](contributing-to-the-documentation).
 
-
-## Contributing to docs
+## Contributing to documentation
 
 How you contribute to documentation depends on what you are developing:
 
-- New product or service: All the content is new
-- New feature for an existing product and service: New content is added to an existing doc set
-- Fixes or updates for an existing product or service: Small changes and updates are made to an existing doc set
+- **New product or service**: All the content is new.
+- **New feature for an existing product and service**: New content is added to an existing documentation project.
+- **Fixes or updates for an existing product or service**: Small changes and updates are made to an existing documentation project.
 
-You can also contribute to docs by fixing mistakes that you discover. This section provides a high-level overview of the contribution process and then describes the process that you follow for each contribution type.
+You can also contribute to documentation by fixing mistakes that you discover. This section provides a high-level overview of the contribution process and then describes how to approach each type of contribution.
 
 ### High-level contribution process
 
-We welcome contributions to Rackspace documentation. Most documentation source repositories include README and CONTRIBUTING files that provide the following
-information:
-- List of documentation deliverables and links to published content.
+The Info Dev team welcomes contributions to Rackspace documentation. Most documentation source repositories (repos) include README and CONTRIBUTING files that provide the following information:
+
+- List of documentation deliverables and links to published content
 - Explanation of the source format and tools for authoring and building the content
-- Outline of project organization so that contributors can determine what
-  files to update and where to add new sections.
+- Outline of the project organization so that contributors can determine what
+  files to update and where to add new sections
 - GitHub workflow instructions for submitting pull requests
 - Review guidelines
+
 When you write customer-facing documentation, follow the writing and style
 guidelines specified in the
-[Rackspace Documentation Guide](http://rackerlabs.github.io/docs-rackspace/style-guide/index.html).
+[Rackspace Documentation Guides](http://rackerlabs.github.io/docs-rackspace/style-guide/index.html).
 
-#### General contribution model
+#### General contribution workflow
+
 The following process provides an overview of the general contribution
 model for updating customer-facing documentation for Rackspace products and
-services. For more detailed contribution information, see the Contributing guidelines in the documentation source repository.
+services. For more detailed contribution information, see the CONTRIBUTING guidelines in the documentation source repo.
 
-1. Create an issue for your work.
+1. **Create an issue for your work.**
     - You can skip this step for trivial changes.
     - If available, reuse an existing issue on the topic.
     - If you are planning to do the work, assign yourself to the task.
-      If you need help, clearly state the work you want done along with the
+    - If you need help, clearly state the work you want done and the
       context in which the work needs to be completed.
 
-2. When you are ready to make changes, follow the contribution guidelines to
-   create a local fork of the repository; clone it locally, and create a
-   branch on the cloned repository where you can do your work.
+2. **Create a fork of the repo.**
 
-3. Make and commit your changes.
+    When you are ready to make create or revise content, follow the contribution guidelines in the repo to create a fork of the repo, clone it locally, and create a branch on the cloned repo where you can do your work.
+
+3. **Make and commit your changes.**
    - Add your changes to the appropriate location in the project.
-     For example, if you are adding a topic to an existing section, make sure it is in the same folder as the other topics in that section. If you are
-     updating an existing topic, make sure to add it at the appropriate place
-     in the file, adding or adjusting heading levels if required.
-   - Name your file meaningfully in lowercase with dashes.
-   - If you are contributing to a Sphinx project, use restructured text. If
-     you are contributing to a Jekyll project, use GitHub Flavored Markdown.
+     For example, if you are adding a topic to an existing section, ensure that it is in the same folder as the other topics in that section. If you are updating an existing topic, be sure to add your content in the appropriate place in the file, adding or adjusting heading levels as necessary.
+   - Name your file meaningfully, using lowercase letters and dashes.
+   - If you are contributing to a Sphinx project, use reStructuredText. If
+     you are contributing to a Jekyll project, use GitHub-flavored Markdown.
    - Include diagrams where appropriate. Diagrams are required to be in the
-     PNG or JPG format but we encourage the inclusion of SVG format to make editing easier.
+     PNG or JPG format, but we encourage the inclusion of SVG format to make editing easier.
    - For new sections or topics, use other sections and topics as models to
-     follow for your updates.
+     follow.
    - Before committing your changes, check the file syntax to
-     prevent build errors. You can use a locally installed linter, or follow
+     prevent build errors. You can use a locally installed linter or follow
      the instructions to build content locally.
    - Push your changes to your fork on GitHub.
 
-5. Create a pull request (PR) against the upstream repository's **master**
+4. **Create a pull request (PR)** against the upstream repo's **master**
    branch and wait for review feedback.
 
 ### New product, new content
-Whether you are working on a new cloud service or on a new type of offering, such as Carina, you first work with the Information Development team to determine what kind of customer-facing content is needed.
+Whether you are working on a new cloud service or a new type of offering, such as Carina, you first work with the Info Dev team to determine what kind of customer-facing content is needed.
 
-Depending on the offering, a minimum set of content is defined. For example, a new cloud service requires introductory content, an FAQ, and basic control panel tasks documented and delivered to the Rackspace support site, as well as API reference information documented and delivered to the Rackspace developer site.
+Depending on the offering, a minimum set of content is defined. For example, a new cloud service requires introductory content, an FAQ, and basic control panel tasks documented and delivered to the Rackspace Support site, as well as API reference information documented and delivered to the Rackspace Developer site.
 
-The Information Development team works closely with the development team to determine the content set and the information architecture. The Information Development team then provides templates and guidelines to help you draft the content that is needed.
+The Info Dev team works closely with the development team to determine the content set and the information architecture. The Info Dev team then provides templates and guidelines to help you draft the content that is needed.
 
-When you want to create documentation for a new product or service, open an issue or [issue](https://github.com/rackerlabs/docs-rackspace/issues/new) or send an
-[e-mail](mailto:group-laura-clymer@rackspace.com) with the general requirements, context, and timeline for the project.
+When you want to create documentation for a new product or service, open an [issue](https://github.com/rackerlabs/docs-rackspace/issues/new) or send an
+[email](mailto:group-laura-clymer@rackspace.com) with the general requirements, context, and timeline for the project.
 
 ### Existing product, new feature, new content
 When you update an existing product to add a feature or functionality that
-requires customer-facing documentation, you update the existing documentation to add content to an existing content set.
+requires customer-facing documentation, you update the existing documentation project to add content.
 
-For this type of change, you can scope the work yourself or work with the Information Development team. In either case, follow the [general-contribution-workflow](#general-contribution-workflow) to submit an issue about the required updates.
+For this type of change, you can scope the work yourself or work with the Info Dev team. In either case, follow the [general contribution workflow](#general-contribution-workflow) to submit an issue about the required updates.
 
 ### Existing product, fix or update
-Fixing or updating the code for an existing product might or might not require updates to the customer-facing documentation. If the change affects the ways that users interact with the product, review the existing content to determine whether it needs to be updated.  If they are, follow the [general-contribution-workflow](#general-contribution-workflow) to submit  changes.
+Fixing or updating the code for an existing product might or might not require updates to the customer-facing documentation. If the change affects the ways that users interact with the product, review the existing content to determine whether it needs to be updated. If so, follow the [general contribution workflow](#general-contribution-workflow) to submit changes.
 
 ### Existing content, fixes and updates
-As you create and work with documentation, you will find mistakes and outdated information. You can easily fix the content yourself by following the [general-contribution workflow](#general-contribution-contribution-workflow).
+As you create and work with documentation, you will find mistakes and outdated information. You can easily fix the content yourself by following the [general contribution workflow](#general-contribution-workflow).
