@@ -22,7 +22,7 @@ Rackspace currently provides the following types of customer-facing content on t
 Site | Types of content | Format |
 ---- | ---------------- | ------ |
 [developer.rackspace.com](https://developer.rackspace.com/docs/) | Private Cloud end-user documentation <br> Public Cloud API guides <br> Public Cloud SDK quickstart guides| Sphinx documentation project (reStructuredText)
-[support.rackspace.com](https://support.rackspace.com/how-to/) | Articles for using and troubleshooting Rackspace services | | Jekyll (markdown) |
+[support.rackspace.com](https://support.rackspace.com/how-to/) | Articles for using and troubleshooting Rackspace services | Jekyll (markdown) |
 [getcarina.com](https://getcarina.com/docs/) | Articles for using Carina | Jekyll
 [pages.github.rackspace.com](https://pages.github.rackspace.com/IX/internal-docs-landing-page/) | Private Cloud support documentation <br> Public Cloud service admin guides <br> Product services guides | Sphinx |
 
