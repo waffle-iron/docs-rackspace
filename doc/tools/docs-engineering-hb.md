@@ -75,7 +75,7 @@ that convert content repositories in different formats
 
 For more detailed information about these features and how the deconst continuous-delivery pipeline works, see the [Architecture section](https://deconst.horse/developing/architecture/) of the Deconst documentation.
 
-#### GitHub source repositories for documentation
+## GitHub source repositories for documentation
 You can find the GitHub source repository for published documentation by clicking on the **Edit on GitHub** or **Submit an issue** link available on the website. Because some repositories are private, you might need help
 getting access or finding the repository. In that case, open an
 [issue](https://github.com/rackerlabs/docs-rackspace/issues/new) to get help from the Info Dev team.
@@ -92,7 +92,7 @@ The content repository must also be added to the control configuration repositor
 
 After a content repository has been added to the control configuration, the documentation projects in the repository will build and deploy a staging version of the content each time someone submits a GitHub pull-request to the repository. When the pull request is merged, the content is deployed to the production site. If your content is in beta or early access, you can also configure the content so that it deploys only to a  to a development server only.
 
-### Delivering documentation to a Deconst site
+## Delivering documentation to a Deconst site
 The work required to deliver documentation by using Deconst depends on whether you are authoring content or managing the site configuration settings that enable the CI/CD workflow automation.
 
 #### Writing content
@@ -106,7 +106,7 @@ Authors create content by writing and committing documentation source files writ
 
 For details, see [Authoring content for deconst](https://deconst.horse/writing-docs/author/).
 
-#### Managing content build and delivery
+### Managing content build and delivery
 Site coordinators assemble content from many sources into a single site by configuring the following items in the control repository for the Deconst instance:
 - A [content mapping](https://deconst.horse/writing-docs/coordinator/mapping/) that specifies the path where Deconst will display the content
 - A [template mapping](https://deconst.horse/writing-docs/coordinator/templates/#mapping-templates-to-pages) that specifies which template to apply to a content set or specific pages within a content set when the content is served.
@@ -145,7 +145,7 @@ When you write customer-facing documentation, follow the writing and style
 guidelines specified in the
 [Rackspace Documentation Guides](http://rackerlabs.github.io/docs-rackspace/style-guide/index.html).
 
-#### General contribution workflow
+**General contribution workflow**
 
 The following process provides an overview of the general contribution
 model for updating customer-facing documentation for Rackspace products and
@@ -180,7 +180,7 @@ services. For more detailed contribution information, see the CONTRIBUTING guide
 4. **Create a pull request (PR)** against the upstream repo's **master**
    branch and wait for review feedback.
 
-### New product, new content
+#### New product, new content
 Whether you are working on a new cloud service or a new type of offering, such as Carina, you first work with the Info Dev team to determine what kind of customer-facing content is needed.
 
 Depending on the offering, a minimum set of content is defined. For example, a new cloud service requires introductory content, an FAQ, and basic control panel tasks documented and delivered to the Rackspace Support site, as well as API reference information documented and delivered to the Rackspace Developer site.
@@ -190,14 +190,14 @@ The Info Dev team works closely with the development team to determine the conte
 When you want to create documentation for a new product or service, open an [issue](https://github.com/rackerlabs/docs-rackspace/issues/new) or send an
 [email](mailto:group-laura-clymer@rackspace.com) with the general requirements, context, and timeline for the project.
 
-### Existing product, new feature, new content
+#### Existing product, new feature, new content
 When you update an existing product to add a feature or functionality that
 requires customer-facing documentation, you update the existing documentation project to add content.
 
 For this type of change, you can scope the work yourself or work with the Info Dev team. In either case, follow the [general contribution workflow](#general-contribution-workflow) to submit an issue about the required updates.
 
-### Existing product, fix or update
+#### Existing product, fix or update
 Fixing or updating the code for an existing product might or might not require updates to the customer-facing documentation. If the change affects the ways that users interact with the product, review the existing content to determine whether it needs to be updated. If so, follow the [general contribution workflow](#general-contribution-workflow) to submit changes.
 
-### Existing content, fixes and updates
+#### Existing content, fixes and updates
 As you create and work with documentation, you will find mistakes and outdated information. You can easily fix the content yourself by following the [general contribution workflow](#general-contribution-workflow).
