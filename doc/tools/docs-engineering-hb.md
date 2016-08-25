@@ -1,3 +1,19 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Documentation for applications and services](#documentation-for-applications-and-services)
+	- [Types of documentation and delivery](#types-of-documentation-and-delivery)
+	- [Continuous integration and delivery](#continuous-integration-and-delivery)
+	- [GitHub source repositories for documentation](#github-source-repositories-for-documentation)
+	- [Delivering documentation to a Deconst site](#delivering-documentation-to-a-Deconst-site)
+			- [Writing content](#writing-content)
+		- [Managing content build and delivery](#managing-content-build-and-delivery)
+	- [Contributing to documentation](#contributing-to-documentation)
+		- [High-level contribution process](#high-level-contribution-process)
+			- [New product, new content](#)
+			- [Existing product, new feature, new content](#)
+			- [Existing product, fix or update](#)
+			- [Existing content, fixes and updates](#)
+
 # Documentation for applications and services
 
 As a developer, you create and update applications and services to provide new and additional functionality for customers. Often that functionality needs to be documented so that customers can use it effectively. In these cases, you collaborate with the Information Development (Info Dev) team to create and deliver customer-facing documentation like user and administrator guides, expert How-To articles, and API reference documentation. The Info Dev team can help you with tasks like the following ones:
