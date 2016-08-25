@@ -36,7 +36,7 @@ For more high-level information about the content that is currently provided to 
 The Rackspace documentation platform is called *deconst*.
 Deconst is a continuous-delivery pipeline that can assemble documentation source projects from individual GitHub repositories to a single site hosted on a Deconst instance and deploy the content to multiple domains within that site.
 
-The Rackspace documentation is hosted on a Deconst site that serves the content for the following domains:
+The following Rackspace customer documentation is hosted on a Deconst site that serves for each domain separately.
 - [Rackspace Developer Docs](https://developer.rackspace.com/docs/)
 - [Support How-To](https://support.rackspace.com/how-to/)
 - [Carina Docs](https://getcarina.com/docs/)
@@ -44,6 +44,7 @@ The Rackspace documentation is hosted on a Deconst site that serves the content 
   pull request previews
 
 The deconst platform provides the following services:
+
 - [Preparers](https://deconst.horse/developing/architecture/#term-preparer) that convert content repositories in different formats
   to a common JSON format and submit them to a Cloud Files storage container as a directory tree of
   [metadata envelopes](https://deconst.horse/developing/terminology/#term-metadata-envelopes),
@@ -51,20 +52,25 @@ The deconst platform provides the following services:
 
   There is one preparer for each supported content format. Currently, deconst- supports Sphinx documentation projects authored in [restructured text format](http://docutils.sourceforge.net/rst.html) (``.rst``) and Jekyll
   projects authored in GitHub Flavored markdown (``.md``). The preparer is executed by the deconst CI/CD system on each commit to the repository. You can also extend deconst to support other formats by [creating another preparer](https://deconst.horse/developing/preparer/).
-- [Templates](https://deconst.horse/writing-docs/coordinator/templates/)
-  that determine the visual identity, navigation,and HTML boilerplate used for each page. These templates provide the Rackspace-branded look and feel for the Rackspace Developer documentation, Support How-To article collection, and the Carina documentation.
-
-- [A control repository](https://deconst.horse/writing-docs/coordinator/#the-control-repository) that provides centralized management of site-wide concerns like setting up build jobs, configuring and managing paths to deploy and publish content, assigning templates to content, and managing assets such as stylesheets, JavaScript files, or images that are referenced by the layout templates. The control repository for the Rackspace documentation mentioned above is
-- Continuous integration workflow powered by
-  [Strider](https://www.npmjs.com/package/strider), a continuous integration server integrated with Deconst to provide on-cluster preparer and submitter runs.
-
-- Pull request [previews](https://deconst.horse/writing-docs/author/#previewing-changes) of rendered content in a staging environment
 
 - A submitter process that sends prepared JSON documents populated with metadata envelopes and asset files to the content service. This process submits content and assets in bulk transactions and avoids submitting unchanged content.
 
 - A content service that provides content storage and retrieval for content deployed by using the deconst platform. This service automates the deploy and publish process for deconst, but you can also use the [API](https://github.com/deconst/content-service#api) to submit content and run queries to get information about currently deployed content.
 
+- [Templates](https://deconst.horse/writing-docs/coordinator/templates/)
+  that determine the visual identity, navigation,and HTML boilerplate used for each page. These templates provide the Rackspace-branded look and feel for the Rackspace Developer documentation, Support How-To article collection, and the Carina documentation.
+
 - A presenter that accepts HTTP requests from users. The presenter maps the URL requested by the user to a content ID using the latest known version of the content mapping specified in the control repository configuration, and then accesses the requested metadata envelope using the content service. Finally, the presenter injects the metadata envelope into the template configured for the content mapping and sends the final HTML back in an HTTP response. For details, see [Lifecycle of an HTTP request](https://deconst.horse/developing/architecture/#lifecycle-of-an-http-request).
+
+- [A control repository](https://deconst.horse/writing-docs/coordinator/#the-control-repository) that provides centralized management of site-wide concerns like setting up build jobs, configuring and managing paths to deploy and publish content, assigning templates to content, and managing assets such as stylesheets, JavaScript files, or images that are referenced by the layout templates. The control repository for the Rackspace documentation mentioned above is hosted in the
+[nexus-control](https://github.com/rackerlabs/nexus-control) GitHub repository.
+
+- A continuous integration workflow powered by
+  [Strider](https://www.npmjs.com/package/strider), a continuous integration server integrated with Deconst to provide on-cluster preparer and submitter runs. The Strider runs the preparer to convert the content to JSON format and then runs the submitter process to send the metadata envelopes to the content service.
+
+- Pull request [previews](https://deconst.horse/writing-docs/author/#previewing-changes) of rendered content in a staging environment
+
+- The presenter service accepts HTTP requests from users. The presenter maps the URL requested by the user to a content ID using the latest known version of the content mapping specified in the control repository configuration, and then accesses the requested metadata envelope using the content service. Finally, the presenter injects the metadata envelope into the template configured for the content mapping and sends the final HTML back in an HTTP response. For details, see [Lifecycle of an HTTP request](https://deconst.horse/developing/architecture/#lifecycle-of-an-http-request).
 
 - An nginx server provides a reverse proxy that accepts requests from the host, terminates TLS, and delegates to the local presenter and content service.
 
