@@ -111,7 +111,8 @@ After a content repository has been added to the control configuration, the docu
 ## Delivering documentation to a Deconst site
 The work required to deliver documentation by using Deconst depends on whether you are authoring content or managing the site configuration settings that enable the CI/CD workflow automation.
 
-#### Writing content
+
+### Writing content
 Authors create content by writing and committing documentation source files written in the appropriate format to a content repository. They perform tasks like the following:
 
 - Use existing Info Dev documentation project and content type templates to create [markdown content in Jekyll](https://deconst.horse/writing-docs/author/jekyll/) or [restructured text content in Sphinx](https://deconst.horse/writing-docs/author/sphinx/) in new or existing content repositories.
@@ -122,7 +123,7 @@ Authors create content by writing and committing documentation source files writ
 
 For details, see [Authoring content for deconst](https://deconst.horse/writing-docs/author/).
 
-### Managing content build and delivery
+#### Managing content build and delivery
 Site coordinators assemble content from many sources into a single site by configuring the following items in the control repository for the Deconst instance:
 - A [content mapping](https://deconst.horse/writing-docs/coordinator/mapping/) that specifies the path where Deconst will display the content
 - A [template mapping](https://deconst.horse/writing-docs/coordinator/templates/#mapping-templates-to-pages) that specifies which template to apply to a content set or specific pages within a content set when the content is served.
