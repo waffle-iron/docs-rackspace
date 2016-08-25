@@ -65,7 +65,7 @@ The deconst platform provides the following services:
 - [A control repository](https://deconst.horse/writing-docs/coordinator/#the-control-repository) that provides centralized management of site-wide concerns like setting up build jobs, configuring and managing paths to deploy and publish content, assigning templates to content, and managing assets such as stylesheets, JavaScript files, or images that are referenced by the layout templates. The control repository for the Rackspace documentation mentioned above is hosted in the
 [nexus-control](https://github.com/rackerlabs/nexus-control) GitHub repository.
 
-- A continuous integration workflow powered by
+- Automated build services powered by
   [Strider](https://www.npmjs.com/package/strider), a continuous integration server integrated with Deconst to provide on-cluster preparer and submitter runs. The Strider runs the preparer to convert the content to JSON format and then runs the submitter process to send the metadata envelopes to the content service.
 
 - Pull request [previews](https://deconst.horse/writing-docs/author/#previewing-changes) of rendered content in a staging environment
