@@ -2,9 +2,6 @@
 
 - [Documentation for applications and services](#documentation-for-applications-and-services)
 	- [GitHub source repositories for documentation](#github-source-repositories-for-documentation)
-	- [Delivering documentation to a Deconst site](#delivering-documentation-to-a-deconst-site)
-	   - [Writing content](#writing-content)
-	   - [Managing content build and delivery](#managing-content-build-and-delivery)
 	- [Contributing to documentation](#contributing-to-documentation)
 		- [High-level contribution process](#high-level-contribution-process)
 		- [New product, new content](#new-product-new-content)
@@ -12,6 +9,10 @@
 		- [Existing product, fix or update](#existing-product-fix-or-update)
 		- [Existing content, fixes and updates](#existing-content-fixes-and-updates)
 	- [Continuous integration and delivery](#continuous-integration-and-delivery)
+	   -  [Managing GitHub source repositories for documentation](managing-github-source-repositories-for-documentation)
+	   - [Delivering documentation to a Deconst site](#delivering-documentation-to-a-deconst-site)
+	       - [Writing content](#writing-content)
+	       - [Managing content build and delivery](#managing-content-build-and-delivery)
 
 # Documentation for applications and services
 
@@ -165,7 +166,7 @@ that convert content repositories in different formats
 
 - Development and Staging environments that enable collaborative review and early Beta releases of documentation. Staging environments are automatically created and linked on each pull request. 
 
-### GitHub source repositories for documentation
+### Managing GitHub source repositories for documentation
 You can find the GitHub source repository for published documentation by clicking on the **Edit on GitHub** or **Submit an issue** link available on the website. Because some repositories are private, you might need help
 getting access or finding the repository. In that case, open an
 [issue](https://github.com/rackerlabs/docs-rackspace/issues/new) to get help from the Info Dev team.
