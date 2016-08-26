@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Documentation for applications and services &mdash; Rackspace Documentation Guides  documentation</title>
+  <title>Documentation for Rackspace products and services &mdash; Rackspace Documentation Guides  documentation</title>
   
 
   
@@ -112,7 +112,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Documentation for applications and services</li>
+    <li>Documentation for Rackspace products and services</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -126,220 +126,216 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="documentation-for-applications-and-services">
-<span id="documentation-for-applications-and-services"></span><h1>Documentation for applications and services<a class="headerlink" href="#documentation-for-applications-and-services" title="Permalink to this headline">#</a></h1>
-<p>As a developer, you create and update applications and services to provide new and additional functionality for customers. Often that functionality needs to
-be documented so that customers can use it effectively. In these cases, you collaborate with the Information Development team to create and deliver customer-facing documentation like user and administrator guides, expert How-To articles, and API reference documentation. They can help you with tasks like the following:</p>
+  <p><strong>Table of Contents</strong>  <em>generated with <a class="reference external" href="http://doctoc.herokuapp.com/">DocToc</a></em></p>
 <ul class="simple">
-<li>determining what kind of documentation customers need</li>
-<li>coordinating publishing with product release schedules</li>
-<li>developing and delivering documentation</li>
+<li><a class="reference external" href="#documentation-for-applications-and-services">Documentation for Rackspace products and services</a><ul>
+<li><a class="reference external" href="#contributing-to-documentation">Contributing to documentation</a><ul>
+<li><a class="reference external" href="#high-level-contribution-process">High-level contribution process</a></li>
+<li><a class="reference external" href="#new-product-new-content">New product, new content</a></li>
+<li><a class="reference external" href="#existing-product-new-feature-new-content">Existing product, new feature, new content</a></li>
+<li><a class="reference external" href="#existing-product-fix-or-update">Existing product, fix or update</a></li>
+<li><a class="reference external" href="#existing-content-fixes-and-updates">Existing content, fixes and updates</a></li>
 </ul>
-<p>Like other teams in Engineering, the Information Development team provides a framework of common standards and practices and a shared build environment that supports a continuous integration and delivery (CI/CD) workflow. Using this framework allows you to focus on documenting your product or service for customers rather than figuring out new ways to create and deliver documentation.</p>
-<p>In this collaborative process, the people with the expertise and product knowledge (you) perform as much of the content production cycle as you reasonably can and, in turn, the Information Development team provides:</p>
+</li>
+<li><a class="reference external" href="#continuous-integration-and-delivery-with-deconst">Continuous integration and delivery with Deconst</a><ul>
+<li><a class="reference external" href="#managing-github-source-repositories-for-documentation">Managing GitHub source repositories for documentation</a></li>
+<li><a class="reference external" href="#delivering-documentation-to-a-deconst-site">Delivering documentation to a Deconst site</a><ul>
+<li><a class="reference external" href="#writing-content">Writing content</a></li>
+<li><a class="reference external" href="#coordinating-a-deconst-site">Coordinating a Deconst site</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="documentation-for-rackspace-products-and-services">
+<span id="documentation-for-rackspace-products-and-services"></span><h1>Documentation for Rackspace products and services<a class="headerlink" href="#documentation-for-rackspace-products-and-services" title="Permalink to this headline">#</a></h1>
+<p>As a developer, you create and update applications and services to provide new and additional functionality for customers. Often that functionality needs to be documented so that customers can use it effectively. In these cases, you collaborate with the Information Development (Info Dev) team to create and deliver customer-facing documentation like user and administrator guides, expert How-To articles, and API reference documentation. The Info Dev team can help you with tasks like the following ones:</p>
+<ul class="simple">
+<li>Determining what kind of documentation customers need</li>
+<li>Coordinating publishing with product release schedules</li>
+<li>Developing and delivering high quality documentation to the right channel at the right time</li>
+</ul>
+<p>Like other teams in Engineering, the Info Dev team provides a framework of common standards and practices and a shared documentation development environment that supports a continuous integration and delivery (CI/CD) workflow. We also provide ongoing maintenance and improvements to the tools, processes, and systems that support this environment. Using this framework allows you to focus on documenting your product or service for customers without having to worry about the tools and systems for developing and delivering the finished product.</p>
+<p>In this collaborative process, people like you that have domain expertise and product knowledge perform as much of the content production cycle as they reasonably can and, in turn, the Info Dev team provides:</p>
 <ul class="simple">
 <li>Guidance in using the documentation tools and CI/CD workflow</li>
 <li>Templates and writing guidance</li>
 <li>Expertise in information development and architecture</li>
 <li>Reviews, editorial feedback, and publication approval</li>
 </ul>
-<div class="section" id="types-of-documentation-and-delivery">
-<span id="types-of-documentation-and-delivery"></span><h2>Types of documentation and delivery<a class="headerlink" href="#types-of-documentation-and-delivery" title="Permalink to this headline">#</a></h2>
-<p>Rackspace currently provides the following types of customer-facing content on the following sites:</p>
-<p>Site | Types of content | Audience
----- | ---------------- | --------
-<a class="reference external" href="https://developer.rackspace.com/docs/">developer.rackspace.com</a> | Private Cloud end-user documentation <br> Public Cloud API guides <br> Public Cloud SDK quickstart guides | Developers <br> Operators
-<a class="reference external" href="https://support.rackspace.com/how-to/">support.rackspace.com</a> | Articles for using and troubleshooting Rackspace services | Developers <br> Operators
-<a class="reference external" href="https://getcarina.com/docs/">getcarina.com</a> | Articles for using Carina | Developers
-<a class="reference external" href="https://pages.github.rackspace.com/IX/internal-docs-landing-page/">pages.github.rackspace.com</a> | Private Cloud support documentation <br> Public Cloud developer guides <br> Product services guides <br> Rackspace design information | Support and other Rackers</p>
-<p>For more high-level information about the content that is currently provided to customers, see the following topics:</p>
+<div class="section" id="contributing-to-documentation">
+<span id="contributing-to-documentation"></span><h2>Contributing to documentation<a class="headerlink" href="#contributing-to-documentation" title="Permalink to this headline">#</a></h2>
+<p>When you contribute to the documentation, you use the Deconst documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. If you're a regular contributor or if you are coordinating the documentation work for your team, you'll find it helpful to <a class="reference external" href="#continuous-integration-and-delivery">learn more about Deconst</a>.</p>
+<p>How you contribute to documentation depends on what you are developing:</p>
+<ul class="simple">
+<li><strong>New product or service</strong>: All the content is new.</li>
+<li><strong>New feature for an existing product and service</strong>: New content is added to an existing documentation project.</li>
+<li><strong>Fixes or updates for an existing product or service</strong>: Small changes and updates are made to an existing documentation project.</li>
+</ul>
+<p>You can also contribute to documentation by fixing mistakes that you discover. This section provides a high-level overview of the contribution process and then describes how to approach each type of contribution.</p>
+<p><strong>Note:</strong> For information about how to find documentation source repositories, see <a class="reference external" href="tools/managing-github-source-repositories-for-documentation">Managing GitHub source repositories for documentation</a>.</p>
+<div class="section" id="high-level-contribution-process">
+<span id="high-level-contribution-process"></span><h3>High-level contribution process<a class="headerlink" href="#high-level-contribution-process" title="Permalink to this headline">#</a></h3>
+<p>The Info Dev team welcomes contributions to Rackspace documentation. Most documentation source repositories (repos) include README and CONTRIBUTING files that provide the following information:</p>
+<ul class="simple">
+<li>List of documentation deliverables and links to published content</li>
+<li>Explanation of the source format and tools for authoring and building the content</li>
+<li>Outline of the project organization so that contributors can determine what
+files to update and where to add new sections</li>
+<li>GitHub workflow instructions for submitting pull requests</li>
+<li>Review guidelines</li>
+</ul>
+<p>When you write customer-facing documentation, follow the writing and style
+guidelines specified in the
+<a class="reference external" href="http://rackerlabs.github.io/docs-rackspace/style-guide/index.html">Rackspace Documentation Guides</a>.</p>
+<p>The following process provides an overview of the general contribution
+workflow for updating customer-facing documentation for Rackspace products and
+services. For more detailed contribution information with Info Dev contact information and source locations,
+see the following FAQs:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference external" href="http://rackerlabs.github.io/docs-rackspace/contributor-collateral/publiccloud-docteam-FAQ.html">Documentation FAQ for Rackspace Public Cloud</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://rackerlabs.github.io/docs-rackspace/contributor-collateral/privatecloud-docteam-FAQ.html">Documentation FAQ for Rackspace Private Cloud</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="documentation-platform">
-<span id="documentation-platform"></span><h2>Documentation platform<a class="headerlink" href="#documentation-platform" title="Permalink to this headline">#</a></h2>
-<p>The Rackspace documentation platform is called <em>deconst</em>.
-Deconst is a continuous-delivery pipeline that can assemble documentation source projects from individual GitHub repositories to a single site hosted on a Deconst instance and deploy the content to multiple domains within that site.</p>
-<p>The following Rackspace customer documentation is hosted on a Deconst site that serves for each domain separately.</p>
+<p><strong>General contribution workflow</strong></p>
+<ol>
+<li><p class="first"><strong>Create an issue for your work.</strong></p>
 <ul class="simple">
-<li><a class="reference external" href="https://developer.rackspace.com/docs/">Rackspace Developer Docs</a></li>
-<li><a class="reference external" href="https://support.rackspace.com/how-to/">Support How-To</a></li>
-<li><a class="reference external" href="https://getcarina.com/docs/">Carina Docs</a></li>
-<li><a class="reference external" href="https://staging.developer.rackspace.com/">Staging server</a> for
-pull request previews</li>
-</ul>
-<p>The deconst platform provides the following services:</p>
-<ul>
-<li><p class="first"><a class="reference external" href="https://deconst.horse/developing/architecture/#term-preparer">Preparers</a> that convert content repositories in different formats
-to a common JSON format and submit them to a Cloud Files storage container as a directory tree of
-<a class="reference external" href="https://deconst.horse/developing/terminology/#term-metadata-envelopes">metadata envelopes</a>,
-each of which contains one page of rendered HTML and associated metadata.</p>
-<p>There is one preparer for each supported content format. Currently, deconst- supports Sphinx documentation projects authored in <a class="reference external" href="http://docutils.sourceforge.net/rst.html">restructured text format</a> (<code class="docutils literal"><span class="pre">.rst</span></code>) and Jekyll
-projects authored in GitHub Flavored markdown (<code class="docutils literal"><span class="pre">.md</span></code>). The preparer is executed by the deconst CI/CD system on each commit to the repository. You can also extend deconst to support other formats by <a class="reference external" href="https://deconst.horse/developing/preparer/">creating another preparer</a>.</p>
-</li>
-<li><p class="first">A submitter process that sends prepared JSON documents populated with metadata envelopes and asset files to the content service. This process submits content and assets in bulk transactions and avoids submitting unchanged content.</p>
-</li>
-<li><p class="first">A content service that provides content storage and retrieval for content deployed by using the deconst platform. This service automates the deploy and publish process for deconst, but you can also use the <a class="reference external" href="https://github.com/deconst/content-service#api">API</a> to submit content and run queries to get information about currently deployed content.</p>
-</li>
-<li><p class="first"><a class="reference external" href="https://deconst.horse/writing-docs/coordinator/templates/">Templates</a>
-that determine the visual identity, navigation,and HTML boilerplate used for each page. These templates provide the Rackspace-branded look and feel for the Rackspace Developer documentation, Support How-To article collection, and the Carina documentation.</p>
-</li>
-<li><p class="first">A presenter that accepts HTTP requests from users. The presenter maps the URL requested by the user to a content ID using the latest known version of the content mapping specified in the control repository configuration, and then accesses the requested metadata envelope using the content service. Finally, the presenter injects the metadata envelope into the template configured for the content mapping and sends the final HTML back in an HTTP response. For details, see <a class="reference external" href="https://deconst.horse/developing/architecture/#lifecycle-of-an-http-request">Lifecycle of an HTTP request</a>.</p>
-</li>
-<li><p class="first"><a class="reference external" href="https://deconst.horse/writing-docs/coordinator/#the-control-repository">A control repository</a> that provides centralized management of site-wide concerns like setting up build jobs, configuring and managing paths to deploy and publish content, assigning templates to content, and managing assets such as stylesheets, JavaScript files, or images that are referenced by the layout templates. The control repository for the Rackspace documentation mentioned above is hosted in the
-<a class="reference external" href="https://github.com/rackerlabs/nexus-control">nexus-control</a> GitHub repository.</p>
-</li>
-<li><p class="first">Automated build services powered by
-<a class="reference external" href="https://www.npmjs.com/package/strider">Strider</a>, a continuous integration server integrated with Deconst to provide on-cluster preparer and submitter runs. The Strider runs the preparer to convert the content to JSON format and then runs the submitter process to send the metadata envelopes to the content service.</p>
-</li>
-<li><p class="first">Pull request <a class="reference external" href="https://deconst.horse/writing-docs/author/#previewing-changes">previews</a> of rendered content in a staging environment</p>
-</li>
-<li><p class="first">The presenter service accepts HTTP requests from users. The presenter maps the URL requested by the user to a content ID using the latest known version of the content mapping specified in the control repository configuration, and then accesses the requested metadata envelope using the content service. Finally, the presenter injects the metadata envelope into the template configured for the content mapping and sends the final HTML back in an HTTP response. For details, see <a class="reference external" href="https://deconst.horse/developing/architecture/#lifecycle-of-an-http-request">Lifecycle of an HTTP request</a>.</p>
-</li>
-<li><p class="first">An nginx server provides a reverse proxy that accepts requests from the host, terminates TLS, and delegates to the local presenter and content service.</p>
-</li>
-</ul>
-<div class="section" id="github-source-repositories-for-documentation">
-<span id="github-source-repositories-for-documentation"></span><h3>GitHub source repositories for documentation<a class="headerlink" href="#github-source-repositories-for-documentation" title="Permalink to this headline">#</a></h3>
-<p>You can find the GitHub source repository for published documentation by clicking on the <strong>Edit on GitHub</strong> or <strong>Submit an issue</strong> link available on the website. Because some repositories are private, you might need help
-getting access or finding the repository. In that case, open an
-<a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/issues/new">issue</a> to get help from the Information Development team.</p>
-<p>A content repository can contain multiple documentation projects.</p>
-<ul class="simple">
-<li>Each project must be in its own folder or on its own branch</li>
-<li>Source files within a folder must be written in one of the supported formats (Sphinx or Jekyll)</li>
-<li>Each project must have a deconst configuration file (<code class="docutils literal"><span class="pre">deconst.json</span></code>) that specifies a unique content ID and  other project metadata.</li>
-</ul>
-<p><strong>Note:</strong> The easiest path to creating a new deliverable is to copy an existing template and update the deconst configuration file to add a unique content ID.</p>
-<p>The content repository must also be added to the control configuration repository for the Deconst instance to enable the Strider build job, and to specify where the content will deployed and what templates will be applied when the content is rendered. Typically, a Deconst site coordinator manages control configuration updates and changes.</p>
-<p>After a content repository has been added to the control configuration, the documentation projects in the repository will build and deploy a staging version of the content each time someone submits a GitHub pull-request to the repository. When the pull request is merged, the content is deployed to the production site.</p>
-<p><strong>Note:</strong>  Deconst is an open source <a class="reference external" href="https://github.com/deconst">project</a> created and maintained by the Rackspace Developer Experience team. To learn more, see the <a class="reference external" href="https://deconst.horse/">Deconst documentation</a>.</p>
-</div>
-<div class="section" id="delivering-documentation-to-a-deconst-site">
-<span id="delivering-documentation-to-a-deconst-site"></span><h3>Delivering documentation to a Deconst site<a class="headerlink" href="#delivering-documentation-to-a-deconst-site" title="Permalink to this headline">#</a></h3>
-<p>The work required to deliver documentation by using Deconst depends on whether you are authoring content or managing the site configuration settings that enable content build, delivery, and publishing.</p>
-<div class="section" id="writing-content">
-<span id="writing-content"></span><h4>Writing content<a class="headerlink" href="#writing-content" title="Permalink to this headline">#</a></h4>
-<p>Authors create content by writing and committing documentation source files written in the appropriate format to a content repository. They perform tasks like the following:</p>
-<ul class="simple">
-<li>Use existing Information Development documentation project and content type templates to create <a class="reference external" href="https://deconst.horse/writing-docs/author/jekyll/">markdown content in Jekyll</a> or <a class="reference external" href="https://deconst.horse/writing-docs/author/sphinx/">restructured text content in Sphinx</a> in new or existing content repositories.</li>
-<li>Create and maintain the deconst configuration file in the root of the content directory. This file tells Deconst important details about the content within this directory. Place the configuration in the same directory as your <code class="docutils literal"><span class="pre">conf.py</span></code> or <code class="docutils literal"><span class="pre">_config.yml</span></code> files.</li>
-<li>Add new content repositories to the <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/content-repositories.json">automatic build list</a> in the Deconst control repository to configure the Strider build.</li>
-</ul>
-<p>For details, see <a class="reference external" href="https://deconst.horse/writing-docs/author/">Authoring content for deconst</a>.</p>
-</div>
-<div class="section" id="managing-content-build-and-delivery">
-<span id="managing-content-build-and-delivery"></span><h4>Managing content build and delivery<a class="headerlink" href="#managing-content-build-and-delivery" title="Permalink to this headline">#</a></h4>
-<p>Site coordinators assemble content from many sources into a single site by configuring the following items in the control repository for the Deconst instance:</p>
-<ul class="simple">
-<li>A <a class="reference external" href="https://deconst.horse/writing-docs/coordinator/mapping/">content mapping</a> that specifies the path where Deconst will display the content</li>
-<li>A <a class="reference external" href="https://deconst.horse/writing-docs/coordinator/templates/#mapping-templates-to-pages">template mapping</a> that specifies which template to apply to a content set or specific pages within a content set when the content is served.</li>
-</ul>
-<p>Coordinators also control the look and feel of each domain within the site. They can maintain and update global assets such as such as stylesheets, JavaScript files, or images that are referenced by the layout templates.</p>
-<p>For details, see <a class="reference external" href="https://deconst.horse/writing-docs/coordinator/">Coordinating a Deconst site</a>.</p>
-<p><strong>Checklist for adding content to a Deconst site</strong></p>
-<ul class="simple">
-<li>[ ] Update the deconst configuration file to specify the content ID and project metadata</li>
-<li>[ ] Set up the Strider build job</li>
-<li>[ ] Update the content mapping file configuration to define the path where the content will be deployed on a given site.</li>
-<li>[ ] Update the template mapping to specify the template that Deconst will apply when the page is rendered</li>
-<li>[ ] If you are delivering a new product, update the documentation landing page
-to add the project. For Sphinx projects, specify the links</li>
-<li>[ ] Update the documentation landing page.</li>
-</ul>
-<p>For detailed information about contributing to existing repositories, see the <a class="reference external" href="tools/contributing-to-the-documentation">Contributing to the documentation</a>.</p>
-</div>
-</div>
-</div>
-<div class="section" id="contributing-to-docs">
-<span id="contributing-to-docs"></span><h2>Contributing to docs<a class="headerlink" href="#contributing-to-docs" title="Permalink to this headline">#</a></h2>
-<p>How you contribute to documentation depends on what you are developing:</p>
-<ul class="simple">
-<li>New product or service: All the content is new</li>
-<li>New feature for an existing product and service: New content is added to an existing doc set</li>
-<li>Fixes or updates for an existing product or service: Small changes and updates are made to an existing doc set</li>
-</ul>
-<p>You can also contribute to docs by fixing mistakes that you discover. This section provides a high-level overview of the contribution process and then describes the process that you follow for each contribution type.</p>
-<div class="section" id="high-level-contribution-process">
-<span id="high-level-contribution-process"></span><h3>High-level contribution process<a class="headerlink" href="#high-level-contribution-process" title="Permalink to this headline">#</a></h3>
-<p>We welcome contributions to Rackspace documentation. Most documentation source repositories include README and CONTRIBUTING files that provide the following
-information:</p>
-<ul class="simple">
-<li>List of documentation deliverables and links to published content.</li>
-<li>Explanation of the source format and tools for authoring and building the content</li>
-<li>Outline of project organization so that contributors can determine what
-files to update and where to add new sections.</li>
-<li>GitHub workflow instructions for submitting pull requests</li>
-<li>Review guidelines
-When you write customer-facing documentation, follow the writing and style
-guidelines specified in the
-<a class="reference external" href="http://rackerlabs.github.io/docs-rackspace/style-guide/index.html">Rackspace Documentation Guide</a>.</li>
-</ul>
-<div class="section" id="general-contribution-model">
-<span id="general-contribution-model"></span><h4>General contribution model<a class="headerlink" href="#general-contribution-model" title="Permalink to this headline">#</a></h4>
-<p>The following process provides an overview of the general contribution
-model for updating customer-facing documentation for Rackspace products and
-services. For more detailed contribution information, see the Contributing guidelines in the documentation source repository.</p>
-<ol class="simple">
-<li>Create an issue for your work.<ul>
 <li>You can skip this step for trivial changes.</li>
 <li>If available, reuse an existing issue on the topic.</li>
-<li>If you are planning to do the work, assign yourself to the task.
-If you need help, clearly state the work you want done along with the
+<li>If you are planning to do the work, assign yourself to the task.</li>
+<li>If you need help, clearly state the work you want done and the
 context in which the work needs to be completed.</li>
 </ul>
 </li>
-<li>When you are ready to make changes, follow the contribution guidelines to
-create a local fork of the repository; clone it locally, and create a
-branch on the cloned repository where you can do your work.</li>
-<li>Make and commit your changes.<ul>
+<li><p class="first"><strong>Create a fork of the repo.</strong></p>
+<p>When you are ready to create or revise content, follow the contribution guidelines in repo to create a fork, clone it locally, and create a branch on the cloned repo where you can do your work.</p>
+</li>
+<li><p class="first"><strong>Make and commit your changes.</strong></p>
+<ul class="simple">
 <li>Add your changes to the appropriate location in the project.
-For example, if you are adding a topic to an existing section, make sure it is in the same folder as the other topics in that section. If you are
-updating an existing topic, make sure to add it at the appropriate place
-in the file, adding or adjusting heading levels if required.</li>
-<li>Name your file meaningfully in lowercase with dashes.</li>
-<li>If you are contributing to a Sphinx project, use restructured text. If
-you are contributing to a Jekyll project, use GitHub Flavored Markdown.</li>
+For example, if you are adding a topic to an existing section, ensure that it is in the same folder as the other topics in that section. If you are updating an existing topic, be sure to add your content in the appropriate place in the file, adding or adjusting heading levels as necessary. If you add a topic, make sure that it is included in the site index or navigation.</li>
+<li>Name your file meaningfully, using lowercase letters and dashes.</li>
+<li>If you are contributing to a Sphinx project, use reStructuredText. If
+you are contributing to a Jekyll project, use GitHub-flavored Markdown.</li>
 <li>Include diagrams where appropriate. Diagrams are required to be in the
-PNG or JPG format but we encourage the inclusion of SVG format to make editing easier.</li>
+PNG or JPG format, but we encourage the inclusion of SVG format to make editing easier.</li>
 <li>For new sections or topics, use other sections and topics as models to
-follow for your updates.</li>
+follow.</li>
 <li>Before committing your changes, check the file syntax to
-prevent build errors. You can use a locally installed linter, or follow
+prevent build errors. You can use a locally installed linter or follow
 the instructions to build content locally.</li>
 <li>Push your changes to your fork on GitHub.</li>
 </ul>
 </li>
-<li>Create a pull request (PR) against the upstream repository's <strong>master</strong>
-branch and wait for review feedback.</li>
+<li><p class="first"><strong>Create a pull request (PR)</strong> against the upstream repo's <strong>master</strong>
+branch and wait for review feedback.</p>
+</li>
 </ol>
-</div>
 </div>
 <div class="section" id="new-product-new-content">
 <span id="new-product-new-content"></span><h3>New product, new content<a class="headerlink" href="#new-product-new-content" title="Permalink to this headline">#</a></h3>
-<p>Whether you are working on a new cloud service or on a new type of offering, such as Carina, you first work with the Information Development team to determine what kind of customer-facing content is needed.</p>
-<p>Depending on the offering, a minimum set of content is defined. For example, a new cloud service requires introductory content, an FAQ, and basic control panel tasks documented and delivered to the Rackspace support site, as well as API reference information documented and delivered to the Rackspace developer site.</p>
-<p>The Information Development team works closely with the development team to determine the content set and the information architecture. The Information Development team then provides templates and guidelines to help you draft the content that is needed.</p>
-<p>When you want to create documentation for a new product or service, open an issue or <a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/issues/new">issue</a> or send an
-<a class="reference external" href="tools/mailto:group-laura-clymer&#64;rackspace.com">e-mail</a> with the general requirements, context, and timeline for the project.</p>
+<p>Whether you are working on a new cloud service or a new type of offering, such as Carina, you first work with the Info Dev team to determine what kind of customer-facing content is needed.</p>
+<p>Depending on the offering, a minimum set of content is defined. For example, a new cloud service requires introductory content, an FAQ, and basic control panel tasks documented and delivered to the Rackspace Support site, as well as API reference information documented and delivered to the Rackspace Developer site.</p>
+<p>The Info Dev team works closely with the development team to determine the content set and the information architecture. The Info Dev team then provides templates and guidelines to help you draft the content that is needed.</p>
+<p>When you want to create documentation for a new product or service, open an <a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/issues/new">issue</a> or send an
+<a class="reference external" href="tools/mailto:group-laura-clymer&#64;rackspace.com">email</a> with the general requirements, context, and timeline for the project.</p>
 </div>
 <div class="section" id="existing-product-new-feature-new-content">
 <span id="existing-product-new-feature-new-content"></span><h3>Existing product, new feature, new content<a class="headerlink" href="#existing-product-new-feature-new-content" title="Permalink to this headline">#</a></h3>
 <p>When you update an existing product to add a feature or functionality that
-requires customer-facing documentation, you update the existing documentation to add content to an existing content set.</p>
-<p>For this type of change, you can scope the work yourself or work with the Information Development team. In either case, follow the <a class="reference external" href="#general-contribution-workflow">general-contribution-workflow</a> to submit an issue about the required updates.</p>
+requires customer-facing documentation, you update the existing documentation project to add content.</p>
+<p>For this type of change, you can scope the work yourself or work with the Info Dev team. In either case, follow the <a class="reference external" href="#general-contribution-workflow">general contribution workflow</a> to submit an issue about the required updates.</p>
 </div>
 <div class="section" id="existing-product-fix-or-update">
 <span id="existing-product-fix-or-update"></span><h3>Existing product, fix or update<a class="headerlink" href="#existing-product-fix-or-update" title="Permalink to this headline">#</a></h3>
-<p>Fixing or updating the code for an existing product might or might not require updates to the customer-facing documentation. If the change affects the ways that users interact with the product, review the existing content to determine whether it needs to be updated.  If they are, follow the <a class="reference external" href="#general-contribution-workflow">general-contribution-workflow</a> to submit  changes.</p>
+<p>Fixing or updating the code for an existing product might or might not require updates to the customer-facing documentation. If the change affects the ways that users interact with the product, review the existing content to determine whether it needs to be updated. If so, follow the <a class="reference external" href="#general-contribution-workflow">general contribution workflow</a> to submit changes.</p>
 </div>
 <div class="section" id="existing-content-fixes-and-updates">
 <span id="existing-content-fixes-and-updates"></span><h3>Existing content, fixes and updates<a class="headerlink" href="#existing-content-fixes-and-updates" title="Permalink to this headline">#</a></h3>
-<p>As you create and work with documentation, you will find mistakes and outdated information. You can easily fix the content yourself by following the <a class="reference external" href="#general-contribution-contribution-workflow">general-contribution workflow</a>.</p>
+<p>As you create and work with documentation, you will find mistakes and outdated information. You can easily fix the content yourself by following the <a class="reference external" href="#general-contribution-workflow">general contribution workflow</a>.</p>
+</div>
+</div>
+<div class="section" id="continuous-integration-and-delivery-with-deconst">
+<span id="continuous-integration-and-delivery-with-deconst"></span><h2>Continuous integration and delivery with Deconst<a class="headerlink" href="#continuous-integration-and-delivery-with-deconst" title="Permalink to this headline">#</a></h2>
+<p>Rackspace uses the Deconst documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. This platform enables you to treat docs like code, which means you can use GitHub issue and pull request workflows and CI/CD processes like the ones you use to develop, update, review, build, and deploy code.</p>
+<p><a class="reference external" href="https://github.com/deconst">Deconst</a> is a continuous-delivery pipeline that assembles documentation source projects from individual GitHub repositories to a single site hosted on a Deconst instance. Deconst can also host multiple domains within the site and manage content independently for each domain. The Deconst instance currently deployed hosts a site that serves documentation to the following domains:</p>
+<p>Domain | Types of content | Format |
+------ | ---------------- | ------ |
+<a class="reference external" href="https://developer.rackspace.com/docs/">developer.rackspace.com</a> | Private Cloud end-user documentation <br> Public Cloud API guides <br> Public Cloud SDK quickstart guides| Sphinx documentation project (reStructuredText)
+<a class="reference external" href="https://support.rackspace.com/how-to/">support.rackspace.com</a> | Articles for using and troubleshooting Rackspace services | Jekyll (Markdown) |
+<a class="reference external" href="https://getcarina.com/docs/">getcarina.com</a> | Articles for using Carina | Jekyll
+<a class="reference external" href="https://pages.github.rackspace.com/IX/internal-docs-landing-page/">pages.github.rackspace.com</a> | Private Cloud support documentation <br> Public Cloud service admin guides <br> Product services guides | Sphinx |
+| staging.developer.rackspace.com |</p>
+<p>Deconst provides several services for building and managing the content deployed to these domains and serving it to customers. A few are described here. For detailed information about all the features and how the Deconst CI/CD pipeline works, see the <a class="reference external" href="https://deconst.horse/developing/architecture/">Architecture section</a> of the Deconst documentation.</p>
+<ul>
+<li><p class="first">A <em>control repository</em> for centralized management of site-wide
+concerns, such as setting up
+build jobs for documentation projects sourced from  distributed content repositories, configuring and managing the paths where content is deployed on each domain, assigning templates to content.</p>
+<p>The control repository for the Rackspace Developer and Support How-To documentation is in the
+<a class="reference external" href="https://github.com/rackerlabs/nexus-control">nexus-control</a> repository hosted on GitHub.</p>
+</li>
+<li><p class="first"><a class="reference external" href="https://deconst.horse/developing/architecture/#term-preparer">Preparers</a>
+that convert content repositories in different formats
+to a common JSON format that allows content generated by different documentation engines to be built, integrated, and deployed using the same CI/CD process.</p>
+<p>Deconts provides a preparer for Sphinx documentation projects authored in reStructuredText (<code class="docutils literal"><span class="pre">.rst</span></code>) and another preparer for Jekyll
+projects authored in GitHub Flavored Markdown (<code class="docutils literal"><span class="pre">.md</span></code>). The preparer is run by the deconst CI/CD system on each commit to the repository.</p>
+<p>You can extend the Deconst platform to support other formats by <a class="reference external" href="https://deconst.horse/developing/preparer/">creating other preparers</a>.</p>
+</li>
+<li><p class="first">A <em>content service</em> that provides content storage and retrieval for content deployed to a Deconst instance. You can use the content service <a class="reference external" href="https://github.com/deconst/content-service#api">API</a> to create, read, or update content manually and to run queries to get information about currently deployed content.</p>
+</li>
+<li><p class="first">Common, Rackspace-branded <em><a class="reference external" href="https://deconst.horse/writing-docs/coordinator/templates/">templates</a></em>
+that determine the branding, navigation,and HTML boilerplate elements for each page. Templates are applied at runtime when the content is served by the content service API.</p>
+</li>
+<li><p class="first">Automated build and integrated testing services powered by
+<a class="reference external" href="https://www.npmjs.com/package/strider">Strider</a>, a continuous integration server integrated with Deconst to prepare the content and submit it to the content service for storage and retrieval.</p>
+</li>
+<li><p class="first">Development and Staging environments that enable collaborative review and early Beta releases of documentation. Staging environments are automatically created and linked on each pull request.</p>
+</li>
+</ul>
+<div class="section" id="managing-github-source-repositories-for-documentation">
+<span id="managing-github-source-repositories-for-documentation"></span><h3>Managing GitHub source repositories for documentation<a class="headerlink" href="#managing-github-source-repositories-for-documentation" title="Permalink to this headline">#</a></h3>
+<p>You can find the GitHub source repository for published documentation by clicking on the <strong>Edit on GitHub</strong> or <strong>Submit an issue</strong> link available on the website. Because some repositories are private, you might need help
+getting access or finding the repository. In that case, open an
+<a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/issues/new">issue</a> to get help from the Info Dev team.</p>
+<p>A content repository can contain multiple documentation projects.</p>
+<ul class="simple">
+<li>Each project must be in its own folder or on its own branch.</li>
+<li>Source files within a folder must be written in one of the supported formats, for example Sphinx or Jekyll.</li>
+<li>Each project must have a Deconst configuration file (<code class="docutils literal"><span class="pre">deconst.json</span></code>) that specifies a unique content ID and  other project metadata.</li>
+</ul>
+<p><strong>Note:</strong> The easiest path to creating a new deliverable is to copy an existing template and update the deconst configuration file to add a unique content ID.</p>
+<p>The content repository must also be added to the control configuration repository for the Deconst instance to enable the Strider build job, and to specify where the content will be deployed and what templates will be applied when the content is rendered. Typically, a Deconst <em>site coordinator</em> manages control configuration updates and changes.</p>
+<p>After a content repository has been added to the control configuration, the documentation projects in the repository will build and deploy a staging version of the content each time someone submits a GitHub pull-request to the repository. When the pull request is merged, the content is deployed to the production site. If your content is in beta or early access, you can also configure the content so that it deploys only to a development server.</p>
+</div>
+<div class="section" id="delivering-documentation-to-a-deconst-site">
+<span id="delivering-documentation-to-a-deconst-site"></span><h3>Delivering documentation to a Deconst site<a class="headerlink" href="#delivering-documentation-to-a-deconst-site" title="Permalink to this headline">#</a></h3>
+<p>The work required to deliver documentation by using Deconst depends on whether you are authoring content or managing the site configuration settings that enable the CI/CD workflow automation.</p>
+<div class="section" id="writing-content">
+<span id="writing-content"></span><h4>Writing content<a class="headerlink" href="#writing-content" title="Permalink to this headline">#</a></h4>
+<p>Authors create content by writing and committing documentation source files written in the appropriate format to a content repository. They perform tasks like the following ones:</p>
+<ul class="simple">
+<li>Use existing Info Dev documentation project and content type templates to create <a class="reference external" href="https://deconst.horse/writing-docs/author/jekyll/">Markdown content for Jekyll</a> or <a class="reference external" href="https://deconst.horse/writing-docs/author/sphinx/">resStructuredText content for Sphinx</a> in new or existing content repositories.</li>
+<li>Create and maintain the Deconst configuration file in the root of the content directory. This file tells Deconst important details about the content within this directory. Place the configuration in the root project directory, with the <code class="docutils literal"><span class="pre">conf.py</span></code> or <code class="docutils literal"><span class="pre">_config.yml</span></code> files.</li>
+<li>Add new content repositories to the <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/content-repositories.json">automatic build list</a> in the Deconst control repository to configure the Strider build.</li>
+</ul>
+<p>For details, see <a class="reference external" href="https://deconst.horse/writing-docs/author/">Authoring content for deconst</a>.</p>
+</div>
+<div class="section" id="coordinating-a-deconst-site">
+<span id="coordinating-a-deconst-site"></span><h4>Coordinating a Deconst site<a class="headerlink" href="#coordinating-a-deconst-site" title="Permalink to this headline">#</a></h4>
+<p>Site coordinators assemble content from many sources into a single site by maintaing the following configuration files in the control repository for the Deconst instance:</p>
+<ul class="simple">
+<li>*<a class="reference external" href="https://deconst.horse/writing-docs/coordinator/mapping/">Content mapping</a>files that specify the path where Deconst will display the content</li>
+<li>*<a class="reference external" href="https://deconst.horse/writing-docs/coordinator/templates/#mapping-templates-to-pages">Template mapping</a> files that specifies which template to apply to a content set or specific pages within a content set when the content is served.</li>
+<li><em>Redirect</em> files for maintaining link integrity when linked resources are moved or renamed.</li>
+</ul>
+<p>Each domain has its own set of configuration files.</p>
+<p>Coordinators also control the look and feel of each domain within the site. They can maintain and update global assets such as such as stylesheets, JavaScript files, or images that are referenced by the layout templates. For details, see <a class="reference external" href="https://deconst.horse/writing-docs/coordinator/">Coordinating a Deconst site</a>.</p>
+<p>For detailed information about contributing to existing repositories, see the <a class="reference external" href="tools/contributing-to-the-documentation">Contributing to the documentation</a>.</p>
+</div>
 </div>
 </div>
 </div>
