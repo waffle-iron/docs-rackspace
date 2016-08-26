@@ -20,9 +20,10 @@ As a developer, you create and update applications and services to provide new a
 
 - Determining what kind of documentation customers need
 - Coordinating publishing with product release schedules
-- Developing and delivering documentation
+- Editorial services to help streamline and polish your content
+- Delivering high quality documentation to the right channel at the right time
 
-Like other teams in Engineering, the Info Dev team provides a framework of common standards and practices and a shared build environment that supports a continuous integration and delivery (CI/CD) workflow. Using this framework allows you to focus on documenting your product or service for customers rather than figuring out new ways to create and deliver documentation.
+Like other teams in Engineering, the Info Dev team provides a framework of common standards and practices and a shared build environment that supports a continuous integration and delivery (CI/CD) workflow. We also provide DevOps support for ongoing maintenance and platform development. Using this framework allows you to focus on documenting your product or service for customers without having to worry about the tools and systems for developing and delivering the content.
 
 In this collaborative process, people like you that have domain expertise and product knowledge perform as much of the content production cycle as they reasonably can and, in turn, the Info Dev team provides:
 
@@ -30,11 +31,6 @@ In this collaborative process, people like you that have domain expertise and pr
 - Templates and writing guidance
 - Expertise in information development and architecture
 - Reviews, editorial feedback, and publication approval
-
-For more high-level information about the content that is currently provided to customers, see the following topics:
-
-- [Documentation FAQ for Rackspace Public Cloud](http://rackerlabs.github.io/docs-rackspace/contributor-collateral/publiccloud-docteam-FAQ.html)
-- [Documentation FAQ for Rackspace Private Cloud](http://rackerlabs.github.io/docs-rackspace/contributor-collateral/privatecloud-docteam-FAQ.html)
 
 ## Continuous integration and delivery
 
@@ -93,36 +89,34 @@ A content repository can contain multiple documentation projects.
 
 **Note:** The easiest path to creating a new deliverable is to copy an existing template and update the deconst configuration file to add a unique content ID.
 
-The content repository must also be added to the control configuration repository for the Deconst instance to enable the Strider build job, and to specify where the content will deployed and what templates will be applied when the content is rendered. Typically, a Deconst site coordinator manages control configuration updates and changes.
+The content repository must also be added to the control configuration repository for the Deconst instance to enable the Strider build job, and to specify where the content will be deployed and what templates will be applied when the content is rendered. Typically, a Deconst *site coordinator* manages control configuration updates and changes.
 
-After a content repository has been added to the control configuration, the documentation projects in the repository will build and deploy a staging version of the content each time someone submits a GitHub pull-request to the repository. When the pull request is merged, the content is deployed to the production site. If your content is in beta or early access, you can also configure the content so that it deploys only to a  to a development server only.
+After a content repository has been added to the control configuration, the documentation projects in the repository will build and deploy a staging version of the content each time someone submits a GitHub pull-request to the repository. When the pull request is merged, the content is deployed to the production site. If your content is in beta or early access, you can also configure the content so that it deploys only to a development server.
 
 ## Delivering documentation to a Deconst site
 The work required to deliver documentation by using Deconst depends on whether you are authoring content or managing the site configuration settings that enable the CI/CD workflow automation.
 
 
 ### Writing content
-Authors create content by writing and committing documentation source files written in the appropriate format to a content repository. They perform tasks like the following:
+Authors create content by writing and committing documentation source files written in the appropriate format to a content repository. They perform tasks like the following ones:
 
-- Use existing Info Dev documentation project and content type templates to create [markdown content in Jekyll](https://deconst.horse/writing-docs/author/jekyll/) or [restructured text content in Sphinx](https://deconst.horse/writing-docs/author/sphinx/) in new or existing content repositories.
+- Use existing Info Dev documentation project and content type templates to create [Markdown content for Jekyll](https://deconst.horse/writing-docs/author/jekyll/) or [resStructuredText content for Sphinx](https://deconst.horse/writing-docs/author/sphinx/) in new or existing content repositories.
 
-- Create and maintain the deconst configuration file in the root of the content directory. This file tells Deconst important details about the content within this directory. Place the configuration in the same directory as your ``conf.py`` or ``_config.yml`` files.
+- Create and maintain the Deconst configuration file in the root of the content directory. This file tells Deconst important details about the content within this directory. Place the configuration in the root project directory, with the ``conf.py`` or ``_config.yml`` files.
 
 - Add new content repositories to the [automatic build list](https://github.com/rackerlabs/nexus-control/blob/master/content-repositories.json) in the Deconst control repository to configure the Strider build.
 
 For details, see [Authoring content for deconst](https://deconst.horse/writing-docs/author/).
 
 #### Managing content build and delivery
-Site coordinators assemble content from many sources into a single site by configuring the following items in the control repository for the Deconst instance:
-- A [content mapping](https://deconst.horse/writing-docs/coordinator/mapping/) that specifies the path where Deconst will display the content
-- A [template mapping](https://deconst.horse/writing-docs/coordinator/templates/#mapping-templates-to-pages) that specifies which template to apply to a content set or specific pages within a content set when the content is served.
+Site coordinators assemble content from many sources into a single site by maintaing the following configuration files in the control repository for the Deconst instance:
+- *[Content mapping](https://deconst.horse/writing-docs/coordinator/mapping/)files that specify the path where Deconst will display the content
+- *[Template mapping](https://deconst.horse/writing-docs/coordinator/templates/#mapping-templates-to-pages) files that specifies which template to apply to a content set or specific pages within a content set when the content is served.
+- *Redirect* files for maintaining link integrity when linked resources are moved or renamed.
 
-Coordinators also control the look and feel of each domain within the site. They can maintain and update global assets such as such as stylesheets, JavaScript files, or images that are referenced by the layout templates.
+Each domain has its own set of configuration files.
 
-For details, see [Coordinating a Deconst site](https://deconst.horse/writing-docs/coordinator/).
-
-For detailed information about contributing to existing repositories, see the [Contributing to the documentation](contributing-to-the-documentation).
-
+Coordinators also control the look and feel of each domain within the site. They can maintain and update global assets such as such as stylesheets, JavaScript files, or images that are referenced by the layout templates. For details, see [Coordinating a Deconst site](https://deconst.horse/writing-docs/coordinator/).
 
 For detailed information about contributing to existing repositories, see the [Contributing to the documentation](contributing-to-the-documentation).
 
@@ -151,11 +145,17 @@ When you write customer-facing documentation, follow the writing and style
 guidelines specified in the
 [Rackspace Documentation Guides](http://rackerlabs.github.io/docs-rackspace/style-guide/index.html).
 
-**General contribution workflow**
-
 The following process provides an overview of the general contribution
 model for updating customer-facing documentation for Rackspace products and
-services. For more detailed contribution information, see the CONTRIBUTING guidelines in the documentation source repo.
+services. For more detailed contribution information with names and contacts and source locations,
+see the following FAQs:
+
+- [Documentation FAQ for Rackspace Public Cloud](http://rackerlabs.github.io/docs-rackspace/contributor-collateral/publiccloud-docteam-FAQ.html)
+- [Documentation FAQ for Rackspace Private Cloud](http://rackerlabs.github.io/docs-rackspace/contributor-collateral/privatecloud-docteam-FAQ.html)
+
+You can also find contribution information in the CONTRIBUTING guidelines found in the documentation source repositories.
+
+**General contribution workflow**
 
 1. **Create an issue for your work.**
     - You can skip this step for trivial changes.
