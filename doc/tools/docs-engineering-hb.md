@@ -1,6 +1,6 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Documentation for applications and services](#documentation-for-applications-and-services)
+- [Documentation for Rackspace products and services](#documentation-for-applications-and-services)
 	- [Contributing to documentation](#contributing-to-documentation)
 		- [High-level contribution process](#high-level-contribution-process)
 		- [New product, new content](#new-product-new-content)
@@ -13,7 +13,7 @@
 	       - [Writing content](#writing-content)
 	       - [Coordinating a Deconst site](#coordinating-a-deconst-site)
 
-# Documentation for applications and services
+# Documentation for Rackspace products and services
 
 As a developer, you create and update applications and services to provide new and additional functionality for customers. Often that functionality needs to be documented so that customers can use it effectively. In these cases, you collaborate with the Information Development (Info Dev) team to create and deliver customer-facing documentation like user and administrator guides, expert How-To articles, and API reference documentation. The Info Dev team can help you with tasks like the following ones:
 
@@ -42,6 +42,8 @@ How you contribute to documentation depends on what you are developing:
 
 You can also contribute to documentation by fixing mistakes that you discover. This section provides a high-level overview of the contribution process and then describes how to approach each type of contribution.
 
+**Note:** For information about how to find documentation source repositories, see [Managing GitHub source repositories for documentation](managing-github-source-repositories-for-documentation).
+
 ### High-level contribution process
 
 The Info Dev team welcomes contributions to Rackspace documentation. Most documentation source repositories (repos) include README and CONTRIBUTING files that provide the following information:
@@ -58,16 +60,12 @@ guidelines specified in the
 [Rackspace Documentation Guides](http://rackerlabs.github.io/docs-rackspace/style-guide/index.html).
 
 The following process provides an overview of the general contribution
-model for updating customer-facing documentation for Rackspace products and
+workflow for updating customer-facing documentation for Rackspace products and
 services. For more detailed contribution information with Info Dev contact information and source locations,
 see the following FAQs:
 
 - [Documentation FAQ for Rackspace Public Cloud](http://rackerlabs.github.io/docs-rackspace/contributor-collateral/publiccloud-docteam-FAQ.html)
 - [Documentation FAQ for Rackspace Private Cloud](http://rackerlabs.github.io/docs-rackspace/contributor-collateral/privatecloud-docteam-FAQ.html)
-
-You can also find contribution information in the CONTRIBUTING guidelines found in the documentation source repositories.
-
-**Note:** For information about how to find a documentation source repository, see [Managing GitHub source repositories for documentation](managing-github-source-repositories-for-documentation).
 
 **General contribution workflow**
 
