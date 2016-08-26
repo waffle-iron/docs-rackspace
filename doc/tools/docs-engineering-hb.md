@@ -7,7 +7,7 @@
 		- [Existing product, new feature, new content](#existing-product-new-feature-new-content)
 		- [Existing product, fix or update](#existing-product-fix-or-update)
 		- [Existing content, fixes and updates](#existing-content-fixes-and-updates)
-	- [Continuous integration and delivery](#continuous-integration-and-delivery)
+	- [Continuous integration and delivery with Deconst](#continuous-integration-and-delivery-with-deconst)
 	   - [Managing GitHub source repositories for documentation](#managing-github-source-repositories-for-documentation)
 	   - [Delivering documentation to a Deconst site](#delivering-documentation-to-a-deconst-site)
 	       - [Writing content](#writing-content)
@@ -121,13 +121,11 @@ Fixing or updating the code for an existing product might or might not require u
 As you create and work with documentation, you will find mistakes and outdated information. You can easily fix the content yourself by following the [general contribution workflow](#general-contribution-workflow).
 
 
-## Continuous integration and delivery
+## Continuous integration and delivery with Deconst
 
 Rackspace uses the Deconst documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. This platform enables you to treat docs like code, which means you can use GitHub issue and pull request workflows and CI/CD processes like the ones you use to develop, update, review, build, and deploy code.
 
 [Deconst](https://github.com/deconst) is a continuous-delivery pipeline that assembles documentation source projects from individual GitHub repositories to a single site hosted on a Deconst instance. Deconst can also host multiple domains within the site and manage content independently for each domain. The Deconst instance currently deployed hosts a site that serves documentation to the following domains:
-
-Rackspace currently provides the following types of customer-facing content on the following sites:
 
 Domain | Types of content | Format |
 ------ | ---------------- | ------ |
