@@ -59,7 +59,7 @@ guidelines specified in the
 
 The following process provides an overview of the general contribution
 model for updating customer-facing documentation for Rackspace products and
-services. For more detailed contribution information with names and contacts and source locations,
+services. For more detailed contribution information with Info Dev contact information and source locations,
 see the following FAQs:
 
 - [Documentation FAQ for Rackspace Public Cloud](http://rackerlabs.github.io/docs-rackspace/contributor-collateral/publiccloud-docteam-FAQ.html)
