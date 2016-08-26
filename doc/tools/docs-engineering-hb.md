@@ -78,11 +78,11 @@ You can also find contribution information in the CONTRIBUTING guidelines found 
 
 2. **Create a fork of the repo.**
 
-    When you are ready to make create or revise content, follow the contribution guidelines in the repo to create a fork of the repo, clone it locally, and create a branch on the cloned repo where you can do your work.
+    When you are ready to create or revise content, follow the contribution guidelines in repo to create a fork, clone it locally, and create a branch on the cloned repo where you can do your work.
 
 3. **Make and commit your changes.**
    - Add your changes to the appropriate location in the project.
-     For example, if you are adding a topic to an existing section, ensure that it is in the same folder as the other topics in that section. If you are updating an existing topic, be sure to add your content in the appropriate place in the file, adding or adjusting heading levels as necessary.
+     For example, if you are adding a topic to an existing section, ensure that it is in the same folder as the other topics in that section. If you are updating an existing topic, be sure to add your content in the appropriate place in the file, adding or adjusting heading levels as necessary. If you add a topic, make sure that it is included in the site index or navigation.
    - Name your file meaningfully, using lowercase letters and dashes.
    - If you are contributing to a Sphinx project, use reStructuredText. If
      you are contributing to a Jekyll project, use GitHub-flavored Markdown.
