@@ -31,17 +31,6 @@ In this collaborative process, people like you that have domain expertise and pr
 - Expertise in information development and architecture
 - Reviews, editorial feedback, and publication approval
 
-## Types of documentation and delivery
-
-Rackspace currently provides the following types of customer-facing content on the following sites:
-
-Site | Types of content | Format |
----- | ---------------- | ------ |
-[developer.rackspace.com](https://developer.rackspace.com/docs/) | Private Cloud end-user documentation <br> Public Cloud API guides <br> Public Cloud SDK quickstart guides| Sphinx documentation project (reStructuredText)
-[support.rackspace.com](https://support.rackspace.com/how-to/) | Articles for using and troubleshooting Rackspace services | Jekyll (markdown) |
-[getcarina.com](https://getcarina.com/docs/) | Articles for using Carina | Jekyll
-[pages.github.rackspace.com](https://pages.github.rackspace.com/IX/internal-docs-landing-page/) | Private Cloud support documentation <br> Public Cloud service admin guides <br> Product services guides | Sphinx |
-
 For more high-level information about the content that is currently provided to customers, see the following topics:
 
 - [Documentation FAQ for Rackspace Public Cloud](http://rackerlabs.github.io/docs-rackspace/contributor-collateral/publiccloud-docteam-FAQ.html)
@@ -51,13 +40,17 @@ For more high-level information about the content that is currently provided to 
 
 Rackspace uses the *Deconst* documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. This platform allows you to treat docs like code, which means you can use GitHub issue and pull request workflows and CI/CD processes like the ones you use to develop, update, review, build, and deploy code.
 
-[Deconst](https://github.com/deconst) is a continuous-delivery pipeline that assembles documentation source projects from individual GitHub repositories to a single site hosted on a Deconst instance. Deconst can also host multiple domains within the site and manage content independently for each domain. The Deconst instance currently deployed hosts a site that serves content for the following Rackspace documentation domains:
+[Deconst](https://github.com/deconst) is a continuous-delivery pipeline that assembles documentation source projects from individual GitHub repositories to a single site hosted on a Deconst instance. Deconst can also host multiple domains within the site and manage content independently for each domain. The Deconst instance currently deployed hosts a site that serves documentation to the following domains:
 
-- [Rackspace Developer Docs](https://developer.rackspace.com/docs/)
-- [Support How-To](https://support.rackspace.com/how-to/)
-- [Carina Docs](https://getcarina.com/docs/)
-- [Staging server](https://staging.developer.rackspace.com/) for
-  pull request previews
+Rackspace currently provides the following types of customer-facing content on the following sites:
+
+Domain | Types of content | Format |
+------ | ---------------- | ------ |
+[developer.rackspace.com](https://developer.rackspace.com/docs/) | Private Cloud end-user documentation <br> Public Cloud API guides <br> Public Cloud SDK quickstart guides| Sphinx documentation project (reStructuredText)
+[support.rackspace.com](https://support.rackspace.com/how-to/) | Articles for using and troubleshooting Rackspace services | Jekyll (markdown) |
+[getcarina.com](https://getcarina.com/docs/) | Articles for using Carina | Jekyll
+[pages.github.rackspace.com](https://pages.github.rackspace.com/IX/internal-docs-landing-page/) | Private Cloud support documentation <br> Public Cloud service admin guides <br> Product services guides | Sphinx |
+| staging.developer.rackspace.com |
 
 Deconst provides the following services for building and managing the content deployed to these domains and serving it to customers:
 
@@ -197,7 +190,7 @@ services. For more detailed contribution information, see the CONTRIBUTING guide
 4. **Create a pull request (PR)** against the upstream repo's **master**
    branch and wait for review feedback.
 
-#### New product, new content
+### New product, new content
 Whether you are working on a new cloud service or a new type of offering, such as Carina, you first work with the Info Dev team to determine what kind of customer-facing content is needed.
 
 Depending on the offering, a minimum set of content is defined. For example, a new cloud service requires introductory content, an FAQ, and basic control panel tasks documented and delivered to the Rackspace Support site, as well as API reference information documented and delivered to the Rackspace Developer site.
@@ -207,14 +200,14 @@ The Info Dev team works closely with the development team to determine the conte
 When you want to create documentation for a new product or service, open an [issue](https://github.com/rackerlabs/docs-rackspace/issues/new) or send an
 [email](mailto:group-laura-clymer@rackspace.com) with the general requirements, context, and timeline for the project.
 
-#### Existing product, new feature, new content
+### Existing product, new feature, new content
 When you update an existing product to add a feature or functionality that
 requires customer-facing documentation, you update the existing documentation project to add content.
 
 For this type of change, you can scope the work yourself or work with the Info Dev team. In either case, follow the [general contribution workflow](#general-contribution-workflow) to submit an issue about the required updates.
 
-#### Existing product, fix or update
+### Existing product, fix or update
 Fixing or updating the code for an existing product might or might not require updates to the customer-facing documentation. If the change affects the ways that users interact with the product, review the existing content to determine whether it needs to be updated. If so, follow the [general contribution workflow](#general-contribution-workflow) to submit changes.
 
-#### Existing content, fixes and updates
+### Existing content, fixes and updates
 As you create and work with documentation, you will find mistakes and outdated information. You can easily fix the content yourself by following the [general contribution workflow](#general-contribution-workflow).
