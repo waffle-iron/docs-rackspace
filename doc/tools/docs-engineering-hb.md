@@ -67,6 +67,8 @@ see the following FAQs:
 
 You can also find contribution information in the CONTRIBUTING guidelines found in the documentation source repositories.
 
+**Note:** For information about how to find a documentation source repository, see [Managing GitHub source repositories for documentation](managing-github-source-repositories-for-documentation).
+
 **General contribution workflow**
 
 1. **Create an issue for your work.**
