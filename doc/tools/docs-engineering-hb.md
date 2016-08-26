@@ -9,10 +9,10 @@
 		- [Existing product, fix or update](#existing-product-fix-or-update)
 		- [Existing content, fixes and updates](#existing-content-fixes-and-updates)
 	- [Continuous integration and delivery](#continuous-integration-and-delivery)
-	   -  [Managing GitHub source repositories for documentation](managing-github-source-repositories-for-documentation)
+	   - [Managing GitHub source repositories for documentation](#managing-github-source-repositories-for-documentation)
 	   - [Delivering documentation to a Deconst site](#delivering-documentation-to-a-deconst-site)
 	       - [Writing content](#writing-content)
-	       - [Managing content build and delivery](#managing-content-build-and-delivery)
+	       - [Coordinating a Deconst site](#coordinating-a-deconst-site)
 
 # Documentation for applications and services
 
@@ -22,7 +22,7 @@ As a developer, you create and update applications and services to provide new a
 - Coordinating publishing with product release schedules
 - Developing and delivering high quality documentation to the right channel at the right time
 
-Like other teams in Engineering, the Info Dev team provides a framework of common standards and practices and a shared build environment that supports a continuous integration and delivery (CI/CD) workflow. We also provide DevOps support for ongoing maintenance and platform development. Using this framework allows you to focus on documenting your product or service for customers without having to worry about the tools and systems for developing and delivering the content.
+Like other teams in Engineering, the Info Dev team provides a framework of common standards and practices and a shared documentation development environment that supports a continuous integration and delivery (CI/CD) workflow. We also provide ongoing maintenance and improvements to the tools, processes, and systems that support this environment. Using this framework allows you to focus on documenting your product or service for customers without having to worry about the tools and systems for developing and delivering the finished product.
 
 In this collaborative process, people like you that have domain expertise and product knowledge perform as much of the content production cycle as they reasonably can and, in turn, the Info Dev team provides:
 
