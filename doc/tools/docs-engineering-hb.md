@@ -1,7 +1,6 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [Documentation for applications and services](#documentation-for-applications-and-services)
-	- [GitHub source repositories for documentation](#github-source-repositories-for-documentation)
 	- [Contributing to documentation](#contributing-to-documentation)
 		- [High-level contribution process](#high-level-contribution-process)
 		- [New product, new content](#new-product-new-content)
@@ -33,7 +32,7 @@ In this collaborative process, people like you that have domain expertise and pr
 
 ## Contributing to documentation
 
-When you contribute to the documentation, you use the Deconst documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. If you're a regular contributor or if you are coordinating the documentation work for your team, you'll find it helpful to [learn more about Deconst](#continuous-integration-and-delivery]. 
+When you contribute to the documentation, you use the Deconst documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. If you're a regular contributor or if you are coordinating the documentation work for your team, you'll find it helpful to [learn more about Deconst](#continuous-integration-and-delivery). 
 
 How you contribute to documentation depends on what you are developing:
 
