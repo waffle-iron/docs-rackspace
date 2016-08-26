@@ -9,10 +9,10 @@
 	   - [Managing content build and delivery](#managing-content-build-and-delivery)
 	- [Contributing to documentation](#contributing-to-documentation)
 		- [High-level contribution process](#high-level-contribution-process)
-			- [New product, new content](#)
-			- [Existing product, new feature, new content](#)
-			- [Existing product, fix or update](#)
-			- [Existing content, fixes and updates](#)
+		- [New product, new content](#new-product-new-content)
+		- [Existing product, new feature, new content](#existing-product-new-feature-new-content)
+		- [Existing product, fix or update](#existing-product-fix-or-update)
+		- [Existing content, fixes and updates](#existing-contrent-fixes-and-updates)
 
 # Documentation for applications and services
 
