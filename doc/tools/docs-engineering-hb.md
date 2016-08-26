@@ -1,10 +1,8 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [Documentation for applications and services](#documentation-for-applications-and-services)
-	- [Types of documentation and delivery](#types-of-documentation-and-delivery)
-	- [Continuous integration and delivery](#continuous-integration-and-delivery)
 	- [GitHub source repositories for documentation](#github-source-repositories-for-documentation)
-	- [Delivering documentation to a Deconst site](#delivering-documentation-to-a-Deconst-site)
+	- [Delivering documentation to a Deconst site](#delivering-documentation-to-a-deconst-site)
 	   - [Writing content](#writing-content)
 	   - [Managing content build and delivery](#managing-content-build-and-delivery)
 	- [Contributing to documentation](#contributing-to-documentation)
@@ -12,7 +10,8 @@
 		- [New product, new content](#new-product-new-content)
 		- [Existing product, new feature, new content](#existing-product-new-feature-new-content)
 		- [Existing product, fix or update](#existing-product-fix-or-update)
-		- [Existing content, fixes and updates](#existing-contrent-fixes-and-updates)
+		- [Existing content, fixes and updates](#existing-content-fixes-and-updates)
+	- [Continuous integration and delivery](#continuous-integration-and-delivery)
 
 # Documentation for applications and services
 
@@ -20,7 +19,7 @@ As a developer, you create and update applications and services to provide new a
 
 - Determining what kind of documentation customers need
 - Coordinating publishing with product release schedules
-- Delivering high quality documentation to the right channel at the right time
+- Developing and delivering high quality documentation to the right channel at the right time
 
 Like other teams in Engineering, the Info Dev team provides a framework of common standards and practices and a shared build environment that supports a continuous integration and delivery (CI/CD) workflow. We also provide DevOps support for ongoing maintenance and platform development. Using this framework allows you to focus on documenting your product or service for customers without having to worry about the tools and systems for developing and delivering the content.
 
@@ -33,7 +32,7 @@ In this collaborative process, people like you that have domain expertise and pr
 
 ## Contributing to documentation
 
-When you contribute to the documentation, you use the Deconst documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. If you're a regular contributor or if you are coordinating the documentation work for your team, you'll find it helpful to [learn more about Deconst](continuous-integration-and-delivery]. 
+When you contribute to the documentation, you use the Deconst documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. If you're a regular contributor or if you are coordinating the documentation work for your team, you'll find it helpful to [learn more about Deconst](#continuous-integration-and-delivery]. 
 
 How you contribute to documentation depends on what you are developing:
 
@@ -166,7 +165,7 @@ that convert content repositories in different formats
 
 - Development and Staging environments that enable collaborative review and early Beta releases of documentation. Staging environments are automatically created and linked on each pull request. 
 
-## GitHub source repositories for documentation
+### GitHub source repositories for documentation
 You can find the GitHub source repository for published documentation by clicking on the **Edit on GitHub** or **Submit an issue** link available on the website. Because some repositories are private, you might need help
 getting access or finding the repository. In that case, open an
 [issue](https://github.com/rackerlabs/docs-rackspace/issues/new) to get help from the Info Dev team.
@@ -183,11 +182,10 @@ The content repository must also be added to the control configuration repositor
 
 After a content repository has been added to the control configuration, the documentation projects in the repository will build and deploy a staging version of the content each time someone submits a GitHub pull-request to the repository. When the pull request is merged, the content is deployed to the production site. If your content is in beta or early access, you can also configure the content so that it deploys only to a development server.
 
-## Delivering documentation to a Deconst site
+### Delivering documentation to a Deconst site
 The work required to deliver documentation by using Deconst depends on whether you are authoring content or managing the site configuration settings that enable the CI/CD workflow automation.
 
-
-### Writing content
+#### Writing content
 Authors create content by writing and committing documentation source files written in the appropriate format to a content repository. They perform tasks like the following ones:
 
 - Use existing Info Dev documentation project and content type templates to create [Markdown content for Jekyll](https://deconst.horse/writing-docs/author/jekyll/) or [resStructuredText content for Sphinx](https://deconst.horse/writing-docs/author/sphinx/) in new or existing content repositories.
@@ -198,7 +196,7 @@ Authors create content by writing and committing documentation source files writ
 
 For details, see [Authoring content for deconst](https://deconst.horse/writing-docs/author/).
 
-#### Managing content build and delivery
+#### Coordinating a Deconst site
 Site coordinators assemble content from many sources into a single site by maintaing the following configuration files in the control repository for the Deconst instance:
 - *[Content mapping](https://deconst.horse/writing-docs/coordinator/mapping/)files that specify the path where Deconst will display the content
 - *[Template mapping](https://deconst.horse/writing-docs/coordinator/templates/#mapping-templates-to-pages) files that specifies which template to apply to a content set or specific pages within a content set when the content is served.
