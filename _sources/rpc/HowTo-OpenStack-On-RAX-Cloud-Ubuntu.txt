@@ -1,6 +1,6 @@
-======================================
-How-To: OpenStack on RAX Cloud Servers
-======================================
+=============================================
+How-To: OpenStack on RAX Ubuntu Cloud Servers
+=============================================
 
 This how-to provides instructions for building the prerequisite
 infrastructure for installing multi-host OpenStack environments on RAX
@@ -23,7 +23,7 @@ Overview
 Network architecture
 ~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: figures/openstack-on-rax-cloud-arch-v2.png
+.. figure:: figures/openstack-rax-on-cloud-arch-v2.png
    :alt: Network architecture
 
    Network architecture
