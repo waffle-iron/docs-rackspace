@@ -35,7 +35,7 @@
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
         <link rel="up" title="RPC team documentation" href="index.html"/>
         <link rel="next" title="How-To: OpenStack on RAX Cloud Servers" href="HowTo-OpenStack-On-RAX-Cloud-RR.html"/>
-        <link rel="prev" title="How-To: OpenStack on RAX Cloud Servers" href="HowTo-OpenStack-On-RAX-Cloud-Fedora.html"/> 
+        <link rel="prev" title="How-To: OpenStack on RAX CentOS Cloud Servers" href="HowTo-OpenStack-On-RAX-Cloud-CentOS.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,7 +85,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">RPC team documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-Fedora.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-CentOS.html">How-To: OpenStack on RAX CentOS Cloud Servers</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">How-To: OpenStack on RAX Ubuntu Cloud Servers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#network-architecture">Network architecture</a></li>
@@ -193,7 +193,7 @@ the official installation guide.</li>
 <div class="section" id="networks">
 <h3>Networks<a class="headerlink" href="#networks" title="Permalink to this headline">#</a></h3>
 <p>In the Rackspace Cloud Control Panel, select <span class="guilabel">Networks</span> in the
-guilabel:<cite>Networking</cite> tab, and create the following networks:</p>
+<span class="guilabel">Networking</span> tab, and create the following networks:</p>
 <ol class="arabic simple">
 <li>net-osmgmt1<ul>
 <li>10.1.11.0/24</li>
@@ -252,7 +252,7 @@ Rackspace.</p>
 <li><p class="first">Configure additional network interfaces.</p>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/network/interfaces</span></code> file.</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span># Label net-osmgmt1
+<div class="highlight-text"><div class="highlight"><pre><span></span># Label net-osmgmt1
 auto eth2
 iface eth2 inet static
 address 10.1.11.1
@@ -293,27 +293,22 @@ post-down ip link del vxlan1
 </div>
 </li>
 <li><p class="first">Create a <code class="file docutils literal"><span class="pre">/etc/shorewall/interfaces</span></code> file.</p>
-<blockquote>
-<div><div class="highlight-ini"><div class="highlight"><pre><span></span>ext eth0 - routefilter,tcpflags
+<div class="highlight-text"><div class="highlight"><pre><span></span>ext eth0 - routefilter,tcpflags
 rax eth1
 osm1 eth2
 ose1 eth3
 os1t vxlan1
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">Create a <code class="file docutils literal"><span class="pre">/etc/shorewall/masq</span></code> file.</p>
-<blockquote>
-<div><div class="highlight-ini"><div class="highlight"><pre><span></span>eth0 10.1.11.0/24
+<div class="highlight-text"><div class="highlight"><pre><span></span>eth0 10.1.11.0/24
 eth0 10.1.13.0/24
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">Create a <code class="file docutils literal"><span class="pre">/etc/shorewall/policy</span></code> file.</p>
-<blockquote>
-<div><div class="highlight-ini"><div class="highlight"><pre><span></span>$FW all ACCEPT
+<div class="highlight-text"><div class="highlight"><pre><span></span>$FW all ACCEPT
 ext all REJECT
 rax all ACCEPT
 osm1 all ACCEPT
@@ -321,11 +316,9 @@ ose1 all ACCEPT
 os1t all ACCEPT
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/shorewall/rules</span></code> file.</p>
-<blockquote>
-<div><div class="highlight-ini"><div class="highlight"><pre><span></span>Ping/ACCEPT ext $FW
+<div class="highlight-text"><div class="highlight"><pre><span></span>Ping/ACCEPT ext $FW
 SSH/ACCEPT ext $FW
 #DNAT ext osm1:10.1.11.11  tcp    www
 #DNAT ext osm1:10.1.11.11  tcp    6080
@@ -337,11 +330,9 @@ SSH/ACCEPT ext $FW
 enable remote access to the dashboard and instance consoles in the
 OpenStack environment.</p>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/shorewall/zones</span></code> file.</p>
-<blockquote>
-<div><div class="highlight-ini"><div class="highlight"><pre><span></span>fw firewall
+<div class="highlight-text"><div class="highlight"><pre><span></span>fw firewall
 ext ipv4
 rax ipv4
 osm1 ipv4
@@ -349,28 +340,21 @@ ose1 ipv4
 os1t ipv4
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/default/shorewall</span></code> file.</p>
-<blockquote>
-<div><div class="highlight-ini"><div class="highlight"><pre><span></span><span class="na">startup</span><span class="o">=</span><span class="s">1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="na">startup</span><span class="o">=</span><span class="s">1</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">Check the shorewall configuration.</p>
-<blockquote>
-<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> shorewall check
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> shorewall check
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">Start the firewall service.</p>
-<blockquote>
-<div><div class="highlight-ini"><div class="highlight"><pre><span></span>service shorewall start
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> service shorewall start
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">Reboot the node.</p>
 </li>
@@ -408,7 +392,7 @@ node.</p>
 </li>
 </ol>
 <blockquote>
-<div><div class="highlight-ini"><div class="highlight"><pre><span></span># Label net-osmgmt1
+<div><div class="highlight-text"><div class="highlight"><pre><span></span># Label net-osmgmt1
 auto eth0
 iface eth0 inet static
     address 10.1.11.11
@@ -440,7 +424,7 @@ iface vxlan1 inet static
 </div></blockquote>
 <ol class="arabic">
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/hosts</span></code> file.</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span># hst-os1ctl1
+<div class="highlight-text"><div class="highlight"><pre><span></span># hst-os1ctl1
 10.1.11.11 hst-os1ctl1
 
 # hst-os1cpu1
@@ -488,11 +472,9 @@ Networks: net-osmgmt1</p>
 </li>
 <li><p class="first">Access the node from the network services node using the IP address
 assigned by RAX on <em>net-osmgmt1</em> network.</p>
-<blockquote>
-<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@&lt;hst-os1cpu1_IP_ADDRESS&gt;</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@&lt;hst-os1cpu1_IP_ADDRESS&gt;</span>
 </pre></div>
 </div>
-</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The node cannot access the internet without additional
@@ -504,7 +486,7 @@ configuration.</p>
 <li><p class="first">Configure network interfaces.</p>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/network/interfaces</span></code> file.</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span># Label net-osmgmt1
+<div class="highlight-text"><div class="highlight"><pre><span></span># Label net-osmgmt1
 auto eth0
 iface eth0 inet static
     address 10.1.11.21
@@ -521,17 +503,17 @@ iface eth1 inet static
 </div>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/hosts</span></code> file.</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span>  # hst-os1ctl1
-  10.1.11.11 hst-os1ctl1
+<div class="highlight-text"><div class="highlight"><pre><span></span># hst-os1ctl1
+10.1.11.11 hst-os1ctl1
 
-  # hst-os1cpu1
-  10.1.11.21 hst-os1cpu1
-
-.. note::
-
-   Comment out or remove any existing lines containing
-   *hst-os1cpu1*.
+# hst-os1cpu1
+10.1.11.21 hst-os1cpu1
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Comment out or remove any existing lines containing
+<em>hst-os1cpu1</em>.</p>
 </div>
 </li>
 <li><p class="first">Reboot the node.</p>
@@ -562,7 +544,7 @@ address on the <em>net-osmgmt1</em> network.</p>
 <p>Use the <a class="reference external" href="http://docs.openstack.org/project-install-guide/draft/">installation
 guides</a> with
 the following changes:</p>
-<ol class="arabic">
+<ul>
 <li><p class="first">Configuring the basic environment on all nodes:</p>
 <ul class="simple">
 <li>Skip the network configuration sections.</li>
@@ -595,7 +577,7 @@ the following changes:</p>
 try pinging 10.1.13.101 from the network services node.</p>
 </div>
 </li>
-</ol>
+</ul>
 </div>
 </div>
 
@@ -609,7 +591,7 @@ try pinging 10.1.13.101 from the network services node.</p>
         <a href="HowTo-OpenStack-On-RAX-Cloud-RR.html" class="btn btn-neutral float-right" title="How-To: OpenStack on RAX Cloud Servers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="HowTo-OpenStack-On-RAX-Cloud-Fedora.html" class="btn btn-neutral" title="How-To: OpenStack on RAX Cloud Servers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="HowTo-OpenStack-On-RAX-Cloud-CentOS.html" class="btn btn-neutral" title="How-To: OpenStack on RAX CentOS Cloud Servers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
