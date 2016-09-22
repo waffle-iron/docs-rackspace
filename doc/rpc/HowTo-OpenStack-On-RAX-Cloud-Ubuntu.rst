@@ -40,7 +40,7 @@ Networks
 --------
 
 In the Rackspace Cloud Control Panel, select :guilabel:`Networks` in the
-guilabel:`Networking` tab, and create the following networks:
+:guilabel:`Networking` tab, and create the following networks:
 
 #. net-osmgmt1
 
@@ -102,7 +102,7 @@ Network services node (hst-ns1)
 
 #.  Edit the :file:`/etc/network/interfaces` file.
 
-    .. code-block:: ini
+    .. code-block:: text
 
        # Label net-osmgmt1
        auto eth2
@@ -147,75 +147,75 @@ Network services node (hst-ns1)
 
 #. Create a :file:`/etc/shorewall/interfaces` file.
 
-    .. code-block:: ini
+   .. code-block:: text
 
-       ext eth0 - routefilter,tcpflags
-       rax eth1
-       osm1 eth2
-       ose1 eth3
-       os1t vxlan1
+      ext eth0 - routefilter,tcpflags
+      rax eth1
+      osm1 eth2
+      ose1 eth3
+      os1t vxlan1
 
 #. Create a :file:`/etc/shorewall/masq` file.
 
-    .. code-block:: ini
+   .. code-block:: text
 
-       eth0 10.1.11.0/24
-       eth0 10.1.13.0/24
+      eth0 10.1.11.0/24
+      eth0 10.1.13.0/24
 
 #. Create a :file:`/etc/shorewall/policy` file.
 
-    .. code-block:: ini
+   .. code-block:: text
 
-       $FW all ACCEPT
-       ext all REJECT
-       rax all ACCEPT
-       osm1 all ACCEPT
-       ose1 all ACCEPT
-       os1t all ACCEPT
+      $FW all ACCEPT
+      ext all REJECT
+      rax all ACCEPT
+      osm1 all ACCEPT
+      ose1 all ACCEPT
+      os1t all ACCEPT
 
 #. Edit the :file:`/etc/shorewall/rules` file.
 
-    .. code-block:: ini
+   .. code-block:: text
 
-       Ping/ACCEPT ext $FW
-       SSH/ACCEPT ext $FW
-       #DNAT ext osm1:10.1.11.11  tcp    www
-       #DNAT ext osm1:10.1.11.11  tcp    6080
+      Ping/ACCEPT ext $FW
+      SSH/ACCEPT ext $FW
+      #DNAT ext osm1:10.1.11.11  tcp    www
+      #DNAT ext osm1:10.1.11.11  tcp    6080
 
-    .. note::
+   .. note::
 
-       Uncomment the DNAT rules and restart Shorewall as necessary to
-       enable remote access to the dashboard and instance consoles in the
-       OpenStack environment.
+      Uncomment the DNAT rules and restart Shorewall as necessary to
+      enable remote access to the dashboard and instance consoles in the
+      OpenStack environment.
 
 #. Edit the :file:`/etc/shorewall/zones` file.
 
-    .. code-block:: ini
+   .. code-block:: text
 
-       fw firewall
-       ext ipv4
-       rax ipv4
-       osm1 ipv4
-       ose1 ipv4
-       os1t ipv4
+      fw firewall
+      ext ipv4
+      rax ipv4
+      osm1 ipv4
+      ose1 ipv4
+      os1t ipv4
 
 #. Edit the :file:`/etc/default/shorewall` file.
 
-    .. code-block:: ini
+   .. code-block:: ini
 
-       startup=1
+      startup=1
 
 #. Check the shorewall configuration.
 
-    .. code-block:: console
+   .. code-block:: console
 
-       # shorewall check
+      # shorewall check
 
 #. Start the firewall service.
 
-    .. code-block:: ini
+   .. code-block:: console
 
-       service shorewall start
+      # service shorewall start
 
 #. Reboot the node.
 
@@ -251,7 +251,7 @@ OpenStack controller node (hst-os1ctl1)
 
 #.  Edit the :file:`/etc/network/interfaces` file.
 
-   .. code-block:: ini
+   .. code-block:: text
 
       # Label net-osmgmt1
       auto eth0
@@ -283,7 +283,7 @@ OpenStack controller node (hst-os1ctl1)
 
 #.  Edit the :file:`/etc/hosts` file.
 
-    .. code-block:: ini
+    .. code-block:: text
 
        # hst-os1ctl1
        10.1.11.11 hst-os1ctl1
@@ -334,9 +334,9 @@ OpenStack compute node (hst-os1cpu1)
 #. Access the node from the network services node using the IP address
    assigned by RAX on *net-osmgmt1* network.
 
-    .. code-block:: console
+   .. code-block:: console
 
-       ssh root@<hst-os1cpu1_IP_ADDRESS>
+      ssh root@<hst-os1cpu1_IP_ADDRESS>
 
    .. note::
 
@@ -349,7 +349,7 @@ OpenStack compute node (hst-os1cpu1)
 
 #. Edit the :file:`/etc/network/interfaces` file.
 
-   .. code-block:: ini
+   .. code-block:: text
 
       # Label net-osmgmt1
       auto eth0
@@ -367,7 +367,7 @@ OpenStack compute node (hst-os1cpu1)
 
 #. Edit the :file:`/etc/hosts` file.
 
-   .. code-block:: ini
+   .. code-block:: text
 
       # hst-os1ctl1
       10.1.11.11 hst-os1ctl1
@@ -375,10 +375,10 @@ OpenStack compute node (hst-os1cpu1)
       # hst-os1cpu1
       10.1.11.21 hst-os1cpu1
 
-    .. note::
+   .. note::
 
-       Comment out or remove any existing lines containing
-       *hst-os1cpu1*.
+      Comment out or remove any existing lines containing
+      *hst-os1cpu1*.
 
 #. Reboot the node.
 
@@ -410,31 +410,31 @@ Use the `installation
 guides <http://docs.openstack.org/project-install-guide/draft/>`_ with
 the following changes:
 
-#. Configuring the basic environment on all nodes:
+- Configuring the basic environment on all nodes:
 
-   -  Skip the network configuration sections.
+  -  Skip the network configuration sections.
 
-   -  Use 10.1.11.1 (network services node) as the NTP server.
+  -  Use 10.1.11.1 (network services node) as the NTP server.
 
-#. Configuring the Compute service on the compute node:
+- Configuring the Compute service on the compute node:
 
-   -  Use *qemu* instead of *kvm* virtualization.
+  -  Use *qemu* instead of *kvm* virtualization.
 
-#. Configuring the Networking service on the network node:
+- Configuring the Networking service on the network node:
 
-   -  Add the *vxlan1* interface as a port on the *br-ex* bridge.
+  -  Add the *vxlan1* interface as a port on the *br-ex* bridge.
 
-#. Creating initial networks.
+- Creating initial networks.
 
-   - Use the following command for the subnet on the external network:
+  - Use the following command for the subnet on the external network:
 
-     .. code-block:: console
+    .. code-block:: console
 
-        neutron subnet-create ext-net --name ext-subnet \
-        --allocation-pool start=10.1.13.101,end=10.1.13.200 \
-        --disable-dhcp --gateway 10.1.13.1 10.1.13.0/24
+       neutron subnet-create ext-net --name ext-subnet \
+       --allocation-pool start=10.1.13.101,end=10.1.13.200 \
+       --disable-dhcp --gateway 10.1.13.1 10.1.13.0/24
 
-   .. note::
+  .. note::
 
-      After performing the initial tenant network creation procedure,
-      try pinging 10.1.13.101 from the network services node.
+     After performing the initial tenant network creation procedure,
+     try pinging 10.1.13.101 from the network services node.
