@@ -62,7 +62,7 @@ Network services node (hst-ns1)
 
 #. Create a cloud server.
 
-   OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+   OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
    Flavor: 1 GB General Purpose v1
    Networks: PublicNet, ServiceNet
 
@@ -173,7 +173,7 @@ Network services node (hst-ns1)
       ose1 all ACCEPT
       os1t all ACCEPT
 
-#. Edit the :file:`/etc/shorewall/rules` file.
+#. Create a :file:`/etc/shorewall/rules` file.
 
    .. code-block:: text
 
@@ -188,7 +188,7 @@ Network services node (hst-ns1)
       enable remote access to the dashboard and instance consoles in the
       OpenStack environment.
 
-#. Edit the :file:`/etc/shorewall/zones` file.
+#. Create a :file:`/etc/shorewall/zones` file.
 
    .. code-block:: text
 
@@ -217,7 +217,10 @@ Network services node (hst-ns1)
 
       # service shorewall start
 
-#. Reboot the node.
+   .. note::
+   
+      Restart the firewall service whenever the network services
+      node is rebooted.
 
 OpenStack controller node (hst-os1ctl1)
 ---------------------------------------
@@ -225,7 +228,7 @@ OpenStack controller node (hst-os1ctl1)
 #. Create a cloud server, removing all networks except the *net-osmgmt1*
    network:
 
-   OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+   OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
    Flavor: 4 GB General Purpose v1
    Networks: net-osmgmt1
 
@@ -325,7 +328,7 @@ OpenStack compute node (hst-os1cpu1)
 #. Create a cloud server, removing all networks except the *net-osmgmt1*
    network:
 
-   OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+   OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
    Flavor:
    * 3.75 GB Compute v1 (supports several CirrOS instances)
    * 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
