@@ -84,7 +84,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">RPC team documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-For-RPC.html">OpenStack Docs for RPCers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-CentOS.html">How-To: OpenStack on RAX CentOS Cloud Servers</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">How-To: OpenStack on RAX Ubuntu Cloud Servers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
@@ -216,7 +215,7 @@ the official installation guide.</li>
 <h3>Network services node (hst-ns1)<a class="headerlink" href="#network-services-node-hst-ns1" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Create a cloud server.</p>
-<p>OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+<p>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
 Flavor: 1 GB General Purpose v1
 Networks: PublicNet, ServiceNet</p>
 <div class="admonition note">
@@ -317,7 +316,7 @@ os1t all ACCEPT
 </pre></div>
 </div>
 </li>
-<li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/shorewall/rules</span></code> file.</p>
+<li><p class="first">Create a <code class="file docutils literal"><span class="pre">/etc/shorewall/rules</span></code> file.</p>
 <div class="highlight-text"><div class="highlight"><pre><span></span>Ping/ACCEPT ext $FW
 SSH/ACCEPT ext $FW
 #DNAT ext osm1:10.1.11.11  tcp    www
@@ -331,7 +330,7 @@ enable remote access to the dashboard and instance consoles in the
 OpenStack environment.</p>
 </div>
 </li>
-<li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/shorewall/zones</span></code> file.</p>
+<li><p class="first">Create a <code class="file docutils literal"><span class="pre">/etc/shorewall/zones</span></code> file.</p>
 <div class="highlight-text"><div class="highlight"><pre><span></span>fw firewall
 ext ipv4
 rax ipv4
@@ -355,8 +354,11 @@ os1t ipv4
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> service shorewall start
 </pre></div>
 </div>
-</li>
-<li><p class="first">Reboot the node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Restart the firewall service whenever the network services
+node is rebooted.</p>
+</div>
 </li>
 </ol>
 </div>
@@ -365,7 +367,7 @@ os1t ipv4
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <em>net-osmgmt1</em>
 network:</p>
-<p>OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+<p>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
 Flavor: 4 GB General Purpose v1
 Networks: net-osmgmt1</p>
 </li>
@@ -464,7 +466,7 @@ address on the <em>net-osmgmt1</em> network.</p>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <em>net-osmgmt1</em>
 network:</p>
-<p>OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+<p>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
 Flavor:
 * 3.75 GB Compute v1 (supports several CirrOS instances)
 * 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
