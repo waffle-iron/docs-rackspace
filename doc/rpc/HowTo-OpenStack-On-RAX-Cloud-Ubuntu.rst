@@ -218,7 +218,7 @@ Network services node (hst-ns1)
       # service shorewall start
 
    .. note::
-   
+
       Restart the firewall service whenever the network services
       node is rebooted.
 
@@ -441,3 +441,4 @@ the following changes:
 
      After performing the initial tenant network creation procedure,
      try pinging 10.1.13.101 from the network services node.
+
