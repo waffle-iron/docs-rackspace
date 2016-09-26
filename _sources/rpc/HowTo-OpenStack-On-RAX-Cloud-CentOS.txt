@@ -225,6 +225,7 @@ Configure the firewall service
 
    .. code-block:: console
 
+      # systemctl enable shorewall
       # systemctl start shorewall
 
 #. Edit */etc/resolv.conf* and add the Google DNS servers:
@@ -422,8 +423,8 @@ OpenStack compute node (hst-os1cpu1)
 
    .. code-block:: console
 
-      # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.2
-      # ssh root@10.1.11.2
+      # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.3
+      # ssh root@10.1.11.3
 
    .. note::
 
@@ -531,7 +532,10 @@ following changes:
 - Configuring the basic environment on all nodes:
 
   - Skip the network configuration sections.
-  - Use 10.1.11.1 (network services node) as the NTP server.
+  - In */etc/chrony.conf* on the network servics node,
+    set ``allow 10.1.11.0/24``.
+  - Set 10.1.11.1 (network services node) as the NTP server for the controller
+    and compute nodes.
 
 - Configuring the Compute service on the compute node:
 

@@ -373,7 +373,8 @@ os1t ipv4
 </div>
 </li>
 <li><p class="first">Start the firewall service:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl start shorewall
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl <span class="nb">enable</span> shorewall
+<span class="gp">#</span> systemctl start shorewall
 </pre></div>
 </div>
 </li>
@@ -561,8 +562,8 @@ node.</p>
 </li>
 <li><p class="first">Access the node from the network services node using the IP address
 assigned by Rackspace on the <em>net-osmgmt1</em> network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.2
-<span class="gp">#</span> ssh root@10.1.11.2
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.3
+<span class="gp">#</span> ssh root@10.1.11.3
 </pre></div>
 </div>
 <div class="admonition note">
@@ -666,7 +667,10 @@ following changes:</p>
 <li><p class="first">Configuring the basic environment on all nodes:</p>
 <ul class="simple">
 <li>Skip the network configuration sections.</li>
-<li>Use 10.1.11.1 (network services node) as the NTP server.</li>
+<li>In <em>/etc/chrony.conf</em> on the network servics node,
+set <code class="docutils literal"><span class="pre">allow</span> <span class="pre">10.1.11.0/24</span></code>.</li>
+<li>Set 10.1.11.1 (network services node) as the NTP server for the controller
+and compute nodes.</li>
 </ul>
 </li>
 <li><p class="first">Configuring the Compute service on the compute node:</p>

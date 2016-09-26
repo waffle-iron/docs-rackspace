@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Convert grid tables to list-table directives &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="Tools" href="index.html"/>
+        <link rel="prev" title="Table width fix for Read the Docs Sphinx theme" href="rtd-tables.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contributor Collateral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Adding support for contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internal-publish-script.html">Publishing to pages.github.rackspace.com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Content deletion from Nexus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing.html">Configure development and production builds for Sphinx projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtd-tables.html">Table width fix for Read the Docs Sphinx theme</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Convert grid tables to list-table directives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Tools</a> &raquo;</li>
+      
+    <li>Convert grid tables to list-table directives</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tools/table-conversion.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="convert-grid-tables-to-list-table-directives">
+<h1>Convert grid tables to list-table directives<a class="headerlink" href="#convert-grid-tables-to-list-table-directives" title="Permalink to this headline">#</a></h1>
+<p>You can use the <code class="docutils literal"><span class="pre">table.py</span></code> script in the <a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/tree/master/tools">docs-rackspace/tools</a> repo to
+convert table grids to list-table directives in an rst file.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<ol class="arabic">
+<li><p class="first">Download <code class="docutils literal"><span class="pre">table.py</span></code> from the GitHub repo to a directory on your local
+machine.</p>
+</li>
+<li><p class="first">Convert grid tables in a file to list-tables. The result is output
+to stdout:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ python tables.py input.rst
+</pre></div>
+</div>
+</li>
+<li><p class="first">Convert several files:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ python tables.py input1.rst input2.rst
+
+$ python tables.py *.rst
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">#</a></h2>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-c</span>, <span class="option">--create</span></kbd></td>
+<td>create new files <code class="docutils literal"><span class="pre">*.rst.new</span></code> with the converted tables.
+Original files are unchanged.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-r</span>, <span class="option">--replace</span></kbd></td>
+<td>modify input files, replacing grid tables with list-tables</td></tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The script does not perform any tests on the conversion nor does it
+rollback if it encounters an error. Using the <code class="docutils literal"><span class="pre">--replace</span></code> option
+replaces the source text completely. To prevent data loss, use the
+<code class="docutils literal"><span class="pre">--create</span></code> option and confirm the conversion is correct before removing
+the original source file.</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Always build your document and compare the rendered list-table to the
+original rendered grid table. It is very possible that some errors may
+occur that require manual fixes, especially when converting complex tables.</p>
+<p>The script does not handle cells that span multiple rows or columns. If
+you convert a table with these types of cells you may receive a parsing
+error when running sphinx-build:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ERROR</span><span class="p">:</span> <span class="n">Error</span> <span class="n">parsing</span> <span class="n">content</span> <span class="n">block</span> <span class="k">for</span> <span class="n">the</span> <span class="s2">&quot;list-table&quot;</span> <span class="n">directive</span><span class="p">:</span>
+       <span class="n">uniform</span> <span class="n">two</span><span class="o">-</span><span class="n">level</span> <span class="n">bullet</span> <span class="nb">list</span> <span class="n">expected</span><span class="p">,</span> <span class="n">but</span> <span class="n">row</span> <span class="mi">2</span> <span class="n">does</span> <span class="ow">not</span>
+       <span class="n">contain</span> <span class="n">the</span> <span class="n">same</span> <span class="n">number</span> <span class="n">of</span> <span class="n">items</span> <span class="k">as</span> <span class="n">row</span> <span class="mi">1</span> <span class="p">(</span><span class="mi">4</span> <span class="n">vs</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This indicates that the list-table needs manual clean-up. Look for lines
+like this in the source:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="o">-</span> <span class="n">Alarms</span>
+  <span class="o">-</span> <span class="n">Acknowledge</span> <span class="n">an</span> <span class="n">alarm</span>    <span class="o">*</span> <span class="o">-</span> <span class="n">hello</span>
+  <span class="o">-</span>
+  <span class="o">-</span> <span class="n">Yes</span>
+</pre></div>
+</div>
+<p class="last">Compare with the original table to determine the correct structure of the
+broken row.</p>
+</div>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li>The script does not create titles for tables. After conversion, you may
+want to manually add titles.</li>
+<li>The script sets all columns to the same width: <code class="docutils literal"><span class="pre">100</span> <span class="pre">/</span> <span class="pre">col_num</span></code>. After
+conversion, you may want to manually edit <code class="docutils literal"><span class="pre">:width:</span></code>.</li>
+<li>The script automatically uses the first row of the table as a header.
+After conversion, you may want to manually edit <code class="docutils literal"><span class="pre">:header-rows:</span></code>.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="rtd-tables.html" class="btn btn-neutral" title="Table width fix for Read the Docs Sphinx theme" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
