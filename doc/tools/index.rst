@@ -16,3 +16,4 @@ How to use the Cloud documentation team tools.
    nexus-deletion.md
    publishing.rst
    rtd-tables.rst
+   table-conversion.rst
