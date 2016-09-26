@@ -422,8 +422,8 @@ OpenStack compute node (hst-os1cpu1)
 
    .. code-block:: console
 
-      # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.2
-      # ssh root@10.1.11.2
+      # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.3
+      # ssh root@10.1.11.3
 
    .. note::
 
