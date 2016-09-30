@@ -710,9 +710,11 @@ following changes:
          --allocation-pool start=10.1.13.101,end=10.1.13.200 \
          --disable-dhcp --gateway 10.1.13.1 10.1.13.0/24
 
+.. or maybe something like
 
-neutron subnet-create --name provider --allocation-pool start=10.1.13.101,end=10.1.13.200 --disable-dhcp --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
-
+   neutron subnet-create --name provider \
+   --allocation-pool start=10.1.13.101,end=10.1.13.200 --disable-dhcp \
+   --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
 
    .. note::
 
