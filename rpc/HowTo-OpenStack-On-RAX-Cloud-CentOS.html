@@ -92,19 +92,25 @@
 <li class="toctree-l4"><a class="reference internal" href="#networks">Networks</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#network-services-node-hst-ns1">Network services node (hst-ns1)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#network-services-node-network-services">Network services node (network-services)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#configure-additional-network-interfaces">Configure additional network interfaces</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configure-the-firewall-service">Configure the firewall service</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#openstack-controller-node-hst-os1ctl1">OpenStack controller node (hst-os1ctl1)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#openstack-controller-node-controller">OpenStack controller node (controller)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#configure-network-interfaces">Configure network interfaces</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#test-and-update">Test and update</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#openstack-compute-node-hst-os1cpu1">OpenStack compute node (hst-os1cpu1)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#openstack-compute-node-compute">OpenStack compute node (compute)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id1">Configure network interfaces</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">Test and update</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#openstack-block-storage-node-block">OpenStack block storage node (block)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Configure network interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Test and update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-block-storage-volume-block1">Create block storage volume (block1)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#install-and-configure-openstack-services">Install and configure OpenStack services</a></li>
@@ -178,7 +184,7 @@ provides internet connectivity to instances in the environment.</p>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li>Prepare the Rackspac cloud environment.</li>
+<li>Prepare the Rackspace cloud environment.</li>
 <li>Build and configure network services (jump/firewall) node.</li>
 <li>Build and configure OpenStack nodes.</li>
 <li>Install and configure OpenStack services with minor modifications to
@@ -204,25 +210,25 @@ the official installation guide.</li>
 <p>In the Rackspace Cloud Control Panel, select <span class="guilabel">Networks</span> in the
 <span class="guilabel">Networking</span> tab, and create the following networks:</p>
 <ol class="arabic simple">
-<li>net-osmgmt1<ul>
+<li>management<ul>
 <li>10.1.11.0/24</li>
 </ul>
 </li>
-<li>net-osint1<ul>
+<li>internal<ul>
 <li>10.1.12.0/24</li>
 </ul>
 </li>
-<li>net-osext1<ul>
+<li>external<ul>
 <li>10.1.13.0/24</li>
 </ul>
 </li>
 </ol>
 </div>
 </div>
-<div class="section" id="network-services-node-hst-ns1">
-<h2>Network services node (hst-ns1)<a class="headerlink" href="#network-services-node-hst-ns1" title="Permalink to this headline">#</a></h2>
+<div class="section" id="network-services-node-network-services">
+<h2>Network services node (network-services)<a class="headerlink" href="#network-services-node-network-services" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p class="first">Create a cloud server named hst-ns1.</p>
+<li><p class="first">Create a cloud server named <strong>network-services</strong>.</p>
 <ul class="simple">
 <li>OS: CentOS 7 (PVHVM)</li>
 <li>Flavor: 1 GB General Purpose v1</li>
@@ -261,13 +267,13 @@ Rackspace.</p>
 <div class="section" id="configure-additional-network-interfaces">
 <h3>Configure additional network interfaces<a class="headerlink" href="#configure-additional-network-interfaces" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
-<li><p class="first">In the cloud control panel, add the <em>net-osmgmt1</em> network to the node.</p>
+<li><p class="first">In the cloud control panel, add the <strong>management</strong> network to the node.</p>
 </li>
-<li><p class="first">In the cloud control panel, add the <em>net-osext1</em> network to the node.</p>
+<li><p class="first">In the cloud control panel, add the <strong>external</strong> network to the node.</p>
 </li>
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth2</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label net-osmgmt1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label management</span>
 <span class="na">DEVICE</span><span class="o">=</span><span class="s">eth2</span>
 <span class="na">BOOTPROTO</span><span class="o">=</span><span class="s">static</span>
 <span class="na">HWADDR</span><span class="o">=</span><span class="s">bc:76:4e:18:03:b8</span>
@@ -280,7 +286,7 @@ HWADDR line, as this is determined by the system:</p>
 </li>
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth3</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label net-osext1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label external</span>
 <span class="na">DEVICE</span><span class="o">=</span><span class="s">eth3</span>
 <span class="na">BOOTPROTO</span><span class="o">=</span><span class="s">static</span>
 <span class="na">HWADDR</span><span class="o">=</span><span class="s">bc:76:4e:18:03:c2</span>
@@ -401,25 +407,25 @@ nameserver 8.8.4.4
 </ol>
 </div>
 </div>
-<div class="section" id="openstack-controller-node-hst-os1ctl1">
-<h2>OpenStack controller node (hst-os1ctl1)<a class="headerlink" href="#openstack-controller-node-hst-os1ctl1" title="Permalink to this headline">#</a></h2>
+<div class="section" id="openstack-controller-node-controller">
+<h2>OpenStack controller node (controller)<a class="headerlink" href="#openstack-controller-node-controller" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p class="first">Create a cloud server named hst-os1ctl1, removing all networks except the
-<strong>net-osmgmt1</strong> network:</p>
+<li><p class="first">Create a cloud server named <strong>controller</strong>, removing all networks except the
+<strong>management</strong> network:</p>
 <ul class="simple">
 <li>OS: CentOS 7 (PVHVM)</li>
 <li>Flavor: 4 GB General Purpose v1</li>
-<li>Networks: net-osmgmt1</li>
+<li>Networks: management</li>
 </ul>
 </li>
-<li><p class="first">In the cloud control panel, add the <em>net-osint1</em> network to the
+<li><p class="first">In the cloud control panel, add the <strong>internal</strong> network to the
 node.</p>
 </li>
-<li><p class="first">In the cloud control panel, add the <em>net-osext1</em> network to the
+<li><p class="first">In the cloud control panel, add the <strong>external</strong> network to the
 node.</p>
 </li>
-<li><p class="first">Access the node from the network services node (hst-ns1) using the IP
-address assigned by Rackspace on the <em>net-osmgmt1</em> network:</p>
+<li><p class="first">Access the node from the <strong>network services</strong> node using the IP
+address assigned by Rackspace on the <strong>management</strong> network:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.2
 <span class="gp">#</span> ssh root@10.1.11.2
 </pre></div>
@@ -435,7 +441,7 @@ address assigned by Rackspace on the <em>net-osmgmt1</em> network:</p>
 <ol class="arabic">
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth0</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label net-osmgmt1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label management</span>
 <span class="na">DEVICE</span><span class="o">=</span><span class="s">eth0</span>
 <span class="na">BOOTPROTO</span><span class="o">=</span><span class="s">static</span>
 <span class="na">HWADDR</span><span class="o">=</span><span class="s">bc:76:4e:18:03:b8</span>
@@ -449,7 +455,7 @@ HWADDR line, as this is determined by the system:</p>
 </li>
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth1</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label net-osint1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label internal</span>
 <span class="na">DEVICE</span><span class="o">=</span><span class="s">eth1</span>
 <span class="na">BOOTPROTO</span><span class="o">=</span><span class="s">static</span>
 <span class="na">HWADDR</span><span class="o">=</span><span class="s">bc:76:4e:18:03:b8</span>
@@ -462,7 +468,7 @@ HWADDR line, as this is determined by the system:</p>
 </li>
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth2</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label net-osext1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label external</span>
 <span class="na">DEVICE</span><span class="o">=</span><span class="s">eth2</span>
 <span class="na">BOOTPROTO</span><span class="o">=</span><span class="s">static</span>
 <span class="na">HWADDR</span><span class="o">=</span><span class="s">bc:76:4e:18:03:c2</span>
@@ -489,21 +495,25 @@ ip addr add 10.1.13.21/24 brd 10.1.13.255 dev vxlan1
 <p>This script needs to be run every time the node boots.</p>
 </li>
 <li><p class="first">Edit the <em>/etc/hosts</em> file:</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span># hst-os1ctl1
-10.1.11.11  hst-os1ctl1
-
-# hst-os1cpu1
-10.1.11.21  hst-os1cpu1
+<div class="highlight-text"><div class="highlight"><pre><span></span>10.1.11.11  controller
+10.1.11.21  compute
+10.1.11.31  block
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Comment out or remove any existing lines containing <em>hst-os1ctl1</em>.</p>
+<p class="last">Comment out or remove any existing lines containing <strong>controller</strong>.</p>
 </div>
 </li>
 <li><p class="first">Edit <em>/etc/resolv.conf</em> and add the Google DNS servers:</p>
 <div class="highlight-text"><div class="highlight"><pre><span></span>nameserver 8.8.8.8
 nameserver 8.8.4.4
+</pre></div>
+</div>
+</li>
+<li><p class="first">Stop and disable firewalld to prevent access problems by other nodes:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl stop firewalld
+<span class="gp">#</span> systemctl disable firewalld
 </pre></div>
 </div>
 </li>
@@ -518,7 +528,7 @@ nameserver 8.8.4.4
 <h3>Test and update<a class="headerlink" href="#test-and-update" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Access the node from the network services node using the new IP
-address on the <em>net-osmgmt1</em> network:</p>
+address on the <strong>management</strong> network:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh root@10.1.11.11
 </pre></div>
 </div>
@@ -537,6 +547,12 @@ address on the <em>net-osmgmt1</em> network:</p>
 </pre></div>
 </div>
 </li>
+<li><p class="first">If performing pre-release testing, install the repository for the relevant
+release candidate:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+</pre></div>
+</div>
+</li>
 <li><p class="first">Reboot the node:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot now
 </pre></div>
@@ -545,23 +561,23 @@ address on the <em>net-osmgmt1</em> network:</p>
 </ol>
 </div>
 </div>
-<div class="section" id="openstack-compute-node-hst-os1cpu1">
-<h2>OpenStack compute node (hst-os1cpu1)<a class="headerlink" href="#openstack-compute-node-hst-os1cpu1" title="Permalink to this headline">#</a></h2>
+<div class="section" id="openstack-compute-node-compute">
+<h2>OpenStack compute node (compute)<a class="headerlink" href="#openstack-compute-node-compute" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p class="first">Create a cloud server, removing all networks except the <em>net-osmgmt1</em>
+<li><p class="first">Create a cloud server, removing all networks except the <strong>management</strong>
 network:</p>
 <ul class="simple">
 <li>OS: CentOS 7 (PVHVM)</li>
 <li>4 GB General Purpose v1 (supports several CirrOS instances)</li>
 <li>8 GB General Purpose v1 (supports a couple of Ubuntu/Fedora instances)</li>
-<li>Networks: net-osmgmt1</li>
+<li>Networks: management</li>
 </ul>
 </li>
-<li><p class="first">In the cloud control panel, add the <em>net-osint1</em> network to the
+<li><p class="first">In the cloud control panel, add the <strong>internal</strong> network to the
 node.</p>
 </li>
 <li><p class="first">Access the node from the network services node using the IP address
-assigned by Rackspace on the <em>net-osmgmt1</em> network:</p>
+assigned by Rackspace on the <strong>management</strong> network:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.3
 <span class="gp">#</span> ssh root@10.1.11.3
 </pre></div>
@@ -577,7 +593,7 @@ assigned by Rackspace on the <em>net-osmgmt1</em> network:</p>
 <ol class="arabic">
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth0</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label net-osmgmt1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label management</span>
 <span class="na">DEVICE</span><span class="o">=</span><span class="s">eth0</span>
 <span class="na">BOOTPROTO</span><span class="o">=</span><span class="s">static</span>
 <span class="na">HWADDR</span><span class="o">=</span><span class="s">bc:76:4e:18:03:b8</span>
@@ -591,7 +607,7 @@ HWADDR line, as this is determined by the system:</p>
 </li>
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth1</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label net-osint1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label internal</span>
 <span class="na">DEVICE</span><span class="o">=</span><span class="s">eth1</span>
 <span class="na">BOOTPROTO</span><span class="o">=</span><span class="s">static</span>
 <span class="na">HWADDR</span><span class="o">=</span><span class="s">bc:76:4e:18:03:b8</span>
@@ -603,16 +619,14 @@ HWADDR line, as this is determined by the system:</p>
 </div>
 </li>
 <li><p class="first">Edit the <em>/etc/hosts</em> file:</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span># hst-os1ctl1
-10.1.11.11  hst-os1ctl1
-
-# hst-os1cpu1
-10.1.11.21  hst-os1cpu1
+<div class="highlight-text"><div class="highlight"><pre><span></span>10.1.11.11  controller
+10.1.11.21  compute
+10.1.11.31  block
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Comment out or remove any existing lines containing <em>hst-os1cpu1</em>.</p>
+<p class="last">Comment out or remove any existing lines containing <strong>compute</strong>.</p>
 </div>
 </li>
 <li><p class="first">Edit <em>/etc/resolv.conf</em> and add the Google DNS servers:</p>
@@ -632,7 +646,7 @@ nameserver 8.8.4.4
 <h3>Test and update<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Access the node from the network services node using the new IP
-address on the <em>net-osmgmt1</em> network:</p>
+address on the <strong>management</strong> network:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh root@10.1.11.21
 </pre></div>
 </div>
@@ -651,6 +665,12 @@ address on the <em>net-osmgmt1</em> network:</p>
 </pre></div>
 </div>
 </li>
+<li><p class="first">If performing pre-release testing, install the repository for the relevant
+release candidate:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+</pre></div>
+</div>
+</li>
 <li><p class="first">Reboot the node: console</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot now
 </pre></div>
@@ -659,45 +679,153 @@ address on the <em>net-osmgmt1</em> network:</p>
 </ol>
 </div>
 </div>
+<div class="section" id="openstack-block-storage-node-block">
+<h2>OpenStack block storage node (block)<a class="headerlink" href="#openstack-block-storage-node-block" title="Permalink to this headline">#</a></h2>
+<ol class="arabic">
+<li><p class="first">Create a cloud server, removing all networks except the <strong>management</strong>
+network:</p>
+<ul class="simple">
+<li>OS: CentOS 7 (PVHVM)</li>
+<li>4 GB General Purpose v1</li>
+<li>Networks: management</li>
+</ul>
+</li>
+<li><p class="first">In the cloud control panel, add the <strong>internal</strong> network to the
+node.</p>
+</li>
+<li><p class="first">Access the node from the network services node using the IP address
+assigned by Rackspace on the <strong>management</strong> network:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.4
+<span class="gp">#</span> ssh root@10.1.11.4
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The node cannot access the internet without additional configuration.</p>
+</div>
+</li>
+</ol>
+<div class="section" id="id3">
+<h3>Configure network interfaces<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<ol class="arabic">
+<li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth0</em>. Do not touch the
+HWADDR line, as this is determined by the system:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label management</span>
+<span class="na">DEVICE</span><span class="o">=</span><span class="s">eth0</span>
+<span class="na">BOOTPROTO</span><span class="o">=</span><span class="s">static</span>
+<span class="na">HWADDR</span><span class="o">=</span><span class="s">bc:76:4e:18:03:b8</span>
+<span class="na">IPADDR</span><span class="o">=</span><span class="s">10.1.11.31</span>
+<span class="na">NETMASK</span><span class="o">=</span><span class="s">255.255.255.0</span>
+<span class="na">GATEWAY</span><span class="o">=</span><span class="s">10.1.11.1</span>
+<span class="na">ONBOOT</span><span class="o">=</span><span class="s">yes</span>
+<span class="na">NM_CONTROLLED</span><span class="o">=</span><span class="s">no</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth1</em>. Do not touch the
+HWADDR line, as this is determined by the system:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label internal</span>
+<span class="na">DEVICE</span><span class="o">=</span><span class="s">eth1</span>
+<span class="na">BOOTPROTO</span><span class="o">=</span><span class="s">static</span>
+<span class="na">HWADDR</span><span class="o">=</span><span class="s">bc:76:4e:18:03:b8</span>
+<span class="na">IPADDR</span><span class="o">=</span><span class="s">10.1.12.41</span>
+<span class="na">NETMASK</span><span class="o">=</span><span class="s">255.255.255.0</span>
+<span class="na">ONBOOT</span><span class="o">=</span><span class="s">yes</span>
+<span class="na">NM_CONTROLLED</span><span class="o">=</span><span class="s">no</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the <em>/etc/hosts</em> file:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>10.1.11.11  controller
+10.1.11.21  compute
+10.1.11.31  block
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Comment out or remove any existing lines containing <em>block</em>.</p>
+</div>
+</li>
+<li><p class="first">Edit <em>/etc/resolv.conf</em> and add the Google DNS servers:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>nameserver 8.8.8.8
+nameserver 8.8.4.4
+</pre></div>
+</div>
+</li>
+<li><p class="first">Reboot the node:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot now
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3>Test and update<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<ol class="arabic">
+<li><p class="first">Access the node from the network services node using the new IP
+address on the <strong>management</strong> network:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh root@10.1.11.31
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test network connectivity to the internet by pinging openstack.org:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ping openstack.org
+<span class="go">PING openstack.org (162.242.140.107) 56(84) bytes of data.</span>
+<span class="go">64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms</span>
+<span class="go">64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Update the node:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum update -y
+</pre></div>
+</div>
+</li>
+<li><p class="first">If performing pre-release testing, install the repository for the relevant
+release candidate:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+</pre></div>
+</div>
+</li>
+<li><p class="first">Reboot the node:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot now
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="create-block-storage-volume-block1">
+<h3>Create block storage volume (block1)<a class="headerlink" href="#create-block-storage-volume-block1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li>In the Rackspace Cloud Control Panel, select
+<span class="guilabel">Block Storage Volumes</span> in the <span class="guilabel">Storage</span> tab, and
+create the following volume named <strong>block1</strong>:<ul>
+<li>Standard (SATA) 75GB</li>
+</ul>
+</li>
+<li>Attach the volume to the block server.</li>
+<li>After the device is attached, note the device name. For example,
+<cite>/dev/xvdb</cite>. Use this value when setting up block storage for OpenStack.</li>
+</ol>
+</div>
+</div>
 <div class="section" id="install-and-configure-openstack-services">
 <h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
 <p>Use the <a class="reference external" href="http://docs.openstack.org/project-install-guide/draft/">Draft OpenStack Installation Guides</a> with the
 following changes:</p>
-<ul>
-<li><p class="first">Configuring the basic environment on all nodes:</p>
 <ul class="simple">
+<li>Configuring the basic environment on all nodes:<ul>
 <li>Skip the network configuration sections.</li>
-<li>In <em>/etc/chrony.conf</em> on the network servics node,
+<li>In <em>/etc/chrony.conf</em> on the network services node,
 set <code class="docutils literal"><span class="pre">allow</span> <span class="pre">10.1.11.0/24</span></code>.</li>
 <li>Set 10.1.11.1 (network services node) as the NTP server for the controller
 and compute nodes.</li>
 </ul>
 </li>
-<li><p class="first">Configuring the Compute service on the compute node:</p>
-<ul class="simple">
+<li>Configuring the Compute service on the compute node:<ul>
 <li>Use <em>qemu</em> instead of <em>kvm</em> virtualization.</li>
 </ul>
-</li>
-<li><p class="first">Configuring the Networking service on the network node:</p>
-<ul class="simple">
-<li>Add the <em>vxlan1</em> interface as a port on the <em>br-ex</em> bridge.</li>
-</ul>
-</li>
-<li><p class="first">Creating initial networks.</p>
-<ul>
-<li><p class="first">Use the following command for the subnet on the external network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> neutron subnet-create ext-net --name ext-subnet <span class="se">\</span>
-<span class="go">--allocation-pool start=10.1.13.101,end=10.1.13.200 \</span>
-<span class="go">--disable-dhcp --gateway 10.1.13.1 10.1.13.0/24</span>
-</pre></div>
-</div>
-</li>
-</ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">After performing the initial tenant network creation procedure,
-try pinging 10.1.13.101 from the network services node.</p>
-</div>
 </li>
 </ul>
 </div>

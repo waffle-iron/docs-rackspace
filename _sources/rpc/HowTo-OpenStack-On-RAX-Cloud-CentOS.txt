@@ -15,7 +15,7 @@ provides internet connectivity to instances in the environment.
 Overview
 ~~~~~~~~
 
-- Prepare the Rackspac cloud environment.
+- Prepare the Rackspace cloud environment.
 - Build and configure network services (jump/firewall) node.
 - Build and configure OpenStack nodes.
 - Install and configure OpenStack services with minor modifications to
@@ -43,23 +43,23 @@ Networks
 In the Rackspace Cloud Control Panel, select :guilabel:`Networks` in the
 :guilabel:`Networking` tab, and create the following networks:
 
-#. net-osmgmt1
+#. management
 
    - 10.1.11.0/24
 
-#. net-osint1
+#. internal
 
    - 10.1.12.0/24
 
-#. net-osext1
+#. external
 
    - 10.1.13.0/24
 
 
-Network services node (hst-ns1)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Network services node (network-services)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Create a cloud server named hst-ns1.
+#. Create a cloud server named **network-services**.
 
    - OS: CentOS 7 (PVHVM)
    - Flavor: 1 GB General Purpose v1
@@ -100,16 +100,16 @@ Network services node (hst-ns1)
 Configure additional network interfaces
 ---------------------------------------
 
-#. In the cloud control panel, add the *net-osmgmt1* network to the node.
+#. In the cloud control panel, add the **management** network to the node.
 
-#. In the cloud control panel, add the *net-osext1* network to the node.
+#. In the cloud control panel, add the **external** network to the node.
 
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth2*. Do not touch the
    HWADDR line, as this is determined by the system:
 
    .. code-block:: ini
 
-      # Label net-osmgmt1
+      # Label management
       DEVICE=eth2
       BOOTPROTO=static
       HWADDR=bc:76:4e:18:03:b8
@@ -123,7 +123,7 @@ Configure additional network interfaces
 
    .. code-block:: ini
 
-      # Label net-osext1
+      # Label external
       DEVICE=eth3
       BOOTPROTO=static
       HWADDR=bc:76:4e:18:03:c2
@@ -252,24 +252,24 @@ Configure the firewall service
       # ssh-keygen -t rsa -b 2048 -C "ns1" -P "" -f .ssh/id_rsa
 
 
-OpenStack controller node (hst-os1ctl1)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OpenStack controller node (controller)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Create a cloud server named hst-os1ctl1, removing all networks except the
-   **net-osmgmt1** network:
+#. Create a cloud server named **controller**, removing all networks except the
+   **management** network:
 
    - OS: CentOS 7 (PVHVM)
    - Flavor: 4 GB General Purpose v1
-   - Networks: net-osmgmt1
+   - Networks: management
 
-#. In the cloud control panel, add the *net-osint1* network to the
+#. In the cloud control panel, add the **internal** network to the
    node.
 
-#. In the cloud control panel, add the *net-osext1* network to the
+#. In the cloud control panel, add the **external** network to the
    node.
 
-#. Access the node from the network services node (hst-ns1) using the IP
-   address assigned by Rackspace on the *net-osmgmt1* network:
+#. Access the node from the **network services** node using the IP
+   address assigned by Rackspace on the **management** network:
 
    .. code-block:: console
 
@@ -288,7 +288,7 @@ Configure network interfaces
 
    .. code-block:: ini
 
-      # Label net-osmgmt1
+      # Label management
       DEVICE=eth0
       BOOTPROTO=static
       HWADDR=bc:76:4e:18:03:b8
@@ -303,7 +303,7 @@ Configure network interfaces
 
    .. code-block:: ini
 
-      # Label net-osint1
+      # Label internal
       DEVICE=eth1
       BOOTPROTO=static
       HWADDR=bc:76:4e:18:03:b8
@@ -317,7 +317,7 @@ Configure network interfaces
 
    .. code-block:: ini
 
-      # Label net-osext1
+      # Label external
       DEVICE=eth2
       BOOTPROTO=static
       HWADDR=bc:76:4e:18:03:c2
@@ -348,15 +348,13 @@ Configure network interfaces
 
    .. code-block:: text
 
-      # hst-os1ctl1
-      10.1.11.11  hst-os1ctl1
-
-      # hst-os1cpu1
-      10.1.11.21  hst-os1cpu1
+      10.1.11.11  controller
+      10.1.11.21  compute
+      10.1.11.31  block
 
    .. note::
 
-      Comment out or remove any existing lines containing *hst-os1ctl1*.
+      Comment out or remove any existing lines containing **controller**.
 
 #. Edit */etc/resolv.conf* and add the Google DNS servers:
 
@@ -364,6 +362,13 @@ Configure network interfaces
 
       nameserver 8.8.8.8
       nameserver 8.8.4.4
+
+#. Stop and disable firewalld to prevent access problems by other nodes:
+
+   .. code-block:: console
+
+      # systemctl stop firewalld
+      # systemctl disable firewalld
 
 #. Reboot the node:
 
@@ -375,7 +380,7 @@ Test and update
 ---------------
 
 #. Access the node from the network services node using the new IP
-   address on the *net-osmgmt1* network:
+   address on the **management** network:
 
    .. code-block:: console
 
@@ -397,6 +402,13 @@ Test and update
 
       # yum update -y
 
+#. If performing pre-release testing, install the repository for the relevant
+   release candidate:
+
+   .. code-block:: console
+
+      # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+
 #. Reboot the node:
 
    .. code-block:: console
@@ -404,22 +416,22 @@ Test and update
       # reboot now
 
 
-OpenStack compute node (hst-os1cpu1)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OpenStack compute node (compute)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Create a cloud server, removing all networks except the *net-osmgmt1*
+#. Create a cloud server, removing all networks except the **management**
    network:
 
    - OS: CentOS 7 (PVHVM)
    - 4 GB General Purpose v1 (supports several CirrOS instances)
    - 8 GB General Purpose v1 (supports a couple of Ubuntu/Fedora instances)
-   - Networks: net-osmgmt1
+   - Networks: management
 
-#. In the cloud control panel, add the *net-osint1* network to the
+#. In the cloud control panel, add the **internal** network to the
    node.
 
 #. Access the node from the network services node using the IP address
-   assigned by Rackspace on the *net-osmgmt1* network:
+   assigned by Rackspace on the **management** network:
 
    .. code-block:: console
 
@@ -438,7 +450,7 @@ Configure network interfaces
 
    .. code-block:: ini
 
-      # Label net-osmgmt1
+      # Label management
       DEVICE=eth0
       BOOTPROTO=static
       HWADDR=bc:76:4e:18:03:b8
@@ -453,7 +465,7 @@ Configure network interfaces
 
    .. code-block:: ini
 
-      # Label net-osint1
+      # Label internal
       DEVICE=eth1
       BOOTPROTO=static
       HWADDR=bc:76:4e:18:03:b8
@@ -466,15 +478,13 @@ Configure network interfaces
 
    .. code-block:: text
 
-      # hst-os1ctl1
-      10.1.11.11  hst-os1ctl1
-
-      # hst-os1cpu1
-      10.1.11.21  hst-os1cpu1
+      10.1.11.11  controller
+      10.1.11.21  compute
+      10.1.11.31  block
 
    .. note::
 
-      Comment out or remove any existing lines containing *hst-os1cpu1*.
+      Comment out or remove any existing lines containing **compute**.
 
 #. Edit */etc/resolv.conf* and add the Google DNS servers:
 
@@ -493,7 +503,7 @@ Test and update
 ---------------
 
 #. Access the node from the network services node using the new IP
-   address on the *net-osmgmt1* network:
+   address on the **management** network:
 
    .. code-block:: console
 
@@ -515,11 +525,154 @@ Test and update
 
       # yum update -y
 
+#. If performing pre-release testing, install the repository for the relevant
+   release candidate:
+
+   .. code-block:: console
+
+      # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+
 #. Reboot the node: console
 
    .. code-block:: console
 
       # reboot now
+
+
+OpenStack block storage node (block)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Create a cloud server, removing all networks except the **management**
+   network:
+
+   - OS: CentOS 7 (PVHVM)
+   - 4 GB General Purpose v1
+   - Networks: management
+
+#. In the cloud control panel, add the **internal** network to the
+   node.
+
+#. Access the node from the network services node using the IP address
+   assigned by Rackspace on the **management** network:
+
+   .. code-block:: console
+
+      # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.4
+      # ssh root@10.1.11.4
+
+   .. note::
+
+      The node cannot access the internet without additional configuration.
+
+Configure network interfaces
+----------------------------
+
+#. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
+   HWADDR line, as this is determined by the system:
+
+   .. code-block:: ini
+
+      # Label management
+      DEVICE=eth0
+      BOOTPROTO=static
+      HWADDR=bc:76:4e:18:03:b8
+      IPADDR=10.1.11.31
+      NETMASK=255.255.255.0
+      GATEWAY=10.1.11.1
+      ONBOOT=yes
+      NM_CONTROLLED=no
+
+#. Edit */etc/sysconfig/network-scripts/ifcfg-eth1*. Do not touch the
+   HWADDR line, as this is determined by the system:
+
+   .. code-block:: ini
+
+      # Label internal
+      DEVICE=eth1
+      BOOTPROTO=static
+      HWADDR=bc:76:4e:18:03:b8
+      IPADDR=10.1.12.41
+      NETMASK=255.255.255.0
+      ONBOOT=yes
+      NM_CONTROLLED=no
+
+#. Edit the */etc/hosts* file:
+
+   .. code-block:: text
+
+      10.1.11.11  controller
+      10.1.11.21  compute
+      10.1.11.31  block
+
+   .. note::
+
+      Comment out or remove any existing lines containing *block*.
+
+#. Edit */etc/resolv.conf* and add the Google DNS servers:
+
+   .. code-block:: text
+
+      nameserver 8.8.8.8
+      nameserver 8.8.4.4
+
+#. Reboot the node:
+
+   .. code-block:: console
+
+      # reboot now
+
+Test and update
+---------------
+
+#. Access the node from the network services node using the new IP
+   address on the **management** network:
+
+   .. code-block:: console
+
+      # ssh root@10.1.11.31
+
+#. Test network connectivity to the internet by pinging openstack.org:
+
+   .. code-block:: console
+
+      # ping openstack.org
+      PING openstack.org (162.242.140.107) 56(84) bytes of data.
+      64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms
+      64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
+      ...
+
+#. Update the node:
+
+   .. code-block:: console
+
+      # yum update -y
+
+#. If performing pre-release testing, install the repository for the relevant
+   release candidate:
+
+   .. code-block:: console
+
+      # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+
+#. Reboot the node:
+
+   .. code-block:: console
+
+      # reboot now
+
+Create block storage volume (block1)
+------------------------------------
+
+#. In the Rackspace Cloud Control Panel, select
+   :guilabel:`Block Storage Volumes` in the :guilabel:`Storage` tab, and
+   create the following volume named **block1**:
+
+   - Standard (SATA) 75GB
+
+#. Attach the volume to the block server.
+
+#. After the device is attached, note the device name. For example,
+   `/dev/xvdb`. Use this value when setting up block storage for OpenStack.
 
 
 Install and configure OpenStack services
@@ -532,7 +685,7 @@ following changes:
 - Configuring the basic environment on all nodes:
 
   - Skip the network configuration sections.
-  - In */etc/chrony.conf* on the network servics node,
+  - In */etc/chrony.conf* on the network services node,
     set ``allow 10.1.11.0/24``.
   - Set 10.1.11.1 (network services node) as the NTP server for the controller
     and compute nodes.
@@ -541,21 +694,29 @@ following changes:
 
   - Use *qemu* instead of *kvm* virtualization.
 
-- Configuring the Networking service on the network node:
+.. Not sure the following are required
 
-  - Add the *vxlan1* interface as a port on the *br-ex* bridge.
+   - Configuring the Networking service on the network node:
 
-- Creating initial networks.
+      - Add the *vxlan1* interface as a port on the *br-ex* bridge.
 
-  - Use the following command for the subnet on the external network:
+   - Creating initial networks.
 
-    .. code-block:: console
+      - Use the following command for the subnet on the external network:
 
-       $ neutron subnet-create ext-net --name ext-subnet \
-       --allocation-pool start=10.1.13.101,end=10.1.13.200 \
-       --disable-dhcp --gateway 10.1.13.1 10.1.13.0/24
+      .. code-block:: console
 
-  .. note::
+         $ neutron subnet-create ext-net --name ext-subnet \
+         --allocation-pool start=10.1.13.101,end=10.1.13.200 \
+         --disable-dhcp --gateway 10.1.13.1 10.1.13.0/24
 
-     After performing the initial tenant network creation procedure,
-     try pinging 10.1.13.101 from the network services node.
+.. or maybe something like
+
+   neutron subnet-create --name provider \
+   --allocation-pool start=10.1.13.101,end=10.1.13.200 --disable-dhcp \
+   --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
+
+   .. note::
+
+      After performing the initial tenant network creation procedure,
+      try pinging 10.1.13.101 from the network services node.
