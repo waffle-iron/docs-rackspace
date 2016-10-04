@@ -77,7 +77,7 @@ Network services node (network-services)
 
    .. code-block:: console
 
-      $ ssh root@<hst-ns1_IP_ADDRESS>
+      $ ssh root@<IP_ADDRESS>
 
 #. Update the node.
 
@@ -235,6 +235,14 @@ Configure the firewall service
       nameserver 8.8.8.8
       nameserver 8.8.4.4
 
+#. Edit the */etc/hosts* file:
+
+   .. code-block:: text
+
+      10.1.11.11  controller
+      10.1.11.21  compute
+      10.1.11.31  block
+
 #. Test network connectivity to the internet by pinging openstack.org:
 
    .. code-block:: console
@@ -384,7 +392,7 @@ Test and update
 
    .. code-block:: console
 
-      # ssh root@10.1.11.11
+      # ssh controller
 
 #. Test network connectivity to the internet by pinging openstack.org:
 
@@ -507,7 +515,7 @@ Test and update
 
    .. code-block:: console
 
-      # ssh root@10.1.11.21
+      # ssh compute
 
 #. Test network connectivity to the internet by pinging openstack.org:
 
@@ -629,7 +637,7 @@ Test and update
 
    .. code-block:: console
 
-      # ssh root@10.1.11.31
+      # ssh block
 
 #. Test network connectivity to the internet by pinging openstack.org:
 
