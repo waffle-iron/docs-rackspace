@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
         <link rel="up" title="RPC team documentation" href="index.html"/>
         <link rel="next" title="How-To: OpenStack on RAX Ubuntu Cloud Servers" href="HowTo-OpenStack-On-RAX-Cloud-Ubuntu.html"/>
@@ -244,7 +247,7 @@ configuration erases changes made in this guide.</p>
 </li>
 <li><p class="first">Access the node from a terminal using the IP address assigned by
 Rackspace.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ssh root@&lt;hst-ns1_IP_ADDRESS&gt;
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ssh root@&lt;IP_ADDRESS&gt;
 </pre></div>
 </div>
 </li>
@@ -390,6 +393,13 @@ nameserver 8.8.4.4
 </pre></div>
 </div>
 </li>
+<li><p class="first">Edit the <em>/etc/hosts</em> file:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>10.1.11.11  controller
+10.1.11.21  compute
+10.1.11.31  block
+</pre></div>
+</div>
+</li>
 <li><p class="first">Test network connectivity to the internet by pinging openstack.org:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ping openstack.org
 <span class="go">PING openstack.org (162.242.140.107) 56(84) bytes of data.</span>
@@ -529,7 +539,7 @@ nameserver 8.8.4.4
 <ol class="arabic">
 <li><p class="first">Access the node from the network services node using the new IP
 address on the <strong>management</strong> network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh root@10.1.11.11
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh controller
 </pre></div>
 </div>
 </li>
@@ -647,7 +657,7 @@ nameserver 8.8.4.4
 <ol class="arabic">
 <li><p class="first">Access the node from the network services node using the new IP
 address on the <strong>management</strong> network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh root@10.1.11.21
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh compute
 </pre></div>
 </div>
 </li>
@@ -764,7 +774,7 @@ nameserver 8.8.4.4
 <ol class="arabic">
 <li><p class="first">Access the node from the network services node using the new IP
 address on the <strong>management</strong> network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh root@10.1.11.31
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh block
 </pre></div>
 </div>
 </li>
