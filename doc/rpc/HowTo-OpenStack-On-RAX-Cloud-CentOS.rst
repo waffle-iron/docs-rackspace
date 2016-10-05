@@ -267,8 +267,10 @@ OpenStack controller node (controller)
    **management** network:
 
    - OS: CentOS 7 (PVHVM)
-   - Flavor: 4 GB General Purpose v1
+   - Flavor: 8 GB General Purpose v1 (you can use 4GB, but you may need to
+     restart to clear system memory during the OpenStack installation process)
    - Networks: management
+
 
 #. In the cloud control panel, add the **internal** network to the
    node.
