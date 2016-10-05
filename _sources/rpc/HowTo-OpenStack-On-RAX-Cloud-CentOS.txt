@@ -677,7 +677,7 @@ Create block storage volume (block1)
 
    - Standard (SATA) 75GB
 
-#. Attach the volume to the block server.
+#. Attach the volume to the **block** server.
 
 #. After the device is attached, note the device name. For example,
    `/dev/xvdb`. Use this value when setting up block storage for OpenStack.
@@ -695,12 +695,21 @@ following changes:
   - Skip the network configuration sections.
   - In */etc/chrony.conf* on the network services node,
     set ``allow 10.1.11.0/24``.
-  - Set 10.1.11.1 (network services node) as the NTP server for the controller
-    and compute nodes.
+  - Set 10.1.11.1 (network services node) as the NTP server for the controller,
+    compute, and block nodes.
+  - If chronyd is running on the nodes already, you must ``restart`` them
+    rather than ``start`` them. Restart the network services chronyd first,
+    then restart chronyd on the other nodes.
+
 
 - Configuring the Compute service on the compute node:
 
   - Use *qemu* instead of *kvm* virtualization.
+
+- Configuring networking:
+
+  - on the *controller*, use ``physical_interface_mappings = provider:eth2``
+  - on the *compute* node, use ``physical_interface_mappings = provider:eth0``
 
 .. Not sure the following are required
 

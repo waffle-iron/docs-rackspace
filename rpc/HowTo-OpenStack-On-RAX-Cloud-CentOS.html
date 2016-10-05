@@ -814,7 +814,7 @@ create the following volume named <strong>block1</strong>:<ul>
 <li>Standard (SATA) 75GB</li>
 </ul>
 </li>
-<li>Attach the volume to the block server.</li>
+<li>Attach the volume to the <strong>block</strong> server.</li>
 <li>After the device is attached, note the device name. For example,
 <cite>/dev/xvdb</cite>. Use this value when setting up block storage for OpenStack.</li>
 </ol>
@@ -829,12 +829,20 @@ following changes:</p>
 <li>Skip the network configuration sections.</li>
 <li>In <em>/etc/chrony.conf</em> on the network services node,
 set <code class="docutils literal"><span class="pre">allow</span> <span class="pre">10.1.11.0/24</span></code>.</li>
-<li>Set 10.1.11.1 (network services node) as the NTP server for the controller
-and compute nodes.</li>
+<li>Set 10.1.11.1 (network services node) as the NTP server for the controller,
+compute, and block nodes.</li>
+<li>If chronyd is running on the nodes already, you must <code class="docutils literal"><span class="pre">restart</span></code> them
+rather than <code class="docutils literal"><span class="pre">start</span></code> them. Restart the network services chronyd first,
+then restart chronyd on the other nodes.</li>
 </ul>
 </li>
 <li>Configuring the Compute service on the compute node:<ul>
 <li>Use <em>qemu</em> instead of <em>kvm</em> virtualization.</li>
+</ul>
+</li>
+<li>Configuring networking:<ul>
+<li>on the <em>controller</em>, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:eth2</span></code></li>
+<li>on the <em>compute</em> node, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:eth0</span></code></li>
 </ul>
 </li>
 </ul>
