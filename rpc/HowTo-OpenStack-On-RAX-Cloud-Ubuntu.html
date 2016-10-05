@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>How-To: OpenStack on RAX Ubuntu Cloud Servers &mdash; Rackspace Documentation Guides  documentation</title>
+  <title>How-To: OpenStack on Rackspace Ubuntu Cloud Servers &mdash; Rackspace Documentation Guides  documentation</title>
   
 
   
@@ -88,7 +88,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">RPC team documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-CentOS.html">How-To: OpenStack on RAX CentOS Cloud Servers</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">How-To: OpenStack on RAX Ubuntu Cloud Servers</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How-To: OpenStack on Rackspace Ubuntu Cloud Servers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#network-architecture">Network architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prepare-cloud-environment">Prepare cloud environment</a><ul>
@@ -97,9 +97,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#launch-servers">Launch servers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#network-services-node-hst-ns1">Network services node (hst-ns1)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#openstack-controller-node-hst-os1ctl1">OpenStack controller node (hst-os1ctl1)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#openstack-compute-node-hst-os1cpu1">OpenStack compute node (hst-os1cpu1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#network-services-node-network-services">Network services node (network-services)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openstack-controller-node-controller">OpenStack controller node (controller)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openstack-compute-node-compute">OpenStack compute node (compute)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#install-and-configure-openstack-services">Install and configure OpenStack services</a></li>
@@ -146,7 +146,7 @@
       
           <li><a href="index.html">RPC team documentation</a> &raquo;</li>
       
-    <li>How-To: OpenStack on RAX Ubuntu Cloud Servers</li>
+    <li>How-To: OpenStack on Rackspace Ubuntu Cloud Servers</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -160,10 +160,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-to-openstack-on-rax-ubuntu-cloud-servers">
-<h1>How-To: OpenStack on RAX Ubuntu Cloud Servers<a class="headerlink" href="#how-to-openstack-on-rax-ubuntu-cloud-servers" title="Permalink to this headline">#</a></h1>
+  <div class="section" id="how-to-openstack-on-rackspace-ubuntu-cloud-servers">
+<h1>How-To: OpenStack on Rackspace Ubuntu Cloud Servers<a class="headerlink" href="#how-to-openstack-on-rackspace-ubuntu-cloud-servers" title="Permalink to this headline">#</a></h1>
 <p>This how-to provides instructions for building the prerequisite
-infrastructure for installing multi-host OpenStack environments on RAX
+infrastructure for installing multi-host OpenStack environments on Rackspace
 cloud servers using the official OpenStack installation guide.</p>
 <p>The infrastructure contains two OpenStack nodes operating on private
 (tenant) networks managed by a network services (jump/firewall) node.
@@ -214,8 +214,8 @@ the official installation guide.</li>
 </div>
 <div class="section" id="launch-servers">
 <h2>Launch servers<a class="headerlink" href="#launch-servers" title="Permalink to this headline">#</a></h2>
-<div class="section" id="network-services-node-hst-ns1">
-<h3>Network services node (hst-ns1)<a class="headerlink" href="#network-services-node-hst-ns1" title="Permalink to this headline">#</a></h3>
+<div class="section" id="network-services-node-network-services">
+<h3>Network services node (network-services)<a class="headerlink" href="#network-services-node-network-services" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Create a cloud server.</p>
 <p>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
@@ -258,7 +258,7 @@ Rackspace.</p>
 auto eth2
 iface eth2 inet static
 address 10.1.11.1
-netmask 255.255.255.0
+netmask 255.255.255.
 
 # Label net-osext1
 auto eth3
@@ -363,20 +363,35 @@ os1t ipv4
 node is rebooted.</p>
 </div>
 </li>
+<li><p class="first">Test network connectivity to the internet by pinging openstack.org:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ping openstack.org
+<span class="go">PING openstack.org (162.242.140.107) 56(84) bytes of data.</span>
+<span class="go">64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms</span>
+<span class="go">64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Generate an ssh key for accessing other nodes:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-keygen -t rsa -b <span class="m">2048</span> -C <span class="s2">&quot;ns1&quot;</span> -P <span class="s2">&quot;&quot;</span> -f .ssh/id_rsa
+</pre></div>
+</div>
+</li>
 </ol>
 </div>
-<div class="section" id="openstack-controller-node-hst-os1ctl1">
-<h3>OpenStack controller node (hst-os1ctl1)<a class="headerlink" href="#openstack-controller-node-hst-os1ctl1" title="Permalink to this headline">#</a></h3>
+<div class="section" id="openstack-controller-node-controller">
+<h3>OpenStack controller node (controller)<a class="headerlink" href="#openstack-controller-node-controller" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <em>net-osmgmt1</em>
 network:</p>
 <p>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
 Flavor: 4 GB General Purpose v1
-Networks: net-osmgmt1</p>
+Network: net-osmgmt1</p>
 </li>
-<li><p class="first">Access the node from the network services node (hst-ns1) using the IP
-address assigned by RAX on the <em>net-osmgmt1</em> network.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@&lt;hst-os1ctl1_IP_ADDRESS&gt;</span>
+<li><p class="first">Access the node from the network services node (network-services) using the
+IP address assigned by Rackspace on the <em>net-osmgmt1</em> network:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@&lt;controller_IP_ADDRESS&gt;
+<span class="gp">#</span> ssh root@&lt;controller_IP_ADDRESS&gt;
 </pre></div>
 </div>
 <div class="admonition note">
@@ -429,16 +444,16 @@ iface vxlan1 inet static
 </div></blockquote>
 <ol class="arabic">
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/hosts</span></code> file.</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span># hst-os1ctl1
-10.1.11.11 hst-os1ctl1
+<div class="highlight-text"><div class="highlight"><pre><span></span># controller
+10.1.11.11 controller
 
-# hst-os1cpu1
-10.1.11.21 hst-os1cpu1
+# compute
+10.1.11.21 compute
 
 .. note::
 
   Comment out or remove any existing lines containing
-  *hst-os1ctl1*.
+  *controller*.
 </pre></div>
 </div>
 </li>
@@ -464,8 +479,8 @@ address on the <em>net-osmgmt1</em> network.</p>
 </li>
 </ol>
 </div>
-<div class="section" id="openstack-compute-node-hst-os1cpu1">
-<h3>OpenStack compute node (hst-os1cpu1)<a class="headerlink" href="#openstack-compute-node-hst-os1cpu1" title="Permalink to this headline">#</a></h3>
+<div class="section" id="openstack-compute-node-compute">
+<h3>OpenStack compute node (compute)<a class="headerlink" href="#openstack-compute-node-compute" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <em>net-osmgmt1</em>
 network:</p>
@@ -473,11 +488,12 @@ network:</p>
 Flavor:
 * 3.75 GB Compute v1 (supports several CirrOS instances)
 * 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
-Networks: net-osmgmt1</p>
+Network: net-osmgmt1</p>
 </li>
-<li><p class="first">Access the node from the network services node using the IP address
-assigned by RAX on <em>net-osmgmt1</em> network.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@&lt;hst-os1cpu1_IP_ADDRESS&gt;</span>
+<li><p class="first">Access the node from the network services node (network-services) using the
+IP address assigned by RAX on <em>net-osmgmt1</em> network.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@&lt;compute_IP_ADDRESS&gt;
+<span class="gp">#</span> ssh root@&lt;compute_IP_ADDRESS&gt;
 </pre></div>
 </div>
 <div class="admonition note">
@@ -509,16 +525,16 @@ iface eth1 inet static
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/hosts</span></code> file.</p>
 <div class="highlight-text"><div class="highlight"><pre><span></span># hst-os1ctl1
-10.1.11.11 hst-os1ctl1
+10.1.11.11 controller
 
-# hst-os1cpu1
-10.1.11.21 hst-os1cpu1
+# compute
+10.1.11.21 compute
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Comment out or remove any existing lines containing
-<em>hst-os1cpu1</em>.</p>
+<em>compute</em>.</p>
 </div>
 </li>
 <li><p class="first">Reboot the node.</p>

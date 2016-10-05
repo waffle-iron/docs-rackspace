@@ -1,9 +1,9 @@
-=============================================
-How-To: OpenStack on RAX Ubuntu Cloud Servers
-=============================================
+===================================================
+How-To: OpenStack on Rackspace Ubuntu Cloud Servers
+===================================================
 
 This how-to provides instructions for building the prerequisite
-infrastructure for installing multi-host OpenStack environments on RAX
+infrastructure for installing multi-host OpenStack environments on Rackspace
 cloud servers using the official OpenStack installation guide.
 
 The infrastructure contains two OpenStack nodes operating on private
@@ -57,8 +57,8 @@ In the Rackspace Cloud Control Panel, select :guilabel:`Networks` in the
 Launch servers
 ~~~~~~~~~~~~~~
 
-Network services node (hst-ns1)
--------------------------------
+Network services node (network-services)
+----------------------------------------
 
 #. Create a cloud server.
 
@@ -108,7 +108,7 @@ Network services node (hst-ns1)
        auto eth2
        iface eth2 inet static
        address 10.1.11.1
-       netmask 255.255.255.0
+       netmask 255.255.255.
 
        # Label net-osext1
        auto eth3
@@ -222,7 +222,23 @@ Network services node (hst-ns1)
       Restart the firewall service whenever the network services
       node is rebooted.
 
-OpenStack controller node (hst-os1ctl1)
+#. Test network connectivity to the internet by pinging openstack.org:
+
+   .. code-block:: console
+
+      # ping openstack.org
+      PING openstack.org (162.242.140.107) 56(84) bytes of data.
+      64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms
+      64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
+      ...
+
+#. Generate an ssh key for accessing other nodes:
+
+   .. code-block:: console
+
+      # ssh-keygen -t rsa -b 2048 -C "ns1" -P "" -f .ssh/id_rsa
+
+OpenStack controller node (controller)
 ---------------------------------------
 
 #. Create a cloud server, removing all networks except the *net-osmgmt1*
@@ -230,14 +246,15 @@ OpenStack controller node (hst-os1ctl1)
 
    OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
    Flavor: 4 GB General Purpose v1
-   Networks: net-osmgmt1
+   Network: net-osmgmt1
 
-#. Access the node from the network services node (hst-ns1) using the IP
-   address assigned by RAX on the *net-osmgmt1* network.
+#. Access the node from the network services node (network-services) using the
+   IP address assigned by Rackspace on the *net-osmgmt1* network:
 
    .. code-block:: console
 
-      ssh root@<hst-os1ctl1_IP_ADDRESS>
+      # ssh-copy-id -i .ssh/id_rsa.pub root@<controller_IP_ADDRESS>
+      # ssh root@<controller_IP_ADDRESS>
 
    .. note::
 
@@ -288,16 +305,16 @@ OpenStack controller node (hst-os1ctl1)
 
     .. code-block:: text
 
-       # hst-os1ctl1
-       10.1.11.11 hst-os1ctl1
+       # controller
+       10.1.11.11 controller
 
-       # hst-os1cpu1
-       10.1.11.21 hst-os1cpu1
+       # compute
+       10.1.11.21 compute
 
        .. note::
 
          Comment out or remove any existing lines containing
-         *hst-os1ctl1*.
+         *controller*.
 
 #.  Reboot the node.
 
@@ -322,7 +339,7 @@ OpenStack controller node (hst-os1ctl1)
 
 #. Reboot the node.
 
-OpenStack compute node (hst-os1cpu1)
+OpenStack compute node (compute)
 ------------------------------------
 
 #. Create a cloud server, removing all networks except the *net-osmgmt1*
@@ -332,14 +349,15 @@ OpenStack compute node (hst-os1cpu1)
    Flavor:
    * 3.75 GB Compute v1 (supports several CirrOS instances)
    * 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
-   Networks: net-osmgmt1
+   Network: net-osmgmt1
 
-#. Access the node from the network services node using the IP address
-   assigned by RAX on *net-osmgmt1* network.
+#. Access the node from the network services node (network-services) using the
+   IP address assigned by RAX on *net-osmgmt1* network.
 
    .. code-block:: console
 
-      ssh root@<hst-os1cpu1_IP_ADDRESS>
+      # ssh-copy-id -i .ssh/id_rsa.pub root@<compute_IP_ADDRESS>
+      # ssh root@<compute_IP_ADDRESS>
 
    .. note::
 
@@ -373,15 +391,15 @@ OpenStack compute node (hst-os1cpu1)
    .. code-block:: text
 
       # hst-os1ctl1
-      10.1.11.11 hst-os1ctl1
+      10.1.11.11 controller
 
-      # hst-os1cpu1
-      10.1.11.21 hst-os1cpu1
+      # compute
+      10.1.11.21 compute
 
    .. note::
 
       Comment out or remove any existing lines containing
-      *hst-os1cpu1*.
+      *compute*.
 
 #. Reboot the node.
 
