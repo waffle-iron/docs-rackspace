@@ -267,8 +267,7 @@ OpenStack controller node (controller)
    **management** network:
 
    - OS: CentOS 7 (PVHVM)
-   - Flavor: 8 GB General Purpose v1 (you can use 4GB, but you may need to
-     restart to clear system memory during the OpenStack installation process)
+   - Flavor: 8 GB General Purpose v1
    - Networks: management
 
 
@@ -734,6 +733,8 @@ following changes:
    neutron subnet-create --name provider \
    --allocation-pool start=10.1.13.101,end=10.1.13.200 --disable-dhcp \
    --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
+
+   Might need to restart the *controller* node after this.
 
    .. note::
 
