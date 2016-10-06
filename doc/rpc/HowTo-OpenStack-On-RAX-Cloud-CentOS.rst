@@ -388,8 +388,7 @@ Configure network interfaces
 Test and update
 ---------------
 
-#. Access the node from the network services node using the new IP
-   address on the **management** network:
+#. Access the **controller** node from the network services node:
 
    .. code-block:: console
 
@@ -696,12 +695,15 @@ following changes:
   - Skip the network configuration sections.
   - In */etc/chrony.conf* on the network services node,
     set ``allow 10.1.11.0/24``.
-  - Set 10.1.11.1 (network services node) as the NTP server for the controller,
-    compute, and block nodes.
-  - If chronyd is running on the nodes already, you must ``restart`` them
-    rather than ``start`` them. Restart the network services chronyd first,
-    then restart chronyd on the other nodes.
+  - On the **controller**, **compute**, and **block** nodes:
 
+    - ``systemctl stop chronyd.service``
+    - Set 10.1.11.1 (network services node) as the NTP server in the
+      */etc/chrony.conf* file.
+    - ``systemctl start chronyd.service``
+
+  - Skip the repository set up on the **OpenStack Packages** page and go
+    directly to **Finalize the installation**.
 
 - Configuring the Compute service on the compute node:
 
@@ -711,32 +713,17 @@ following changes:
 
   - on the *controller*, use ``physical_interface_mappings = provider:eth2``
   - on the *compute* node, use ``physical_interface_mappings = provider:eth0``
-
-.. Not sure the following are required
-
-   - Configuring the Networking service on the network node:
-
-      - Add the *vxlan1* interface as a port on the *br-ex* bridge.
-
-   - Creating initial networks.
+  - Creating initial networks.
 
       - Use the following command for the subnet on the external network:
 
       .. code-block:: console
 
-         $ neutron subnet-create ext-net --name ext-subnet \
-         --allocation-pool start=10.1.13.101,end=10.1.13.200 \
-         --disable-dhcp --gateway 10.1.13.1 10.1.13.0/24
+         neutron subnet-create --name provider \
+         --allocation-pool start=10.1.13.101,end=10.1.13.200 --disable-dhcp \
+         --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
 
-.. or maybe something like
+  .. note::
 
-   neutron subnet-create --name provider \
-   --allocation-pool start=10.1.13.101,end=10.1.13.200 --disable-dhcp \
-   --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
-
-   Might need to restart the *controller* node after this.
-
-   .. note::
-
-      After performing the initial tenant network creation procedure,
-      try pinging 10.1.13.101 from the network services node.
+     After performing the initial tenant network creation procedure,
+     try pinging 10.1.13.101 from the network services node.
