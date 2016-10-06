@@ -537,8 +537,7 @@ nameserver 8.8.4.4
 <div class="section" id="test-and-update">
 <h3>Test and update<a class="headerlink" href="#test-and-update" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
-<li><p class="first">Access the node from the network services node using the new IP
-address on the <strong>management</strong> network:</p>
+<li><p class="first">Access the <strong>controller</strong> node from the network services node:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh controller
 </pre></div>
 </div>
@@ -824,26 +823,52 @@ create the following volume named <strong>block1</strong>:<ul>
 <h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
 <p>Use the <a class="reference external" href="http://docs.openstack.org/project-install-guide/draft/">Draft OpenStack Installation Guides</a> with the
 following changes:</p>
+<ul>
+<li><p class="first">Configuring the basic environment on all nodes:</p>
 <ul class="simple">
-<li>Configuring the basic environment on all nodes:<ul>
 <li>Skip the network configuration sections.</li>
 <li>In <em>/etc/chrony.conf</em> on the network services node,
 set <code class="docutils literal"><span class="pre">allow</span> <span class="pre">10.1.11.0/24</span></code>.</li>
-<li>Set 10.1.11.1 (network services node) as the NTP server for the controller,
-compute, and block nodes.</li>
-<li>If chronyd is running on the nodes already, you must <code class="docutils literal"><span class="pre">restart</span></code> them
-rather than <code class="docutils literal"><span class="pre">start</span></code> them. Restart the network services chronyd first,
-then restart chronyd on the other nodes.</li>
+<li>On the <strong>controller</strong>, <strong>compute</strong>, and <strong>block</strong> nodes:<ul>
+<li><code class="docutils literal"><span class="pre">systemctl</span> <span class="pre">stop</span> <span class="pre">chronyd.service</span></code></li>
+<li>Set 10.1.11.1 (network services node) as the NTP server in the
+<em>/etc/chrony.conf</em> file.</li>
+<li><code class="docutils literal"><span class="pre">systemctl</span> <span class="pre">start</span> <span class="pre">chronyd.service</span></code></li>
 </ul>
 </li>
-<li>Configuring the Compute service on the compute node:<ul>
+<li>Skip the repository set up on the <strong>OpenStack Packages</strong> page and go
+directly to <strong>Finalize the installation</strong>.</li>
+</ul>
+</li>
+<li><p class="first">Configuring the Compute service on the compute node:</p>
+<ul class="simple">
 <li>Use <em>qemu</em> instead of <em>kvm</em> virtualization.</li>
 </ul>
 </li>
-<li>Configuring networking:<ul>
-<li>on the <em>controller</em>, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:eth2</span></code></li>
-<li>on the <em>compute</em> node, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:eth0</span></code></li>
+<li><p class="first">Configuring networking:</p>
+<ul>
+<li><p class="first">on the <em>controller</em>, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:eth2</span></code></p>
+</li>
+<li><p class="first">on the <em>compute</em> node, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:eth0</span></code></p>
+</li>
+<li><p class="first">Creating initial networks.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Use the following command for the subnet on the external network:</li>
 </ul>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">neutron subnet-create --name provider \</span>
+<span class="go">--allocation-pool start=10.1.13.101,end=10.1.13.200 --disable-dhcp \</span>
+<span class="go">--dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">After performing the initial tenant network creation procedure,
+try pinging 10.1.13.101 from the network services node.</p>
+</div>
 </li>
 </ul>
 </div>
