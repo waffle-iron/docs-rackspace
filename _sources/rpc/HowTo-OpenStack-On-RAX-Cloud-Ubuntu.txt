@@ -245,7 +245,7 @@ OpenStack controller node (controller)
    network:
 
    OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
-   Flavor: 4 GB General Purpose v1
+   Flavor: 8 GB General Purpose v1
    Network: net-osmgmt1
 
 #. Access the node from the network services node (network-services) using the
