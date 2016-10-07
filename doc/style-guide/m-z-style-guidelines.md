@@ -277,6 +277,7 @@ Guideline | Example
 --- | ---
 Use a colon at the end of a sentence that introduces a list. If another sentence intervenes between the introductory sentence and the list, use a period instead of a colon. <br /><br /> **Note:** Use a sentence, rather than a fragment, to introduce a list. Fragments are difficult to translate and can be harder to comprehend than sentences, so avoid using them to introduce lists. | The following monitoring checks are available to users: <br /><br /> You can use this product to perform the following tasks: <br /><br /> You can use this product to perform the following tasks. You must extract objects from the database to complete these tasks.
 In steps, use a colon to introduce code that the user is expected to enter.	| Run the following command: <br /> `nova list`
+In a list item, if you need to separate an initial term or phrase from the information that follows it, use a colon. | **Public**: This setting allows any two servers with public IP addresses to be load balanced. These can be nodes outside of the Rackspace network, but if they are, standard bandwidth rates apply.
 Do not use a colon to end the introduction to a table, figure, or example. | The following figure shows an overview of Cloud Databases infrastructure. <br /><br /> In the following request example, `Content-Type` is set to `application/json`, but `application/xml` is requested in the `Accept` header. <br /><br /> Table 5.1 lists the endpoints to use for your Cloud Databases API calls.
 Do not use a colon at the end a table column header, a title, or a heading. | 3.2. Service Endpoints <br /><br /> To create a monitoring check <br /><br /> Table 3.1. Regionalized Service Endpoints <br /><br /> Example 4.4. List Versions Response: JSON
 <!--endtable-->
@@ -299,13 +300,9 @@ When a month, day, and year are embedded in a sentence, use a comma before and a
 <!--endtable-->
 
 ### Dashes
-An *em dash* is the longest dash. Use em dashes sparingly, and mostly in the following situations:
+An *em dash* is the longest dash. You can use em dashes to set off a long qualifier in the middle of a sentence if the use of commas would hinder readability. If you use em dashes for this purpose, do not use spaces around them.
 
-- In a list item, if you need to separate an initial term or phrase from the information that follows it, use an em dash with no spaces on either side of it.
-
-- You can use em dashes to set off a long qualifier in the middle of a sentence if the use of commas would hinder readability. If you do use em dashes for this purpose, do not use spaces around them.
-
-Do not use an em dash to separate a long sentence into two parts. Instead, create two sentences. In most cases, other forms of punctuation are more effective for clarity.
+Don't use an em dash to separate a long sentence into two parts. Instead, create two sentences.
 
 An *en dash* is longer than a hyphen and shorter than an em dash. Use an en dash for the following purposes:
 
@@ -899,7 +896,7 @@ Observe the following general guidelines when formatting text:
 
 - To apply a font treatment, use the appropriate markup in your authoring tool. In RST, use a directive if one is available. See the tables in this section for details.
 
-  **Note:** Apply directives only if the style sheet has been updated to support them. If they are not supported, apply formatting manually. 
+  **Note:** Apply directives only if the style sheet has been updated to support them. If they are not supported, apply formatting manually.
 
 - Do not apply font treatments to text elements in titles and headings.
 - Do not use capitalization to emphasize a term (for example, showing a general term in all capitals). Follow the capitalization that is normally used for a term, or follow the capitalization guidelines in the following table. For more information, see [Capitalization](../a-l-style-guidelines.html#capitalization).
