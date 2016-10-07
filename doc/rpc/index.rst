@@ -9,9 +9,8 @@ Non-product material for the RPC documentation team.
    :maxdepth: 1
 
    HowTo-BestPractices.rst
-   HowTo-OpenStack-For-RPC.rst
-   HowTo-OpenStack-On-RAX-Cloud-Fedora.rst
-   HowTo-OpenStack-On-RAX-Cloud.rst
+   HowTo-OpenStack-On-RAX-Cloud-CentOS.rst
+   HowTo-OpenStack-On-RAX-Cloud-Ubuntu.rst
    HowTo-OpenStack-On-RAX-Cloud-RR.rst
    HowTo-RPCDocs-With-A-Fork.rst
    HowTo-RPC-RAX-Cloud-Networks.rst
