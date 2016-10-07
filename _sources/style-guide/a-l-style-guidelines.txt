@@ -717,10 +717,10 @@ Begin the definition with a descriptive phrase. Capitalize the first letter of t
 
 How you begin the definition also depends on what part of speech the term is:
 
-- Noun&mdash;Begin with the appropriate article (a, an, or the) and a noun phrase.
-- Verb&mdash;Begin with the infinitive form of another verb that defines the term.
-- Adjective&mdash;Begin with a verb such as describes or pertains to.
-- Abbreviation&mdash;Begin with the spelled-out term.
+- Noun: Begin with the appropriate article (a, an, or the) and a noun phrase.
+- Verb: Begin with the infinitive form of another verb that defines the term.
+- Adjective: Begin with a verb such as describes or pertains to.
+- Abbreviation: Begin with the spelled-out term.
 
 The following table shows examples.
 
@@ -1070,25 +1070,25 @@ Use the following guidelines when writing list items:
 - Avoid using articles (*a*, *an*, *the*) to start list items.
 - When a list provides a series of terms or phrases and then more information about them, format the list as follows:
   - Show the term or phrase in bold. Using bold makes the list easier to scan.
-  - If you need to separate the initial term or phrase from the information that follows it, use an em dash with no spaces on either side of it. However, if you do not need a separator, don't use one. (For an example of a list in which em dash separators are not necessary, see the list at the top of this topic.)
+  - If you need to separate the initial term or phrase from the information that follows it, use a colon. However, if you do not need a separator, don't use one. (For an example of a list in which separators are not necessary, see the list at the top of this topic.)
 - Unless another order makes sense or is preferable, alphabetize list items.
 
 The following sections show examples of the indicated types of lists.
 
-#### All list items are sentences&mdash;example
+#### All list items are sentences, example
 When you create an isolated network, the following limitations apply:
 - The isolated network must exist in the same region as the server.
 - You can create up to three isolated networks with up to 64 servers attached to each one.
 - After you create an isolated network, you cannot rename it.
 
-#### All list items are fragments&mdash;example
+#### All list items are fragments, example
 The example creates a database instance called myrackinstance with the following characteristics:
 - 512 MB instance flavor
 - Volume size of 2 GB
 - Database named `sampledb` with a `utf8` character set and a `utf8_general_ci` collation
 - User named `simplestUser` with the password `password`
 
-#### All list items are imperative statements&mdash;example
+#### All list items are imperative statements, example
 You can use Cloud Backup to perform the following actions:
 - Select the files and folders from your server that you want to back up.
 - Run your backups manually or on a schedule.
@@ -1098,13 +1098,13 @@ You can use Cloud Backup to perform the following actions:
 - Save space with incremental backups that save only the changed portions of files.
 - Create unlimited backups.
 
-#### List items mix fragments and sentences&mdash;example
+#### List items mix fragments and sentences, example
 To run the examples in this guide, the following prerequisites are required:
 - Rackspace Cloud account. To sign up for a Rackspace Cloud account, go to the <u>Rackspace Public Cloud signup page</u>.
 - Rackspace user name and password that you specified during registration.
 
-#### List that provides terms and more information&mdash;example
+#### List that provides terms and more information, example
 You have the following choices for your virtual IP:
-- **Public**&mdash;This setting allows any two servers with public IP addresses to be load balanced. These can be nodes outside of the Rackspace network, but if they are, standard bandwidth rates apply.
-- **Shared Virtual IP**&mdash;Use this setting if you want to load-balance multiple services on different ports while using the same virtual IP address.
-- **Private Rackspace network**&mdash;This is the best option for load-balancing two Cloud Servers because it allows the load-balancing traffic to run on the Rackspace Cloud internal network, called ServiceNet. This option has two distinct advantages: the rate limit is double what the rate limit is on the public interface, and all traffic on the ServiceNet between Cloud Servers is not charged for bandwidth.
+- **Public**: This setting allows any two servers with public IP addresses to be load balanced. These can be nodes outside of the Rackspace network, but if they are, standard bandwidth rates apply.
+- **Shared Virtual IP**: Use this setting if you want to load-balance multiple services on different ports while using the same virtual IP address.
+- **Private Rackspace network**: This is the best option for load-balancing two Cloud Servers because it allows the load-balancing traffic to run on the Rackspace Cloud internal network, called ServiceNet. This option has two distinct advantages: the rate limit is double what the rate limit is on the public interface, and all traffic on the ServiceNet between Cloud Servers is not charged for bandwidth.
