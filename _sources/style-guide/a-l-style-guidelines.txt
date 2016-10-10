@@ -432,19 +432,19 @@ In examples of API authentication requests, and other examples where we are teac
    * - User name
      - *yourUserName* 
        $username
-     - dian4554
+     - robb4554
    * - Password
      - *yourPassword* 
        $password
-     - J$123bb\*
+     - J$12345\*
    * - API key
      - *yourApiKey* 
        $apikey
-     - kf938gf4915e114f7ff5448910ffe68c
+     - of938go4915e114f7ff5448910fee68c
    * - Authentication token
      - *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* 
        $token
-     - 2e356864f39831523c184fc646b1997b
+     - 2e356864f39831523c184fi646b1997b
 
 ```
 

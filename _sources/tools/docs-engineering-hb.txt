@@ -32,7 +32,7 @@ In this collaborative process, people like you that have domain expertise and pr
 
 ## Contributing to documentation
 
-When you contribute to the documentation, you use the Deconst documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. If you're a regular contributor or if you are coordinating the documentation work for your team, you'll find it helpful to [learn more about Deconst](#continuous-integration-and-delivery). 
+When you contribute to the documentation, you use the Deconst documentation platform created by the Developer Experience team to support continuous integration and delivery (CI/CD) of documentation. If you're a regular contributor or if you are coordinating the documentation work for your team, you'll find it helpful to [learn more about Deconst](#continuous-integration-and-delivery).
 
 How you contribute to documentation depends on what you are developing:
 
@@ -159,9 +159,9 @@ that convert content repositories in different formats
   that determine the branding, navigation,and HTML boilerplate elements for each page. Templates are applied at runtime when the content is served by the content service API.
 
 - Automated build and integrated testing services powered by
-  [Strider](https://www.npmjs.com/package/strider), a continuous integration server integrated with Deconst to prepare the content and submit it to the content service for storage and retrieval. 
+  [Strider](https://www.npmjs.com/package/strider), a continuous integration server integrated with Deconst to prepare the content and submit it to the content service for storage and retrieval.
 
-- Development and Staging environments that enable collaborative review and early Beta releases of documentation. Staging environments are automatically created and linked on each pull request. 
+- Development and Staging environments that enable collaborative review and early Beta releases of documentation. Staging environments are automatically created and linked on each pull request.
 
 ### Managing GitHub source repositories for documentation
 You can find the GitHub source repository for published documentation by clicking on the **Edit on GitHub** or **Submit an issue** link available on the website. Because some repositories are private, you might need help
@@ -195,7 +195,7 @@ Authors create content by writing and committing documentation source files writ
 For details, see [Authoring content for deconst](https://deconst.horse/writing-docs/author/).
 
 #### Coordinating a Deconst site
-Site coordinators assemble content from many sources into a single site by maintaing the following configuration files in the control repository for the Deconst instance:
+Site coordinators assemble content from many sources into a single site by maintaining the following configuration files in the control repository for the Deconst instance:
 - *[Content mapping](https://deconst.horse/writing-docs/coordinator/mapping/)files that specify the path where Deconst will display the content
 - *[Template mapping](https://deconst.horse/writing-docs/coordinator/templates/#mapping-templates-to-pages) files that specifies which template to apply to a content set or specific pages within a content set when the content is served.
 - *Redirect* files for maintaining link integrity when linked resources are moved or renamed.

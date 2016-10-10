@@ -162,13 +162,13 @@
 <p>The <strong>prebuild.py</strong> and <strong>postbuild.py</strong> scripts enable markdown table
 rendering when using Sphinx and the recommonmark extension.</p>
 <ol class="arabic simple">
-<li>Prebuild.py makes temporary copies of markdown files and converts markdown
-tables fenced by <code class="docutils literal"><span class="pre">&lt;!--table--&gt;</span> <span class="pre">&lt;!--endtable--&gt;</span></code> comment lines to RST
-tables fenced by <code class="docutils literal"><span class="pre">eval_rst</span></code> code blocks.</li>
+<li><strong>Prebuild.py</strong> makes temporary copies of markdown files and converts
+markdown tables fenced by <code class="docutils literal"><span class="pre">&lt;!--table--&gt;</span> <span class="pre">&lt;!--endtable--&gt;</span></code> comment lines to
+RST tables fenced by <code class="docutils literal"><span class="pre">eval_rst</span></code> code blocks.</li>
 <li>Sphinx builds HTML using the markdown files with the converted
 rst tables.</li>
-<li>Postbuild.py returns the markdown files to their original state and removes
-the temporary files created by prebuild.py.</li>
+<li><strong>Postbuild.py</strong> returns the markdown files to their original state and
+removes the temporary files created by <strong>prebuild.py</strong>.</li>
 </ol>
 <div class="section" id="formatting-markdown-tables">
 <h2>Formatting markdown tables<a class="headerlink" href="#formatting-markdown-tables" title="Permalink to this headline">#</a></h2>

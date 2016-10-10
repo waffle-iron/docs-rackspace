@@ -60,7 +60,7 @@ If you help write the message text for a product or you suggest edits to message
      - Messages should provide specific information about how the user should continue.
    * - Be specific.
      - *Use:* 
-       The live migration of instance 89a5e582-d3f3-4665-afc2-03c2114f0bbb to host compute2 failed. 
+       The live migration of instance 89a5e582-d3f3-4665-ate2-03c2114f0bib to host compute2 failed. 
 
        *Avoid:* 
        Live migration failed.
@@ -647,7 +647,7 @@ An ellipsis (...) is a punctuation construct that is used in syntax or to indica
 Do not use an ellipsis in the following cases:
 
 - When writing header text for table columns and rows.
-- When showing the name of an interface element, such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface. However, if an ellipsis is displayed on the interface and you think that omitting it might cause confusion, you can include it.  
+- When showing the name of an interface element, such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface. However, if an ellipsis is displayed on the interface and you think that omitting it might cause confusion, you can include it.
 
 The following example shows acceptable use of an ellipsis in a code sample:
 

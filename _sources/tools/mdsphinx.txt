@@ -5,15 +5,15 @@ Markdown to RST table conversion
 The **prebuild.py** and **postbuild.py** scripts enable markdown table
 rendering when using Sphinx and the recommonmark extension.
 
-#. Prebuild.py makes temporary copies of markdown files and converts markdown
-   tables fenced by ``<!--table--> <!--endtable-->`` comment lines to RST
-   tables fenced by ``eval_rst`` code blocks.
+#. **Prebuild.py** makes temporary copies of markdown files and converts
+   markdown tables fenced by ``<!--table--> <!--endtable-->`` comment lines to
+   RST tables fenced by ``eval_rst`` code blocks.
 
 #. Sphinx builds HTML using the markdown files with the converted
    rst tables.
 
-#. Postbuild.py returns the markdown files to their original state and removes
-   the temporary files created by prebuild.py.
+#. **Postbuild.py** returns the markdown files to their original state and
+   removes the temporary files created by **prebuild.py**.
 
 
 Formatting markdown tables
