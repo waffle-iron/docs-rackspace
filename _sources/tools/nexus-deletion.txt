@@ -7,9 +7,8 @@ In order to delete content from Nexus, follow these instructions.
 
 * You need an API key for the content service.
 * You can't be on the VPN (because it blocks port 9000).
-* It's helpful to have some kind of JSON formatter for your browser like [this
-  one for
-  Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa).
+* It's helpful to have some kind of JSON formatter for your browser like
+  [this one for Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa).
 * A [URL encoder](http://meyerweb.com/eric/tools/dencoder/) of some kind. I
   personally use [the escape-utils Atom
   package](https://atom.io/packages/escape-utils).
@@ -28,9 +27,8 @@ List content IDs that begin with a specific base by providing a URL-encoded
 [https://developer.rackspace.com:9000/content?prefix=https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud](https://developer.rackspace.com:9000/content?prefix=https%3A%2F%2Fgithub.com%2Frackerlabs%2Fdocs-dedicated-vcloud)
 
 Results are returned 100 at a time. You can paginate (awkwardly) by adding
-`&pageNumber=2` to the end of the URL. The full documentation is in [the
-content service
-README](https://github.com/deconst/content-service#get-contentprefixid_prefixpagenumbernumperpagesize).
+`&pageNumber=2` to the end of the URL. The full documentation is in
+[the content service README](https://github.com/deconst/content-service#get-contentprefixid_prefixpagenumbernumperpagesize).
 
 #### Deleting content
 

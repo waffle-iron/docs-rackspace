@@ -165,20 +165,29 @@
             
   <div class="section" id="contributing-to-the-rackspace-how-to-content-repository">
 <span id="contributing-to-the-rackspace-how-to-content-repository"></span><h1>Contributing to the Rackspace How-To content repository<a class="headerlink" href="#contributing-to-the-rackspace-how-to-content-repository" title="Permalink to this headline">#</a></h1>
-<p>This file describes the general process for maintaining source code for content published at <a class="reference external" href="https://support.rackspace.com/how-to/">https://support.rackspace.com/how-to/</a>.</p>
-<p>Content is grouped into one directory per product. Each directory contains one file per article.</p>
+<p>This file describes the general process for maintaining source code for content
+published at
+<a class="reference external" href="https://support.rackspace.com/how-to/">https://support.rackspace.com/how-to/</a>.</p>
+<p>Content is grouped into one directory per product. Each directory contains one
+file per article.</p>
 <div class="section" id="creating-and-changing-articles">
 <span id="creating-and-changing-articles"></span><h2>Creating and changing articles<a class="headerlink" href="#creating-and-changing-articles" title="Permalink to this headline">#</a></h2>
-<p>Use the following instructions to create a new article, make edits to an existing one, or suggest edits via an issue.</p>
+<p>Use the following instructions to create a new article, make edits to an
+existing one, or suggest edits via an issue.</p>
 <div class="section" id="create-an-article">
 <span id="create-an-article"></span><h3>Create an article<a class="headerlink" href="#create-an-article" title="Permalink to this headline">#</a></h3>
-<p>Follow these steps to create a new article within a product folder of the <strong>rackerlabs/rackspace-how-to</strong> repo.</p>
+<p>Follow these steps to create a new article within a product folder of the
+<strong>rackerlabs/rackspace-how-to</strong> repo.</p>
 <ol>
-<li><p class="first">Go to the <a class="reference external" href="https://github.com/rackerlabs/rackspace-how-to/tree/master/content">Rackspace How-to content folder</a> and click the product for which you want to create an article.</p>
+<li><p class="first">Go to the <a class="reference external" href="https://github.com/rackerlabs/rackspace-how-to/tree/master/content">Rackspace How-to content folder</a>
+and click the product for which you want to create an article.</p>
 </li>
 <li><p class="first">Click <strong>New file</strong>.</p>
 </li>
-<li><p class="first">Enter a name for your article in the text box at the end of the <strong>rackspace-how-to/content/<em>productName</em>/</strong> string. The name should be in the format <strong>your-article-name.md</strong> and should reflect the title of the article.</p>
+<li><p class="first">Enter a name for your article in the text box at the end of the
+<strong>rackspace-how-to/content/<em>productName</em>/</strong> string. The name should be in
+the format <strong>your-article-name.md</strong> and should reflect the title of the
+article.</p>
 </li>
 <li><p class="first">Enter header information using the format shown in the following example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>   <span class="o">---</span>
@@ -203,46 +212,66 @@
 </li>
 <li><p class="first">Write your article in Markdown.</p>
 </li>
-<li><p class="first">When you have finished writing your article, review it in the <em>Preview</em> tab.</p>
+<li><p class="first">When you have finished writing your article, review it in the <em>Preview</em>
+tab.</p>
 </li>
-<li><p class="first">In the <strong>Commit new file</strong> box at the bottom of the page, create a new branch for this commit.</p>
+<li><p class="first">In the <strong>Commit new file</strong> box at the bottom of the page, create a new
+branch for this commit.</p>
 </li>
 <li><p class="first">Create a pull request (PR).</p>
 </li>
 </ol>
-<p>Your PR will be reviewed. Depending on the review feedback, you might be asked to make additional changes or to merge your PR to create the article.</p>
-<p><strong>Note:</strong> If your article includes images, send an email to <a class="reference external" href="tools/GitHub-infra-templates/mailto:how-to&#64;rackspace.com">how-to&#64;rackspace.com</a> with the image files. Note where the images belong in the article by using comments: <code class="docutils literal"><span class="pre">&lt;!--this</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">comment--&gt;</span></code>.</p>
+<p>Your PR will be reviewed. Depending on the review feedback, you might be asked
+to make additional changes or to merge your PR to create the article.</p>
+<p><strong>Note:</strong> If your article includes images, send an email to
+<a class="reference external" href="tools/GitHub-infra-templates/mailto:how-to&#64;rackspace.com">how-to&#64;rackspace.com</a> with the image files. Note where the images
+belong in the article by using comments: <code class="docutils literal"><span class="pre">&lt;!--this</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">comment--&gt;</span></code>.</p>
 </div>
 <div class="section" id="edit-an-article">
 <span id="edit-an-article"></span><h3>Edit an article<a class="headerlink" href="#edit-an-article" title="Permalink to this headline">#</a></h3>
-<p>Follow these steps to edit an existing article within a product folder of the <strong>rackerlabs/rackspace-how-to</strong> repo.</p>
+<p>Follow these steps to edit an existing article within a product folder of the
+<strong>rackerlabs/rackspace-how-to</strong> repo.</p>
 <ol>
-<li><p class="first">Go to the <a class="reference external" href="https://github.com/rackerlabs/rackspace-how-to/tree/master/content">Rackspace How-to content folder</a> and click the product for which you want to edit the article.</p>
+<li><p class="first">Go to the <a class="reference external" href="https://github.com/rackerlabs/rackspace-how-to/tree/master/content">Rackspace How-to content folder</a>
+and click the product for which you want to edit the article.</p>
 </li>
-<li><p class="first">Make any edits directly through the GitHub website, through a GitHub desktop client, or on the command line.</p>
-<p><strong>Note:</strong> If you are using a desktop client or the command line, and you are forking or cloning the repo, be sure to make your changes in a new branch. Doing so ensures that you are producing a pull request (PR) rather than committing changes directly to the master.</p>
+<li><p class="first">Make any edits directly through the GitHub website, through a GitHub desktop
+client, or on the command line.</p>
+<p><strong>Note:</strong> If you are using a desktop client or the command line, and you are
+forking or cloning the repo, be sure to make your changes in a new branch.
+Doing so ensures that you are producing a pull request
+(PR) rather than committing changes directly to the master.</p>
 </li>
-<li><p class="first">When you have finished editing the article, commit the edits so that GitHub can produce a PR. If you are working in the GitHub website, be sure to select <strong>Create a new branch for this commit and start a pull request</strong>.</p>
+<li><p class="first">When you have finished editing the article, commit the edits so that GitHub
+can produce a PR. If you are working in the GitHub website, be sure to
+select <strong>Create a new branch for this commit and start a pull request</strong>.</p>
 </li>
 </ol>
 <p>Use the following guidelines to create a commit message:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Provide</span> <span class="n">a</span> <span class="n">brief</span> <span class="n">description</span> <span class="n">of</span> <span class="n">the</span> <span class="n">change</span><span class="p">,</span> <span class="n">starting</span> <span class="k">with</span> <span class="n">an</span> <span class="n">imperative</span> <span class="n">verb</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="s2">&quot;Add a paragraph about... .&quot;</span>
-<span class="o">-</span> <span class="n">If</span> <span class="n">you</span> <span class="n">make</span> <span class="n">a</span> <span class="nb">complex</span> <span class="n">edit</span><span class="p">,</span> <span class="n">explain</span> <span class="n">why</span> <span class="n">you</span> <span class="n">are</span> <span class="n">making</span> <span class="n">the</span> <span class="n">edit</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">changing</span> <span class="n">the</span> <span class="n">formatting</span> <span class="n">of</span> <span class="n">an</span> <span class="n">article</span> <span class="n">because</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">should</span> <span class="n">be</span> <span class="n">ordered</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">unordered</span><span class="p">,</span> <span class="n">say</span><span class="p">,</span> <span class="s2">&quot;Switch list in middle of article to ordered to show clear progression of steps&quot;</span><span class="o">.</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Provide</span> <span class="n">a</span> <span class="n">brief</span> <span class="n">description</span> <span class="n">of</span> <span class="n">the</span> <span class="n">change</span><span class="p">,</span> <span class="n">starting</span> <span class="k">with</span> <span class="n">an</span> <span class="n">imperative</span>
+  <span class="n">verb</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="s2">&quot;Add a paragraph about... .&quot;</span>
+<span class="o">-</span> <span class="n">If</span> <span class="n">you</span> <span class="n">make</span> <span class="n">a</span> <span class="nb">complex</span> <span class="n">edit</span><span class="p">,</span> <span class="n">explain</span> <span class="n">why</span> <span class="n">you</span> <span class="n">are</span> <span class="n">making</span> <span class="n">the</span> <span class="n">edit</span><span class="o">.</span> <span class="n">For</span>
+  <span class="n">example</span><span class="p">,</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">changing</span> <span class="n">the</span> <span class="n">formatting</span> <span class="n">of</span> <span class="n">an</span> <span class="n">article</span> <span class="n">because</span> <span class="n">a</span> <span class="nb">list</span>
+  <span class="n">should</span> <span class="n">be</span> <span class="n">ordered</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">unordered</span><span class="p">,</span> <span class="n">say</span><span class="p">,</span> <span class="s2">&quot;Switch list in middle of</span>
+  <span class="n">article</span> <span class="n">to</span> <span class="n">ordered</span> <span class="n">to</span> <span class="n">show</span> <span class="n">clear</span> <span class="n">progression</span> <span class="n">of</span> <span class="n">steps</span><span class="s2">&quot;.</span>
 </pre></div>
 </div>
 <ol class="simple">
 <li>Create a PR for your branch.</li>
 </ol>
-<p>Your PR will be reviewed. Depending on the review feedback, you might be asked to make additional changes or to merge your PR.</p>
+<p>Your PR will be reviewed. Depending on the review feedback, you might be asked
+to make additional changes or to merge your PR.</p>
 </div>
 <div class="section" id="request-an-article-change">
 <span id="request-an-article-change"></span><h3>Request an article change<a class="headerlink" href="#request-an-article-change" title="Permalink to this headline">#</a></h3>
-<p>To request a change, create an issue by clicking <strong>Issue</strong> near the top of this page. Describe the changes that you are requesting.</p>
+<p>To request a change, create an issue by clicking <strong>Issue</strong> near the top of this
+page. Describe the changes that you are requesting.</p>
 </div>
 </div>
 <div class="section" id="writing-guidelines">
 <span id="writing-guidelines"></span><h2>Writing guidelines<a class="headerlink" href="#writing-guidelines" title="Permalink to this headline">#</a></h2>
-<p>Use the following general writing guidelines, which are described in detail in <a class="reference external" href="tools/GitHub-infra-templates/style-guidelines.md">style-guidelines.md</a>:</p>
+<p>Use the following general writing guidelines, which are described in detail in
+<a class="reference external" href="tools/GitHub-infra-templates/style-guidelines.md">style-guidelines.md</a>:</p>
 <ul class="simple">
 <li>Use sentence-style capitalization for titles and headings</li>
 <li>Use active voice</li>
@@ -257,18 +286,30 @@
 </ul>
 <p>Following are some specific guidelines for How-To content:</p>
 <ul class="simple">
-<li>For the first-level headings in an article, use the H3 level (designated by ###). Avoid using more than three levels of heading in an article (H3, H4, and H5). If you need more than three levels, you should consider breaking your article into two or more articles.</li>
-<li>When an article mainly provides step-by-step instructions for users to follow, begin the title of the article with an imperative verb. For example: Install the Cloud Backup agent on Windows.</li>
-<li>If a title contains a special character, such as a colon, enclose the title with single quotation marks.</li>
-<li>When code includes placeholders, show them in camelCase and enclose them in angle brackets. For example, <code class="docutils literal"><span class="pre">&lt;hostName&gt;</span></code>.</li>
-<li>To link to another article, use the following format: <code class="docutils literal"><span class="pre">[&lt;articleName&gt;](/how-to/&lt;articleName&gt;)</span></code>. For example,  <code class="docutils literal"><span class="pre">[Rackspace</span> <span class="pre">Email</span> <span class="pre">and</span> <span class="pre">Hosted</span> <span class="pre">Exchange</span> <span class="pre">settings](/how-to/rackspace-email-and-hosted-exchange-settings)</span></code>. Note the use of the leading slash.</li>
-<li>When creating complex lists, such as procedures with sublists, graphics, and code examples, use the spacing guidelines at https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists.</li>
+<li>For the first-level headings in an article, use the H3 level (designated
+by ###). Avoid using more than three levels of heading in an article (H3, H4,
+and H5). If you need more than three levels, you should consider breaking
+your article into two or more articles.</li>
+<li>When an article mainly provides step-by-step instructions for users to
+follow, begin the title of the article with an imperative verb. For example:
+Install the Cloud Backup agent on Windows.</li>
+<li>If a title contains a special character, such as a colon, enclose the title
+with single quotation marks.</li>
+<li>When code includes placeholders, show them in camelCase and enclose them in
+angle brackets. For example, <code class="docutils literal"><span class="pre">&lt;hostName&gt;</span></code>.</li>
+<li>To link to another article, use the following format:
+<code class="docutils literal"><span class="pre">[&lt;articleName&gt;](/how-to/&lt;articleName&gt;)</span></code>. For example, <code class="docutils literal"><span class="pre">[Rackspace</span> <span class="pre">Email</span> <span class="pre">and</span> <span class="pre">Hosted</span> <span class="pre">Exchange</span> <span class="pre">settings](/how-to/rackspace-email-and-hosted-exchange-settings)</span></code>. Note the
+use of the leading slash.</li>
+<li>When creating complex lists, such as procedures with sublists, graphics, and
+code examples, use the spacing guidelines at
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists.</li>
 </ul>
 </div>
 <div class="section" id="support-and-feedback">
 <span id="support-and-feedback"></span><h2>Support and feedback<a class="headerlink" href="#support-and-feedback" title="Permalink to this headline">#</a></h2>
 <p>If you find a problem, open a GitHub issue.</p>
-<p>If you need additional assistance, contact us at <a class="reference external" href="tools/GitHub-infra-templates/mailto:devdoc&#64;rackspace.com">devdoc&#64;rackspace.com</a>.</p>
+<p>If you need additional assistance, contact us at
+<a class="reference external" href="tools/GitHub-infra-templates/mailto:devdoc&#64;rackspace.com">devdoc&#64;rackspace.com</a>.</p>
 </div>
 </div>
 

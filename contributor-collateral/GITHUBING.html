@@ -156,12 +156,12 @@
             
   <div class="section" id="github-workflow-octocat">
 <span id="github-workflow-octocat"></span><h1>GitHub workflow :octocat:<a class="headerlink" href="#github-workflow-octocat" title="Permalink to this headline">#</a></h1>
-<p>To contribute content to this repository (repo), use the GitHub workflow described here.
-To follow the entire contribution process, go to
+<p>To contribute content to this repository (repo), use the GitHub workflow
+described here. To follow the entire contribution process, go to
 <a class="reference internal" href="CONTRIBUTING.html"><span class="doc">CONTRIBUTING.md</span></a>.</p>
-<p><strong>Note:</strong> This workflow shows how to make changes to the repo from the command line by
-using git commands. If you do not want to use the command line, you can use GitHub Desktop
-or another GitHub GUI instead to accomplish the steps.</p>
+<p><strong>Note:</strong> This workflow shows how to make changes to the repo from the command
+line by using git commands. If you do not want to use the command line, you can
+use GitHub Desktop or another GitHub GUI instead to accomplish the steps.</p>
 <div class="section" id="prerequisite">
 <span id="prerequisite"></span><h2>Prerequisite<a class="headerlink" href="#prerequisite" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
@@ -193,15 +193,15 @@ git pull --rebase upstream master
 </pre></div>
 </div>
 </li>
-<li><p class="first">Create a branch for changes. For details about this part of the workflow, see
-<a class="reference external" href="https://guides.github.com/introduction/flow/index.html">Understanding the GitHub Flow</a>
+<li><p class="first">Create a branch for changes. For details about this part of the workflow,
+see <a class="reference external" href="https://guides.github.com/introduction/flow/index.html">Understanding the GitHub Flow</a>
 guide.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bash</span>
-<span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">branch</span><span class="o">&gt;</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>git checkout -b &lt;name-of-branch&gt;
 </pre></div>
 </div>
 </li>
-<li><p class="first">In the new branch, make changes to existing files and add new files, as needed.</p>
+<li><p class="first">In the new branch, make changes to existing files and add new files, as
+needed.</p>
 </li>
 <li><p class="first">Add all files relevant to the change</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
@@ -222,12 +222,13 @@ guide.</p>
 <p>a. Go to https://github.com/rackerlabs/docs-cloud-files</p>
 <p>b. Click on the Create pull request button</p>
 <p>c. If this PR is related to an outstanding github
-<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/issues">GitHub issue</a>, include a link to that GitHub issue in the comment</p>
+<a class="reference external" href="https://github.com/rackerlabs/docs-cloud-files/issues">GitHub issue</a>,
+include a link to that GitHub issue in the comment</p>
 </li>
 <li><p class="first">The Information Development team will review your pull request.</p>
 </li>
-<li><p class="first">If necessary, incorporate changes from the review, make updates to your PR by adding
-more commits.</p>
+<li><p class="first">If necessary, incorporate changes from the review, make updates to your PR
+by adding more commits.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>git add .
 git commit -m <span class="s2">&quot;The reason for my update&quot;</span>
 git push
@@ -237,18 +238,22 @@ git push
 <li><p class="first">Repeat step 12 as needed.</p>
 </li>
 <li><p class="first">Resolve conflicts, if necessary.</p>
-<p>During your review process, someone might have already updated and merged a file that
-you are in the process of changing. . Such a conflict means that you can’t merge your
-PR. To resolve the conflict, perform the following steps.</p>
-<p>a. Bring your branch up-to-date with the upstream repo by running the following
-commands from your branch:</p>
+<p>During your review process, someone might have already updated and merged a
+file that you are in the process of changing. . Such a conflict means that
+you can’t merge your PR. To resolve the conflict, perform the following
+steps.</p>
+<p>a. Bring your branch up-to-date with the upstream repo by running the
+following commands from your branch:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
  <span class="n">git</span> <span class="n">rebase</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
 </pre></div>
 </div>
-<p>b. Follow the steps to <a class="reference external" href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">resolve a merge conflict from the command line</a>.</p>
+<p>b. Follow the steps to
+<a class="reference external" href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">resolve a merge conflict from the command
+line</a>.</p>
 </li>
-<li><p class="first">When content is approved and you have resolved any conflicts, the Information Development team will merge your pull request.</p>
+<li><p class="first">When content is approved and you have resolved any conflicts, the
+Information Development team will merge your pull request.</p>
 </li>
 <li><p class="first">Update your repo</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>git checkout master

@@ -164,15 +164,16 @@
             
   <div class="section" id="contributor-guidelines">
 <span id="contributor-guidelines"></span><h1>Contributor Guidelines<a class="headerlink" href="#contributor-guidelines" title="Permalink to this headline">#</a></h1>
-<p>These guidelines provide the general process for maintaining source code that builds the
-Rackspace Cloud Identity developer documentation.</p>
-<!-- Provide as little or as much information about architecture as needed to help
-contributors figure out which file to update.--><p>This project is developed and built using the
+<p>These guidelines provide the general process for maintaining source code that
+builds the Rackspace Cloud Identity developer documentation.</p>
+<!-- Provide as little or as much information about architecture as needed to
+help contributors figure out which file to update.--><p>This project is developed and built using the
 <a class="reference external" href="http://sphinx-doc.org/">Python Sphinx documentation generator</a>. Content is
-written in <a class="reference external" href="http://sphinx-doc.org/rest.html">reStructuredText</a>, the markup syntax and
-parser component of <a class="reference external" href="http://docutils.sourceforge.net/index.html">Python Docutils</a>.</p>
-<p>Source files for the Sphinx documentation project are in the <code class="docutils literal"><span class="pre">api-docs</span></code> directory.
-Here are key files that define project and content architecture:</p>
+written in <a class="reference external" href="http://sphinx-doc.org/rest.html">reStructuredText</a>, the markup
+syntax and parser component of
+<a class="reference external" href="http://docutils.sourceforge.net/index.html">Python Docutils</a>.</p>
+<p>Source files for the Sphinx documentation project are in the <code class="docutils literal"><span class="pre">api-docs</span></code>
+directory. Here are key files that define project and content architecture:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
@@ -250,8 +251,9 @@ with the source files.</li>
 pull request by <a class="reference external" href="#building-from-source">building from source</a>.</p>
 <div class="section" id="follow-general-style-guidelines">
 <span id="follow-general-style-guidelines"></span><h3>Follow general style guidelines<a class="headerlink" href="#follow-general-style-guidelines" title="Permalink to this headline">#</a></h3>
-<p>When you add or update content, use the following general style guidelines, which are
-described in detail in <a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/tree/master/style-guide">Style guidelines for technical content</a>:</p>
+<p>When you add or update content, use the following general style guidelines,
+which are described in detail in
+<a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/tree/master/style-guide">Style guidelines for technical content</a>:</p>
 <ul class="simple">
 <li>Use sentence-style capitalization for titles and headings</li>
 <li>Use consistent text formatting</li>
@@ -264,15 +266,14 @@ described in detail in <a class="reference external" href="https://github.com/ra
 <li>Clarify gerunds and participles</li>
 <li>Use consistent terminology</li>
 </ul>
-<!-- Adding build from source guidelines until we can provide a link to automated gh-pages
-output, or to the staging URL that Ash is working on.
---></div>
+<!-- Adding build from source guidelines until we can provide a link to
+automated gh-pages output, or to the staging URL that Ash is working on. --></div>
 <div class="section" id="merging-content">
 <span id="merging-content"></span><h3>Merging content<a class="headerlink" href="#merging-content" title="Permalink to this headline">#</a></h3>
-<p>All pull requests must be reviewed before merging. For minor updates and corrections,
-get a peer review to ensure content is error-free and doesn't introduce other issues.
-For more complex changes or additions, the content requires both technical and editorial
-review before it can be merged.</p>
+<p>All pull requests must be reviewed before merging. For minor updates and
+corrections, get a peer review to ensure content is error-free and doesn't
+introduce other issues. For more complex changes or additions, the content
+requires both technical and editorial review before it can be merged.</p>
 <p><strong>Technical review</strong></p>
 <p><em>Quality team to add info here.</em></p>
 <p><strong>Editorial review</strong></p>
@@ -284,11 +285,13 @@ review before it can be merged.</p>
 <p>To preview changes, build the documentation locally using either of the
 following options:</p>
 <ul class="simple">
-<li>Install and run the <a class="reference external" href="http://sphinx-doc.org/">Sphinx documentation generator</a> to build
-the project locally with the <a class="reference external" href="http://docs.readthedocs.org/en/latest/theme.html">Read the Docs theme</a>.</li>
-<li>Install and run the <a class="reference external" href="https://github.com/deconst/client">deconst client</a> to build the
-project with the Rackspace-branded theme. This build creates content that looks the
-same as the content delivered on developer.rackspace.com
+<li>Install and run the <a class="reference external" href="http://sphinx-doc.org/">Sphinx documentation generator</a>
+to build the project locally with the
+<a class="reference external" href="http://docs.readthedocs.org/en/latest/theme.html">Read the Docs theme</a>.</li>
+<li>Install and run the <a class="reference external" href="https://github.com/deconst/client">deconst client</a> to
+build the project with the Rackspace-branded theme. This build creates
+content that looks the same as the content delivered on
+developer.rackspace.com
 <a class="reference external" href="https://github.com/rackerlabs/docs-migration/blob/master/docs/migration-instructions.rst#building-your-project-with-the-local-deconst-client">instructions for building with the client</a>.</li>
 </ul>
 <div class="section" id="building-with-sphinx">
@@ -297,8 +300,7 @@ same as the content delivered on developer.rackspace.com
 <ul class="simple">
 <li>Python 2.7 or later</li>
 <li>Mac OSx: Install <a class="reference external" href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtualenv</a> or <a class="reference external" href="https://github.com/yyuu/pyenv">pyenv</a></li>
-<li>Windows:
-<a class="reference external" href="http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/">Install Python, pip, and virtualenv with PowerShell</a>).</li>
+<li>Windows: <a class="reference external" href="http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/">Install Python, pip, and virtualenv with PowerShell</a>).</li>
 </ul>
 <div class="section" id="set-up-your-build-environment">
 <span id="set-up-your-build-environment"></span><h4>Set up your build environment<a class="headerlink" href="#set-up-your-build-environment" title="Permalink to this headline">#</a></h4>
@@ -308,8 +310,8 @@ same as the content delivered on developer.rackspace.com
 </pre></div>
 </div>
 </li>
-<li><p class="first">In the root directory for the project, run the following commands to install Sphinx
-and other required packages:</p>
+<li><p class="first">In the root directory for the project, run the following commands to install
+Sphinx and other required packages:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
@@ -323,7 +325,8 @@ and other required packages:</p>
 <span class="n">make</span> <span class="n">clean</span> <span class="n">singlehtml</span>
 </pre></div>
 </div>
-<p>These commands generate a single page html document with a navigation bar on the right.</p>
+<p>These commands generate a single page html document with a navigation bar on
+the right.</p>
 </div>
 <div class="section" id="view-the-html-build-results">
 <span id="view-the-html-build-results"></span><h4>View the HTML build results<a class="headerlink" href="#view-the-html-build-results" title="Permalink to this headline">#</a></h4>

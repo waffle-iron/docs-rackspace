@@ -10,17 +10,18 @@ builds the Rackspace Cloud Files developer documentation.
 - [Previewing changes](#previewing-changes)
 
 ## Project description
-<!-- Provide as little or as much information about architecture as needed to help
-contributors figure out which file to update.-->
+<!-- Provide as little or as much information about architecture as needed to
+help contributors figure out which file to update.-->
 
 This project is developed and built by using the
-[Python Sphinx documentation generator](http://sphinx-doc.org/). Content is
-written in [reStructuredText](http://sphinx-doc.org/rest.html), which is the markup
-syntax and parser component of
+[Python Sphinx documentation generator](http://sphinx-doc.org/).
+Content is written in [reStructuredText](http://sphinx-doc.org/rest.html),
+which is the markup syntax and parser component of
 [Python Docutils](http://docutils.sourceforge.net/index.html).
 
-Source files for the Sphinx documentation project are in the ``api-docs`` directory.
-Following are the key files that define project and content architecture:
+Source files for the Sphinx documentation project are in the ``api-docs``
+directory. Following are the key files that define project and content
+architecture:
 
 ```eval_rst
 .. list-table::
@@ -103,25 +104,26 @@ which are described in detail in [Style guidelines for technical content](https:
 - Clarify [gerunds and participles](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/basic-writing-guidelines.md#clarify-gerunds-and-participles)
 - Use [consistent terminology](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/basic-writing-guidelines.md#use-consistent-terminology)
 
-<!-- Adding build from source guidelines until we can provide a link to automated
-gh-pages output, or to the staging URL that Ash is working on.
--->
+<!-- Adding build from source guidelines until we can provide a link to
+automated gh-pages output, or to the staging URL that Ash is working on. -->
 
 ## Submitting changes
 
 When you've completed your changes, submit a pull request. Someone on the
 Information Development team will review your PR.
 
-- Minor updates and corrections get a quick review to ensure that content is 
+- Minor updates and corrections get a quick review to ensure that content is
   error-free and doesn't introduce other issues.
-- More complex changes or additions require both technical and editorial review.
+- More complex changes or additions require both technical and editorial
+  review.
 
-Depending on the review feedback, you might be asked to make additional changes.
+Depending on the review feedback, you might be asked to make additional
+changes.
 
 After content has been reviewed and approved, the updates can be merged to the
-master branch. The merge triggers the build and deploy process. Typically,
-new content is available on developer.rackspace.com within a minute or two after
-it is merged. Larger updates might take a bit longer.
+master branch. The merge triggers the build and deploy process. Typically, new
+content is available on developer.rackspace.com within a minute or two after it
+is merged. Larger updates might take a bit longer.
 
 ## Previewing changes
 

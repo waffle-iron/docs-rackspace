@@ -166,7 +166,9 @@
             
   <div class="section" id="github-workflow-octocat">
 <span id="github-workflow-octocat"></span><h1>GitHub Workflow :octocat:<a class="headerlink" href="#github-workflow-octocat" title="Permalink to this headline">#</a></h1>
-<p>This is the GitHub workflow we use to contribute content to this repo. To follow the entire contributing process for this repo go to <a class="reference external" href="tools/GitHub-infra-templates/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+<p>This is the GitHub workflow we use to contribute content to this repo. To
+follow the entire contributing process for this repo go to
+<a class="reference external" href="tools/GitHub-infra-templates/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
 <div class="section" id="prerequisites">
 <span id="prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
@@ -198,7 +200,10 @@ git pull --rebase upstream master
 </pre></div>
 </div>
 </li>
-<li><p class="first">Create a branch to make a change. If you'd like to see some lovely graphics, this step is the start of the <a class="reference external" href="https://guides.github.com/introduction/flow/index.html">Understanding the GitHub Flow</a> guide.</p>
+<li><p class="first">Create a branch to make a change. If you'd like to see some lovely graphics,
+this step is the start of the
+<a class="reference external" href="https://guides.github.com/introduction/flow/index.html">Understanding the GitHub Flow</a>
+guide.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>git checkout -b &lt;name-of-branch&gt;
 </pre></div>
 </div>
@@ -223,10 +228,12 @@ git pull --rebase upstream master
 <li>Go to https://github.com/my-github-username/getcarina.com</li>
 <li>Click on the Create pull request button</li>
 <li>If this PR is related to an outstanding github
-<a class="reference external" href="https://github.com/getcarina/getcarina.com/issues">issue</a>, include a link to that GitHub issue in the comment</li>
+<a class="reference external" href="https://github.com/getcarina/getcarina.com/issues">issue</a>, include a
+link to that GitHub issue in the comment</li>
 </ol>
 </li>
-<li><p class="first">Notify rcs-tech a PR is ready for <a class="reference external" href="tools/GitHub-infra-templates/CONTRIBUTING.md#technical-review">Tech Review</a></p>
+<li><p class="first">Notify rcs-tech a PR is ready for
+<a class="reference external" href="tools/GitHub-infra-templates/CONTRIBUTING.md#technical-review">Tech Review</a></p>
 </li>
 <li><p class="first">Make updates to your PR by adding more commits</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>git add .
@@ -235,17 +242,23 @@ git push
 </pre></div>
 </div>
 </li>
-<li><p class="first">When the tech review is complete, it's time for the <a class="reference external" href="tools/GitHub-infra-templates/CONTRIBUTING.md#editorial-review">Editorial Review</a></p>
+<li><p class="first">When the tech review is complete, it's time for the
+<a class="reference external" href="tools/GitHub-infra-templates/CONTRIBUTING.md#editorial-review">Editorial Review</a></p>
 </li>
 <li><p class="first">Deal with conflicts</p>
-<p>During your review process, someone may have already updated and merged a file that you are in the process of changing. This can result in a conflict and you won't be able to merge your PR. First you need to bring your branch up-to-date with upstream. While on your <code class="docutils literal"><span class="pre">&lt;name-of-branch&gt;</span></code> do</p>
+<p>During your review process, someone may have already updated and merged a
+file that you are in the process of changing. This can result in a conflict
+and you won't be able to merge your PR. First you need to bring your branch
+up-to-date with upstream. While on your <code class="docutils literal"><span class="pre">&lt;name-of-branch&gt;</span></code> do</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
 <span class="n">git</span> <span class="n">rebase</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
 </pre></div>
 </div>
-<p>Then go ahead and <a class="reference external" href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">Resolve a merge conflict from the command line</a>.</p>
+<p>Then go ahead and
+<a class="reference external" href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">Resolve a merge conflict from the command line</a>.</p>
 </li>
-<li><p class="first">When the Editorial Review is complete and the button is green, <a class="reference external" href="tools/GitHub-infra-templates/CONTRIBUTING.md#merge-it">Merge It</a>!</p>
+<li><p class="first">When the Editorial Review is complete and the button is green,
+<a class="reference external" href="tools/GitHub-infra-templates/CONTRIBUTING.md#merge-it">Merge It</a>!</p>
 </li>
 <li><p class="first">Update your repo</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>git checkout master
@@ -261,8 +274,10 @@ git push
 <div class="section" id="git-prompt-and-completion">
 <span id="git-prompt-and-completion"></span><h3>Git prompt and completion<a class="headerlink" href="#git-prompt-and-completion" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
-<li>Download <a class="reference external" href="https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh">git-prompt.sh</a> and save it in your home directory as .git-prompt.sh</li>
-<li>Download <a class="reference external" href="https://github.com/git/git/blob/master/contrib/completion/git-completion.bash">git-completion.bash</a> and save it in your home directory as .git-completion.bash</li>
+<li>Download <a class="reference external" href="https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh">git-prompt.sh</a>
+and save it in your home directory as .git-prompt.sh</li>
+<li>Download <a class="reference external" href="https://github.com/git/git/blob/master/contrib/completion/git-completion.bash">git-completion.bash</a>
+and save it in your home directory as .git-completion.bash</li>
 <li>Add the following to your .bash_profile in your home directory</li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">GIT_PS1_SHOWDIRTYSTATE</span><span class="o">=</span>1

@@ -157,9 +157,13 @@
             
   <div class="section" id="release-notes-guidelines">
 <span id="release-notes-guidelines"></span><h1>Release notes guidelines<a class="headerlink" href="#release-notes-guidelines" title="Permalink to this headline">#</a></h1>
-<p>This topic provides guidelines for writing release notes (RN) for Rackspace Cloud services APIs.</p>
-<p>A template for the API RN is available in the <a class="reference external" href="https://github.com/rackerlabs/docs-common/blob/master/templates/release-note-latest-template.rst">docs-common repo</a>.</p>
-<p>For an example that illustrates most of these guidelines, see the <a class="reference external" href="https://developer.rackspace.com/docs/cloud-block-storage/v1/developer-guide/#release-notes">Cloud Block Storage Release Notes</a>.</p>
+<p>This topic provides guidelines for writing release notes (RN) for Rackspace
+Cloud services APIs.</p>
+<p>A template for the API RN is available in the <a class="reference external" href="https://github.com/rackerlabs/docs-common/blob/master/templates/release-note-latest-template.rst">docs-common
+repo</a>.</p>
+<p>For an example that illustrates most of these guidelines, see the <a class="reference external" href="https://developer.rackspace.com/docs/cloud-block-storage/v1/developer-guide/#release-notes">Cloud Block
+Storage Release
+Notes</a>.</p>
 <ul class="simple">
 <li><a class="reference external" href="#structure">Structure</a></li>
 <li><a class="reference external" href="#formatting">Formatting</a></li>
@@ -168,17 +172,20 @@
 </ul>
 <div class="section" id="structure">
 <span id="structure"></span><h2>Structure<a class="headerlink" href="#structure" title="Permalink to this headline">#</a></h2>
-<p>For each release-specific RN file that you create, observe the following guidelines:</p>
+<p>For each release-specific RN file that you create, observe the following
+guidelines:</p>
 <ul>
 <li><p class="first">Use one of the following formats for the title of the RN file:</p>
 <ul>
 <li><p class="first">If the release has a version number, use that in the title. For example:</p>
 <p><strong>v2.20.0, June 25, 2016</strong></p>
 </li>
-<li><p class="first">If the release does not have a version number, use the API contract version and date.   For example:</p>
+<li><p class="first">If the release does not have a version number, use the API contract version
+and date. For example:</p>
 <p><strong>API | contract version | updates, January 07, 2016</strong></p>
 </li>
-<li><p class="first">If you are documenting a named or initial release, indicate the initial release in the title. For example:</p>
+<li><p class="first">If you are documenting a named or initial release, indicate the initial
+release in the title. For example:</p>
 <p><strong>API |contract version| release, January 07, 2016</strong></p>
 <p>You can precede release with a type, such as EA or UA. For example:</p>
 <p><strong>API |contract version| EA release, January 07, 2016</strong></p>
@@ -192,47 +199,81 @@
 <li>Known issues</li>
 <li>Documentation changes</li>
 </ul>
-<p><strong>Note:</strong> Anything previously labeled as &quot;enhancements&quot; can be included either in &quot;What's new&quot; or &quot;Resolved issues&quot; as appropriate.</p>
+<p><strong>Note:</strong> Anything previously labeled as &quot;enhancements&quot; can be included
+either in &quot;What's new&quot; or &quot;Resolved issues&quot; as appropriate.</p>
 </li>
-<li><p class="first">Include the &quot;What's new,&quot; &quot;Resolved issues,&quot; and &quot;Known issues&quot; sections in every RN file, even if you have no content for one of those sections. If one of these sections has no content for a release, use the |no changes| variable for the body text. This variable inserts the boilerplate text &quot;None for this release.&quot; For example:</p>
+<li><p class="first">Include the &quot;What's new,&quot; &quot;Resolved issues,&quot; and &quot;Known issues&quot; sections in
+every RN file, even if you have no content for one of those sections. If one
+of these sections has no content for a release, use the |no changes| variable
+for the body text. This variable inserts the boilerplate text &quot;None for this
+release.&quot; For example:</p>
 <p><strong>Known issues</strong></p>
 <p><code class="docutils literal"><span class="pre">|no</span> <span class="pre">changes|</span></code></p>
 </li>
-<li><p class="first">Include the &quot;Documentation changes&quot; section only if you have significant content changes, such as adding an extended example, a tutorial, or new content. If you have no significant content changes for a release, omit that section entirely.</p>
+<li><p class="first">Include the &quot;Documentation changes&quot; section only if you have significant
+content changes, such as adding an extended example, a tutorial, or new
+content. If you have no significant content changes for a release, omit that
+section entirely.</p>
 </li>
-<li><p class="first">Order your RN files from latest to earliest, so that the latest is always &quot;on top.&quot; For example, the release notes for version 1.1 should precede the release notes for version 1.0 in the hierarchy.</p>
+<li><p class="first">Order your RN files from latest to earliest, so that the latest is always &quot;on
+top.&quot; For example, the release notes for version 1.1 should precede the
+release notes for version 1.0 in the hierarchy.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="formatting">
 <span id="formatting"></span><h2>Formatting<a class="headerlink" href="#formatting" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li>Use sentence-style capitalization for all headings, including the title of the file (see the examples in the preceding section). The only exception to this rule is the high-level title of the release notes section, which is <strong>Release Notes</strong>.</li>
-<li>If a section has several items, for example there are several resolved issues to document, provide the descriptions in a bullet list. You do not need to precede the bullet list with an introductory sentence, unless one is necessary for clarity.</li>
-<li>If you have only one item to document in a section, do not show it as a bullet item. Show it as regular text.</li>
-<li>Use the punctuation guidelines for lists at <a class="reference external" href="a-l-style-guidelines.html#writing-list-items">Writing list items</a>.</li>
-<li>As needed, use the <a class="reference external" href="m-z-style-guidelines.html#text-formatting-guidelines">text formatting guidelines</a>.</li>
+<li>Use sentence-style capitalization for all headings, including the title of
+the file (see the examples in the preceding section). The only exception to
+this rule is the high-level title of the release notes section, which is
+<strong>Release Notes</strong>.</li>
+<li>If a section has several items, for example there are several resolved issues
+to document, provide the descriptions in a bullet list. You do not need to
+precede the bullet list with an introductory sentence, unless one is
+necessary for clarity.</li>
+<li>If you have only one item to document in a section, do not show it as a
+bullet item. Show it as regular text.</li>
+<li>Use the punctuation guidelines for lists at <a class="reference external" href="a-l-style-guidelines.html#writing-list-items">Writing list
+items</a>.</li>
+<li>As needed, use the <a class="reference external" href="m-z-style-guidelines.html#text-formatting-guidelines">text formatting
+guidelines</a>.</li>
 </ul>
 </div>
 <div class="section" id="wording">
 <span id="wording"></span><h2>Wording<a class="headerlink" href="#wording" title="Permalink to this headline">#</a></h2>
-<p>You do not need to include an introductory paragraph for each file. The one that exists for the &quot;Release Notes&quot; section as a whole is sufficient. You can begin each file with the &quot;What's new&quot; heading. However, you can include an introductory paragraph if necessary<p>—</p>
-for example, if you want to state that the release notes correspond to a particular type of release, such as a Limited Availability release, or you need to introduce the first release of a major version.</p>
-<p>If you refer to content in another part of the API document, provide a link to the specific section.</p>
+<p>You do not need to include an introductory paragraph for each file. The one
+that exists for the &quot;Release Notes&quot; section as a whole is sufficient. You can
+begin each file with the &quot;What's new&quot; heading. However, you can include an
+introductory paragraph if necessary<p>—</p>
+for example, if you want to state
+that the release notes correspond to a particular type of release, such as a
+Limited Availability release, or you need to introduce the first release of a
+major version.</p>
+<p>If you refer to content in another part of the API document, provide a link to
+the specific section.</p>
 <p>Use the following guideline when creating items in each section:</p>
 <div class="section" id="what-s-new">
 <span id="what-s-new"></span><h3>What's new<a class="headerlink" href="#what-s-new" title="Permalink to this headline">#</a></h3>
-<p>Use sentences to describe the new feature or enhancement. Provide details as needed, and provide a link to any section in the documentation that describes that feature.</p>
+<p>Use sentences to describe the new feature or enhancement. Provide details as
+needed, and provide a link to any section in the documentation that describes
+that feature.</p>
 <p><strong>Example:</strong></p>
-<p>IPv6 support has been added. When you create a server, an IPv4 address and an IPv6 address block are assigned. The IPv4 address and IPv6 address block are used for the public interface (Internet). The IPv4 address is also used for the private interface.</p>
+<p>IPv6 support has been added. When you create a server, an IPv4 address and an
+IPv6 address block are assigned. The IPv4 address and IPv6 address block are
+used for the public interface (Internet). The IPv4 address is also used for the
+private interface.</p>
 </div>
 <div class="section" id="resolved-issues">
 <span id="resolved-issues"></span><h3>Resolved issues<a class="headerlink" href="#resolved-issues" title="Permalink to this headline">#</a></h3>
-<p>Provide an initial phrase that describes the issue that was fixed. Start the phrase with a past-tense verb. If necessary, include sentences to further explain the fix. If you list only phrases, do not use ending punctuation.</p>
+<p>Provide an initial phrase that describes the issue that was fixed. Start the
+phrase with a past-tense verb. If necessary, include sentences to further
+explain the fix. If you list only phrases, do not use ending punctuation.</p>
 <p><strong>Example:</strong></p>
 <ul class="simple">
 <li>Added support for Debian 8 (Jessie)</li>
-<li>Trimmed the Monitoring ID and Monitoring Token configuration variables to ensure correctness</li>
+<li>Trimmed the Monitoring ID and Monitoring Token configuration variables to
+ensure correctness</li>
 <li>Fixed the Xen Server 6 package repo</li>
 </ul>
 </div>
@@ -240,22 +281,31 @@ for example, if you want to state that the release notes correspond to a particu
 <span id="known-issues"></span><h3>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">#</a></h3>
 <p>Use sentences to describe the issue. If a workaround is available, explain it.</p>
 <p><strong>Example:</strong></p>
-<p>The create a service operation does not support Classless Inter-Domain Routing (CIDR) for IP address restrictions.</p>
+<p>The create a service operation does not support Classless Inter-Domain Routing
+(CIDR) for IP address restrictions.</p>
 </div>
 <div class="section" id="documentation-changes">
 <span id="documentation-changes"></span><h3>Documentation changes<a class="headerlink" href="#documentation-changes" title="Permalink to this headline">#</a></h3>
-<p>Provide an initial phrase that describes the issue that was fixed. Start the phrase with a past-tense verb. If necessary, include sentences to further explain the fix. If you list only phrases, do not use ending punctuation. Provide a link to the relevant section in the documentation.</p>
+<p>Provide an initial phrase that describes the issue that was fixed. Start the
+phrase with a past-tense verb. If necessary, include sentences to further
+explain the fix. If you list only phrases, do not use ending punctuation.
+Provide a link to the relevant section in the documentation.</p>
 <p><strong>Example:</strong></p>
-<p>Clarified the descriptions of the alert policies to include how the polling window affects the alarm state. See <a class="reference external" href="https://developer.rackspace.com/docs/cloud-monitoring/v1/developer-guide/#alert-policies">Alert policies</a>.</p>
+<p>Clarified the descriptions of the alert policies to include how the polling
+window affects the alarm state. See <a class="reference external" href="https://developer.rackspace.com/docs/cloud-monitoring/v1/developer-guide/#alert-policies">Alert
+policies</a>.</p>
 </div>
 </div>
 <div class="section" id="editing-existing-release-notes">
 <span id="editing-existing-release-notes"></span><h2>Editing existing release notes<a class="headerlink" href="#editing-existing-release-notes" title="Permalink to this headline">#</a></h2>
-<p>In cases where existing release notes were not accurate at the time of publication, change the content to make it accurate. You can make the following types of changes:</p>
+<p>In cases where existing release notes were not accurate at the time of
+publication, change the content to make it accurate. You can make the following
+types of changes:</p>
 <ul class="simple">
 <li>Fix typos</li>
 <li>Correct links that were wrong at the time of publication</li>
-<li>Correct incorrect statements to reflect what was correct at the time of publication</li>
+<li>Correct incorrect statements to reflect what was correct at the time of
+publication</li>
 </ul>
 </div>
 </div>
