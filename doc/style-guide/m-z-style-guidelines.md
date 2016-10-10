@@ -34,14 +34,14 @@ user sees in the product.
 <!--table-->
 Guideline | Example | Comments
 --- | --- | ---
-Use complete sentences, when possible. | *Use:* <br /> The authentication token is not valid. <br /><br /> *Avoid:* <br /> Invalid authentication token | Include articles (*a*, *an*, *the*) to make the sentence complete. If possible, use active voice.<br /><br /> **Note:** Message text that serves as a heading or label (such as `Elapsed:hh:mm:ss`, which indicates elapsed time) is acceptable as a fragment.
+Use complete sentences, when possible. | *Use:* <br /><br /> The authentication token is not valid. <br /><br /> *Avoid:* <br /><br /> Invalid authentication token | Include articles (*a*, *an*, *the*) to make the sentence complete. If possible, use active voice.<br /><br /> **Note:** Message text that serves as a heading or label (such as `Elapsed:hh:mm:ss`, which indicates elapsed time) is acceptable as a fragment.
 Use more than one sentence if required for clarity. | You must provide a name for each domain. null is not a valid domain name. | Write brief and simple sentences that clearly state the problem. Separate the sentences with a period (or question mark, if applicable), not with a semicolon.
-Avoid using only uppercase letters.	| *Use:* <br /> The requested image $UUID has automatic disk resizing disabled. <br /><br /> *Avoid:* <br /> THE REQUESTED IMAGE $UUID HAS AUTOMATIC DISK RESIZING DISABLED. | Lines with excessive capitalization are hard to read. Use all uppercase letters only for words that require it, such as a keyword, a data type, or a specific table name that is displayed in all uppercase letters to a database user.
+Avoid using only uppercase letters.	| *Use:* <br /><br /> The requested image $UUID has automatic disk resizing disabled. <br /><br /> *Avoid:* <br /><br /> THE REQUESTED IMAGE $UUID HAS AUTOMATIC DISK RESIZING DISABLED. | Lines with excessive capitalization are hard to read. Use all uppercase letters only for words that require it, such as a keyword, a data type, or a specific table name that is displayed in all uppercase letters to a database user.
 When possible, include a recommendation, either a potential fix or a reference to a document for more information.	| The system is out of virtual IP addresses. Contact Support so they can allocate more virtual IP addresses. <br /><br /> The value -1.0 cannot be accepted. Specify a positive integer value for the volume size. | Messages should provide specific information about how the user should continue.
-Be specific.	| *Use:* <br /> The live migration of instance 89a5e582-d3f3-4665-ate2-03c2114f0bib to host compute2 failed. <br /><br /> *Avoid:* <br /> Live migration failed. | Messages should provide as much detailed information as possible.
+Be specific.	| *Use:* <br /><br /> The live migration of instance 89a5e582-d3f3-4665-ate2-03c2114f0bib to host compute2 failed. <br /><br /> *Avoid:* <br /><br /> Live migration failed. | Messages should provide as much detailed information as possible.
 Use *n* to represent an unspecified or generic number. Use *x* to represent an unknown version number.	| The rate limit has been reached (*n* requests in 24 hours). Please try again later. <br /><br /> This option is available only for Ubuntu 12.*x*. | None
-Avoid blaming the user. | *Use:* <br /> The request could not be understood by the server because of malformed syntax. <br /><br /> *Avoid:* <br /> You entered bad request syntax. | Rewrite messages that imply fault on the part of the user. Use passive voice when necessary.
-When possible, use positive statements.	| *Use:* <br /> The given limit must be positive and must be less than 50. <br /><br /> *Avoid:* <br /> The given limit cannot be negative and cannot be greater than 50. | Positive statements are easier to understand than negative statements.
+Avoid blaming the user. | *Use:* <br /><br /> The request could not be understood by the server because of malformed syntax. <br /><br /> *Avoid:* <br /><br /> You entered bad request syntax. | Rewrite messages that imply fault on the part of the user. Use passive voice when necessary.
+When possible, use positive statements.	| *Use:* <br /><br /> The given limit must be positive and must be less than 50. <br /><br /> *Avoid:* <br /><br /> The given limit cannot be negative and cannot be greater than 50. | Positive statements are easier to understand than negative statements.
 <!--endtable-->
 
 ## Names
@@ -129,7 +129,7 @@ numeral.
 <!--table-->
 Use | Do not use
 --- | ---
-two panels <br /> zero probability <br /> Enter **0** (zero). *(acceptable)* | two (2) panels <br /> zero (0) probability
+two panels <br /><br /> zero probability <br /><br /> Enter **0** (zero). *(acceptable)* | two (2) panels <br /><br /> zero (0) probability
 <!--endtable-->
 
 ### Commas in numbers
@@ -143,7 +143,7 @@ the following types of numbers:
 <!--table-->
 Use | Do not use
 --- | ---
-9001 N IH 35 <br /> 1452.7532 <br /> page 1055 <br /> 1024 bytes | 9,001 N IH 35 <br /> 1,452.753,2 <br /> page 1,055 <br /> 1,024 bytes
+9001 N IH 35 <br /><br /> 1452.7532 <br /><br /> page 1055 <br /><br /> 1024 bytes | 9,001 N IH 35 <br /><br /> 1,452.753,2 <br /><br /> page 1,055 <br /><br /> 1,024 bytes
 <!--endtable-->
 
 **Note:** Do not use European-style numbering, which uses commas in the place
@@ -179,7 +179,7 @@ and apply italics.
 <!--table-->
 | Use |
 | --- |
-| Move the insertion point *n* spaces to the right. <br /> Select the **Use *n* I/O Sessions** check box. <br /> Your BlackBerry software must be version 4.*x*. |
+| Move the insertion point *n* spaces to the right. <br /><br /> Select the **Use *n* I/O Sessions** check box. <br /><br /> Your BlackBerry software must be version 4.*x*. |
 <!--endtable-->
 
 ## Parameters
@@ -257,9 +257,9 @@ When explaining a placeholder, use the following guidelines.
 <!--table-->
 Guidelines |	Example
 --- | ---
-Avoid stand-alone clauses that begin with *where*. Instead, use a sentence. | *Use:* <br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> *yourAccountId* is your actual account number, which is returned as part of the authentication service response. <br /> <br /> *Avoid:* <br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> where *yourAccountId* is your actual account number, which is returned as part of the authentication service response.
+Avoid stand-alone clauses that begin with *where*. Instead, use a sentence. | *Use:* <br /><br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> *yourAccountId* is your actual account number, which is returned as part of the authentication service response. <br /> <br /> *Avoid:* <br /><br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> where *yourAccountId* is your actual account number, which is returned as part of the authentication service response.
 If you need to explain two or more placeholders, use an unordered list. | From a supported web browser, type the following URL:<br /><br /> **http://hostName:portNumber/ed/index.html** <br /><br /> The placeholders in the URL are defined as follows:<br /><br /> &bull; *hostName* is the name of the host computer on which the application server is installed. <br /><br /> &bull; *portNumber* is the port number assigned to the application server. The default is 8082.
-Show the placeholder in regular text with the same formatting that it is shown in the path or code. For example, if you can show it in italics, use italics when explaining it. If you first show the placeholder in a code block and need to enclose it in angle brackets, show it in angle brackets and monospace when explaining it. | *Use:* <br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> *yourAccountId* is your actual account number, which is returned as part of the authentication service response.<br /><br /> *Use:* <br /> Run the following command, replacing `<dockerHostName>` with the name of your Docker host: <br /><br /> `docker-machine env <dockerHostName> --shell cmd`
+Show the placeholder in regular text with the same formatting that it is shown in the path or code. For example, if you can show it in italics, use italics when explaining it. If you first show the placeholder in a code block and need to enclose it in angle brackets, show it in angle brackets and monospace when explaining it. | *Use:* <br /><br /> **https://dfw.bigdata.api.rackspacecloud.com/v1.0/yourAccountId/** <br /><br /> *yourAccountId* is your actual account number, which is returned as part of the authentication service response.<br /><br /> *Use:* <br /><br /> Run the following command, replacing `<dockerHostName>` with the name of your Docker host: <br /><br /> `docker-machine env <dockerHostName> --shell cmd`
 <!--endtable-->
 
 ## Plurals
@@ -274,7 +274,7 @@ Guideline	| Example
 To form the plural of an abbreviation, an acronym, or a number, add a lowercase *s* without an apostrophe.<br /><br /> If an acronym already represents a plural noun, do not add an *s*. <br /><br /> **Note:** To refer to more than one FAQ document or section, add the appropriate noun after *FAQ* and make the noun plural—for example, *FAQ articles*. Follow this guideline for other plural acronyms when you need to refer to more than one instance of them. | CPUs, APIs, IDs, OSs, the 1990s, 0s and 1s <br /><br /> frequently asked questions (FAQ)
 To form the plural of a single letter or a symbol, add an apostrophe and a lowercase *s*. | x's, #'s
 Abbreviated units of measure are both singular and plural; no *s* is necessary.	| 5 mm, 20 in., 20 min
-Do not use *(s)*, */s*, *(es)*, or */es* at the end of a word to indicate the possibility of more than one item, and do not combine the singular and plural forms of a verb, such as *is/are*. Use the singular form or the plural form, use both forms joined by a conjunction, or use the phrase *one or more*. | *Use:*<br /> Close any application that is open. <br /><br /> Close any applications that are open. <br /> <br /> *Do not use:* <br /> Close any application(s) that is/are open.
+Do not use *(s)*, */s*, *(es)*, or */es* at the end of a word to indicate the possibility of more than one item, and do not combine the singular and plural forms of a verb, such as *is/are*. Use the singular form or the plural form, use both forms joined by a conjunction, or use the phrase *one or more*. | *Use:*<br /><br /> Close any application that is open. <br /><br /> Close any applications that are open. <br /> <br /> *Do not use:* <br /><br /> Close any application(s) that is/are open.
 <!--endtable-->
 
 ## Product names and version numbers
@@ -365,7 +365,7 @@ Use the following guidelines for colons.
 Guideline | Example
 --- | ---
 Use a colon at the end of a sentence that introduces a list. If another sentence intervenes between the introductory sentence and the list, use a period instead of a colon. <br /><br /> **Note:** Use a sentence, rather than a fragment, to introduce a list. Fragments are difficult to translate and can be harder to comprehend than sentences, so avoid using them to introduce lists. | The following monitoring checks are available to users: <br /><br /> You can use this product to perform the following tasks: <br /><br /> You can use this product to perform the following tasks. You must extract objects from the database to complete these tasks.
-In steps, use a colon to introduce code that the user is expected to enter.	| Run the following command: <br /> `nova list`
+In steps, use a colon to introduce code that the user is expected to enter.	| Run the following command: <br /><br /> `nova list`
 In a list item, if you need to separate an initial term or phrase from the information that follows it, use a colon. | **Public**: This setting allows any two servers with public IP addresses to be load balanced. These can be nodes outside of the Rackspace network, but if they are, standard bandwidth rates apply.
 Do not use a colon to end the introduction to a table, figure, or example. | The following figure shows an overview of Cloud Databases infrastructure. <br /><br /> In the following request example, `Content-Type` is set to `application/json`, but `application/xml` is requested in the `Accept` header. <br /><br /> Table 5.1 lists the endpoints to use for your Cloud Databases API calls.
 Do not use a colon at the end a table column header, a title, or a heading. | 3.2. Service Endpoints <br /><br /> To create a monitoring check <br /><br /> Table 3.1. Regionalized Service Endpoints <br /><br /> Example 4.4. List Versions Response: JSON
@@ -378,13 +378,13 @@ reference, such as the *Harbrace College Handbook*.
 <!--table-->
 Guideline | Correct | Incorrect
 --- | --- | ---
-In a series of three or more items, use serial commas (that is, precede the conjunction with a comma). | You can upgrade, migrate, and integrate the product. | You can upgrade, migrate and integrate the product.
+In a series of three or more items, use a serial comma (that is, precede the conjunction with a comma). | You can upgrade, migrate, and integrate the product. | You can upgrade, migrate and integrate the product.
 Do not use only a comma to separate independent clauses. Doing so creates a *comma splice*. <br /><br /> If you join independent clauses, insert a coordinating conjunction between them and precede the conjunction with a comma. | Click **Options**, and then click **Allow Fast Saves**. <br /><br /> The UUID for ServiceNet is `11111111-1111-1111-1111-111111111111`, and the UUID for PublicNet is `00000000-0000-0000-0000-000000000000`. | Click **Options**, then click **Allow Fast Saves**. <br /><br /> The UUID for ServiceNet is `11111111-1111-1111-1111-111111111111`, the UUID for PublicNet is `00000000-0000-0000-0000-000000000000`.
 Use a comma to set off a nonrestrictive clause (one that begins with *which*). <br /><br /> Do not use a comma to set off a restrictive clause (one that begins with *that*). | The hourly backups are rolled into a nightly backup, which is retained for two days. *(nonrestrictive)* <br /><br /> Enter the user name and password that you just created. *(restrictive)* | The hourly backups are rolled into a nightly backup which is retained for two days. <br /><br /> Enter the user name and password, that you just created.
 Use a comma to separate an introductory word, phrase, or clause from the rest of the sentence. | When you check your email with an IMAP connection, you are accessing and managing your email directly from the email server. <br /><br /> However, you can easily update the version by using the WordPress management dashboard. <br /><br /> Unlike the other alarms in this list, you set the network check alarm variable upon network check creation. <br /><br /> For more information, see <u>Upgrading your Private Cloud</u>. | When you check your email with an IMAP connection you are accessing and managing your email directly from the email server. <br /><br /> However you can easily update the version by using the WordPress management dashboard. <br /><br /> Unlike the other alarms in this list you set the network check alarm variable upon network check creation. <br /><br /> For more information see <u>Upgrading your Private Cloud</u>.
 Do not use a comma between the verbs in a compound predicate. | These open-source Python clients run on Linux or Mac OS X systems and are easy to learn and use. | These open-source Python clients run on Linux or Mac OS X systems, and are easy to learn and use.
 When a comma is required after a quotation that is embedded in text, place the comma inside the closing quotation mark. | In the section called "Parameters," enter the values for length, width, and height. | In the section called "Parameters", enter the values for length, width, and height.
-Use commas in numbers with four or more digits. However, do not use commas in the following types of numbers:<br /><br /> &bull; Addresses<br /> &bull; Fractional parts of decimal numbers<br /> &bull; Page numbers<br /> &bull; Literal representations of user-entered values or displayed values <br /><br /> **Note:** Do not use European-style numbering, which uses commas in the place of periods. For example, use 3.14159, not 3,14159. | 9001 N IH 35 <br /> 1,452.7532 <br /> page 1055 (but 1,055 pages) <br /> 1,024 bytes | 9,001 N IH 35 <br /> 1,452.753,2 <br /> page 1,055 <br /> 1024 bytes
+Use commas in numbers with five or more digits. However, do not use commas in the following types of numbers: addresses, fractional parts of decimal numbers, page numbers, literal representations of user-entered values or displayed values <br /><br /> **Note:** Do not use European-style numbering, which uses commas in the place of periods. For example, use 3.14159, not 3,14159. | 9001 N IH 35 <br /><br /> 1452.7532 <br /><br /> page 1055 <br /><br /> 1024 bytes | 9,001 N IH 35 <br /><br /> 1,452.753,2 <br /><br /> page 1,055 <br /><br /> 1,024 bytes
 When city and state names are embedded in a sentence, use a comma after the city and the state. | The company headquarters were in Kansas City, Missouri, before the merger. | The company headquarters were in Kansas City, Missouri before the merger.
 When a month, day, and year are embedded in a sentence, use a comma before and after the year. When only the month and year compose the date, omit the commas unless the syntax would ordinarily require a comma following the year. | The company acquired a German subsidiary on July 15, 2009, and is negotiating the purchase of a small Japanese company. <br /><br /> The publications plan was printed in November 2010 in Austin. <br /><br /> In December 2012, the database restoration failed. | The company acquired a German subsidiary on July 15, 2009 and is negotiating the purchase of a small Japanese company. <br /><br /> The publications plan was printed in November, 2010, in Austin. <br /><br /> In December 2012 the database restoration failed.
 <!--endtable-->
@@ -405,6 +405,7 @@ dash for the following purposes:
 
   **Note:** To show a range of numbers in text, use *to* or *through* instead
   of an en dash.
+
 - To represent a minus sign
 
 - To indicate a negative number
@@ -416,7 +417,7 @@ dash for the following purposes:
 <!--table-->
 | Correct |
 | --- |
-| approximately 10–20 diagrams <br /> options 11–15 <br /> 2010–2013 |
+| approximately 10–20 diagrams <br /><br /> options 11–15 <br /><br /> 2010–2013 |
 | `12–13=–1` |
 | Customer Support–related queries |
 <!--endtable-->
@@ -475,13 +476,13 @@ When two or more words precede and modify a noun as a unit (also called a
 <!--table-->
 Guideline | Example
 --- | ---
-To clarify meaning, use a hyphen. | *Ambiguous:* <br /> high level language compiler <br /> (a language compiler that is high level or a compiler of high-level languages?) <br /><br /> *Clear:* <br /> high-level-language compiler <br /> (clearly a compiler of high-level languages)
-Words that you hyphenate as compound modifiers preceding a noun might not be hyphenated in other parts of a sentence or when used as another part of speech. Hyphenate only if needed for clarity. <br /> <br /> **Note:** One exception is *up-to-date*, which is hyphenated in any position in a sentence. | local-level attributes <br /> attributes that are defined at the local level <br /><br /> up-to-date content <br /> content is up-to-date
-If the first component of a compound modifier is a number, use a hyphen. | 32-bit operating system <br /> three-tier architecture <br /> 80-character line length <br /> 3.5-inch disk
-If the first word of a compound modifier is an adverb ending in *-ly*, do not hyphenate the modifier. | newly designed interface <br /> recently upgraded product <br /> fully qualified domain name
+To clarify meaning, use a hyphen. | *Ambiguous:* <br /><br /> high level language compiler <br /><br /> (a language compiler that is high level or a compiler of high-level languages?) <br /><br /> *Clear:* <br /><br /> high-level-language compiler <br /><br /> (clearly a compiler of high-level languages)
+Words that you hyphenate as compound modifiers preceding a noun might not be hyphenated in other parts of a sentence or when used as another part of speech. Hyphenate only if needed for clarity. <br /> <br /> **Note:** One exception is *up-to-date*, which is hyphenated in any position in a sentence. | local-level attributes <br /><br /> attributes that are defined at the local level <br /><br /> up-to-date content <br /><br /> content is up-to-date
+If the first component of a compound modifier is a number, use a hyphen. | 32-bit operating system <br /><br /> three-tier architecture <br /><br /> 80-character line length <br /><br /> 3.5-inch disk
+If the first word of a compound modifier is an adverb ending in *-ly*, do not hyphenate the modifier. | newly designed interface <br /><br /> recently upgraded product <br /><br /> fully qualified domain name
 If one of the elements of a compound modifier is an open compound (multiple words that constitute a single concept, like Customer Support), use an en dash, not a hyphen, to separate the open compound from the rest of the modifier. | Customer Support–related queries
-If one of the elements of a compound modifier is a trademark, do not hyphenate the modifier. | *Use:* <br /> specific to Java <br /> Java specific <br /><br /> *Do not use:* <br /> Java-specific
-Avoid using suspended compound adjectives, unless space is limited. In a suspended compound adjective, part of the adjective is separated from the rest of the adjective, such as *first-* in *first- and next-generation servers*. If you must use suspended compound adjectives, include a hyphen with both adjectives. Avoid forming suspended compound adjectives from one-word adjectives. | *Use:* <br /> You can use any combination of uppercase and lowercase letters in a password. <br /><br /> Click the upper-right or lower-right corner. <br /><br /> *Avoid:* <br /> You can use any combination of upper- and lowercase letters in a password. <br /><br /> Click the upper- or lower-right corner.
+If one of the elements of a compound modifier is a trademark, do not hyphenate the modifier. | *Use:* <br /><br /> specific to Java <br /><br /> Java specific <br /><br /> *Do not use:* <br /><br /> Java-specific
+Avoid using suspended compound adjectives, unless space is limited. In a suspended compound adjective, part of the adjective is separated from the rest of the adjective, such as *first-* in *first- and next-generation servers*. If you must use suspended compound adjectives, include a hyphen with both adjectives. Avoid forming suspended compound adjectives from one-word adjectives. | *Use:* <br /><br /> You can use any combination of uppercase and lowercase letters in a password. <br /><br /> Click the upper-right or lower-right corner. <br /><br /> *Avoid:* <br /><br /> You can use any combination of upper- and lowercase letters in a password. <br /><br /> Click the upper- or lower-right corner.
 <!--endtable-->
 
 #### Hyphens with prefixes
@@ -542,10 +543,10 @@ Place periods inside quotation marks, unless the quotation marks are part of a l
 When introducing a list, if one or more sentences separate the introductory sentence from the list, end each sentence with a period. | You can use this product to perform the following tasks. You must extract objects from the database to complete these tasks.
 Use periods in list items as follows: <br /><br /> &bull; If all of the items in a list are sentences, including imperative statements, end each item with a period.  <br /> <br /> &bull; If all of the items in a list are fragments, do not end the items with a period. <br /><br /> &bull; In a list of fragments, some or all of which are followed by sentences, end every fragment and sentence in the list with a period. | See the examples in [Writing list items](../a-l-style-guidelines.html#writing-list-items).
 Use a period after an introduction to a table, figure, or example. | The following figure shows an overview of Cloud Databases infrastructure.
-In glossary definitions, end the definition with a period, even if the definition is only a phrase.	| **token**  <br /> An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration.
-Use periods only with abbreviations that could otherwise be misread as a word, such as *in.* (for *inch*). Also, use periods in the abbreviations *a.m.* and *p.m.* | 25 mm <br /> 12 in. <br /> FAQ
+In glossary definitions, end the definition with a period, even if the definition is only a phrase.	| **token**  <br /><br /> An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration.
+Use periods only with abbreviations that could otherwise be misread as a word, such as *in.* (for *inch*). Also, use periods in the abbreviations *a.m.* and *p.m.* | 25 mm <br /><br /> 12 in. <br /><br /> FAQ
 Precede a file name extension with a period.  <br /><br /> Assume that the period in a file name extension is pronounced as *dot*, and use the indefinite article *a*. | Copy the **.conf** file to your directory.
-Do not end a title or a heading with a period. | To create a monitoring check <br /> Table 3.1. Regionalized service endpoints
+Do not end a title or a heading with a period. | To create a monitoring check <br /><br /> Table 3.1. Regionalized service endpoints
 <!--endtable-->
 
 ### Quotation marks
@@ -600,7 +601,7 @@ For guidelines about using specific marks of punctuation, see
 Guideline	| Example
 --- | ---
 When referring explicitly to a symbol in text, do not show only the symbol. Show the name of the symbol, or the name followed by the symbol in parentheses. <br /><br /> On subsequent uses of the symbol, you can use just the name. <br /><br /> If the symbol is a common mark of punctuation, like a period or a comma, do not show the mark in parentheses. | Escape the line by typing a backslash (/) character. <br /><br /> To find files that were modified more than two days ago, type a plus sign (+) in front of the 2. <br /><br /> Type a comma.
-Use a symbol *instead of* the name of the symbol only if space is limited (for example, in a table). Do not use symbols in running text.	| *Body text:* <br /> &bull; 45 percent <br /> &bull; 16 degrees <br /> &bull; 1,800 dollars <br /><br /> *Limited space:* <br /> &bull; 45% <br /> &bull; 16º <br /> &bull; $1,800
+Use a symbol *instead of* the name of the symbol only if space is limited (for example, in a table). Do not use symbols in running text.	| *Body text:* <br /><br /> 45 percent <br /><br /> 16 degrees <br /><br /> 1,800 dollars <br /><br /> *Limited space:* <br /><br /> 45% <br /><br /> 16º <br /><br /> $1,800
 Do not insert a space between a number and a symbol, except when the symbol is used as a mathematical operator. | For files that use a total of 1,500 KB and a record size of 256, the equation is as follows:<br /> `1,500,000 ÷ 256 = 5,860`
 To separate the options in a menu path, use right-angle brackets (>) surrounded by spaces. |	Open Mac Mail and select **Preferences > Accounts**.
 <!--endtable-->
@@ -799,7 +800,7 @@ clarity.
 <!--table-->
 | Use | Do not use |
 | --- | --- |
-| Create users in SQL Server <br /> Configure SQL Server Management Studio to connect to SQL Server on Windows <br /> Add new ServiceNet routes to a server | Creating users in SQL Server <br /> How to create users in SQL Server <br /> To create users in SQL Server |
+| Create users in SQL Server <br /><br /> Configure SQL Server Management Studio to connect to SQL Server on Windows <br /><br /> Add new ServiceNet routes to a server | Creating users in SQL Server <br /><br /> How to create users in SQL Server <br /><br /> To create users in SQL Server |
 <!--endtable-->
 
 For guidelines about capitalizing titles, see
@@ -1153,7 +1154,7 @@ numbers with a plus sign.
 <!--table-->
 US and Canadian | All others
 --- | ---
-1 210 312 4600	| +44 0 20 8734 2700 <br /> +45 7734 5764
+1 210 312 4600	| +44 0 20 8734 2700 <br /><br /> +45 7734 5764
 <!--endtable-->
 
 If you are showing phone numbers in screenshots or in examples, use the
@@ -1225,7 +1226,7 @@ Emphasis | Italic | Offset *must* be a multiple of the limit (or zero); otherwis
 Equations | Monospace | ``(600,000 – 400,000) ÷ 400,000 = 50%``
 Error messages | Monospace | In SQL Server Management Studio, when you right-click a SQL Server 2012 database and selecting **Properties**, the following error message appears: <br /> <br /> ``The user does not have permission to perform this action.``
 Hyperlinks (live) | See [Links and cross-references](a-l-style-guidelines.md#links). | Not applicable
-Keyboard key combinations, names, and shortcuts | *(Public)* Bold <br /> <br /> *(Private)* Monospace | *(Public)* To skip to the end of the file, press **Shift-G**. <br /> *(Public)* Press **Enter**. <br /> <br /> *(Private)* To skip to the end of the file, press `Shift-G`. <br /> *(Private)* Press `Enter`.
+Keyboard key combinations, names, and shortcuts | *(Public)* Bold <br /> <br /> *(Private)* Monospace | *(Public)* To skip to the end of the file, press **Shift-G**. <br /><br /> *(Public)* Press **Enter**. <br /> <br /> *(Private)* To skip to the end of the file, press `Shift-G`. <br /><br /> *(Private)* Press `Enter`.
 Letters as letters | Italic | Place *i* before *e* except after *c*.
 Links (live) | See [Links and cross-references](../a-l-style-guidelines.html#links-and-cross-references). | Not applicable
 Messages, error | Monospace | In SQL Server Management Studio, when you right-click a SQL Server 2012 database and selecting **Properties**, the following error message appears: <br /> <br /> ``The user does not have permission to perform this action.``
@@ -1234,10 +1235,10 @@ Permissions	| Regular text	| Log in to a shell as the user who has write permiss
 Placeholder text (variable text)	| See [Placeholder (variable) text](#placeholder-variable-text) | Not applicable
 Privileges | Regular text | The following examples assume that you are making the firewall changes as a normal user with sudo privileges. <br /> <br /> The user is granted ALL privileges on the database.
 Qualifiers | Italic | 1. *(Optional)* Enter a new name for the image. <br /> <br /> You can tell that the Managed Cloud post-build automation has successfully completed as follows: <br /> <br /> *(Windows servers)* The following file is created: **C:\\windows\\temp\\rs_managed_cloud_automation_complete.txt** <br /> <br /> *(Linux servers)* The following file is created: **/tmp/rs_managed_cloud_automation_complete**
-Quotations <br /> (content quoted from another source) | Quotation marks, or block quote formatting | "Scalability is key for our business," explained Nathan Goff, Inavero Operations Director and Partner. "There's nothing worse than making our clients look bad to their customers."
+Quotations <br /><br /> (content quoted from another source) | Quotation marks, or block quote formatting | "Scalability is key for our business," explained Nathan Goff, Inavero Operations Director and Partner. "There's nothing worse than making our clients look bad to their customers."
 Role names | Regular text | The full access role has the permissions to create, read, update, and delete resources within multiple designated products where access is granted.
 Terms, new | Italic | Cloud Servers that are built using the base Linux images are created without a dedicated swap partition and with *swappiness* (a measure of how the Linux kernel tries to use swap memory) set to 0.
-Terms, unique sense | Regular text <br /> Quotation marks on first use | The spelling checker "learns" the word. After it learns the word, the spelling checker ignores subsequent occurrences of the word in the document.
+Terms, unique sense | Regular text <br /><br /> Quotation marks on first use | The spelling checker "learns" the word. After it learns the word, the spelling checker ignores subsequent occurrences of the word in the document.
 URLs (not live) | Bold | To access the web interface, open your web browser and navigate to **http:// *yourDomain.com*/zipit-install.php**.
 URLs (live) | See [Links and cross-references]((../a-l-style-guidelines.html#links-and-cross-references)). | Not applicable
 Variable text (placeholder text) | See [Placeholder (variable) text](#placeholder-variable-text) | Not applicable
@@ -1256,7 +1257,7 @@ Argument names | Monospace | To list or retrieve files from a node that is runni
 Attribute names | Monospace | The `expires` attribute denotes the time after which the token automatically becomes invalid.
 Code | Monospace | `$ grep "ftp" /etc/xinetd.d/*` <br /> ` /etc/xinetd.d/vsftpd:service ftp` <br /> `/etc/xinetd.d/vsftpd:server = /usr/sbin/vsftpd` <br /><br /> To set the environment variable, run `export token="token"`.
 Command names (CLI) | *(Public)* Monospace <br /><br /> *(Private)* Bold, by applying the `:command:` directive in RST | *(Public)* You can check the architecture on Linux by using the `uname -a` command. <br /><br /> *(Private)* You can check the architecture on Linux by using the **uname -a** command.
-Command syntax | Monospace | If a service is not running, use the service command to start it, as follows: <br /> ``$ sudo service httpd start``
+Command syntax | Monospace | If a service is not running, use the service command to start it, as follows: <br /><br /> ``$ sudo service httpd start``
 Database names | Monospace | Start by creating a new database called `mytestdb`.
 Directory names | Monospace | The following example shows a basic configuration for the FTP service, in a file in the ``/etc/xinetd.d directory``.
 Element names | Monospace | The `message` element returns a human-readable message that is appropriate for display to the end user.
@@ -1267,12 +1268,12 @@ Flags | Monospace | Use the ``-t`` flag to add a time stamp to the results.
 Folder names | Monospace | Copy the `index.php` file from your computer to the `content` folder.
 Functions | Monospace | Container names are sorted based on a binary comparison, a single built-in collating sequence that compares string data using the ``memcmp()`` function, regardless of text encoding.
 HTML tags | Monospace | Avoid putting the `xml:id` attribute on the `title` tag.
-Method names (HTTP) | Bold <br /> All capitals | Client authentication is provided through a REST interface by using the **GET** method.
+Method names (HTTP) | Bold <br /><br /> All capitals | Client authentication is provided through a REST interface by using the **GET** method.
 Option names, command	| Monospace <br /> <br /> In RST, apply the `:option:` directive. |	The ``--ip-addresses`` option specifies the IP address and an alias for the target.
 Package names	| Monospace |	You must install the `libvirt` package.
 Parameter names	| Monospace <br /> <br /> In RST, apply the `:option:` directive. | The `display_description` parameter is optional. <br /><br /> Use the ``--flavor`` and ``--image`` parameters to specify the IDs or names of the flavor and image to use for the image.
 Paths | Monospace | The path to Perl is ``#!/usr/bin/perl -w``. <br /><br /> In the URI path ``https://incident.api.rackspacecloud.com/v1/...``, the API version is 1.
-Syntax statements | Monospace | The main command used to change a file’s owner or group is `chown`. The most common syntax used with `chown` is as follows: <br /> `chown user:group file1 file2 file3`
+Syntax statements | Monospace | The main command used to change a file’s owner or group is `chown`. The most common syntax used with `chown` is as follows: <br /><br /> `chown user:group file1 file2 file3`
 User input | Monospace | Create a file by using a text editor, and insert the following code: ``<?php phpinfo(); ?>`` <br /><br /> For the username, enter `admin`.
 Variables, environment | Monospace | You can set the `MYSQL_HOST` environment variable to the remote host's address. <br /><br /> You can export the tenant ID to the ``$account`` environment variable and the authentication token to the ``$token`` environment variable.
 <!--endtable-->
@@ -1308,7 +1309,7 @@ Menu names, commands, and sequences | Bold <br /><br /> In RST, apply the `:menu
 Option button names	| Bold | Select **Microsoft Exchange** and then click **Next**.
 Page names | Regular text | On the Preferences page, you determine how frequently you receive email about all the activity on your account: daily, weekly, or both. <br /><br /> On the Server Settings page, click **Check Name**, type your password, and then click **OK**.
 Panes, named and unnamed | Regular text | To verify that your SSL binding works, select your website in the Connections pane (if it is not already selected) and then click **Browse *ipAddress* (https)** in the Actions pane. <br /><br /> In the navigation pane, select **Composing Email**.
-Paths	| *(Public)* Bold <br /><br /> *(Private)* Monospace | *(Public)* The path to Perl is **#!/usr/bin/perl -w**. <br /> *(Public)* In the URI path **https://incident.api.rackspacecloud.com/v1/...**, the API version is 1. <br /> <br /> *(Private)* The path to Perl is `#!/usr/bin/perl -w`. <br /> *(Private)* In the URI path `https://incident.api.rackspacecloud.com/v1/...`, the API version is 1.
+Paths	| *(Public)* Bold <br /><br /> *(Private)* Monospace | *(Public)* The path to Perl is **#!/usr/bin/perl -w**. <br /><br /> *(Public)* In the URI path **https://incident.api.rackspacecloud.com/v1/...**, the API version is 1. <br /> <br /> *(Private)* The path to Perl is `#!/usr/bin/perl -w`. <br /><br /> *(Private)* In the URI path `https://incident.api.rackspacecloud.com/v1/...`, the API version is 1.
 Radio button names | Bold | Select **Microsoft Exchange** and then click **Next**.
 Sequences <br /> (menu, field) | Bold <br /><br /> Use **>** to separate. <br /><br /> In RST, apply the `:menuselection:` directive.  | Select **Start > Control Panel**, and then click the **Mail** icon. <br /><br /> You can find more documentation about RackConnect in the **Community > Discussions > RackConnect** section of the MyRackspace Portal.
 Tab names | Bold | In the Microsoft Exchange dialog box, click the **Connection** tab and then select the **Connect to Microsoft Exchange using HTTP** check box.
@@ -1449,7 +1450,7 @@ articles on the Support site or in other collections of documentation:
   articles:
 
 <!--table-->
-For the title of an article that provides mainly this kind of information | Begin with this grammatical structure | Examples
+Article type | Grammatical structure | Examples
 --- | --- | ---
 Conceptual |	Any grammatical structure that is appropriate, except a verb, gerund, or infinitive.	| Linux distributions <br /> <br /> Best practices for backing up your data: Cloud Block Storage versus Cloud Backup
 Step-by-step instructions (a task) |	An imperative verb. | Identify network interfaces on Linux <br /> <br /> Prepare data disks on Performance Cloud Servers running Windows <br /> <br /> Set up Mobile Sync For Webmail: iPhone and iPad
@@ -1565,7 +1566,7 @@ headings within sections.
   sections:
 
 <!--table-->
-For the title of a section that provides mainly this kind of information | Begin with this grammatical structure | Example
+Section type | Grammatical structure | Examples
 --- | --- | ---
 Conceptual | Any grammatical structure that is appropriate, except a verb, gerund, or infinitive.	| Core concepts <br /><br /> How Cloud Monitoring works <br /><br /> Limitations of detaching from Rackspace networks
 Step-by-step instructions (a task) |	An imperative verb.	| Sign up for a Rackspace Cloud account <br /><br /> Authenticate with the nova client
