@@ -1,8 +1,8 @@
 # Style guidelines for technical content
 
 This folder contains writing, style, and terminology guidelines for Rackspace
-Public Cloud and Private Cloud documentation. Use these guidelines to create 
-clear, concise, and consistent technical documentation for Rackspace Cloud 
+Public Cloud and Private Cloud documentation. Use these guidelines to create
+clear, concise, and consistent technical documentation for Rackspace Cloud
 services.
 
 - [Basic writing guidelines](basic-writing-guidelines.md)
@@ -13,5 +13,5 @@ services.
 - [Release notes guidelines](release-notes-guidelines.md)
 - [Style guide revision history](revision-history.md)
 
-**Note:** A GitHub pages rendering of the style guide is available at 
+**Note:** A GitHub pages rendering of the style guide is available at
 http://rackerlabs.github.io/docs-rackspace/style-guide/index.html.

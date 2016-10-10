@@ -1,6 +1,8 @@
 # A-L style reference
 
-This section of the writing style guide provides detailed guidelines about and instructions for applying style conventions. For more guidelines, see [M-Z style reference](m-z-style-guidelines.md).
+This section of the writing style guide provides detailed guidelines about and
+instructions for applying style conventions. For more guidelines, see [M-Z
+style reference](m-z-style-guidelines.md).
 
 - [Acronyms and other abbreviations](#acronyms-and-other-abbreviations)
 - [Capitalization](#capitalization)
@@ -19,11 +21,22 @@ This section of the writing style guide provides detailed guidelines about and i
 - [Lists](#lists)
 
 ## Acronyms and other abbreviations
-Unless an abbreviation is common, spell out the root words of the abbreviation on the first use in an article or topic. Show the abbreviation in parentheses after the spelled-out term. On subsequent uses in the article or topic, use the abbreviation. If you introduce an abbreviation, use it; do not alternate between the abbreviation and the spelled-out term.
+Unless an abbreviation is common, spell out the root words of the abbreviation
+on the first use in an article or topic. Show the abbreviation in parentheses
+after the spelled-out term. On subsequent uses in the article or topic, use the
+abbreviation. If you introduce an abbreviation, use it; do not alternate
+between the abbreviation and the spelled-out term.
 
-**Note:** In FAQ documents, users are likely to skip directly to a specific Q&A pair and therefore might miss the spelling out of an abbreviation earlier in the FAQ. Follow the preceding guideline for each Q&A pair, which might result in spelling out a term and introducing the abbreviation several times within one FAQ document.
+**Note:** In FAQ documents, users are likely to skip directly to a specific Q&A
+pair and therefore might miss the spelling out of an abbreviation earlier in
+the FAQ. Follow the preceding guideline for each Q&A pair, which might result
+in spelling out a term and introducing the abbreviation several times within
+one FAQ document.
 
-Do not capitalize the spelled-out term unless it is a proper name or normally capitalized. For example, the spelled-out term for *AJAX* is *Asynchronous JavaScript and XML*, but the spelled-out term for *ACL* is *access control list*.
+Do not capitalize the spelled-out term unless it is a proper name or normally
+capitalized. For example, the spelled-out term for *AJAX* is *Asynchronous
+JavaScript and XML*, but the spelled-out term for *ACL* is *access control
+list*.
 
 <!--table-->
 Occurrence | Use | Do not use
@@ -53,7 +66,11 @@ Do not use Latin abbreviations or non-English words and phrases. For more inform
 <!--endtable-->
 
 ### Abbreviations of byte and bit
-*Byte* is abbreviated with an uppercase *B*. *Bit* is abbreviated with a lowercase *b*. For example, *gigabyte* is abbreviated as *GB*, and *gigabit* is abbreviated as *Gb*. In general, use such abbreviations only with a number value; otherwise, spell out the term. If you want to emphasize *bit* or *byte*, use the spelled-out term rather than or in addition to the abbreviation.
+*Byte* is abbreviated with an uppercase *B*. *Bit* is abbreviated with a
+lowercase *b*. For example, *gigabyte* is abbreviated as *GB*, and *gigabit* is
+abbreviated as *Gb*. In general, use such abbreviations only with a number
+value; otherwise, spell out the term. If you want to emphasize *bit* or *byte*,
+use the spelled-out term rather than or in addition to the abbreviation.
 
 <!--table-->
 | Examples |
@@ -63,12 +80,23 @@ Do not use Latin abbreviations or non-English words and phrases. For more inform
 <!--endtable-->
 
 ### Common abbreviations
-A common abbreviation is either an industry-standard abbreviation or one that is well known to the target audience for the product or service that you are documenting. Following are some common abbreviations in the computer industry. You do not need to spell out these terms on first use, unless you think the abbreviation is unfamiliar to your particular audience.
+A common abbreviation is either an industry-standard abbreviation or one that
+is well known to the target audience for the product or service that you are
+documenting. Following are some common abbreviations in the computer industry.
+You do not need to spell out these terms on first use, unless you think the
+abbreviation is unfamiliar to your particular audience.
 
-API, ASCII, BIOS, CD, CD-ROM, CGI, CLI, CPU, CSS, DNS, DVD, FAQ, FTP, GB, GHz, GUI, GUID, HTML, HTTP, HTTPS, ID, IMAP, I/O, IP, JSON, KB, kHz, LAN, LDAP, MB, MHz, NIC, NTFS, OLE, OS, PDF, PHP, POP, RAM, REST, ROM, SGML, SMTP, SQL, SSL, TCP, TCP/IP, URI, URL, USB, VLAN, WAN, XML
+API, ASCII, BIOS, CD, CD-ROM, CGI, CLI, CPU, CSS, DNS, DVD, FAQ, FTP, GB, GHz,
+GUI, GUID, HTML, HTTP, HTTPS, ID, IMAP, I/O, IP, JSON, KB, kHz, LAN, LDAP, MB,
+MHz, NIC, NTFS, OLE, OS, PDF, PHP, POP, RAM, REST, ROM, SGML, SMTP, SQL, SSL,
+TCP, TCP/IP, URI, URL, USB, VLAN, WAN, XML
 
 ## Capitalization
-Be judicious and consistent in your use of capitalization. Use capitalization for proper names and proper adjectives and when it is stylistically required. Do not use it for common nouns, for emphasis, to attempt to give a word greater status than other words, or randomly. This topic provides capitalization guidelines for the following items:
+Be judicious and consistent in your use of capitalization. Use capitalization
+for proper names and proper adjectives and when it is stylistically required.
+Do not use it for common nouns, for emphasis, to attempt to give a word greater
+status than other words, or randomly. This topic provides capitalization
+guidelines for the following items:
 
 - [Terms](#terms)
 - [Code](#code)
@@ -81,20 +109,30 @@ Be judicious and consistent in your use of capitalization. Use capitalization fo
 - [Capitalization with punctuation](#capitalization-with-punctuation)
 
 ### Terms
-Use the following guidelines to help you decide whether a word should be capitalized.
-For the correct capitalization of some common terms, see [Terminology](terminology-guidelines.md).
+Use the following guidelines to help you decide whether a word should be
+capitalized. For the correct capitalization of some common terms, see
+[Terminology](terminology-guidelines.md).
 
-- [Capitalize proper nouns and adjectives](#capitalize-proper-nouns-and-adjectives)
-- [Capitalize most acronyms, initialisms, and short forms of names](#capitalize-most-acronyms-initialisms-and-short-forms-of-names)
-- [Capitalize interface labels as they are capitalized on the interface](#capitalize-interface-labels-as-they-are-capitalized-on-the-interface)
-- [Capitalize the names of major components, systems, or utilities associated with a product](#generally-capitalize-the-names-of-major-components-systems-or-utilities-associated-with-a-product)
+- [Capitalize proper nouns and
+  adjectives](#capitalize-proper-nouns-and-adjectives)
+- [Capitalize most acronyms, initialisms, and short forms of
+  names](#capitalize-most-acronyms-initialisms-and-short-forms-of-names)
+- [Capitalize interface labels as they are capitalized on the
+  interface](#capitalize-interface-labels-as-they-are-capitalized-on-the-interface)
+- [Capitalize the names of major components, systems, or utilities associated
+  with a
+  product](#generally-capitalize-the-names-of-major-components-systems-or-utilities-associated-with-a-product)
 - [Do not capitalize common nouns](#do-not-capitalize-common-nouns)
 - [Do not use all capitals for emphasis](#do-not-use-all-capitals-for-emphasis)
 
 #### Capitalize proper nouns and adjectives
-Proper nouns and adjectives include the names of people, places, companies, organizations, products, languages, protocols, and some technologies, as well as trademarks.
+Proper nouns and adjectives include the names of people, places, companies,
+organizations, products, languages, protocols, and some technologies, as well
+as trademarks.
 
-Be aware that some of these names might have nonstandard or no capitalization. You should always follow the capitalization that is used by the company, shown in a dictionary, or accepted as standard in the industry.
+Be aware that some of these names might have nonstandard or no capitalization.
+You should always follow the capitalization that is used by the company, shown
+in a dictionary, or accepted as standard in the industry.
 
 <!--table-->
 Examples | &nbsp;
@@ -109,12 +147,19 @@ SQL Server | Wi-Fi
 PuTTY | lighttpd
 <!--endtable-->
 
-For the correct capitalization of Rackspace product names, see the [Rackspace Cloud corporate website](https://www.rackspace.com/cloud).
+For the correct capitalization of Rackspace product names, see the [Rackspace
+Cloud corporate website](https://www.rackspace.com/cloud).
 
-For the correct capitalization of some commonly used third-party names, see [Third-party names and trademarks](../terminology-guidelines.html#third-party-terms).
+For the correct capitalization of some commonly used third-party names, see
+[Third-party names and
+trademarks](../terminology-guidelines.html#third-party-terms).
 
 #### Capitalize most acronyms, initialisms, and short forms of names
-Most abbreviated forms of terms use all capitals, although exceptions exist. Also, be aware that the corresponding spelled-out terms of abbreviations are often not capitalized. When in doubt about the capitalization of an abbreviation or its spelled-out term, consult a dictionary, industry style guide, reputable website, or editor. Following are some examples.
+Most abbreviated forms of terms use all capitals, although exceptions exist.
+Also, be aware that the corresponding spelled-out terms of abbreviations are
+often not capitalized. When in doubt about the capitalization of an
+abbreviation or its spelled-out term, consult a dictionary, industry style
+guide, reputable website, or editor. Following are some examples.
 
 <!--table-->
 Abbreviation	| Spelled out term
@@ -131,12 +176,15 @@ SOA | service-oriented architecture
 WSDL | Web Services Description Language
 <!--endtable-->
 
-For more information about abbreviations, see [Acronyms and other abbreviations](#acronyms-and-other-abbreviations).
+For more information about abbreviations, see [Acronyms and other
+abbreviations](#acronyms-and-other-abbreviations).
 
 #### Capitalize interface labels as they are capitalized on the interface
-When you are documenting part of the interface within a procedure or other type of article or topic, match the capitalization used on the interface.
+When you are documenting part of the interface within a procedure or other type
+of article or topic, match the capitalization used on the interface.
 
-However, when you use terms from the interface as common nouns, do not capitalize the terms.
+However, when you use terms from the interface as common nouns, do not
+capitalize the terms.
 
 <!--table-->
 | Use |
@@ -145,14 +193,30 @@ However, when you use terms from the interface as common nouns, do not capitaliz
 | From the Cloud Control Panel, you can rename a check. |
 <!--endtable-->
 
-#### Generally, capitalize the names of major components, systems, or utilities associated with a product
-Follow the capitalization of major component names that is established by Marketing, Legal, and the product teams. However, be wary of overcapitalization of product terms. Not every feature or object in a product is a proper noun. For example, the Cloud Servers service enables users to create a *server*, not a *Server*. When the user creates a server, the user specifies an *image*, *flavor*, and *network*, not an *Image*, *Flavor*, and *Network*. A Performance server has a *data disk* and a *system disk*, not a *Data disk* and a *System disk*. A customer uses Cloud Load Balancer to create a *load balancer*, not a *Load Balancer*.
+#### Generally, capitalize the names of major components, systems, or utilities
+#### associated with a product
+Follow the capitalization of major component names that is established by
+Marketing, Legal, and the product teams. However, be wary of overcapitalization
+of product terms. Not every feature or object in a product is a proper noun.
+For example, the Cloud Servers service enables users to create a *server*, not
+a *Server*. When the user creates a server, the user specifies an *image*,
+*flavor*, and *network*, not an *Image*, *Flavor*, and *Network*. A Performance
+server has a *data disk* and a *system disk*, not a *Data disk* and a *System
+disk*. A customer uses Cloud Load Balancer to create a *load balancer*, not a
+*Load Balancer*.
 
-Many terms that might be capitalized on the interface are not capitalized when used as common nouns. When in doubt, consult an existing style sheet, an editor, or the product team (but be aware that product teams sometimes tend to overcapitalize terms). Following are some tips to help you determine whether a noun should be capitalized:
+Many terms that might be capitalized on the interface are not capitalized when
+used as common nouns. When in doubt, consult an existing style sheet, an
+editor, or the product team (but be aware that product teams sometimes tend to
+overcapitalize terms). Following are some tips to help you determine whether a
+noun should be capitalized:
 
-- Generally, if you can have more than one of something, it is a common noun and therefore not capitalized.
-- When a common noun follows the name of a product or component, generally that noun is not capitalized.
-- When you refer generally to a component, you can use lowercase (as in the utility or the agent).
+- Generally, if you can have more than one of something, it is a common noun
+  and therefore not capitalized.
+- When a common noun follows the name of a product or component, generally that
+  noun is not capitalized.
+- When you refer generally to a component, you can use lowercase (as in the
+  utility or the agent).
 
 <!--table-->
 | Examples |
@@ -168,7 +232,12 @@ Many terms that might be capitalized on the interface are not capitalized when u
 <!--endtable-->
 
 #### Do not capitalize common nouns
-Most of the time, we have no trouble determining whether a noun is proper or common. However, there is a tendency to capitalize product-specific terms even when they are really just being used as common nouns. A common noun denotes a whole class of something (for example, *servers*) or a random member of a class (for example, *a server*). As a general rule, if you can have more than one of something, it is a common noun and therefore not capitalized.
+Most of the time, we have no trouble determining whether a noun is proper or
+common. However, there is a tendency to capitalize product-specific terms even
+when they are really just being used as common nouns. A common noun denotes a
+whole class of something (for example, *servers*) or a random member of a class
+(for example, *a server*). As a general rule, if you can have more than one of
+something, it is a common noun and therefore not capitalized.
 
 <!--table-->
 Use | Do not use
@@ -178,24 +247,38 @@ Repose authentication provides caching for user tokens, roles, and groups. |	Rep
 <!--endtable-->
 
 #### Do not use all capitals for emphasis
-To emphasize a term, show it in italics. To emphasize an important piece of information, consider setting it apart structurally, perhaps as a note.
+To emphasize a term, show it in italics. To emphasize an important piece of
+information, consider setting it apart structurally, perhaps as a note.
 
 ### Code
-If you are showing sample code, follow the conventions of the programming language used and preserve the capitalization that the author of the code used.
+If you are showing sample code, follow the conventions of the programming
+language used and preserve the capitalization that the author of the code used.
 
 ### Variables and placeholders
-Use camelCase (for example, *userName*) unless you have to follow the conventions of the programming language. For example, you might need to use underscores (*user_name*) or all capitals (*USER_NAME*).
-For more information about formatting placeholders, see [Text formatting](../m-z-style-guidelines.html#text-formatting).
+Use camelCase (for example, *userName*) unless you have to follow the
+conventions of the programming language. For example, you might need to use
+underscores (*user_name*) or all capitals (*USER_NAME*). For more information
+about formatting placeholders, see [Text
+formatting](../m-z-style-guidelines.html#text-formatting).
 
 ### Titles and headings
-Use [sentence-style capitalization](#sentence-style-capitalization) for most titles and headings, including article, chapter, table, figure, and example titles, as well as section and procedure headings. One exception is book titles, which use [title-style capitalization](#title-style-capitalization).
+Use [sentence-style capitalization](#sentence-style-capitalization) for most
+titles and headings, including article, chapter, table, figure, and example
+titles, as well as section and procedure headings. One exception is book
+titles, which use [title-style capitalization](#title-style-capitalization).
 
-For additional guidelines for titles and headings, see [Titles and headings](../m-z-style-guidelines.html#titles-headings).
+For additional guidelines for titles and headings, see [Titles and
+headings](../m-z-style-guidelines.html#titles-headings).
 
 #### Guidelines for sentence-style capitalization
-In sentence-style capitalization, you capitalize only the first word of the title or heading, plus any proper nouns, proper adjectives, and terms that are always capitalized, such as some acronyms and abbreviations. If the title includes a colon, capitalize the first word that follows the colon, regardless of its part of speech.
+In sentence-style capitalization, you capitalize only the first word of the
+title or heading, plus any proper nouns, proper adjectives, and terms that are
+always capitalized, such as some acronyms and abbreviations. If the title
+includes a colon, capitalize the first word that follows the colon, regardless
+of its part of speech.
 
-If the heading includes text from a user interface, the capitalization of that text must match the capitalization on the interface.
+If the heading includes text from a user interface, the capitalization of that
+text must match the capitalization on the interface.
 
 <!--table-->
 | Examples | &nbsp; |
@@ -209,15 +292,22 @@ If the heading includes text from a user interface, the capitalization of that t
 <!--endtable-->
 
 #### Guidelines for title-style capitalization
-Title-style capitalization uses initial uppercase letters for the first, last, and all the significant words in the title.
+Title-style capitalization uses initial uppercase letters for the first, last,
+and all the significant words in the title.
 
 Capitalize all words in the title except for the following types of words:
-- Articles (*a*, *an*, *the*) unless the article is the first word in the title or follows a colon
-- Coordinating conjunctions (*and*, *but*, *for*, *nor*, *or*, *yet*, *so*) unless the conjunction is the first word in the title
-- Prepositions of any length, unless the preposition is the first or the last word in the title or is part of a verb phrase
-- The word *to* in an infinitive phrase unless to is the first word in the title
-- Second elements attached by hyphens to prefixes unless they are proper nouns or proper adjectives
-- Words that always begin with a lowercase letter, such as literal command names or certain product or software names
+- Articles (*a*, *an*, *the*) unless the article is the first word in the title
+  or follows a colon
+- Coordinating conjunctions (*and*, *but*, *for*, *nor*, *or*, *yet*, *so*)
+  unless the conjunction is the first word in the title
+- Prepositions of any length, unless the preposition is the first or the last
+  word in the title or is part of a verb phrase
+- The word *to* in an infinitive phrase unless to is the first word in the
+  title
+- Second elements attached by hyphens to prefixes unless they are proper nouns
+  or proper adjectives
+- Words that always begin with a lowercase letter, such as literal command
+  names or certain product or software names
 
 <!--table-->
 | Examples |
@@ -230,17 +320,22 @@ Capitalize all words in the title except for the following types of words:
 <!--endtable-->
 
 ### Lists
-Capitalize the first letter of each list item unless the first letter must be lowercase.
+Capitalize the first letter of each list item unless the first letter must be
+lowercase.
 
 For additional guidelines about formatting lists, see [Lists](#lists).
 
 ### Tables
-Use [sentence-style capitalization](#sentence-style-capitalization) for table titles, column headers, row headers, and text in table cells.
+Use [sentence-style capitalization](#sentence-style-capitalization) for table
+titles, column headers, row headers, and text in table cells.
 
 ### Glossaries
-Use the following guidelines for capitalizing terms and definitions in glossaries:
-- For the glossary term, use lowercase letters unless the term is a proper noun or acronym. For example, use *server* instead of *Server*.
-- For the definition, use [sentence-style capitalization](#sentence-style-capitalization).
+Use the following guidelines for capitalizing terms and definitions in
+glossaries:
+- For the glossary term, use lowercase letters unless the term is a proper noun
+  or acronym. For example, use *server* instead of *Server*.
+- For the definition, use [sentence-style
+  capitalization](#sentence-style-capitalization).
 
 <!--table-->
 | Example |
@@ -248,69 +343,123 @@ Use the following guidelines for capitalizing terms and definitions in glossarie
 | **token** <br /> An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration. |
 <!--endtable-->
 
-For more information about formatting glossary entries and definitions, see [Glossaries](../a-l-style-guidelines.html#glossaries).
+For more information about formatting glossary entries and definitions, see
+[Glossaries](../a-l-style-guidelines.html#glossaries).
 
 ### Figures
-Use [sentence-style capitalization](#sentence-style-capitalization) for figure titles, text callouts within figures, and for legends associated with a figure.
+Use [sentence-style capitalization](#sentence-style-capitalization) for figure
+titles, text callouts within figures, and for legends associated with a figure.
 
 ### Capitalization with punctuation
-Always capitalize the first word of a new sentence. Do not start a sentence with a case-sensitive lowercase word (such as a lowercase command name).
+Always capitalize the first word of a new sentence. Do not start a sentence
+with a case-sensitive lowercase word (such as a lowercase command name).
 
-Do not capitalize the word that follows a colon in a sentence, unless the word is proper or is the beginning of a quotation.
+Do not capitalize the word that follows a colon in a sentence, unless the word
+is proper or is the beginning of a quotation.
 
 Do not capitalize the word following an em dash, unless the word is proper.
 
 ## Citations
 
-Occasionally you might want to include content from a third-party source. If you do so, you must ensure that the source is reputable, the information is accurate, the quoted material is distinguished from the surrounding content, and the source is cited. Follow these guidelines:
+Occasionally you might want to include content from a third-party source. If
+you do so, you must ensure that the source is reputable, the information is
+accurate, the quoted material is distinguished from the surrounding content,
+and the source is cited. Follow these guidelines:
 
-- Include content only from expert sources that have a named author or are from a known company. Do not quote Wikipedia articles.
+- Include content only from expert sources that have a named author or are from
+  a known company. Do not quote Wikipedia articles.
 - If necessary, verify that the content is accurate.
 - Set off the quoted content from the other content in the following ways:
-  - If the quotation is short (just a phrase or sentence), you can include it in an existing paragraph. Set the quotation off with quotation marks, and put ending punctuation within the closing quotation mark.
-  - If the quotation is longer than a phrase or sentence, or it makes sense to separate it from the surrounding content, you can place it in its own paragraph. Indent the paragraph to set it off from the surrounding paragraphs.
-  - Do not use italics or bold to distinguish quoted content. Use such formatting only if it was used in the source.
+  - If the quotation is short (just a phrase or sentence), you can include it
+    in an existing paragraph. Set the quotation off with quotation marks, and
+    put ending punctuation within the closing quotation mark.
+  - If the quotation is longer than a phrase or sentence, or it makes sense to
+    separate it from the surrounding content, you can place it in its own
+    paragraph. Indent the paragraph to set it off from the surrounding
+    paragraphs.
+  - Do not use italics or bold to distinguish quoted content. Use such
+    formatting only if it was used in the source.
 - Attribute the source as follows:
-  - If you have just one or two quotations, you can attribute them within the article text by stating the author, the source document, or both and providing a link to the source. Usually such an attribution would precede the quotation, as an introduction to it.
-  - If you have more than one or two quotations, follow each quotation with a number in square brackets. Start at [1] and number each quotation in the document consecutively. At the end of the document, use a numbered list to list each resource in the order that it is shown in the article. Cite the author, the name of the source, and provide a link to the source. Put the list under a heading such as “Numbered citations in this article.” Then, go back to each numbered reference in the article and create a link between the reference number (such as [1]) and the numbered item at the end of the article.
+  - If you have just one or two quotations, you can attribute them within the
+    article text by stating the author, the source document, or both and
+    providing a link to the source. Usually such an attribution would precede
+    the quotation, as an introduction to it.
+  - If you have more than one or two quotations, follow each quotation with a
+    number in square brackets. Start at [1] and number each quotation in the
+    document consecutively. At the end of the document, use a numbered list to
+    list each resource in the order that it is shown in the article. Cite the
+    author, the name of the source, and provide a link to the source. Put the
+    list under a heading such as “Numbered citations in this article.” Then, go
+    back to each numbered reference in the article and create a link between
+    the reference number (such as [1]) and the numbered item at the end of the
+    article.
 
 ## Cloud account information
-In examples of API authentication requests, and other examples where we are teaching the use of the API and expect that users might copy the code and use it, use variables or the following standard values for account numbers, user names, passwords, API keys, and so on. Format the variables by using camelCase and italics, and also use bold within the examples.
+In examples of API authentication requests, and other examples where we are
+teaching the use of the API and expect that users might copy the code and use
+it, use variables or the following standard values for account numbers, user
+names, passwords, API keys, and so on. Format the variables by using camelCase
+and italics, and also use bold within the examples.
 
 <!--table-->
 Information | Use | Do not use
 ---|---|---
 Account or tenant ID	| *yourAccountId* <br /> *yourTenantId* <br /> \$account <br /> \$tenant | 658405
-User name	| *yourUserName*  <br /> \$username | dian4554
-Password	| *yourPassword* <br /> \$password | J\$123bb\*
-API key	| *yourApiKey* <br /> \$apikey | kf938gf4915e114f7ff5448910ffe68c
-Authentication token | *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* <br /> \$token | 2e356864f39831523c184fc646b1997b
+User name	| *yourUserName*  <br /> \$username | robb4554
+Password	| *yourPassword* <br /> \$password | J\$12345\*
+API key	| *yourApiKey* <br /> \$apikey | of938go4915e114f7ff5448910fee68c
+Authentication token | *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* <br /> \$token | 2e356864f39831523c184fi646b1997b
 <!--endtable-->
 
-In example API operation requests and responses, in which we want users to see actual values from the system, use "real-looking" values that are nevertheless obviously made up, such the following one for `X-Auth-Token`:
+In example API operation requests and responses, in which we want users to see
+actual values from the system, use "real-looking" values that are nevertheless
+obviously made up, such the following one for `X-Auth-Token`:
 
 `abcdef123ghi4j5k67m8910n12op3qrs`
 
-**Warning:** Do not include or show actual writer or user account credentials in code examples or screenshots.
+**Warning:** Do not include or show actual writer or user account credentials
+in code examples or screenshots.
 
 ## Code examples
-Observe the following guidelines when creating blocks of code as input or output examples:
+Observe the following guidelines when creating blocks of code as input or
+output examples:
 
-- Do not use screenshots to show code examples. Format them as blocks of code by using the appropriate markup in your authoring tool. For more information about formatting, see [Text formatting](../m-z-style-guidelines.html#text-formatting).
+- Do not use screenshots to show code examples. Format them as blocks of code
+  by using the appropriate markup in your authoring tool. For more information
+  about formatting, see [Text
+  formatting](../m-z-style-guidelines.html#text-formatting).
 
 - When showing input, always include a command prompt (such as $).
 
-- As often as necessary, show input and output in separate blocks and provide explanations for each. For example, if the input contains arguments or parameters, explain those. If the user should expect something specific in the output, or you want to show only part of lengthy output, provide an explanation. Provide your users the information that they need, and separate the input and output when it makes sense.
+- As often as necessary, show input and output in separate blocks and provide
+  explanations for each. For example, if the input contains arguments or
+  parameters, explain those. If the user should expect something specific in
+  the output, or you want to show only part of lengthy output, provide an
+  explanation. Provide your users the information that they need, and separate
+  the input and output when it makes sense.
 
-- When the command is simple, and there is nothing specific to say about the output, you can show the input and output in the same code block, as the user would actually see the code in their own terminal. The inclusion of the command prompt will differentiate the input from the output.
+- When the command is simple, and there is nothing specific to say about the
+  output, you can show the input and output in the same code block, as the user
+  would actually see the code in their own terminal. The inclusion of the
+  command prompt will differentiate the input from the output.
 
-- Ensure that any placeholder text in code is obvious. If the authoring tool allows it, apply italics to placeholders; if not, enclose them in angle brackets. For more information about placeholders and formatting them, see [Placeholder (variable) text](../m-z-style-guidelines.html#placeholder-variable-text) and [Cloud account information](#cloud-account-info).
+- Ensure that any placeholder text in code is obvious. If the authoring tool
+  allows it, apply italics to placeholders; if not, enclose them in angle
+  brackets. For more information about placeholders and formatting them, see
+  [Placeholder (variable)
+  text](../m-z-style-guidelines.html#placeholder-variable-text) and [Cloud
+  account information](#cloud-account-info).
 
-- Follow the conventions of the programming language used and preserve the capitalization that the author of the code used.
+- Follow the conventions of the programming language used and preserve the
+  capitalization that the author of the code used.
 
-- For readability, you can break up long lines of input into readable blocks by ending each line with a backslash.
+- For readability, you can break up long lines of input into readable blocks by
+  ending each line with a backslash.
 
-- If the input includes a list of arguments or parameters, show the important or relevant ones first, and group related ones. If no other order makes sense, use alphabetical order. If you explain the arguments or parameters in text, show them in the same order that they appear in the code block.
+- If the input includes a list of arguments or parameters, show the important
+  or relevant ones first, and group related ones. If no other order makes
+  sense, use alphabetical order. If you explain the arguments or parameters in
+  text, show them in the same order that they appear in the code block.
 
 The following examples illustrates many many of these guidelines:
 
@@ -321,13 +470,15 @@ The following examples illustrates many many of these guidelines:
 
    If you have not created any VMs yet, your output should look as follows:
 
-    `NAME   ACTIVE   DRIVER   STATE   URL`
+    `NAME ACTIVE DRIVER STATE URL`
 
 2. Create a VM that is running Docker.
 
     `$ docker-machine create --driver virtualbox test`
 
-   The `--driver` flag indicates what type of driver the machine will run on. In this case, `virtualbox` indicates that the driver is Oracle VirtualBox. The final argument in the command gives the VM a name, in this case, `test`.
+   The `--driver` flag indicates what type of driver the machine will run on.
+   In this case, `virtualbox` indicates that the driver is Oracle VirtualBox.
+   The final argument in the command gives the VM a name, in this case, `test`.
 
    The output should look as follows:
     ```
@@ -335,28 +486,27 @@ The following examples illustrates many many of these guidelines:
     Creating SSH key...
     Starting VirtualBox VM...
     Starting VM...
-    To see how to connect Docker to this machine, run: docker-machine env test
+    To see how to connect Docker to this machine, run:
+    docker-machine env test
     ```
 3. Run docker-machine ls again to see the VM that you created. <br />
    The output should look as follows:
     ```
-    NAME             ACTIVE   DRIVER       STATE     URL                         SWARM
-    test                      virtualbox   Running   tcp://192.168.99.101:237
+    NAME ACTIVE DRIVER STATE URL SWARM
+    test virtualbox Running tcp://192.168.99.101:237
     ```
 
 #### Run the application
-1. Run a container from the image. The application code uses the environment variables that you defined to connect to the MongoDB container.
+1. Run a container from the image. The application code uses the environment
+variables that you defined to connect to the MongoDB container.
     ```
     $ docker run --detach \
-      --env MONGO_HOST=$MONGO_HOST \
-      --env MONGO_PORT=$MONGO_PORT \
-      --env MONGO_SSL=$MONGO_SSL \
-      --env MONGO_DATABASE=$MONGO_DATABASE \
-      --env MONGO_USER=$MONGO_USER \
-      --env MONGO_PASSWORD=$MONGO_PASSWORD \
-      --publish 5000:5000 \
+      --env MONGO_HOST=$MONGO_HOST \ env MONGO_PORT=$MONGO_PORT \ env
+      --MONGO_SSL=$MONGO_SSL \ env MONGO_DATABASE=$MONGO_DATABASE \ env
+      --MONGO_USER=$MONGO_USER \ env MONGO_PASSWORD=$MONGO_PASSWORD \ publish
+      --5000:5000 \
       guestbook-mongo:1.0
-      ```
+    ```
 2. View the status of the container by using the `--latest` parameter.
 
     `$ docker ps --latest`
@@ -364,48 +514,72 @@ The following examples illustrates many many of these guidelines:
    The status of the container should begin with `Up`.
 
 #### Remove the containers already using the port
-1. To identify the containers that are using the port, run the following command, changing ``<port>`` to the port number that you want to use.
+1. To identify the containers that are using the port, run the following
+command, changing ``<port>`` to the port number that you want to use.
 
     `$ docker ps -a | grep <port>/tcp`
 
-2. To remove the containers, run the following command for each container identified in step 1, changing ``<containerId>`` to the ID of the container. <br /> The `--force` argument ensures that the container is removed even if it is currently running.
+2. To remove the containers, run the following command for each container
+identified in step 1, changing ``<containerId>`` to the ID of the container.
+<br /> The `--force` argument ensures that the container is removed even if it
+is currently running.
 
     `docker rm --force --volumes <containerId>`
 
 #### Troubleshooting
 Sometimes, when you use a docker command, you receive the following output:
 
-    $ docker info
-    Get http:///var/run/docker.sock/v1.20/info: dial unix /var/run/docker.sock: no such file or directory.
+    $ docker info Get http:///var/run/docker.sock/v1.20/info: dial unix
+    /var/run/docker.sock: no such file or directory.
     * Are you trying to connect to a TLS-enabled daemon without TLS?
     * Is your docker daemon up and running?
 
 If you receive this output, your VM is not running on a Docker host.
 
 ## Contractions
-Contractions help to create a less formal tone in documentation. Common contractions, such as *can’t* and *don’t*, are usually recognizable by readers who are proficient in English, and such contractions do not pose a problem for human translators. In general, you can use the following common contractions in content where contractions are acceptable:
+Contractions help to create a less formal tone in documentation. Common
+contractions, such as *can’t* and *don’t*, are usually recognizable by readers
+who are proficient in English, and such contractions do not pose a problem for
+human translators. In general, you can use the following common contractions in
+content where contractions are acceptable:
 
-- Contractions that include the word *not*, such as *aren’t*, *can’t*, *didn’t*, *doesn’t*, *don’t*, *isn’t*, *wasn’t*, *weren’t*, *won’t*, and *wouldn’t* <br /> If you want to emphasize the negative, however, do *not* use such a contraction.
+- Contractions that include the word *not*, such as *aren’t*, *can’t*,
+  *didn’t*, *doesn’t*, *don’t*, *isn’t*, *wasn’t*, *weren’t*, *won’t*, and
+  *wouldn’t* <br /> If you want to emphasize the negative, however, do *not*
+  use such a contraction.
 
-- Contractions that include *is* or *are*, such as *it’s*, *that’s*, *there’s*, *they’re*, and *you’re* <br /> Because such contractions can be confused with possessives, ensure that your usage is correct.
+- Contractions that include *is* or *are*, such as *it’s*, *that’s*, *there’s*,
+  *they’re*, and *you’re* <br /> Because such contractions can be confused with
+  possessives, ensure that your usage is correct.
 
-Avoid the following types of contractions, which are not common or can be confusing depending on context:
+Avoid the following types of contractions, which are not common or can be
+confusing depending on context:
 
 - Contractions that can be misread as other words, such as *let’s*
-- Contractions with the interrogative words *how*, *what*, *when*, *where*, *who*, and *why*
-- Nonstandard or obscure contractions, such as *mustn’t*, *mightn’t*, *should’ve*, *could’ve*, and *that’ll*
-- Contractions that combine a noun and a verb, such as in “The service’ll stop automatically”
-- Contractions that include a company name, product name, or trademark, such as in “Rackspace’s the leader in hybrid cloud”
+- Contractions with the interrogative words *how*, *what*, *when*, *where*,
+  *who*, and *why*
+- Nonstandard or obscure contractions, such as *mustn’t*, *mightn’t*,
+  *should’ve*, *could’ve*, and *that’ll*
+- Contractions that combine a noun and a verb, such as in “The service’ll stop
+  automatically”
+- Contractions that include a company name, product name, or trademark, such as
+  in “Rackspace’s the leader in hybrid cloud”
 
-Use contractions consistently. Avoid mixing common contractions and spelled-out forms within the same article or set of related articles.
+Use contractions consistently. Avoid mixing common contractions and spelled-out
+forms within the same article or set of related articles.
 
 ## Copyrights
-For both API and How-To content, copyright statements are automatically inserted by the system. Use the generated statement unless RackLaw gives you other instructions.
+For both API and How-To content, copyright statements are automatically
+inserted by the system. Use the generated statement unless RackLaw gives you
+other instructions.
 
 ## Dates
-Dates are displayed differently in different countries, so you must use a date format that is explicit and consistent and that global customers cannot misinterpret.
+Dates are displayed differently in different countries, so you must use a date
+format that is explicit and consistent and that global customers cannot
+misinterpret.
 
-Unless space is limited, always show dates in the following format: *month day*, *year*. Always spell out the month.
+Unless space is limited, always show dates in the following format: *month
+day*, *year*. Always spell out the month.
 
 <!--table-->
 Use | Avoid
@@ -413,9 +587,13 @@ Use | Avoid
 November 12, 2010 | 12 Nov 2010 <br /> 2010-Nov-12 <br /> 12/11/10 <br /> 11/12/10 <br /> 10-11-12
 <!--endtable-->
 
-**Note:** Do not use ordinal numbers for dates. For example, do not use *January 1st*; use *January 1* instead.
+**Note:** Do not use ordinal numbers for dates. For example, do not use
+*January 1st*; use *January 1* instead.
 
-When the month, day, and year are embedded in a sentence, use a comma before and after the year. When only the month and year are embedded in a sentence, omit the commas unless the syntax would ordinarily require a comma following the year.
+When the month, day, and year are embedded in a sentence, use a comma before
+and after the year. When only the month and year are embedded in a sentence,
+omit the commas unless the syntax would ordinarily require a comma following
+the year.
 
 <!--table-->
 | Use |
@@ -427,9 +605,13 @@ When the month, day, and year are embedded in a sentence, use a comma before and
 
 Use an all-numeric date only in the following situations:
 - Space is limited, as in a table or figure.
-- You need to show a literal representation of the date as it is displayed in the software.
+- You need to show a literal representation of the date as it is displayed in
+  the software.
 
-Because all-numeric dates are interpreted differently in different countries, explain the format of a numeric date, and use a consistent format throughout the  documentation. If possible, use the ISO 8601 format, which is *yyyy*-*mm*-*dd* (for example, 2012-11-10 for November 10, 2012).
+Because all-numeric dates are interpreted differently in different countries,
+explain the format of a numeric date, and use a consistent format throughout
+the documentation. If possible, use the ISO 8601 format, which is
+*yyyy*-*mm*-*dd* (for example, 2012-11-10 for November 10, 2012).
 
 <!--table-->
 | Use |
@@ -438,23 +620,31 @@ Because all-numeric dates are interpreted differently in different countries, ex
 <!--endtable-->
 
 ## Email addresses
-For example email addresses, use **example.com** or **example.org**. The Internet Assigned Numbers Authority (IANA) reserves these domain names for use in examples.
+For example email addresses, use **example.com** or **example.org**. The
+Internet Assigned Numbers Authority (IANA) reserves these domain names for use
+in examples.
 
-**Note:** For How-To articles, do not use **kcexample.com**. Rackspace no longer owns this domain name. Use **example.com** or **example.org** instead.
+**Note:** For How-To articles, do not use **kcexample.com**. Rackspace no
+longer owns this domain name. Use **example.com** or **example.org** instead.
 
 Format example email addresses as bold. For example, **yourName@example.com**.
 
-If you document an actual email address, use the convention in your authoring environment to make the email address live.
+If you document an actual email address, use the convention in your authoring
+environment to make the email address live.
 
 ## File types
 
-For references to a file type in text (not code), use one of the following naming conventions, depending on the type of file and the context:
+For references to a file type in text (not code), use one of the following
+naming conventions, depending on the type of file and the context:
 
 - Generic name, such as an initialization file or a configuration file
 - Standard abbreviation, such as a PDF file or an XML file
 - File name extension, such as a .zip file
 
-Use a generic name or a standard abbreviation if one exists. If a generic name or a standard abbreviation does not exist or is not appropriate given the context, use the file name extension. The following table provides some common file types and guidelines for referring to them.
+Use a generic name or a standard abbreviation if one exists. If a generic name
+or a standard abbreviation does not exist or is not appropriate given the
+context, use the file name extension. The following table provides some common
+file types and guidelines for referring to them.
 
 <!--table-->
 File type | Guideline | Example
@@ -478,15 +668,26 @@ This section provides guidelines for the following items:
 - [Glossary terms](#glossary)
 - [Glossary definitions](#glossary-definitions)
 - [Cross-references to glossary terms](#cross-references-to-glossary-terms)
-- [Guidelines for a comprehensive glossary](#guidelines-for-a-comprehensive-glossary)
+- [Guidelines for a comprehensive
+  glossary](#guidelines-for-a-comprehensive-glossary)
 
 ### Glossary terms
 To show the glossary term that you are defining, use the following guidelines:
-- Use the singular form unless the term is always plural. For example, use *server* instead of *servers*.
-- Use lowercase letters unless the term is a proper noun or acronym. For example, use *server* instead of *Server*.
-- If the term has an acronym or abbreviation, show the term either in its spelled-out form or shortened form, depending on which term is more familiar to users. If you use the spelled-out form, follow it with the abbreviation in parentheses.
+- Use the singular form unless the term is always plural. For example, use
+  *server* instead of *servers*.
+- Use lowercase letters unless the term is a proper noun or acronym. For
+  example, use *server* instead of *Server*.
+- If the term has an acronym or abbreviation, show the term either in its
+  spelled-out form or shortened form, depending on which term is more familiar
+  to users. If you use the spelled-out form, follow it with the abbreviation in
+  parentheses.
 
-To alphabetize glossary terms, use the word-by-word method. In this method, terms that contain more than one word separated by spaces or commas are alphabetized by the first word only, unless the first word of two or more entries is the same. In that case, the second and subsequent words are used to determine the alphabetical order. Hyphens, slashes, and apostrophes continue a single word.
+To alphabetize glossary terms, use the word-by-word method. In this method,
+terms that contain more than one word separated by spaces or commas are
+alphabetized by the first word only, unless the first word of two or more
+entries is the same. In that case, the second and subsequent words are used to
+determine the alphabetical order. Hyphens, slashes, and apostrophes continue a
+single word.
 
 <!--table-->
 | Example word-by-word alphabetization |
@@ -495,9 +696,14 @@ To alphabetize glossary terms, use the word-by-word method. In this method, term
 <!--endtable-->
 
 ### Glossary definitions
-Make your glossary definitions brief. Try to restrict definitions to no more than one or two short paragraphs, and avoid the inclusion of notes or tips. If your definition is longer than one or two short paragraphs, it might be more appropriate as a concept in an overview section rather than in a glossary.
+Make your glossary definitions brief. Try to restrict definitions to no more
+than one or two short paragraphs, and avoid the inclusion of notes or tips. If
+your definition is longer than one or two short paragraphs, it might be more
+appropriate as a concept in an overview section rather than in a glossary.
 
-Begin the definition with a descriptive phrase. Capitalize the first letter of the phrase, and end the phrase with a period. Follow the initial phrase with one or more sentences as needed.
+Begin the definition with a descriptive phrase. Capitalize the first letter of
+the phrase, and end the phrase with a period. Follow the initial phrase with
+one or more sentences as needed.
 
 How you begin the definition also depends on what part of speech the term is:
 
@@ -508,7 +714,10 @@ How you begin the definition also depends on what part of speech the term is:
 
 The following table shows examples.
 
-**Note:** In a comprehensive glossary, you might need to start the definition with a qualifier that identifies the service to which the term relates. For more information, see [Guidelines for a comprehensive glossary](#guidelines-for-a-comprehensive-glossary).
+**Note:** In a comprehensive glossary, you might need to start the definition
+with a qualifier that identifies the service to which the term relates. For
+more information, see [Guidelines for a comprehensive
+glossary](#guidelines-for-a-comprehensive-glossary).
 
 <!--table-->
 Type | Example
@@ -522,13 +731,19 @@ Abbreviation	| **API** <br /> Application Programming Interface. A set of comman
 ### Cross-references to glossary terms
 Use the following guidelines when creating cross-references within a glossary:
 
-- For a term with a definition located under a different entry, use a *See* entry in place of the definition.
+- For a term with a definition located under a different entry, use a *See*
+  entry in place of the definition.
 
-- For a term with a definition that is related to, is similar to, or contrasts with another term, refer to the term in one of the following ways. If that term actually occurs in the definition, you can simply link to its definition from the term. If the term does not occur in the definition, add a *See also* entry at the end of the definition. <br /><br />
-  **Tip:** To highlight a difference between two terms, you can use a *Contrast with* entry.
+- For a term with a definition that is related to, is similar to, or contrasts
+  with another term, refer to the term in one of the following ways. If that
+  term actually occurs in the definition, you can simply link to its definition
+  from the term. If the term does not occur in the definition, add a *See also*
+  entry at the end of the definition. <br /><br /> **Tip:** To highlight a
+  difference between two terms, you can use a *Contrast with* entry.
 
 - Format the cross-reference as follows:
-  - If using a *See* or *See also* reference, type *See* or *See also*, and apply italics. If you are referring to more than one item, italicize *and*.
+  - If using a *See* or *See also* reference, type *See* or *See also*, and
+    apply italics. If you are referring to more than one item, italicize *and*.
 
   - Make the term a link to the cross-referenced term.
 
@@ -548,26 +763,46 @@ A comprehensive glossary might have the following types of terms:
 - Third-party product terms
 - Rackspace-specific terms that apply to only one service
 - Rackspace-specific terms that are general or apply to many different services
-- Rackspace-specific terms that apply to two or more services and have different meanings for two or more services
+- Rackspace-specific terms that apply to two or more services and have
+  different meanings for two or more services
 
-Following are guidelines for how to handle each type of term in the comprehensive glossary:
+Following are guidelines for how to handle each type of term in the
+comprehensive glossary:
 
-- Include industry-standard terms only if they are integral to understanding how a Rackspace service works. However, do not include terms that are well-known or common (such as *browser* and *blog*). In the definition, describe how Rackspace incorporates the idea represented by the term, or which service employs it. For example, *API*.
+- Include industry-standard terms only if they are integral to understanding
+  how a Rackspace service works. However, do not include terms that are
+  well-known or common (such as *browser* and *blog*). In the definition,
+  describe how Rackspace incorporates the idea represented by the term, or
+  which service employs it. For example, *API*.
 
-- Avoid including third-party terms. Within the documentation itself, provide links to third-party websites if you want to provide more information about third-party terms. A Rackspace glossary should contain mainly Rackspace terms. If the user could find the meaning outside of a Rackspace document by using a browser search, then we probably don’t need to include it in the glossary. For example, *Apache*.
+- Avoid including third-party terms. Within the documentation itself, provide
+  links to third-party websites if you want to provide more information about
+  third-party terms. A Rackspace glossary should contain mainly Rackspace
+  terms. If the user could find the meaning outside of a Rackspace document by
+  using a browser search, then we probably don’t need to include it in the
+  glossary. For example, *Apache*.
 
-- If a term is specific to one Rackspace service, start the definition with the name of that service in parentheses, and italicize it.
+- If a term is specific to one Rackspace service, start the definition with the
+  name of that service in parentheses, and italicize it.
 
-- If a term is general or applies to many different services, you do not need to qualify it.
+- If a term is general or applies to many different services, you do not need
+  to qualify it.
 
-- If a term is specific to more than one service but has a different meaning for each service, provide all the relevant definitions in one glossary entry. Place each definition in a separate paragraph and start the definition with the service name, in parentheses and italicized.
+- If a term is specific to more than one service but has a different meaning
+  for each service, provide all the relevant definitions in one glossary entry.
+  Place each definition in a separate paragraph and start the definition with
+  the service name, in parentheses and italicized.
 
 ## IP addresses
-An *IP address* uses a sequence of numbers to uniquely identify a particular computer on the Internet.
+An *IP address* uses a sequence of numbers to uniquely identify a particular
+computer on the Internet.
 
-When you are discussing IP addresses or referring to a specific IP address, do not use *IP* only; use *IP address*. You do not need to spell out *IP* on first use.
+When you are discussing IP addresses or referring to a specific IP address, do
+not use *IP* only; use *IP address*. You do not need to spell out *IP* on first
+use.
 
-When you need to refer to a specific version of the IP, use *IPv4 address* or *IPv6 address* as appropriate.
+When you need to refer to a specific version of the IP, use *IPv4 address* or
+*IPv6 address* as appropriate.
 
 <!--table-->
 | Examples |
@@ -577,10 +812,16 @@ When you need to refer to a specific version of the IP, use *IPv4 address* or *I
 | If you are using IPv6 on your server, you might need to add the IPv6 addresses of your name servers to the **resolv.conf** file. |
 <!--endtable-->
 
-If you need to show an example IP address, do not use one that is or might be assigned to a computer. Instead, use one that is globally defined for documentation. Valid IPv4 address blocks are provided in [RFC5737](https://tools.ietf.org/html/rfc5737), and a valid IPv6 prefix is provided in [RFC 3849](http://tools.ietf.org/html/rfc3849).
+If you need to show an example IP address, do not use one that is or might be
+assigned to a computer. Instead, use one that is globally defined for
+documentation. Valid IPv4 address blocks are provided in
+[RFC5737](https://tools.ietf.org/html/rfc5737), and a valid IPv6 prefix is
+provided in [RFC 3849](http://tools.ietf.org/html/rfc3849).
 
 ## Keyboard keys
-Different keyboards use different names for common keys. For consistency, use the following key names unless the technology that you are documenting requires other forms:
+Different keyboards use different names for common keys. For consistency, use
+the following key names unless the technology that you are documenting requires
+other forms:
 
 - Alt
 - arrow keys (generic)
@@ -604,7 +845,8 @@ Different keyboards use different names for common keys. For consistency, use th
 - Tab
 - Up Arrow
 
-When showing specific key names and key combinations, apply bold and use the following guidelines:
+When showing specific key names and key combinations, apply bold and use the
+following guidelines:
 
 <!--table-->
 Guideline | Example
@@ -617,17 +859,34 @@ If part of a key combination requires the use of the **Shift** key (such as typi
 <!--endtable-->
 
 ## Links and cross-references
-Use cross-references to help customers navigate content and find content that is related to what they are currently viewing. Cross-references can be linked or not linked, depending on the location of the content to which you are referring.
+Use cross-references to help customers navigate content and find content that
+is related to what they are currently viewing. Cross-references can be linked
+or not linked, depending on the location of the content to which you are
+referring.
 
-- When you refer to content within the same article or section—such as paragraphs, tables, figures, examples, and lists—you usually create a simple textual cross-reference that is not linked.
+- When you refer to content within the same article or section—such as
+  paragraphs, tables, figures, examples, and lists—you usually create a simple
+  textual cross-reference that is not linked.
 
-  **Note:** Customers usually expect links to take them to a location outside of the article (How-To) or section (API) that they are currently reading, so links that just jump to another place in the same article or section can be confusing. Exceptions are a TOC, or *jump list*, at the top of an article or section that provides links to the high-level headings in the article or section, and "back to top" links that take the user back to the top of the page.
+  **Note:** Customers usually expect links to take them to a location outside
+  of the article (How-To) or section (API) that they are currently reading, so
+  links that just jump to another place in the same article or section can be
+  confusing. Exceptions are a TOC, or *jump list*, at the top of an article or
+  section that provides links to the high-level headings in the article or
+  section, and "back to top" links that take the user back to the top of the
+  page.
 
-- When you refer to other content that is created by Rackspace—for example, another article, a different section in the same or a different API guide, a post on the Communities site, or a pricing page on rackspace.com—you provide a link to that content.
+- When you refer to other content that is created by Rackspace—for example,
+  another article, a different section in the same or a different API guide, a
+  post on the Communities site, or a pricing page on rackspace.com—you provide
+  a link to that content.
 
-- When you refer to content that is created outside of Rackspace, you usually provide a link to that content. Ensure that the link is active and that the content is up-to-date. Periodically check the link and content.
+- When you refer to content that is created outside of Rackspace, you usually
+  provide a link to that content. Ensure that the link is active and that the
+  content is up-to-date. Periodically check the link and content.
 
-This topic provides the following guidelines for creating clear and specific cross-references and links:
+This topic provides the following guidelines for creating clear and specific
+cross-references and links:
 
 - [General cross-reference guidelines](#general-cross-reference-guidelines)
 - [Linking guidelines](#linking-guidelines)
@@ -637,13 +896,17 @@ This topic provides the following guidelines for creating clear and specific cro
 **Note:** In the examples in this section, links are indicated by underlines.
 
 ### General cross-reference guidelines
-When you create a cross-reference sentence to point to other information, linked or not, observe the following guidelines:
+When you create a cross-reference sentence to point to other information,
+linked or not, observe the following guidelines:
 
-- Begin a cross-reference sentence by explaining the purpose or benefit of the cross-reference (such as more information or examples). Providing this context helps customers decide whether to follow the reference.
+- Begin a cross-reference sentence by explaining the purpose or benefit of the
+  cross-reference (such as more information or examples). Providing this
+  context helps customers decide whether to follow the reference.
 
 - Use *information about* rather than *information on*.
 
-- Do not use *above*, *below*, *earlier*, or *later* to locate information. Use *preceding* and *following* to refer to the following items:
+- Do not use *above*, *below*, *earlier*, or *later* to locate information. Use
+  *preceding* and *following* to refer to the following items:
   - Figures, tables, and examples
   - Paragraphs or other textual information
   - Lists
@@ -657,41 +920,72 @@ The following table lists the OpenStack versions and components supported by the
 <!--endtable-->
 
 ### Linking guidelines
-When you provide links, observe the following guidelines for placement, construction, and formatting.
+When you provide links, observe the following guidelines for placement,
+construction, and formatting.
 
 #### Placement of links
-- Determine whether the link should be provided inline or at the end of the article or section.
-  - Provide links inline only when it is necessary or helpful for the customer to follow the link to understand the current topic or complete the task. Remember that links disrupt the narrative flow and can be distracting.
-  - Provide links to related but not essential information at the end of the article or section.
+- Determine whether the link should be provided inline or at the end of the
+  article or section.
+  - Provide links inline only when it is necessary or helpful for the customer
+    to follow the link to understand the current topic or complete the task.
+    Remember that links disrupt the narrative flow and can be distracting.
+  - Provide links to related but not essential information at the end of the
+    article or section.
   - Provide links to "next steps" at the end of an article or section.
 
 
 - Do not link to information more than once in an article or section.
 
 #### Construction and format of links
-- Ensure that the text of a link sufficiently describes the content to which it links (the destination content). When you provide a link at the end of an article or section to related information or to a next step, use the title of or a heading in the destination content as the link text.
-  - When links are inline, use about three or four words of existing text as the link text. Choose words that best describe the destination content.
-  - If existing text cannot sufficiently describe the destination content, create a cross-reference sentence for the link. For the link text, use the title of or a heading in the destination content, if possible. Avoid providing an actual URL, unless you think that having the URL is helpful for the customer.
-  - Do not provide links from ambiguous phrases such as *Click here* or *More information*.
+- Ensure that the text of a link sufficiently describes the content to which it
+  links (the destination content). When you provide a link at the end of an
+  article or section to related information or to a next step, use the title of
+  or a heading in the destination content as the link text.
+  - When links are inline, use about three or four words of existing text as
+    the link text. Choose words that best describe the destination content.
+  - If existing text cannot sufficiently describe the destination content,
+    create a cross-reference sentence for the link. For the link text, use the
+    title of or a heading in the destination content, if possible. Avoid
+    providing an actual URL, unless you think that having the URL is helpful
+    for the customer.
+  - Do not provide links from ambiguous phrases such as *Click here* or *More
+    information*.
 
 
-- If a link points to a location other than the current site (for example, out of the Support website or away from developer.rackspace.com), provide context that describes the location.
+- If a link points to a location other than the current site (for example, out
+  of the Support website or away from developer.rackspace.com), provide context
+  that describes the location.
 
-- When you refer to a Rackspace product or service, provide a link to the page for that product or service on www.rackspace.com. Create the link by inserting the term product page in brackets after the product name, and using that text as the link. For example, "Cloud Load Balancers [<u>product page</u>] . . ."
+- When you refer to a Rackspace product or service, provide a link to the page
+  for that product or service on www.rackspace.com. Create the link by
+  inserting the term product page in brackets after the product name, and using
+  that text as the link. For example, "Cloud Load Balancers [<u>product
+  page</u>] . . ."
 
-- Do not code a link to open in a new tab or window. Customers can choose whether they want open a link in a new tab or window.
+- Do not code a link to open in a new tab or window. Customers can choose
+  whether they want open a link in a new tab or window.
 
-- If your article or section has multiple subheadings, provide a TOC (jump list) at the beginning of the article or section, after an introduction. Use the heading text as the link text, and typically link only to the top-level headings in the article or section.
+- If your article or section has multiple subheadings, provide a TOC (jump
+  list) at the beginning of the article or section, after an introduction. Use
+  the heading text as the link text, and typically link only to the top-level
+  headings in the article or section.
 
-  **Note:** If the UI automatically builds a TOC or jump list for the article, do not duplicate it by creating one manually within the article.
+  **Note:** If the UI automatically builds a TOC or jump list for the article,
+  do not duplicate it by creating one manually within the article.
 
-- In FAQ articles, insert a "back to top" link after each answer. Use the following HTML, which superscripts the link to make it less obtrusive: ``<p><sup><a href="#top">back to top</a></sup></p>``
+- In FAQ articles, insert a "back to top" link after each answer. Use the
+  following HTML, which superscripts the link to make it less obtrusive:
+  ``<p><sup><a href="#top">back to top</a></sup></p>``
 
-  **Note:** Do not create back-to-top links in How-To FAQ articles that have automatic formatting that collapses the Q&A pairs. For these articles, such links are meaningless.
+  **Note:** Do not create back-to-top links in How-To FAQ articles that have
+  automatic formatting that collapses the Q&A pairs. For these articles, such
+  links are meaningless.
 
 - Do not use quotation marks around link text.
 
-- Create and format links according to the authoring tool that you are using. Test links to ensure that they are live and that they point to the correct destination.
+- Create and format links according to the authoring tool that you are using.
+  Test links to ensure that they are live and that they point to the correct
+  destination.
 
 <!--table-->
 Use | Avoid
@@ -707,12 +1001,19 @@ Cloud Load Balancers [<u>product page</u>] has a content caching feature that st
 <!--endtable-->
 
 ## Lists
-A list is a series of parallel items that are presented together, usually in a vertical sequence. The following types of lists are commonly used in Rackspace documentation:
+A list is a series of parallel items that are presented together, usually in a
+vertical sequence. The following types of lists are commonly used in Rackspace
+documentation:
 
-- **Ordered lists**, which are numbered. The list items must be performed or considered in a particular order.
-- **Unordered lists** (also referred to as itemized or bullet lists), which are usually delineated by bullets. The list items can be presented in any order and are often alphabetized if no other order is more appropriate.
-When three or more serial items are embedded in a paragraph, consider recasting the text as an introduction followed by an unordered list.
-- **Definition lists**, which are used to define variables, parameters, attributes, terms, and so on in API documents.
+- **Ordered lists**, which are numbered. The list items must be performed or
+  considered in a particular order.
+- **Unordered lists** (also referred to as itemized or bullet lists), which are
+  usually delineated by bullets. The list items can be presented in any order
+  and are often alphabetized if no other order is more appropriate. When three
+  or more serial items are embedded in a paragraph, consider recasting the text
+  as an introduction followed by an unordered list.
+- **Definition lists**, which are used to define variables, parameters,
+  attributes, terms, and so on in API documents.
 
 This topic provides the following guidelines for lists:
 
@@ -720,7 +1021,9 @@ This topic provides the following guidelines for lists:
 - [Writing list items](#writing-list-items)
 
 ### Writing introductory text for lists
-All lists are preceded by introductory text that provides the context for the list. One exception is procedures, which can be preceded only by a procedure title. Use the following guidelines when introducing lists.
+All lists are preceded by introductory text that provides the context for the
+list. One exception is procedures, which can be preceded only by a procedure
+title. Use the following guidelines when introducing lists.
 
 <!--table-->
 Guideline | Example
@@ -734,17 +1037,26 @@ Don’t tell users to "do the following." The verb *do* is weak, using *followin
 ### Writing list items
 Use the following guidelines when writing list items:
 
-- Capitalize the first letter of each list item unless the first letter must be lowercase.
-- Make all list items parallel. For example, all items start with fragments, or all items use sentences. A list can have a mix of fragments and sentences as long as all of the items start with a fragment.
+- Capitalize the first letter of each list item unless the first letter must be
+  lowercase.
+- Make all list items parallel. For example, all items start with fragments, or
+  all items use sentences. A list can have a mix of fragments and sentences as
+  long as all of the items start with a fragment.
 - Use the following guidelines for punctuation of list items:
-  - In a list of only sentences, including imperative statements, use punctuation at the end of each item.
+  - In a list of only sentences, including imperative statements, use
+    punctuation at the end of each item.
   - In a list of only fragments, use no punctuation at the end of each item.
-  - In a list of fragments, some or all of which are followed by sentences, use punctuation at the end of every fragment and sentence in the list.
+  - In a list of fragments, some or all of which are followed by sentences, use
+    punctuation at the end of every fragment and sentence in the list.
 - Do not connect separate list items with commas or conjunctions (*and*, *or*).
 - Avoid using articles (*a*, *an*, *the*) to start list items.
-- When a list provides a series of terms or phrases and then more information about them, format the list as follows:
+- When a list provides a series of terms or phrases and then more information
+  about them, format the list as follows:
   - Show the term or phrase in bold. Using bold makes the list easier to scan.
-  - If you need to separate the initial term or phrase from the information that follows it, use a colon. However, if you do not need a separator, don't use one. (For an example of a list in which separators are not necessary, see the list at the top of this topic.)
+  - If you need to separate the initial term or phrase from the information
+    that follows it, use a colon. However, if you do not need a separator,
+    don't use one. (For an example of a list in which separators are not
+    necessary, see the list at the top of this topic.)
 - Unless another order makes sense or is preferable, alphabetize list items.
 
 The following sections show examples of the indicated types of lists.
@@ -752,14 +1064,17 @@ The following sections show examples of the indicated types of lists.
 #### All list items are sentences, example
 When you create an isolated network, the following limitations apply:
 - The isolated network must exist in the same region as the server.
-- You can create up to three isolated networks with up to 64 servers attached to each one.
+- You can create up to three isolated networks with up to 64 servers attached
+  to each one.
 - After you create an isolated network, you cannot rename it.
 
 #### All list items are fragments, example
-The example creates a database instance called myrackinstance with the following characteristics:
+The example creates a database instance called myrackinstance with the
+following characteristics:
 - 512 MB instance flavor
 - Volume size of 2 GB
-- Database named `sampledb` with a `utf8` character set and a `utf8_general_ci` collation
+- Database named `sampledb` with a `utf8` character set and a `utf8_general_ci`
+  collation
 - User named `simplestUser` with the password `password`
 
 #### All list items are imperative statements, example
@@ -769,16 +1084,26 @@ You can use Cloud Backup to perform the following actions:
 - See the activity from all your backups.
 - Use AES-256 encryption with a private encryption key that only you know.
 - Restore individual files and folders from a particular date.
-- Save space with incremental backups that save only the changed portions of files.
+- Save space with incremental backups that save only the changed portions of
+  files.
 - Create unlimited backups.
 
 #### List items mix fragments and sentences, example
 To run the examples in this guide, the following prerequisites are required:
-- Rackspace Cloud account. To sign up for a Rackspace Cloud account, go to the <u>Rackspace Public Cloud signup page</u>.
+- Rackspace Cloud account. To sign up for a Rackspace Cloud account, go to the
+  <u>Rackspace Public Cloud signup page</u>.
 - Rackspace user name and password that you specified during registration.
 
 #### List that provides terms and more information, example
 You have the following choices for your virtual IP:
-- **Public**: This setting allows any two servers with public IP addresses to be load balanced. These can be nodes outside of the Rackspace network, but if they are, standard bandwidth rates apply.
-- **Shared Virtual IP**: Use this setting if you want to load-balance multiple services on different ports while using the same virtual IP address.
-- **Private Rackspace network**: This is the best option for load-balancing two Cloud Servers because it allows the load-balancing traffic to run on the Rackspace Cloud internal network, called ServiceNet. This option has two distinct advantages: the rate limit is double what the rate limit is on the public interface, and all traffic on the ServiceNet between Cloud Servers is not charged for bandwidth.
+- **Public**: This setting allows any two servers with public IP addresses to
+  be load balanced. These can be nodes outside of the Rackspace network, but if
+  they are, standard bandwidth rates apply.
+- **Shared Virtual IP**: Use this setting if you want to load-balance multiple
+  services on different ports while using the same virtual IP address.
+- **Private Rackspace network**: This is the best option for load-balancing two
+  Cloud Servers because it allows the load-balancing traffic to run on the
+  Rackspace Cloud internal network, called ServiceNet. This option has two
+  distinct advantages: the rate limit is double what the rate limit is on the
+  public interface, and all traffic on the ServiceNet between Cloud Servers is
+  not charged for bandwidth.

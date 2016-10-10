@@ -1,37 +1,51 @@
 # Basic writing guidelines
 
-If you want to write Rackspace content that is clear and consistent and that helps customers accomplish their goals, use the basic writing guidelines in this topic.
+If you want to write Rackspace content that is clear and consistent and that
+helps customers accomplish their goals, use the basic writing guidelines in
+this topic.
 - [Write short, concise sentences](#write-short-concise-sentences)
 - [Use active voice](#use-active-voice)
 - [Use present tense](#use-present-tense)
-- [Write to the user by using second person and imperative mood](#write-to-the-user-by-using-second-person-and-imperative-mood)
+- [Write to the user by using second person and imperative
+  mood](#write-to-the-user-by-using-second-person-and-imperative-mood)
 - [Create short paragraphs](#create-short-paragraphs)
-- [Use short, familiar words and phrases](#use-short-familiar-words-and-phrases)
+- [Use short, familiar words and
+  phrases](#use-short-familiar-words-and-phrases)
 - [Use consistent terminology](#use-consistent-terminology)
-- [Use simple action verbs, and don't turn them into nouns](#use-simple-action-verbs-and-don-t-turn-them-into-nouns)
+- [Use simple action verbs, and don't turn them into
+  nouns](#use-simple-action-verbs-and-don-t-turn-them-into-nouns)
 - [Clarify gerunds and participles](#clarify-gerunds-and-participles)
 - [Back up statements with details](#back-up-statements-with-details)
 - [Use interjections with care](#beware-interjections)
-- [Use restrictive and nonrestrictive clauses correctly](#use-restrictive-and-nonrestrictive-clauses-correctly)
+- [Use restrictive and nonrestrictive clauses
+  correctly](#use-restrictive-and-nonrestrictive-clauses-correctly)
 - [Clarify pronouns](#clarify-pronouns)
 - [Include all necessary words](#include-all-necessary-words)
 - [Use positive statements](#use-positive-statements)
-- [Use consistent references to time, space, and versions](#use-consistent-references-to-time-space-and-versions)
+- [Use consistent references to time, space, and
+  versions](#use-consistent-references-to-time-space-and-versions)
 - [Use correct punctuation](#use-correct-punctuation)
-- [Avoid obscure non-English words and abbreviations](#avoid-obscure-non-english-words-and-abbreviations)
+- [Avoid obscure non-English words and
+  abbreviations](#avoid-obscure-non-english-words-and-abbreviations)
 - [Write for a global audience](#write-for-a-global-audience)
 
 ## Write short, concise sentences
 
-Customers can understand wordy and complex writing, but they shouldn't be forced to read it. Use the following guidelines to improve focus and clarity in your content by using short sentences.
+Customers can understand wordy and complex writing, but they shouldn't be
+forced to read it. Use the following guidelines to improve focus and clarity in
+your content by using short sentences.
 
 - [Use a consistent sentence structure](#use-a-consistent-sentence-structure)
 - [Restrict sentence length](#restrict-sentence-length)
-- [Omit unnecessary clauses, phrases, and words](#omit-unnecessary-clauses-phrases-and-words)
+- [Omit unnecessary clauses, phrases, and
+  words](#omit-unnecessary-clauses-phrases-and-words)
 - [Put serial items into bullet lists](#put-serial-items-into-bullet-lists)
 
 ### Use a consistent sentence structure
-As often as possible, use the sentence structure *subject*—*verb*—*object*. Use simple declarative sentences for descriptions, and use simple imperative sentences for instructions. However, you can use a sentence structure that starts with an *if* clause or places the condition before the action.
+As often as possible, use the sentence structure *subject*—*verb*—*object*. Use
+simple declarative sentences for descriptions, and use simple imperative
+sentences for instructions. However, you can use a sentence structure that
+starts with an *if* clause or places the condition before the action.
 
 <!--table-->
 Use | Avoid
@@ -43,7 +57,12 @@ If you must monitor clients from the host, you can configure your settings in th
 
 ### Restrict sentence length
 
-Even when a long sentence is well written, it can be harder to follow and understand than a comparatively shorter sentence. For procedural (task-oriented) information, try to limit sentences to 20 words. For conceptual information, try to limit sentences to 25 words. If you must write a longer sentence, it should have more than one clause and the relationship between the clauses should be clear.
+Even when a long sentence is well written, it can be harder to follow and
+understand than a comparatively shorter sentence. For procedural
+(task-oriented) information, try to limit sentences to 20 words. For conceptual
+information, try to limit sentences to 25 words. If you must write a longer
+sentence, it should have more than one clause and the relationship between the
+clauses should be clear.
 
 <!--table-->
 Use       | Avoid
@@ -54,7 +73,12 @@ Select whether to overwrite files with the same name or to restore files to thei
 
 ### Omit unnecessary clauses, phrases, and words
 
-Ask yourself whether customers need to be told everything you are telling them. Is anything so obvious that it does not need to be said? Are you using adverbs (modifiers ending in *-ly*)? If so, most of them can be removed without harming the meaning. Examine your use of adjectives. If they are not needed, remove them. Can prepositional phrases be shortened? Are you using empty phrases that do not clarify the content?
+Ask yourself whether customers need to be told everything you are telling them.
+Is anything so obvious that it does not need to be said? Are you using adverbs
+(modifiers ending in *-ly*)? If so, most of them can be removed without harming
+the meaning. Examine your use of adjectives. If they are not needed, remove
+them. Can prepositional phrases be shortened? Are you using empty phrases that
+do not clarify the content?
 
 <!--table-->
 Use | Avoid
@@ -65,11 +89,13 @@ Use | Avoid
  In an environment where the product is running, you can use the ESP utility to monitor and audit your backup and recovery activities across the enterprise. | In an environment where the product is installed and running on one or more hosts, the ESP utility enables you to monitor your backup and recovery activities and audit your backup and recovery practices from an enterprise-wide perspective.
 <!--endtable-->
 
- **Note:** Although shorter is usually better, do not omit necessary articles, prepositions, and connectors. Never sacrifice clarity for brevity.
+ **Note:** Although shorter is usually better, do not omit necessary articles,
+ prepositions, and connectors. Never sacrifice clarity for brevity.
 
 ### Put serial items into bullet lists
 
-If a sentence contains a series of items, converting the items to a bullet list often makes the sentence easier to read and easier to scan.
+If a sentence contains a series of items, converting the items to a bullet list
+often makes the sentence easier to read and easier to scan.
 
 <!--table-->
 Use | Avoid
@@ -82,10 +108,16 @@ From the Job Scheduler window, you can perform the following actions:<br /><br /
 
 In general, write in *active* voice rather than *passive* voice.
 
-- Active voice identifies the agent of action as the subject of the verb—usually the user.
-- Passive voice identifies the recipient (not the source) of the action as the subject of the verb.
+- Active voice identifies the agent of action as the subject of the
+  verb—usually the user.
+- Passive voice identifies the recipient (not the source) of the action as the
+  subject of the verb.
 
-Active-voice sentences clarify the performer of an action and are easier to understand than passive-voice sentences. Passive voice is usually less engaging and more complicated than active voice. When you use passive voice, the actions and responses of the software can be difficult to distinguish from those of the user. In addition, passive voice usually requires more words than active voice.
+Active-voice sentences clarify the performer of an action and are easier to
+understand than passive-voice sentences. Passive voice is usually less engaging
+and more complicated than active voice. When you use passive voice, the actions
+and responses of the software can be difficult to distinguish from those of the
+user. In addition, passive voice usually requires more words than active voice.
 
 <!--table-->
 Use | Avoid
@@ -98,8 +130,11 @@ Rackspace products and services solve your business problems. | Your business pr
 
 However, passive voice is acceptable in the following situations:
 
-- Using active voice sounds like you are blaming the customer. For example, you can use passive voice in an error message or troubleshooting content when the active subject is the customer.
-- The agent of action is unknown, or you want to de-emphasize the agent of action and emphasize the object on which the action is performed.
+- Using active voice sounds like you are blaming the customer. For example, you
+  can use passive voice in an error message or troubleshooting content when the
+  active subject is the customer.
+- The agent of action is unknown, or you want to de-emphasize the agent of
+  action and emphasize the object on which the action is performed.
 - Recasting the sentence in active voice is wordy or awkward.
 
 <!--table-->
@@ -112,9 +147,14 @@ Account owners cannot be assigned additional roles, and their access cannot be r
 
 ## Use present tense
 
-Customers read documentation to perform tasks or gather information. For them, these activities take place in their present, so the present tense is appropriate in most cases. Additionally, present tense is easier to read than past or future tense.
+Customers read documentation to perform tasks or gather information. For them,
+these activities take place in their present, so the present tense is
+appropriate in most cases. Additionally, present tense is easier to read than
+past or future tense.
 
-Use future tense only when you need to emphasize that something will occur later (from the customers' perspective). To easily find and remove instances of future tense, search for *will*.
+Use future tense only when you need to emphasize that something will occur
+later (from the customers' perspective). To easily find and remove instances of
+future tense, search for *will*.
 
 <!--table-->
 Use | Avoid
@@ -128,15 +168,32 @@ When the contract changes, Rackspace **will notify** customers in release notes.
 
 ## Write to the user by using second person and imperative mood
 
-Customers are more engaged with documentation when you use second person (that is, you address the customer as *you*). Second person promotes a friendly tone by addressing customers directly. Using second person with the imperative mood (in which the subject *you* is understood) and active voice helps to eliminate wordiness and confusion about who or what initiates an action, especially in procedural steps.
+Customers are more engaged with documentation when you use second person (that
+is, you address the customer as *you*). Second person promotes a friendly tone
+by addressing customers directly. Using second person with the imperative mood
+(in which the subject *you* is understood) and active voice helps to eliminate
+wordiness and confusion about who or what initiates an action, especially in
+procedural steps.
 
-Using second person also avoids the use of gender-specific, third-person pronouns such as *he*, *she*, *his*, and *hers*. If you must use third person, use the pronouns *they* and *their*, but ensure that the pronoun matches the referenced noun in number.
+Using second person also avoids the use of gender-specific, third-person
+pronouns such as *he*, *she*, *his*, and *hers*. If you must use third person,
+use the pronouns *they* and *their*, but ensure that the pronoun matches the
+referenced noun in number.
 
-Use first person plural pronouns (*we*, *our*) judiciously. These pronouns emphasize the writer or Rackspace rather than the customer, so before you use them, consider whether second person or imperative mood is more "user friendly." However, use *we recommend* rather than *it is recommended* or *Rackspace recommends*. Also, you can use *we* in the place of *Rackspace* if necessary.
+Use first person plural pronouns (*we*, *our*) judiciously. These pronouns
+emphasize the writer or Rackspace rather than the customer, so before you use
+them, consider whether second person or imperative mood is more "user
+friendly." However, use *we recommend* rather than *it is recommended* or
+*Rackspace recommends*. Also, you can use *we* in the place of *Rackspace* if
+necessary.
 
-The first-person singular pronoun *I* is acceptable in the question part of FAQs and when authors of blogs or signed articles are describing their own actions or opinions.
+The first-person singular pronoun *I* is acceptable in the question part of
+FAQs and when authors of blogs or signed articles are describing their own
+actions or opinions.
 
-Avoid switching person (point of view) in the same document. Switching person is acceptable, however, in blog posts that use first-person singular but then switch to second person for instructional steps.
+Avoid switching person (point of view) in the same document. Switching person
+is acceptable, however, in blog posts that use first-person singular but then
+switch to second person for instructional steps.
 
 <!--table-->
 Use | Avoid
@@ -152,13 +209,18 @@ I want to update everyone about the current status of the project and our future
 
 ## Create short paragraphs
 
-Short paragraphs are easier to scan and understand. Use the following guidelines for paragraphs:
+Short paragraphs are easier to scan and understand. Use the following
+guidelines for paragraphs:
 - Cover only one idea in each paragraph.
-- Limit paragraphs to four to five sentences. However, avoid having one-sentence paragraphs.
-- Use connective or transitional words to ensure flow within and between paragraphs.
-- When listing three or more items, use a bullet list instead of embedding the items in a paragraph.
+- Limit paragraphs to four to five sentences. However, avoid having
+  one-sentence paragraphs.
+- Use connective or transitional words to ensure flow within and between
+  paragraphs.
+- When listing three or more items, use a bullet list instead of embedding the
+  items in a paragraph.
 
-The following example shows how breaking up a long paragraph by using a list makes it easy for the customer to scan the text.
+The following example shows how breaking up a long paragraph by using a list
+makes it easy for the customer to scan the text.
 
 <!--table-->
 Use | Avoid
@@ -167,9 +229,13 @@ Within the Cloud Storage App for Microsoft SharePoint, you can delete a single f
 <!--endtable-->
 
 ## Use short, familiar words and phrases
-Use short, familiar words and phrases to convey an idea clearly. Such words and phrases are more conversational, save space, are easier to scan, and are often easier for non-native English speakers to understand. Use a longer word or phrase only if necessary to convey a special meaning.
+Use short, familiar words and phrases to convey an idea clearly. Such words and
+phrases are more conversational, save space, are easier to scan, and are often
+easier for non-native English speakers to understand. Use a longer word or
+phrase only if necessary to convey a special meaning.
 
-If a word has variant spellings that are equally acceptable (such as *canceled* and *cancelled*), use the shorter spelling.
+If a word has variant spellings that are equally acceptable (such as *canceled*
+and *cancelled*), use the shorter spelling.
 
 <!--table-->
 Use | Avoid
@@ -180,48 +246,80 @@ This guide is designed to get you started with the service and to answer your qu
 
 ## Use consistent terminology
 
-Use words as they are defined in a general dictionary, in an accepted industry dictionary or style guide, or for your particular project. Each word or phrase should have only one meaning, and should be used consistently throughout the documentation.
+Use words as they are defined in a general dictionary, in an accepted industry
+dictionary or style guide, or for your particular project. Each word or phrase
+should have only one meaning, and should be used consistently throughout the
+documentation.
 
-- Don't use the same word to describe two or more different concepts. For example, don't use *agent* to refer to both a person and a process.
+- Don't use the same word to describe two or more different concepts. For
+  example, don't use *agent* to refer to both a person and a process.
 
-- If a word has both a technical meaning and a general meaning, don't use it to express both meanings. Instead, use a synonym for the general meaning. For example, use *interface* as a noun that means user interface. Instead of also using *interface* as a verb, use *interact*.
+- If a word has both a technical meaning and a general meaning, don't use it to
+  express both meanings. Instead, use a synonym for the general meaning. For
+  example, use *interface* as a noun that means user interface. Instead of also
+  using *interface* as a verb, use *interact*.
 
-- Don't use different words to mean the same thing. Standardize on the use of one word for a particular object. Technical writing is not creative writing, and you should not be concerned that you will bore customers with colorless prose. Clarity is the goal, so using a precise set  of terms consistently is required. Following is a common example of multiple terms that refer to the same thing:
+- Don't use different words to mean the same thing. Standardize on the use of
+  one word for a particular object. Technical writing is not creative writing,
+  and you should not be concerned that you will bore customers with colorless
+  prose. Clarity is the goal, so using a precise set of terms consistently is
+  required. Following is a common example of multiple terms that refer to the
+  same thing:
   - menu command *(the preferred term)*
   - menu item
   - menu option
 
 
-- Use a word as only one part of speech. Many words can be correctly used as a verb and as a noun or an adjective, such as *display*. However, using the same word as more than one part of speech in the same document can be confusing to customers and translators, so avoid it when possible.
+- Use a word as only one part of speech. Many words can be correctly used as a
+  verb and as a noun or an adjective, such as *display*. However, using the
+  same word as more than one part of speech in the same document can be
+  confusing to customers and translators, so avoid it when possible.
 
-- Avoid fabricated words. Examples of fabricated words are *marketecture* or *edutainment*. Most such words are specific to a single business culture and are not understood in other cultures.
+- Avoid fabricated words. Examples of fabricated words are *marketecture* or
+  *edutainment*. Most such words are specific to a single business culture and
+  are not understood in other cultures.
 
 - Standardize words and spelling across a documentation set.
 
-- Don't  use terms with different meanings interchangeably. Some terms have similar but distinct meanings and should not be used interchangeably. For example:
+- Don't use terms with different meanings interchangeably. Some terms have
+  similar but distinct meanings and should not be used interchangeably. For
+  example:
   - environment, platform
   - version, release
   - panel, screen
   - window, dialog box
 
-For guidelines about specific words, see [Terminology guidelines](terminology-guidelines.md).
+For guidelines about specific words, see [Terminology
+guidelines](terminology-guidelines.md).
 
 ## Use simple action verbs, and don't turn them into nouns
 
-Verbs carry the action in a sentence, and they make your documentation come alive for customers. To make the biggest impact with your writing, use strong, simple, action verbs, and use the guidelines in this section.
+Verbs carry the action in a sentence, and they make your documentation come
+alive for customers. To make the biggest impact with your writing, use strong,
+simple, action verbs, and use the guidelines in this section.
 
-- [Use action-oriented verbs instead of weak verbs](#use-action-oriented-verbs-instead-of-weak-verbs)
-- [Turn noun+verb constructions into verb-only constructions](#turn-noun-verb-constructions-into-verb-only-constructions)
+- [Use action-oriented verbs instead of weak
+  verbs](#use-action-oriented-verbs-instead-of-weak-verbs)
+- [Turn noun+verb constructions into verb-only
+  constructions](#turn-noun-verb-constructions-into-verb-only-constructions)
 - [Use the simplest tense](#use-the-simplest-tense)
 - [Use helping verbs accurately](#use-helping-verbs-accurately)
 - [Use single-word verbs](#use-single-word-verbs)
-- [Do not use verbs as nouns or adjectives](#do-not-use-verbs-as-nouns-or-adjectives)
+- [Do not use verbs as nouns or
+  adjectives](#do-not-use-verbs-as-nouns-or-adjectives)
 - [Do not use nonverbs as verbs](#do-not-use-nonverbs-as-verbs)
-- [Use transitive verbs transitively, not intransitively](#use-transitive-verbs-transitively-not-intransitively)
-- [Avoid using anthropomorphic verbs to describe inanimate objects](#avoid-using-anthropomorphic-verbs-to-describe-inanimate-objects)
+- [Use transitive verbs transitively, not
+  intransitively](#use-transitive-verbs-transitively-not-intransitively)
+- [Avoid using anthropomorphic verbs to describe inanimate
+  objects](#avoid-using-anthropomorphic-verbs-to-describe-inanimate-objects)
 
 ### Use action-oriented verbs instead of weak verbs
-When you use weak verbs like *be*, *have*, *make*, or *do* (and their variants), or when you use gerunds (*-ing* words), nouns instead of verbs carry the main action of the sentence. Shift the focus from nouns to verbs by replacing weak verbs and gerunds with strong, action-oriented verbs. Relying on verbs rather than nouns usually makes sentence shorter, clearer, and more direct.
+When you use weak verbs like *be*, *have*, *make*, or *do* (and their
+variants), or when you use gerunds (*-ing* words), nouns instead of verbs carry
+the main action of the sentence. Shift the focus from nouns to verbs by
+replacing weak verbs and gerunds with strong, action-oriented verbs. Relying on
+verbs rather than nouns usually makes sentence shorter, clearer, and more
+direct.
 
 <!--table-->
 Use | Avoid
@@ -234,7 +332,13 @@ When you **create** a server, ...|When **creating** a server, ...
 <!--endtable-->
 
 ### Turn noun+verb constructions into verb-only constructions
-Many nouns that we commonly use are built from verbs. When a verb is transformed into a noun, the resulting noun is called a *nominalization*. Sentences that include a  nominalization and a verb can often be simplified by changing the nominalization back into a verb and omitting the existing verb (as shown in the following examples). Excessive and unnecessary use of nominalizations contributes to  wordiness and dilutes meaning. Omit them when possible.
+Many nouns that we commonly use are built from verbs. When a verb is
+transformed into a noun, the resulting noun is called a *nominalization*.
+Sentences that include a nominalization and a verb can often be simplified by
+changing the nominalization back into a verb and omitting the existing verb (as
+shown in the following examples). Excessive and unnecessary use of
+nominalizations contributes to wordiness and dilutes meaning. Omit them when
+possible.
 
 <!--table-->
 Use | Avoid
@@ -245,7 +349,10 @@ The program **encrypts** user IDs and passwords. | The program **enables the enc
 <!--endtable-->
 
 ### Use the simplest tense
-Simple verbs, such as verbs in the present tense, are easier to read and understand than complex verbs, such as verbs in the progressive or perfect tense, or verbs combined with helping verbs (such as *can*, *may*, *might*, *must*, and *should*).
+Simple verbs, such as verbs in the present tense, are easier to read and
+understand than complex verbs, such as verbs in the progressive or perfect
+tense, or verbs combined with helping verbs (such as *can*, *may*, *might*,
+*must*, and *should*).
 
 <!--table-->
 Use | Avoid
@@ -256,12 +363,16 @@ If you **use** a Red Hat distribution, iptables works a little differently. | If
 <!--endtable-->
 
 ### Use helping verbs accurately
-If you need to use the following helping verbs, use them accurately and consistently:
+If you need to use the following helping verbs, use them accurately and
+consistently:
 - **Can**: Use *can* to indicate the ability to perform an action.
 - **May**: Use *may* to indicate permission.
 - **Might**: Use *might* to indicate probability or possibility.
-- **Must**: You can use *must* to indicate the necessity of an action. However, in general, use the imperative mood, which implies the subject you and does not require *must*, yet still indicates necessity.
-- **Should**: Use *should* to tell customers what they *ought* to do. Because *should* implies uncertainty, avoid using it unless you explain further.
+- **Must**: You can use *must* to indicate the necessity of an action. However,
+  in general, use the imperative mood, which implies the subject you and does
+  not require *must*, yet still indicates necessity.
+- **Should**: Use *should* to tell customers what they *ought* to do. Because
+  *should* implies uncertainty, avoid using it unless you explain further.
 
 <!--table-->
 | Use |
@@ -274,11 +385,18 @@ If you need to use the following helping verbs, use them accurately and consiste
 <!--endtable-->
 
 ### Use single-word verbs
-When possible, use single-word verbs rather than phrasal verbs (verbs followed by prepositions or adverbs). For example, use *omit* rather than *leave out*, or shorten *start up* to *start*. One-word verbs are easier to understand and to translate.
+When possible, use single-word verbs rather than phrasal verbs (verbs followed
+by prepositions or adverbs). For example, use *omit* rather than *leave out*,
+or shorten *start up* to *start*. One-word verbs are easier to understand and
+to translate.
 
-If you must use a phrasal verb, keep the parts of the verb together unless that changes the meaning of the sentence. Some acceptable phrasal verbs are *back up*, *log in*, *set up*, *shut down*, and *work around*.
+If you must use a phrasal verb, keep the parts of the verb together unless that
+changes the meaning of the sentence. Some acceptable phrasal verbs are *back
+up*, *log in*, *set up*, *shut down*, and *work around*.
 
-**Note:** Do not turn a phrasal verb into a single-word verb. For example, do not use *login*, *setup*, or *workaround* as verbs. These single-word terms should be used only as nouns or adjectives.
+**Note:** Do not turn a phrasal verb into a single-word verb. For example, do
+not use *login*, *setup*, or *workaround* as verbs. These single-word terms
+should be used only as nouns or adjectives.
 
 <!--table-->
 Use | Avoid
@@ -290,7 +408,9 @@ You can safely **back up a database** by using Rackspace Cloud Backup. | You can
 
 ### Do not use verbs as nouns or adjectives
 
-If a word is defined in the dictionary as a verb, do not use it as a noun or adjective. Some verbs that are commonly misused as nouns or adjectives are *configure*, *compile*, *debug*, and *install*.
+If a word is defined in the dictionary as a verb, do not use it as a noun or
+adjective. Some verbs that are commonly misused as nouns or adjectives are
+*configure*, *compile*, *debug*, and *install*.
 
 <!--table-->
 Correct | Incorrect
@@ -300,7 +420,8 @@ After rubygems **is compiled**, the following message appears at the bottom of t
 <!--endtable-->
 
 ### Do not use nonverbs as verbs
-Don't use nouns or adjectives as verbs, and do not add verb suffixes to abbreviations, nouns, or conjunctions.
+Don't use nouns or adjectives as verbs, and do not add verb suffixes to
+abbreviations, nouns, or conjunctions.
 
 <!--table-->
 Correct | Incorrect
@@ -312,9 +433,12 @@ Some databases and search engines **insert the AND operator** between adjacent w
 <!--endtable-->
 
 ### Use transitive verbs transitively, not intransitively
-Transitive verbs, such as *load*, *display*, *complete*, and *execute*, require a direct object. Intransitive verbs do not require a direct object. Be sure to use each type of verb correctly.
+Transitive verbs, such as *load*, *display*, *complete*, and *execute*, require
+a direct object. Intransitive verbs do not require a direct object. Be sure to
+use each type of verb correctly.
 
-To avoid using a transitive verb intransitively, you can make it passive if the performer of the action is understood or not important.
+To avoid using a transitive verb intransitively, you can make it passive if the
+performer of the action is understood or not important.
 
 <!--table-->
 Correct | Incorrect
@@ -325,9 +449,14 @@ After the installation **is completed**, ensure that the FTP services are runnin
 <!--endtable-->
 
 ### Avoid using anthropomorphic verbs to describe inanimate objects
-Be careful not to ascribe human feelings, motivations, and actions to inanimate objects. For example, a software program does not know, need, remember, see, think, understand, or want. However, it can detect, record, require, store,  check, calculate, and process.
+Be careful not to ascribe human feelings, motivations, and actions to inanimate
+objects. For example, a software program does not know, need, remember, see,
+think, understand, or want. However, it can detect, record, require, store,
+check, calculate, and process.
 
-The following anthropomorphic verbs are acceptable in the computer industry: accept, calculate, deny, detect, interact, interpret, listen, refuse, read, and write.
+The following anthropomorphic verbs are acceptable in the computer industry:
+accept, calculate, deny, detect, interact, interpret, listen, refuse, read, and
+write.
 
 <!--table-->
 Use | Avoid
@@ -339,7 +468,12 @@ The software **stores** your security profile and uses it the next time you log 
 
 ## Clarify gerunds and participles
 
-Participles are verbs that end in *-ed* or *-ing* and act as modifiers. Gerunds are verbs that end in *-ing* and act as nouns. Both types of words are useful and acceptable, but confusion can arise if they are not placed precisely in a sentence. For example, the word *meeting* can be a gerund or a modifier (or even a noun) depending on its placement in a sentence. Clarify gerunds and participles as necessary.
+Participles are verbs that end in *-ed* or *-ing* and act as modifiers. Gerunds
+are verbs that end in *-ing* and act as nouns. Both types of words are useful
+and acceptable, but confusion can arise if they are not placed precisely in a
+sentence. For example, the word *meeting* can be a gerund or a modifier (or
+even a noun) depending on its placement in a sentence. Clarify gerunds and
+participles as necessary.
 
 <!--table-->
 Use | Avoid
@@ -350,9 +484,13 @@ Test the certificate **by using** a browser to connect to your server. | Test th
 When **you use** a load balancer with a public-facing IP address, this address becomes the IP address of your website. | When **using** a load balancer with a public-facing IP address, this address becomes the IP address of your website.
 <!--endtable-->
 
-The last example illustrates a dangling modifier. In the "Avoid" example, *using* does not have a subject, so the implied subject is *address*, which is incorrect. If the implied subject is not correct, you must revise the sentence to provide a subject for the modifying phrase.
+The last example illustrates a dangling modifier. In the "Avoid" example,
+*using* does not have a subject, so the implied subject is *address*, which is
+incorrect. If the implied subject is not correct, you must revise the sentence
+to provide a subject for the modifying phrase.
 
-Gerunds are used to start headings for process topics. Ensure that their meaning is not ambiguous.
+Gerunds are used to start headings for process topics. Ensure that their
+meaning is not ambiguous.
 
 <!--table-->
 Use | Avoid
@@ -364,7 +502,8 @@ Changing a Password | Changing Passwords
 <!--endtable-->
 
 ## Back up statements with details
-Back up statements with solid, specific details. Do not sacrifice clarity and completeness for brevity.
+Back up statements with solid, specific details. Do not sacrifice clarity and
+completeness for brevity.
 
 <!--table-->
 Use | Avoid
@@ -376,16 +515,28 @@ The next generation Cloud Servers powered by OpenStack is a fast, reliable, and 
 <!--endtable-->
 
 ## Use interjections with care
-An interjection is an emotional greeting or phrase, usually followed by an exclamation point. For example, expressions such as *Hooray!*, *Excuse me!*, *Sorry!*, *No thank you!*, *Oh dear!*, and *Hey, that's mine!* are interjections.
+An interjection is an emotional greeting or phrase, usually followed by an
+exclamation point. For example, expressions such as *Hooray!*, *Excuse me!*,
+*Sorry!*, *No thank you!*, *Oh dear!*, and *Hey, that's mine!* are
+interjections.
 
-In rare cases, an interjection might be appropriate. For example, at the end of a procedure that targets *novice* customers, you might write, "Congratulations! You successfully created your first cloud server."
+In rare cases, an interjection might be appropriate. For example, at the end of
+a procedure that targets *novice* customers, you might write, "Congratulations!
+You successfully created your first cloud server."
 
-However, because the tone of an interjection can be condescending, use them sparingly and with care.
+However, because the tone of an interjection can be condescending, use them
+sparingly and with care.
 
 ## Use restrictive and nonrestrictive clauses correctly
-A restrictive clause is essential to the meaning of a sentence because it limits the noun to which it refers. If you omit a restrictive clause, you change the essential meaning of the sentence. You indicate a restrictive clause with the relative pronoun *that* or *who*, and you do not set off a restrictive clause with commas.
+A restrictive clause is essential to the meaning of a sentence because it
+limits the noun to which it refers. If you omit a restrictive clause, you
+change the essential meaning of the sentence. You indicate a restrictive clause
+with the relative pronoun *that* or *who*, and you do not set off a restrictive
+clause with commas.
 
-A nonrestrictive clause does not change the core meaning of the sentence. You set off a nonrestrictive clause with commas and the relative pronouns *which* or *who*.
+A nonrestrictive clause does not change the core meaning of the sentence. You
+set off a nonrestrictive clause with commas and the relative pronouns *which*
+or *who*.
 
 <!--table-->
 Restrictive clause | Nonrestrictive clause
@@ -396,7 +547,8 @@ Enter the user name and password **that you just created**. (Not the user name a
 
 Be sure to clarify restrictive clauses, as follows:
 
-- Include the relative pronoun (usually *that*). You can identify restrictive clauses in which that is missing by looking for two successive nouns.
+- Include the relative pronoun (usually *that*). You can identify restrictive
+  clauses in which that is missing by looking for two successive nouns.
 - Do not substitute *which* for *that*.
 
 <!--table-->
@@ -408,12 +560,17 @@ A task presents **information that a customer needs** to achieve a specific goal
 
 ## Clarify pronouns
 
-Pronouns are useful, but you must ensure that their antecedents (the words that they are used in place of) are clear, and that they (the pronouns) don’t contribute to vagueness and ambiguity. The following pronouns often cause problems, so use them carefully: *it*, *this*, *there*, and *that*.
+Pronouns are useful, but you must ensure that their antecedents (the words that
+they are used in place of) are clear, and that they (the pronouns) don’t
+contribute to vagueness and ambiguity. The following pronouns often cause
+problems, so use them carefully: *it*, *this*, *there*, and *that*.
 
 ### It
-Ensure that the antecedent of *it* is clear. If multiple singular nouns precede *it*, any of them could be the antecedent.
+Ensure that the antecedent of *it* is clear. If multiple singular nouns precede
+*it*, any of them could be the antecedent.
 
-Avoid using *it is* to begin a sentence. Such a construction hides the real subject of the sentence.
+Avoid using *it is* to begin a sentence. Such a construction hides the real
+subject of the sentence.
 
 <!--table-->
 Use | Avoid
@@ -423,7 +580,8 @@ You must close all open windows before you run the script.	| It is important tha
 <!--endtable-->
 
 ### This
-Avoid beginning a sentence with the pronoun *this*, unless you follow *this* with a noun to clarify its meaning.
+Avoid beginning a sentence with the pronoun *this*, unless you follow *this*
+with a noun to clarify its meaning.
 
 <!--table-->
 Use | Avoid
@@ -432,7 +590,9 @@ This option causes an error when you run the program. | This causes an error whe
 <!--endtable-->
 
 ### There
-Avoid using *there is* and *there are* as the subject of a sentence or clause. Using *there* shifts the focus away from the real subject and often uses unnecessary words.
+Avoid using *there is* and *there are* as the subject of a sentence or clause.
+Using *there* shifts the focus away from the real subject and often uses
+unnecessary words.
 
 <!--table-->
 Use | Avoid
@@ -443,7 +603,11 @@ The Cloud Sites FTP service supports resumable uploading. If a connection fails 
 <!--endtable-->
 
 ### That
-Although you should use *that* as a relative pronoun (see [Use restrictive and nonrestrictive clauses correctly](#use-restrictive-and-nonrestrictive-clauses-correctly)), avoid using it as a demonstrative pronoun (which stands in for or points to a noun). Instead, use it as an adjective and follow it with a noun.
+Although you should use *that* as a relative pronoun (see [Use restrictive and
+nonrestrictive clauses
+correctly](#use-restrictive-and-nonrestrictive-clauses-correctly)), avoid using
+it as a demonstrative pronoun (which stands in for or points to a noun).
+Instead, use it as an adjective and follow it with a noun.
 
 <!--table-->
 Use | Avoid
@@ -453,7 +617,13 @@ You can also edit or delete your CNAME by managing your DNS in your existing too
 <!--endtable-->
 
 ## Include all necessary words
-Include all the words that are necessary to make the meaning of a sentence clear the first time it is read. Include all necessary articles (*a*, *an*, *the*) and other syntactic cues, such as those described in [Clarify gerunds and participles](#clarify-gerunds-and-participles), [Use restrictive and nonrestrictive clauses correctly](#use-restrictive-and-nonrestrictive-clauses-correctly), and [Clarify pronouns](#clarify-pronouns).
+Include all the words that are necessary to make the meaning of a sentence
+clear the first time it is read. Include all necessary articles (*a*, *an*,
+*the*) and other syntactic cues, such as those described in [Clarify gerunds
+and participles](#clarify-gerunds-and-participles), [Use restrictive and
+nonrestrictive clauses
+correctly](#use-restrictive-and-nonrestrictive-clauses-correctly), and [Clarify
+pronouns](#clarify-pronouns).
 
 <!--table-->
 Use | Avoid
@@ -473,7 +643,8 @@ Remember to involve your business users in the scheduling process. | Do not forg
 Sometimes you want to prevent a search engine from indexing a website. | It is not uncommon in certain situations to not want to allow indexing of a site by a search engine.
 <!--endtable-->
 
-Also, try to avoid the following negative words, using instead the suggested alternatives. However, always be honest and transparent about any issues.
+Also, try to avoid the following negative words, using instead the suggested
+alternatives. However, always be honest and transparent about any issues.
 
 <!--table-->
 Avoid | Alternative
@@ -500,25 +671,42 @@ earlier, later | To refer to product releases (version numbers). **Note:** Do no
 <!--endtable-->
 
 ## Use correct punctuation
-When customers have to reread a sentence or paragraph to understand it, faulty punctuation is often the culprit. Following are some common situations:
+When customers have to reread a sentence or paragraph to understand it, faulty
+punctuation is often the culprit. Following are some common situations:
 - A comma is omitted.
 - An unnecessary comma is used.
 - A long sentence contains overly complex punctuation.
 - A parenthetical phrase occurs in the middle of an instruction.
 
-All of these situations can inhibit comprehension. By using correct punctuation in general, keeping sentences short, and using consistent punctuation in lists, procedures, and tables, you help customers to understand what you mean *the first time* they read the text. Following are a few basic guidelines to apply:
+All of these situations can inhibit comprehension. By using correct punctuation
+in general, keeping sentences short, and using consistent punctuation in lists,
+procedures, and tables, you help customers to understand what you mean *the
+first time* they read the text. Following are a few basic guidelines to apply:
 
 - Use a comma before the last item in a series (known as the *serial* comma).
-- Use a comma to separate independent clauses, and be sure to include a coordinating conjunction.
-- Avoid using semicolons to separate clauses. They can make long sentences seem even longer. You can almost always use a period in the place of a semicolon.
-- Do not use a slash mark (/) to present a choice among, or a series of, actions or objects. Rewrite the phrase to eliminate the slash mark. Exceptions are established terms like *client/server* and *read/write*.
+- Use a comma to separate independent clauses, and be sure to include a
+  coordinating conjunction.
+- Avoid using semicolons to separate clauses. They can make long sentences seem
+  even longer. You can almost always use a period in the place of a semicolon.
+- Do not use a slash mark (/) to present a choice among, or a series of,
+  actions or objects. Rewrite the phrase to eliminate the slash mark.
+  Exceptions are established terms like *client/server* and *read/write*.
 
-For additional specific punctuation guidelines and examples, see [Punctuation](../m-z-style-guidelines.html#punctuation). For basic rules about punctuation, see a grammar book, such as the *Harbrace College Handbook*.
+For additional specific punctuation guidelines and examples, see
+[Punctuation](../m-z-style-guidelines.html#punctuation). For basic rules about
+punctuation, see a grammar book, such as the *Harbrace College Handbook*.
 
-**Note:** Avoid using exclamation points, question marks, ellipses (three dots), or single quotation marks in text. Although these punctuation marks might appear in code elements, messages, literal commands, or UIs, they are rarely useful when writing descriptions or instructions for customers. One exception is the use of question marks in FAQ topics.
+**Note:** Avoid using exclamation points, question marks, ellipses (three
+dots), or single quotation marks in text. Although these punctuation marks
+might appear in code elements, messages, literal commands, or UIs, they are
+rarely useful when writing descriptions or instructions for customers. One
+exception is the use of question marks in FAQ topics.
 
 ## Avoid obscure non-English words and abbreviations
-Some non-English words and abbreviations are difficult to translate, and some customers might be unfamiliar with them. Some Latin abbreviations, like *i.e.*, *e.g.*, and *etc.*, are unnecessarily vague. The following table lists terms and abbreviations to avoid, and their preferred alternatives.
+Some non-English words and abbreviations are difficult to translate, and some
+customers might be unfamiliar with them. Some Latin abbreviations, like *i.e.*,
+*e.g.*, and *etc.*, are unnecessarily vague. The following table lists terms
+and abbreviations to avoid, and their preferred alternatives.
 
 <!--table-->
 Non-English word | English alternative | Use | Avoid
@@ -532,24 +720,38 @@ vs. | versus, or an appropriate term | The following diagram contrasts the provi
 <!--endtable-->
 
 ## Write for a global audience
-Rackspace is a global company, with customers in many countries. A small amount of content has been translated, but most has not, which means that many customers who do not speak English as their first language consume our English content. All of the guidelines in this topic ("Basic writing guidelines") are designed to make content easy to understand for all audiences, but the following guidelines will especially clarify content for global audiences.
+Rackspace is a global company, with customers in many countries. A small amount
+of content has been translated, but most has not, which means that many
+customers who do not speak English as their first language consume our English
+content. All of the guidelines in this topic ("Basic writing guidelines") are
+designed to make content easy to understand for all audiences, but the
+following guidelines will especially clarify content for global audiences.
 
 - [Do not use idioms or colloquialisms](#do-not-use-idioms-or-colloquialisms)
 - [Avoid metaphorical terms](#avoid-metaphorical-terms)
 - [Do not use humor](#do-not-use-humor)
 - [Use jargon carefully](#use-jargon-carefully)
-- [Use culture-neutral language and examples](#use-culture-neutral-language-and-examples)
+- [Use culture-neutral language and
+  examples](#use-culture-neutral-language-and-examples)
 - [Use culture-neutral graphics](#use-culture-neutral-graphics)
 - [Avoid abbreviated date formats](#avoid-abbreviated-date-formats)
 
 ### Do not use idioms or colloquialisms
-An *idiom* is an expression whose meaning cannot be derived from the literal meaning of the individual words. Some examples are *in a nutshell*, *the bottom line*, *across the board*, and *on the fly*.
+An *idiom* is an expression whose meaning cannot be derived from the literal
+meaning of the individual words. Some examples are *in a nutshell*, *the bottom
+line*, *across the board*, and *on the fly*.
 
-A *colloquialism* is an expression considered more appropriate to familiar and casual conversation than to formal speech or to formal writing. Although we might like to establish a more conversational tone in some content, colloquialisms can be hard for non-native English speakers to understand, and they are hard to translate.
+A *colloquialism* is an expression considered more appropriate to familiar and
+casual conversation than to formal speech or to formal writing. Although we
+might like to establish a more conversational tone in some content,
+colloquialisms can be hard for non-native English speakers to understand, and
+they are hard to translate.
 
 Avoid idioms and colloquialisms as often as possible.
 
-The following table lists some idioms and colloquialisms, and provides alternatives that you can use. Note that the alternative terms are generally shorter than their idiomatic or colloquial counterparts.
+The following table lists some idioms and colloquialisms, and provides
+alternatives that you can use. Note that the alternative terms are generally
+shorter than their idiomatic or colloquial counterparts.
 
 <!--table-->
 Idiom or colloquialism | Alternative
@@ -572,9 +774,13 @@ when you are done	| when you are finished
 <!--endtable-->
 
 ### Avoid metaphorical terms
-A *metaphor* is a figure of speech in which a word or phrase that denotes one kind of object or action is used in place of another to suggest a likeness or analogy between them. Although some common metaphors are easy even for people who do not speak English as a first language, avoid them as often as possible.
+A *metaphor* is a figure of speech in which a word or phrase that denotes one
+kind of object or action is used in place of another to suggest a likeness or
+analogy between them. Although some common metaphors are easy even for people
+who do not speak English as a first language, avoid them as often as possible.
 
-The following table provides some examples of metaphorical terms that can easily be replaced with one or more words.
+The following table provides some examples of metaphorical terms that can
+easily be replaced with one or more words.
 
 <!--table-->
 Metaphor | Alternative
@@ -587,14 +793,26 @@ the drawback of frequent updates | the disadvantage of frequent updates
 <!--endtable-->
 
 ### Do not use humor
-Humor is culture specific. What might be funny in one culture might be offensive or obscene in another culture. Humor doesn't translate well, literally or figuratively, so don't use it.
+Humor is culture specific. What might be funny in one culture might be
+offensive or obscene in another culture. Humor doesn't translate well,
+literally or figuratively, so don't use it.
 
 ### Use jargon carefully
-*Jargon* is the specialized language of a profession. Jargon can be useful for technical audiences, but it can be meaningless to novice customers and difficult to translate. Do not use jargon if you can easily and correctly use a more common or familiar term, or if the jargon obfuscates rather than clarifies the meaning. However, if the jargon is essential to the technical meaning of the content, use it. If the audience is not highly technical, consider explaining any jargon that you use.
+*Jargon* is the specialized language of a profession. Jargon can be useful for
+technical audiences, but it can be meaningless to novice customers and
+difficult to translate. Do not use jargon if you can easily and correctly use a
+more common or familiar term, or if the jargon obfuscates rather than clarifies
+the meaning. However, if the jargon is essential to the technical meaning of
+the content, use it. If the audience is not highly technical, consider
+explaining any jargon that you use.
 
-The following table lists some jargon typically used in the high tech industry and some possible alternatives.
+The following table lists some jargon typically used in the high tech industry
+and some possible alternatives.
 
-**Use with Caution:** This list is under construction as we determine what jargon is acceptable. If one of these terms is used in content that is provided by support or development, determine whether it is appropriate for the audience.
+**Use with Caution:** This list is under construction as we determine what
+jargon is acceptable. If one of these terms is used in content that is provided
+by support or development, determine whether it is appropriate for the
+audience.
 
 <!--table-->
 Jargon | Alternative | Examples
@@ -623,31 +841,54 @@ throw (v)	| generate |	If the program fails, an error is generated.
 <!--endtable-->
 
 ### Use culture-neutral language and examples
-Cultural references and examples in your documentation can cause problems for a global audience and for translation. Sounds, colors, animals, gestures, events, and symbols do not convey the same meaning in every culture.
+Cultural references and examples in your documentation can cause problems for a
+global audience and for translation. Sounds, colors, animals, gestures, events,
+and symbols do not convey the same meaning in every culture.
 
-- Do not use the names of places, public figures, or holidays. If you must, use examples that represent a variety of cultures or that are internationally recognized. For example, use international cities, such as Paris, New York, Tokyo, London, and Hong Kong.
+- Do not use the names of places, public figures, or holidays. If you must, use
+  examples that represent a variety of cultures or that are internationally
+  recognized. For example, use international cities, such as Paris, New York,
+  Tokyo, London, and Hong Kong.
 
 - Do not use political, religious, ethnic, or historical references.
 
-- Do not use metaphors that are specific to one culture (for example, an American football metaphor).
+- Do not use metaphors that are specific to one culture (for example, an
+  American football metaphor).
 
 Use generic examples that work in any target market.
 
-If you create "named" users for extended examples or scenarios, use names that represent a variety of ethnic backgrounds, genders, and locations.
+If you create "named" users for extended examples or scenarios, use names that
+represent a variety of ethnic backgrounds, genders, and locations.
 
 ### Use culture-neutral graphics
-Use graphics whenever possible to present processes and complex ideas. However, be aware of the following possible issues:
+Use graphics whenever possible to present processes and complex ideas. However,
+be aware of the following possible issues:
 
-- Some customers do not typically read from left to right. If a graphics illustrates a sequence, make that sequence explicit by using numbers, arrows, or directional terms.
+- Some customers do not typically read from left to right. If a graphics
+  illustrates a sequence, make that sequence explicit by using numbers, arrows,
+  or directional terms.
 
-- Do not rely on color alone to convey meaning. The color red, for example, has different meanings in different countries so could be interpreted differently by different customers. Also, colors can have political or religious significance. Use neutral colors as often as possible.
+- Do not rely on color alone to convey meaning. The color red, for example, has
+  different meanings in different countries so could be interpreted differently
+  by different customers. Also, colors can have political or religious
+  significance. Use neutral colors as often as possible.
 
-- Do not use a picture of a hand by itself (for example, a hand that is pointing). Almost every hand gesture is offensive to someone. A picture of a hand that is holding an item or interacting with something is generally acceptable.
+- Do not use a picture of a hand by itself (for example, a hand that is
+  pointing). Almost every hand gesture is offensive to someone. A picture of a
+  hand that is holding an item or interacting with something is generally
+  acceptable.
 
-- Use generic or international images. Some examples are soccer players and equipment, generic landscapes, pens and  pencils, and generic images of computer equipment. Avoid using images of men, women, flags, maps, animals, alcohol, trendy objects, historical references, or film, cartoon, or video characters.
+- Use generic or international images. Some examples are soccer players and
+  equipment, generic landscapes, pens and pencils, and generic images of
+  computer equipment. Avoid using images of men, women, flags, maps, animals,
+  alcohol, trendy objects, historical references, or film, cartoon, or video
+  characters.
 
 ### Avoid abbreviated date formats
-Date formats vary among cultures. Write out dates, unless you are showing a literal representation as it is displayed in the software or you need to use an abbreviation in a table or figure. If you use abbreviations, include an explanation and use the abbreviated format consistently.
+Date formats vary among cultures. Write out dates, unless you are showing a
+literal representation as it is displayed in the software or you need to use an
+abbreviation in a table or figure. If you use abbreviations, include an
+explanation and use the abbreviated format consistently.
 
 <!--table-->
 Use | Avoid
@@ -655,4 +896,5 @@ Use | Avoid
 August 12, 2012 | 8/12/2012<br /> <br /> 8-12-12
 <!--endtable-->
 
-For more guidance about writing dates, see [Dates](../a-l-style-guidelines.html#dates).
+For more guidance about writing dates, see
+[Dates](../a-l-style-guidelines.html#dates).

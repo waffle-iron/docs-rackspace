@@ -8,7 +8,7 @@ General process
 ---------------
 
 -  Before you leave for the day, make sure all your work has been
-   committed and PR'ed.
+   committed and you have submitted pull requests.
 
 -  First thing in the morning, update your local repo clone to ensure
    that you have the latest upstream code.

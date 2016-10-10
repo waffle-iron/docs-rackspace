@@ -2,22 +2,29 @@
 
 This topic provides guidelines for using terms in Rackspace documentation.
 
-- [Alphabetical list of terms](#alphabetical-list-of-terms) provides usage guidelines for common words and technical terms that are used in Rackspace content.
+- [Alphabetical list of terms](#alphabetical-list-of-terms) provides usage
+  guidelines for common words and technical terms that are used in Rackspace
+  content.
 
-- [Concise terms](#concise-terms) lists typical wordy terms and phrases and provides shorter alternatives that you can use instead.
+- [Concise terms](#concise-terms) lists typical wordy terms and phrases and
+  provides shorter alternatives that you can use instead.
 
-- [Third-party names and trademarks](#third-party-names-and-trademarks) shows the correct spelling and capitalization of third-party names and trademarks.
+- [Third-party names and trademarks](#third-party-names-and-trademarks) shows
+  the correct spelling and capitalization of third-party names and trademarks.
 
 ## Alphabetical list of terms
-This section provides usage guidelines for general terms. The table indicates the following special types of terms:
+This section provides usage guidelines for general terms. The table indicates
+the following special types of terms:
 
 - *Restricted*: Terms that can create problems if used incorrectly
 - *Avoid*: Terms to avoid in favor of better alternatives
 - *Do not use*: Terms that should not be used
 
-A blank cell in the "Special Usage" column indicates that a word is generally acceptable and should be used as directed in the "Comments" column.
+A blank cell in the "Special Usage" column indicates that a word is generally
+acceptable and should be used as directed in the "Comments" column.
 
-Additionally, the table uses the following abbreviations to indicate parts of speech:
+Additionally, the table uses the following abbreviations to indicate parts of
+speech:
 - (v)=verb
 - (n)=noun
 - (adj)=adjective
@@ -348,9 +355,13 @@ zeros | | Use *zeros*, not *zeroes*, as the plural of *zero*.
 <!--endtable-->
 
 ## Concise terms
-Use shorter terms and phrases to convey an idea clearly. The following table lists concise terms to use instead of their longer counterparts. Use a longer counterpart only if the two terms or phrases are not interchangeable because of context.
+Use shorter terms and phrases to convey an idea clearly. The following table
+lists concise terms to use instead of their longer counterparts. Use a longer
+counterpart only if the two terms or phrases are not interchangeable because of
+context.
 
-In addition to using concise terms, use the shorter of two approved spellings (for example, *canceled*  instead of *cancelled*).
+In addition to using concise terms, use the shorter of two approved spellings
+(for example, *canceled* instead of *cancelled*).
 
 <!--table-->
 Avoid	| Preferred
@@ -440,7 +451,9 @@ with the exception of | except for
 <!--endtable-->
 
 ## Third-party names and trademarks
-For legal reasons, you must show third-party names and trademarks correctly. The following table shows common third-party names used in Rackspace content in the format they should be used. Common misuses are also provided.
+For legal reasons, you must show third-party names and trademarks correctly.
+The following table shows common third-party names used in Rackspace content in
+the format they should be used. Common misuses are also provided.
 
 <!--table-->
 Correct name | Notes
