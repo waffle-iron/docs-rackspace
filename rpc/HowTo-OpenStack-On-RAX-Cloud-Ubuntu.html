@@ -102,6 +102,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#openstack-compute-node-compute">OpenStack compute node (compute)</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#openstack-block-storage-node-block">OpenStack block storage node (block)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-block-storage-volume-block1">Create block storage volume (block1)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#install-and-configure-openstack-services">Install and configure OpenStack services</a></li>
 </ul>
 </li>
@@ -400,10 +404,10 @@ IP address assigned by Rackspace on the <em>net-osmgmt1</em> network:</p>
 configuration.</p>
 </div>
 </li>
-<li><p class="first">In the cloud control panel, add the <em>net-osint1</em> network to the
+<li><p class="first">In the Cloud Control Panel, add the <em>net-osint1</em> network to the
 node.</p>
 </li>
-<li><p class="first">In the cloud control panel, add the <em>net-osext1</em> network to the
+<li><p class="first">In the Cloud Control Panel, add the <em>net-osext1</em> network to the
 node.</p>
 </li>
 <li><p class="first">Configure network interfaces.</p>
@@ -450,6 +454,9 @@ iface vxlan1 inet static
 # compute
 10.1.11.21 compute
 
+# block
+10.1.11.31 block
+
 .. note::
 
   Comment out or remove any existing lines containing
@@ -476,6 +483,9 @@ address on the <em>net-osmgmt1</em> network.</p>
 </div>
 </li>
 <li><p class="first">Reboot the node.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot
+</pre></div>
+</div>
 </li>
 </ol>
 </div>
@@ -524,11 +534,14 @@ iface eth1 inet static
 </div>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/hosts</span></code> file.</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span># hst-os1ctl1
+<div class="highlight-ini"><div class="highlight"><pre><span></span># hst-os1ctl1
 10.1.11.11 controller
 
 # compute
 10.1.11.21 compute
+
+# block
+10.1.11.31 block
 </pre></div>
 </div>
 <div class="admonition note">
@@ -556,14 +569,122 @@ address on the <em>net-osmgmt1</em> network.</p>
 </div>
 </li>
 <li><p class="first">Reboot the node.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot
+</pre></div>
+</div>
 </li>
+</ol>
+</div>
+</div>
+<div class="section" id="openstack-block-storage-node-block">
+<h2>OpenStack block storage node (block)<a class="headerlink" href="#openstack-block-storage-node-block" title="Permalink to this headline">#</a></h2>
+<ol class="arabic">
+<li><p class="first">Create a cloud server, removing all networks except the
+<strong>16.04 (Xenial Xerus) PVHVM</strong> network:</p>
+<ul class="simple">
+<li>OS: CentOS 7 (PVHVM)</li>
+<li>4 GB General Purpose v1</li>
+<li>Network: net-osmgmt1</li>
+</ul>
+</li>
+<li><p class="first">In the Cloud Control Panel, add the <strong>net-osint1</strong> network to the
+node.</p>
+</li>
+<li><p class="first">Access the node from the network services node using the IP address
+assigned by Rackspace on the <strong>net-osmgmt1</strong> network:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@&lt;block_IP_ADDRESS&gt;
+<span class="gp">#</span> ssh root@&lt;block_IP_ADDRESS&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The node cannot access the internet without additional configuration.</p>
+</div>
+</li>
+<li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/network/interfaces</span></code> file:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span># Label net-osmgmt1
+auto eth0
+iface eth0 inet static
+    address 10.1.11.31
+    netmask 255.255.255.0
+    gateway 10.1.11.1
+    dns-nameserver 72.3.128.241 72.3.128.240
+
+# Label net-osint1
+auto eth1
+iface eth1 inet static
+    address 10.1.12.41
+    netmask 255.255.255.0
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit the <em>/etc/hosts</em> file:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span># controller
+10.1.11.11 controller
+
+# compute
+10.1.11.21 compute
+
+#block
+10.1.11.31 block
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Comment out or remove any existing lines containing
+<em>block</em>.</p>
+</div>
+</li>
+<li><p class="first">Reboot the node.</p>
+</li>
+<li><p class="first">Access the node from the network services node using the new IP
+address on the <em>net-osmgmt1</em> network.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@10.1.11.31</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test network connectivity to the internet. For example:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ping -c 4 openstack.org</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Update the node.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">apt-get update &amp;&amp; apt-get dist-upgrade</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">If performing pre-release testing, install the repository for the relevant
+release candidate. For example:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> apt-get install software-properties-common
+<span class="gp">#</span> add-apt-repository cloud-archive:newton-proposed
+</pre></div>
+</div>
+</li>
+<li><p class="first">Reboot the node:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="section" id="create-block-storage-volume-block1">
+<h3>Create block storage volume (block1)<a class="headerlink" href="#create-block-storage-volume-block1" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li>In the Rackspace Cloud Control Panel, select
+<span class="guilabel">Block Storage Volumes</span> in the <span class="guilabel">Storage</span> tab, and
+create the following volume named <strong>block1</strong>:<ul>
+<li>Standard (SATA) 75GB</li>
+</ul>
+</li>
+<li>Attach the volume to the <strong>block</strong> server.</li>
+<li>After the device is attached, note the device name. For example,
+<cite>/dev/xvdb</cite>. Use this value when setting up block storage for OpenStack.</li>
 </ol>
 </div>
 </div>
 <div class="section" id="install-and-configure-openstack-services">
 <h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
-<p>Use the <a class="reference external" href="http://docs.openstack.org/project-install-guide/draft/">installation
-guides</a> with
+<p>Use the <a class="reference external" href="http://docs.openstack.org/project-install-guide/draft/">OpenStack Installation
+Guides</a> with
 the following changes:</p>
 <ul>
 <li><p class="first">Configuring the basic environment on all nodes:</p>
@@ -585,9 +706,9 @@ the following changes:</p>
 <li><p class="first">Creating initial networks.</p>
 <ul>
 <li><p class="first">Use the following command for the subnet on the external network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">neutron subnet-create ext-net --name ext-subnet \</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">neutron subnet-create --name provider \</span>
 <span class="go">--allocation-pool start=10.1.13.101,end=10.1.13.200 \</span>
-<span class="go">--disable-dhcp --gateway 10.1.13.1 10.1.13.0/24</span>
+<span class="go">--disable-dhcp --gateway 10.1.13.1 provider 10.1.13.0/24</span>
 </pre></div>
 </div>
 </li>

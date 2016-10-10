@@ -261,10 +261,10 @@ OpenStack controller node (controller)
       The node cannot access the internet without additional
       configuration.
 
-#.  In the cloud control panel, add the *net-osint1* network to the
+#.  In the Cloud Control Panel, add the *net-osint1* network to the
     node.
 
-#.  In the cloud control panel, add the *net-osext1* network to the
+#.  In the Cloud Control Panel, add the *net-osext1* network to the
     node.
 
 #.  Configure network interfaces.
@@ -311,6 +311,9 @@ OpenStack controller node (controller)
        # compute
        10.1.11.21 compute
 
+       # block
+       10.1.11.31 block
+
        .. note::
 
          Comment out or remove any existing lines containing
@@ -339,8 +342,12 @@ OpenStack controller node (controller)
 
 #. Reboot the node.
 
+   .. code-block:: console
+
+      # reboot
+
 OpenStack compute node (compute)
-------------------------------------
+--------------------------------
 
 #. Create a cloud server, removing all networks except the *net-osmgmt1*
    network:
@@ -388,13 +395,16 @@ OpenStack compute node (compute)
 
 #. Edit the :file:`/etc/hosts` file.
 
-   .. code-block:: text
+   .. code-block:: ini
 
       # hst-os1ctl1
       10.1.11.11 controller
 
       # compute
       10.1.11.21 compute
+
+      # block
+      10.1.11.31 block
 
    .. note::
 
@@ -424,11 +434,125 @@ OpenStack compute node (compute)
 
 #. Reboot the node.
 
+   .. code-block:: console
+
+      # reboot
+
+OpenStack block storage node (block)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Create a cloud server, removing all networks except the
+   **16.04 (Xenial Xerus) PVHVM** network:
+
+   - OS: CentOS 7 (PVHVM)
+   - 4 GB General Purpose v1
+   - Network: net-osmgmt1
+
+#. In the Cloud Control Panel, add the **net-osint1** network to the
+   node.
+
+#. Access the node from the network services node using the IP address
+   assigned by Rackspace on the **net-osmgmt1** network:
+
+   .. code-block:: console
+
+      # ssh-copy-id -i .ssh/id_rsa.pub root@<block_IP_ADDRESS>
+      # ssh root@<block_IP_ADDRESS>
+
+   .. note::
+
+      The node cannot access the internet without additional configuration.
+
+#. Edit the :file:`/etc/network/interfaces` file:
+
+   .. code-block:: ini
+
+      # Label net-osmgmt1
+      auto eth0
+      iface eth0 inet static
+          address 10.1.11.31
+          netmask 255.255.255.0
+          gateway 10.1.11.1
+          dns-nameserver 72.3.128.241 72.3.128.240
+
+      # Label net-osint1
+      auto eth1
+      iface eth1 inet static
+          address 10.1.12.41
+          netmask 255.255.255.0
+
+#. Edit the */etc/hosts* file:
+
+   .. code-block:: ini
+
+      # controller
+      10.1.11.11 controller
+
+      # compute
+      10.1.11.21 compute
+
+      #block
+      10.1.11.31 block
+
+   .. note::
+
+      Comment out or remove any existing lines containing
+      *block*.
+
+#. Reboot the node.
+
+#. Access the node from the network services node using the new IP
+   address on the *net-osmgmt1* network.
+
+   .. code-block:: console
+
+      ssh root@10.1.11.31
+
+#. Test network connectivity to the internet. For example:
+
+   .. code-block:: console
+
+      ping -c 4 openstack.org
+
+#. Update the node.
+
+   .. code-block:: console
+
+      apt-get update && apt-get dist-upgrade
+
+#. If performing pre-release testing, install the repository for the relevant
+   release candidate. For example:
+
+   .. code-block:: console
+
+      # apt-get install software-properties-common
+      # add-apt-repository cloud-archive:newton-proposed
+
+#. Reboot the node:
+
+   .. code-block:: console
+
+      # reboot
+
+Create block storage volume (block1)
+------------------------------------
+
+#. In the Rackspace Cloud Control Panel, select
+   :guilabel:`Block Storage Volumes` in the :guilabel:`Storage` tab, and
+   create the following volume named **block1**:
+
+   - Standard (SATA) 75GB
+
+#. Attach the volume to the **block** server.
+
+#. After the device is attached, note the device name. For example,
+   `/dev/xvdb`. Use this value when setting up block storage for OpenStack.
+
 Install and configure OpenStack services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the `installation
-guides <http://docs.openstack.org/project-install-guide/draft/>`_ with
+Use the `OpenStack Installation
+Guides <http://docs.openstack.org/project-install-guide/draft/>`_ with
 the following changes:
 
 - Configuring the basic environment on all nodes:
@@ -451,9 +575,9 @@ the following changes:
 
     .. code-block:: console
 
-       neutron subnet-create ext-net --name ext-subnet \
+       neutron subnet-create --name provider \
        --allocation-pool start=10.1.13.101,end=10.1.13.200 \
-       --disable-dhcp --gateway 10.1.13.1 10.1.13.0/24
+       --disable-dhcp --gateway 10.1.13.1 provider 10.1.13.0/24
 
   .. note::
 
