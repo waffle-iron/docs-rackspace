@@ -49,8 +49,11 @@ list*.
    * - First
      - access control list (ACL)
      - ACL 
+
        ACL (access control list) 
+
        ACL (Access Control List) 
+
        Access Control List (ACL)
    * - Subsequent
      - ACL
@@ -477,6 +480,7 @@ glossaries:
 
    * - Example
    * - **token** 
+
        An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration.
 
 ```
@@ -549,25 +553,32 @@ and italics, and also use bold within the examples.
      - Do not use
    * - Account or tenant ID
      - *yourAccountId* 
+
        *yourTenantId* 
-       $account 
-       $tenant
+
+       ``$account`` 
+
+       ``$tenant``
      - 658405
    * - User name
      - *yourUserName* 
-       $username
+
+       ``$username``
      - robb4554
    * - Password
      - *yourPassword* 
-       $password
+
+       ``$password``
      - J$12345\*
    * - API key
      - *yourApiKey* 
-       $apikey
+
+       ``$apikey``
      - of938go4915e114f7ff5448910fee68c
    * - Authentication token
      - *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* 
-       $token
+
+       ``$token``
      - 2e356864f39831523c184fi646b1997b
 
 ```
@@ -755,9 +766,13 @@ day*, *year*. Always spell out the month.
      - Avoid
    * - November 12, 2010
      - 12 Nov 2010 
+
        2010-Nov-12 
+
        12/11/10 
+
        11/12/10 
+
        10-11-12
 
 ```
@@ -923,10 +938,10 @@ one or more sentences as needed.
 
 How you begin the definition also depends on what part of speech the term is:
 
-- Noun: Begin with the appropriate article (a, an, or the) and a noun phrase.
-- Verb: Begin with the infinitive form of another verb that defines the term.
-- Adjective: Begin with a verb such as describes or pertains to.
-- Abbreviation: Begin with the spelled-out term.
+- **Noun**: Begin with the appropriate article (a, an, or the) and a noun phrase.
+- **Verb**: Begin with the infinitive form of another verb that defines the term.
+- **Adjective**: Begin with a verb such as describes or pertains to.
+- **Abbreviation**: Begin with the spelled-out term.
 
 The following table shows examples.
 
@@ -944,15 +959,19 @@ glossary](#guidelines-for-a-comprehensive-glossary).
      - Example
    * - Noun
      - **token** 
+
        An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration.
    * - Verb
      - **resize** 
+
        To convert an existing server to a different flavor, in essence, scaling the server up or down. The original server is saved for a period of time to allow rollback if a problem occurs.
    * - Adjective
      - **RESTful** 
+
        Describes a kind of web service API that uses REST.
    * - Abbreviation
      - **API** 
+
        Application Programming Interface. A set of commands, functions, and protocols that programmers can use to create application services by using an open application.
 
 ```
@@ -985,12 +1004,16 @@ Use the following guidelines when creating cross-references within a glossary:
 
    * - Examples
    * - **address** 
+
        See address space.
    * - **collection** 
+
        A group of packages that have the same qualifier.
    * - **data point** 
+
        A value that stores metrics. Metrics are stored as full resolution data points, which are periodically rolled up (condensed) into coarser data points. *See also* data granularity.
    * - **replace** 
+
        To recover by dropping the selected database and re-creating it. *Contrast with* copy over.
 
 ```
@@ -1050,9 +1073,12 @@ When you need to refer to a specific version of the IP, use *IPv4 address* or
 
    * - Examples
    * - If your website is hosted in the DFW data center, you can use the following primary and secondary IP addresses: 
-        Primary: 74.205.61.228 
-        Secondary: 74.205.61.229 
-        Additional: 72.32.36.144/28 (72.32.36.145 - 72.32.36.158)
+
+       • Primary: 74.205.61.228 
+
+       • Secondary: 74.205.61.229 
+
+       • Additional: 72.32.36.144/28 (72.32.36.145 - 72.32.36.158)
    * - Each Vyatta appliance is assigned one public IPv4 address.
    * - If you are using IPv6 on your server, you might need to add the IPv6 addresses of your name servers to the **resolv.conf** file.
 
@@ -1341,19 +1367,23 @@ title. Use the following guidelines when introducing lists.
        (*Includes* is correct only if you are listing some, but not all, files in the directory.)
    * - Do not quantify items in introductory text. Quantifying items could cause an error if the list changes.
      - *Use:* 
+
        The following methods are available: 
        
        *Do not use:* 
+
        The following three methods are available:
    * - Don’t tell users to "do the following." The verb *do* is weak, using *following* as a noun in this context is incorrect, and the whole phrase is ambiguous. 
        
        Use a stronger and more meaningful verb. Use *following* only as an adjective, unless you are referring to an entourage, posse, retinue, or group of fans. Ensure that the introduction to a list provides enough context for users to understand what information the list is providing.
      - *Use:* 
+
        You can use this product to perform the following tasks: 
 
        The following methods are available: 
        
        *Do not use:* 
+
        You can use this product to do the following: 
 
        The following are available:

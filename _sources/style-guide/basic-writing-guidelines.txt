@@ -965,11 +965,13 @@ Use the following terms consistently:
      - To locate an item in space 
 
        **Note:** Do not use *above*, *below*, *earlier*, *later*, *before*, or *after* as references to information in text. Where possible, use specific references. If you cannot make specific references, use *preceding* and *following* as adjectives for elements such as figures and tables.
-     - The **preceding** information explains how to print a document correctly.
-       
+     - The **preceding** information explains how to print a document correctly. 
+
        The utility analyzes the **following** information to prepare the report.
    * - earlier, later
-     - To refer to product releases (version numbers). **Note:** Do not use *higher*, *lower*, *above*, *below*, *older*, or *newer*.
+     - To refer to product releases (version numbers). 
+
+       **Note:** Do not use *higher*, *lower*, *above*, *below*, *older*, or *newer*.
      - The required namespace kernel features are not available in the default kernel shipped with Red Hat Enterprise Linux 6.4, CentOS 6.4, and **earlier** versions of these operating systems.
 
        Rackspace Private Cloud version 4.0 has not been tested on versions of Ubuntu **later** than 12.04.
