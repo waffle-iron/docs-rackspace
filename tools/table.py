@@ -7,7 +7,7 @@ Convert RST grid tables to list-tables.
 Basic usage
 -----------
 
-#. Convert a grid tables in a file to a list-tables. The result is output
+#. Convert grid tables in a file to list-tables. The result is output
    to stdout::
 
       $ python tables.py input.rst

@@ -1,9 +1,9 @@
 # Importing and exporting labels
 
 Instead of manually copying and updating each label in a GitHub repository, you
-can use the [github-label-manager npm
-module](https://www.npmjs.com/package/github-label-manager) to manage your
-GitHub label configuration across repositories.
+can use the
+[github-label-manager npm module](https://www.npmjs.com/package/github-label-manager)
+to manage your GitHub label configuration across repositories.
 
 - Export label configuration from an existing repository to a JSON schema file.
 - Copy new labels from one repo to another repo without overwriting the

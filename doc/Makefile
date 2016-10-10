@@ -51,7 +51,7 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 html:
-	@echo "\nConverting MD tables to RST"
+	@echo "Converting MD tables to RST"
 	python3 ../tools/prebuild.py
 	@echo
 	$(SPHINXBUILD) -E -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
