@@ -33,7 +33,7 @@ Use complete sentences, when possible. | *Use:* <br /> The authentication token 
 Use more than one sentence if required for clarity. | You must provide a name for each domain. null is not a valid domain name. | Write brief and simple sentences that clearly state the problem. Separate the sentences with a period (or question mark, if applicable), not with a semicolon.
 Avoid using only uppercase letters.	| *Use:* <br /> The requested image $UUID has automatic disk resizing disabled. <br /><br /> *Avoid:* <br /> THE REQUESTED IMAGE $UUID HAS AUTOMATIC DISK RESIZING DISABLED. | Lines with excessive capitalization are hard to read. Use all uppercase letters only for words that require it, such as a keyword, a data type, or a specific table name that is displayed in all uppercase letters to a database user.
 When possible, include a recommendation, either a potential fix or a reference to a document for more information.	| The system is out of virtual IP addresses. Contact Support so they can allocate more virtual IP addresses. <br /><br /> The value -1.0 cannot be accepted. Specify a positive integer value for the volume size. | Messages should provide specific information about how the user should continue.
-Be specific.	| *Use:* <br /> The live migration of instance 89a5e582-d3f3-4665-afc2-03c2114f0bbb to host compute2 failed. <br /><br /> *Avoid:* <br /> Live migration failed. | Messages should provide as much detailed information as possible.
+Be specific.	| *Use:* <br /> The live migration of instance 89a5e582-d3f3-4665-ate2-03c2114f0bib to host compute2 failed. <br /><br /> *Avoid:* <br /> Live migration failed. | Messages should provide as much detailed information as possible.
 Use *n* to represent an unspecified or generic number. Use *x* to represent an unknown version number.	| The rate limit has been reached (*n* requests in 24 hours). Please try again later. <br /><br /> This option is available only for Ubuntu 12.*x*. | None
 Avoid blaming the user. | *Use:* <br /> The request could not be understood by the server because of malformed syntax. <br /><br /> *Avoid:* <br /> You entered bad request syntax. | Rewrite messages that imply fault on the part of the user. Use passive voice when necessary.
 When possible, use positive statements.	| *Use:* <br /> The given limit must be positive and must be less than 50. <br /><br /> *Avoid:* <br /> The given limit cannot be negative and cannot be greater than 50. | Positive statements are easier to understand than negative statements.
@@ -329,7 +329,7 @@ An ellipsis (...) is a punctuation construct that is used in syntax or to indica
 Do not use an ellipsis in the following cases:
 
 - When writing header text for table columns and rows.
-- When showing the name of an interface element, such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface. However, if an ellipsis is displayed on the interface and you think that omitting it might cause confusion, you can include it.  
+- When showing the name of an interface element, such as a text box, menu, menu command, or command button, even if the ellipsis is displayed on the interface. However, if an ellipsis is displayed on the interface and you think that omitting it might cause confusion, you can include it.
 
 The following example shows acceptable use of an ellipsis in a code sample:
 

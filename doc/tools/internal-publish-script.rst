@@ -170,4 +170,4 @@ publish.sh
 ~~~~~~~~~~
 
 See https://github.com/rackerlabs/docs-rpc/blob/master/publish.sh for the
-lastest version of the publish.sh script.
+latest version of the publish.sh script.

@@ -15,7 +15,7 @@ You must use the [Deconst Client][deconst-client] to preview your changes.
 1. Set the content repository to getcarina.com.
 1. Set the preparer to Jekyll.
 1. In the Content Repository Path section, click the browse button, then navigate to the location where you cloned this repository.
-1. In the Control Repository Location, click the browse button, then navigate to hte lcoation where you cloned the Nexus Control repository.
+1. In the Control Repository Location, click the browse button, then navigate to the lcoation where you cloned the Nexus Control repository.
 1. Click the Create button.
 1. Wait until the deconst process is complete, then click the displayed link to preview the site.
 

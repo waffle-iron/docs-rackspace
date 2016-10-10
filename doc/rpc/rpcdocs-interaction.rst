@@ -64,7 +64,7 @@ Sales and marketing
 Potential customers should be able to find relevant documentation. Sales should
 have the information that they need to make appropriate offerings to customers.
 The contents of marketing and sales should accurately portray the product,
-using the documentation as a reference. For example, if the product doesn’t
+using the documentation as a reference. For example, if the product does not
 support seamless upgrades, don’t advertise it.
 
 
