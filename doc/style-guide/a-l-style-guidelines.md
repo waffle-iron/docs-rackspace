@@ -41,7 +41,7 @@ list*.
 <!--table-->
 Occurrence | Use | Do not use
 --- | --- | ---
-First	| access control list (ACL) | ACL <br /> ACL (access control list) <br /> ACL (Access Control List) <br /> Access Control List (ACL)
+First	| access control list (ACL) | ACL <br /><br /> ACL (access control list) <br /><br /> ACL (Access Control List) <br /><br /> Access Control List (ACL)
 Subsequent	| ACL	| access control list
 First	| OS	| operating system (OS)
 <!--endtable-->
@@ -340,7 +340,7 @@ glossaries:
 <!--table-->
 | Example |
 | --- |
-| **token** <br /> An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration. |
+| **token** <br /><br /> An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration. |
 <!--endtable-->
 
 For more information about formatting glossary entries and definitions, see
@@ -404,11 +404,11 @@ and italics, and also use bold within the examples.
 <!--table-->
 Information | Use | Do not use
 ---|---|---
-Account or tenant ID	| *yourAccountId* <br /> *yourTenantId* <br /> \$account <br /> \$tenant | 658405
-User name	| *yourUserName*  <br /> \$username | robb4554
-Password	| *yourPassword* <br /> \$password | J\$12345\*
-API key	| *yourApiKey* <br /> \$apikey | of938go4915e114f7ff5448910fee68c
-Authentication token | *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* <br /> \$token | 2e356864f39831523c184fi646b1997b
+Account or tenant ID	| *yourAccountId* <br /><br /> *yourTenantId* <br /><br /> `$account` <br /><br /> `$tenant` | 658405
+User name	| *yourUserName*  <br /><br /> `$username` | robb4554
+Password	| *yourPassword* <br /><br /> `$password` | J\$12345\*
+API key	| *yourApiKey* <br /><br /> `$apikey` | of938go4915e114f7ff5448910fee68c
+Authentication token | *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* <br /><br /> `$token` | 2e356864f39831523c184fi646b1997b
 <!--endtable-->
 
 In example API operation requests and responses, in which we want users to see
@@ -584,7 +584,7 @@ day*, *year*. Always spell out the month.
 <!--table-->
 Use | Avoid
 --- | ---
-November 12, 2010 | 12 Nov 2010 <br /> 2010-Nov-12 <br /> 12/11/10 <br /> 11/12/10 <br /> 10-11-12
+November 12, 2010 | 12 Nov 2010 <br /><br /> 2010-Nov-12 <br /><br /> 12/11/10 <br /><br /> 11/12/10 <br /><br /> 10-11-12
 <!--endtable-->
 
 **Note:** Do not use ordinal numbers for dates. For example, do not use
@@ -707,10 +707,10 @@ one or more sentences as needed.
 
 How you begin the definition also depends on what part of speech the term is:
 
-- Noun: Begin with the appropriate article (a, an, or the) and a noun phrase.
-- Verb: Begin with the infinitive form of another verb that defines the term.
-- Adjective: Begin with a verb such as describes or pertains to.
-- Abbreviation: Begin with the spelled-out term.
+- **Noun**: Begin with the appropriate article (a, an, or the) and a noun phrase.
+- **Verb**: Begin with the infinitive form of another verb that defines the term.
+- **Adjective**: Begin with a verb such as describes or pertains to.
+- **Abbreviation**: Begin with the spelled-out term.
 
 The following table shows examples.
 
@@ -722,10 +722,10 @@ glossary](#guidelines-for-a-comprehensive-glossary).
 <!--table-->
 Type | Example
 --- | ---
-Noun	| **token** <br /> An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration.
-Verb	| **resize** <br /> To convert an existing server to a different flavor, in essence, scaling the server up or down. The original server is saved for a period of time to allow rollback if a problem occurs.
-Adjective	| **RESTful** <br /> Describes a kind of web service API that uses REST.
-Abbreviation	| **API** <br /> Application Programming Interface. A set of commands, functions, and protocols that programmers can use to create application services by using an open application.
+Noun	| **token** <br /><br /> An opaque string that represents an authorization to access cloud resources. Tokens might be revoked at any time and are valid for a finite duration.
+Verb	| **resize** <br /><br /> To convert an existing server to a different flavor, in essence, scaling the server up or down. The original server is saved for a period of time to allow rollback if a problem occurs.
+Adjective	| **RESTful** <br /><br /> Describes a kind of web service API that uses REST.
+Abbreviation	| **API** <br /><br /> Application Programming Interface. A set of commands, functions, and protocols that programmers can use to create application services by using an open application.
 <!--endtable-->
 
 ### Cross-references to glossary terms
@@ -750,10 +750,10 @@ Use the following guidelines when creating cross-references within a glossary:
 <!--table-->
 | Examples |
 | --- |
-| **address** <br /> See <u>address space</u>. |
-| **collection** <br /> A group of <u>packages</u> that have the same <u>qualifier</u>. |
-| **data point** <br /> A value that stores metrics. Metrics are stored as full resolution data points, which are periodically rolled up (condensed) into coarser data points. *See also* <u>data granularity</u>. |
-| **replace** <br /> To recover by dropping the selected database and re-creating it. *Contrast with* <u>copy over</u>. |
+| **address** <br /><br /> See <u>address space</u>. |
+| **collection** <br /><br /> A group of <u>packages</u> that have the same <u>qualifier</u>. |
+| **data point** <br /><br /> A value that stores metrics. Metrics are stored as full resolution data points, which are periodically rolled up (condensed) into coarser data points. *See also* <u>data granularity</u>. |
+| **replace** <br /><br /> To recover by dropping the selected database and re-creating it. *Contrast with* <u>copy over</u>. |
 <!--endtable-->
 
 ### Guidelines for a comprehensive glossary
@@ -807,7 +807,7 @@ When you need to refer to a specific version of the IP, use *IPv4 address* or
 <!--table-->
 | Examples |
 | --- |
-| If your website is hosted in the DFW data center, you can use the following primary and secondary IP addresses: <br /> &#149; Primary: 74.205.61.228 <br /> &#149; Secondary: 74.205.61.229 <br /> &#149; Additional: 72.32.36.144/28 (72.32.36.145 - 72.32.36.158) |
+| If your website is hosted in the DFW data center, you can use the following primary and secondary IP addresses: <br /><br /> &bull; Primary: 74.205.61.228 <br /><br /> &bull; Secondary: 74.205.61.229 <br /><br /> &bull; Additional: 72.32.36.144/28 (72.32.36.145 - 72.32.36.158) |
 | Each Vyatta appliance is assigned one public IPv4 address. |
 | If you are using IPv6 on your server, you might need to add the IPv6 addresses of your name servers to the **resolv.conf** file. |
 <!--endtable-->
@@ -1030,8 +1030,8 @@ Guideline | Example
 --- | ---
 Introduce a list with a sentence, and end the sentence with a colon. If another sentence intervenes between the introductory sentence and the first list item, end the introductory sentence with a period instead of a colon. <br /> <br /> In a procedure, apply this guideline to text that introduces a list of substeps. <br /> <br /> **Note:** Avoid using fragments to introduce lists. Fragments are difficult to translate and can be harder to comprehend than sentences. | You can use this product to perform the following tasks: <br /> <br /> You can use this product to perform the following tasks. You must extract objects from the database to complete these tasks.
 For a partial list, use the verb include in the introductory text. | The directory includes the following files: <br /> <br /> (*Includes* is correct only if you are listing some, but not all, files in the directory.)
-Do not quantify items in introductory text. Quantifying items could cause an error if the list changes. | *Use:* <br /> The following methods are available: <br /> <br /> *Do not use:* <br /> The following three methods are available:
-Don’t tell users to "do the following." The verb *do* is weak, using *following* as a noun in this context is incorrect, and the whole phrase is ambiguous. <br /> <br /> Use a stronger and more meaningful verb. Use *following* only as an adjective, unless you are referring to an entourage, posse, retinue, or group of fans. Ensure that the introduction to a list provides enough context for users to understand what information the list is providing. | *Use:* <br /> You can use this product to perform the following tasks: <br /><br /> The following methods are available: <br /> <br /> *Do not use:* <br /> You can use this product to do the following: <br /><br /> The following are available:
+Do not quantify items in introductory text. Quantifying items could cause an error if the list changes. | *Use:* <br /><br /> The following methods are available: <br /> <br /> *Do not use:* <br /><br /> The following three methods are available:
+Don’t tell users to "do the following." The verb *do* is weak, using *following* as a noun in this context is incorrect, and the whole phrase is ambiguous. <br /> <br /> Use a stronger and more meaningful verb. Use *following* only as an adjective, unless you are referring to an entourage, posse, retinue, or group of fans. Ensure that the introduction to a list provides enough context for users to understand what information the list is providing. | *Use:* <br /><br /> You can use this product to perform the following tasks: <br /><br /> The following methods are available: <br /> <br /> *Do not use:* <br /><br /> You can use this product to do the following: <br /><br /> The following are available:
 <!--endtable-->
 
 ### Writing list items
