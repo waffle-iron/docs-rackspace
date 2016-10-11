@@ -556,8 +556,9 @@ nameserver 8.8.4.4
 </pre></div>
 </div>
 </li>
-<li><p class="first">If performing pre-release testing, install the repository for the relevant
-release candidate:</p>
+<li><p class="first">For a normal install, follow the package installation instructions in
+the Install Guide. If performing pre-release testing, install the repository
+for the relevant release candidate:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
 </pre></div>
 </div>
@@ -674,8 +675,9 @@ address on the <strong>management</strong> network:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">If performing pre-release testing, install the repository for the relevant
-release candidate:</p>
+<li><p class="first">For a normal install, follow the package installation instructions in
+the Install Guide. If performing pre-release testing, install the repository
+for the relevant release candidate:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
 </pre></div>
 </div>
@@ -791,8 +793,9 @@ address on the <strong>management</strong> network:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">If performing pre-release testing, install the repository for the relevant
-release candidate:</p>
+<li><p class="first">For a normal install, follow the package installation instructions in
+the Install Guide. If performing pre-release testing, install the repository
+for the relevant release candidate:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
 </pre></div>
 </div>
@@ -847,9 +850,9 @@ directly to <strong>Finalize the installation</strong>.</li>
 </li>
 <li><p class="first">Configuring networking:</p>
 <ul>
-<li><p class="first">on the <em>controller</em>, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:eth2</span></code></p>
+<li><p class="first">on the <em>controller</em>, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:vxlan1</span></code></p>
 </li>
-<li><p class="first">on the <em>compute</em> node, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:eth0</span></code></p>
+<li><p class="first">on the <em>compute</em> node, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span> <span class="pre">provider:eth1</span></code></p>
 </li>
 <li><p class="first">Creating initial networks.</p>
 <blockquote>
