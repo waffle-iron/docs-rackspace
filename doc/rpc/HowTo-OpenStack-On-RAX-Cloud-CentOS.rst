@@ -410,8 +410,9 @@ Test and update
 
       # yum update -y
 
-#. If performing pre-release testing, install the repository for the relevant
-   release candidate:
+#. For a normal install, follow the package installation instructions in
+   the Install Guide. If performing pre-release testing, install the repository
+   for the relevant release candidate:
 
    .. code-block:: console
 
@@ -533,8 +534,9 @@ Test and update
 
       # yum update -y
 
-#. If performing pre-release testing, install the repository for the relevant
-   release candidate:
+#. For a normal install, follow the package installation instructions in
+   the Install Guide. If performing pre-release testing, install the repository
+   for the relevant release candidate:
 
    .. code-block:: console
 
@@ -655,8 +657,9 @@ Test and update
 
       # yum update -y
 
-#. If performing pre-release testing, install the repository for the relevant
-   release candidate:
+#. For a normal install, follow the package installation instructions in
+   the Install Guide. If performing pre-release testing, install the repository
+   for the relevant release candidate:
 
    .. code-block:: console
 
@@ -711,8 +714,8 @@ following changes:
 
 - Configuring networking:
 
-  - on the *controller*, use ``physical_interface_mappings = provider:eth2``
-  - on the *compute* node, use ``physical_interface_mappings = provider:eth0``
+  - on the *controller*, use ``physical_interface_mappings = provider:vxlan1``
+  - on the *compute* node, use ``physical_interface_mappings = provider:eth1``
   - Creating initial networks.
 
       - Use the following command for the subnet on the external network:
