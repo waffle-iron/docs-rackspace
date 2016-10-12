@@ -579,7 +579,7 @@ and italics, and also use bold within the examples.
      - *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* 
 
        ``$token``
-     - 2e356864f39831523c184fi646b1997b
+     - 2e356864f39831523c184to646b1997b
 
 ```
 

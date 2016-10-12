@@ -4,7 +4,7 @@ This file summarizes the changes that have been made to the style guide.
 
 ## July 27, 2016
 
-- Updated the [readme](README.md) and [index](index.rst) files to add Rackspace
+- Updated the *README.md* and [index](index.rst) files to add Rackspace
   Private Cloud contributors as consumers of the style guide.
 - [Alphabetical list of
   terms](../terminology-guidelines.html#alphabetical-list-of-terms):
