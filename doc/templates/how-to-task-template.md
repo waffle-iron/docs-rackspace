@@ -1,3 +1,5 @@
+## How-to task template
+
 permalink | title |type | created_date | created_by | last_modified_date | last_modified_by | product | product_url
 --- | --- | --- | --- | --- | --- | --- | --- | ---
 name-of-file-without-extension/ | Title of article | article | 'yyyy-mm-dd' | First Last | 'yyyy-mm-dd' | First Last | Product Name | product-name
@@ -10,8 +12,8 @@ For guidelines specific to How-To articles, see
 [Contributing to the Rackspace How-To content repository](https://github.com/rackerlabs/rackspace-how-to/blob/master/CONTRIBUTING.md).
 
 For a good example article that illustrates most of the areas covered in this
-template, see
-https://github.com/rackerlabs/rackspace-how-to/blob/master/content/cloud-servers/migrating-an-application-built-on-a-lamp-stack-from-amazon-web-services.md.
+template, see [Migrating an application built on a lamp
+stack](https://github.com/rackerlabs/rackspace-how-to/blob/master/content/cloud-servers/migrating-an-application-built-on-a-lamp-stack-from-amazon-web-services.md).
 -->
 
 <!--

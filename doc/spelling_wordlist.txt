@@ -38,6 +38,7 @@ Ctrl
 cURL
 customizable
 darrenc
+dd
 de
 Deconst
 deconst
@@ -143,6 +144,7 @@ meridiem
 metadata
 middleware
 midsentence
+mm
 mms
 monospace
 multi
@@ -255,6 +257,7 @@ Uncomment
 unordered
 Uploader
 uptime
+url
 username
 vCPU
 venv
@@ -280,5 +283,6 @@ Xenial
 Xerus
 xml
 yml
+yyyy
 Zipit
 º

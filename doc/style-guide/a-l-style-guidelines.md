@@ -408,7 +408,7 @@ Account or tenant ID	| *yourAccountId* <br /><br /> *yourTenantId* <br /><br /> 
 User name	| *yourUserName*  <br /><br /> `$username` | robb4554
 Password	| *yourPassword* <br /><br /> `$password` | J\$12345\*
 API key	| *yourApiKey* <br /><br /> `$apikey` | of938go4915e114f7ff5448910fee68c
-Authentication token | *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* <br /><br /> `$token` | 2e356864f39831523c184fi646b1997b
+Authentication token | *xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx* <br /><br /> `$token` | 2e356864f39831523c184to646b1997b
 <!--endtable-->
 
 In example API operation requests and responses, in which we want users to see
