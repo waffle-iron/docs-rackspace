@@ -26,7 +26,6 @@ Network architecture
 .. figure:: figures/openstack-rax-on-cloud-arch-v2.png
    :alt: Network architecture
 
-   Network architecture
 
 Prepare cloud environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,7 +107,7 @@ Network services node (network-services)
        auto eth2
        iface eth2 inet static
        address 10.1.11.1
-       netmask 255.255.255.
+       netmask 255.255.255.0
 
        # Label net-osext1
        auto eth3
@@ -393,6 +392,20 @@ OpenStack compute node (compute)
           address 10.1.12.31
           netmask 255.255.255.0
 
+      # Label net-osext1
+      auto eth2
+      iface eth2 inet static
+          address 10.1.10.31
+          netmask 255.255.255.0
+
+      # Label vxlan1
+      auto vxlan1
+      iface vxlan1 inet static
+      pre-up ip link add vxlan1 type vxlan id 1 group 239.0.0.1 dev eth2
+      address 10.1.13.31
+      netmask 255.255.255.0
+      post-down ip link del vxlan1
+
 #. Edit the :file:`/etc/hosts` file.
 
    .. code-block:: ini
@@ -551,8 +564,8 @@ Create block storage volume (block1)
 Install and configure OpenStack services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the `OpenStack Installation
-Guides <http://docs.openstack.org/project-install-guide/draft/>`_ with
+Use the `Newton Installation Tutorials and Guides
+<http://docs.openstack.org/newton/install-guide-ubuntu/>`_ with
 the following changes:
 
 - Configuring the basic environment on all nodes:
@@ -565,7 +578,7 @@ the following changes:
 
   -  Use *qemu* instead of *kvm* virtualization.
 
-- Configuring the Networking service on the network node:
+- Configuring the Networking service on the controller node:
 
   -  Add the *vxlan1* interface as a port on the *br-ex* bridge.
 
@@ -577,7 +590,7 @@ the following changes:
 
        neutron subnet-create --name provider \
        --allocation-pool start=10.1.13.101,end=10.1.13.200 \
-       --disable-dhcp --gateway 10.1.13.1 provider 10.1.13.0/24
+       --enable-dhcp --gateway 10.1.13.1 provider 10.1.13.0/24
 
   .. note::
 
