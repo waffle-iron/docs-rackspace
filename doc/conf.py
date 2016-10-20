@@ -44,6 +44,7 @@ sys.path.insert(0, os.path.abspath('../tools/'))
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
+    'bolditalic',
 ]
 
 if spelling is not None:
@@ -165,7 +166,8 @@ html_static_path = ['_static']
 html_context = {
     'css_files': [
         '_static/theme_overrides.css',  # overrides wide tables in RTD theme
-        '_static/custom.css',  # custom CSS styling
+        '_static/bespoke.css',  # custom CSS styling
+        '_static/bolditalic.css',  # bolditalic styling
         ],
     }
 
