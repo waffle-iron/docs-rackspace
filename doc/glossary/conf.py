@@ -37,7 +37,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.extlinks',
-    'bolditalic'
+    'bolditalic',
+    'remotecode',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

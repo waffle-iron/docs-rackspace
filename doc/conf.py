@@ -45,6 +45,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'bolditalic',
+    'remotecode',
 ]
 
 if spelling is not None:
