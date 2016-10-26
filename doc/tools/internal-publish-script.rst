@@ -136,7 +136,7 @@ or through VPN.
 
    .. code::
 
-      $ bash publish.sh
+      $ bash tools/publish.sh
 
    Alternatively, you can run the **publish.sh** script using tox:
 
