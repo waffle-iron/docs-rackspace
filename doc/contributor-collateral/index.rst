@@ -1,6 +1,6 @@
-======================
-Contributor Collateral
-======================
+=====================================
+Contribute to Rackspace documentation
+=====================================
 
 *Last updated:* |today|
 
@@ -9,8 +9,5 @@ Contributor collateral documentation.
 .. toctree::
    :maxdepth: 2
 
-   CONTRIBUTING.md
-   GITHUBING.md
-   docs-engineering-hb.md
    privatecloud-docteam-FAQ.rst
    publiccloud-docteam-FAQ.rst

@@ -188,11 +188,10 @@ friendly." However, use *we recommend* rather than *it is recommended* or
 necessary.
 
 The first-person singular pronoun *I* is acceptable in the question part of
-FAQs and when authors of blogs or signed articles are describing their own
-actions or opinions.
+FAQs and when an author is describing their own actions or opinions in a blog or signed article.
 
 Avoid switching person (point of view) in the same document. Switching person
-is acceptable, however, in blog posts that use first-person singular but then
+is acceptable, however, in blog posts that uses first-person singular but then
 switch to second person for instructional steps.
 
 <!--table-->

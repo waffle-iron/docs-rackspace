@@ -19,6 +19,7 @@ Balancers
 bmoss
 br
 Brindley
+blog
 callout
 callouts
 camelCase
@@ -40,6 +41,7 @@ customizable
 darrenc
 dd
 de
+Debian
 Deconst
 deconst
 Deconts
@@ -80,6 +82,7 @@ GaRzOmhzr
 Gerrit
 getcarina
 gh
+GHz
 Github
 github
 gl
