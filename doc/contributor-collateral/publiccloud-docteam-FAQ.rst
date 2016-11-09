@@ -66,21 +66,21 @@ Following are the members of the team:
 
 * Karin Levenstein (IRC: klevenstein) - Manager of Austin, US team
 
-  * Margaret Eker - Information Developer, Public Cloud
+  * Margaret Eker - Senior Information Developer, RPC and Public Cloud
   * Kelly Holcomb - Editor
-  * Catherine Richardson (IRC: cathrichardson) - Information Developer,
-    Public Cloud
+  * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer,
+    RPC and Public Cloud
   * Robb Romans (IRC: rromans) - Information Developer, RPC and OSA
   * Alexandra Settle (IRC: asettle) - Information Developer, OSIC, RPC and
     OSA
-  * Erik Wilson (IRC: erikmwilson) - Information Developer, RPC
+  * Erik Wilson (IRC: erikmwilson) - Senior Information Developer, RPC
 
 * Renee Rendon - Manager of San Antonio, US team
 
   * Nate Archer - Information Developer, How-To
   * Stephanie Fillmon - Information Developer, How-To
   * Kyle Laffoon - Information Developer, How-To
-  * Cat Lookabaugh (IRC: catlook) - Information Developer, How-To and Public
+  * Cat Lookabaugh (IRC: catlook) - Senior Information Developer, How-To and Public
     Cloud
 
 Public Cloud API documentation
