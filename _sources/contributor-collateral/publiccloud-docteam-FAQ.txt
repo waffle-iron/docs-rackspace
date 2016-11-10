@@ -1,15 +1,16 @@
-=================================================
-Documentation team FAQ for Rackspace Public Cloud
-=================================================
+======================================================================
+Documentation team FAQ for Rackspace Public Cloud and Managed services
+======================================================================
 
-This FAQ is intended to help Rackspace Public Cloud developers and support team
-members contribute to the documentation.
+This FAQ is intended to help Rackspace Public and Managed Cloud developers
+and support team members contribute to the documentation.
 
 As developers and support team members, you routinely communicate your expert
 product knowledge in the course of your work. When you write down that
-knowledge, you enable the Information Development (doc) team to work with you
-to turn your words into expert, professional customer documentation that we can
-deliver to the Rackspace documentation and support sites.
+knowledge, you enable the Information Design and Development (doc) team to
+work with you to turn your words into expert, professional customer
+documentation that we can deliver to the Rackspace documentation and support
+sites.
 
 In this process, the people with the expertise and product knowledge perform as
 much of the content production cycle as they reasonably can and, in turn, the
@@ -31,8 +32,8 @@ For additional information, see the following sections:
 
 
 * `Who is the doc team and what do we do?`_
-* `Public Cloud API documentation`_
-* `Public Cloud How-To and Control Panel articles`_
+* `API documentation`_
+* `How-To and Control Panel articles`_
 
 Who is the doc team and what do we do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -66,27 +67,28 @@ Following are the members of the team:
 
 * Karin Levenstein (IRC: klevenstein) - Manager of Austin, US team
 
-  * Margaret Eker - Information Developer, Public Cloud
+  * Margaret Eker - Senior Information Developer, RPC, Public Cloud
   * Kelly Holcomb - Editor
-  * Catherine Richardson (IRC: cathrichardson) - Information Developer,
-    Public Cloud
-  * Robb Romans (IRC: rromans) - Information Developer, RPC and OSA
+  * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer,
+    RPC and Public Cloud
+  * Robb Romans (IRC: rromans) - Senior Information Developer, RPC and OSA
   * Alexandra Settle (IRC: asettle) - Information Developer, OSIC, RPC and
     OSA
-  * Erik Wilson (IRC: erikmwilson) - Information Developer, RPC
+  * Erik Wilson (IRC: erikmwilson) - Senior Information Developer, RPC
 
 * Renee Rendon - Manager of San Antonio, US team
 
   * Nate Archer - Information Developer, How-To
   * Stephanie Fillmon - Information Developer, How-To
   * Kyle Laffoon - Information Developer, How-To
-  * Cat Lookabaugh (IRC: catlook) - Information Developer, How-To and Public
-    Cloud
+  * Cat Lookabaugh (IRC: catlook) - Senior Information Developer, How-To,
+    Public Cloud
 
-Public Cloud API documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This section answers questions about the Rackspace Public Cloud API
+API documentation
+~~~~~~~~~~~~~~~~~
+
+This section answers questions about the Rackspace API
 documentation.
 
 Where do the API docs live?
@@ -169,16 +171,16 @@ the current release of the product or service.
 How do we contribute to API docs?
 ---------------------------------
 
-Rackspace Public Cloud uses GitHub for code, bug and issue management, and code
-reviews.
+Rackspace Cloud services documentation uses GitHub for code, bug and issue
+management, and code reviews.
 
 To learn how to contribute to API documentation, see the following
 instructions:
 
-* GitHub workflow found in GITHUBING.rst in the root directory of the product
-  repo
-* Contributor guidelines found in CONTRIBUTING.rst in the root director of the
+* GitHub workflow found in ``GITHUBING.rst`` in the root directory of the
   product repo
+* Contributor guidelines found in ``CONTRIBUTING.rst`` in the root director of
+  the product repo
 
 For example, see the following documents in the Cloud Servers repo:
 
@@ -187,8 +189,8 @@ For example, see the following documents in the Cloud Servers repo:
 * `Contributor guidelines
   <https://github.com/rackerlabs/docs-cloud-servers/blob/master/CONTRIBUTING.md>`_
 
-Public Cloud How-To and Control Panel articles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How-To and Control Panel articles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section answers questions about the How-To articles.
 

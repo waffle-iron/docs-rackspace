@@ -37,7 +37,6 @@ For additional information, see the following sections:
 * `OpenStack documentation`_
 * `Private Cloud How-To and Control Panel articles`_
 
-
 Who is the doc team and what do we do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -68,24 +67,24 @@ Following are the members of the team:
   * Brian Moss (IRC: bmoss) - Information Architect, OSIC
   * Joseph Robinson (IRC: JRobinson\_) - Information Developer, OSIC
 
-* Karin Levenstein (IRC: klevenstein) - Manager of Austin US team
+* Karin Levenstein (IRC: klevenstein) - Manager of Austin, US team
 
-  * Margaret Eker - Information Developer, Public Cloud
+  * Margaret Eker - Senior Information Developer, RPC, Public Cloud
   * Kelly Holcomb - Editor
-  * Catherine Richardson (IRC: cathrichardson) - Information Developer,
-    Public Cloud
-  * Robb Romans (IRC: rromans) - Information Developer, RPC and OSA
+  * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer,
+    RPC and Public Cloud
+  * Robb Romans (IRC: rromans) - Senior Information Developer, RPC and OSA
   * Alexandra Settle (IRC: asettle) - Information Developer, OSIC, RPC and
     OSA
-  * Erik Wilson (IRC: erikmwilson) - Information Developer, RPC
+  * Erik Wilson (IRC: erikmwilson) - Senior Information Developer, RPC
 
-* Renee Rendon - Manager of San Antonio US team
+* Renee Rendon - Manager of San Antonio, US team
 
   * Nate Archer - Information Developer, How-To
   * Stephanie Fillmon - Information Developer, How-To
   * Kyle Laffoon - Information Developer, How-To
-  * Cat Lookabaugh - Information Developer, How-To and Public Cloud
-
+  * Cat Lookabaugh (IRC: catlook) - Senior Information Developer, How-To,
+    Public Cloud
 
 Rackspace Private Cloud documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
