@@ -1,16 +1,16 @@
 # Rackspace Cloud Identity API documentation
 
-**Build:** [Strider](http://ci.deconst.horse/)
-(http://ci.deconst.horse/rackerlabs/docs-cloud-identity-2.0/)
+**Build:**
+[Strider](https://build.developer.rackspace.com/rackerlabs/docs-cloud-identity/)
 
 ## Purpose
 
 This repository contains the source files that generate the following API
 documentation:
 
-* [Quickstart Guide](https://developer.rackspace.com/docs/cloud-identity/v2/developer-guide/#document-quickstart-guide)
-* [Cloud Identity Developer Guide](https://developer.rackspace.com/docs/cloud-identity/v2/developer-guide/)
-* [Cloud Identity Developer API Reference](https://developer.rackspace.com/docs/cloud-identity/v2/developer-guide/#api-reference)
+* [Quickstart Guide](https://developer.rackspace.com/docs/cloud-identity/v2/#document-quickstart-guide)
+* [Cloud Identity Developer Guide](https://developer.rackspace.com/docs/cloud-identity/v2/)
+* [Cloud Identity Developer API Reference](https://developer.rackspace.com/docs/cloud-identity/v2/#api-reference)
 
 
 ### Support and feedback
