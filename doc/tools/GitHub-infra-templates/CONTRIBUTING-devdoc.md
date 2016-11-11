@@ -20,15 +20,10 @@ directory. Here are key files that define project and content architecture:
 Content | File
 --- | ---
 |Index page for the main content structure| [index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/index.rst)
-|About the API index| [overview/index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/overview/index.rst)
-|Quickstart Guide| [quickstart-guide.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/quickstart-guide.rst)
-|Developer Guide introduction|[developer-guide.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/developer-guide.rst)
-|Concepts section| [concepts.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/concepts.rst)
+|Getting Started Guide| [getting-started](https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/getting-started)
 |General API information index|[general-api-info/index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/general-api-info/index.rst)
-|Authentication section index| [[authentication-info/index.rst](https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/authentication-info)
-|API Reference introduction|[api-reference.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-reference.rst)
-|API Reference index|[api-operations/index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-operations/index.rst)
-|API operations methods, including code samples|[api-operations/methods](https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/api-operations/methods)
+|API Reference index|[api-reference/index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-reference/index.rst)
+|API methods, including code samples|[api-reference/methods](https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/api-reference/methods)
 |Sphinx documentation configuration file| [conf.py](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/conf.py) (Typically, this file does not require changes.)
 |Linux and OS X build script|``Makefile``|
 |Windows build script|``make.bat``|
@@ -59,7 +54,7 @@ pull request by [building from source](#building-from-source).
 
 When you add or update content, use the following general style guidelines,
 which are described in detail in
-[Style guidelines for technical content](https://github.com/rackerlabs/docs-rackspace/tree/master/style-guide):
+[Style guidelines for technical content](https://github.com/rackerlabs/docs-rackspace/tree/master/doc/style-guide):
 
 - Use sentence-style capitalization for titles and headings
 - Use consistent text formatting
@@ -97,7 +92,7 @@ To preview changes, build the documentation locally using either of the
 following options:
 - Install and run the [Sphinx documentation generator](http://sphinx-doc.org/)
   to build the project locally with the
-  [Read the Docs theme](http://docs.readthedocs.org/en/latest/theme.html).
+  [Read the Docs theme](http://docs.readthedocs.io/en/latest/theme.html).
 - Install and run the [deconst client](https://github.com/deconst/client) to
   build the project with the Rackspace-branded theme. This build creates
   content that looks the same as the content delivered on

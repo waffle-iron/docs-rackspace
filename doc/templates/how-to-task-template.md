@@ -70,7 +70,7 @@ by only a brief introduction, you can omit this heading.
 
 List steps in a numbered list. Limit each step to a single action. For detailed
 guidelines for writing effective and clear step text, see
-[the style guide](https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/m-z-style-guidelines.md#tasks-steps).
+[the style guide](https://github.com/rackerlabs/docs-rackspace/blob/master/doc/style-guide/m-z-style-guidelines.md#tasks-steps).
 
 Include as many "Steps" sections as needed to provide a complete article to the
 user.

@@ -72,6 +72,15 @@ master_doc = 'index'
 # builder = 'deconst-serial'
 # builder = 'deconst-single'
 
+# linkcheck options
+linkcheck_ignore = ['https://pages.github.rackspace.com*',
+                    'https://github.com/rackerlabs/docs-rpc*',
+                    'https://github.com/rackerlabs/docs-migration*',
+                    'https://github.com/rackerlabs/docs-cloud-metrics*',
+                    'https://one.rackspace.com*',
+                    'https://tools.ietf.org*']
+linkcheck_anchors = False
+
 # General information about the project.
 project = 'Rackspace Documentation Guides'
 copyright = '2016, Rackspace'

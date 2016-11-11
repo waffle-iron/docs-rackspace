@@ -105,7 +105,6 @@ The API docs are located in the following https://github.com/rackerlabs repos:
 -  `Cloud Files <https://github.com/rackerlabs/docs-cloud-files>`_
 -  `Cloud Identity <https://github.com/rackerlabs/docs-cloud-identity>`_
 -  `Cloud Images <https://github.com/rackerlabs/docs-cloud-images>`_
--  `Cloud Keep <https://github.com/rackerlabs/docs-barbican>`_
 -  `Cloud Load Balancers
    <https://github.com/rackerlabs/docs-cloud-load-balancers>`_
 -  `Cloud Orchestration

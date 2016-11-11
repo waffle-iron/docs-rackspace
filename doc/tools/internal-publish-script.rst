@@ -169,5 +169,5 @@ For more information on publishing to gh-pages manually, see
 publish.sh
 ~~~~~~~~~~
 
-See https://github.com/rackerlabs/docs-rpc/blob/master/publish.sh for the
+See https://github.com/rackerlabs/docs-rpc/blob/master/tools/publish.sh for the
 latest version of the publish.sh script.
