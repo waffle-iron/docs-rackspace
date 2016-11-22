@@ -4,8 +4,6 @@ Contribute to Rackspace documentation
 
 *Last updated:* |today|
 
-Contributor collateral documentation.
-
 .. toctree::
    :maxdepth: 2
 

@@ -128,6 +128,6 @@ Add the new documents to the landing page.
 
 Reference
 ~~~~~~~~~
-For more information on adding a new content repository, see the
+For more information about adding a new content repository, see the
 `deconst documentation
 <https://deconst.horse/writing-docs/author/#adding-a-new-content-repository>`_.

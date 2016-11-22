@@ -15,7 +15,7 @@ to manage your GitHub label configuration across repositories.
 
 - Install Node.js and npm
 - Configure system to [install and use global npm
-  packages](http://www.sitepoint.com/beginners-guide-node-package-manager/)
+  packages](https://www.sitepoint.com/beginners-guide-node-package-manager/)
 
 
 ## Set up
@@ -36,7 +36,7 @@ against GitHub repositories that you have permission to update.
    variables, or add them to your ``~/.bash_profile`` .
 
 You can find existing label configuration files in the [docs-rackpace
-repository](https://github.com/rackerlabs/docs-rackspace/tree/master/tools/GitHub-infra-templates).
+repository](https://github.com/rackerlabs/docs-rackspace/tree/master/doc/tools/GitHub-infra-templates).
 To import these configurations to a repository, download them to your system.
 
 For command examples and more information, see the [github-label-manager

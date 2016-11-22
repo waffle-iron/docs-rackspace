@@ -44,6 +44,8 @@ sys.path.insert(0, os.path.abspath('../tools/'))
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
+    'bolditalic',
+    'remotecode',
 ]
 
 if spelling is not None:
@@ -69,6 +71,15 @@ master_doc = 'index'
 # The builder to use when running via the deconst preparer
 # builder = 'deconst-serial'
 # builder = 'deconst-single'
+
+# linkcheck options
+linkcheck_ignore = ['https://pages.github.rackspace.com*',
+                    'https://github.com/rackerlabs/docs-rpc*',
+                    'https://github.com/rackerlabs/docs-migration*',
+                    'https://github.com/rackerlabs/docs-cloud-metrics*',
+                    'https://one.rackspace.com*',
+                    'https://tools.ietf.org*']
+linkcheck_anchors = False
 
 # General information about the project.
 project = 'Rackspace Documentation Guides'
@@ -166,7 +177,8 @@ html_static_path = ['_static']
 html_context = {
     'css_files': [
         '_static/theme_overrides.css',  # overrides wide tables in RTD theme
-        '_static/custom.css',  # custom CSS styling
+        '_static/bespoke.css',  # custom CSS styling
+        '_static/bolditalic.css',  # bolditalic styling
         ],
     }
 
