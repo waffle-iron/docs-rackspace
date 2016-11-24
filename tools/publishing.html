@@ -101,11 +101,16 @@
 <li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Content deletion from Nexus</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Configure development and production builds for Sphinx projects</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#configure-pr-previews-for-development-content">Configure PR previews for development content</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-strider-production-build">Create Strider production build</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#update-nexus-control-configuration">Update nexus-control configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#update-docs-quickstart">Update docs-quickstart</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reference">Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-a-project-for-development">Configure a project for development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-a-project-for-production">Configure a project for production</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-a-new-content-repository-to-deconst">Add a new content repository to Deconst</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enable-strider-build-automation">Enable Strider build automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-a-project-for-development-builds">Configure a project for development builds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-a-project-for-production-builds">Configure a project for production builds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#review-strider-build-information">Review Strider build information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-documentation-to-the-landing-page">Add documentation to the landing page</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="rtd-tables.html">Table width fix for Read the Docs Sphinx theme</a></li>
@@ -160,10 +165,38 @@
             
   <div class="section" id="configure-development-and-production-builds-for-sphinx-projects">
 <h1>Configure development and production builds for Sphinx projects<a class="headerlink" href="#configure-development-and-production-builds-for-sphinx-projects" title="Permalink to this headline">#</a></h1>
-<p>This document describes how to configure development branches
-to enable PR previews, and how to create and configure Strider
-production builds.
-&lt;<a class="reference external" href="https://developer.rackspace.com/docs/">https://developer.rackspace.com/docs/</a>&gt;`_ for a new branch.</p>
+<p>This document describes how to configure new documentation projects
+for development and production.</p>
+<div class="section" id="configure-a-project-for-development">
+<h2>Configure a project for development<a class="headerlink" href="#configure-a-project-for-development" title="Permalink to this headline">#</a></h2>
+<p>Development projects are built and deployed to the
+staging.deconst.horse domain instead of developer.rackspace.com.</p>
+<p>These projects do not show up on the docs landing
+page, and you have to update the project configuration file to ensure that
+the content is excluded from search indexing.</p>
+<p>If you want to move a development project to production, update the
+nexus-control configuration by following the steps to configure a production
+build.</p>
+<p>Complete the following steps to build and deploy a documentation project to the
+development environment.</p>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#add-content-repo"><span class="std std-ref">Add a new content repository to deconst</span></a>.</li>
+<li><a class="reference internal" href="#enable-strider-build"><span class="std std-ref">Enable Strider build automation</span></a>.</li>
+<li><a class="reference internal" href="#configure-development-build"><span class="std std-ref">Configure a project for development builds</span></a>.</li>
+<li><a class="reference internal" href="#review-strider-build"><span class="std std-ref">Review Strider build information</span></a>.</li>
+</ol>
+</div>
+<div class="section" id="configure-a-project-for-production">
+<h2>Configure a project for production<a class="headerlink" href="#configure-a-project-for-production" title="Permalink to this headline">#</a></h2>
+<p>Complete the following steps to build and deploy a documentation project
+to the production environment.</p>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#add-content-repo"><span class="std std-ref">Add a new content repository to deconst</span></a>.</li>
+<li><a class="reference internal" href="#enable-strider-build"><span class="std std-ref">Enable Strider build automation</span></a>.</li>
+<li><a class="reference internal" href="#configure-production-build"><span class="std std-ref">Configure a project for production builds</span></a>.</li>
+<li><a class="reference internal" href="#review-strider-build"><span class="std std-ref">Review Strider build information</span></a>.</li>
+<li><a class="reference internal" href="#add-documentation-to-menu"><span class="std std-ref">Add documentation to landing page</span></a>.</li>
+</ol>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Existing branches are continuously integrated by
@@ -172,33 +205,72 @@ to a branch that is currently being published updates
 <a class="reference external" href="https://developer.rackspace.com/docs/">developer.rackspace.com</a>
 automatically.</p>
 </div>
-<div class="section" id="configure-pr-previews-for-development-content">
-<h2>Configure PR previews for development content<a class="headerlink" href="#configure-pr-previews-for-development-content" title="Permalink to this headline">#</a></h2>
-<p>To preview development-only builds on a branch, update the <code class="docutils literal"><span class="pre">staging.horse</span></code>
-site configuration in the nexus-control content and template mapping files.</p>
+<div class="section" id="add-a-new-content-repository-to-deconst">
+<span id="add-content-repo"></span><h3>Add a new content repository to Deconst<a class="headerlink" href="#add-a-new-content-repository-to-deconst" title="Permalink to this headline">#</a></h3>
+<p>You can add a new content repository branch to Deconst if your content
+is written in reStructuredText (RST) or Markdown, and hosted in a git
+repository on github.com.</p>
 <ol class="arabic">
-<li><p class="first">Add the contentIDbase for the branch content to the
-<a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/content.d/staging.horse.json">config/content.d/staging.horse.json</a>
-configuration file. For example:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;/docs/private-cloud/rpc/master/&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rpc/master/&quot;</span><span class="p">,</span>
+<li><p class="first">Update the GitHub repository settings to enable deconst to create a Strider
+build job for your project.</p>
+<ol class="arabic simple">
+<li>In the GitHub UI, click <span class="guilabel">Settings &gt; Collaborators &amp; teams</span>.</li>
+<li>Add the GitHub user ID <cite>rackernexus</cite> to the account with administrator
+privileges.</li>
+<li>In the <a class="reference external" href="https://rackdx.slack.com/archives/deconst">Deconst Slack channel</a>,
+notify the deconst administrator (&#64;bmoss or &#64;meker12) to accept the
+GitHub invitation to add the <cite>rackernexus</cite> user to the repository.</li>
+</ol>
+</li>
+<li><p class="first">Create a deconst configuration file for the project you want to build.</p>
+<ol class="arabic">
+<li><p class="first">In the content repository branch, navigate to the root folder for your
+documentation project.</p>
+</li>
+<li><p class="first">Add the <code class="file docutils literal"><span class="pre">_deconst.json</span></code>.</p>
+</li>
+<li><p class="first">Add the following parameters to the new file.</p>
+<ul class="simple">
+<li>contentIDBase: A content ID to identify the content produced from
+this directory. It must be a unique ID to all content repositories
+published to Deconst.</li>
+<li>githubUrl: The GitHub URL for the content repository.</li>
+<li>githubBranch: Specifies the target branch for &quot;edit on GitHub&quot; link
+if your project is on a branch other than <code class="docutils literal"><span class="pre">master</span></code>.</li>
+<li>preferGitHubIssues: Specifies whether the documentation interface
+provides a <cite>Submit issue</cite> link to open a GitHub issue or an
+'Edit on Github`link to edit documentation source.</li>
+</ul>
+<p>For example:</p>
+<div class="code ini highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;contentIDBase&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rpc/v13/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;githubUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rackspace/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;githubBranch&quot;</span><span class="p">:</span> <span class="s2">&quot;v13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;preferGithubIssues&quot;</span><span class="p">:</span> <span class="n">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-</li>
-<li><p class="first">Add the template mapping to <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/routes.d/staging.horse.json">config/routes.d/staging.horse.json</a>
-configuration file. For example:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;^/docs/private-cloud/&quot;</span><span class="p">:</span> <span class="s2">&quot;developer.rackspace.com/user-guide.html&quot;</span><span class="p">,</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">After you have updated the configuration files, submit a PR to the branch in
-your project repository and wait for PR to update with the preview link to
-review your content.</p>
 </li>
 </ol>
+</li>
+<li><p class="first">If the project is a development project, update the project configuration
+file to exclude the content from search indexing.</p>
+<p>For Sphinx projects, update the <code class="docutils literal"><span class="pre">conf.py</span></code> file with the following
+configuration settings:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Exclude content from elastic search index</span>
+<span class="n">deconst_default_unsearchable</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
 </div>
-<div class="section" id="create-strider-production-build">
-<h2>Create Strider production build<a class="headerlink" href="#create-strider-production-build" title="Permalink to this headline">#</a></h2>
-<p>You can automatically generate the Strider production build job by adding the
+</li>
+</ol>
+<p>For more information on adding a new content repository, see the
+<a class="reference external" href="https://deconst.horse/writing-docs/author/#adding-a-new-content-repository">deconst documentation</a>.</p>
+</div>
+<div class="section" id="enable-strider-build-automation">
+<span id="enable-strider-build"></span><h3>Enable Strider build automation<a class="headerlink" href="#enable-strider-build-automation" title="Permalink to this headline">#</a></h3>
+<p>You can generate the Strider production build job automatically by adding the
 source repository URL to the Nexus control configuration. For each repository,
 you can configure builds for one or more branches. By default, Strider builds
 from the master branch. If you want to build from other branches, you must
@@ -220,20 +292,65 @@ from master, v10, v11, and v12 branches:</p>
 </pre></div>
 </div>
 </li>
+<li><p class="first">Commit your changes, submit a PR and merge it.</p>
+</li>
 </ol>
+<p>The next time you submit a PR to the repository branch for your project,
+the Strider build is created. You should see a preview link in the PR
+indicating that the build ran successfully.</p>
 </div>
-<div class="section" id="update-nexus-control-configuration">
-<h2>Update nexus-control configuration<a class="headerlink" href="#update-nexus-control-configuration" title="Permalink to this headline">#</a></h2>
-<p>To build and deploy the content on the branch you added, update the
-nexus-control configuration files for <code class="docutils literal"><span class="pre">developer.rackspace.com</span></code> to
+<div class="section" id="configure-a-project-for-development-builds">
+<span id="configure-development-build"></span><h3>Configure a project for development builds<a class="headerlink" href="#configure-a-project-for-development-builds" title="Permalink to this headline">#</a></h3>
+<p>To configure a development build on a branch, update the <code class="docutils literal"><span class="pre">staging.horse</span></code>
+site configuration in the nexus-control content and template mapping files.
+These files are in the nexus control repository that manages the
+build and deployment process for the Rackspace documentation websites.</p>
+<ol class="arabic">
+<li><p class="first">Add the contentIDBase for the branch content to the
+<a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/content.d/staging.horse.json">config/content.d/staging.horse.json</a>
+configuration file. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;/docs/private-cloud/rpc/master/&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rpc/&lt;branchname&gt;/&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add the template mapping to <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/routes.d/staging.horse.json">config/routes.d/staging.horse.json</a>
+configuration file. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;^/docs/private-cloud/&quot;</span><span class="p">:</span> <span class="s2">&quot;developer.rackspace.com/user-guide.html&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>After you have updated the configuration files, submit a PR to the branch in
+the project repository that you added. Wait for the PR to update with the
+preview link to review your content. See
+<a class="reference internal" href="#review-strider-build"><span class="std std-ref">Review Strider build information</span></a>.</p>
+<p>If the preview link fails, or if the
+formatting does not look right, verify that the nexus-control configuration
+includes the branch in the content and template mapping files, and that
+the repository has been added to the <code class="docutils literal"><span class="pre">content.repositories</span></code> file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can move a project from development to production by
+following the process to add a production build.</p>
+</div>
+</div>
+<div class="section" id="configure-a-project-for-production-builds">
+<span id="configure-production-build"></span><h3>Configure a project for production builds<a class="headerlink" href="#configure-a-project-for-production-builds" title="Permalink to this headline">#</a></h3>
+<p>If you want to build and deploy a project to production, update
+the nexus-control configuration files for <code class="docutils literal"><span class="pre">developer.rackspace.com</span></code> to
 define the URL for content deployment and to specify the template to apply
 during the build process.</p>
 <ol class="arabic">
-<li><p class="first">Add the branch to the <code class="docutils literal"><span class="pre">developer.rackspace.com</span></code>
-<a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/content.d/developer.rackspace.com.json">content.d/developer.rackspace.com.json</a>
+<li><p class="first">Add the contentIDBase for the branch content to the
+<code class="docutils literal"><span class="pre">developer.rackspace.com</span></code> <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/content.d/developer.rackspace.com.json">content.d/developer.rackspace.com.json</a>
 configuration file. For example:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;/docs/private-cloud/rpc/v12/&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rpc/v12/&quot;</span><span class="p">,</span>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;/docs/private-cloud/rpc/v13/&quot;</span><span class="p">:</span><span class="s2">&quot;https://github.com/rackerlabs/docs-rpc/v13/&quot;</span><span class="p">,</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The contentIDBase is defined in the <cite>_deconst.json</cite> file located
+in the content repository branch.</p>
 </div>
 </li>
 <li><p class="first">Check the <code class="docutils literal"><span class="pre">developer.rackspace.com</span></code> <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/routes.d/developer.rackspace.com.json">routes.d/developer.rackspace.com.json</a>
@@ -249,32 +366,92 @@ review your content.</p>
 </li>
 </ol>
 </div>
-<div class="section" id="update-docs-quickstart">
-<h2>Update docs-quickstart<a class="headerlink" href="#update-docs-quickstart" title="Permalink to this headline">#</a></h2>
-<p>Add the new documents to the landing page.</p>
+<div class="section" id="review-strider-build-information">
+<span id="review-strider-build"></span><h3>Review Strider build information<a class="headerlink" href="#review-strider-build-information" title="Permalink to this headline">#</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To create a Strider build for a documentation project,
+complete the nexus-control configuration updates to
+:ref`Enable Strider build automation &lt;Enable Strider build automation&gt;`.</p>
+</div>
+<p>Use the following information to view Strider build information:</p>
+<ul>
+<li><p class="first">Review a list of Strider build jobs for documentation projects at
+<a class="reference external" href="https://build.developer.rackspace.com">https://build.developer.rackspace.com</a>.</p>
+<p>If you get a 404 error, log in with your
+GitHub ID. If you still can't view the builds, open an
+<a class="reference external" href="https://github.com/rackerlabs/docs-rackspace/issues/new">issue</a> to
+request access.</p>
+</li>
+<li><p class="first">To view builds for a repository, look for the build badge at the top of the
+<code class="docutils literal"><span class="pre">readme</span></code> file. It indicates whether the most recent build passed or failed.
+Click the badge to open the build log.</p>
+</li>
+<li><p class="first">You can view the build log for a PR from the GitHub interface. When you
+submit the PR, a GitHub webhook triggers the Strider build process. Build
+results are added to the PR.</p>
+<ul class="simple">
+<li>If the build fails, click the <span class="guilabel">Details</span>.</li>
+<li>If the build passes, click <span class="guilabel">Show all checks</span>. Then, click
+<span class="guilabel">Details</span>.</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="reference">
+<h4>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h4>
+<p>For more information about deconst, see the`deconst documentation
+&lt;<a class="reference external" href="https://deconst.horse/">https://deconst.horse/</a>&gt;`_.</p>
+</div>
+</div>
+<div class="section" id="add-documentation-to-the-landing-page">
+<span id="add-documentation-to-menu"></span><h3>Add documentation to the landing page<a class="headerlink" href="#add-documentation-to-the-landing-page" title="Permalink to this headline">#</a></h3>
+<p>After you add a documentation project to production, update
+the <cite>landing page &lt;https:\developer.rackspace.comdocs&gt;</cite>
+to add the documentation title to the documentation menu.</p>
 <ol class="arabic">
+<li><p class="first">Update the <code class="docutils literal"><span class="pre">conf.py</span></code> file in the new branch to restore search
+indexing in production. Comment out the search index setting:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Exclude content from elastic search index</span>
+<span class="c1"># deconst_default_unsearchable = True</span>
+</pre></div>
+</div>
+</li>
 <li><p class="first">Update <a class="reference external" href="https://github.com/rackerlabs/docs-quickstart/blob/master/index.rst">docs-quickstart</a> to
 add the new documents to the appropriate card on the
 <a class="reference external" href="https://developer.rackspace.com/docs/">developer.rackspace.com</a>
 landing page. For example:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">h5</span><span class="o">&gt;</span><span class="n">Rackspace</span> <span class="n">Private</span> <span class="n">Cloud</span> <span class="n">v12</span><span class="o">&lt;/</span><span class="n">h5</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-admin/&quot;</span><span class="o">&gt;</span><span class="n">Administrator</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-faq-external/&quot;</span><span class="o">&gt;</span><span class="n">Technical</span> <span class="n">FAQ</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-ops/&quot;</span><span class="o">&gt;</span><span class="n">Operations</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-releasenotes&quot;</span><span class="o">&gt;</span><span class="n">Release</span> <span class="n">Notes</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-swift&quot;</span><span class="o">&gt;</span><span class="n">Standalone</span> <span class="n">Object</span> <span class="n">Storage</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v12/rpc-upgrade&quot;</span><span class="o">&gt;</span><span class="n">Upgrade</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v13/rpc-admin/&quot;</span><span class="o">&gt;</span><span class="n">Administrator</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v13/rpc-faq-external/&quot;</span><span class="o">&gt;</span><span class="n">Technical</span> <span class="n">FAQ</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v13/rpc-ops/&quot;</span><span class="o">&gt;</span><span class="n">Operations</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v13/rpc-releasenotes&quot;</span><span class="o">&gt;</span><span class="n">Release</span> <span class="n">Notes</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v13/rpc-swift&quot;</span><span class="o">&gt;</span><span class="n">Standalone</span> <span class="n">Object</span> <span class="n">Storage</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/docs/private-cloud/rpc/v13/rpc-upgrade&quot;</span><span class="o">&gt;</span><span class="n">Upgrade</span> <span class="n">Guide</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
 <span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
+<li><p class="first">Commit the menu page updates and submit a PR.</p>
+</li>
+<li><p class="first">In the GitHub view for the PR, click the preview link to
+to make sure the updates render correctly.</p>
+<p>If the content does not build correctly,
+<a class="reference internal" href="#review-strider-build"><span class="std std-ref">review the build log</span></a>.</p>
+</li>
+<li><p class="first">After verifying the content, merge the PR to deploy to production.</p>
+</li>
+<li><p class="first">Check the <a class="reference external" href="https://developer.rackspace.com/docs">landing page</a> to make sure the content is deployed correctly.</p>
+</li>
 </ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the content is not deployed on the landing page, verify that the
+<cite>rackerlabs/docs-quickstart</cite> project is building successfully in
+<a class="reference external" href="https://build.developer.rackspace.com">https://build.developer.rackspace.com</a>. If the build is stuck, click
+on the <span class="guilabel">Retest &amp; Deploy</span> icon.</p>
 </div>
-<div class="section" id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h2>
-<p>For more information about adding a new content repository, see the
-<a class="reference external" href="https://deconst.horse/writing-docs/author/#adding-a-new-content-repository">deconst documentation</a>.</p>
+</div>
 </div>
 </div>
 
